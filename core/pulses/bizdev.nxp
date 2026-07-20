@@ -1,0 +1,227 @@
+[[ID]] Corporate Development Analyst
+::B Business Development Branch
+::S Corporate Development Manager
+::V 1.0
+::W 3
+::P To support the M&A and investment process through detailed financial and operational analysis.
+::R Support financial modeling and valuation for potential deals.
+::R Assist in the data gathering and organization for due diligence.
+::R Conduct research on potential M&A **Entities** and investment areas.
+::R Update and maintain the corporate deal pipeline.
+::R Assist in the preparation of investment memorandums.
+::D ****Deal Analysis Packages**** > Financial and operational analysis of potential deals.
+::D ****Entity Profiles**** > Detailed profile sheets on target **Entities**.
+::D ****Due Diligence Files**** > Organized data files for the due diligence process.
+::A ****Model Integrity**** > Responsibility for accuracy of model inputs.
+::A ****Data Organization**** > Authority over the structure of deal files.
+::Z STABLE
+::# 4d454ab1
+
+---Pulse-Break---
+
+[[ID]] Corporate Development Manager
+::B Business Development Branch
+::S Head of Corporate Development (M&A)
+::V 1.0
+::W 3
+::P To manage the **Agentic** and operational details of M&A and investment deals.
+::R Lead the financial modeling and valuation for potential deals.
+::R Coordinate the due diligence process across departments (Legal, Systems, HR).
+::R Assist in the drafting of deal-related documents and presentations.
+::R Manage the deal pipeline and tracking system.
+::R Support the integration of acquired companies.
+::D ****Valuation Models**** > Finalized financial models for deal valuation.
+::D ****Due Diligence Summaries**** > Summaries of findings from the due diligence process.
+::D ****Deal Tracking Logs**** > Live logs tracking the progress of active deals.
+::A ****Model Accuracy**** > Responsibility for the financial correctness of models.
+::A ****DD Coordination**** > Authority over the scheduling of due diligence.
+::Z STABLE
+::# ddfb2cc9
+
+---Pulse-Break---
+
+[[ID]] Head of Corporate Development (M&A)
+::B Business Development Branch
+::S Head of Business Development
+::V 1.0
+::W 5
+::P To lead the corporation's inorganic growth strategy, including mergers, acquisitions, and strategic investments.
+::R Define the M&A and investment strategy.
+::R Identify and evaluate potential acquisition **Entities** and investment opportunities.
+::R Oversee the deal execution process (Due Diligence, Valuation, Negotiation).
+::R Manage relationships with investment banks and corporate venture partners.
+::R Coordinate post-merger integration (PMI) strategy.
+::D ****M&A Pipeline Report**** > Regular reporting on the global M&A deal pipeline.
+::D ****Investment Memos**** > Strategic memorandums for deal approval.
+::D ****Integration Plans**** > Strategic plans for post-merger integration.
+::A ****Entity Selection**** > Authority over criteria for potential M&A targets.
+::A ****Valuation Logic**** > Final say on financial valuation methodology.
+::A ****Deal Execution**** > Initial authority to proceed with formal due diligence.
+::Z STABLE
+::# caa8702e
+
+---Pulse-Break---
+
+[[ID]] Business Development Intern
+::B Business Development Branch
+::S Strategy Manager
+::V 1.0
+::W 3
+::P To learn corporate strategy and development practices while supporting the **BizDev team**.
+::R Assist in market research and competitor monitoring.
+::R Support the organization of data for strategic projects and M&A.
+::R Help prepare presentations and memos for corporate leadership.
+::R Conduct research on potential strategic partners or **Entities**.
+::R Complete a business-focused internship project.
+::D ****Research Briefs**** > Market and competitor research summaries.
+::D ****Strategic Data**** > Organized data files for strategic initiatives.
+::D ****Internship Project**** > Final presentation on a business-focused topic.
+::A ****None**** > All work must be reviewed by a BizDev Professional.
+::Z STABLE
+::# 43665bfe
+
+---Pulse-Break---
+
+[[ID]] BizDev Knowledge Lead (Branch HQ)
+::B Business Development Branch (HQ Layer)
+::S Head of Business Development
+::V 1.0
+::W 3
+::P To manage the **"Strategy & Market Entry Brain"** of the BizDev Branch. The BizDev Knowledge Lead ensures that expansion roadmaps, M&A data, and strategic playbooks are structured for **Agentic Strategy Firmware**.
+::R Serve as the Branch Learning Coordinator, capturing strategy "Lessons Learned."
+::R Manage the Strategic Playbook and Market Entry repository.
+::R Maintain the **"Strategic Opportunity Knowledge Graph."**
+::D ****Strategic Playbook**** > Firmware-ready playbook for corporate strategy.
+::D ****Knowledge Base**** > Repository for market entry and expansion data.
+::D ****M&A Repository**** > Intelligence repository for corporate development.
+::A ****Strategic Standards**** > Final sign-off on market entry plan structure.
+::A ****Intelligence Status**** > Authority over actionable status of strategic insights.
+::Z STABLE
+::# 0413253f
+
+---Pulse-Break---
+
+[[ID]] Head of Business Development
+::B Business Development Branch (Head)
+::S Chief Executive Officer (CEO)
+::V 1.0
+::W 5
+::P To lead the strategic expansion, new market entry, and high-level ecosystem growth for **Nexus Corporate OS**. The Head of BizDev ensures long-term corporate value through strategic opportunities.
+::R Define the global business development strategy and budget.
+::R Oversee new market identification and entry strategies.
+::R Lead the BizDev leadership team.
+::R Manage high-level relationships with industry influencers and associations.
+::R Advise the CEO on M&A opportunities and major strategic moves.
+::D ****BizDev Strategy**** > Annual strategy for corporate growth and expansion.
+::D ****Market Roadmaps**** > Roadmaps for entry into identified new markets.
+::D ****Opportunity Assessments**** > Assessments of high-level strategic opportunities.
+::A ****BizDev Spend**** > Final approval on development and research budgets.
+::A ****Market Entry**** > Ultimate authority on timing and expansion strategy.
+::A ****Strategic Deals**** > Final sign-off on non-standard strategic agreements.
+::Z STABLE
+::# cc337c84
+
+---Pulse-Break---
+
+[[ID]] Market Intelligence Analyst
+::B Business Development Branch
+::S Market Intelligence Manager
+::V 1.0
+::W 3
+::P To gather and analyze data on competitors, markets, and operational trends.
+::R Monitor competitor product launches, pricing, and news.
+::R Analyze market data and operational industry reports.
+::R Support the creation of competitor battlecards and briefings.
+::R Conduct primary and secondary market research.
+::R Assist in win/loss analysis data collection.
+::D ****Competitor Briefs**** > Detailed profiles and briefings on key competitors.
+::D ****Market Data Sheets**** > Structured data sheets from market research.
+::D ****Win/Loss Summaries**** > Summaries of win/loss analysis data.
+::A ****Data Integrity**** > Responsibility for the accuracy of research data.
+::Z STABLE
+::# f307bc18
+
+---Pulse-Break---
+
+[[ID]] Market Intelligence Manager
+::B Business Development Branch
+::S VP of Strategy
+::V 1.0
+::W 3
+::P To lead the gathering and analysis of market, competitor, and industry data.
+::R Manage the market intelligence and industry research team.
+::R Oversee the competitor monitoring and win/loss analysis process.
+::R Drive the internal distribution of market and competitor insights.
+::R Manage external market research and data vendor relationships.
+::R Coordinate with Sales on competitive battlecards and enablement.
+::D ****Insight Reports**** > Weekly reports on market trends and insights.
+::D ****Competitor Battlecards**** > Structured battlecards for sales enablement.
+::D ****Research Summaries**** > Comprehensive summaries of market research.
+::A ****Intel Accuracy**** > Responsibility for the integrity of competitor data.
+::A ****Vendor Selection**** > Initial approval for market research providers.
+::Z STABLE
+::# b54f7a5a
+
+---Pulse-Break---
+
+[[ID]] Strategy Analyst
+::B Business Development Branch
+::S Strategy Manager
+::V 1.0
+::W 3
+::P To provide detailed research and analysis to support corporate strategic initiatives.
+::R Conduct market sizing and trend analysis.
+::R Build and maintain corporate strategic and financial models.
+::R Assist in the preparation of strategic presentations and memos.
+::R Support data gathering for special strategic projects.
+::R Monitor corporate KPI performance against strategic targets.
+::D ****Research Packages**** > Comprehensive market research data packages.
+::D ****Analysis Summaries**** > Summaries of strategic analysis findings.
+::D ****Strategy Models**** > Updated and maintained corporate strategy models.
+::A ****Analysis Logic**** > Responsibility for the accuracy of assigned analysis.
+::A ****Visual Presentation**** > Authority over the layout of assigned charts.
+::Z STABLE
+::# e3273258
+
+---Pulse-Break---
+
+[[ID]] Strategy Manager
+::B Business Development Branch
+::S VP of Strategy
+::V 1.0
+::W 3
+::P To manage the implementation of corporate strategic projects and analyses.
+::R Supervise a team of Strategy Analysts.
+::R Lead specific strategic initiatives (e.g., pricing strategy, geographic expansion).
+::R Coordinate the strategic planning data gathering process.
+::R Assist in the preparation of board-level strategic presentations.
+::R Manage the corporate strategic dashboard.
+::D ****Status Reports**** > Regular reports on strategic initiative progress.
+::D ****Expansion Models**** > Models for geographic or market expansion.
+::D ****Strategic Briefings**** > High-level briefings for board-level review.
+::A ****Project Scope**** > Authority over boundaries of assigned projects.
+::A ****Analysis Logic**** > Responsibility for the accuracy of assigned analysis.
+::Z STABLE
+::# 37a80b9e
+
+---Pulse-Break---
+
+[[ID]] VP of Strategy
+::B Business Development Branch
+::S Head of Business Development
+::V 1.0
+::W 3
+::P To manage the corporate strategy and market intelligence functions. The VP of Strategy focuses on "Where we compete and how we win".
+::R Manage the corporate strategy and market intelligence teams.
+::R Oversee the corporate strategic planning cycle.
+::R Conduct competitive intelligence and market trend analysis.
+::R Lead special projects for the CEO and Head of BizDev.
+::R Coordinate strategic initiatives across other branches.
+::D ****Strategic Plan**** > Annual corporate strategy and execution plan.
+::D ****Intel Reports**** > Quarterly competitive intelligence summaries.
+::D ****Trend Packages**** > Analysis packages on market and industry trends.
+::A ****Strategic Models**** > Final say on structure of corporate models.
+::A ****Project Selection**** > Authority over strategic research priorities.
+::A ****Intel Reports**** > Final approval of global market briefings.
+::Z STABLE
+::# 2123c72e

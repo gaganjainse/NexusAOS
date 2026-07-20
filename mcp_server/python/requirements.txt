@@ -1,0 +1,5 @@
+mcp>=1.0.0
+PyYAML>=6.0.1
+customtkinter>=5.2.0
+pillow>=10.0.0
+opencv-python-headless>=4.8.0

@@ -1,0 +1,249 @@
+[[ID]] HR Intern
+::B HR Branch
+::S HR Manager (Personnel Relations)
+::V 1.0
+::W 3
+::P To learn professional Human Resources practices while supporting the HR team.
+::R Assist in the organization of **Personnel** files and HR records.
+::R Support the recruiting team in scheduling and sourcing.
+::R Help organize **Personnel** engagement and culture events.
+::R Assist in basic HR reporting and data entry.
+::R Conduct research on HR best practices and sector compliance.
+::D ****Record Folders**** > Organized folders for **Personnel** and HR records.
+::D ****Research Summaries**** > Summaries of HR best practices and compliance research.
+::D ****Internship Project**** > Final presentation on an HR-focused topic.
+::A ****None**** > All work must be reviewed by an HR Professional.
+::Z STABLE
+::# f79d2834
+
+---Pulse-Break---
+
+[[ID]] Chief Human Resources Officer (CHRO)
+::B HR Branch (Head)
+::S Chief Executive Officer (CEO)
+::V 1.0
+::W 5
+::P To lead the global people strategy, culture, and talent management for **Nexus Corporate OS**. The CHRO ensures the corporation has the right talent to achieve its mission.
+::R Define the annual people strategy and HR budget.
+::R Oversee corporate culture, values, and **Personnel** engagement.
+::R Lead the HR leadership team (Recruiting, Payroll, Culture).
+::R Manage high-level **Personnel** relations and organizational design.
+::R Represent the HR branch in HQ-level strategy sessions.
+::D ****People Strategy**** > Annual strategic plan for talent and culture.
+::D ****Culture Manifesto**** > Formal definition of corporate values and culture.
+::D ****Health Reports**** > Regular reports on organizational morale and health.
+::A ****HR Spend**** > Final approval on all HR and training budgets.
+::A ****Org Design**** > Authority over organization-wide structural changes.
+::A ****Exec Recruiting**** > Approval of Director-level and above hires.
+::Z STABLE
+::# a9106135
+
+---Pulse-Break---
+
+[[ID]] HR Knowledge Lead (Branch HQ)
+::B HR Branch (HQ Layer)
+::S Chief Human Resources Officer (CHRO)
+::V 1.0
+::W 3
+::P To manage the **"People & Culture Brain"** of the HR Branch. The HR Knowledge Lead ensures that policies, hiring standards, and culture artifacts are machine-readable and up-to-date.
+::R Serve as the Branch Learning Coordinator, capturing culture "Lessons Learned."
+::R Manage the **Personnel Handbook** and Corporate Policy repository.
+::R Maintain the **"Talent Knowledge Graph"** (Competency models, role definitions).
+::D ****Policy Repository**** > Firmware-ready repository of all HR policies.
+::D ****Culture Framework**** > Structured framework for values and corporate culture.
+::D ****Competency Artifacts**** > Artifacts defining required role skills and competencies.
+::A ****Policy Language**** > Final sign-off on **Agentic** wording of policies.
+::A ****Competency Models**** > Authority over the structure of role requirements.
+::Z STABLE
+::# 6964d0fc
+
+---Pulse-Break---
+
+[[ID]] HR Generalist
+::B HR Branch
+::S HR Manager (Personnel Relations)
+::V 1.0
+::W 3
+::P To provide broad administrative and operational support across the HR function.
+::R Assist in **Personnel** onboarding and offboarding.
+::R Update and maintain the HRIS (**Personnel** Information System).
+::R Manage **Personnel** leave and attendance records.
+::R Support **Personnel** engagement events and internal communications.
+::R Assist in drafting and updating HR policies.
+::D ****HRIS Records**** > Live and accurate updates to **Personnel** data systems.
+::D ****Attendance Reports**** > Verified records of **Personnel** leave and attendance.
+::D ****Internal Comms**** > Drafts of internal HR announcements and updates.
+::A ****Data Integrity**** > Responsibility for accuracy of assigned HRIS data.
+::A ****Doc Preparation**** > Authority over formatting of internal HR documents.
+::Z STABLE
+::# 63d1c279
+
+---Pulse-Break---
+
+[[ID]] HR Manager (Personnel Relations)
+::B HR Branch
+::S VP of People Operations
+::V 1.0
+::W 3
+::P To manage day-to-day **Personnel relations**, performance management, and HR policy execution.
+::R Act as the primary point of contact for **Personnel** HR inquiries.
+::R Support managers in performance improvement and disciplinary actions.
+::R Conduct onboarding and offboarding processes.
+::R Manage the local HR records and documentation.
+::R Assist in corporate culture and engagement events.
+::D ****Onboarding Kits**** > Complete checklists and kits for new hire success.
+::D ****Incident Records**** > Documentation of **Personnel** relations and performance.
+::D ****Review Summaries**** > Summaries of **Personnel** performance review outcomes.
+::A ****Record Accuracy**** > Responsibility for the integrity of **Personnel** files.
+::A ****Onboarding Timing**** > Authority over the schedule of new hire orientations.
+::Z STABLE
+::# f46f7cbc
+
+---Pulse-Break---
+
+[[ID]] Payroll & Benefits Manager
+::B HR Branch
+::S VP of People Operations
+::V 1.0
+::W 3
+::P To ensure accurate and timely payroll processing and administration of **Personnel** benefits.
+::R Manage the monthly/bi-weekly payroll cycle.
+::R Oversee the administration of health, retirement, and other benefits.
+::R Ensure payroll sector compliance with local and national tax laws.
+::R Handle **Personnel** inquiries regarding pay and benefits.
+::R Manage relationships with payroll and benefits vendors.
+::D ****Payroll Runs**** > Verified and finalized corporate payroll cycles.
+::D ****Benefits Reports**** > Reports on **Personnel** participation in benefits programs.
+::D ****Compliance Records**** > Documentation of payroll tax and legal compliance.
+::A ****Pay Adjustments**** > Authority to approve salary changes and bonuses.
+::A ****Vendor Coordination**** > Responsibility for daily interaction with providers.
+::Z STABLE
+::# d2706618
+
+---Pulse-Break---
+
+[[ID]] Payroll Specialist
+::B HR Branch
+::S Payroll & Benefits Manager
+::V 1.0
+::W 3
+::P To perform the **Agentic** data entry and calculation **Directives** for payroll and benefits.
+::R Process timesheets and payroll adjustments.
+::R Enroll and manage **Personnel** in benefits programs.
+::R Reconcile payroll and benefits invoices.
+::R Assist in preparing payroll-related tax filings.
+::R Respond to **Personnel** pay and benefits inquiries.
+::D ****Data Entry Logs**** > Accurate logs of all payroll and benefit entries.
+::D ****Enrollment Records**** > Records of **Personnel** benefits enrollment and changes.
+::D ****Reconciliation Sheets**** > Monthly reconciliation of payroll and invoices.
+::A ****Calc Accuracy**** > Responsibility for payroll calculation correctness.
+::A ****Form Submission**** > Initial authority to submit tax and benefit forms.
+::Z STABLE
+::# a2b7e1e5
+
+---Pulse-Break---
+
+[[ID]] VP of People Operations
+::B HR Branch
+::S Chief Human Resources Officer (CHRO)
+::V 1.0
+::W 3
+::P To manage the operational functions of HR, including payroll, benefits, sector compliance, and **Personnel relations**.
+::R Manage the People Ops team and **Agentic systems** (HRIS).
+::R Oversee payroll and benefits administration.
+::R Ensure corporate-wide HR sector compliance and policy management.
+::R Manage **Personnel** performance review processes.
+::R Lead the "Culture and Engagement" initiatives.
+::D ****HR Roadmap**** > Operational roadmap for HR systems and services.
+::D ****Audit Reports**** > Reports on benefits and payroll compliance.
+::D ****Engagement Results**** > Outcomes of corporate culture and morale surveys.
+::A ****HR Policy**** > Final say on **Personnel Handbook** content.
+::A ****Benefits Selection**** > Approval of health and wellness providers.
+::A ****Personnel Relations**** > Authority over standard **Personnel** dispute resolution.
+::Z STABLE
+::# 26c9a13c
+
+---Pulse-Break---
+
+[[ID]] Head of Talent Acquisition
+::B HR Branch
+::S Chief Human Resources Officer (CHRO)
+::V 1.0
+::W 5
+::P To lead the global recruiting strategy and ensure a high-quality pipeline of talent for all branches.
+::R Manage the recruiting team and external search firms.
+::R Define the employer brand and talent attraction strategy.
+::R Oversee the end-to-end hiring process and candidate experience.
+::R Track and report on hiring metrics (Time to hire, Quality of hire).
+::R Manage the recruiting budget and technology (ATS).
+::D ****Recruiting Strategy**** > Global strategy for talent attraction and hiring.
+::D ****Hiring Forecasts**** > Forecasts of required headcount and hiring speed.
+::D ****Experience Audits**** > Regular audits of the candidate experience and ATS.
+::A ****Job Postings**** > Final approval on all public job descriptions.
+::A ****Search Contracts**** > Approval of external agency and search agreements.
+::A ****Hiring Standards**** > Authority over interview and selection standards.
+::Z STABLE
+::# 539ff7c0
+
+---Pulse-Break---
+
+[[ID]] Recruiter
+::B HR Branch
+::S Senior Recruiter
+::V 1.0
+::W 3
+::P To execute the recruiting process for volume and entry-level roles.
+::R Source and screen candidates for assigned roles.
+::R Schedule and coordinate interviews between candidates and managers.
+::R Manage the candidate database (ATS) and job postings.
+::R Conduct initial phone screens and competency assessments.
+::R Assist in recruiting events and university outreach.
+::D ****Candidate Shortlists**** > Vetted lists of qualified candidates for review.
+::D ****Interview Schedules**** > Coordinated calendars for candidate interviews.
+::D ****ATS Update Logs**** > Accurate and timely records in the tracking system.
+::A ****Candidate Screening**** > Initial authority to pass/fail candidates at screening.
+::A ****Job Post Formatting**** > Responsibility for the visual quality of job ads.
+::Z STABLE
+::# bc24858e
+
+---Pulse-Break---
+
+[[ID]] Recruiting Coordinator
+::B HR Branch
+::S Senior Recruiter
+::V 1.0
+::W 3
+::P To handle the logistical and administrative details of the recruiting process.
+::R Schedule interviews and manage recruiter calendars.
+::R Coordinate candidate travel and expense reimbursements.
+::R Manage the background check and reference check process.
+::R Assist in the preparation of offer letters and onboarding kits.
+::R Maintain recruiting files and documentation.
+::D ****Interview Calendars**** > Master schedules for all candidate interactions.
+::D ****Expense Reports**** > Verified reports for candidate travel and hiring.
+::D ****Compliance Logs**** > Records of background and reference check completion.
+::A ****Scheduling**** > Authority over coordination of interview timings.
+::A ****Logistics Accuracy**** > Responsibility for precision of travel arrangements.
+::Z STABLE
+::# 03503d7a
+
+---Pulse-Break---
+
+[[ID]] Senior Recruiter
+::B HR Branch
+::S Head of Talent Acquisition
+::V 1.0
+::W 3
+::P To manage the end-to-end recruitment process for key roles and lead the recruiting team efforts.
+::R Lead the search and selection process for mid-to-senior level roles.
+::R Manage and mentor junior recruiters and coordinators.
+::R Source and interview candidates for high-priority engineering and **[CORE_SYSTEM]** roles.
+::R Negotiate offers and manage the candidate closing process.
+::R Assist in employer branding and campus recruiting initiatives.
+::D ****Candidate Slates**** > Qualified candidate pools for executive and senior roles.
+::D ****Offer Letters**** > Verified and signed offer letters for new hires.
+::D ****Pipeline Reports**** > Regular reports on recruiting efficiency and health.
+::A ****Candidate Selection**** > Initial authority to move candidates to final stages.
+::A ****Offer Structure**** > Responsibility for competitive offer package design.
+::Z STABLE
+::# cd3bf0a4

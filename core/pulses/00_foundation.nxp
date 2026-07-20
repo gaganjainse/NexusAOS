@@ -1,0 +1,23 @@
+[[ID]] Nexus Corporate Constitution
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 337a1299
+
+---Pulse-Break---
+
+[[ID]] Nexus OS Core Philosophy
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 1653b0d8

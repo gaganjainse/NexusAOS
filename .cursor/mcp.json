@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "aos-corporate": {
+      "command": "python",
+      "args": ["mcp_server/python/index.py"],
+      "cwd": "${workspaceFolder}",
+      "env": {}
+    }
+  }
+}

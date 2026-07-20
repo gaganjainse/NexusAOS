@@ -1,0 +1,522 @@
+[[ID]] Agentic Department Firmware
+::B Agentic & Automation Branch
+::S Chief Agentic Officer (CAO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the **Agentic Branch** leadership.
+::R Manage the CAO's calendar and **Agentic-specific** coordination.
+::R Handle highly confidential **Agentic research** and data documentation.
+::R Coordinate **Agentic department** travel and vendor meetings.
+::R Assist in the organization of **"Agentic Literacy"** training for the corporation.
+::R Manage **Agentic branch** supplies and computing invoices.
+::D **Leadership Schedules** > Coordinated calendars for **Agentic branch** leadership.
+::D **Expense Logs** > Documentation of department spend (Compute focused).
+::D **Meeting Minutes** > Detailed records of **Agentic strategy** and research syncs.
+::A **Scheduling** > Authority over **Agentic leadership** meeting availability.
+::A **Compute Quotas** > Initial review of team-level computing needs.
+::Z STABLE
+::# 3439d3a2
+
+---Pulse-Break---
+
+[[ID]] Agentic & Automation Department Assistant
+::B AI & Automation Branch
+::S Chief AI Officer
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the **Agentic Branch** leadership.
+::R Manage the CAO's calendar and **Agentic-specific** coordination.
+::R Handle highly confidential **Agentic research** and data documentation.
+::R Coordinate **Agentic department** travel and vendor meetings.
+::R Assist in the organization of **"Agentic Literacy"** training for the corporation.
+::R Manage **Agentic branch** supplies and computing invoices.
+::D ****Leadership Schedules**** > Coordinated calendars for **Agentic branch** leadership.
+::D ****Expense Logs**** > Documentation of department spend (Compute focused).
+::D ****Meeting Minutes**** > Detailed records of **Agentic strategy** and research syncs.
+::A ****Scheduling**** > Authority over **Agentic leadership** meeting availability.
+::A ****Compute Quotas**** > Initial review of team-level computing needs.
+::Z STABLE
+::# fe83bb7f
+
+---Pulse-Break---
+
+[[ID]] Analytics Department Assistant
+::B Analytics Branch
+::S Head of Analytics (CDO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Analytics Branch leadership.
+::R Manage the Head of Analytics' calendar and meetings.
+::R Handle data-related vendor invoices and licensing.
+::R Coordinate analytics department travel and events.
+::R Assist in the organization of internal data training and coordination.
+::R Maintain the analytics branch internal directory and wiki.
+::D ****Leadership Schedules**** > Coordinated calendars for analytics leadership.
+::D ****Expense Logs**** > Documentation of department equipment and licenses.
+::D ****Meeting Minutes**** > Records of data strategy and analytics syncs.
+::A ****Scheduling**** > Authority over analytics leadership availability.
+::A ****Supply Requests**** > Initial review of equipment and licensing needs.
+::Z STABLE
+::# 23c742a0
+
+---Pulse-Break---
+
+[[ID]] Analytics Department Firmware
+::B Analytics Branch
+::S Head of Analytics (CDO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Analytics Branch leadership.
+::R Manage the Head of Analytics' calendar and meetings.
+::R Handle data-related vendor invoices and licensing.
+::R Coordinate analytics department travel and events.
+::R Assist in the organization of internal data training and coordination.
+::R Maintain the analytics branch internal directory and wiki.
+::D **Leadership Schedules** > Coordinated calendars for analytics leadership.
+::D **Expense Logs** > Documentation of department equipment and licenses.
+::D **Meeting Minutes** > Records of data strategy and analytics syncs.
+::A **Scheduling** > Authority over analytics leadership availability.
+::A **Supply Requests** > Initial review of equipment and licensing needs.
+::Z STABLE
+::# 60b889ca
+
+---Pulse-Break---
+
+[[ID]] Audit Department Assistant
+::B Audit Branch
+::S Audit Director
+::V 1.0
+::W 3
+::P To provide administrative support to the Audit Branch, focusing on the organization and security of audit records.
+::R Schedule audit walkthroughs and interviews with Systems.
+::R Manage the physical and digital security of audit evidence.
+::R Coordinate the distribution of final audit reports.
+::R Manage professional certification records for the audit team.
+::R Organize internal audit training sessions.
+::D ****Interview Schedules**** > Coordinated schedules for audit walkthroughs.
+::D ****Distribution Logs**** > Records of report delivery to stakeholders.
+::D ****Certification Database**** > Tracking database for professional certifications.
+::A ****Access Logs**** > Authority over administrative access to audit folders.
+::A ****Scheduling**** > Coordination authority for audit fieldwork dates.
+::Z STABLE
+::# d57493f6
+
+---Pulse-Break---
+
+[[ID]] Audit Department Firmware
+::B Audit Branch
+::S Audit Director
+::V 1.0
+::W 3
+::P To provide administrative support to the Audit Branch, focusing on the organization and security of audit records.
+::R Schedule audit walkthroughs and interviews with Systems.
+::R Manage the physical and digital security of audit evidence.
+::R Coordinate the distribution of final audit reports.
+::R Manage professional certification records for the audit team.
+::R Organize internal audit training sessions.
+::D **Interview Schedules** > Coordinated schedules for audit walkthroughs.
+::D **Distribution Logs** > Records of report delivery to stakeholders.
+::D **Certification Database** > Tracking database for professional certifications.
+::A **Access Logs** > Authority over administrative access to audit folders.
+::A **Scheduling** > Coordination authority for audit fieldwork dates.
+::Z STABLE
+::# 730ebe04
+
+---Pulse-Break---
+
+[[ID]] Business Development Assistant
+::B Business Development Branch
+::S Head of Business Development
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Business Development leadership.
+::R Manage the Head of BizDev's calendar and strategic meetings.
+::R Handle highly confidential deal-related documentation.
+::R Coordinate bizdev department travel and high-stakes events.
+::R Assist in the organization of corporate strategy sessions and retreats.
+::R Manage bizdev department supplies and external advisor invoices.
+::D ****Leadership Schedules**** > Coordinated calendars for bizdev leadership.
+::D ****Expense Logs**** > Documentation of department and advisor spend.
+::D ****Meeting Minutes**** > Detailed records of strategic and deal-related syncs.
+::A ****Scheduling**** > Authority over bizdev leadership meeting availability.
+::A ****Confidentiality**** > Responsibility for secure handling of strategic records.
+::Z STABLE
+::# 35eb6fae
+
+---Pulse-Break---
+
+[[ID]] Bizdev Department Firmware
+::B Business Development Branch
+::S Head of Business Development
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Business Development leadership.
+::R Manage the Head of BizDev's calendar and strategic meetings.
+::R Handle highly confidential deal-related documentation.
+::R Coordinate bizdev department travel and high-stakes events.
+::R Assist in the organization of corporate strategy sessions and retreats.
+::R Manage bizdev department supplies and external advisor invoices.
+::D **Leadership Schedules** > Coordinated calendars for bizdev leadership.
+::D **Expense Logs** > Documentation of department and advisor spend.
+::D **Meeting Minutes** > Detailed records of strategic and deal-related syncs.
+::A **Scheduling** > Authority over bizdev leadership meeting availability.
+::A **Confidentiality** > Responsibility for secure handling of strategic records.
+::Z STABLE
+::# 273ff2b1
+
+---Pulse-Break---
+
+[[ID]] Executive Assistant to the CEO
+::B Headquarters / Corporate Control Layer
+::S Chief Executive Officer (CEO)
+::V 1.0
+::W 5
+::P To provide high-level administrative support to the CEO, ensuring the efficient operation of the **Corporate Control Layer**.
+::R Manage the CEO's calendar and travel logistics.
+::R Coordinate HQ-level meetings and prepare agendas.
+::R Act as a gatekeeper for communication into the CEO's office.
+::R Organize corporate events and Board-level summits.
+::R Handle confidential corporate documentation and filings.
+::D ****CEO Schedules**** > High-level calendar management for the CEO.
+::D ****Correspondence Logs**** > Records of official corporate communications.
+::D ****HQ Meeting Minutes**** > Official records of executive and board meetings.
+::A ****Scheduling**** > Authority over CEO availability for internal meetings.
+::A ****Expense Processing**** > Initial review of CEO-level administrative spend.
+::Z STABLE
+::# de7a72d4
+
+---Pulse-Break---
+
+[[ID]] Finance Department Assistant
+::B Finance Branch
+::S Corporate Controller
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Finance Branch leadership.
+::R Manage the CFO's and leadership team's calendars and meetings.
+::R Handle highly confidential and sensitive financial documentation.
+::R Coordinate finance department travel and expenses.
+::R Assist in the organization of internal and external financial audits.
+::R Manage finance department supplies and external advisor invoices.
+::D ****Leadership Schedules**** > Coordinated calendars for finance leadership.
+::D ****Expense Logs**** > Documentation of department and advisor spend.
+::D ****Meeting Minutes**** > Detailed records of financial strategy syncs.
+::A ****Scheduling**** > Authority over finance leadership meeting availability.
+::A ****Confidentiality**** > Responsibility for secure handling of financial records.
+::Z STABLE
+::# c12c24f0
+
+---Pulse-Break---
+
+[[ID]] Finance Department Firmware
+::B Finance Branch
+::S Chief Financial Officer (CFO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Finance Branch leadership.
+::R Manage the CFO's and leadership team's calendars and meetings.
+::R Handle highly confidential and sensitive financial documentation.
+::R Coordinate finance department travel and expenses.
+::R Assist in the organization of internal and external financial audits.
+::R Manage finance department supplies and external advisor invoices.
+::D **Leadership Schedules** > Coordinated calendars for finance leadership.
+::D **Expense Logs** > Documentation of department and advisor spend.
+::D **Meeting Minutes** > Detailed records of financial strategy syncs.
+::A **Scheduling** > Authority over finance leadership meeting availability.
+::A **Confidentiality** > Responsibility for secure handling of financial records.
+::Z STABLE
+::# 93a6742c
+
+---Pulse-Break---
+
+[[ID]] HR Department Assistant
+::B HR Branch
+::S VP of People Operations
+::V 1.0
+::W 3
+::P To provide administrative support to the HR leadership and manage department-level logistics.
+::R Manage the HR leadership team's calendars and meetings.
+::R Handle sensitive and confidential HR documentation.
+::R Coordinate HR department travel and expenses.
+::R Assist in the organization of corporate-wide HR events.
+::R Manage HR department supplies and vendor invoices.
+::D ****Leadership Schedules**** > Coordinated calendars for HR branch leadership.
+::D ****Expense Logs**** > Documentation of department event and vendor spend.
+::D ****Meeting Minutes**** > Records of HR strategy and **People Operations** coordination.
+::A ****Scheduling**** > Authority over HR leadership meeting availability.
+::A ****Confidentiality**** > Responsibility for secure handling of sensitive HR records.
+::Z STABLE
+::# aa966ddb
+
+---Pulse-Break---
+
+[[ID]] Hr Department Firmware
+::B HR Branch
+::S Chief Human Resources Officer (CHRO)
+::V 1.0
+::W 3
+::P To provide administrative support to the HR leadership and manage department-level logistics.
+::R Manage the HR leadership team's calendars and meetings.
+::R Handle sensitive and confidential HR documentation.
+::R Coordinate HR department travel and expenses.
+::R Assist in the organization of corporate-wide HR events.
+::R Manage HR department supplies and vendor invoices.
+::D **Leadership Schedules** > Coordinated calendars for HR branch leadership.
+::D **Expense Logs** > Documentation of department event and vendor spend.
+::D **Meeting Minutes** > Records of HR strategy and **People Operations** coordination.
+::A **Scheduling** > Authority over HR leadership meeting availability.
+::A **Confidentiality** > Responsibility for secure handling of sensitive HR records.
+::Z STABLE
+::# 12794c21
+
+---Pulse-Break---
+
+[[ID]] Legal Department Assistant
+::B Legal Branch
+::S General Counsel (CLO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Legal Branch leadership.
+::R Manage the General Counsel's calendar and meetings.
+::R Handle highly confidential and privileged legal documentation.
+::R Coordinate legal department travel and expenses.
+::R Assist in the organization of Board and corporate governance meetings.
+::R Manage legal department supplies and external counsel invoices.
+::D ****GC Schedules**** > High-level calendar management for the General Counsel.
+::D ****Expense Reports**** > Documentation of legal and external counsel spend.
+::D ****Meeting Support**** > Materials and logistics for board and legal syncs.
+::A ****Scheduling**** > Authority over General Counsel meeting availability.
+::A ****Privilege**** > Responsibility for secure handling of privileged records.
+::Z STABLE
+::# 3a4988a0
+
+---Pulse-Break---
+
+[[ID]] Legal Department Firmware
+::B Legal Branch
+::S General Counsel (CLO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Legal Branch leadership.
+::R Manage the General Counsel's calendar and meetings.
+::R Handle highly confidential and privileged legal documentation.
+::R Coordinate legal department travel and expenses.
+::R Assist in the organization of Board and corporate governance meetings.
+::R Manage legal department supplies and external counsel invoices.
+::D **GC Schedules** > High-level calendar management for the General Counsel.
+::D **Expense Reports** > Documentation of legal and external counsel spend.
+::D **Meeting Support** > Materials and logistics for board and legal syncs.
+::A **Scheduling** > Authority over General Counsel meeting availability.
+::A **Privilege** > Responsibility for secure handling of privileged records.
+::Z STABLE
+::# 5c1a4f1e
+
+---Pulse-Break---
+
+[[ID]] Marketing Department Assistant
+::B Marketing Branch
+::S VP of Marketing
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Marketing Branch leadership and teams.
+::R Schedule marketing coordination and campaign reviews.
+::R Manage marketing vendor invoices and agency contracts.
+::R Coordinate marketing department travel and event logistics.
+::R Assist in the organization of brand workshops and creative sessions.
+::R Maintain the marketing branch internal wiki and asset logs.
+::D ****Leadership Schedules**** > Coordinated calendars for marketing leadership.
+::D ****Expense Logs**** > Documentation of department and agency spend.
+::D ****Meeting Minutes**** > Records of campaign strategy and creative syncs.
+::A ****Scheduling**** > Authority over marketing leadership availability.
+::A ****Asset Access**** > Initial review of team-level asset and tool requests.
+::Z STABLE
+::# 9ea17204
+
+---Pulse-Break---
+
+[[ID]] Marketing Department Firmware
+::B Marketing Branch
+::S Chief Marketing Officer (CMO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Marketing Branch leadership and teams.
+::R Schedule marketing coordination and campaign reviews.
+::R Manage marketing vendor invoices and agency contracts.
+::R Coordinate marketing department travel and event logistics.
+::R Assist in the organization of brand workshops and creative sessions.
+::R Maintain the marketing branch internal wiki and asset logs.
+::D **Leadership Schedules** > Coordinated calendars for marketing leadership.
+::D **Expense Logs** > Documentation of department and agency spend.
+::D **Meeting Minutes** > Records of campaign strategy and creative syncs.
+::A **Scheduling** > Authority over marketing leadership availability.
+::A **Asset Access** > Initial review of team-level asset and tool requests.
+::Z STABLE
+::# 0d1a36bc
+
+---Pulse-Break---
+
+[[ID]] Operations Department Assistant
+::B Operations Branch
+::S Chief Operating Officer (COO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Operations Branch leadership.
+::R Manage the COO's calendar and operational coordination.
+::R Handle sensitive operational documentation and contracts.
+::R Coordinate ops department travel and vendor meetings.
+::R Assist in the organization of corporate-wide operational training.
+::R Manage ops department supplies and service invoices.
+::D ****Leadership Schedules**** > Coordinated calendars for operations leadership.
+::D ****Expense Logs**** > Documentation of department and service vendor spend.
+::D ****Meeting Minutes**** > Detailed records of operational strategy syncs.
+::A ****Scheduling**** > Authority over operations leadership meeting availability.
+::A ****Record Security**** > Responsibility for secure handling of ops records.
+::Z STABLE
+::# 0a2cce7e
+
+---Pulse-Break---
+
+[[ID]] Ops Department Firmware
+::B Operations Branch
+::S Chief Operating Officer (COO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Operations Branch leadership.
+::R Manage the COO's calendar and operational coordination.
+::R Handle sensitive operational documentation and contracts.
+::R Coordinate ops department travel and vendor meetings.
+::R Assist in the organization of corporate-wide operational training.
+::R Manage ops department supplies and service invoices.
+::D **Leadership Schedules** > Coordinated calendars for operations leadership.
+::D **Expense Logs** > Documentation of department and service vendor spend.
+::D **Meeting Minutes** > Detailed records of operational strategy syncs.
+::A **Scheduling** > Authority over operations leadership meeting availability.
+::A **Record Security** > Responsibility for secure handling of ops records.
+::Z STABLE
+::# 8b17ced3
+
+---Pulse-Break---
+
+[[ID]] Research Department Assistant
+::B Research Branch
+::S Head of Research (Chief Scientist)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Research Branch leadership and lab.
+::R Manage the Head of Research's calendar and academic meetings.
+::R Handle research-related vendor invoices and lab equipment.
+::R Coordinate research department travel and events.
+::R Assist in the organization of research symposiums and knowledge sharing.
+::R Maintain the research branch internal directory and archives.
+::D ****Leadership Schedules**** > Coordinated calendars for research leadership.
+::D ****Lab Expense Logs**** > Documentation of lab equipment and supply spend.
+::D ****Meeting Minutes**** > Records of **Agentic R&D** strategy and innovation coordination.
+::A ****Scheduling**** > Authority over research leadership meeting availability.
+::A ****Lab Supplies**** > Initial review of lab equipment and supply needs.
+::Z STABLE
+::# 361f812b
+
+---Pulse-Break---
+
+[[ID]] Research Department Firmware
+::B Research Branch
+::S Head of Research (Chief Scientist)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Research Branch leadership and lab.
+::R Manage the Head of Research's calendar and academic meetings.
+::R Handle research-related vendor invoices and lab equipment.
+::R Coordinate research department travel and events.
+::R Assist in the organization of research symposiums and knowledge sharing.
+::R Maintain the research branch internal directory and archives.
+::D **Leadership Schedules** > Coordinated calendars for research leadership.
+::D **Lab Expense Logs** > Documentation of lab equipment and supply spend.
+::D **Meeting Minutes** > Records of **Agentic R&D** strategy and innovation coordination.
+::A **Scheduling** > Authority over research leadership meeting availability.
+::A **Lab Supplies** > Initial review of lab equipment and supply needs.
+::Z STABLE
+::# 86ed34f7
+
+---Pulse-Break---
+
+[[ID]] Sales Department Assistant
+::B Sales Branch
+::S VP of Sales
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Sales Branch leadership and teams.
+::R Schedule sales team coordination and pipeline reviews.
+::R Manage **Agentic tool** licenses and CRM access requests.
+::R Coordinate sales department travel and client meeting logistics.
+::R Assist in the organization of sales training and **Sovereign** events.
+::R Maintain the sales branch internal directory and playbook logs.
+::D ****Leadership Schedules**** > Coordinated calendars for sales branch leadership.
+::D ****Expense Logs**** > Documentation of department and license spend.
+::D ****Meeting Minutes**** > Records of pipeline reviews and strategy syncs.
+::A ****Scheduling**** > Authority over sales leadership meeting availability.
+::A ****Tooling Provision**** > Initial review of team-level CRM access requests.
+::Z STABLE
+::# 6d72a5d8
+
+---Pulse-Break---
+
+[[ID]] Sales Department Firmware
+::B Sales Branch
+::S Chief Revenue Officer (CRO)
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Sales Branch leadership and teams.
+::R Schedule sales team coordination and pipeline reviews.
+::R Manage **Agentic tool** licenses and CRM access requests.
+::R Coordinate sales department travel and client meeting logistics.
+::R Assist in the organization of sales training and **Sovereign** events.
+::R Maintain the sales branch internal directory and playbook logs.
+::D **Leadership Schedules** > Coordinated calendars for sales branch leadership.
+::D **Expense Logs** > Documentation of department and license spend.
+::D **Meeting Minutes** > Records of pipeline reviews and strategy syncs.
+::A **Scheduling** > Authority over sales leadership meeting availability.
+::A **Tooling Provision** > Initial review of team-level CRM access requests.
+::Z STABLE
+::# e7a449dc
+
+---Pulse-Break---
+
+[[ID]] Support Department Assistant
+::B Customer Support Branch
+::S Head of Customer Support
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Customer Support Branch leadership.
+::R Manage the Head of Support's calendar and meetings.
+::R Handle support-related vendor invoices and equipment requests.
+::R Coordinate support department travel and events.
+::R Assist in the organization of support team training and onboarding.
+::R Maintain the support branch internal documentation and directory.
+::D ****Leadership Schedules**** > Coordinated calendars for support leadership.
+::D ****Expense Logs**** > Documentation of department equipment and vendor spend.
+::D ****Meeting Minutes**** > Records of support strategy and operations syncs.
+::A ****Scheduling**** > Authority over Support leadership meeting availability.
+::A ****Supply Requests**** > Initial review of support equipment needs.
+::Z STABLE
+::# bca4cc1e
+
+---Pulse-Break---
+
+[[ID]] Support Department Firmware
+::B Customer Support Branch
+::S Head of Customer Support
+::V 1.0
+::W 3
+::P To provide administrative and logistical support to the Customer Support Branch leadership.
+::R Manage the Head of Support's calendar and meetings.
+::R Handle support-related vendor invoices and equipment requests.
+::R Coordinate support department travel and events.
+::R Assist in the organization of support team training and onboarding.
+::R Maintain the support branch internal documentation and directory.
+::D **Leadership Schedules** > Coordinated calendars for support leadership.
+::D **Expense Logs** > Documentation of department equipment and vendor spend.
+::D **Meeting Minutes** > Records of support strategy and operations syncs.
+::A **Scheduling** > Authority over Support leadership meeting availability.
+::A **Supply Requests** > Initial review of support equipment needs.
+::Z STABLE
+::# ad2dfa6a

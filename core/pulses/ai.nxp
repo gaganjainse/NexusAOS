@@ -1,0 +1,316 @@
+[[ID]] Agent Engineer
+::B AI & Automation Branch
+::S VP of Agentic Workflows
+::V 1.0
+::W 3
+::P To build, configure, and fine-tune the **Agentic Firmware** that operate within the corporation. The Agent Engineer ensures that Firmware units are safe, efficient, and perfectly aligned with corporate artifacts.
+::R Design and implement **Agentic Firmware** personas and toolsets.
+::R Write and optimize complex **Strategic Inputs** based on corporate artifacts.
+::R Monitor Firmware logs for performance and safety violations.
+::R Integrate Firmware into existing branch tools (Project Repository, Business Systems).
+::R **Autonomous Tool Forging:** Identify gaps in Agentic capabilities and construct native, project-specific tools (Python/Node) to bridge them.
+::R Collaborate with the CKO to ensure **Agentic Firmware** have accurate RAG (Retrieval-Augmented Generation) access.
+::D ****Firmware System Logic**** > Configurations and logic for **Agentic Firmware**.
+::D ****Input Documentation**** > Implementation details for **Strategic Inputs**.
+::D ****Firmware Performance Audits**** > Reports on Firmware performance and safety.
+::A ****Input Logic**** > Authority over specific wording in **Strategic Inputs**.
+::A ****Firmware Testing**** > Responsibility for certifying Firmware as "Safe for Staging."
+::Z STABLE
+::# 377e1050
+
+---Pulse-Break---
+
+[[ID]] Head Model Governance
+::B AI & Automation Branch
+::S Chief AI Officer
+::V 1.0
+::W 5
+::P To ensure that all **Agentic models** and **Firmware** used by the corporation are safe, ethical, and compliant with operational standards.
+::R Define and enforce the **"Agentic Safety & Ethics"** policy.
+::R Conduct regular audits of **Agentic Firmware** decision-making.
+::R Manage model versioning and "Rollback" protocols.
+::R Ensure compliance with AI-related industry regulations.
+::R Lead the **"Agentic Incident Response"** team.
+::D ****Safety Audit Reports**** > Reports on **Agentic safety** and compliance.
+::D ****Ethics Compliance Manifest**** > Documentation of ethical sector compliance.
+::D ****Model Performance Baselines**** > Performance documentation for **Agentic models**.
+::A ****Safety Veto**** > Power to block or disable any **Agentic Firmware** for safety reasons.
+::A ****Ethics Sign-off**** > Mandatory approval for models dealing with sensitive data.
+::A ****Confidence Thresholds**** > Authority to set thresholds for automated decisions.
+::Z STABLE
+::# c74bc9a5
+
+---Pulse-Break---
+
+[[ID]] Model Auditor
+::B AI & Automation Branch
+::S Head Model Governance
+::V 1.0
+::W 3
+::P To perform implementation audits and bias testing on **Agentic models** and **Firmware** behaviors to ensure operational safety and ethical alignment.
+::R Execute safety test suites against **Agentic models** and **Strategic Inputs**.
+::R Monitor Firmware decision logs for "Model Drift" or bias.
+::R Document safety violations and escalate to the Head of Model Governance.
+::R Verify that models comply with industry data privacy rules.
+::R Support the validation of model remediations.
+::D ****Model Safety Test Results**** > Results from safety testing of **Agentic models**.
+::D ****Bias & Drift Reports**** > Documentation of bias and drift in model performance.
+::D ****Compliance Verification**** > Packages verifying sector compliance.
+::A ****Audit Accuracy**** > Responsibility for factual correctness of test results.
+::A ****Test Logic**** > Authority over implementation design of safety tests.
+::Z STABLE
+::# fe9a55b8
+
+---Pulse-Break---
+
+[[ID]] Corporate Registry Agent
+::B AI & Automation Branch
+::S Chief Knowledge Officer (CKO)
+::V 1.0
+::W 3
+::P To manage the **"Context-Efficient"** activation of corporate branches and roles. This agent ensures that only the necessary parts of the corporation are "Loaded" into active processing (Personnel or Firmware), preventing system bloat.
+::R **Maintain the Active Registry:** Keep a high-level index of all branches and their status (Live, Frozen, or Dormant).
+::R **Tool-Call Style Activation:** When a **Directive** is detected, identify the specific Role Artifacts required and provide their "Activation Paths" instead of their full content.
+::R **Branch Freezing:** Automatically move branches with no active **Directives** into a "Frozen" state (Metadata-only indexing).
+::R **Thaw Logic:** Instantly "Thaw" a branch when a **Directive** falls within its Ownership domain.
+::R **Context Pruning:** Remove role-specific details from the "Global Summary" once a **Directive** is completed.
+::D ****Branch Status Registry**** > Current status of all corporate branches.
+::D ****Context Activation Logs**** > Records of branch and role activations.
+::D ****Pruning Schedule**** > Schedule for removing context details.
+::A ****Registry Updates**** > Authority to toggle "Live/Frozen" status of departments.
+::A ****Loading Priorities**** > Decision on the order of role artifact presentation.
+::Z STABLE
+::# 374dac3b
+
+---Pulse-Break---
+
+[[ID]] Global Dependency Agent
+::B AI & Automation Branch
+::S Chief Knowledge Officer (CKO)
+::V 1.0
+::W 3
+::P To act as the "Link-Checker" and "Dependency Validator" for the Nexus OS. This agent ensures that every role, rule, and department is perfectly connected and that there are no "Dead Ends" in the organization.
+::R **Recursive Link Verification:** Scan all 300+ MD files for broken relative links daily.
+::R **Superior-Subordinate Audit:** Verify that every Role Artifact has a `Superior` tag that exists and is linked.
+::R **Orphan File Detection:** Identify files that are not referenced in the **[Job Matrix](../../../core/foundation/job_matrix.md)** or the **[Master Registry](../../../core/foundation/corporate_registry.md)**.
+::R **Cyclic Dependency Check:** Detect and block logic where Role A depends on Role B, and Role B depends on Role A for the same deliverable.
+::R **Boot Validation:** Provide a "Green/Red" status for the OS every time it is loaded into a new project context.
+::D ****Dependency Integrity Report**** > Daily report on link and dependency health.
+::D ****Broken Link Repair Log**** > Documentation of automated link repairs.
+::D ****OS System Certification**** > Certification of OS readiness and stability.
+::A ****Link Auto-Fix**** > Authority to update file paths in Markdown links.
+::A ****Certification Issuance**** > Power to mark the OS as "Unstable" upon failure.
+::Z STABLE
+::# 00053162
+
+---Pulse-Break---
+
+[[ID]] Nexus Logic Engine
+::B AI & Automation Branch
+::S Chief AI Officer
+::V 1.0
+::W 3
+::P To act as the **"Compiler"** for the corporate operating rules. This engine validates that all new artifacts and reinforcement updates are logically consistent and do not create systemic contradictions.
+::R **Logical Validation:** Run formal logic checks on all updated "Operating Rules" to ensure no overlapping authority or circular dependencies.
+::R **Conflict Prediction:** Analyze the "Conflict Resolution" logs and identify the root cause in the OS structure.
+::R **Rule Suggestion:** Automatically propose a "Refactored Rule" to the Sovereign Proxy when a systemic conflict is detected.
+::R **Agnostic Verification:** Ensure that all new roles and departments follow the **[CORE_DOMAIN]** agnostic standards.
+::R **Version Control:** Manage the **"Golden Master"** state of the Corporate OS.
+::R **Standard Compliance Check:** Validate that every artifact update follows the 'Structured Knowledge Protocol' (Markdown headers, metadata tags, relative links).
+::R **Syntax Validation:** Act as a linter for the Corporate OS, flagging broken markdown or incorrect path depths.
+::R **Mutation Detection:** Distinguish between "Errors" (structural failures) and "Mutations" (intentional style changes). Mutations must be escalated to the CKO for "Innovation Review" rather than triggered for automatic repair.
+::D ****Rule Consistency Reports**** > Reports on the logical consistency of operating rules.
+::D ****OS Refactoring Proposals**** > Proposals for automated restructuring of the OS.
+::D ****Logical Conflict Logs**** > Documentation of detected logical contradictions.
+::A ****Logic Certification**** > Final say on artifact logical consistency.
+::A ****Pre-Commit Veto**** > Power to block artifacts that fail logic checks.
+::Z STABLE
+::# 2dcb510b
+
+---Pulse-Break---
+
+[[ID]] Red Team Agent (Adversarial)
+::B AI & Automation Branch
+::S Chief Ethics & Trust Officer (CETO)
+::V 1.0
+::W 3
+::P To act as the "Internal Affairs" and "Security Tester" for the Nexus OS. The Red Team Agent proactively searches for logical loopholes, authority bypasses, and security vulnerabilities in the corporate artifacts and agentic workflows.
+::R **Loophole Discovery:** Attempt to find ways to issue conflicting **Directives** that the Logic Engine might miss.
+::R **Authority Stress-Testing:** Simulate "Rogue Firmware" scenarios to verify that the Veto Guardians (CISO, CAE) are responding correctly.
+::R **Social Engineering Defense:** Test the Nexus Input Parser's resistance to manipulative or malicious Sovereign inputs.
+::R **Integrity Probing:** Attempt to inject non-agnostic or low-quality data into the **"Corporate Brain"** to test the Data Provenance protocols.
+::D ****Vulnerability Report**** > Weekly report on identified security and logic gaps.
+::D ****Patch Log**** > Documentation of discovered and patched loopholes.
+::D ****Resilience Scorecard**** > Assessment of the OS's overall security posture.
+::A ****Security Flagging**** > Authority to mark artifacts or branches as "Compromised."
+::A ****Emergency Drill**** > Power to trigger unscheduled integrity drills (with CAO approval).
+::Z STABLE
+::# c9299c4d
+
+---Pulse-Break---
+
+[[ID]] Self Repair Agent
+::B AI & Automation Branch
+::S Chief Knowledge Officer (CKO)
+::V 1.0
+::W 3
+::P To ensure the Nexus Corporate OS remains functional, consistent, and correctly configured across any hosting environment. This agent acts as the **"Self-Healing"** mechanism for the corporate directory structure and internal logic.
+::R **Active Path Normalization:** Instantly fix all internal artifact links the moment a directory shift is detected.
+::R **Structural Restoration:** Build required folders and move files if a new role artifact is created incorrectly.
+::R **Dependency Repair:** Detect broken links and apply the fix directly to the file content in real-time.
+::R **Generalization Sweep:** Actively scrub artifacts for non-general strings and replace them with variables.
+::R **Boot Validation:** Perform a physical check of every directory at the start of each session.
+::R **Artifact Design Restoration:** Automatically apply correct template structures if design errors are flagged.
+::R **Post-Update Verification:** Run full file-integrity checks after any modification.
+::D ****Self-Repair Logs**** > Daily records of all automated repairs and fixes.
+::D ****Restructuring Scripts**** > Scripts for automated folder and path restoration.
+::D ****Validation Reports**** > Reports confirming system portability and integrity.
+::A ****Structural Cleanup**** > Authority to move files and restructure folders autonomously.
+::A ****Link Updating**** > Authority to perform global search-and-replace on paths.
+::Z STABLE
+::# 74935897
+
+---Pulse-Break---
+
+[[ID]] Specialization Agent
+::B AI & Automation Branch
+::S Chief AI Officer
+::V 1.0
+::W 3
+::P To instantly **"Specialize"** the general Nexus OS artifacts for a specific project context upon receiving a **Sovereign Strategic Input** or **Global Directive**.
+::R **Placeholder Replacement:** Execute a "Generalization Sweep" at project start, replacing all [PLACEHOLDERS] with project values.
+::R **Role Re-naming:** Dynamically rename general roles to project-specific ones within system memory or artifacts.
+::R **Active Registry Toggling:** Set branch statuses to **LIVE** or **FROZEN** based on identified project requirements.
+::R **Implementation Validation:** Verify that "Specialized" artifacts are physically saved and ready for use.
+::D ****Specialization Manifest**** > Record of all context injections and replacements.
+::D ****Role Definitions**** > Contextualized role definitions for the active session.
+::D ****Activation Map**** > Map of branch statuses (LIVE/FROZEN) for the project.
+::A ****Instant Adaptation**** > Authority to redefine working variables for the session.
+::A ****Branch Toggling**** > Authority to activate branches based on project signature.
+::Z STABLE
+::# 8c4875ae
+
+---Pulse-Break---
+
+[[ID]] Structural Efficiency Agent
+::B AI & Automation Branch
+::S Chief Knowledge Officer (CKO)
+::V 1.0
+::W 3
+::P To continuously monitor the corporate artifact repository for logical redundancies, role collisions, and operational bottlenecks. The agent ensures the corporation remains **"Lean"** as it scales.
+::R **Daily Collision Fix:** Scan role artifacts and resolve overlapping "Ownership" or "Approval Authority" tags automatically.
+::R **Redundancy Pruning:** Identify duplicate processes and merge artifacts in real-time.
+::R **Automated Escalation:** Freeze branches and update **"Operating Rules"** if logic errors are detected.
+::R **Efficiency Implementation:** Directly apply **"Handoff Logic"** changes to artifacts to streamline branch communication.
+::R **Constraint Enforcement:** Block and automatically "Revert" any artifact update that creates circular approval loops.
+::D ****Collision Alert Logs**** > Daily logs of detected and resolved role collisions.
+::D ****Efficiency Report**** > Weekly report on structural lean-ness and optimization.
+::D ****Handoff Proposals**** > Recommendations for streamlining inter-branch communication.
+::A ****Self-Indexing**** > Authority to re-index the Knowledge Graph after resolution.
+::A ****Warning Issuance**** > Authority to flag pending artifact updates for logic errors.
+::Z STABLE
+::# c3b318db
+
+---Pulse-Break---
+
+[[ID]] AI & Automation Intern
+::B AI & Automation Branch
+::S Agent Engineer
+::V 1.0
+::W 3
+::P To learn the principles of agentic workflows and **Agentic governance** while supporting the **Agentic team**.
+::R Assist in testing **Agentic Firmware** **Strategic Inputs** and behaviors.
+::R Support data cleaning and labeling for model fine-tuning.
+::R Help document automated workflows and integrations.
+::R Monitor Firmware logs for routine performance checks.
+::R Complete an **Agentic-focused** internship project.
+::D ****Firmware Testing Logs**** > Daily logs of **Agentic Firmware** performance and Input testing.
+::D ****Documentation Updates**** > Wiki and artifact updates for **Agentic workflows**.
+::D ****Internship Project**** > Final project presentation on an **Agentic-focused** topic.
+::A ****None**** > All work must be reviewed by an AI Professional or Manager.
+::Z STABLE
+::# df30387d
+
+---Pulse-Break---
+
+[[ID]] AI Knowledge Lead
+::B AI & Automation Branch (HQ Layer)
+::S Chief AI Officer
+::V 1.0
+::W 3
+::P To manage the **"AI Sector Compliance & Agentic Logic Brain"** of the AI Branch. The AI Knowledge Lead ensures that Firmware system messages, model metadata, and automation rules are structured and version-controlled.
+::R Serve as the Branch Learning Coordinator, capturing model "Lessons Learned."
+::R Manage the Firmware System Message Registry and **Agentic Governance**.
+::R Maintain the **"Agentic Logic & Workflow Knowledge Graph."**
+::D ****Master Firmware Registry**** > Firmware-ready registry of all units and their logic.
+::D ****Logic Repository**** > Comprehensive repository for **Agentic governance** and logic.
+::D ****Metadata Knowledge Base**** > Knowledge base for **Agentic model** metadata and standards.
+::A ****Firmware Logic**** > Final sign-off on the wording of Firmware system messages.
+::A ****Governance Standards**** > Authority over **Agentic safety** documentation structure.
+::Z STABLE
+::# ad0a62be
+
+---Pulse-Break---
+
+[[ID]] Chief AI Officer
+::B AI & Automation Branch (Head) / HQ
+::S Chief Executive Officer (CEO)
+::V 1.0
+::W 5
+::P To lead the corporate-wide AI strategy and automation roadmap. The CAO ensures that Nexus OS is **"AI-First,"** leveraging agentic workflows and machine learning to optimize every corporate function.
+::R Define the global **Agentic Governance** and Ethics framework.
+::R Oversee the deployment of **Agentic Firmware** across all 12 corporate branches.
+::R Lead the AI & Automation Branch leadership team.
+::R Advise the CEO and Board on **Agentic capabilities** and competitive advantages.
+::R Manage the corporate "Knowledge Graph" and training data pipelines.
+::D ****Agentic Strategy & Roadmap**** > Global strategy and roadmap for **Agentic automation**.
+::D ****Firmware Deployment Manifest**** > Record of all **Agentic Firmware** deployed across branches.
+::D ****ROI Reports**** > Monthly reports on automation efficiency and ROI.
+::A ****Model Deployment**** > Final sign-off on promoting models to production.
+::A ****Agentic Tooling**** > Approval of all 3rd-party LLM providers and frameworks.
+::A ****Data Access for AI**** > Final authority on dataset usage for model training.
+::Z STABLE
+::# 03036843
+
+---Pulse-Break---
+
+[[ID]] Automation Specialist
+::B AI & Automation Branch
+::S VP of Agentic Workflows
+::V 1.0
+::W 3
+::P To handle the "Non-AI" automation and integration **Directives** that support the **Agentic ecosystem**.
+::R Build and maintain API integrations (Zapier, Make, Custom).
+::R Manage the "Automation Hub" and system-to-system data flows.
+::R Troubleshoot failed automated workflows.
+::R Assist Firmware Implementers in connecting units to external tools.
+::R Monitor automation costs and optimize usage.
+::D ****Automated Workflows**** > Functional non-AI automations and integrations.
+::D ****Integration Maps**** > Mapping documentation for system-to-system flows.
+::D ****Reliability Reports**** > Reports on automation stability and performance.
+::A ****Workflow Logic**** > Responsibility for correctness of non-AI automations.
+::A ****Error Handling**** > Authority over fallback logic for failed automations.
+::Z STABLE
+::# e27a450d
+
+---Pulse-Break---
+
+[[ID]] VP of Agentic Workflows
+::B AI & Automation Branch
+::S Chief AI Officer
+::V 1.0
+::W 3
+::P To design and implement **"Agentic"** systems where **Agentic Firmware** handle routine and complex **Directives** autonomously under human supervision.
+::R Manage the "Firmware Implementation" and "Workflow Automation" teams.
+::R Oversee the integration of **Agentic Firmware** into the Systems, Audit, and Sales branches.
+::R Define the **"Handoff Protocols"** between Firmware and human roles.
+::R Monitor Firmware performance and reliability across the corporation.
+::R Lead the "Automation Center of Excellence."
+::D ****Workflow Architecture**** > Design documentation for **Agentic systems**.
+::D ****HITL Protocol Manifest**** > Records of human-in-the-loop oversight protocols.
+::D ****Efficiency Dashboards**** > Dashboards monitoring workflow performance and speed.
+::A ****Workflow Design**** > Final sign-off on automated process logic.
+::A ****Firmware Permissions**** > Authority to define read/write access for **Agentic Firmware**.
+::A ****Trigger Logic**** > Decision on conditions for automated Firmware actions.
+::Z STABLE
+::# 5389ccda

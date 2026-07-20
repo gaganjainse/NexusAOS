@@ -1,0 +1,56 @@
+{
+  "mcpVersion": "1.0",
+  "name": "Nexus Corporate OS (Hybrid Bridge)",
+  "version": "1.0.0",
+  "description": "Dual-stack MCP server combining Node.js stability with Agentic logic.",
+  "engines": {
+    "node": "./mcp_server/node/index.ts",
+    "python": "./mcp_server/python/index.py"
+  },
+  "resources": [
+    {
+      "uri": "nexus://core/handbook",
+      "name": "Corporate OS Handbook",
+      "mimeType": "text/markdown",
+      "path": "../../archives/core/foundation/corporate_os_handbook.md"
+    },
+    {
+      "uri": "nexus://core/constitution",
+      "name": "Corporate Constitution",
+      "mimeType": "text/markdown",
+      "path": "../../archives/core/foundation/nexus_corporate_constitution.md"
+    },
+    {
+      "uri": "nexus://core/logic",
+      "name": "Logic Export",
+      "mimeType": "application/json",
+      "path": "./nexus_logic_export.json"
+    }
+  ],
+  "tools": [
+    {
+      "name": "boot_nexus",
+      "description": "Triggers initialization (delegates to Agentic Engine).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain": { "type": "string" },
+          "platform": { "type": "string" }
+        },
+        "required": ["domain", "platform"]
+      }
+    },
+    {
+      "name": "run_python_tool",
+      "description": "Directly executes a Python-based clinical/logic tool.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tool_name": { "type": "string" },
+          "args": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["tool_name"]
+      }
+    }
+  ]
+}

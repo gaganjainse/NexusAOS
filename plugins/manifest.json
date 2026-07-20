@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "platform": "AOS",
+  "plugins": [
+    {
+      "id": "core",
+      "name": "AOS Core Plugin",
+      "module": "core_plugin",
+      "description": "Base biological runtime tools",
+      "mcps": ["mcp_server/python/index.py"],
+      "skills": [".cursor/skills/aos-boot/SKILL.md"],
+      "rules": [".cursor/rules/aos-constitution.mdc"],
+      "commands": [".cursor/commands/boot.md"],
+      "hooks": [".cursor/hooks.json"],
+      "subagents": ["orchestrator", "motor", "immune"]
+    },
+    {
+      "id": "vision",
+      "name": "AOS Vision Plugin",
+      "module": "vision_plugin",
+      "description": "Image and video perception tools",
+      "mcps": ["tools/vision_engine.py", "tools/video_engine.py"]
+    },
+    {
+      "id": "browser",
+      "name": "AOS Browser Plugin",
+      "module": "browser_plugin",
+      "description": "Web perception via oracle scraper and future browser MCP",
+      "mcps": ["mcp_server/python/oracle_scraper.py"]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+[[ID]] Facilities Coordinator
+::B Operations Branch
+::S Facilities Manager
+::V 1.0
+::W 3
+::P To handle the logistical and administrative details of office and facility operations.
+::R Coordinate with maintenance and cleaning vendors.
+::R Manage office supply inventory and procurement.
+::R Support office move and renovation logistics.
+::R Monitor and report on facility issues (lighting, plumbing, etc.).
+::R Assist in the organization of workplace safety training.
+::D ****Facility Logs**** > Daily logs of facility issues and maintenance.
+::D ****Inventory Reports**** > Monthly reports on office supply status.
+::D ****Vendor Schedules**** > Coordinated calendars for maintenance providers.
+::A ****Supply Ordering**** > Authority to order supplies within budget limits.
+::A ****Vendor Access**** > Responsibility for coordinating provider entry.
+::Z STABLE
+::# 92e30408
+
+---Pulse-Break---
+
+[[ID]] Facilities Manager
+::B Operations Branch
+::S Head of Workplace & Facilities
+::V 1.0
+::W 3
+::P To manage the daily operations and maintenance of the corporate physical offices.
+::R Supervise the maintenance, janitorial, and security services.
+::R Oversee facility repairs and upgrade projects.
+::R Manage facility-related vendor contracts and performance.
+::R Ensure the physical safety and accessibility of the workplace.
+::R Manage the facility budget and expense tracking.
+::D ****Maintenance Logs**** > Verified records of completed facility repairs.
+::D ****Safety Audits**** > Regular reports on workplace safety and compliance.
+::D ****Vendor Reviews**** > Performance reviews for facility service providers.
+::A ****Repair Spend**** > Authority to approve standard facility repairs.
+::A ****Service Timing**** > Final say on scheduling of maintenance activity.
+::A ****Safety Sign-off**** > Initial authority to mark projects as safe for use.
+::Z STABLE
+::# 3fd18260
+
+---Pulse-Break---
+
+[[ID]] Head of Workplace & Facilities
+::B Operations Branch
+::S Chief Operating Officer (COO)
+::V 1.0
+::W 5
+::P To lead the physical workplace strategy and ensure a productive, safe, and sustainable environment for all **Personnel**.
+::R Manage the facilities, real estate, and workplace experience teams.
+::R Oversee office lease negotiations and space planning.
+::R Ensure corporate-wide health, safety, and security (HSS) sector compliance.
+::R Manage workplace services (Maintenance, Catering, Travel).
+::R Drive corporate sustainability and environmental goals.
+::D ****Workplace Plan**** > Strategic multi-year plan for physical operations.
+::D ****Maint Schedules**** > Global schedules for facility upkeep and repairs.
+::D ****HSS Reports**** > Reports on health, safety, and security compliance.
+::A ****Office Design**** > Final sign-off on layouts and aesthetic standards.
+::A ****Lease Terms**** > Initial approval for real estate and lease deals.
+::A ****Safety Policy**** > Final say on corporate-wide safety protocols.
+::Z STABLE
+::# 36a63e8c
+
+---Pulse-Break---
+
+[[ID]] Internal Infrastructure Implementer
+::B Operations Branch
+::S Internal Infrastructure Lead
+::V 1.0
+::W 3
+::P To implement and maintain the **Agentic infrastructure** that power the internal corporate network.
+::R Configure and maintain internal routers, switches, and firewalls.
+::R Manage internal **[CORE_INFRASTRUCTURE]** environments and storage.
+::R Monitor network performance and troubleshoot connectivity issues.
+::R Implement internal security patches and updates.
+::R Support the implementation of internal communication and collaboration tools.
+::D ****Configuration Logs**** > Accurate logs of all network and firewall changes.
+::D ****Uptime Data**** > Real-time and historical network uptime reports.
+::D ****Infrastructure Docs**** > Documentation of internal **Agentic architecture**.
+::A ****Implementation**** > Responsibility for correctness of assigned **Directives**.
+::A ****Alerting Levels**** > Authority over alerting thresholds for owned systems.
+::Z STABLE
+::# 3df802ab
+
+---Pulse-Break---
+
+[[ID]] Internal Infrastructure Lead
+::B Operations Branch
+::S VP of Internal Systems
+::V 1.0
+::W 3
+::P To lead the design and maintenance of the internal corporate network and server **Agentic infrastructure**.
+::R Lead the internal networking and **Agentic engineering** team.
+::R Design and manage the corporate VPN and internal security perimeters.
+::R Oversee the maintenance of internal servers and storage.
+::R Manage the corporate internet and connectivity services.
+::R Ensure the reliability of internal communication tools (Video conferencing, VoIP).
+::D ****Network Architecture**** > Strategic designs for internal corporate networking.
+::D ****Uptime Reports**** > Reports on availability of internal **Agentic infrastructure**.
+::D ****Security Audit Logs**** > Documentation of internal network security events.
+::A ****Network Changes**** > Final sign-off on internal network configurations.
+::A ****Security Protocols**** > Authority over internal firewall and access rules.
+::A ****Hardware Selection**** > Decision on internal server and network hardware.
+::Z STABLE
+::# b24c50ff
+
+---Pulse-Break---
+
+[[ID]] Internal Systems Manager (Internal Services)
+::B Operations Branch
+::S VP of Internal Systems
+::V 1.0
+::W 3
+::P To manage the daily operations and provide high-quality **Agentic support** to the internal organization.
+::R Supervise the internal systems helpdesk and support **Personnel**.
+::R Manage the lifecycle of corporate hardware (Laptops, Phones).
+::R Oversee the administration of internal SaaS tools and accounts.
+::R Ensure **Agentic service** levels are met across the corporation.
+::R Manage the systems procurement and inventory process.
+::D ****Service Metrics**** > Reports on internal **Agentic support** performance.
+::D ****Hardware Logs**** > Accurate inventory logs of all corporate devices.
+::D ****Satisfaction Summaries**** > Reports on internal **Sovereign** support satisfaction.
+::A ****SaaS Provisioning**** > Authority to approve **Personnel** access to internal tools.
+::A ****Equipment Assignment**** > Decision on distribution of standard hardware.
+::A ****Support Workflows**** > Final say on internal **Agentic ticket** routing logic.
+::Z STABLE
+::# 5624ea46
+
+---Pulse-Break---
+
+[[ID]] Internal Systems Specialist (Internal Support)
+::B Operations Branch
+::S Internal Systems Manager (Internal Services)
+::V 1.0
+::W 3
+::P To provide hands-on **Agentic support** and administration for the internal organization.
+::R Resolve internal **Agentic support** tickets and functional issues.
+::R Administer internal SaaS tools and directory services (e.g., Okta, Google Workspace).
+::R Setup and configure new hire functional assets.
+::R Monitor internal **Agentic infrastructure** for performance and security.
+::R Assist in **Agentic [CORE_INFRASTRUCTURE]** projects and deployments.
+::D ****Resolved Tickets**** > Internal **Sovereign** support issues resolved and closed.
+::D ****New Hire Logs**** > Records of successful **Agentic setup** for new hires.
+::D ****Maint Summaries**** > Summaries of routine internal **Agentic maintenance**.
+::A ****Ticket Resolution**** > Authority over **Agentic** solutions for issues.
+::A ****Setup Readiness**** > Responsibility for correctness of new hire setup.
+::Z STABLE
+::# 3a26e733
+
+---Pulse-Break---
+
+[[ID]] VP of Internal Systems
+::B Operations Branch
+::S Chief Operating Officer (COO)
+::V 1.0
+::W 3
+::P To lead the internal **Agentic strategy** and ensure the reliability, security, and scalability of the corporation's digital tools and systems.
+::R Manage the internal systems, Networking, and Infrastructure teams.
+::R Oversee corporate-wide hardware and software procurement.
+::R Ensure the security and availability of internal **Agentic infrastructure** and data.
+::R Drive **Agentic service management** (ITSM) excellence.
+::R Manage relationships with internal **Agentic** and SaaS vendors.
+::D ****Systems Roadmap**** > Annual strategy for internal corporate **Agentic systems**.
+::D ****Compliance Audits**** > Internal reports on **Agentic security** and compliance.
+::D ****Reliability Reports**** > Dashboards tracking internal infrastructure uptime.
+::A ****Systems Standards**** > Final say on corporate hardware/software standards.
+::A ****SaaS Selection**** > Approval of all internal software and SaaS tools.
+::A ****Network Arch**** > Final approval on internal network designs.
+::Z STABLE
+::# 68bb65af
+
+---Pulse-Break---
+
+[[ID]] Operations Intern
+::B Operations Branch
+::S Internal Systems Manager (Internal Services)
+::V 1.0
+::W 3
+::P To learn corporate operations and internal **Agentic** practices while supporting the Operations team.
+::R Assist in internal **Agentic support** and hardware prep.
+::R Support facility maintenance tracking and organization.
+::R Help with operational data entry and reporting.
+::R Conduct research on operational efficiency or green office practices.
+::R Complete an operations-focused internship project.
+::D ****Inventory Logs**** > Updated logs of corporate assets and supplies.
+::D ****Research Summaries**** > Summaries of operational efficiency research.
+::D ****Internship Project**** > Final presentation on an operations-focused topic.
+::A ****None**** > All work must be reviewed by an Ops Professional.
+::Z STABLE
+::# 8292c3d7
+
+---Pulse-Break---
+
+[[ID]] Chief Operating Officer (COO)
+::B Operations Branch (Head)
+::S Chief Executive Officer (CEO)
+::V 1.0
+::W 5
+::P To lead the global operational strategy and ensure the efficient daily functioning of **Nexus Corporate OS**. The COO focuses on **"Operational Excellence"** and scaling the company's internal capabilities.
+::R Define the corporate operational strategy and budget.
+::R Oversee all operational functions, including Internal **Agentic Systems**, Facilities, and Supply Chain.
+::R Drive corporate-wide process optimization and efficiency.
+::R Lead the Operations leadership team.
+::R Ensure the physical and **Agentic infrastructure** supports the company's growth.
+::D ****Operational Plan**** > Annual strategic plan for global operations.
+::D ****Efficiency Reports**** > Quarterly reports on corporate process optimization.
+::D ****Resource Roadmap**** > Strategic roadmap for resource management and scaling.
+::A ****Ops Spend**** > Final approval on operational/**Agentic** budgets.
+::A ****Process Standards**** > Ultimate authority on corporate-wide operational SOPs.
+::A ****Vendor Selection**** > Approval of all major operational service providers.
+::Z STABLE
+::# 66d65e2c
+
+---Pulse-Break---
+
+[[ID]] Operations Knowledge Lead (Branch HQ)
+::B Operations Branch (HQ Layer)
+::S Chief Operating Officer (COO)
+::V 1.0
+::W 3
+::P To manage the **"Operational Excellence & Infrastructure Brain"** of the Operations Branch. The Ops Knowledge Lead ensures that SOPs, **Agentic** docs, and facility rules are structured for **Agentic Operations Firmware**.
+::R Serve as the Branch Learning Coordinator, capturing process "Lessons Learned."
+::R Manage the Standard Operating Procedures (SOPs) and internal **Agentic systems** repository.
+::R Maintain the **"Corporate Asset & Infra Knowledge Graph."**
+::D ****SOP Repository**** > Firmware-ready repository of all operational procedures.
+::D ****Knowledge Base**** > Database of internal **Agentic systems** and infrastructure docs.
+::D ****Asset Registry**** > Master registry of all corporate physical/digital assets.
+::A ****Process Standards**** > Final sign-off on wording of operational SOPs.
+::A ****Infra Docs**** > Authority over structure of internal **Agentic** docs.
+::Z STABLE
+::# 238fc3b1

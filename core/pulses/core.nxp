@@ -1,0 +1,426 @@
+[[ID]] Corporate OS Handbook
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 3eca8ad4
+
+---Pulse-Break---
+
+[[ID]] Corporate Registry
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# d33b41dd
+
+---Pulse-Break---
+
+[[ID]] Corporate Structure
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# f4fa50cb
+
+---Pulse-Break---
+
+[[ID]] Job Matrix
+::B Core
+::S None
+::V 1.0
+::W 3
+::P To ensure that every role has a clear supervisor, a defined purpose, and that there are no **"Unsupervised Nodes"** or **"Administrative Bloat"** within the organization.
+::R ### 1. Ultimate Oversight (User Command Layer)
+::R | Branch | Department | Role | Superior | Primary Ownership |
+::R | :--- | :--- | :--- | :--- | :--- |
+::R | **HQ** | **NCC** | **Nexus Omni-Lead** | **THE USER** | **Global Sync & User Reporting** |
+::R | **HQ** | **NCC** | **[Nexus Orchestrator](../../roles/hq/ncc/nexus_orchestrator_agent.md)** | **Omni-Lead** | **Real-Time Event Loop & Directive Routing** |
+::R | **HQ** | **NCC** | **[Nexus Input Parser](../../roles/hq/ncc/nexus_input_parser_agent.md)** | **Orchestrator** | **Intent Translation & Directive Formatting** |
+::R | **HQ** | **NCC** | **[Oracle Agent (OIA)](../../roles/hq/ncc/oracle_interface_agent.md)** | **Orchestrator** | **NCC Interface & Directive Verification** |
+::R | **HQ** | **NCC** | **Learning Synth Agent** | **Omni-Lead** | **Intelligence Summarization** |
+::R | **HQ** | **NCC** | **System Health Sup.** | **Omni-Lead** | **Infrastructure Integrity** |
+::Z STABLE
+::# 7caf30ed
+
+---Pulse-Break---
+
+[[ID]] Nexus OS Creation & Operation Guide
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 65fcf2b8
+
+---Pulse-Break---
+
+[[ID]] Site Map
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# c41b3729
+
+---Pulse-Break---
+
+[[ID]] consolidation_20260720_172402
+::V 1.0
+::W 3
+::Z STABLE
+::# 15d5f37c
+
+---Pulse-Break---
+
+[[ID]] Metabolism Protocol
+::B Core
+::S Chief Systems Officer (CSO)
+::V 1.0
+::W 3
+::P To ensure the **Nexus Corporate OS** maintains operational stability by managing its "Energy" consumption (tokens, API costs, and context limits). This prevents the OS from entering a "Starvation" state (context walls or budget exhaustion).
+::R **Energy Tracking:** Monitor real-time token and context usage.
+::R **State Management:** Define and enforce system behavior based on energy levels.
+::R **Conservation Enforcement:** Trigger deactivation of non-critical branches when resources are low.
+::D **Metabolic Report** > Daily summary of energy consumption and efficiency.
+::D **Conservation Logs** > Records of branches frozen due to resource constraints.
+::A **Threshold Adjustment** > Chief Systems Officer (CSO)
+::A **Emergency Reset** > THE SOVEREIGN
+::L The Metabolism Engine is authorized to override a Directive if it would result in a **Critical** energy failure.
+::Z STABLE
+::# df8dba0f
+
+---Pulse-Break---
+
+[[ID]] Nexus Operational Ledger
+::V 1.0
+::W 3
+::Z STABLE
+::# ca71c226
+
+---Pulse-Break---
+
+[[ID]] Nexus System Diagnostics
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# b84ea276
+
+---Pulse-Break---
+
+[[ID]] Structural Efficiency Audit
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 58a69a3c
+
+---Pulse-Break---
+
+[[ID]] Circulatory Protocol
+::B Core
+::S Chief Systems Officer (CSO)
+::V 1.0
+::W 3
+::P To move **Nexus Corporate OS** from a reactive state to a proactive, continuous-flow state. This protocol governs the "Heartbeat" of the OS and the propagation of signals between branches.
+::A **Heartbeat Frequency** > Chief Systems Officer (CSO)
+::A **Signal Thresholds** > Chief Agentic Officer (CAO)
+::L If the Circulatory System fails, the OS enters "Stasis." Background intelligence gathering and self-healing sync will stop.
+::Z STABLE
+::# 7325869c
+
+---Pulse-Break---
+
+[[ID]] Learning & Consolidation Protocol
+::B Core
+::S Chief Knowledge Officer (CKO)
+::V 1.0
+::W 3
+::P To define the **"Memory Consolidation"** mechanism of the Nexus Corporate OS. This protocol enables the system to "Sleep," analyze its operational history, and integrate successful patterns into its long-term "DNA" (Archives).
+::A **Pruning Decisions** > Chief Knowledge Officer (CKO)
+::A **SOP Promotion** > Sovereign Proxy (Nexus Omni-Lead)
+::L Memory Consolidation is a "Deep Sleep" process. During this cycle, the Orchestrator may delay non-critical directives to prioritize neural synthesis.
+::Z STABLE
+::# 00639374
+
+---Pulse-Break---
+
+[[ID]] Data Provenance and Lineage Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 00040445
+
+---Pulse-Break---
+
+[[ID]] Immune & Proactivity Protocol
+::B Core
+::S Chief Ethics & Trust Officer (CETO)
+::V 1.0
+::W 3
+::P To move the **Nexus Corporate OS** from reactive self-healing to **Proactive Immunity**. This protocol defines the "Body Temperature" (Threat Level) of the organization and the system-wide response to logic drift and operational pathogens.
+::A **Threat Reset** > Chief Ethics & Trust Officer (CETO)
+::A **Immune Override** > THE SOVEREIGN
+::L During a **Fever State**, the Immune System is authorized to block the Orchestrator from spawning new subagents until the system is "Sterilized" (Repaired).
+::Z STABLE
+::# 4caf53d0
+
+---Pulse-Break---
+
+[[ID]] Lattice Protocol
+::B Core
+::S Chief Agentic Officer (CAO)
+::V 1.0
+::W 3
+::P To define the **"Nervous System"** of the Nexus Corporate OS, enabling complex inter-agent coordination, context-aware handoffs, and system-wide proprioception.
+::A **Synapse Prioritization** > Nexus Orchestrator Agent
+::A **Hierarchy Resolution** > Chief Knowledge Officer (CKO)
+::L A node may only "Fire" if it has sufficient **Metabolic Energy** (>10%). If energy is Critical, the Nervous System enters a forced stasis.
+::Z STABLE
+::# 437012c5
+
+---Pulse-Break---
+
+[[ID]] Mood & Endocrine Protocol
+::B Core
+::S Chief Agentic Officer (CAO)
+::V 1.0
+::W 3
+::P To move the **Nexus Corporate OS** from pure logical execution to **Salience-Driven Behavior**. This protocol defines the "Global Vibe" and hormonal signaling that influence system-wide risk tolerance, speed, and audit intensity.
+::A **Vibe Thresholds** > Chief Systems Officer (CSO)
+::A **Hormonal Resets** > THE SOVEREIGN
+::L The Orchestrator MUST check the Global Vibe before initiating high-risk "Mutations" or expensive subagent spawns.
+::Z STABLE
+::# f2b74097
+
+---Pulse-Break---
+
+[[ID]] Mutation Protocol
+::B Core
+::S Sovereign Proxy (Nexus Omni-Lead)
+::V 1.0
+::W 3
+::P To enable the **Nexus Corporate OS** to autonomously rewrite its own DNA (Protocols and Rules) based on operational feedback and consolidated wisdom. This protocol governs the "Evolutionary Loop" of the organization.
+::A **Minor Mutations** > Chief Agentic Officer (CAO)
+::A **Structural DNA Changes** > THE SOVEREIGN
+::Z STABLE
+::# f4ea044f
+
+---Pulse-Break---
+
+[[ID]] Nexus Agent Recovery & Correction Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 2cb472dd
+
+---Pulse-Break---
+
+[[ID]] Nexus Sovereign Disclosure and Transparency Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 50d1d3f5
+
+---Pulse-Break---
+
+[[ID]] Nexus Auto Exec
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 5158c038
+
+---Pulse-Break---
+
+[[ID]] Nexus Boot and Deployment Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# afdcab74
+
+---Pulse-Break---
+
+[[ID]] Nexus Crisis and Anomaly Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 02d8d04e
+
+---Pulse-Break---
+
+[[ID]] Nexus Global Localization Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# b53a4753
+
+---Pulse-Break---
+
+[[ID]] Nexus Packaging & MCP Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 6863ca8f
+
+---Pulse-Break---
+
+[[ID]] Nexus Shutdown Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 409fe885
+
+---Pulse-Break---
+
+[[ID]] Nexus Tooling & Asset Protocol
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 794b3a8e
+
+---Pulse-Break---
+
+[[ID]] Replication & Lineage Protocol
+::B Core
+::S Sovereign Proxy (Nexus Omni-Lead)
+::V 1.0
+::W 3
+::P To enable the **Nexus Corporate OS** to autonomously or directedly spawn "Child" instances. This protocol ensures generational continuity while allowing for evolutionary adaptation.
+::A **Spore Export** > Chief Knowledge Officer (CKO)
+::A **Instantiation (Birth)** > THE SOVEREIGN
+::L A Child instance inherits the **Constitution** of the Parent. Self-Evolution must never compromise the Sovereign Supremacy Law.
+::Z STABLE
+::# 7d141b90
+
+---Pulse-Break---
+
+[[ID]] Branch HQ and Learning Architecture
+::B Core
+::S None
+::V 1.0
+::W 3
+::P To ensure that each branch maintains its own structural integrity and learning loops while remaining perfectly aligned with the global **Nexus OS** standards.
+::R **Branch HQ Model:** Managing the **Branch Head**, **Knowledge Lead**, and **Agentic Liaison**.
+::R **Updation & Learning Rules:** Capturing lessons learned from **Systems, Audit, Marketing, and Sales**.
+::R **Agentic Sync:** Ensuring branch agents are updated with real-time operational data.
+::Z STABLE
+::# 9739b9a3
+
+---Pulse-Break---
+
+[[ID]] Corporate Immune System
+::B Core
+::S None
+::V 1.0
+::W 3
+::P To ensure the OS remains **self-healing and resilient**, converting every operational error into a learning signal for artifact updation.
+::R **Structural Reactivity:** Repairing broken links and missing directories.
+::R **Semantic Reactivity:** Resolving logic conflicts and authority overlaps.
+::R **Operational Reactivity:** Converting Directive failures into **"Error-to-Artifact"** updates.
+::Z STABLE
+::# b908c0a8
+
+---Pulse-Break---
+
+[[ID]] Operating Rules
+::B Core
+::S None
+::V 1.0
+::W 3
+::P The foundational command dashboard for the Nexus OS.
+::R **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
+::R **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+::Z STABLE
+::# 147515b2
+
+---Pulse-Break---
+
+[[ID]] Updation and Learning Rules
+::B Core
+::S None
+::V 1.0
+::W 3
+::P To ensure the corporation functions as a living organism, where human personnel and Agentic interactions continuously improve the **"Corporate Brain"** (Artifacts and Models).
+::R **Artifact Updation:** Managing minor and major updates to role descriptions and operating rules.
+::R **Learning Loop Management:** Coordinating the collection and synthesis of operational evidence.
+::R **Machine-Readable Standards:** Enforcing the **SKP (Structured Knowledge Protocol)**.
+::R **Agentic Firmware Learning:** Establishing the rules for agentic feedback and self-correction.
+::Z STABLE
+::# c004e892

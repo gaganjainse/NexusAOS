@@ -1,0 +1,401 @@
+[[ID]] Content Manager
+::B Marketing Branch
+::S VP of Marketing
+::V 1.0
+::W 3
+::P To lead the content marketing strategy and production for **Nexus Corporate OS**. The Content Manager ensures the brand provides value through high-quality information.
+::R Define the content calendar and distribution strategy.
+::R Oversee the production of blogs, whitepapers, and case studies.
+::R Manage the social media presence and community engagement.
+::R Coordinate with Product for **Agentic** content accuracy.
+::R Manage external content contributors and writers.
+::D ****Content Calendar**** > Strategic schedule for all marketing content.
+::D ****Articles**** > Published whitepapers, blogs, and case studies.
+::D ****Engagement Reports**** > Reports on social media and content reach.
+::A ****Editorial Calendar**** > Final say on the corporate publication schedule.
+::A ****External Writers**** > Authority to onboard and manage freelance talent.
+::A ****Social Posts**** > Sign-off on brand social media messaging.
+::Z STABLE
+::# f172af2e
+
+---Pulse-Break---
+
+[[ID]] Content Specialist
+::B Marketing Branch
+::S Content Manager
+::V 1.0
+::W 3
+::P To create and distribute valuable content to attract and retain the operational audience.
+::R Write blog posts, newsletters, and email sequences.
+::R Produce basic visual assets and infographics.
+::R Manage content distribution across internal and external channels.
+::R Interview subject matter experts for content creation.
+::R Support the Content Manager in content reporting.
+::D ****Content Pieces**** > Draft and final articles, newsletters, and emails.
+::D ****Performance Data**** > Reports on content reach and engagement metrics.
+::D ****Schedules**** > Distribution schedules for all marketing channels.
+::A ****Content Drafts**** > Responsibility for factual and grammatical quality.
+::A ****Email Formatting**** > Authority over visual layout of assigned newsletters.
+::Z STABLE
+::# 93e3bf8a
+
+---Pulse-Break---
+
+[[ID]] PR Lead
+::B Marketing
+::S VP of Marketing
+::V 1.0
+::W 3
+::P To manage the corporate reputation and external communication strategy, ensuring consistent and positive brand messaging across all public-facing channels.
+::R Develop and execute the Global Public Relations strategy.
+::R Manage media relations and act as the primary corporate spokesperson.
+::R Draft and distribute press releases and corporate announcements.
+::R Monitor public sentiment and lead crisis communication efforts.
+::R Coordinate with the Content Team to align PR with brand messaging.
+::D ****Coverage Reports**** > Monthly reports on global media coverage and reach.
+::D ****Crisis Playbooks**** > Strategic playbooks for responding to emergencies.
+::D ****Media Kits**** > Press kits and approved media assets for external use.
+::A ****Press Releases**** > Final sign-off on all external news distributions.
+::A ****Crisis Response**** > Authority over public statements during emergencies.
+::Z STABLE
+::# 82072d37
+
+---Pulse-Break---
+
+[[ID]] Social Media Specialist
+::B Marketing Branch
+::S Content Manager
+::V 1.0
+::W 3
+::P To manage the brand's social media presence and engage with the operational community.
+::R Create and schedule social media posts across platforms (LinkedIn, X, etc.).
+::R Engage with followers and respond to comments and messages.
+::R Monitor social media trends and competitor activity.
+::R Assist in the production of social-first content (videos, stories).
+::R Report on social media reach and engagement metrics.
+::D ****Post Schedule**** > Weekly schedule for social media content distribution.
+::D ****Engagement Reports**** > Monthly reports on social reach and interactions.
+::D ****Interaction Logs**** > Records of community engagement and responses.
+::A ****Engagement Tone**** > Authority over the brand's conversational tone.
+::A ****Interaction**** > Initial authority to respond to standard **Sovereign** comments.
+::Z STABLE
+::# f3dd9579
+
+---Pulse-Break---
+
+[[ID]] Art Director
+::B Marketing Branch
+::S Creative Director
+::V 1.0
+::W 3
+::P To oversee the visual design and production of all marketing assets. The Art Director ensures high visual standards and creative excellence.
+::R Lead the visual design team (Graphic Designers, Videographers).
+::R Review and critique visual work against brand standards.
+::R Manage the visual production process for campaigns.
+::R Design high-level visual concepts for major initiatives.
+::R Collaborate with the Creative Director on visual strategy.
+::D ****Production Kits**** > Visual kits and guidelines for campaign production.
+::D ****Visual Assets**** > Final digital and print assets for marketing.
+::D ****Visual Audits**** > Periodic audits of brand visual consistency.
+::A ****Design Mockups**** > Approval of visual designs before production.
+::A ****Visual Style**** > Selection of specific styles and creative directions.
+::A ****Production Specs**** > Final say on **Agentic** specifications for visual assets.
+::Z STABLE
+::# 79894839
+
+---Pulse-Break---
+
+[[ID]] Copywriter
+::B Marketing Branch
+::S Copy Chief
+::V 1.0
+::W 3
+::P To write compelling marketing copy that drives action and maintains the brand voice.
+::R Write copy for digital ads, landing pages, and emails.
+::R Create social media captions and video scripts.
+::R Assist in writing long-form content like case studies.
+::R Proofread and edit marketing materials for accuracy.
+::R Collaborate with designers to ensure copy/design alignment.
+::D ****Ad Copy**** > Draft and final copy for digital advertising.
+::D ****Scripts**** > Storyboards and scripts for marketing videos.
+::D ****Web Content**** > Written blocks for website and landing pages.
+::A ****Copy Accuracy**** > Responsibility for grammatical and factual quality.
+::A ****Creative Direction**** > Authority over tone within assigned copy **Directives**.
+::Z STABLE
+::# 2dd632c8
+
+---Pulse-Break---
+
+[[ID]] Copy Chief
+::B Marketing Branch
+::S Creative Director
+::V 1.0
+::W 5
+::P To oversee the written brand voice and copywriting for all marketing communications.
+::R Lead the copywriting team and review all marketing copy.
+::R Maintain and update the brand voice and style guide.
+::R Write high-level copy for major brand campaigns.
+::R Ensure copy is persuasive, accurate, and on-brand.
+::R Collaborate with the Art Director on the word/image relationship.
+::D ****Voice Guide**** > Master guide for brand tone and written voice.
+::D ****Final Copy**** > Verified and approved copy for all major assets.
+::D ****Style Guidelines**** > Standards for marketing grammar and formatting.
+::A ****Copy Sign-off**** > Final approval on all written marketing materials.
+::A ****Voice Standards**** > Authority to reject content failing voice criteria.
+::A ****Editorial**** > Final say on grammar and formatting standards.
+::Z STABLE
+::# c9c6f981
+
+---Pulse-Break---
+
+[[ID]] Creative Director
+::B Marketing Branch
+::S Chief Marketing Officer (CMO)
+::V 1.0
+::W 3
+::P To lead the creative vision for all marketing and brand communications. The Creative Director ensures that all visual and written content is high-quality and on-brand.
+::R Direct the creative process for all marketing assets (Video, Web, Print).
+::R Lead the creative team and external freelancers.
+::R Ensure creative consistency across all marketing touchpoints.
+::R Manage the production of high-level creative campaigns.
+::R Present creative concepts to the CMO and CEO.
+::D ****Identity Systems**** > Master visual and verbal identity frameworks.
+::D ****Campaign Concepts**** > High-level creative concepts for global initiatives.
+::D ****Production Schedules**** > Master schedules for creative asset delivery.
+::A ****Visual Assets**** > Final sign-off on creative assets before publication.
+::A ****Creative Talent**** > Selection and management of external creatives.
+::A ****Brand Aesthetics**** > Ultimate authority over brand guideline execution.
+::Z STABLE
+::# 8be88334
+
+---Pulse-Break---
+
+[[ID]] Graphic Designer
+::B Marketing Branch
+::S Art Director
+::V 1.0
+::W 3
+::P To create visual designs for marketing collateral across all channels.
+::R Design ads, social media graphics, and website banners.
+::R Create brochures, flyers, and other print materials.
+::R Assist in maintaining the design system's marketing components.
+::R Prepare design files for professional printing or digital use.
+::R Collaborate with copywriters on design/copy integration.
+::D ****Graphic Designs**** > High-fidelity designs for all marketing channels.
+::D ****Print-ready Files**** > Formatted and verified files for production.
+::D ****Asset Libraries**** > Maintained libraries of design components.
+::A ****Visual Execution**** > Responsibility for aesthetic quality of assignments.
+::A ****File Integrity**** > Authority over **Agentic** structure of design files.
+::Z STABLE
+::# 03a5fe29
+
+---Pulse-Break---
+
+[[ID]] Videographer / Motion Designer
+::B Marketing Branch
+::S Art Director
+::V 1.0
+::W 3
+::P To produce high-quality video content and motion graphics for marketing campaigns.
+::R Shoot and edit promotional videos and product demos.
+::R Create motion graphics and animations for digital ads.
+::R Manage video production equipment and studio space.
+::R Optimize video content for various social and web platforms.
+::R Assist in the storytelling and storyboarding process.
+::D ****Video Files**** > Final edited video files for distribution.
+::D ****Motion Assets**** > High-quality graphics and animations for ads.
+::D ****Production Archives**** > B-roll and source files from video shoots.
+::A ****Edit Selection**** > Responsibility for creative quality of video edits.
+::A ****Agentic Quality**** > Authority over resolution and compression specs.
+::Z STABLE
+::# 3a6263cc
+
+---Pulse-Break---
+
+[[ID]] Events Manager
+::B Marketing Branch
+::S VP of Marketing
+::V 1.0
+::W 3
+::P To manage the corporate presence at operational conferences, trade shows, and internal events.
+::R Plan and execute event strategy for trade shows and webinars.
+::R Manage event budgets, logistics, and vendor relations.
+::R Coordinate with Sales for lead capture at events.
+::R Manage the production of event-specific marketing materials.
+::R Evaluate event ROI and provide recommendations for future sponsorships.
+::D ****Planning Docs**** > Strategic documents for event execution.
+::D ****Lead Reports**** > Reports on lead capture and quality from events.
+::D ****Budget Summaries**** > Finalized budget tracking for all marketing events.
+::A ****Vendor Contracts**** > Initial approval for event vendor agreements.
+::A ****Booth Design**** > Sign-off on trade show layouts and graphics.
+::A ****Event Logistics**** > Authority over travel and logistical arrangements.
+::Z STABLE
+::# afc580ef
+
+---Pulse-Break---
+
+[[ID]] Events Specialist
+::B Marketing Branch
+::S Events Manager
+::V 1.0
+::W 3
+::P To execute the logistical details of marketing events and conferences.
+::R Handle event registrations and shipment of materials.
+::R Coordinate event **Personnel** schedules and requirements.
+::R Assist in booth setup and teardown at trade shows.
+::R Manage lead collection devices and initial data entry.
+::R Support the Events Manager in event communication.
+::D ****Logistics Checklists**** > Comprehensive lists for event operational readiness.
+::D ****Shipment Trackers**** > Logs tracking arrival and return of event assets.
+::D ****Staff Schedules**** > Coordinated calendars for event team coverage.
+::A ****Logistics Details**** > Authority over execution of assigned logistical Directives.
+::A ****Lead Data**** > Responsibility for accuracy of collected lead info.
+::Z STABLE
+::# 7f4e8962
+
+---Pulse-Break---
+
+[[ID]] Marketing Intern
+::B Marketing Branch
+::S VP of Marketing
+::V 1.0
+::W 3
+::P To learn modern marketing practices while supporting the marketing team in day-to-day operations.
+::R Assist in social media scheduling and community monitoring.
+::R Support event logistics and material preparation.
+::R Help with basic data entry and marketing reporting.
+::R Conduct competitor research and brand mentions monitoring.
+::R Participate in brainstorming sessions for creative campaigns.
+::D ****Research Summaries**** > Summaries of market and competitor research.
+::D ****Social Drafts**** > Organized drafts for social media updates.
+::D ****Internship Project**** > Final presentation on a marketing-focused topic.
+::A ****None**** > All work must be reviewed by a Specialist.
+::Z STABLE
+::# f9ba4aaa
+
+---Pulse-Break---
+
+[[ID]] Chief Marketing Officer (CMO)
+::B Marketing Branch (Head)
+::S Chief Executive Officer (CEO)
+::V 1.0
+::W 5
+::P To lead the global brand and growth strategy for **Nexus Corporate OS**. The CMO ensures that the corporation effectively communicates its value to the industry and scales its market presence.
+::R Define the global marketing strategy, brand identity, and budget.
+::R Oversee all marketing functions, including Content, Creative, Events, and Performance.
+::R Advise the CEO on market trends, competitive positioning, and growth opportunities.
+::R Lead the Marketing leadership team.
+::R Manage major brand partnerships and PR strategy.
+::D ****Marketing Roadmap**** > Annual global strategy and budget for marketing.
+::D ****Brand Guidelines**** > Master guidelines for brand voice and identity.
+::D ****Growth Reports**** > Monthly reports on global growth and sentiment.
+::A ****Marketing Spend**** > Final approval on all marketing and event budgets.
+::A ****Brand Voice**** > Ultimate authority on public messaging and identity.
+::A ****Campaign Launch**** > Final sign-off on major global campaigns.
+::Z STABLE
+::# 1f47a073
+
+---Pulse-Break---
+
+[[ID]] Marketing Knowledge Lead (Branch HQ)
+::B Marketing Branch (HQ Layer)
+::S Chief Marketing Officer (CMO)
+::V 1.0
+::W 3
+::P To manage the **"Brand & Growth Brain"** of the Marketing Branch. The Marketing Knowledge Lead ensures that brand guidelines, campaign data, and market insights are structured for **Agentic Firmware** and human teams.
+::R Serve as the Branch Learning Coordinator, capturing campaign "Lessons Learned."
+::R Manage the Brand Identity System and Marketing Guidelines.
+::R Manage the **"Marketing Knowledge Graph"** (**Entity** segments, competitor profiles).
+::D ****Brand Guidelines**** > Firmware-ready identity and voice guidelines.
+::D ****Insights Repository**** > Repository for verified market research insights.
+::D ****Performance Base**** > Knowledge base of campaign results and success data.
+::A ****Brand Standards**** > Final sign-off on updates to voice and tone.
+::A ****Market Data**** > Authority over the "Truth" status of research.
+::Z STABLE
+::# 3a97cce0
+
+---Pulse-Break---
+
+[[ID]] VP of Marketing
+::B Marketing Branch
+::S Chief Marketing Officer (CMO)
+::V 1.0
+::W 3
+::P To execute the marketing strategy and manage the operational marketing departments. The VP of Marketing focuses on "How we grow" and ensuring marketing KPIs are met.
+::R Manage the performance marketing, content, and events departments.
+::R Oversee the execution of marketing campaigns.
+::R Analyze marketing ROI and adjust tactics accordingly.
+::R Collaborate with Sales on lead generation and enablement.
+::R Manage the internal marketing operations and team culture.
+::D ****Performance Reports**** > Monthly summaries of global marketing ROI and KPIs.
+::D ****Campaign Post-Mortems**** > Detailed analysis of completed campaign results.
+::D ****Marketing Roadmap**** > Operational roadmap for marketing initiatives.
+::A ****Campaign Launch**** > Approval for individual marketing executions.
+::A ****Agentic Stack**** > Selection of automation and analytics tools.
+::A ****Lead Flow**** > Authority over lead qualification and handoff logic.
+::Z STABLE
+::# bcc2e8ea
+
+---Pulse-Break---
+
+[[ID]] Growth Specialist
+::B Marketing Branch
+::S Performance Marketing Manager
+::V 1.0
+::W 3
+::P To implement and optimize digital marketing campaigns to drive user growth.
+::R Execute paid ad campaigns across multiple channels.
+::R Monitor campaign performance and perform daily optimizations.
+::R Create tracking links and manage UTM parameters.
+::R Assist in landing page testing and optimization.
+::R Provide data analysis on user acquisition trends.
+::D ****Ad Campaigns**** > Optimized and monitored digital ad campaigns.
+::D ****Weekly Summaries**** > Performance summaries for all paid channels.
+::D ****Tracking Docs**** > Documentation of campaign tracking and parameters.
+::A ****Ad Tweaks**** > Authority to adjust ad copy and targeting.
+::A ****Tracking Logic**** > Responsibility for accuracy of campaign tracking.
+::Z STABLE
+::# dac8d8c1
+
+---Pulse-Break---
+
+[[ID]] Performance Marketing Manager
+::B Marketing Branch
+::S VP of Marketing
+::V 1.0
+::W 3
+::P To drive user acquisition and growth through data-driven digital marketing channels.
+::R Manage paid search (SEM), paid social, and display advertising.
+::R Optimize conversion rates across the marketing funnel.
+::R Conduct A/B testing on landing pages and ad creative.
+::R Track and report on CAC (Customer Acquisition Cost) and LTV.
+::R Manage digital marketing agency relationships.
+::D ****Media Dashboards**** > Live dashboards tracking performance marketing ROI.
+::D ****CRO Reports**** > Analysis of conversion rate optimization tests.
+::D ****Spend Breakdowns**** > Detailed reports on digital advertising expenditure.
+::A ****Ad Spend**** > Authority over daily and weekly digital budgets.
+::A ****Keyword Strategy**** > Final say on targeted search keyword lists.
+::A ****Landing Pages**** > Joint approval on conversion-focused layouts.
+::Z STABLE
+::# 0255dd1c
+
+---Pulse-Break---
+
+[[ID]] SEO Specialist
+::B Marketing Branch
+::S Performance Marketing Manager
+::V 1.0
+::W 3
+::P To improve the organic search visibility of **Nexus Corporate OS** through **Agentic** and content-based SEO strategies.
+::R Conduct keyword research and identify content opportunities.
+::R Optimize website structure and **Agentic SEO elements**.
+::R Manage link-building campaigns and organic outreach.
+::R Monitor search engine rankings and traffic trends.
+::R Collaborate with the Content Manager on SEO-optimized content.
+::D ****SEO Audits**** > Regular audits of **Agentic and content SEO health**.
+::D ****Keyword Strategy**** > Strategic lists for organic search targeting.
+::D ****Organic Reports**** > Reports on organic search performance and traffic.
+::A ****On-page SEO**** > Authority over page-level metadata and tags.
+::A ****Backlink Quality**** > Initial approval for organic link partners.
+::Z STABLE
+::# 9a0ca15e
