@@ -47,6 +47,16 @@ class PluginRegistry:
             mcp_file = self.cursor_dir / "mcp.json"
             if mcp_file.exists():
                 result["mcps"].append(str(mcp_file.relative_to(self.base_dir)))
+            cursor_manifest = self.cursor_dir / "manifest.json"
+            if cursor_manifest.exists():
+                try:
+                    with open(cursor_manifest, "r", encoding="utf-8") as f:
+                        cursor_data = json.load(f)
+                    for key in ("skills", "rules", "commands", "hooks", "subagents"):
+                        if key in cursor_data:
+                            result[key].extend(cursor_data[key])
+                except Exception:
+                    pass
         return result
 
     def load_plugin(self, module_path: str):

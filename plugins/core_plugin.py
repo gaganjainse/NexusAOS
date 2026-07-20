@@ -17,7 +17,7 @@ class AOSPlugin:
         self.id = "core"
 
     def get_mcp_tools(self) -> List[str]:
-        return ["boot_nexus_os", "submit_directive", "get_orchestrator_status", "diagnose_os"]
+        return ["boot_nexusaos", "submit_directive", "get_orchestrator_status", "diagnose_os"]
 
     def get_skills(self) -> List[str]:
         return [".cursor/skills/aos-boot/SKILL.md", ".cursor/skills/aos-orchestrator/SKILL.md"]

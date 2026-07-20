@@ -1,5 +1,5 @@
 """
-Nexus Corporate OS - MCP Registry
+NexusAOS - MCP Registry
 Version: 2.0.0
 Description: Central registration for autonomous organizational tools.
 """
@@ -10,8 +10,9 @@ import sys
 from pathlib import Path
 from mcp.server.fastmcp import FastMCP
 
-# Add local path to sys.path for tool importing
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+_tools_parent = Path(__file__).resolve().parent
+if str(_tools_parent) not in sys.path:
+    sys.path.insert(0, str(_tools_parent))
 
 # Import Tool Logic from specialized modules
 from tools.system_diagnostics import run_diagnostics
@@ -29,7 +30,7 @@ from tools.motor_engine import MotorEngine
 from tools.orchestrator_engine import OrchestratorEngine
 
 # Initialize FastMCP Server
-mcp = FastMCP("Nexus Corporate OS")
+mcp = FastMCP("NexusAOS")
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # --- Resources ---
@@ -85,7 +86,7 @@ def spawn_parallel_subagent(task_description: str, script_path: str = None) -> s
 def start_guardian_service() -> str:
     """Launches the background Nexus Guardian for real-time self-healing."""
     import subprocess
-    guardian_path = BASE_DIR / "mcp_server/python/nexus_guardian.py"
+    guardian_path = BASE_DIR / "mcp_server/python/services/nexus_guardian.py"
     subprocess.Popen([sys.executable, str(guardian_path)],
                      creationflags=subprocess.CREATE_NEW_CONSOLE if os.name == 'nt' else 0)
     return "Nexus Guardian service initiated in background console."
@@ -96,10 +97,21 @@ def collect_intelligence() -> str:
     allowed, msg = PhysiologicalGate(BASE_DIR).check("collect_intelligence")
     if not allowed:
         return f"PERMISSION DENIED: {msg}"
-    from oracle_scraper import OracleScraper
+    sys.path.insert(0, str(BASE_DIR / "mcp_server/python/scraper"))
     scraper = OracleScraper()
     res = scraper.scrape_tech_news()
     return f"Intelligence collection complete. Found {len(res)} signals."
+
+@mcp.tool()
+def browse_url(url: str) -> str:
+    """Fetches a URL and returns extracted text content."""
+    try:
+        from scraper.oracle_scraper import OracleScraper
+        scraper = OracleScraper()
+        result = scraper.scrape_url(url)
+        return json.dumps(result, indent=2)
+    except Exception as e:
+        return f"Browse error: {str(e)}"
 
 @mcp.tool()
 def launch_human_viewer() -> str:
@@ -131,7 +143,7 @@ def log_energy_consumption(amount: int) -> str:
 def start_circulatory_system() -> str:
     """Launches the background Nexus Pulse (The Heart)."""
     import subprocess
-    pulse_path = BASE_DIR / "mcp_server" / "python" / "nexus_pulse.py"
+    pulse_path = BASE_DIR / "mcp_server/python/services/nexus_pulse.py"
     subprocess.Popen([sys.executable, str(pulse_path)],
                      creationflags=subprocess.CREATE_NEW_CONSOLE if os.name == 'nt' else 0)
     return "Nexus Pulse (Heartbeat) initiated in background."
@@ -242,7 +254,7 @@ def get_toxicity_report() -> str:
 def start_sensory_system() -> str:
     """Launches the background Nexus Senses (Streaming Nerves) service."""
     import subprocess
-    senses_path = BASE_DIR / "mcp_server" / "python" / "nexus_senses.py"
+    senses_path = BASE_DIR / "mcp_server/python/services/nexus_senses.py"
     subprocess.Popen([sys.executable, str(senses_path)],
                      creationflags=subprocess.CREATE_NEW_CONSOLE if os.name == 'nt' else 0)
     return "Nexus Senses (Streaming Nerves) initiated in background."
@@ -302,10 +314,10 @@ def get_motor_status() -> str:
     return json.dumps(motor.get_status(), indent=2)
 
 @mcp.tool()
-def boot_nexus_os() -> str:
+def boot_nexusaos() -> str:
     """Boots all autonomic services via the Supervisor (pulse, guardian, senses, orchestrator)."""
     import subprocess
-    supervisor_path = BASE_DIR / "mcp_server" / "python" / "nexus_supervisor.py"
+    supervisor_path = BASE_DIR / "mcp_server/python/services/nexus_supervisor.py"
     subprocess.Popen([sys.executable, str(supervisor_path)],
                      creationflags=subprocess.CREATE_NEW_CONSOLE if os.name == 'nt' else 0)
     return "Nexus Supervisor initiated. All autonomic services booting."
@@ -314,7 +326,7 @@ def boot_nexus_os() -> str:
 def start_orchestrator() -> str:
     """Launches the background Nexus Orchestrator (CPU decision loop)."""
     import subprocess
-    orch_path = BASE_DIR / "mcp_server" / "python" / "nexus_orchestrator.py"
+    orch_path = BASE_DIR / "mcp_server/python/services/nexus_orchestrator.py"
     subprocess.Popen([sys.executable, str(orch_path)],
                      creationflags=subprocess.CREATE_NEW_CONSOLE if os.name == 'nt' else 0)
     return "Nexus Orchestrator (CPU loop) initiated in background."

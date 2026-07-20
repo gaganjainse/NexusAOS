@@ -1,5 +1,5 @@
 """
-Nexus Corporate OS - System Diagnostics Tool
+NexusAOS - System Diagnostics Tool
 Version: 1.0.0
 Description: Core logic for deep-dive environment analysis.
 """
@@ -152,7 +152,7 @@ def run_diagnostics(base_dir: Path) -> str:
             alive = [s["service"] for s in services if (time.time() - s.get("timestamp", 0)) < 60]
             results.append(f"[OK] Autonomic services reporting: {', '.join(alive) or 'none'}")
         else:
-            results.append("[WARNING] No service heartbeats. Run boot_nexus_os().")
+            results.append("[WARNING] No service heartbeats. Run boot_nexusaos().")
     except:
         results.append("[WARNING] Service heartbeat check failed.")
 

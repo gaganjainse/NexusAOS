@@ -1,32 +1,92 @@
 {
   "version": "1.0.0",
-  "platform": "AOS",
+  "platform": "NexusAOS",
+  "description": "Agentic Operating System with biological metaphor architecture",
+  "mcps": [
+    {
+      "id": "aos-core",
+      "name": "NexusAOS Core MCP",
+      "entry": "mcp_server/python/index.py",
+      "description": "Primary FastMCP server exposing ~50 tools for biological runtime orchestration",
+      "tools": [
+        "diagnose_os", "trigger_self_healing", "spawn_parallel_subagent",
+        "start_guardian_service", "collect_intelligence", "launch_human_viewer",
+        "get_energy_status", "log_energy_consumption", "start_circulatory_system",
+        "emit_signal", "get_active_signals", "dispatch_task", "get_lattice_state",
+        "trigger_memory_consolidation", "get_system_experience", "get_global_vibe",
+        "generate_spore_export", "spawn_child_instance", "propose_dna_mutation",
+        "report_system_anomaly", "get_immune_status", "trigger_system_filtration",
+        "get_toxicity_report", "start_sensory_system", "get_sensory_feed",
+        "get_sensory_status", "register_sensory_watcher", "get_physiological_dampening",
+        "execute_motor_write", "execute_motor_command", "process_motor_queue",
+        "get_motor_status", "boot_nexusaos", "start_orchestrator",
+        "submit_directive", "get_orchestrator_status", "get_service_heartbeats",
+        "run_immune_patrol", "get_immune_cells_status", "get_cellular_health",
+        "fission_branch", "fusion_branches", "analyze_image", "analyze_video",
+        "get_plugin_registry_status"
+      ]
+    }
+  ],
   "plugins": [
     {
       "id": "core",
       "name": "AOS Core Plugin",
       "module": "core_plugin",
       "description": "Base biological runtime tools",
-      "mcps": ["mcp_server/python/index.py"],
-      "skills": [".cursor/skills/aos-boot/SKILL.md"],
-      "rules": [".cursor/rules/aos-constitution.mdc"],
-      "commands": [".cursor/commands/boot.md"],
+      "mcps": ["aos-core"],
+      "skills": [".cursor/skills/aos-boot/SKILL.md", ".cursor/skills/aos-orchestrator/SKILL.md"],
+      "rules": [".cursor/rules/aos-constitution.mdc", ".cursor/rules/aos-physiology.mdc"],
+      "commands": [".cursor/commands/boot.md", ".cursor/commands/directive.md", ".cursor/commands/status.md"],
       "hooks": [".cursor/hooks.json"],
-      "subagents": ["orchestrator", "motor", "immune"]
+      "subagents": ["orchestrator", "motor", "immune", "senses", "liver", "memory"]
     },
     {
       "id": "vision",
       "name": "AOS Vision Plugin",
       "module": "vision_plugin",
       "description": "Image and video perception tools",
-      "mcps": ["tools/vision_engine.py", "tools/video_engine.py"]
+      "mcps": ["aos-core"],
+      "tools": ["analyze_image", "analyze_video"]
     },
     {
       "id": "browser",
       "name": "AOS Browser Plugin",
       "module": "browser_plugin",
-      "description": "Web perception via oracle scraper and future browser MCP",
-      "mcps": ["mcp_server/python/oracle_scraper.py"]
+      "description": "Web perception via oracle scraper",
+      "mcps": ["aos-core"],
+      "tools": ["collect_intelligence"]
     }
-  ]
+  ],
+  "subagents": {
+    "orchestrator": {
+      "name": "Nexus Orchestrator Agent",
+      "description": "Closed-loop CPU: senses -> decision -> lattice -> motor -> memory",
+      "tools": ["submit_directive", "get_orchestrator_status", "get_lattice_state"]
+    },
+    "motor": {
+      "name": "Motor Agent",
+      "description": "Autonomous file write and command execution with physiological permissioning",
+      "tools": ["execute_motor_write", "execute_motor_command", "process_motor_queue"]
+    },
+    "immune": {
+      "name": "Immune Agent",
+      "description": "Self-healing, WBC patrol, antibody correction, fever response",
+      "tools": ["run_immune_patrol", "get_immune_cells_status", "trigger_self_healing"]
+    },
+    "senses": {
+      "name": "Senses Agent",
+      "description": "Filesystem perception and event streaming",
+      "tools": ["get_sensory_feed", "get_sensory_status", "register_sensory_watcher"]
+    },
+    "liver": {
+      "name": "Liver Agent",
+      "description": "Data toxin filtration and system cleanup",
+      "tools": ["trigger_system_filtration", "get_toxicity_report"]
+    },
+    "memory": {
+      "name": "Memory Agent",
+      "description": "Dream-cycle consolidation and wisdom extraction",
+      "tools": ["trigger_memory_consolidation", "get_system_experience"]
+    }
+  }
 }

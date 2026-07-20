@@ -1,219 +1,175 @@
 # AOS — Agentic Operating System
 
-AOS is an agentic operating system with biological metaphor architecture — metabolism, endocrine, immune, and motor layers for AI orchestration.
+> An open-source orchestration framework for persistent AI agents, built on biological metaphor: metabolism, endocrine, immune, motor, memory, and nervous systems.
 
-## What It Is
+## What is AOS?
 
-Most AI agents today are stateless. They get a prompt, run some tools, and forget everything. AOS explores what persistent, self-governing agents would look like by mapping operating-system concepts onto biological systems:
+AOS is a Python-based agentic operating system that gives AI agents a persistent physiological layer. Instead of stateless LLM calls that forget everything between prompts, AOS agents have:
 
 - **Metabolism** — energy/token budgeting with conservation mode
 - **Endocrine** — hormonal state (dopamine, cortisol, serotonin) that gates tool access
-- **Immune** — WBC patrol, antibody correction, fever response to anomalies
-- **Motor** — autonomous file writes and command execution with physiological permissioning
-- **Memory** — dream-cycle consolidation of task history into wisdom
-- **Lattice** — synaptic task handoffs between roles
+- **Immune** — autonomous WBC patrol, antibody correction, fever response to anomalies
+- **Motor** — file writes and command execution with physiological permissioning
+- **Memory** — dream-cycle consolidation of task history into wisdom artifacts
+- **Nervous (Lattice)** — synaptic task handoffs between roles
 - **Fission/Fusion** — spawn child instances or merge branch capabilities
+
+Built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) with ~50 tools, a real-time customtkinter GUI, and autonomous background services.
+
+## Quick Start
+
+```bash
+# Clone
+git clone https://github.com/<your-username>/aos.git
+cd aos
+
+# Install dependencies
+pip install -r mcp_server/python/requirements.txt
+
+# Run the MCP server
+python -m mcp_server.python.index
+
+# Or launch the Neural Terminal GUI
+python mcp_server/python/nexus_gui.py
+```
 
 ## Architecture
 
 ```
-+--------------------------------------------------------------+
-|                        SOVEREIGN (You)                       |
-+--------------------------------------------------------------+
-|  MCP Server (~50 tools) | CustomTkinter GUI (V5.0)           |
-+---------------------------+----------------------------------+
-|                                                              |
-|  +----------------+   +----------------+  +---------------+  |
-|  |  ORCHESTRATOR  |   |   LATTICE      |  |   SIGNAL      |  |
-|  |  (CPU Loop)    |<->|  (Synapses)    |  |   ROUTER      |  |
-|  +----------------+   +----------------+  +---------------+  |
-|         |                     |                  |           |
-|  +------+-----+       +--------+--------+  +------+-------+  |
-|  |  PHYSIO    |       |  SENSES         |  |  MOTOR       |  |
-|  |  GATE      |       |  (Filesystem)   |  |  (Executor)  |  |
-|  +------------+       +-----------------+  +--------------+  |
-|         |                     |                  |           |
-|  +------+-----+       +--------+--------+  +------+-------+  |
-|  |  METABOLISM|       |  ENDOCRINE      |  |  IMMUNE      |  |
-|  |  (Energy)  |       |  (Hormones)     |  |  (WBC/Fever) |  |
-|  +------------+       +-----------------+  +--------------+  |
-|                                                              |
-+--------------------------------------------------------------+
-|  Background Services: Pulse | Guardian | Senses | Orch       |
-+--------------------------------------------------------------+
-|  State: core/monitoring/*.json (JSON state management)       |
-+--------------------------------------------------------------+
+┌─────────────────────────────────────────────────────────┐
+│                    Sovereign (You)                       │
+│  submit_directive | boot | status | patrol | cleanse     │
+└───────────────────────┬─────────────────────────────────┘
+                        │
+┌───────────────────────▼─────────────────────────────────┐
+│              Orchestrator Engine (CPU Loop)              │
+│  tick() → senses → signals → directives → maintenance    │
+└───────┬──────────────┬──────────────┬───────────────────┘
+        │              │              │
+   ┌────▼────┐   ┌────▼────┐   ┌────▼────┐
+   │ Senses  │   │ Lattice │   │ Motor   │
+   │ (Nerves)│   │(Synapses│   │ (Hand)  │
+   └────┬────┘   └────┬────┘   └────┬────┘
+        │             │              │
+   ┌────▼────────────▼───────┐      │
+   │    Physiological Gate    │◄─────┘
+   │  (Cortisol/Energy gating)│
+   └────┬─────────────────────┘
+        │
+   ┌────▼──────────────────────────────────────┐
+   │          Physiology Engine                │
+   │  ┌──────────┬──────────┬──────────────┐  │
+   │  │ Metabolism│ Endocrine│    Immune    │  │
+   │  │ (Energy)  │ (Mood)   │ (Temperature)│  │
+   │  └──────────┴──────────┴──────────────┘  │
+   └──────────────────────────────────────────┘
 ```
 
-## Quick Start
-
-### Prerequisites
-
-- Python 3.9+
-- Windows, macOS, or Linux
-
-### Installation
-
-```bash
-git clone https://github.com/<your-username>/aos-agentic-operating-system.git
-cd aos-agentic-operating-system
-
-pip install -r mcp_server/python/requirements.txt
-pip install customtkinter pillow opencv-python-headless
-```
-
-> **Note:** `requirements.txt` lists the core MCP dependencies. For the GUI and vision tools, you also need `customtkinter`, `pillow`, and `opencv-python-headless`.
-
-### Run the MCP Server
-
-```bash
-python -m mcp_server.python.index
-```
-
-### Launch the GUI
-
-```bash
-python mcp_server/python/nexus_gui.py
-```
-
-## Usage Examples
-
-### 1. Check System Energy Status
+## Example: Using AOS
 
 ```python
-from tools.physiology_engine import PhysiologyEngine
+from mcp_server.python.tools.orchestrator_engine import OrchestratorEngine
 from pathlib import Path
 
-engine = PhysiologyEngine(Path("."))
-state = engine.get_state()["metabolism"]
-pct = (state["current_energy"] / state["max_energy"]) * 100
-print(f"Status: {state['status']} | Energy: {pct:.1f}%")
-```
+orch = OrchestratorEngine(Path("."))
 
-### 2. Dispatch a Task Through the Lattice
-
-```python
-from tools.nexus_lattice import LatticeEngine
-from pathlib import Path
-
-lattice = LatticeEngine(Path("."))
-result = lattice.fire_synapse("Sovereign", "Motor", "MOTOR:write:hello.txt:world")
+# Queue a directive
+result = orch.submit_directive("diagnose system", priority=5)
 print(result)
+# → Directive [a3f8b2c1] queued: diagnose system
+
+# Run one CPU tick
+tick = orch.tick()
+print(tick["tick"])
+# → 1
 ```
 
-### 3. Run WBC Immune Patrol
+## Example: Physiological Gating
 
 ```python
-from tools.antibody_engine import AntibodyEngine
+from mcp_server.python.tools.physiology_engine import PhysiologyEngine
+from mcp_server.python.tools.physiological_gate import PhysiologicalGate
+from pathlib import Path
+
+gate = PhysiologicalGate(Path("."))
+allowed, msg = gate.check("propose_dna_mutation")
+print(allowed, msg)
+# → False "Mutation blocked: Cortisol too high or immune inflammation active."
+```
+
+## Example: Immune Patrol
+
+```python
+from mcp_server.python.tools.antibody_engine import AntibodyEngine
 from pathlib import Path
 
 engine = AntibodyEngine(Path("."))
 results = engine.patrol()
 for r in results:
     print(r)
+# → [ANTIBODY AB-1712345678] corrupted_json: Restored monitoring/lattice_state.json from backup.
 ```
+
+## Background Services
+
+| Service | Script | Role |
+|---------|--------|------|
+| Pulse | `nexus_pulse.py` | Heartbeat every 60s — intelligence, memory, filtration |
+| Guardian | `nexus_guardian.py` | Self-healing monitor — DNA integrity, metabolic check |
+| Senses | `nexus_senses.py` | Filesystem watcher — real-time event stream |
+| Orchestrator | `nexus_orchestrator.py` | CPU loop — senses → decision → motor → memory |
+| Supervisor | `nexus_supervisor.py` | Boots and monitors all services |
 
 ## Project Structure
 
 ```
-aos-agentic-operating-system/
-├── mcp_server/
-│   └── python/
-│       ├── index.py                  # FastMCP entry point (~50 tools)
-│       ├── nexus_gui.py              # CustomTkinter GUI V5.0
-│       ├── nexus_supervisor.py       # Background service supervisor
-│       ├── nexus_pulse.py            # Heartbeat service
-│       ├── nexus_guardian.py         # Self-healing service
-│       ├── nexus_senses.py           # Filesystem watcher service
-│       ├── nexus_orchestrator.py     # CPU decision loop
-│       ├── nxp_forge.py              # Compiles DNA into .nxp pulse files
-│       ├── nlg_compiler.py           # Compiles markdown into SQLite + YAML
-│       ├── requirements.txt
-│       └── tools/
-│           ├── orchestrator_engine.py   # Closed-loop controller
-│           ├── physiology_engine.py     # Unified state: metabolism, endocrine, immune
-│           ├── physiological_gate.py    # Permission layer based on hormones
-│           ├── nexus_lattice.py         # Synaptic task handoffs
-│           ├── motor_engine.py          # Autonomous file/command execution
-│           ├── memory_synth.py          # Dream-cycle consolidation
-│           ├── antibody_engine.py       # Immune system: WBC patrol, antibodies
-│           ├── nexus_liver.py           # Toxin filtration
-│           ├── nexus_senses.py          # Sensory event feed
-│           ├── signal_router.py         # Hormonal signal emission
-│           ├── cellular_engine.py       # 12 biological components mapped to AOS
-│           ├── fission_fusion_engine.py # Mitosis (spawn) and hybridization (merge)
-│           ├── reproduction_engine.py   # Spore creation and instantiation
-│           ├── mutation_engine.py       # DNA surgical edits
-│           ├── vision_engine.py         # Image analysis
-│           ├── video_engine.py          # Video frame analysis
-│           ├── auto_repair.py           # Autonomous code repair
-│           ├── system_diagnostics.py    # Deep-dive system verification
-│           └── service_heartbeat.py     # Liveness tracking for services
+aos/
+├── archives/                     # DNA (rules, roles, protocols)
+│   └── core/
+│       ├── foundation/           # Immutable constitution
+│       ├── protocols/            # Filtration, immune, operating rules
+│       ├── roles/                # Organizational role definitions
+│       └── learning/             # Consolidated wisdom artifacts
 ├── core/
-│   └── monitoring/                   # JSON state files
-│       ├── physiology.json
-│       ├── orchestrator_state.json
-│       ├── lattice_state.json
-│       ├── signals.json
-│       ├── sensory_feed.json
-│       ├── immune_cells.json
-│       └── heartbeats/
+│   ├── exports/                  # Compiled logic graph (SQLite + YAML)
+│   ├── monitoring/               # JSON state files
+│   ├── nlg/                      # Natural language logic graph
+│   └── pulses/                   # Firmware pulse files (.nxp)
+├── mcp_server/
+│   ├── python/
+│   │   ├── index.py              # FastMCP server — tool registry
+│   │   ├── nexus_gui.py          # Neural Terminal GUI
+│   │   ├── nexus_pulse.py        # Heartbeat service
+│   │   ├── nexus_orchestrator.py # CPU loop
+│   │   ├── nexus_guardian.py     # Self-healing monitor
+│   │   ├── nexus_senses.py       # Filesystem watcher
+│   │   └── tools/                # Engine modules
+│   │       ├── physiology_engine.py
+│   │       ├── endocrine_engine.py
+│   │       ├── antibody_engine.py
+│   │       ├── motor_engine.py
+│   │       ├── nexus_liver.py
+│   │       ├── memory_synth.py
+│   │       ├── nexus_lattice.py
+│   │       ├── fission_fusion_engine.py
+│   │       ├── signal_router.py
+│   │       ├── physiological_gate.py
+│   │       ├── vision_engine.py
+│   │       └── video_engine.py
+│   └── node/
+│       └── index.ts              # TypeScript MCP entry point
 ├── plugins/
-│   └── plugin_registry.py            # Plugins/MCPs/Skills/Subagents/Rules
+│   ├── core_plugin.py
+│   ├── browser_plugin.py
+│   ├── vision_plugin.py
+│   └── plugin_registry.py
+├── roles/                        # Role definitions
 ├── tests/
-│   └── test_aos_integration.py       # 12/12 integration tests
-├── roles/                            # Role definitions
-├── archives/                         # Fission/fusion archives, learning logs
-├── LICENSE
-└── README.md
+│   └── test_aos_integration.py   # Integration test suite
+└── .cursor/                      # IDE rules, skills, commands, hooks
 ```
 
-## GUI Tabs (V5.0)
-
-| Tab | Description |
-|-----|-------------|
-| Neural DNA | View and edit role logic/markdown |
-| Synaptic Flow | Active lattice synapses and task handoffs |
-| Autonomic Core | Orchestrator status, service heartbeats, cellular health |
-| Immune System | Temperature, threat level, WBC patrol, antibody status |
-| Platform Layers | Plugin registry, Cursor bridge, vision cache |
-| Lineage | Fission/fusion event history |
-
-## State Conventions
-
-All persistent state lives in `core/monitoring/` as JSON files:
-
-- `physiology.json` — metabolism, endocrine (hormones), immune (temperature, threat)
-- `orchestrator_state.json` — tick count, status, pending directives
-- `lattice_state.json` — synaptic history and active nodes
-- `signals.json` — active hormonal signals with TTL
-- `sensory_feed.json` — filesystem watch events
-- `motor_log.json` — action history
-- `immune_cells.json` — WBC, RBC, platelet counts
-
-## Background Services
-
-AOS runs autonomic services via `subprocess.Popen`. On Windows, they use `CREATE_NEW_CONSOLE` so they survive independently:
-
-| Service | Description |
-|---------|-------------|
-| Pulse | Heartbeat emitter (keeps state alive) |
-| Guardian | Self-healing monitor (auto-restarts crashed services) |
-| Senses | Filesystem watcher (streams events to sensory feed) |
-| Orchestrator | CPU decision loop (ticks every N seconds) |
-| Supervisor | Boots and monitors all services |
-
-## Physiological Gate
-
-The gate is the central permission layer. High-risk tools are blocked based on:
-
-- **Cortisol level** — stress hormones reduce permitted risk
-- **Energy percentage** — critical energy suspends non-essential operations
-- **Immune threat level** — fever/sepsis triggers automatic healing mode
-
-Blocked tools include: `propose_dna_mutation`, `spawn_child_instance`, `execute_motor_command`, `dispatch_task`, and more.
-
-## Integration Tests
+## Tests
 
 ```bash
 python tests/test_aos_integration.py
@@ -221,28 +177,18 @@ python tests/test_aos_integration.py
 
 Current status: **12/12 passing**
 
-## Tech Stack
-
-- Python 3.9+
-- FastMCP (Model Context Protocol)
-- CustomTkinter (GUI)
-- JSON state management
-- Subprocess orchestration
-
-## Contributing
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## License
 
 MIT — see [LICENSE](LICENSE)
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## Status
 
-Built in 48 hours as a working prototype. Expect rough edges, inconsistent naming, and missing error handling. The biological metaphor is the core idea; the implementation is a proof of concept.
+Building in public. This is a working prototype. Expect rough edges. Feedback, bug reports, and PRs are welcome.
 
-If you're building agents that need to run for days/weeks/months — not just seconds — I'd love your feedback.
+---
+
+*Built in 48 hours after graduating B.Tech CSE. Shipped July 2026.*
