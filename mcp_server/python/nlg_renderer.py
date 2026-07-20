@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Dict, Any
 
 # Configuration
-BASE_DIR = Path(__file__).parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 YAML_PATH = BASE_DIR / "core/nlg/nexus_logic.yaml"
 
 def render_md(logic: Dict[str, Any]) -> str:

@@ -51,6 +51,7 @@ cython_debug/
 *.pid.lock
 core/monitoring/*.json
 !core/monitoring/.gitkeep
+mcp_server/core/monitoring/*.json
 archives/
 plugins/*.pyc
 .vscode/
