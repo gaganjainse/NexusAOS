@@ -95,7 +95,7 @@ def parse_md_for_pulse(file_path: Path) -> str:
 
 def forge_pulses():
     """Compiles all markdown artifacts from archives into branch-level pulse files."""
-    print("NexusOS Pulse Forge Initializing...")
+    print("NexusAOS Pulse Forge Initializing...")
 
     branch_pulses = {}
     SOURCE_DIR = BASE_DIR / "archives"

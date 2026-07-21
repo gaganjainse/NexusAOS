@@ -16,7 +16,7 @@ const BASE_DIR = path.resolve(__dirname, "../../");
 
 const server = new Server(
   {
-    name: "Nexus Corporate OS",
+    name: "NexusAOS",
     version: "1.0.0",
   },
   {
@@ -78,7 +78,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: "search_nexus",
-      description: "Performs a global search across all NexusOS files using the index.",
+      description: "Performs a global search across all NexusAOS files using the index.",
       inputSchema: {
         type: "object",
         properties: {
@@ -125,7 +125,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: "query_logic_graph",
-      description: "Performs a SQL query against the Nexus Logic Graph (nexus_os.db).",
+      description: "Performs a SQL query against the Nexus Logic Graph (nexus_aos.db).",
       inputSchema: {
         type: "object",
         properties: {

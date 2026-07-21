@@ -110,7 +110,7 @@ def get_superior(file_path):
     return "None"
 
 def process():
-    print("NexusOS Master Hardening Initiated...")
+    print("NexusAOS Master Hardening Initiated...")
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:
             if file.endswith(".md"):

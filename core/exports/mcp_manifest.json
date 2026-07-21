@@ -1,6 +1,6 @@
 {
   "mcpVersion": "1.0",
-  "name": "Nexus Corporate OS (Hybrid Bridge)",
+  "name": "NexusAOS (Hybrid Bridge)",
   "version": "1.0.0",
   "description": "Dual-stack MCP server combining Node.js stability with Agentic logic.",
   "engines": {
@@ -24,7 +24,7 @@
       "uri": "nexus://core/logic",
       "name": "Logic Export",
       "mimeType": "application/json",
-      "path": "./nexus_logic_export.json"
+      "path": "./nexus_aos_logic_export.json"
     }
   ],
   "tools": [

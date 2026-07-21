@@ -1,6 +1,14 @@
 # AOS — Agentic Operating System
 
-> An open-source orchestration framework for persistent AI agents, built on biological metaphor: metabolism, endocrine, immune, motor, memory, and nervous systems.
+> An open-source orchestration framework for persistent AI agents, built on biological metaphor.
+
+## Ecosystem vs. Intelligence
+
+Nexus separates the biological substrate from the operational reasoning:
+
+- **AOS (Agentic Operating System)** — The physiological layer: metabolism, endocrine, immune, motor, memory, and nervous systems.
+- **NexusAOI (Nexus Agentic Operating Intelligence)** — The organizational firmware and high-reasoning intelligence that inhabits the AOS.
+- **Nexus** — The primary interface between the system and The Sovereign.
 
 ## What is AOS?
 

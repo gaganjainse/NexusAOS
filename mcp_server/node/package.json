@@ -1,7 +1,7 @@
 {
   "name": "nexus-corporate-os-server",
   "version": "1.0.0",
-  "description": "Professional-grade MCP server for NexusOS (Node.js/TypeScript)",
+  "description": "Professional-grade MCP server for NexusAOS (Node.js/TypeScript)",
   "main": "build/index.js",
   "type": "module",
   "scripts": {

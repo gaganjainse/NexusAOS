@@ -39,7 +39,7 @@ def parse_md_file(file_path: str) -> Dict[str, Any]:
 def build_index():
     """Recursively scans the nexus_corporate_os directory and builds a JSON index."""
     index = []
-    print(f"Indexing NexusOS at: {BASE_DIR}...")
+    print(f"Indexing NexusAOS at: {BASE_DIR}...")
 
     for root, _, files in os.walk(BASE_DIR):
         # Skip mcp_server and hidden folders

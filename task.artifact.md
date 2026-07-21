@@ -1,4 +1,4 @@
-# Tasks: NexusOS Master Evolution (Phase 1-10 Complete)
+# Tasks: NexusAOS Master Evolution (Phase 1-10 Complete)
 
 - [x] Phase 1: Neural Circuits (Dynamic Paths)
 - [x] Phase 2: Metabolic Layer (Energy Tracking)

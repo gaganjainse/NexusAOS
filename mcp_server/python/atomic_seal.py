@@ -22,7 +22,7 @@ TITLES = {
 }
 
 def atomic_seal():
-    print("NexusOS Atomic Hierarchy Seal: HARDENING CORE...")
+    print("NexusAOS Atomic Hierarchy Seal: HARDENING CORE...")
 
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:

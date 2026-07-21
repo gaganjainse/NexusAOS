@@ -1,56 +1,73 @@
-# NexusOS: The Liver & Filtration (AGOI Phase 10)
+# Phase 7: The Swarm Mind (Multi-Agent Orchestration)
 
-This plan implements the **Filtration System** (The Liver), preventing organizational bloat and data toxicity. It moves the OS from "Cumulative Growth" to **"Metabolic Balance,"** solving the "Waste & Excretion" gap identified in the audit.
+This plan evolves the AOS from a single-node organism to a **Distributed Swarm Intelligence**. It implements the "Distributed Lattice" and "Collective Memory" required to move from an individual agent to a collaborative ecosystem.
+
+## User Review Required
+
+> [!IMPORTANT]
+> This phase introduces **Distributed State**. By default, it will use a local file-based "Mesh Simulation" (simulating network nodes via subdirectories or ports). In a production environment, this would transition to real network sockets.
 
 ## Proposed Changes
 
-### 1. DNA: Filtration Protocol
-Define the rules for identifying and "excreting" system waste.
+### 1. Protocols: The Synaptic Mesh
+Define the rules for inter-node communication.
 
-#### [NEW] [filtration_protocol.md](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/core/protocols/filtration_protocol.md)
-- Define **"Toxins"**: Redundant debug logs, stale consolidation reports (>30 days), and orphan logic nodes.
-- Define **"The Excretion Cycle"**: Moving non-critical data to the `archives/excreta/` folder (The Bladder) before permanent deletion.
-- Define **"Data Longevity"**: Retention periods for different classes of system artifacts.
+#### [NEW] [mesh_protocol.md](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/core/protocols/mesh_protocol.md)
+- Define **"Node Discovery"**: Gossip-based discovery mechanism.
+- Define **"Remote Synapses"**: How tasks are fired across different instances.
+- Define **"Quorum Consensus"**: Rules for collective decision-making (Quorum = >50% nodes).
 
-### 2. Autonomic Layer: The Nexus Liver
-Implement the Python logic for system-wide data filtration.
+---
 
-#### [NEW] [nexus_liver.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/tools/nexus_liver.py)
-- A tool to scan the OS filesystem for "Toxic" buildup.
-- **Log Rotation:** Automatically truncates `.log` files exceeding 5MB.
-- **Archive Pruning:** Moves old `consolidation_*.md` files to an `archives/vault/` (compressed) or deletes them if deemed low-value by the Memory Synth.
-- **History Compaction:** Truncates `lattice_state.json` and `mutation_history.json` based on the system's "Salience" (Keeping only what matters for current Vibe).
+### 2. Lattice Evolution: The Synaptic Mesh Engine
+Upgrade the Nervous System to handle remote handoffs.
 
-### 3. Circulatory Integration: Filtration Pulse
-Connect waste management to the Heartbeat.
+#### [NEW] [nexus_mesh.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/tools/nexus_mesh.py)
+- A tool for inter-node signaling.
+- **Heartbeat Broadcast:** Announces presence to the mesh.
+- **Signal Relay:** Forwards local signals to remote nodes.
 
-#### [MODIFY] [nexus_pulse.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/nexus_pulse.py)
-- Add a **"Filtration Cycle"** (every 100 cycles).
-- Trigger `nexus_liver.py` to "clean the blood" (data streams).
+#### [MODIFY] [nexus_lattice.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/tools/nexus_lattice.py)
+- Update `fire_synapse` to check if `to_role` is available on a remote node.
+- Integrate with `NexusMesh` for cross-node dispatch.
 
-### 4. Proprioception: Toxic Load Monitoring
-Update diagnostics to reflect system "Cleanliness."
+---
 
-#### [MODIFY] [system_diagnostics.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/tools/system_diagnostics.py)
-- Add a "Toxicity" section.
-- Report on **"Toxic Load"** (Total log size / unnecessary file count).
+### 3. Memory Evolution: Collective Hippocampus
+Ensure the swarm shares a unified knowledge graph.
 
-### 5. Integration: MCP & Dashboard
-Visualize the system's "Liver Function."
+#### [NEW] [collective_memory.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/tools/collective_memory.py)
+- A wrapper around `MemoryReceptor`.
+- **Sync Pulse:** Periodic sync of entities across the mesh.
+- **Conflict Resolution:** Last-Writer-Wins (LWW) based on timestamps for entity properties.
+
+---
+
+### 4. Swarm Intelligence: Quorum Sensing
+Implement collective intelligence in the executor.
+
+#### [MODIFY] [swarm_executor.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/tools/swarm_executor.py)
+- Add **"Role Affinity"** logic: Direct tasks to the node/swarm best suited for them (e.g., node with high energy + specific tools).
+- Implement **"Quorum Check"**: Blocking tasks until a specified number of agents/nodes agree on the result.
+
+---
+
+### 5. Integration: MCP Registry
+Expose the Swarm Mind to the Sovereign.
 
 #### [MODIFY] [index.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/index.py)
-- Add `@mcp.tool() trigger_system_filtration()`.
-- Add `@mcp.tool() get_toxicity_report()`.
+- Add `@mcp.tool() get_mesh_status()`.
+- Add `@mcp.tool() broadcast_directive()`.
+- Add `@mcp.tool() trigger_quorum_vote()`.
 
-#### [MODIFY] [nexus_gui.py](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/python/nexus_gui.py)
-- Add a "Toxicity Meter" to the Health tab.
-- Add a visual "Cleanse" button to manually trigger the Liver.
+---
 
 ## Verification Plan
 
 ### Automated Tests
-- Create 10 dummy log files and verify that `nexus_liver.py` identifies and prunes them.
-- Verify that the total disk footprint of the `archives/` directory decreases after a filtration cycle.
+- Spawn two simulated nodes and verify that a synapse fired on Node A is received and processed by a role on Node B.
+- Verify that an entity stored in Node A's memory is visible to Node B after a Sync Pulse.
 
 ### Manual Verification
-- View the Toxicity Meter in the GUI and verify it drops after a "Cleanse" event.
+- Check the "Mesh" tab in the Neural Terminal (to be added) to see active nodes.
+- Submit a "Broadcast Directive" and verify multiple agents across different "swarms" respond.

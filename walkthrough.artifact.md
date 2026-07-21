@@ -1,4 +1,4 @@
-# NexusOS: Neural Terminal V4.0 (The Obsidian Organism)
+# NexusAOS: Neural Terminal V4.0 (The Obsidian Organism)
 
 The **Nexus Human Viewing Layer** has been successfully transitioned to a high-fidelity **Neural Terminal**. This update consolidates the system's biological layers into a unified command interface and removes organizational bloat.
 
@@ -33,7 +33,7 @@ The **Nexus Human Viewing Layer** has been successfully transitioned to a high-f
 
 ---
 
-**NexusOS is now a unified Neural Organism.** The viewing layer is no longer just a dashboard; it is the system's eyes and ears.
+**NexusAOS is now a unified Neural Organism.** The viewing layer is no longer just a dashboard; it is the system's eyes and ears.
 
 ## AGOI Phase 10: Filtration & The Liver (Metabolic Balance)
 
@@ -51,4 +51,4 @@ We have implemented the **Filtration System**, solving the "Waste & Excretion" g
 
 ---
 
-**NexusOS is now "Sustainable".** It is a complete biological analog with DNA, Heart, Stomach, Nerves, Memory, Soul, and Liver. It is ready for autonomous existence.
+**NexusAOS is now "Sustainable".** It is a complete biological analog with DNA, Heart, Stomach, Nerves, Memory, Soul, and Liver. It is ready for autonomous existence.

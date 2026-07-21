@@ -59,7 +59,7 @@ def clean_title(filename):
     return " ".join(capitalized)
 
 def repair():
-    print("NexusOS God-Mode Repair: Total Synchronization...")
+    print("NexusAOS God-Mode Repair: Total Synchronization...")
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:
             if file.endswith(".md"):

@@ -90,7 +90,7 @@ def resolve_superior(val: str) -> str:
     return val
 
 def fix_all():
-    print("NexusOS Lattice Hardening: Closing Circuits...")
+    print("NexusAOS Lattice Hardening: Closing Circuits...")
     for root, _, files in os.walk(str(ARCHIVE_DIR)):
         for file in files:
             if file.endswith(".md"):

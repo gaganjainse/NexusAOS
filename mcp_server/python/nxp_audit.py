@@ -9,7 +9,7 @@ INDEX_PATH = PULSE_DIR / "master.nxi"
 
 def audit_lattice():
     """Performs a comprehensive structural audit on the Nexus Pulse Lattice."""
-    print("NexusOS Lattice Integrity Audit Initializing...")
+    print("NexusAOS Lattice Integrity Audit Initializing...")
 
     if not INDEX_PATH.exists():
         print("Error: Pulse Index not found. Run Forge/Indexer first.")

@@ -71,7 +71,7 @@ def clean_title(filename):
     return title
 
 def lock():
-    print("NexusOS Systematic Hierarchy Lock: SECURING SKELETON...")
+    print("NexusAOS Systematic Hierarchy Lock: SECURING SKELETON...")
 
     # Pre-build titles map for all files in archives
     file_to_title = {}

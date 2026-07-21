@@ -69,6 +69,59 @@ class PhysiologicalGate:
             "max_threat": "Fever",
             "blocked_message": "Subagent spawn blocked: System stressed.",
         },
+        "browse_page": {
+            "min_energy_pct": 25.0,
+            "max_threat": "Fever",
+            "blocked_message": "Browsing blocked: low energy or fever active.",
+        },
+        "fetch_url": {
+            "min_energy_pct": 10.0,
+            "max_threat": "Sepsis",
+            "blocked_message": "Fetch blocked: critical energy or sepsis.",
+        },
+        "search_web": {
+            "min_energy_pct": 25.0,
+            "max_threat": "Fever",
+            "blocked_message": "Search blocked: low energy or fever active.",
+        },
+        "store_entity": {
+            "min_energy_pct": 15.0,
+            "blocked_message": "Storage blocked: low energy.",
+        },
+        "gh_create_issue": {
+            "min_energy_pct": 25.0,
+            "max_threat": "Fever",
+            "blocked_message": "GitHub issue creation blocked: low energy or fever active.",
+        },
+        "geo_lookup": {
+            "min_energy_pct": 10.0,
+            "blocked_message": "Geocoding blocked: low energy.",
+        },
+        "query_db": {
+            "min_energy_pct": 15.0,
+            "blocked_message": "Database query blocked: low energy.",
+        },
+        "slack_send": {
+            "min_energy_pct": 20.0,
+            "max_threat": "Fever",
+            "blocked_message": "Slack message blocked: low energy or fever active.",
+        },
+        "pull_sentry_errors": {
+            "min_energy_pct": 15.0,
+            "blocked_message": "Sentry error pull blocked: low energy.",
+        },
+        "trigger_sleep": {
+            "min_energy_pct": 10.0,
+            "blocked_message": "Sleep initiation blocked: critically low energy.",
+        },
+        "force_wake": {
+            "min_energy_pct": 5.0,
+            "blocked_message": "Force wake blocked: energy critically low.",
+        },
+        "get_sleep_state": {
+            "min_energy_pct": 0.0,
+            "blocked_message": "Sleep state query blocked.",
+        },
     }
 
     THREAT_RANK = {

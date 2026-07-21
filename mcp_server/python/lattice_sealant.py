@@ -9,7 +9,7 @@ def get_node_id(content: str) -> str:
     return match.group(1).strip() if match else None
 
 def seal():
-    print("NexusOS Global Lattice Sync: Final Hardening...")
+    print("NexusAOS Global Lattice Sync: Final Hardening...")
 
     # 1. Build Title Map: CleanTitle -> ActualTitleFromHeader
     title_map = {}

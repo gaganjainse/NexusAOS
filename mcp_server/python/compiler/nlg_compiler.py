@@ -13,7 +13,7 @@ if str(_tools_parent) not in sys.path:
 
 # Configuration
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-DB_PATH = BASE_DIR / "core/exports/nexusaos.db"
+DB_PATH = BASE_DIR / "core/exports/nexus_aos.db"
 YAML_PATH = BASE_DIR / "core/nlg/nexus_logic.yaml"
 
 def parse_md_file(file_path: Path) -> Dict[str, Any]:

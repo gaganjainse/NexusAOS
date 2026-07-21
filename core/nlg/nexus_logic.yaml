@@ -137,8 +137,8 @@
   title: Nexus OS Creation & Operation Guide
   branch: Core
   superior: None
-  path: archives/core/foundation/nexus_os_handover_guide.md
-  purpose: The foundational command dashboard for the Nexus OS.
+  path: archives/core/foundation/nexus_aos_handover_guide.md
+  purpose: The foundational command dashboard for the NexusAOS.
   responsibilities:
   - '**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)'
   - '**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)'
@@ -3419,7 +3419,7 @@
   - '**Directive Formatting:** Rewrite requests into standard format: `Directive:
     [Outcome]. Context: [Constraints].`'
   - '**Orchestrator Handoff:** Pass translated **Directives** to the Nexus Orchestrator.'
-  - '**Boot Detection:** Recognize **"Boot NexusOS"** and trigger the initialization
+  - '**Boot Detection:** Recognize **"Boot NexusAOS"** and trigger the initialization
     sequence.'
   deliverables:
   - key: '****Strategic Directives****'

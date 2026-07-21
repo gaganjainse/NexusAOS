@@ -6,7 +6,7 @@ BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os"
 ARCHIVE_DIR = BASE_DIR / "archives"
 
 def normalize_paths():
-    print("NexusOS Global Path Normalization Initializing...")
+    print("NexusAOS Global Path Normalization Initializing...")
 
     # 1. Map all filenames to their relative paths from BASE_DIR
     file_map = {}

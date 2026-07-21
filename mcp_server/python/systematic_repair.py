@@ -69,7 +69,7 @@ def generate_systematic_title(filename):
     return " ".join(capitalized)
 
 def repair():
-    print("NexusOS Systematic Repair: Syncing Titles and Hierarchies...")
+    print("NexusAOS Systematic Repair: Syncing Titles and Hierarchies...")
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:
             if file.endswith(".md"):

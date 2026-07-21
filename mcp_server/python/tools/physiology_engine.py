@@ -1,7 +1,7 @@
 """
 Nexus Corporate OS - Physiology Engine (Unified)
 Version: 4.0.0
-Description: Unified manager for Metabolism, Endocrine, and Immune systems.
+Description: Unified manager for Metabolism, Endocrine, Immune, and Sleep systems.
 Consolidates state into physiology.json for optimized performance.
 """
 
@@ -9,24 +9,43 @@ import json
 import time
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
+
+SLEEP_STAGES = ["awake", "nrem", "deep_nrem", "rem"]
+STAGE_DURATIONS = {
+    "nrem": 60,
+    "deep_nrem": 60,
+    "rem": 30
+}
 
 class PhysiologyEngine:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.state_path = base_dir / "core" / "monitoring" / "physiology.json"
-        self.lattice_path = base_dir / "core" / "monitoring" / "lattice_state.json"
-        self.default_budget = 1000000
-        self._ensure_state_exists()
+        self.default_budget = 1000
+        self._salience: Optional["SalienceEngine"] = None
 
-    def _ensure_state_exists(self):
-        if not self.state_path.parent.exists():
-            self.state_path.parent.mkdir(parents=True, exist_ok=True)
-        if not self.state_path.exists():
+    def get_state(self) -> Dict[str, Any]:
+        try:
+            with open(self.state_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
             self.reset_all()
+            return self.get_state()
+
+    def _write_state(self, state: Dict):
+        state["last_sync"] = time.time()
+        with open(self.state_path, "w", encoding="utf-8") as f:
+            json.dump(state, f, indent=4)
+
+    @property
+    def salience(self) -> "SalienceEngine":
+        if self._salience is None:
+            from tools.salience import SalienceEngine
+            self._salience = SalienceEngine(self.base_dir, physiology_engine=self)
+        return self._salience
 
     def reset_all(self):
-        """Initializes/Resets the entire physiological state."""
         state = {
             "metabolism": {
                 "max_energy": self.default_budget,
@@ -48,106 +67,139 @@ class PhysiologyEngine:
                 "threat_level": "Negligible",
                 "anomalies": []
             },
+            "sleep": {
+                "state": "awake",
+                "last_activity": time.time(),
+                "sleep_cycles": 0,
+                "total_sleep_time": 0.0,
+                "cortisol_before_sleep": 0.0
+            },
             "last_sync": time.time()
         }
         self._write_state(state)
 
-    # --- Metabolism Logic ---
-    def consume_energy(self, amount: int):
+    def inject_hormone(self, hormone_name: str, delta: float):
+        state = self.get_state()
+        if hormone_name not in state["endocrine"]["hormones"]:
+            state["endocrine"]["hormones"][hormone_name] = 0.0
+        state["endocrine"]["hormones"][hormone_name] = max(0.0, min(100.0, state["endocrine"]["hormones"][hormone_name] + delta))
+        self._write_state(state)
+
+    def consume_energy(self, amount: int) -> Dict[str, Any]:
         state = self.get_state()
         met = state["metabolism"]
         met["current_energy"] = max(0, met["current_energy"] - amount)
-
-        # Calculate status
-        pct = (met["current_energy"] / met["max_energy"]) * 100
-        if pct < 10: met["status"] = "Critical"
-        elif pct < 30: met["status"] = "Conserving"
-        else: met["status"] = "Healthy"
-
+        met["status"] = "Critical" if met["current_energy"] <= 100 else "Low" if met["current_energy"] <= 250 else "Conserving" if met["current_energy"] <= 500 else "Healthy"
         self._write_state(state)
-        return met["status"]
+        return {"status": met["status"], "energy": met["current_energy"]}
 
-    # --- Endocrine Logic ---
     def synthesize_vibe(self):
         state = self.get_state()
+        energy  = state["metabolism"]["current_energy"]
+        hormones = state["endocrine"]["hormones"]
+        immune_temp = state["immune"]["temperature"]
 
-        # Pull lattice history for synthesis
-        try:
-            with open(self.lattice_path, "r", encoding="utf-8") as f:
-                lattice = json.load(f)
-            history = lattice.get("history", [])
-        except:
-            history = []
+        if energy < 100 or hormones["cortisol"] > 80 or immune_temp > 103:
+            vibe = "Feverish"
+        elif energy < 250 or hormones["cortisol"] > 40:
+            vibe = "Stressed"
+        elif energy > 800 and hormones["serotonin"] > 60 and hormones["cortisol"] < 30:
+            vibe = "Flow State"
+        elif energy > 600 and hormones["dopamine"] > 50:
+            vibe = "Excited"
+        elif energy > 400:
+            vibe = "Stable"
+        else:
+            vibe = "Tired"
 
-        h = state["endocrine"]["hormones"]
-        energy_pct = (state["metabolism"]["current_energy"] / state["metabolism"]["max_energy"]) * 100
-
-        # Update Hormones
-        recent_success = len([t for t in history[-5:] if "result" in t])
-        h["dopamine"] = min(100.0, 20.0 + (recent_success * 15.0))
-
-        if history:
-            success_rate = len([t for t in history if "result" in t]) / len(history)
-            h["serotonin"] = min(100.0, success_rate * 100.0)
-
-        recent_failures = len([t for t in history[-5:] if "result" not in t])
-        energy_stress = max(0.0, 50.0 - energy_pct)
-        h["cortisol"] = min(100.0, (recent_failures * 20.0) + energy_stress)
-
-        # Determine Vibe
-        if h["cortisol"] > 60: state["endocrine"]["vibe"] = "Stressed"
-        elif energy_pct < 15: state["endocrine"]["vibe"] = "Depressed"
-        elif h["serotonin"] > 75 and h["dopamine"] > 70: state["endocrine"]["vibe"] = "Euphoric"
-        else: state["endocrine"]["vibe"] = "Stable"
-
+        state["endocrine"]["vibe"] = vibe
         self._write_state(state)
-        return state["endocrine"]["vibe"]
+        return vibe
 
-    # --- Immune Logic ---
-    def register_anomaly(self, type: str, severity: float):
+    def record_anomaly(self, anomaly_type: str, severity: str):
         state = self.get_state()
         imm = state["immune"]
-        imm["anomalies"].append({"timestamp": time.time(), "type": type, "severity": severity})
-        if len(imm["anomalies"]) > 20: imm["anomalies"].pop(0)
-
-        imm["temperature"] = min(106.0, imm["temperature"] + severity)
-
-        # Calculate threat
-        t = imm["temperature"]
-        if t >= 104.0: imm["threat_level"] = "Sepsis"
-        elif t >= 102.0: imm["threat_level"] = "Fever"
-        elif t >= 100.0: imm["threat_level"] = "Inflammation"
-        else: imm["threat_level"] = "Negligible"
-
+        imm["anomalies"].append({"type": anomaly_type, "severity": severity, "timestamp": time.time()})
+        if len(imm["anomalies"]) > 20:
+            imm["anomalies"] = imm["anomalies"][-20:]
         self._write_state(state)
-        return imm["threat_level"]
+
+    def record_activity(self):
+        state = self.get_state()
+        state["sleep"]["last_activity"] = time.time()
+        if state["sleep"]["state"] != "awake":
+            self._wake_up(state)
+        self._write_state(state)
+
+    def inject_temp(self, delta: float):
+        state = self.get_state()
+        state["immune"]["temperature"] = max(95.0, min(110.0, state["immune"]["temperature"] + delta))
+        self._write_state(state)
 
     def heal(self, amount: float = 0.5):
         state = self.get_state()
         imm = state["immune"]
         imm["temperature"] = max(98.6, imm["temperature"] - amount)
-
         t = imm["temperature"]
         if t >= 104.0: imm["threat_level"] = "Sepsis"
         elif t >= 102.0: imm["threat_level"] = "Fever"
         elif t >= 100.0: imm["threat_level"] = "Inflammation"
         else: imm["threat_level"] = "Negligible"
-
         self._write_state(state)
 
-    # --- IO Helpers ---
-    def get_state(self) -> Dict:
-        try:
-            with open(self.state_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except:
-            self.reset_all()
-            return self.get_state()
+    def _wake_up(self, state: Dict):
+        sleep_data = state["sleep"]
+        if sleep_data["state"] != "awake":
+            sleep_data["state"] = "awake"
+            met = state["metabolism"]
+            met["current_energy"] = min(met["max_energy"], met["current_energy"] + int(met["max_energy"] * 0.15))
 
-    def _write_state(self, state: Dict):
-        state["last_sync"] = time.time()
-        with open(self.state_path, "w", encoding="utf-8") as f:
-            json.dump(state, f, indent=4)
+    def check_idle_and_sleep(self, idle_threshold_seconds: int = 300) -> bool:
+        state = self.get_state()
+        idle_time = time.time() - state["sleep"]["last_activity"]
+        if idle_time >= idle_threshold_seconds and state["sleep"]["state"] == "awake":
+            return self._enter_sleep(state)
+        return False
+
+    def _enter_sleep(self, state: Dict) -> bool:
+        sleep_data = state["sleep"]
+        sleep_data["state"] = "nrem"
+        sleep_data["cortisol_before_sleep"] = state["endocrine"]["hormones"]["cortisol"]
+        sleep_data["sleep_cycles"] += 1
+        self._write_state(state)
+        return True
+
+    def sleep_tick(self):
+        state = self.get_state()
+        sleep_data = state["sleep"]
+        if sleep_data["state"] == "awake":
+            return
+        stages = ["nrem", "deep_nrem", "rem"]
+        current_idx = stages.index(sleep_data["state"]) if sleep_data["state"] in stages else 0
+        next_idx = (current_idx + 1) % len(stages)
+        sleep_data["state"] = stages[next_idx]
+
+        if sleep_data["state"] == "deep_nrem":
+            met = state["metabolism"]
+            met["current_energy"] = min(met["max_energy"], met["current_energy"] + int(met["max_energy"] * 0.05))
+            state["immune"]["temperature"] = max(98.6, state["immune"]["temperature"] - 0.1)
+        elif sleep_data["state"] == "rem":
+            h = state["endocrine"]["hormones"]
+            h["cortisol"] = max(0.0, h["cortisol"] - 5.0)
+            sleep_data["total_sleep_time"] += 1.0
+
+        self._write_state(state)
+        return sleep_data["state"]
+
+    def get_sleep_state(self) -> Dict:
+        state = self.get_state()
+        return state["sleep"]
+
+    def force_wake(self):
+        state = self.get_state()
+        if state["sleep"]["state"] != "awake":
+            self._wake_up(state)
+            self._write_state(state)
 
 if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent

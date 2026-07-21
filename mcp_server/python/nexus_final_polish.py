@@ -122,7 +122,7 @@ def clean_title(filename):
     return " ".join([w.capitalize() for w in name.split()])
 
 def repair():
-    print("NexusOS Final Systematic Polish: Securing Entire Vault...")
+    print("NexusAOS Final Systematic Polish: Securing Entire Vault...")
     for root, _, files in os.walk(str(ARCHIVE_DIR)):
         for file in files:
             if file.endswith(".md"):

@@ -5,7 +5,7 @@ import os
 
 # Configuration
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DB_PATH = os.path.join(BASE_DIR, "core", "exports", "nexus_os.db")
+DB_PATH = os.path.join(BASE_DIR, "core", "exports", "nexus_aos.db")
 
 def query_db(sql: str):
     """Executes a SQL query against the Logic Graph and returns results as JSON."""
