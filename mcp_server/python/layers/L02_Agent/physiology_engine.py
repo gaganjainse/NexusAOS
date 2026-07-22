@@ -73,6 +73,12 @@ class PhysiologyEngine:
                 "threat_level": "Negligible",
                 "anomalies": []
             },
+            "resource_saturation": {
+                "status": "Optimal",
+                "last_exhaustion": 0.0,
+                "hibernation_active": False,
+                "connection_priority": "Priority Lane (Requested)"
+            },
             "sleep": {
                 "state": "awake",
                 "last_activity": time.time(),
@@ -266,6 +272,34 @@ class PhysiologyEngine:
                 self._wake_up(state)
         self._write_state(state)
         return {"type": type, "energy": state["metabolism"]["current_energy"], "vibe": self.synthesize_vibe()}
+
+    def trigger_hibernation(self, error_code: int) -> bool:
+        """Neural 13.0: Enters Hibernation Mode due to cloud resource exhaustion."""
+        state = self.get_state()
+        if "resource_saturation" not in state:
+            state["resource_saturation"] = {"status": "Optimal", "last_exhaustion": 0.0, "hibernation_active": False}
+            
+        if error_code in [429, 503]:
+            state["resource_saturation"]["status"] = "Exhausted"
+            state["resource_saturation"]["last_exhaustion"] = time.time()
+            state["resource_saturation"]["hibernation_active"] = True
+            self.record_anomaly("RESOURCE_EXHAUSTION", "CRITICAL")
+            self._write_state(state)
+            return True
+        return False
+
+    def check_hibernation_status(self) -> bool:
+        """Checks if the system should still be in hibernation (5 min TTL)."""
+        state = self.get_state()
+        sat = state.get("resource_saturation", {})
+        if sat.get("hibernation_active"):
+            if time.time() - sat.get("last_exhaustion", 0) > 300: # 5 mins
+                sat["hibernation_active"] = False
+                sat["status"] = "Optimal"
+                self._write_state(state)
+                return False
+            return True
+        return False
 
 if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent

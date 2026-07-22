@@ -45,6 +45,7 @@ class HiveBridge:
             "last_sync": time.time(),
             "vitals": vitals,
             "wisdom_summary": wisdom,
+            "resource_status": vitals.get("resource_saturation", {}),
             "nexus_version": "NEURAL 13.0",
             "active_model_drift": False
         }
@@ -84,6 +85,7 @@ class HiveBridge:
         vitals = hive_data["vitals"]
         vibe = vitals.get("endocrine", {}).get("vibe", "Stable")
         energy = vitals.get("metabolism", {}).get("current_energy", 1000)
+        is_hibernating = hive_data["resource_status"].get("hibernation_active", False)
         
         manifest = f"""# UNIVERSAL NEXUS MANIFEST (NEURAL 13.0)
 > **HIVE STATUS:** SYNCED | **LAST_SYNC:** {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(hive_data['last_sync']))}
@@ -95,6 +97,7 @@ class HiveBridge:
 - **Total Recall:** ACTIVE (Recording all Prompts, Thoughts, and Outputs in `conversation_vault`).
 - **Real-Time Sync:** ACTIVE (Automatic Git Commit & Push on every somatic action).
 - **Repository:** PRIVATE.
+- **Concise Mode:** {"ACTIVE (Resource Deprioritization Detected)" if is_hibernating else "INACTIVE"}
 
 ## 3. Current Somatic State
 - **Vibe:** {vibe}

@@ -26,6 +26,18 @@ class DeepResearchTool:
 
     def perform_deep_research(self, topic: str) -> Dict[str, Any]:
         """Performs a multi-layered scan of the web and source code for a specific architectural nutrient."""
+        # 0. Check Semantic Nutrient Cache (Bone Marrow)
+        if self.research_path.exists():
+            try:
+                history = json.loads(self.research_path.read_text(encoding="utf-8"))
+                for entry in history:
+                    if entry.get("topic") == topic:
+                        # Cache hit: Check age
+                        if time.time() - entry.get("timestamp", 0) < 86400: # 24h cache
+                            print(f"Nutrient Cache Hit: {topic}. Returning from Bone Marrow.")
+                            return entry
+            except: pass
+
         print(f"Deep Researching: {topic}...")
         
         # 1. Web Scan (Best Practices & Papers)

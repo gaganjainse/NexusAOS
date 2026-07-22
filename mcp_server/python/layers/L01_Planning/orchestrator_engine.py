@@ -292,11 +292,14 @@ class OrchestratorEngine:
         if physio["metabolism"]["status"] == "Critical":
             return {"status": "suspended", "reason": "Energy critical"}
         
+        # Neural 13.0: Check for Resource Hibernation
+        is_hibernating = self.physiology.check_hibernation_status()
+        
         results = {
             "sensory": self._process_sensory_events(),
             "signals": self._process_active_signals(),
             "directives": self._process_directive_inbox(),
-            "maintenance": self._autonomic_maintenance(),
+            "maintenance": self._autonomic_maintenance() if not is_hibernating else ["HIBERNATION: Maintenance suspended."],
         }
         self.physiology.synthesize_vibe()
         self.physiology.consume_energy(15)

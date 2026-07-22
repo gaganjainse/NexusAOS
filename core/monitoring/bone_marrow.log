@@ -3,3 +3,8 @@
 1784735811.128814|task_negotiation|Agent Immune won 'diagnose system...' (Score: 0.28)
 1784738838.298299|task_negotiation|Agent Research won 'Test Hive Lock...' (Score: 0.39)
 1784738866.7111957|task_negotiation|Agent Orchestrator won 'Test Hive Lock...' (Score: 0.41)
+1784740088.4999804|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784740088.5002396|graph_link|Test-[:SYNAPSE]->Motor
+1784740088.5003848|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
+1784740088.500631|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
+1784740088.5008066|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator

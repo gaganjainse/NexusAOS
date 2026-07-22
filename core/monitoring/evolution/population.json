@@ -1,0 +1,203 @@
+[
+  {
+    "id": "vd840ac9b",
+    "generation": 1,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1,
+      "param_6463": 0.14978829297909924
+    },
+    "fitness": 0.8938065323929543,
+    "fitness_components": {},
+    "created_at": 1784740110.3133237,
+    "promoted": false,
+    "shadow_test_results": {
+      "test_id": "shadow_vd840ac9b_1784740110",
+      "genome_id": "vd840ac9b",
+      "started_at": 1784740110.816789,
+      "duration_sec": 60,
+      "runs": 5,
+      "mean_fitness": 0.5517537309842948,
+      "std_fitness": 0.17568314643240712,
+      "individual_results": [
+        0.7918820793276702,
+        0.4894136795343911,
+        0.4520179189098362,
+        0.7124543102659371,
+        0.3130006668836391
+      ],
+      "passed": false
+    }
+  },
+  {
+    "id": "veff700b3",
+    "generation": 0,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1
+    },
+    "fitness": 0.7662013336431943,
+    "fitness_components": {},
+    "created_at": 1784740110.3133168,
+    "promoted": false,
+    "shadow_test_results": {
+      "test_id": "shadow_veff700b3_1784740110",
+      "genome_id": "veff700b3",
+      "started_at": 1784740111.3207104,
+      "duration_sec": 60,
+      "runs": 5,
+      "mean_fitness": 0.5364268984559196,
+      "std_fitness": 0.15675762822706352,
+      "individual_results": [
+        0.45126723956267645,
+        0.4564424959407837,
+        0.7242693092895098,
+        0.333149717648236,
+        0.7170057298383923
+      ],
+      "passed": false
+    }
+  },
+  {
+    "id": "v43a2fb43",
+    "generation": 0,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1
+    },
+    "fitness": 0.7487981519540008,
+    "fitness_components": {},
+    "created_at": 1784740110.313327,
+    "promoted": false,
+    "shadow_test_results": {
+      "test_id": "shadow_v43a2fb43_1784740111",
+      "genome_id": "v43a2fb43",
+      "started_at": 1784740111.8244233,
+      "duration_sec": 60,
+      "runs": 5,
+      "mean_fitness": 0.6753648083390421,
+      "std_fitness": 0.15885121034643962,
+      "individual_results": [
+        0.8689628443901642,
+        0.6664333943067633,
+        0.8338229523409584,
+        0.5519287148918718,
+        0.4556761357654526
+      ],
+      "passed": false
+    }
+  },
+  {
+    "id": "ve9b599c8",
+    "generation": 1,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1
+    },
+    "fitness": 0.7250087329349904,
+    "fitness_components": {},
+    "created_at": 1784740110.3133307,
+    "promoted": false,
+    "shadow_test_results": {}
+  },
+  {
+    "id": "v1a48ae29",
+    "generation": 1,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1
+    },
+    "fitness": 0.7168835240936811,
+    "fitness_components": {},
+    "created_at": 1784740110.313285,
+    "promoted": false,
+    "shadow_test_results": {}
+  },
+  {
+    "id": "vf164d8d6",
+    "generation": 1,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1,
+      "param_8832": 0.9406424625827167
+    },
+    "fitness": 0.6860859392383614,
+    "fitness_components": {},
+    "created_at": 1784740110.3133352,
+    "promoted": false,
+    "shadow_test_results": {}
+  },
+  {
+    "id": "v0.0.1",
+    "generation": 0,
+    "parent_id": null,
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1
+    },
+    "fitness": 0.6621126136177171,
+    "fitness_components": {},
+    "created_at": 1784740110.312063,
+    "promoted": true,
+    "shadow_test_results": {}
+  },
+  {
+    "id": "v901d58fe",
+    "generation": 1,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1
+    },
+    "fitness": 0.5906526847336995,
+    "fitness_components": {},
+    "created_at": 1784740110.3133132,
+    "promoted": false,
+    "shadow_test_results": {}
+  },
+  {
+    "id": "vb579a90f",
+    "generation": 1,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "exploration": 0.1,
+      "param_5485": 0.10664258001453175
+    },
+    "fitness": 0.4739022626962275,
+    "fitness_components": {},
+    "created_at": 1784740110.3133068,
+    "promoted": false,
+    "shadow_test_results": {}
+  },
+  {
+    "id": "v5b853850",
+    "generation": 1,
+    "parent_id": "v0.0.1",
+    "config": {
+      "learning_rate": 0.014620188833645149,
+      "batch_size": 32,
+      "exploration": 0.1
+    },
+    "fitness": 0.3589700414630813,
+    "fitness_components": {},
+    "created_at": 1784740110.3133404,
+    "promoted": false,
+    "shadow_test_results": {}
+  }
+]

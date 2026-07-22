@@ -17,12 +17,20 @@ BASE_DIR = _python_root.parent.parent
 class ThoughtAgent:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
+        self.concise_mode = False
+
+    def toggle_concise_mode(self, active: bool):
+        """Neural 13.0: Toggles high-density reasoning to save tokens."""
+        self.concise_mode = active
 
     def explain_pulse(self, neural_pulse: str) -> str:
         """
         Converts a high-density NEURAL pulse into a natural language explanation.
-        Example: '::P fix file ::Z HIGH ::X auto_repair' -> 'I am prioritizing a critical file repair due to detected high-stress signals.'
         """
+        if self.concise_mode:
+            # High-density binary-like output for machine speed
+            return neural_pulse.replace("::", "|")
+
         explanation = []
         if "::P" in neural_pulse:
             intent = neural_pulse.split("::P")[1].split("::")[0].strip()

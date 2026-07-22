@@ -58,6 +58,11 @@ def run_diagnostics(base_dir: Path) -> str:
             # Sleep State
             sleep = phys.get("sleep", {})
             results.append(f"[OK] Circadian State: {sleep.get('state', 'awake')}")
+            
+            # Resource Saturation (Neural 13.0)
+            sat = phys.get_resource_saturation() if hasattr(phys, "get_resource_saturation") else phys.get("resource_saturation", {})
+            results.append(f"[{'WARNING' if sat.get('hibernation_active') else 'OK'}] Cloud Resources: {sat.get('status', 'Optimal')}")
+            results.append(f"[OK] Connection Lane: {sat.get('connection_priority', 'Priority')}")
 
         except Exception as e:
             results.append(f"[ERROR] Physiology file corrupted: {e}")
