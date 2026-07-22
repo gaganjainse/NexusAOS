@@ -4,6 +4,8 @@ Version: 1.0.0
 Description: External web browsing, fetching, and search capabilities.
 """
 import json
+import sys
+from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:

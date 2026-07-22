@@ -6,15 +6,16 @@ MIT License - can copy, adapt, improve from langchain-ai and other MIT-licensed 
 """
 import json
 import time
-
-_python_root = Path(__file__).resolve().parent.parent.parent.parent
-if str(_python_root) not in sys.path:
-    sys.path.insert(0, str(_python_root))
+import sys
 import urllib.request
 import urllib.parse
 import os
 import re
 from pathlib import Path
+
+_python_root = Path(__file__).resolve().parent.parent.parent.parent
+if str(_python_root) not in sys.path:
+    sys.path.insert(0, str(_python_root))
 from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, asdict
 from typing import Callable
