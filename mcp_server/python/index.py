@@ -63,6 +63,7 @@ from layers.L09_Observability.reward_system import RewardSystem
 from layers.L12_Infrastructure.photonic_nerve import PhotonicNerve
 from layers.L11_Data.soma_transcended import TranscendedSubstrate
 from layers.L13_Hive.hive_bridge import HiveBridge
+from layers.L09_Observability.conversation_recorder import ConversationRecorder
 from layers.L02_Agent.cerebellum_engine import CerebellumEngine
 from layers.L06_Tool.deep_research_tool import DeepResearchTool
 from compiler.neural_compiler import NeuralCompiler
@@ -491,6 +492,15 @@ def trigger_hive_sync(mode: str = "exhale") -> str:
     else:
         res = bridge.inhale_from_hive()
         return _aos_response("success", payload=res, message="Inhaled Hive state.")
+
+# --- 8. TOTAL RECALL (L09) ---
+
+@mcp.tool()
+def record_conversation_cycle(prompt: str, thoughts: str, output: str) -> str:
+    """Records the full A-Z cycle of a conversation turn for permanent provenance."""
+    recorder = ConversationRecorder(BASE_DIR)
+    file_name = recorder.record(prompt, thoughts, output)
+    return _aos_response("success", message=f"Cycle recorded in {file_name}")
 
 if __name__ == "__main__":
     mcp.run()

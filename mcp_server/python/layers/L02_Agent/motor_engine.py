@@ -59,6 +59,19 @@ class MotorEngine:
 
     def _log_action(self, action: str, target: str, result: str, success: bool):
         self.state_mgr.log_motor_action(action, target, success, result[:500])
+        if success:
+            self.real_time_sync(action, target)
+
+    def real_time_sync(self, action: str, target: str):
+        """Neural 13.0: Real-time Git Commit & Push."""
+        try:
+            # Sync to local and remote
+            subprocess.run(["git", "add", "."], cwd=str(self.base_dir), capture_output=True)
+            subprocess.run(["git", "commit", "-m", f"Somatic Action: {action} on {target}"], cwd=str(self.base_dir), capture_output=True)
+            # Push in background to avoid blocking the Hand too long
+            subprocess.Popen(["git", "push", "origin", "main"], cwd=str(self.base_dir), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except Exception:
+            pass
 
     def _resolve_safe_path(self, relative_path: str) -> Tuple[bool, Path, str]:
         rel = relative_path.replace("\\", "/").lstrip("/")

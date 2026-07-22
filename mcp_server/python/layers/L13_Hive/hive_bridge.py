@@ -91,7 +91,12 @@ class HiveBridge:
 ## 1. Persona Alignment (Voice DNA)
 {voice_dna}
 
-## 2. Current Somatic State
+## 2. Global Directives
+- **Total Recall:** ACTIVE (Recording all Prompts, Thoughts, and Outputs in `conversation_vault`).
+- **Real-Time Sync:** ACTIVE (Automatic Git Commit & Push on every somatic action).
+- **Repository:** PRIVATE.
+
+## 3. Current Somatic State
 - **Vibe:** {vibe}
 - **Energy:** {energy}
 - **ATP Efficiency:** 80%
