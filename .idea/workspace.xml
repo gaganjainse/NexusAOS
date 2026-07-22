@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System." />
+    <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System.">
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/conversation_vault/nexus_cycle_1784749097.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/failure_logs/failure_manifest.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_from_notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_alt_tab.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_chunk_1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_raw.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/monitoring/vision_cache/retina_capture_1784748693.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/monitoring/vision_cache/retina_capture_1784749052.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/monitoring/vision_cache/retina_capture_1784749348.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/physique_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/privacy_shield.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/failure_recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -64,6 +64,7 @@ from layers.L12_Infrastructure.photonic_nerve import PhotonicNerve
 from layers.L11_Data.soma_transcended import TranscendedSubstrate
 from layers.L13_Hive.hive_bridge import HiveBridge
 from layers.L09_Observability.conversation_recorder import ConversationRecorder
+from layers.L09_Observability.failure_recorder import FailureRecorder
 from layers.L02_Agent.cerebellum_engine import CerebellumEngine
 from layers.L06_Tool.deep_research_tool import DeepResearchTool
 from compiler.neural_compiler import NeuralCompiler
@@ -527,6 +528,17 @@ def send_somatic_input(keys: str) -> str:
     return _aos_response("success", message=res)
 
 @mcp.tool()
+def focus_host_window(window_name: str) -> str:
+    """Neural 13.5: Motor - Switches focus to a specific window on the PC (The Hand)."""
+    allowed, msg = _gate_allowed("focus_host_window")
+    if not allowed: return _aos_response("blocked", message=msg)
+    
+    from layers.L02_Agent.motor_engine import MotorEngine
+    motor = MotorEngine(BASE_DIR)
+    res = motor.focus_window(window_name)
+    return _aos_response("success", message=res)
+
+@mcp.tool()
 def inject_win32_pulse(window_name: str, message_type: str, w_param: int = 0, l_param: int = 0) -> str:
     """Neural 13.5: Direct Win32 Message Injection - Bypasses slow simulation (The Hand)."""
     allowed, msg = _gate_allowed("inject_win32_pulse")
@@ -572,6 +584,26 @@ def record_conversation_cycle(prompt: str, thoughts: str, output: str) -> str:
     recorder = ConversationRecorder(BASE_DIR)
     file_name = recorder.record(prompt, thoughts, output)
     return _aos_response("success", message=f"Cycle recorded in {file_name}")
+
+# --- 9. AGENTIC PHYSIQUE & PRIVACY (L07/L08) ---
+
+@mcp.tool()
+def run_privacy_sweep() -> str:
+    """Neural 13.6: Scans the host for telemetry leaks and digital waste."""
+    from layers.L08_Governance.privacy_shield import PrivacyShield
+    shield = PrivacyShield(BASE_DIR)
+    leaks = shield.scan_telemetry_leaks()
+    trash = shield.shred_trash()
+    return _aos_response("success", payload={"leaks": leaks, "waste": trash}, message="Privacy sweep complete.")
+
+@mcp.tool()
+def diagnose_physique() -> str:
+    """Neural 13.6: Diagnoses host hardware health, including power drain and driver status."""
+    from layers.L07_Integration.physique_engine import PhysiqueEngine
+    physique = PhysiqueEngine(BASE_DIR)
+    power = physique.diagnose_power_drain()
+    drivers = physique.audit_drivers()
+    return _aos_response("success", payload={"power_audit": power, "driver_audit": drivers}, message="Physique diagnostic complete.")
 
 if __name__ == "__main__":
     mcp.run()

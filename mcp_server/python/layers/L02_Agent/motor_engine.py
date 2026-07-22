@@ -9,6 +9,7 @@ import re
 import subprocess
 import sys
 import time
+import os
 from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
@@ -78,14 +79,26 @@ class MotorEngine:
             return "MOTOR DENIED: Input simulation only supported on Windows host."
             
         try:
-            # Legacy SendKeys
-            cmd = f'powershell "[void][System.Reflection.Assembly]::LoadWithPartialName(\'System.Windows.Forms\'); [System.Windows.Forms.SendKeys]::SendWait(\'{keys}\')"'
-            subprocess.run(cmd, shell=True, capture_output=True)
+            # Enhanced SendKeys with Focus Support
+            import pywinauto
+            from pywinauto.keyboard import send_keys
+            # We use SendWait-like behavior
+            send_keys(keys)
             self.physiology.consume_energy(30)
             self._log_action("send_input", "keyboard", f"Sent: {keys}", True)
             return f"MOTOR OK: Input sent to host."
         except Exception as e:
             self._log_action("send_input", "keyboard", str(e), False)
+            return f"MOTOR ERROR: {e}"
+
+    def focus_window(self, window_name: str):
+        """Neural 13.5: Sets focus to a specific host window."""
+        try:
+            import pywinauto
+            app = pywinauto.Application(backend="uia").connect(title_re=f".*{window_name}.*", timeout=5)
+            app.top_window().set_focus()
+            return f"MOTOR OK: Focused {window_name}"
+        except Exception as e:
             return f"MOTOR ERROR: {e}"
 
     def inject_message(self, window_name: str, message_type: str, w_param: int, l_param: int):
