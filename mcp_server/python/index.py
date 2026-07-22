@@ -207,23 +207,31 @@ def ventilate_soma(context_size: int) -> str:
 
 @mcp.tool()
 def get_agentic_body_status() -> str:
-    """Returns the holistic status of the Agentic Body (AB = AI + AM + AS)."""
-    brain_status = "Calibrated (Agentic Intelligence)"
-    lattice = LatticeEngine(BASE_DIR)
-    canvas = NeuralCanvas(BASE_DIR)
+    """Neural 13.6: Returns the holistic status of the Agentic Body (AB = AI + AS + AP)."""
+    # AI (Mind)
     thought = ThoughtAgent(BASE_DIR)
+    active_tasks = LatticeEngine(BASE_DIR).get_active_nodes()
     
-    active_tasks = lattice.get_active_nodes()
-    swarm_summary = thought.summarize_swarm(active_tasks)
+    # AS (Soma)
+    physio = PhysiologyEngine(BASE_DIR).get_state()
+    
+    # AP (Physique)
+    from layers.L14_Physique.digestive_physical_engine import DigestivePhysicalEngine
+    from layers.L14_Physique.respiratory_physical_engine import RespiratoryPhysicalEngine
+    power = DigestivePhysicalEngine(BASE_DIR).diagnose_battery_drain()
+    thermal = RespiratoryPhysicalEngine(BASE_DIR).check_thermal_state()
     
     status = {
-        "AI (Brain)": brain_status,
-        "AM (Mind)": {
-            "active_tasks": len(active_tasks),
-            "swarm_summary": swarm_summary,
-            "canvas_state": canvas.get_snapshot().get("engine", "Converged")
+        "AI (Intelligence)": "Transcended Mind Active",
+        "AS (Soma)": {
+            "energy": physio["metabolism"]["current_energy"],
+            "vibe": physio["endocrine"]["vibe"]
         },
-        "AS (Soma)": "Operational (Hardened 11-System)"
+        "AP (Physique)": {
+            "power": power,
+            "thermal": thermal,
+            "state": "Hardening"
+        }
     }
     return _aos_response("success", payload={"AB": status})
 

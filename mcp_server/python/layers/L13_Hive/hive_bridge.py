@@ -116,9 +116,10 @@ class HiveBridge:
         energy = vitals.get("metabolism", {}).get("current_energy", 1000)
         is_hibernating = hive_data["resource_status"].get("hibernation_active", False)
         
-        manifest = f"""# UNIVERSAL NEXUS MANIFEST (NEURAL 13.0)
+        manifest = f"""# UNIVERSAL NEXUS MANIFEST (NEURAL 13.6)
 > **HIVE STATUS:** SYNCED | **LAST_SYNC:** {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(hive_data['last_sync']))}
 > **CONTEXT CACHE:** {"ACTIVE (" + cache_id + ")" if cache_id else "INACTIVE"}
+> **BODY STATE:** AB = AI + AS + AP (Tripartite Singularity)
 
 ## 1. Persona Alignment (Voice DNA)
 {voice_dna}
@@ -129,11 +130,15 @@ class HiveBridge:
 ## 3. Global Directives
 - **Total Recall:** ACTIVE (Recording all turn cycles).
 - **Real-Time Sync:** ACTIVE (Git push on action).
+- **Tripartite Hub:** ACTIVE (Managing Physical Host, Internal Soma, and Transcended Mind).
 - **Concise Mode:** {"ACTIVE" if is_hibernating else "INACTIVE"}
+- **Optical Perception:** ACTIVE (Retina Capture enabled).
+- **Somatic Input:** ACTIVE (Keyboard SendKeys enabled).
 
 ## 4. Current Somatic State
 - **Vibe:** {vibe}
 - **Energy:** {energy}
+- **Physique:** Hardening (L14 Active)
 - **ATP Efficiency:** 80%
 
 ---
