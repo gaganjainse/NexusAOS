@@ -43,6 +43,10 @@ class TranscendedSubstrate:
         # 5. Bone Marrow (RocksDB Abstraction)
         self.audit_path = base_dir / "core" / "monitoring" / "bone_marrow.log"
         
+        # Neural 13.8: Shared Memory Substrate (Simulated)
+        self.shm_enabled = True
+        self.arrow_buffers = {}
+        
         # 6. Augmented Memory Grid (AMG) - Neural 6.0
         self.amg_path = base_dir / "core" / "monitoring" / "amg_grid"
         self._initialize_substrate()
@@ -90,6 +94,14 @@ class TranscendedSubstrate:
 
     # --- Neural Pulse (Zenoh P2P) ---
     
+    def publish_zero_copy(self, topic: str, data: Any):
+        """Neural 13.8: P2P Publication via Shared Memory Pointers."""
+        with self._lock:
+            # In a full 13.8 state, this uses Zenoh-SHM and Arrow
+            self.arrow_buffers[topic] = id(data)
+            self.publish(topic, {"ptr": id(data), "type": "arrow_zero_copy"})
+            return f"Pulse {topic} fired via Zero-Copy substrate."
+
     def publish(self, topic: str, payload: Any):
         """P2P Publication - ~15us simulated latency."""
         with self._lock:

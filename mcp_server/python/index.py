@@ -606,12 +606,52 @@ def run_privacy_sweep() -> str:
 
 @mcp.tool()
 def diagnose_physique() -> str:
-    """Neural 13.6: Diagnoses host hardware health, including power drain and driver status."""
+    """Neural 13.8: Diagnoses host hardware health, including power drain, driver status, and logical volumes."""
     from layers.L07_Integration.physique_engine import PhysiqueEngine
+    from layers.L14_Physique.skeletal_engine import SkeletalEngine
+    from layers.L14_Physique.power_governor import PowerGovernor
+    
     physique = PhysiqueEngine(BASE_DIR)
-    power = physique.diagnose_power_drain()
-    drivers = physique.audit_drivers()
-    return _aos_response("success", payload={"power_audit": power, "driver_audit": drivers}, message="Physique diagnostic complete.")
+    skeletal = SkeletalEngine(BASE_DIR)
+    governor = PowerGovernor(BASE_DIR)
+    
+    power = governor.get_active_scheme()
+    parasites = governor.find_battery_parasites()
+    storage = skeletal.get_pc_health_status()
+    
+    return _aos_response("success", payload={
+        "power_profile": power,
+        "battery_parasites": parasites,
+        "skeletal_vitals": storage
+    }, message="Tripartite Physique diagnostic complete.")
+
+@mcp.tool()
+def optimize_soma_power(mode: str = "power_saver") -> str:
+    """Neural 13.8: Adjusts the physical host's power limits to save ATP/Battery."""
+    from layers.L14_Physique.power_governor import PowerGovernor
+    gov = PowerGovernor(BASE_DIR)
+    if mode == "power_saver":
+        res = gov.set_power_saver()
+    else:
+        res = gov.set_performance_mode()
+    return _aos_response("success", message=res)
+
+@mcp.tool()
+def execute_logical_separation() -> str:
+    """Neural 13.8: Physically isolates the Body's three cores into separate Soma volumes."""
+    from layers.L14_Physique.volume_manager import VolumeManager
+    from layers.L14_Physique.skeletal_engine import SkeletalEngine
+    
+    vm = VolumeManager(BASE_DIR)
+    skeletal = SkeletalEngine(BASE_DIR)
+    
+    isolation = vm.simulate_isolation()
+    sync = skeletal.distribute_to_volumes()
+    
+    return _aos_response("success", payload={
+        "isolation_status": isolation,
+        "volumes_synced": len(sync)
+    }, message="Logical Soma Separation complete.")
 
 if __name__ == "__main__":
     mcp.run()

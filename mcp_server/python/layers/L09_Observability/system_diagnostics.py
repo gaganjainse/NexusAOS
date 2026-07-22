@@ -17,8 +17,8 @@ if str(_python_root) not in sys.path:
 BASE_DIR = _python_root.parent.parent
 
 def run_diagnostics(base_dir: Path) -> str:
-    """Performs deep-dive logic verification for Neural 13.5."""
-    results = ["--- Nexus OS Diagnostic Report (Neural 13.5) ---"]
+    """Performs deep-dive logic verification for Neural 13.8 (Tripartite Singularity)."""
+    results = ["--- Nexus OS Diagnostic Report (Neural 13.8) ---"]
 
     # 1. Genome & Pulse Density
     pulse_dir = base_dir / "active_core" / "pulses"

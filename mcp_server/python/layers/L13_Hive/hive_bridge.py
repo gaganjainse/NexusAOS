@@ -55,7 +55,7 @@ class HiveBridge:
             "vitals": vitals,
             "wisdom_summary": wisdom,
             "resource_status": vitals.get("resource_saturation", {}),
-            "nexus_version": "NEURAL 13.0",
+            "nexus_version": "NEURAL 13.8",
             "active_model_drift": False
         }
         
