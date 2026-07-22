@@ -39,6 +39,10 @@ Location: `archives/dna_core/blueprints/`
 - **[UNIVERSAL_CONTENT_VIDEO_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_CONTENT_VIDEO_BLUEPRINT.artifact.md)**
 - **[UNIVERSAL_MARKETING_GROWTH_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_MARKETING_GROWTH_BLUEPRINT.artifact.md)**
 - **[UNIVERSAL_COMMERCIAL_EMPIRE_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_COMMERCIAL_EMPIRE_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_SOLO_OPERATOR_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_SOLO_OPERATOR_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_ENTERPRISE_SYSTEMS_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_ENTERPRISE_SYSTEMS_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_ENGINEERING_TAXONOMY](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_ENGINEERING_TAXONOMY.artifact.md)**
+- **[THE_EVOLUTIONARY_ENGINE_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/THE_EVOLUTIONARY_ENGINE_BLUEPRINT.artifact.md)**
 - **[android_studio_blueprint](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/android_studio_blueprint.artifact.md)**
 
 ---
