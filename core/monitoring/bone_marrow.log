@@ -18,3 +18,8 @@
 1784748693.1264179|optical_capture|Retina capture saved to retina_capture_1784748693.png
 1784749052.3516695|optical_capture|Retina capture saved to retina_capture_1784749052.png
 1784749348.9966547|optical_capture|Retina capture saved to retina_capture_1784749348.png
+1784757005.5319097|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784757005.532277|graph_link|Test-[:SYNAPSE]->Motor
+1784757005.5324597|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
+1784757005.532628|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
+1784757005.5327466|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator

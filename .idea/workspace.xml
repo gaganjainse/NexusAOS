@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System.">
-      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/HUMAN_BIOLOGICAL_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/AI_MODEL_ARCHITECTURE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/NEXUS_NATIVE_STEEL_DESIGN.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/OS_KERNEL_SYSTEMS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/PROGRAMMING_LANGUAGE_TAXONOMY.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/universal_nexus_manifest.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/universal_nexus_manifest.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/research_notes.json" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/research_notes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/monitoring/hive/hive_registry.json" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/hive/hive_registry.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

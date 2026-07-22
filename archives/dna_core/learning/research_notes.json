@@ -283,5 +283,62 @@
             "skills": []
         },
         "status": "INGESTED"
+    },
+    {
+        "topic": "Total Language and AI Model Taxonomy: Evolution, Architecture, and Training Pipelines",
+        "timestamp": 1784758178.0415094,
+        "web_summary": [
+            {
+                "title": "Search result for Total Language and AI Model Taxonomy: Evolution, Architecture, and Training Pipelines architecture best practices research papers",
+                "url": "https://example.com/search?q=Total Language and AI Model Taxonomy: Evolution, Architecture, and Training Pipelines architecture best practices research papers"
+            }
+        ],
+        "github_patterns": [],
+        "learning_dna": {
+            "origin": "Total Language and AI Model Taxonomy: Evolution, Architecture, and Training Pipelines",
+            "protocols": [
+                "ADOPT:Search result for Total Language and AI Model Taxonomy: Evolution, Architecture, and Training Pipelines architecture best practices research papers"
+            ],
+            "skills": []
+        },
+        "status": "INGESTED"
+    },
+    {
+        "topic": "Universal Product Creation: PDLC, Design Thinking, Agile, Quality Assurance, and Manufacturing Process",
+        "timestamp": 1784759039.0845897,
+        "web_summary": [
+            {
+                "title": "Search result for Universal Product Creation: PDLC, Design Thinking, Agile, Quality Assurance, and Manufacturing Process architecture best practices research papers",
+                "url": "https://example.com/search?q=Universal Product Creation: PDLC, Design Thinking, Agile, Quality Assurance, and Manufacturing Process architecture best practices research papers"
+            }
+        ],
+        "github_patterns": [],
+        "learning_dna": {
+            "origin": "Universal Product Creation: PDLC, Design Thinking, Agile, Quality Assurance, and Manufacturing Process",
+            "protocols": [
+                "ADOPT:Search result for Universal Product Creation: PDLC, Design Thinking, Agile, Quality Assurance, and Manufacturing Process architecture best practices research papers"
+            ],
+            "skills": []
+        },
+        "status": "INGESTED"
+    },
+    {
+        "topic": "Universal Business, Management, Research Methodology, and Battery Engineering Blueprint",
+        "timestamp": 1784759301.4738061,
+        "web_summary": [
+            {
+                "title": "Search result for Universal Business, Management, Research Methodology, and Battery Engineering Blueprint architecture best practices research papers",
+                "url": "https://example.com/search?q=Universal Business, Management, Research Methodology, and Battery Engineering Blueprint architecture best practices research papers"
+            }
+        ],
+        "github_patterns": [],
+        "learning_dna": {
+            "origin": "Universal Business, Management, Research Methodology, and Battery Engineering Blueprint",
+            "protocols": [
+                "ADOPT:Search result for Universal Business, Management, Research Methodology, and Battery Engineering Blueprint architecture best practices research papers"
+            ],
+            "skills": []
+        },
+        "status": "INGESTED"
     }
 ]
