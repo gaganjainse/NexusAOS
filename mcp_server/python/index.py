@@ -502,7 +502,53 @@ def trigger_transcended_pulse(topic: str, payload_json: str) -> str:
     substrate.publish(topic, payload)
     return _aos_response("success", message=f"Pulse fired into topic: {topic}")
 
-# --- 7. HIVE NETWORK (L13) ---
+# --- 7. SOMATIC PERCEPTION & INPUT (Eyes & Hands) ---
+
+@mcp.tool()
+def capture_host_retina(left: int = 0, top: int = 0, right: int = 1920, bottom: int = 1080) -> str:
+    """Neural 13.0: Vision - Captures a screenshot of the host PC (The Eyes)."""
+    allowed, msg = _gate_allowed("capture_host_retina")
+    if not allowed: return _aos_response("blocked", message=msg)
+    
+    from layers.L06_Tool.vision_engine import VisionEngine
+    vision = VisionEngine(BASE_DIR)
+    path = vision.capture_screen(region=(left, top, right, bottom))
+    return _aos_response("success", payload={"path": path}, message="Retina capture successful.")
+
+@mcp.tool()
+def send_somatic_input(keys: str) -> str:
+    """Neural 13.0: Motor - Sends keyboard input to the host PC (The Hand)."""
+    allowed, msg = _gate_allowed("send_somatic_input")
+    if not allowed: return _aos_response("blocked", message=msg)
+    
+    from layers.L02_Agent.motor_engine import MotorEngine
+    motor = MotorEngine(BASE_DIR)
+    res = motor.send_input(keys)
+    return _aos_response("success", message=res)
+
+@mcp.tool()
+def inject_win32_pulse(window_name: str, message_type: str, w_param: int = 0, l_param: int = 0) -> str:
+    """Neural 13.5: Direct Win32 Message Injection - Bypasses slow simulation (The Hand)."""
+    allowed, msg = _gate_allowed("inject_win32_pulse")
+    if not allowed: return _aos_response("blocked", message=msg)
+    
+    from layers.L02_Agent.motor_engine import MotorEngine
+    motor = MotorEngine(BASE_DIR)
+    res = motor.inject_message(window_name, message_type, w_param, l_param)
+    return _aos_response("success", message=res)
+
+@mcp.tool()
+def scan_semantic_desktop() -> str:
+    """Neural 13.5: UIA Scan - Reads the internal structure of the desktop (The Eyes)."""
+    allowed, msg = _gate_allowed("scan_semantic_desktop")
+    if not allowed: return _aos_response("blocked", message=msg)
+    
+    from layers.L05_Memory.uia_sentry import UIASentry
+    sentry = UIASentry(BASE_DIR)
+    res = sentry.scan_ui_elements()
+    return _aos_response("success", payload=res, message="Semantic UI scan complete.")
+
+# --- 8. HIVE NETWORK (L13) ---
 
 @mcp.tool()
 def trigger_hive_sync(mode: str = "exhale") -> str:

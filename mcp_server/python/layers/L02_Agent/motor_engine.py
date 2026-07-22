@@ -72,6 +72,48 @@ class MotorEngine:
         except Exception:
             pass
 
+    def send_input(self, keys: str):
+        """Neural 13.0: Somatic Input - Sends keyboard events to the host (Windows)."""
+        if os.name != 'nt':
+            return "MOTOR DENIED: Input simulation only supported on Windows host."
+            
+        try:
+            # Legacy SendKeys
+            cmd = f'powershell "[void][System.Reflection.Assembly]::LoadWithPartialName(\'System.Windows.Forms\'); [System.Windows.Forms.SendKeys]::SendWait(\'{keys}\')"'
+            subprocess.run(cmd, shell=True, capture_output=True)
+            self.physiology.consume_energy(30)
+            self._log_action("send_input", "keyboard", f"Sent: {keys}", True)
+            return f"MOTOR OK: Input sent to host."
+        except Exception as e:
+            self._log_action("send_input", "keyboard", str(e), False)
+            return f"MOTOR ERROR: {e}"
+
+    def inject_message(self, window_name: str, message_type: str, w_param: int, l_param: int):
+        """Neural 13.5: Win32 Message Injection - Direct kernel-level control."""
+        if os.name != 'nt':
+            return "MOTOR DENIED: Win32 injection only supported on Windows."
+            
+        try:
+            import win32gui
+            import win32api
+            import win32con
+            
+            hwnd = win32gui.FindWindow(None, window_name)
+            if not hwnd:
+                return f"MOTOR ERROR: Window '{window_name}' not found."
+            
+            # Map string message_type to win32con
+            msg = getattr(win32con, message_type, None)
+            if msg is None:
+                return f"MOTOR ERROR: Invalid message type '{message_type}'."
+                
+            win32api.PostMessage(hwnd, msg, w_param, l_param)
+            self._log_action("inject_message", window_name, f"Injected {message_type}", True)
+            return f"MOTOR OK: Injected {message_type} into {window_name}."
+        except Exception as e:
+            self._log_action("inject_message", window_name, str(e), False)
+            return f"MOTOR ERROR: {e}"
+
     def _resolve_safe_path(self, relative_path: str) -> Tuple[bool, Path, str]:
         rel = relative_path.replace("\\", "/").lstrip("/")
         target = (self.base_dir / rel).resolve()

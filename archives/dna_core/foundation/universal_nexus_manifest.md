@@ -53,6 +53,8 @@ Objective: Persistent stylistic and tonal alignment for the Nexus AOS Persona.
 - **Total Recall:** ACTIVE (Recording all turn cycles).
 - **Real-Time Sync:** ACTIVE (Git push on action).
 - **Concise Mode:** INACTIVE
+- **Optical Perception:** ACTIVE (Retina Capture enabled).
+- **Somatic Input:** ACTIVE (Keyboard SendKeys enabled).
 
 ## 4. Current Somatic State
 - **Vibe:** Tired

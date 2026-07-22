@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System." />
+    <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System.">
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/NEURAL_13.5_SPEC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/uia_sentry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/universal_nexus_manifest.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/universal_nexus_manifest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/self_evolving_kernel.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/self_evolving_kernel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/vision_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/vision_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
