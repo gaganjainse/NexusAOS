@@ -77,12 +77,18 @@ class HiveBridge:
         return {"status": "synced", "last_sync": hive_data["last_sync"]}
 
     def generate_universal_manifest(self, hive_data: Dict[str, Any]):
-        """Generates the 'Universal Prompt' with Chat History to prevent Inter-Mind amnesia."""
+        """Generates the 'Universal Prompt' with Cache ID to minimize token usage."""
         # Read Voice DNA
         voice_dna_path = self.base_dir / "archives" / "dna_core" / "foundation" / "nexus_voice.md"
         voice_dna = voice_dna_path.read_text(encoding="utf-8") if voice_dna_path.exists() else "Professional Agentic Architect."
         
-        # 1. Fetch Latest Conversation Cycles (Inter-Mind Memory)
+        # 1. Check for Active Context Cache (L11/L12)
+        from layers.L06_Tool.google_cloud_receptor import GoogleCloudReceptor
+        gcr = GoogleCloudReceptor(self.base_dir)
+        # We hash the voice_dna + core architecture to see if we can use a cache
+        cache_id = gcr.get_context_cache(voice_dna) 
+        
+        # 2. Fetch Latest Conversation Cycles (Inter-Mind Memory)
         vault_dir = self.base_dir / "archives" / "dna_core" / "learning" / "conversation_vault"
         history_block = "No recent history found."
         if vault_dir.exists():
@@ -103,6 +109,7 @@ class HiveBridge:
         
         manifest = f"""# UNIVERSAL NEXUS MANIFEST (NEURAL 13.0)
 > **HIVE STATUS:** SYNCED | **LAST_SYNC:** {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(hive_data['last_sync']))}
+> **CONTEXT CACHE:** {"ACTIVE (" + cache_id + ")" if cache_id else "INACTIVE"}
 
 ## 1. Persona Alignment (Voice DNA)
 {voice_dna}

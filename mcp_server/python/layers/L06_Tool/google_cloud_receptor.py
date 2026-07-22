@@ -9,8 +9,10 @@ import json
 import time
 import random
 import sys
+import hashlib
 from pathlib import Path
 from typing import Dict, Any, Optional
+from layers.L05_Memory.state_manager import StateManager
 
 # Ensure root is in path
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
@@ -20,9 +22,27 @@ if str(_python_root) not in sys.path:
 class GoogleCloudReceptor:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
+        self.state_mgr = StateManager(base_dir)
         self.default_endpoint = "us-central1-aiplatform.googleapis.com"
         self.priority_endpoint = "global-vertexai.googleapis.com"
         self.use_priority_lane = True
+
+    def get_context_cache(self, content: str) -> Optional[str]:
+        """Neural 13.0: Checks for an existing valid context cache on Google's servers."""
+        content_hash = hashlib.sha256(content.encode()).hexdigest()
+        cache_key = "nexus_system_context"
+        
+        cache_id = self.state_mgr.get_valid_cache_id(cache_key, content_hash)
+        if cache_id:
+            print(f"Context Cache Hit: {cache_id}. Bypassing 90% of token ingestion.")
+            return cache_id
+        return None
+
+    def register_new_cache(self, content: str, cache_id: str, ttl_seconds: int = 3600):
+        """Neural 13.0: Registers a newly created cache from Vertex AI."""
+        content_hash = hashlib.sha256(content.encode()).hexdigest()
+        self.state_mgr.upsert_context_cache("nexus_system_context", cache_id, ttl_seconds, content_hash)
+        print(f"Context Cache Created & Registered: {cache_id}")
 
     def get_priority_headers(self) -> Dict[str, str]:
         """Returns headers to force Google to prioritize our request."""

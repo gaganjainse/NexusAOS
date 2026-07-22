@@ -167,6 +167,16 @@ class StateManager:
                 expires_at REAL
             )
         """)
+
+        # Context Caches Table (Neural 13.0)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS context_caches (
+                cache_key TEXT PRIMARY KEY,
+                cache_id TEXT,
+                expires_at REAL,
+                content_hash TEXT
+            )
+        """)
         conn.commit()
 
         # Migrations
@@ -468,6 +478,30 @@ class StateManager:
         cursor.execute("DELETE FROM hive_locks WHERE lock_id = ? AND holder_node = ?", (lock_id, node_id))
         conn.commit()
         conn.close()
+
+    # --- Context Cache Operations ---
+
+    def upsert_context_cache(self, cache_key: str, cache_id: str, ttl_seconds: int, content_hash: str):
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT OR REPLACE INTO context_caches (cache_key, cache_id, expires_at, content_hash)
+            VALUES (?, ?, ?, ?)
+        """, (cache_key, cache_id, time.time() + ttl_seconds, content_hash))
+        conn.commit()
+        conn.close()
+
+    def get_valid_cache_id(self, cache_key: str, current_hash: str) -> Optional[str]:
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        now = time.time()
+        cursor.execute("""
+            SELECT cache_id FROM context_caches 
+            WHERE cache_key = ? AND content_hash = ? AND expires_at > ?
+        """, (cache_key, current_hash, now))
+        row = cursor.fetchone()
+        conn.close()
+        return row[0] if row else None
 
     def prune_lattice_tasks(self, task_ids: List[str]) -> int:
         """Permanently removes specific tasks from the lattice (Synaptic Pruning)."""
