@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/universal_nexus_manifest.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/universal_nexus_manifest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/monitoring/hive/hive_registry.json" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/hive/hive_registry.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp_server/python/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/orchestrator_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/orchestrator_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" afterDir="false" />
-    </list>
+    <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
