@@ -1,0 +1,3 @@
+{
+  "tests/test_aos_integration.py::test": true
+}

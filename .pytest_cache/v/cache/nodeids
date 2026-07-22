@@ -1,0 +1,17 @@
+[
+  "tests/chaos/test_clock_skew.py::TestClockSkew::test_signal_ttl_with_offset",
+  "tests/chaos/test_disk_full.py::TestDiskFull::test_filtration_handles_disk_full",
+  "tests/chaos/test_kill_task.py::TestKillTask::test_runtime_can_be_instantiated",
+  "tests/chaos/test_kill_task.py::TestKillTask::test_runtime_recovers_from_killed_task",
+  "tests/chaos/test_kill_task.py::TestKillTask::test_wal_can_recover_from_partial_write",
+  "tests/chaos/test_network_partition.py::TestNetworkPartition::test_web_receptor_handles_network_failure",
+  "tests/chaos/test_wal_corruption.py::TestWALCorruption::test_wal_replay_handles_corruption",
+  "tests/test_ago_properties.py::TestAGOProperties::test_energy_never_negative",
+  "tests/test_ago_properties.py::TestAGOProperties::test_physiological_gate_enforced",
+  "tests/test_ago_properties.py::TestAGOProperties::test_wal_always_replayable",
+  "tests/test_aos_integration.py::test",
+  "tests/test_soak_72h.py::TestSoak72h::test_runtime_instantiable_for_long_run",
+  "tests/test_soak_72h.py::TestSoak72h::test_short_soak_placeholder",
+  "tests/test_soak_72h.py::TestSoak72h::test_soak_pass_criteria_documented",
+  "tests/test_soak_72h.py::TestSoak72h::test_wal_persistence_ready"
+]

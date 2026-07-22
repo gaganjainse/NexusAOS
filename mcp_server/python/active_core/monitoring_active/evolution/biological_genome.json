@@ -1,0 +1,22 @@
+{
+    "reflex_parameters": {
+        "nociception_sensitivity": 0.92,
+        "hypoxia_threshold": 20.0,
+        "ischemia_threshold": 15.0,
+        "fever_threshold": 85.0
+    },
+    "instinct_drives": {
+        "curiosity_threshold": 80.0,
+        "curiosity_frequency": 3600,
+        "consolidation_threshold": 40.0,
+        "consolidation_frequency": 7200,
+        "evolution_threshold": 90.0
+    },
+    "metabolic_constants": {
+        "basal_metabolic_rate": 0.5,
+        "atp_conversion_efficiency": 0.8,
+        "heat_per_op": 2.0
+    },
+    "generation": 2,
+    "last_mutation": 1784667042.8573918
+}

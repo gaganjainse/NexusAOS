@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the System.">
+      <change afterPath="$PROJECT_DIR$/active_core/monitoring_active/evolution/biological_genome.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/foundation/COMPLETE_ARCHITECTURE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/foundation/nexus_voice.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/NEURAL_13.0_SPEC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/learning/NEURAL_UNIFIED_SPEC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/kernels/mojo/inference_engine.mojo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/kernels/zig/synaptic_bus.zig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/compiler/neural_compiler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L00_Experience/peer_operator_gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/nexus_liver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/nexus_runtime.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/singularity_kernel.zig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/nutrient_ingestion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/python/layers/L13_Hive/hive_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.artifacts/1599d982-67f2-4a3c-bd92-4fdc9961e4a4/implementation_plan.artifact.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.artifacts/biological_agoi_audit.artifact.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.artifacts/design_draft_v4.artifact.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.artifacts/nexus_os_master_handover.artifact.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/commands/boot.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/commands/directive.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/commands/status.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/hooks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/mcp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/rules/aos-constitution.mdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/rules/aos-physiology.mdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/skills/aos-boot/SKILL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/skills/aos-orchestrator/SKILL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BETA_TESTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/BETA_TESTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DEMO_SCRIPT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOCIAL_MEDIA_KIT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/core/protocols/mesh_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/exports/mcp_manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/exports/nexus_file_index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/monitoring/vision_cache/physiology_analysis.json" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/vision_cache/physiology_analysis.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/nlg/nexus_logic.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/00_foundation.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/agentic.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/ai.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/analytics.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/audit.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/bizdev.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/core.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/finance.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/hq.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/hr.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/legal.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/marketing.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/master.nxi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/operations.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/research.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/sales.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/shared_admin_pool.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/support.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pulses/systems.nxp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementation_plan.artifact.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/atomic_seal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/compiler/nlg_renderer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/compiler/nxp_forge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/compiler/nxp_forge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/god_mode_repair.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/gui/nexus_gui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/lattice_fixer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/lattice_sealant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/logic_query.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/master_hardening.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/nexus_final_polish.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/nexus_gui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/nexus_indexer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/nlg_renderer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/nxp_audit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/nxp_indexer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/path_normalizer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/scraper/oracle_scraper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/systematic_hierarchy_lock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/systematic_repair.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/antibody_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/auto_repair.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/cellular_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/endocrine_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/fission_fusion_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/hook_bridge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/immune_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/memory_synth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/metabolism_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/motor_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/mutation_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/nexus_lattice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/nexus_liver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/nexus_senses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/orchestrator_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/physiological_gate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/physiology_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/reproduction_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/service_heartbeat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/signal_router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/system_diagnostics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/video_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/vision_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/plugin_registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/plugin_registry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task.artifact.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/walkthrough.artifact.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gaganjainse&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gaganjainse/NexusAOS.git&quot;,
+    &quot;accountId&quot;: &quot;db3b1ba1-0226-4757-86dc-87539a810a84&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3GoJoVQh15u9XWsaeNWgNF5xkIf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="" />
+      <created>1784632163965</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784632163965</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Completion of the System.">
+      <option name="closed" value="true" />
+      <created>1784634950443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1784634950443</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Completion of the System." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completion of the System." />
+  </component>
+</project>

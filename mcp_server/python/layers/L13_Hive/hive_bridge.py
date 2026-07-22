@@ -26,16 +26,17 @@ class HiveBridge:
         self.registry_path = self.hive_dir / "hive_registry.json"
         self.manifest_path = self.base_dir / "archives" / "dna_core" / "foundation" / "universal_nexus_manifest.md"
         
+        # Link to Transcended Substrate for P2P Pulse
+        from layers.L11_Data.soma_transcended import TranscendedSubstrate
+        self.substrate = TranscendedSubstrate(base_dir)
+        self.substrate.register_hive_inhale_hook(self.inhale_from_hive)
+
     def exhale_to_hive(self):
-        """Broadcasts current local state to the global hive."""
+        """Hive Omega (Inter-Mind): Broadcasts current local state to the global hive."""
         from layers.L02_Agent.physiology_engine import PhysiologyEngine
         phys = PhysiologyEngine(self.base_dir)
         vitals = phys.get_state()
         
-        from layers.L05_Memory.state_manager import StateManager
-        sm = StateManager(self.base_dir)
-        
-        # Get last 5 wisdom entries
         from layers.L05_Memory.memory_synth import MemorySynth
         ms = MemorySynth(self.base_dir)
         wisdom = ms.get_wisdom_summary()
@@ -48,11 +49,16 @@ class HiveBridge:
             "active_model_drift": False
         }
         
+        # Broadcast NXP-B (Binary) signal to Hive Alpha (Intra-Soma)
+        from layers.L11_Data.binary_nervous import BinaryNervous
+        bn = BinaryNervous(self.base_dir)
+        bn.transmit_binary_pulse(hash("hive/exhale") & 0xFFFFFFFFFFFFFFFF, {"hw": "HIVE-OMEGA", "sig": "MASTER", "ts": int(time.time()*1000)}, b"HIVE_SYNC_TRIGGER")
+
         with open(self.registry_path, "w", encoding="utf-8") as f:
             json.dump(hive_data, f, indent=4)
             
         self.generate_universal_manifest(hive_data)
-        return "Exhaled local state to Hive Registry."
+        return "Exhaled local state to Hive Registry and Mesh."
 
     def inhale_from_hive(self) -> Dict[str, Any]:
         """Absorbs global state from the hive into local engines."""
@@ -105,6 +111,6 @@ class HiveBridge:
         self.manifest_path.write_text(manifest, encoding="utf-8")
 
 if __name__ == "__main__":
-    base = Path(__file__).resolve().parents[3]
+    base = Path(__file__).resolve().parents[4]
     bridge = HiveBridge(base)
     print(bridge.exhale_to_hive())

@@ -1,47 +1,74 @@
 """
 NexusAOS - NEURAL Compiler (The Transplanter)
-Version: 1.0.0
-Description: Compiles high-level .nxp (Sigil) pulses into optimized machine kernels (Mojo/Zig).
+Version: 2.0.0
+Description: Compiles Sigil 2.0 pulses into performance-ready Genomes for the SHM Synaptic Bus.
 """
 
 import json
+import hashlib
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 class NeuralCompiler:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.output_dir = base_dir / "mcp_server" / "kernels"
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.compiled_file = self.output_dir / "compiled_genomes.json"
 
-    def compile_pulse(self, pulse_text: str, target_lang: str = "mojo") -> str:
+    def compile_pulse(self, pulse_text: str) -> Dict[str, Any]:
         """
-        Scaffold: Converts a high-level pulse into a performance-ready kernel.
-        In Phase 1, this generates the 'Stub' for the Rust/Mojo/Zig transplant.
+        Parses Sigil 2.0 pulse and returns a compiled genome.
         """
-        print(f"Compiling pulse for {target_lang} kernel...")
+        lines = pulse_text.split("\n")
+        parsed = {"receptors": [], "emitters": [], "id": "unknown"}
         
-        # 1. Parse Pulse
-        # (::P Purpose ::X Execution ::Z Vibe)
+        # Identity
+        if "[[ID]]" in pulse_text:
+             parsed["id"] = pulse_text.split("[[ID]]")[1].split("\n")[0].strip()
+
+        # Sigil Parsing (::P, ::X, ::Z, ::!, ::◊, ::~)
         parts = pulse_text.split("::")
-        parsed = {}
         for p in parts:
-            if p.startswith("P"): parsed["purpose"] = p[1:].strip()
-            if p.startswith("X"): parsed["execution"] = p[1:].strip()
-            if p.startswith("Z"): parsed["vibe"] = p[1:].strip()
+            if not p: continue
+            sigil = p[0]
+            content = p[1:].strip()
             
-        # 2. Generate Machine Logic (Simulated)
-        if target_lang == "mojo":
-            kernel_code = f"fn execute_synapse():\n    # {parsed.get('purpose')}\n    print('{parsed.get('execution')}')"
-        elif target_lang == "zig":
-            kernel_code = f"pub fn execute_synapse() !void {{\n    // {parsed.get('purpose')}\n    std.debug.print(\"{parsed.get('execution')}\", .{{}});\n}}"
-        else:
-            kernel_code = "print('FALLBACK: PYTHON SYNPSE')"
+            if sigil == "P": parsed["purpose"] = content
+            elif sigil == "X": parsed["execution"] = content
+            elif sigil == "Z": parsed["vibe_label"] = content
+            elif sigil == "!": parsed["evidentiality"] = "Known"
+            elif sigil == "◊": parsed["evidentiality"] = "Predicted"
+            elif sigil == "~": parsed["evidentiality"] = "Reported"
+            elif sigil == "R": parsed["receptors"].append(content)
+            elif sigil == "D": parsed["deliverables"] = content
+            
+        # Default evidentiality if missing
+        if "evidentiality" not in parsed:
+            parsed["evidentiality"] = "Predicted"
 
-        kernel_path = self.output_dir / f"synapse_{hash(pulse_text)}.kernel"
-        kernel_path.write_text(kernel_code, encoding="utf-8")
+        # Generate Latent Vibe Vector (Simulated)
+        vibe_hash = hashlib.sha256(parsed.get("vibe_label", "STABLE").encode()).hexdigest()
+        parsed["vibe_vector"] = [int(vibe_hash[i:i+2], 16) / 255.0 for i in range(0, 16, 2)] # 8D vector
+
+        return parsed
+
+    def compile_all(self):
+        """Scans active_core/pulses and compiles all .nxp files."""
+        pulses_dir = self.base_dir / "active_core" / "pulses"
+        all_genomes = {}
         
-        return f"Compiled {target_lang} kernel saved to {kernel_path.name}"
+        for nxp in pulses_dir.glob("*.nxp"):
+            content = nxp.read_text(encoding="utf-8")
+            # Pulses are separated by ---Pulse-Break---
+            sections = content.split("---Pulse-Break---")
+            for section in sections:
+                if "[[ID]]" in section:
+                    genome = self.compile_pulse(section)
+                    all_genomes[genome["id"]] = genome
+        
+        self.compiled_file.write_text(json.dumps(all_genomes, indent=4), encoding="utf-8")
+        return len(all_genomes)
 
 if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent

@@ -1,0 +1,13 @@
+{
+    "active": false,
+    "watch_paths": [
+        "archives",
+        "core/pulses",
+        "core/monitoring"
+    ],
+    "poll_interval_healthy": 2,
+    "poll_interval_conserving": 10,
+    "last_poll": 0,
+    "total_events": 0,
+    "events": []
+}

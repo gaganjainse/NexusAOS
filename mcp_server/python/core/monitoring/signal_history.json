@@ -1,0 +1,42 @@
+[
+  {
+    "signal_type": "GENETIC_MUTATION",
+    "payload": {
+      "category": "reflex_parameters",
+      "key": "nociception_sensitivity",
+      "new_val": 0.92,
+      "type": "MINOR (Point Tweak)"
+    },
+    "timestamp": 1784667042.859841,
+    "ttl_seconds": 3600,
+    "evidentiality": "\u25ca"
+  },
+  {
+    "signal_type": "AIDE2_PLASTICITY_COMPLETE",
+    "payload": {
+      "repairs": 0,
+      "meta": "Genetic Evolution: MINOR (Point Tweak) mutation in reflex_parameters.nociception_sensitivity (0.8 -> 0.92)."
+    },
+    "timestamp": 1784667042.8620026,
+    "ttl_seconds": 300,
+    "evidentiality": "!"
+  },
+  {
+    "signal_type": "ADRENALINE",
+    "payload": {
+      "event": "Sovereign directive: Heal the system"
+    },
+    "timestamp": 1784667162.5558326,
+    "ttl_seconds": 300,
+    "evidentiality": "\u25ca"
+  },
+  {
+    "signal_type": "ADRENALINE",
+    "payload": {
+      "event": "Sovereign directive: Diagnose OS"
+    },
+    "timestamp": 1784667162.5570548,
+    "ttl_seconds": 300,
+    "evidentiality": "\u25ca"
+  }
+]

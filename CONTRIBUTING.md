@@ -1,57 +1,19 @@
-# Contributing to AOS
+# Contributing to NexusAOS
 
-Thanks for your interest. AOS is early-stage. Here's how to help.
+Welcome to the evolution of Agentic General Operating Intelligence (AGOI).
 
-## Setup
+## The Biological Standard
+All contributions must adhere to the **AGOI-RFC Standard**. We no longer build "Tools"; we build "Organs."
 
-```bash
-git clone https://github.com/<your-username>/aos.git
-cd aos
-pip install -r mcp_server/python/requirements.txt
-```
+1. **Anatomy 3.0 Compliance:** New modules must fit into the 11-System Soma architecture.
+2. **NEURAL Syntax:** Internal communication must use the high-density signal language (::P, ::Z, ::X).
+3. **Metabolic Awareness:** Every function must report its ATP (Energy) consumption.
+4. **Immune Safety:** All code must be scan-able by the local Antibody Engine.
 
-## Run Tests
-
-```bash
-python tests/test_aos_integration.py
-```
-
-All 12 tests must pass before submitting a PR.
-
-## Code Style
-
-- Python 3.10+
-- Follow existing patterns in the file you're editing
-- Add docstrings to new classes/methods
-- Keep biological metaphor consistent (metabolism, endocrine, immune, motor, etc.)
-
-## What's Welcome
-
-- Bug fixes
-- New MCP tools
-- GUI improvements
-- Documentation
-- Integration tests
-- New biological layer implementations
-
-## What's Not Welcome
-
-- Removing existing metaphor layers without discussion
-- Adding external API dependencies without discussion
-- Breaking changes to the physiology state schema
-
-## Reporting Bugs
-
-Open a GitHub Issue with:
-1. What you did
-2. What happened
-3. What you expected
-4. Your environment (OS, Python version)
-
-## Feature Requests
-
-Open a GitHub Issue labeled `enhancement`. Explain the use case, not just the implementation.
+## How to Evolve
+- **Propose Mutations:** Create an issue describing the biological benefit of a code change.
+- **Transplant Organs:** Use the `assimilate_tool` protocol to internalize new MCP capabilities.
+- **Consolidate Wisdom:** Document your findings in the `archives/core/learning/` directory.
 
 ---
-
-*This is a first-mover project in a new category. Be bold, be kind, ship fast.*
+*Forward the Evolution.*

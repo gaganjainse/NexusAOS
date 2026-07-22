@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Nexus — Living OS Intelligence</title>
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html, body {
+    width:100%; height:100%; overflow:hidden;
+    background:transparent; font-family:system-ui,-apple-system,sans-serif;
+    user-select:none;
+}
+
+#container {
+    position:relative; width:100%; height:100%;
+    background:transparent;
+}
+
+canvas {
+    display:block; width:100%; height:100%;
+    background:transparent !important;
+}
+
+/* Loading overlay */
+#loading {
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    background:rgba(10,10,15,0.85); color:#c0c0d0; z-index:20;
+    transition:opacity 0.8s ease;
+    border-radius:16px;
+}
+#loading.hidden { opacity:0; pointer-events:none; }
+#loading .spinner {
+    width:36px; height:36px; border:2px solid #1a1a2e;
+    border-top-color:#6c5ce7; border-radius:50%;
+    animation:spin 1s linear infinite; margin-bottom:12px;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+#loading .status { font-size:12px; opacity:0.6; }
+#loading .model { font-size:10px; opacity:0.35; margin-top:4px; }
+
+/* Speech bubble */
+#speech-bubble {
+    position:absolute; top:10px; left:10px; right:10px;
+    background:rgba(10,10,15,0.82); backdrop-filter:blur(12px);
+    border:1px solid rgba(108,92,231,0.2);
+    border-radius:12px; padding:12px 14px; z-index:10;
+    opacity:0; transform:translateY(-8px) scale(0.97);
+    transition:opacity 0.4s ease, transform 0.4s ease;
+    pointer-events:none; max-height:40%; overflow-y:auto;
+}
+#speech-bubble.visible { opacity:1; transform:translateY(0) scale(1); }
+#speech-bubble .sender {
+    font-size:9px; text-transform:uppercase; letter-spacing:1.5px;
+    color:#6c5ce7; margin-bottom:4px; font-weight:600;
+}
+#speech-bubble .text {
+    font-size:13px; line-height:1.5; color:#e0e0f0;
+    white-space:pre-wrap; word-break:break-word;
+}
+#speech-bubble .timestamp {
+    font-size:9px; color:#505068; margin-top:6px; text-align:right;
+}
+
+/* Command input bar */
+#command-bar {
+    position:absolute; bottom:14px; left:14px; right:14px; z-index:10;
+    display:flex; gap:6px; opacity:0; transform:translateY(10px);
+    transition:opacity 0.35s ease, transform 0.35s ease;
+}
+#command-bar.visible { opacity:1; transform:translateY(0); }
+#command-bar input {
+    flex:1; padding:10px 14px; border:1px solid rgba(108,92,231,0.25);
+    border-radius:10px; background:rgba(10,10,15,0.78);
+    backdrop-filter:blur(8px); color:#e0e0f0; font-size:13px;
+    outline:none; transition:border-color 0.2s;
+}
+#command-bar input:focus { border-color:rgba(108,92,231,0.6); }
+#command-bar input::placeholder { color:#505068; }
+#command-bar button {
+    padding:8px 14px; border:none; border-radius:10px;
+    background:rgba(108,92,231,0.7); color:#fff; font-size:13px;
+    cursor:pointer; transition:background 0.2s;
+}
+#command-bar button:hover { background:rgba(108,92,231,0.9); }
+#command-bar button.processing { opacity:0.5; pointer-events:none; }
+
+/* Status indicator */
+#status-dot {
+    position:absolute; bottom:60px; right:14px; z-index:5;
+    display:flex; align-items:center; gap:6px;
+    font-size:10px; color:#505068; opacity:0; transition:opacity 0.5s;
+}
+#status-dot.visible { opacity:1; }
+#status-dot .dot {
+    width:7px; height:7px; border-radius:50%;
+    transition:background 0.5s, box-shadow 0.5s;
+}
+#status-dot .dot.calm { background:#6c5ce7; }
+#status-dot .dot.happy { background:#00d2d3; }
+#status-dot .dot.focused { background:#fdcb6e; }
+#status-dot .dot.concerned { background:#e17055; }
+#status-dot .dot.anomaly { background:#ff4757; box-shadow:0 0 8px #ff4757; }
+#status-dot .dot.asleep { background:#636e72; }
+#status-dot .label { font-size:9px; }
+
+/* Scrollbar */
+#speech-bubble::-webkit-scrollbar { width:3px; }
+#speech-bubble::-webkit-scrollbar-track { background:transparent; }
+#speech-bubble::-webkit-scrollbar-thumb { background:rgba(108,92,231,0.3); border-radius:2px; }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <div id="loading">
+        <div class="spinner"></div>
+        <div class="status">Nexus is assembling...</div>
+        <div class="model" id="model-name">Initializing neural substrate</div>
+    </div>
+
+    <div id="speech-bubble">
+        <div class="sender">NEXUS</div>
+        <div class="text" id="bubble-text">Initializing...</div>
+        <div class="timestamp" id="bubble-time"></div>
+    </div>
+
+    <div id="command-bar">
+        <input type="text" id="cmd-input" placeholder="Command me, Sovereign..." autocomplete="off">
+        <button id="cmd-btn">Send</button>
+    </div>
+
+    <div id="status-dot" class="visible">
+        <span class="dot calm" id="mood-dot"></span>
+        <span class="label" id="mood-label">Calm</span>
+    </div>
+</div>
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js/+esm",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+        "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@3.4.4/lib/three-vrm.module.js"
+    }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+
+// ============================================================
+// NEXUS PET — Full Conversational 3D Intelligence
+// ============================================================
+
+// === CONFIGURATION ===
+const CFG = {
+    modelPath: null,
+    hdrPath: 'https://threejs.org/examples/textures/venus_atmosphere_1k.hdr',
+    fov: 24,
+    cameraZ: 3.0,
+    idleBreathAmp: 0.003,
+    idleSwayAmp: 0.002,
+    blinkMin: 3000, blinkMax: 7000,
+    saccadeMin: 600, saccadeMax: 2500,
+    maxPixelRatio: 2,
+    editorRect: { x:0, y:0, w:0, h:0 }
+};
+
+// === STATE ===
+let scene, camera, renderer, clock, vrm = null, avatarGroup = null;
+let blendShapes = {};
+let mood = 'calm', energy = 100, immuneTemp = 37.0;
+let isTalking = false, isReady = false, isProcessing = false;
+let isAsleep = false;
+let blinkTimer = 0, saccadeTimer = 0, time = 0;
+let cursorX = 0.5, cursorY = 0.5, targetEyeX = 0, targetEyeY = 0;
+let currentEyeX = 0, currentEyeY = 0;
+let gazeMode = 'idle'; // idle | cursor | editor | wake
+let gazeTimer = 0;
+let commandHistory = [];
+let pyBridge = null;
+let speechIntervalId = null;
+
+const MOOD_COLORS = {
+    calm:'#6c5ce7', happy:'#00d2d3', focused:'#fdcb6e',
+    concerned:'#e17055', anomaly:'#ff4757', thinking:'#a29bfe',
+    asleep:'#636e72', greeting:'#6c5ce7'
+};
+
+const MOOD_EXPRESSIONS = {
+    calm:     { browInnerUp:0,     mouthSmile:0.05, eyeWide:0 },
+    happy:    { browInnerUp:0.15,  mouthSmile:0.5,  cheekSquint:0.3 },
+    focused:  { browDown:0.3,      mouthSmile:0,    eyeSquint:0.2 },
+    concerned:{ browDown:0.4,      mouthFrown:0.35, mouthPress:0.2 },
+    anomaly:  { browDown:0.6,      mouthFrown:0.5,  eyeWide:0.7, jawOpen:0.3 },
+    thinking: { browInnerUp:0.2,   mouthSmile:0.05, eyeLookUp:0.2 },
+    asleep:   { eyeBlink:1,        jawOpen:0.15,    mouthDrop:0.2 },
+    greeting: { browInnerUp:0.2,   mouthSmile:0.4,  eyeWide:0.1 }
+};
+
+const VISEME_MAP = {
+    A:'mouthOpen',E:'mouthSmile',I:'mouthSmile',O:'mouthOpen',
+    U:'mouthPucker',B:'mouthClose',F:'mouthPress',P:'mouthPress',
+    M:'mouthClose',T:'mouthPress',V:'mouthPress',
+    S:'mouthOpen',K:'mouthOpen',J:'mouthSmile',R:'mouthSmile',
+    C:'mouthClose',D:'mouthClose',G:'mouthOpen',H:'mouthOpen',
+    L:'mouthOpen',N:'mouthClose',Q:'mouthOpen',W:'mouthPucker',
+    X:'mouthOpen',Y:'mouthSmile',Z:'mouthOpen'
+};
+
+// === DOM REFS ===
+const loadingEl = document.getElementById('loading');
+const modelNameEl = document.getElementById('model-name');
+const bubble = document.getElementById('speech-bubble');
+const bubbleText = document.getElementById('bubble-text');
+const bubbleTime = document.getElementById('bubble-time');
+const cmdInput = document.getElementById('cmd-input');
+const cmdBtn = document.getElementById('cmd-btn');
+const moodDot = document.getElementById('mood-dot');
+const moodLabel = document.getElementById('mood-label');
+const statusDot = document.getElementById('status-dot');
+
+// ============================================================
+// QWEBCHANNEL BRIDGE
+// ============================================================
+try {
+    if (typeof QWebChannel !== 'undefined') {
+        new QWebChannel(qt.webChannelTransport, (channel) => {
+            pyBridge = channel.objects.pet_bridge;
+            if (pyBridge) console.log('[Nexus] QWebChannel connected');
+        });
+    }
+} catch(e) { console.log('[Nexus] Standalone mode'); }
+
+function notify(type, data = {}) {
+    if (!pyBridge) return;
+    const m = {
+        ready: () => pyBridge.onPetReady('13.1', CFG.modelPath ? CFG.modelPath.split('/').pop() : 'procedural'),
+        clicked: () => pyBridge.onPetClicked(),
+        command: () => pyBridge.onUserCommand(data.text || ''),
+        wake: () => pyBridge.onWakeWord()
+    };
+    if (m[type]) m[type]();
+}
+
+// ============================================================
+// SPEECH BUBBLE
+// ============================================================
+function showBubble(text, sender = 'nexus') {
+    const el = document.querySelector('#speech-bubble .sender');
+    if (sender === 'user') el.textContent = 'SOVEREIGN';
+    else el.textContent = 'NEXUS';
+    bubbleText.textContent = text;
+    bubbleTime.textContent = new Date().toLocaleTimeString();
+    bubble.classList.add('visible');
+    bubble.scrollTop = bubble.scrollHeight;
+    // Auto-hide after 30s
+    clearTimeout(bubble._hideTimer);
+    bubble._hideTimer = setTimeout(() => bubble.classList.remove('visible'), 30000);
+}
+
+function hideBubble() { bubble.classList.remove('visible'); }
+
+// ============================================================
+// 3D SCENE SETUP
+// ============================================================
+function initScene() {
+    setLoading('Setting up neural substrate...');
+
+    scene = new THREE.Scene();
+    scene.background = null;
+
+    camera = new THREE.PerspectiveCamera(CFG.fov, window.innerWidth/window.innerHeight, 0.1, 20);
+    camera.position.set(0, 1.65, CFG.cameraZ);
+    camera.lookAt(0, 1.55, 0);
+
+    renderer = new THREE.WebGLRenderer({
+        antialias: true, alpha: true, powerPreference: 'high-performance'
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, CFG.maxPixelRatio));
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.0;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setClearColor(0x000000, 0);
+    document.getElementById('container').prepend(renderer.domElement);
+
+    clock = new THREE.Clock();
+
+    // Lighting
+    scene.add(new THREE.HemisphereLight(0x636e72, 0x1a1a2e, 0.7));
+    const key = new THREE.DirectionalLight(0xffffff, 2.0);
+    key.position.set(0.8, 2.2, 2.0); key.castShadow = true; scene.add(key);
+    const fill = new THREE.DirectionalLight(0x74b9ff, 0.5);
+    fill.position.set(-1.0, 0.5, 1.5); scene.add(fill);
+    const rim = new THREE.DirectionalLight(0x6c5ce7, 0.3);
+    rim.position.set(0, 1.0, -1.5); scene.add(rim);
+    const warm = new THREE.DirectionalLight(0xff7675, 0.2);
+    warm.position.set(-0.5, 0.3, -1.0); scene.add(warm);
+    const glow = new THREE.PointLight(0x6c5ce7, 0.15, 3);
+    glow.position.set(0, 2.5, 0); scene.add(glow);
+
+    // Ground glow
+    const ring = new THREE.Mesh(
+        new THREE.RingGeometry(0.35, 0.75, 48),
+        new THREE.MeshBasicMaterial({ color:0x6c5ce7, transparent:true, opacity:0.05, side:THREE.DoubleSide })
+    );
+    ring.rotation.x = -Math.PI/2; ring.position.y = 0.88;
+    scene.add(ring);
+
+    // Environment
+    new RGBELoader().load(CFG.hdrPath, (tex) => {
+        tex.mapping = THREE.EquirectangularReflectionMapping;
+        scene.environment = tex; scene.environmentIntensity = 0.5;
+    }, undefined, () => {});
+
+    window.addEventListener('resize', () => {
+        const w = window.innerWidth, h = window.innerHeight;
+        camera.aspect = w/h; camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+    });
+
+    // Click → focus attention
+    renderer.domElement.addEventListener('click', () => { notify('clicked'); });
+    renderer.domElement.addEventListener('touchstart', (e) => { e.preventDefault(); notify('clicked'); }, {passive:false});
+}
+
+// ============================================================
+// PROCEDURAL AVATAR
+// ============================================================
+function createProceduralAvatar() {
+    setLoading('Sculpting Nexus form...', 'Procedural human');
+    const group = new THREE.Group();
+
+    const skin = new THREE.MeshPhysicalMaterial({ color:0xe8d5c3, roughness:0.5, metalness:0, clearcoat:0.05 });
+    const cloth = new THREE.MeshPhysicalMaterial({ color:0x1a1a2e, roughness:0.8, metalness:0 });
+    const darkMat = new THREE.MeshPhysicalMaterial({ color:0x2c2c3e, roughness:0.9, metalness:0 });
+    const lip = new THREE.MeshPhysicalMaterial({ color:0xd4786a, roughness:0.3, metalness:0 });
+    const eyeWhite = new THREE.MeshPhysicalMaterial({ color:0xf0f0f0, roughness:0.2, metalness:0 });
+    const eyePupil = new THREE.MeshPhysicalMaterial({ color:0x2d3436, roughness:0.1, metalness:0, clearcoat:0.3 });
+    const noseMat = new THREE.MeshPhysicalMaterial({ color:0xdbaa8a, roughness:0.7 });
+
+    const s = (g, m, p, sc) => { const mesh = new THREE.Mesh(g,m); if(p) mesh.position.set(p[0],p[1],p[2]); if(sc) mesh.scale.set(sc[0],sc[1],sc[2]); return mesh; };
+
+    // Head
+    const head = s(new THREE.SphereGeometry(0.28,42,36), skin, [0,1.62,0], [1,1.15,0.9]);
+    head.name='head'; group.add(head);
+
+    // Neck & body
+    group.add(s(new THREE.CylinderGeometry(0.12,0.14,0.08,16), skin, [0,1.43,0]));
+    group.add(s(new THREE.CylinderGeometry(0.26,0.30,0.48,20), cloth, [0,1.14,0]));
+
+    // Shoulders
+    for (let s=-1;s<=1;s+=2) {
+        group.add(s(new THREE.SphereGeometry(0.1,12,12), cloth, [s*0.25,1.36,0], [1,0.6,0.7]));
+        group.add(s(new THREE.CylinderGeometry(0.045,0.05,0.45,10), skin, [s*0.28,1.08,0], null, s>0?'arm_r':'arm_l'));
+    }
+
+    // Eyes
+    for (let s=-1;s<=1;s+=2) {
+        group.add(s(new THREE.SphereGeometry(0.035,20,20), eyeWhite, [s*0.09,1.68,0.26]));
+        const pupil = s(new THREE.SphereGeometry(0.018,16,16), eyePupil, [s*0.09,1.68,0.29]);
+        pupil.name=`pupil${s>0?'_r':'_l'}`; group.add(pupil);
+    }
+
+    // Eyelids
+    const lidMat = new THREE.MeshPhysicalMaterial({ color:0xe0c8b0, roughness:0.6, transparent:true, opacity:0 });
+    for (let s=-1;s<=1;s+=2) {
+        group.add(s(new THREE.SphereGeometry(0.036,20,20), lidMat, [s*0.09,1.68,0.26], [1,0.15,0.3]));
+    }
+
+    // Brows
+    for (let s=-1;s<=1;s+=2) {
+        const b = s(new THREE.BoxGeometry(0.05,0.008,0.015), darkMat, [s*0.09,1.715,0.27]);
+        b.rotation.z = s*0.15; b.name=`brow${s>0?'_r':'_l'}`; group.add(b);
+    }
+
+    group.add(s(new THREE.ConeGeometry(0.02,0.025,8), noseMat, [0,1.66,0.29]));
+    const mouth = s(new THREE.SphereGeometry(0.03,12,8), lip, [0,1.59,0.28], [1,0.25,0.3]);
+    mouth.name='mouth'; group.add(mouth);
+    const jaw = s(new THREE.SphereGeometry(0.04,12,8), skin, [0,1.57,0.29], [0.8,0.15,0.2]);
+    jaw.name='jaw'; group.add(jaw);
+
+    // Hair
+    group.add(s(new THREE.SphereGeometry(0.29,28,24), darkMat, [0,1.68,-0.02], [1.05,0.5,1]));
+    group.add(s(new THREE.SphereGeometry(0.25,24,20), darkMat, [0,1.82,-0.05], [1,0.3,0.9]));
+
+    // Store refs
+    group.userData.refs = {
+        head, mouth, jaw,
+        lid_l:group.children.find(c=>c.type==='Mesh'&&c.material===lidMat&&c.position.x<0),
+        lid_r:group.children.find(c=>c.type==='Mesh'&&c.material===lidMat&&c.position.x>0),
+        brow_l:group.getObjectByName('brow_l'),
+        brow_r:group.getObjectByName('brow_r'),
+        brow_l_rest:1.715, brow_r_rest:1.715,
+        mouth_rest_y:1.59, mouth_rest_sx:1, mouth_rest_sy:0.25, mouth_rest_sz:0.3,
+        jaw_rest_y:1.57,
+        pupil_l:group.getObjectByName('pupil_l'),
+        pupil_r:group.getObjectByName('pupil_r'),
+        pupil_l_rest_x:-0.09, pupil_r_rest_x:0.09, pupil_rest_y:1.68,
+        arm_l:group.getObjectByName('arm_l'),
+        arm_r:group.getObjectByName('arm_r')
+    };
+    group.userData.type = 'procedural';
+    return group;
+}
+
+function applyProceduralBlendshape(refs, name, value) {
+    if (!refs) return;
+    value = Math.max(0, Math.min(1, value));
+    const v = (t) => t ? Math.min(value,1) : 0;
+
+    switch(name) {
+        case 'eyeBlink': case 'eyeBlinkLeft': case 'eyeBlinkRight':
+            if(refs.lid_l) refs.lid_l.material.opacity = value*0.95;
+            if(refs.lid_r) refs.lid_r.material.opacity = value*0.95;
+            break;
+        case 'browDown': case 'browDownLeft': case 'browDownRight':
+            if(refs.brow_l) refs.brow_l.position.y = refs.brow_l_rest - value*0.015;
+            if(refs.brow_r) refs.brow_r.position.y = refs.brow_r_rest - value*0.015;
+            break;
+        case 'browInnerUp':
+            if(refs.brow_l) refs.brow_l.position.y = refs.brow_l_rest + value*0.015;
+            if(refs.brow_r) refs.brow_r.position.y = refs.brow_r_rest + value*0.015;
+            break;
+        case 'mouthSmile': case 'mouthSmileLeft': case 'mouthSmileRight':
+            if(refs.mouth) { refs.mouth.scale.x = refs.mouth_rest_sx + value*0.5; refs.mouth.position.y = refs.mouth_rest_y + value*0.005; }
+            break;
+        case 'mouthOpen': case 'jawOpen':
+            if(refs.jaw) refs.jaw.position.y = refs.jaw_rest_y - value*0.025;
+            if(refs.mouth) { refs.mouth.scale.y = refs.mouth_rest_sy + value*0.2; refs.mouth.scale.z = refs.mouth_rest_sz + value*0.05; }
+            break;
+        case 'mouthFrown': case 'mouthFrownLeft': case 'mouthFrownRight':
+            if(refs.mouth) refs.mouth.position.y = refs.mouth_rest_y - value*0.01;
+            break;
+        case 'mouthPress':
+            if(refs.mouth) { refs.mouth.scale.x = refs.mouth_rest_sx + value*0.3; refs.mouth.scale.z = refs.mouth_rest_sz + value*0.05; }
+            break;
+        case 'mouthPucker':
+            if(refs.mouth) { refs.mouth.scale.y = refs.mouth_rest_sy + value*0.2; refs.mouth.scale.z = refs.mouth_rest_sz + value*0.1; }
+            break;
+        case 'eyeWide': case 'eyeWideLeft': case 'eyeWideRight':
+            // Pupils become slightly larger
+            break;
+        case 'eyeSquint': case 'eyeSquintLeft': case 'eyeSquintRight':
+            // Eyelids narrow
+            break;
+        case 'eyeLookLeft':
+            if(refs.pupil_l) refs.pupil_l.position.x = refs.pupil_l_rest_x - value*0.015;
+            if(refs.pupil_r) refs.pupil_r.position.x = refs.pupil_r_rest_x - value*0.015;
+            break;
+        case 'eyeLookRight':
+            if(refs.pupil_l) refs.pupil_l.position.x = refs.pupil_l_rest_x + value*0.015;
+            if(refs.pupil_r) refs.pupil_r.position.x = refs.pupil_r_rest_x + value*0.015;
+            break;
+        case 'eyeLookUp':
+            if(refs.pupil_l) refs.pupil_l.position.y = refs.pupil_rest_y + value*0.015;
+            if(refs.pupil_r) refs.pupil_r.position.y = refs.pupil_rest_y + value*0.015;
+            break;
+        case 'eyeLookDown':
+            if(refs.pupil_l) refs.pupil_l.position.y = refs.pupil_rest_y - value*0.015;
+            if(refs.pupil_r) refs.pupil_r.position.y = refs.pupil_rest_y - value*0.015;
+            break;
+        case 'cheekSquint': case 'cheekSquintLeft': case 'cheekSquintRight': break;
+    }
+}
+
+// ============================================================
+// AVATAR LOADING
+// ============================================================
+function loadVRM(path) {
+    setLoading('Loading 3D consciousness...', path.split('/').pop());
+    // If VRM fails, fallback runs automatically
+    const mgr = new THREE.LoadingManager();
+    const gltf = new GLTFLoader(mgr);
+    gltf.setDRACOLoader(new DRACOLoader().setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/'));
+    const { VRMLoaderPlugin } = await_import_vrm();
+    // For simplicity, fallback to procedural in this demo
+    loadFallback();
+}
+
+async function await_import_vrm() {
+    try { return await import('@pixiv/three-vrm'); } catch { return { VRMLoaderPlugin: null }; }
+}
+
+function loadFallback() {
+    setLoading('Nexus is taking form...', 'Humanoid substrate');
+    avatarGroup = createProceduralAvatar();
+    avatarGroup.position.set(0, 0, 0);
+    scene.add(avatarGroup);
+    CFG.modelPath = 'procedural';
+    finishLoading();
+}
+
+function finishLoading() {
+    loadingEl.classList.add('hidden');
+    isReady = true;
+    statusDot.classList.add('visible');
+    setMood('calm');
+
+    // Show command bar after 1s
+    setTimeout(() => {
+        document.getElementById('command-bar').classList.add('visible');
+    }, 1000);
+
+    notify('ready');
+    animate();
+}
+
+// ============================================================
+// EXPRESSION ENGINE
+// ============================================================
+function setBlendShapes(shapes, speed = 0.08) {
+    for (const [name, target] of Object.entries(shapes)) {
+        if (!(name in blendShapes)) blendShapes[name] = 0;
+        blendShapes[name] += (target - blendShapes[name]) * Math.min(1, speed * 2);
+    }
+}
+
+function applyAllBlendShapes() {
+    if (!avatarGroup || !avatarGroup.userData.refs) return;
+    const refs = avatarGroup.userData.refs;
+    for (const [name, value] of Object.entries(blendShapes)) {
+        applyProceduralBlendshape(refs, name, value);
+    }
+}
+
+// ============================================================
+// CURSOR TRACKING
+// ============================================================
+function onCursorMove(nx, ny) {
+    cursorX = nx; cursorY = ny;
+    // Map cursor to eye look direction
+    // Center of screen = neutral, edges = max look
+    targetEyeX = (cursorX - 0.5) * 1.2;
+    targetEyeY = (cursorY - 0.5) * 0.8;
+
+    if (gazeMode === 'idle') {
+        gazeMode = 'cursor';
+        clearTimeout(gazeTimer);
+        gazeTimer = setTimeout(() => { gazeMode = 'idle'; }, 3000);
+    }
+}
+
+// ============================================================
+// GAZE SYSTEM
+// ============================================================
+function setEditorRect(x, y, w, h) {
+    CFG.editorRect = { x, y, w, h };
+}
+
+function lookAtEditor() {
+    gazeMode = 'editor';
+    targetEyeX = 0.3;  // Editor is to the right
+    targetEyeY = -0.1;
+    // Slight head turn
+    if (avatarGroup) {
+        avatarGroup.rotation.y += (0.15 - avatarGroup.rotation.y) * 0.05;
+    }
+}
+
+function lookAtCamera() {
+    gazeMode = 'wake';
+    targetEyeX = 0;
+    targetEyeY = 0;
+    if (avatarGroup) {
+        avatarGroup.rotation.y += (0 - avatarGroup.rotation.y) * 0.05;
+    }
+}
+
+function lookAtCursor() {
+    gazeMode = 'cursor';
+    targetEyeX = (cursorX - 0.5) * 1.2;
+    targetEyeY = (cursorY - 0.5) * 0.8;
+}
+
+function updateGaze(delta) {
+    const smooth = 0.04;
+
+    // Determine gaze mode priority: wake > processing > cursor > idle
+    if (gazeMode === 'wake') {
+        // Eyes snap to camera
+    } else if (isProcessing) {
+        lookAtEditor();
+    } else if (gazeMode === 'cursor') {
+        // Update from cursor
+        targetEyeX = (cursorX - 0.5) * 1.2;
+        targetEyeY = (cursorY - 0.5) * 0.8;
+    } else {
+        // Idle: gentle random drift
+        targetEyeX = Math.sin(time * 0.3) * 0.1;
+        targetEyeY = Math.sin(time * 0.2 + 1) * 0.06;
+    }
+
+    // Smooth eye movement
+    currentEyeX += (targetEyeX - currentEyeX) * smooth;
+    currentEyeY += (targetEyeY - currentEyeY) * smooth;
+
+    setBlendShapes({
+        eyeLookLeft: Math.max(0, -currentEyeX),
+        eyeLookRight: Math.max(0, currentEyeX),
+        eyeLookUp: Math.max(0, currentEyeY),
+        eyeLookDown: Math.max(0, -currentEyeY)
+    }, 0.1);
+}
+
+// ============================================================
+// IDLE SYSTEM
+// ============================================================
+function updateIdle(delta) {
+    time += delta;
+    if (!avatarGroup || !isReady) return;
+
+    const breathe = Math.sin(time * 1.8) * CFG.idleBreathAmp;
+    const sway = Math.sin(time * 0.6) * CFG.idleSwayAmp;
+    avatarGroup.position.y = 0.88 + breathe * 0.4;
+
+    if (!isProcessing && gazeMode !== 'wake') {
+        avatarGroup.rotation.y = sway * 0.2;
+    }
+
+    const refs = avatarGroup.userData.refs;
+    if (refs && refs.head) {
+        refs.head.rotation.x = Math.sin(time * 0.4) * 0.01;
+        refs.head.rotation.y = Math.sin(time * 0.7) * 0.012;
+    }
+
+    // Arm sway
+    if (refs) {
+        if (refs.arm_l) refs.arm_l.rotation.z = 0.1 + Math.sin(time * 0.5) * 0.02;
+        if (refs.arm_r) refs.arm_r.rotation.z = -0.1 + Math.sin(time * 0.5 + Math.PI) * 0.02;
+    }
+
+    // Energy droop
+    if (energy < 30) {
+        const droop = (30 - energy) / 30 * 0.03;
+        avatarGroup.position.y -= droop;
+        if (refs && refs.head) refs.head.rotation.x += droop * 0.5;
+    }
+
+    // Asleep state
+    if (isAsleep || mood === 'asleep') {
+        avatarGroup.position.y = 0.83;
+        avatarGroup.rotation.x = 0.15;
+    }
+}
+
+function updateBlink(delta) {
+    blinkTimer -= delta * 1000;
+    if (blinkTimer <= 0) {
+        blinkTimer = CFG.blinkMin + Math.random() * (CFG.blinkMax - CFG.blinkMin);
+        setBlendShapes({ eyeBlink:0.85, eyeBlinkLeft:0.85, eyeBlinkRight:0.85 }, 0.8);
+        setTimeout(() => setBlendShapes({ eyeBlink:0, eyeBlinkLeft:0, eyeBlinkRight:0 }, 0.6), 120);
+    }
+}
+
+function updateSaccades(delta) {
+    saccadeTimer -= delta * 1000;
+    if (saccadeTimer <= 0 && !isTalking) {
+        saccadeTimer = CFG.saccadeMin + Math.random() * (CFG.saccadeMax - CFG.saccadeMin);
+        const x = (Math.random() - 0.5) * 0.3;
+        const y = (Math.random() - 0.5) * 0.15;
+        setBlendShapes({
+            eyeLookLeft: Math.max(0, -x), eyeLookRight: Math.max(0, x),
+            eyeLookUp: Math.max(0, y), eyeLookDown: Math.max(0, -y)
+        }, 0.4);
+        setTimeout(() => setBlendShapes({
+            eyeLookLeft:0, eyeLookRight:0, eyeLookUp:0, eyeLookDown:0
+        }, 0.3), 120 + Math.random() * 200);
+    }
+}
+
+// ============================================================
+// SPEECH & COMMAND SYSTEM
+// ============================================================
+window.speak = function(text, emotion, voiceParams) {
+    if (!isReady) return;
+
+    showBubble(text, 'nexus');
+    isTalking = true;
+
+    // Set expression
+    if (emotion && MOOD_EXPRESSIONS[emotion]) {
+        setBlendShapes(MOOD_EXPRESSIONS[emotion], 0.05);
+    }
+
+    // Parse voice parameters from Python side (or use defaults)
+    let rate = 0.92, pitch = 1.0, volume = 1.0;
+    let usePythonTTS = false;
+    if (voiceParams && typeof voiceParams === 'object') {
+        const r = parseFloat(voiceParams.rate);
+        const p = parseFloat(voiceParams.pitch);
+        const v = parseFloat(voiceParams.volume);
+        if (!isNaN(r)) rate = 0.92 + (r / 100) * 0.5;
+        if (!isNaN(p)) pitch = 1.0 + (p / 100) * 0.4;
+        if (!isNaN(v)) volume = Math.max(0, Math.min(1, v / 100));
+        usePythonTTS = voiceParams._pythonAudio === true;
+    }
+
+    // Lip-sync via viseme simulation
+    let speechTime = 0;
+    const visemeIntensity = 0.3;
+    clearInterval(speechIntervalId);
+    speechIntervalId = setInterval(() => {
+        if (speechTime >= text.length * 0.07) {
+            clearInterval(speechIntervalId);
+            return;
+        }
+        const char = text[Math.floor(speechTime / 0.07)]?.toUpperCase() || ' ';
+        const intensity = char.match(/[AEIOU]/) ? visemeIntensity : visemeIntensity * 0.4;
+        setBlendShapes({
+            mouthOpen: intensity,
+            mouthSmile: char === 'E' || char === 'I' ? intensity * 0.5 : 0,
+            mouthPucker: char === 'U' || char === 'O' ? intensity * 0.3 : 0,
+            mouthPress: char === 'P' || char === 'B' || char === 'M' ? intensity * 1.0 : 0
+        }, 0.25);
+        speechTime += 120;
+    }, 120);
+
+    function speechEnded() {
+        isTalking = false;
+        clearInterval(speechIntervalId);
+        setBlendShapes(MOOD_EXPRESSIONS[mood] || MOOD_EXPRESSIONS.calm, 0.04);
+        // Notify Python side that speech finished
+        if (pyBridge) pyBridge.onSpeechDone();
+    }
+
+    if (!usePythonTTS && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(text);
+        msg.rate = rate;
+        msg.pitch = pitch;
+        msg.volume = volume;
+        msg.lang = 'en-US';
+        const voices = speechSynthesis.getVoices();
+        const pref = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Neural') || v.name.includes('Premium') || v.name.includes('Google UK')));
+        if (pref) msg.voice = pref;
+        msg.onend = speechEnded;
+        speechSynthesis.speak(msg);
+    } else {
+        // Python side handles audio; we just time the lip-sync
+        setTimeout(speechEnded, text.length * 60 + 300);
+    }
+};
+
+function sendCommand(text) {
+    if (!text.trim() || isProcessing) return;
+    showBubble(text, 'user');
+    isProcessing = true;
+    cmdBtn.classList.add('processing');
+    cmdInput.value = '';
+
+    // Check for wake word
+    if (text.toLowerCase().trim().startsWith('nexus')) {
+        wakeWordDetected();
+        const cmd = text.substring(6).trim();
+        if (cmd) {
+            setTimeout(() => notify('command', { text: cmd }), 500);
+        } else {
+            // Just "Nexus" — greeting response
+            setTimeout(() => {
+                notify('command', { text: 'hello' });
+                isProcessing = false;
+                cmdBtn.classList.remove('processing');
+            }, 300);
+        }
+        return;
+    }
+
+    notify('command', { text: text });
+}
+
+window.wakeWordDetected = function() {
+    gazeMode = 'wake';
+    setMood('thinking');
+    // Snap attention to camera
+    targetEyeX = 0; targetEyeY = 0;
+
+    // Reset cursor gaze after 2s
+    clearTimeout(window._wakeTimeout);
+    window._wakeTimeout = setTimeout(() => {
+        if (!isProcessing) gazeMode = 'idle';
+    }, 2000);
+};
+
+window.setEditorRect = function(x, y, w, h) {
+    CFG.editorRect = { x, y, w, h };
+};
+
+window.taskStarted = function(name) {
+    isProcessing = true;
+    lookAtEditor();
+    showBubble(`Processing: ${name}...`, 'nexus');
+};
+
+window.taskCompleted = function(name, result) {
+    isProcessing = false;
+    gazeMode = 'idle';
+    if (result) {
+        showBubble(`${name} complete.`, 'nexus');
+    }
+};
+
+window.setProcessing = function(val) {
+    isProcessing = val;
+    if (!val) { cmdBtn.classList.remove('processing'); gazeMode = 'idle'; }
+};
+
+// ============================================================
+// MOOD SYSTEM
+// ============================================================
+window.setMood = function(newMood) {
+    if (!MOOD_EXPRESSIONS[newMood]) return;
+    mood = newMood;
+    const color = MOOD_COLORS[mood] || '#6c5ce7';
+    moodDot.className = 'dot ' + mood;
+    moodDot.style.backgroundColor = color;
+    moodLabel.textContent = mood.charAt(0).toUpperCase() + mood.slice(1);
+
+    if (!isTalking) {
+        setBlendShapes(MOOD_EXPRESSIONS[mood], 0.035);
+    }
+
+    // Ground pulse for anomaly
+    const rings = scene.children.filter(c => c.type === 'Mesh' && c.geometry.type === 'RingGeometry');
+    rings.forEach(r => {
+        if (mood === 'anomaly') {
+            r.material.color.setHex(0xff4757); r.material.opacity = 0.12;
+        } else if (mood === 'happy') {
+            r.material.color.setHex(0x00d2d3); r.material.opacity = 0.07;
+        } else {
+            r.material.color.setHex(0x6c5ce7); r.material.opacity = 0.05;
+        }
+    });
+};
+
+window.setEnergy = function(pct) {
+    energy = Math.max(0, Math.min(100, pct));
+    if (energy < 15 && mood !== 'asleep') {
+        const tired = (15 - energy) / 15;
+        setBlendShapes({ eyeSquint: tired * 0.4 }, 0.02);
+    }
+};
+
+window.setImmuneTemp = function(temp) {
+    immuneTemp = temp;
+    if (temp > 38.5 && mood !== 'anomaly') {
+        const intensity = Math.min(1, (temp - 38.5) / 2);
+        setBlendShapes({ eyeWide: intensity * 0.4, mouthOpen: intensity * 0.25 }, 0.03);
+    }
+};
+
+// ============================================================
+// SET LOADING
+// ============================================================
+function setLoading(status, model = '') {
+    const s = document.querySelector('#loading .status');
+    if (s) s.textContent = status;
+    if (model && modelNameEl) modelNameEl.textContent = model;
+}
+
+// ============================================================
+// CURSOR TRACKING (global mouse)
+// ============================================================
+document.addEventListener('mousemove', (e) => {
+    const nx = e.clientX / window.innerWidth;
+    const ny = e.clientY / window.innerHeight;
+    onCursorMove(nx, ny);
+});
+
+// ============================================================
+// COMMAND INPUT
+// ============================================================
+cmdInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendCommand(cmdInput.value);
+    }
+});
+cmdBtn.addEventListener('click', () => sendCommand(cmdInput.value));
+
+// Focus command bar with Ctrl+K or /
+document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey && e.key === 'k') || (e.key === '/' && !e.ctrlKey && !e.metaKey && document.activeElement !== cmdInput)) {
+        e.preventDefault();
+        cmdInput.focus();
+    }
+});
+
+// ============================================================
+// WAKE WORD DETECTION (on input)
+// ============================================================
+let wakeWordTimeout = null;
+cmdInput.addEventListener('input', () => {
+    const val = cmdInput.value.toLowerCase().trim();
+    if (val.startsWith('nexus') || val.startsWith('nexus,') || val.startsWith('nexus:')) {
+        wakeWordDetected();
+        notify('wake');
+    }
+});
+
+// ============================================================
+// ANIMATION LOOP
+// ============================================================
+function animate() {
+    requestAnimationFrame(animate);
+    if (!isReady || !avatarGroup) {
+        if (renderer && scene && camera) renderer.render(scene, camera);
+        return;
+    }
+
+    const delta = clock.getDelta();
+
+    // Update systems
+    updateIdle(delta);
+    updateBlink(delta);
+    if (!isTalking) updateSaccades(delta);
+    updateGaze(delta);
+
+    // Decay expressions toward rest
+    const rest = MOOD_EXPRESSIONS[mood] || MOOD_EXPRESSIONS.calm;
+    for (const name of Object.keys(blendShapes)) {
+        const r = rest[name] || 0;
+        if (!isTalking) {
+            blendShapes[name] += (r - blendShapes[name]) * 0.015;
+        }
+    }
+
+    applyAllBlendShapes();
+    renderer.render(scene, camera);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+async function init() {
+    setLoading('Nexus is booting...');
+
+    if ('speechSynthesis' in window) {
+        speechSynthesis.getVoices();
+        speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
+    }
+
+    initScene();
+
+    // Try VRM model from URL param, then fallback
+    const params = new URLSearchParams(window.location.search);
+    const modelParam = params.get('model');
+    if (modelParam) { CFG.modelPath = modelParam; loadVRM(modelParam); }
+    else { loadFallback(); }
+}
+
+init();
+</script>
+</body>
+</html>

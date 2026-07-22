@@ -1,0 +1,63 @@
+{
+    "anatomy_version": "3.0-GM",
+    "organs": {
+        "Nervous": {
+            "path": "soma/nervous",
+            "status": "active",
+            "functions": [
+                "state",
+                "signals",
+                "gating"
+            ]
+        },
+        "Metabolic": {
+            "path": "soma/metabolic",
+            "status": "active",
+            "functions": [
+                "energy",
+                "atp",
+                "thermal"
+            ]
+        },
+        "Immune": {
+            "path": "soma/immune",
+            "status": "active",
+            "functions": [
+                "antibody",
+                "rbac",
+                "repair"
+            ]
+        },
+        "Integumentary": {
+            "path": "soma/integumentary",
+            "status": "active",
+            "functions": [
+                "senses",
+                "skin"
+            ]
+        },
+        "Excretory": {
+            "path": "soma/excretory",
+            "status": "active",
+            "functions": [
+                "filtration",
+                "toxins"
+            ]
+        },
+        "Mind": {
+            "path": "mind",
+            "status": "active",
+            "functions": [
+                "cognition",
+                "evolution",
+                "instinct"
+            ]
+        }
+    },
+    "synaptic_pressure": 1.05,
+    "sensory_map": {
+        "mcp_server/python/index.py": 10.0,
+        "archives/dna_core": 8.0,
+        "active_core/monitoring_active": 5.0
+    }
+}

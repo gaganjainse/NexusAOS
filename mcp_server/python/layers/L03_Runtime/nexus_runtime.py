@@ -4,13 +4,14 @@ NexusAOS - Unified Async Runtime
 import asyncio
 import json
 import time
-from pathlib import Path
 from datetime import datetime
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+from pathlib import Path
 import sys
-if str(BASE_DIR / "mcp_server" / "python") not in sys.path:
-    sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
+
+_python_root = Path(__file__).resolve().parent.parent.parent
+if str(_python_root) not in sys.path:
+    sys.path.insert(0, str(_python_root))
+BASE_DIR = _python_root.parent.parent # Project root
 
 class WAL:
     def __init__(self, base_dir: Path):
@@ -61,7 +62,7 @@ class NexusRuntime:
         from layers.L02_Agent.excretory_engine import ExcretoryEngine
         from layers.L02_Agent.cardiorespiratory_loop import CardiorespiratoryLoop
         from layers.L07_Integration.integumentary_gateway import IntegumentaryGateway
-        from layers.L01_Planning.thought_agent import ThoughtAgent
+        from layers.L10_Intelligence.thought_agent import ThoughtAgent
         from layers.L09_Observability.wisdom_feed import WisdomFeed
         from layers.L09_Observability.queue_manager import QueueManager
         from layers.L02_Agent.vigilance_reflex import VigilanceReflex

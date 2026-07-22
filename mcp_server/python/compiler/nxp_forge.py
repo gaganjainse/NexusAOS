@@ -5,11 +5,11 @@ from pathlib import Path
 from typing import Dict, Any, List
 import sys
 
-_tools_parent = Path(__file__).resolve().parent.parent
-if str(_tools_parent) not in sys.path:
-    sys.path.insert(0, str(_tools_parent))
+_python_root = Path(__file__).resolve().parent.parent
+if str(_python_root) not in sys.path:
+    sys.path.insert(0, str(_python_root))
 
-from tools.physiology_engine import PhysiologyEngine
+from layers.L1_Physiology.physiology_engine import PhysiologyEngine
 
 # Configuration
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -127,7 +127,7 @@ def forge_pulses():
         try:
             pulse_str = parse_md_for_pulse(file_path)
 
-            if node_id in ["Nexus Corporate Constitution", "Nexus OS Core Philosophy"]:
+            if node_id in ["Nexus Constitution", "Nexus OS Core Philosophy"]:
                 save_branch = "00_foundation"
             else:
                 save_branch = branch_name

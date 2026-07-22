@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --golden-ratio: 1.61803398875;
+  --energy-val: 80;
+}
+
+/* Temple Architecture Dark Aesthetics */
+body {
+  background-color: #0b0704;
+  color: #f3f4f6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow: hidden;
+}
+
+/* Oil Lamp Flicker Animation for Temple Components - Dynamic Speed & Intensity based on --energy-val */
+@keyframes oilLampFlicker {
+  0%, 100% {
+    box-shadow: 0 0 calc(6px + (var(--energy-val, 80) / 100) * 6px) rgba(245, 158, 11, calc(0.3 + (var(--energy-val, 80) / 100) * 0.3)), inset 0 0 6px rgba(217, 119, 6, 0.2);
+    border-color: rgba(245, 158, 11, calc(0.5 + (var(--energy-val, 80) / 100) * 0.4));
+  }
+  25% {
+    box-shadow: 0 0 calc(10px + (var(--energy-val, 80) / 100) * 10px) rgba(245, 158, 11, calc(0.4 + (var(--energy-val, 80) / 100) * 0.4)), inset 0 0 10px rgba(217, 119, 6, 0.35);
+    border-color: rgba(245, 158, 11, 0.95);
+  }
+  50% {
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.3), inset 0 0 4px rgba(180, 83, 9, 0.15);
+    border-color: rgba(217, 119, 6, 0.5);
+  }
+  75% {
+    box-shadow: 0 0 calc(12px + (var(--energy-val, 80) / 100) * 12px) rgba(251, 191, 36, calc(0.5 + (var(--energy-val, 80) / 100) * 0.4)), inset 0 0 12px rgba(245, 158, 11, 0.4);
+    border-color: rgba(251, 191, 36, 1);
+  }
+}
+
+.oil-lamp-glow {
+  animation: oilLampFlicker calc(5.5s - (var(--energy-val, 80) / 100) * 3.5s) infinite ease-in-out;
+}
+
+/* Custom Temple Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #120b07;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3c2617;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3c2617 #120b07;
+}
+
+/* Hardware-Accelerated Micro-Vibration Animation for Energetic Temple Resonance */
+@keyframes microVibration {
+  0% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(-0.8px, 0.8px, 0); }
+  40% { transform: translate3d(0.8px, -0.8px, 0); }
+  60% { transform: translate3d(-0.6px, -0.6px, 0); }
+  80% { transform: translate3d(0.6px, 0.6px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.micro-vibrating {
+  will-change: transform;
+  animation: microVibration 0.22s linear infinite;
+}
+
+/* Deep Carved Shilpkari Relief (Stone Carving) Concave & Convex Depth Effects */
+.shilpkari-concave {
+  box-shadow: var(--concave-shadow, 
+    inset 4px 4px 14px rgba(0, 0, 0, 0.95),
+    inset 1px 1px 3px rgba(0, 0, 0, 0.99),
+    inset -2px -2px 8px rgba(245, 158, 11, 0.28),
+    inset 0 0 18px rgba(12, 7, 4, 0.9),
+    0 4px 20px rgba(0, 0, 0, 0.82),
+    0 0 2px rgba(217, 119, 6, 0.35)
+  );
+  border: 1.5px solid var(--border-color, rgba(180, 83, 9, 0.6));
+}
+
+.shilpkari-convex {
+  box-shadow: var(--convex-shadow, 
+    0 6px 22px rgba(0, 0, 0, 0.88),
+    0 2px 8px rgba(0, 0, 0, 0.95),
+    inset 0 1.5px 3.5px rgba(251, 191, 36, 0.45),
+    inset 0 -3px 9px rgba(0, 0, 0, 0.88),
+    inset -1px 0 5px rgba(180, 83, 9, 0.25),
+    0 0 14px rgba(217, 119, 6, 0.18)
+  );
+  border: 1.5px solid var(--border-bright, rgba(217, 119, 6, 0.75));
+}
+
+/* Scrollbar Hide Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Grid for Golden Ratio (1.618) */
+.grid-golden-ratio {
+  display: grid;
+  grid-template-columns: minmax(260px, calc(100% / (1.618 * 2.8))) 1.618fr minmax(260px, calc(100% / (1.618 * 2.8)));
+  gap: 0.5rem;
+}
+
+/* Dynamic Temple Architecture Theme Variations */
+[data-theme="basalt"] {
+  filter: hue-rotate(180deg) saturate(1.1);
+}
+
+[data-theme="copper"] {
+  filter: hue-rotate(-30deg) saturate(1.2) contrast(1.05);
+}
+
+[data-theme="indigo"] {
+  filter: hue-rotate(220deg) saturate(1.15) brightness(0.95);
+}
+
+[data-theme="obsidian"] {
+  filter: contrast(1.25) saturate(0.9) brightness(0.9);
+}
+
+[data-theme="emerald"] {
+  filter: hue-rotate(85deg) saturate(1.1) contrast(1.05);
+}
+

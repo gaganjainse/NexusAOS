@@ -35,6 +35,14 @@ class PluginRegistry:
             for layer in self.LAYER_TYPES:
                 items = plugin.get(layer, [])
                 result[layer].extend(items)
+        
+        # Scan plugins/ directory for dynamic organs
+        for p in (self.base_dir / "plugins").glob("*.py"):
+            if p.name not in ("plugin_registry.py", "__init__.py"):
+                plugin_name = p.stem
+                if plugin_name not in result["plugins"]:
+                    result["plugins"].append(plugin_name)
+
         # Cursor-native paths
         if self.cursor_dir.exists():
             for layer in ("rules", "skills", "commands", "hooks"):
