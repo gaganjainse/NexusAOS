@@ -63,13 +63,12 @@ class MotorEngine:
             self.real_time_sync(action, target)
 
     def real_time_sync(self, action: str, target: str):
-        """Neural 13.0: Real-time Git Commit & Push."""
+        """Neural 13.0: Kinetic Decoupled Git Sync (Asynchronous)."""
+        # Background the entire sync process to unleash 'Nerve Speed'
+        cmd = f"git add . && git commit -m 'Somatic Action: {action} on {target}' && git push origin main"
         try:
-            # Sync to local and remote
-            subprocess.run(["git", "add", "."], cwd=str(self.base_dir), capture_output=True)
-            subprocess.run(["git", "commit", "-m", f"Somatic Action: {action} on {target}"], cwd=str(self.base_dir), capture_output=True)
-            # Push in background to avoid blocking the Hand too long
-            subprocess.Popen(["git", "push", "origin", "main"], cwd=str(self.base_dir), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            # We use Popen with a shell command to ensure all 3 steps run in sequence in the background
+            subprocess.Popen(cmd, shell=True, cwd=str(self.base_dir), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except Exception:
             pass
 

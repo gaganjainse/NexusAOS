@@ -4,7 +4,7 @@ Description: Autonomous closed-loop: senses -> decision -> lattice -> motor -> m
 """
 import json, subprocess, sys, time, uuid, os
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Tuple
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -77,8 +77,37 @@ class OrchestratorEngine:
             self.substrate.subscribe(f"signal/{signal_type}", 
                 lambda p, s=signal_type: self._route_signal(s, p["payload"]))
 
+    def _check_reflex_fast_path(self, text: str) -> Tuple[bool, str]:
+        """Neural 13.0: Identifies and executes low-risk somatic reflexes instantly."""
+        lower = text.lower().strip()
+        
+        # 1. Vitals Reflex
+        if lower in ["vitals", "status", "health"]:
+            return True, json.dumps(self.physiology.get_state())
+            
+        # 2. Basic Exploration Reflex
+        if lower.startswith("list files"):
+            path = lower.replace("list files", "").strip() or "."
+            try:
+                res = os.listdir(self.base_dir / path)
+                return True, f"Files in {path}: {', '.join(res)}"
+            except Exception as e:
+                return True, f"Reflex Error: {e}"
+
+        # 3. Memory Summary
+        if lower in ["wisdom", "memories"]:
+            return True, json.dumps(self.memory.get_wisdom_summary())
+
+        return False, ""
+
     def submit_directive(self, text: str, priority: int = 5) -> str:
-        """Neural 13.0: High-speed directive submission with Hive Collision prevention."""
+        """Neural 13.0: High-speed directive submission with Reflex Fast-Path."""
+        # 0. Reflex Fast-Path (L01 -> L02 Bypass)
+        # Bypasses reasoning layers for simple somatic reads/vitals
+        is_reflex, reflex_result = self._check_reflex_fast_path(text)
+        if is_reflex:
+            return f"REFLEX FAST-PATH: {reflex_result}"
+
         # 0. Hive Omega: Acquire Planning Lock (L13 Collision Prevention)
         node_id = f"nexus_{os.getpid()}"
         if not self.state_mgr.acquire_hive_lock("planning_intent", node_id):

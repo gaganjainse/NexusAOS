@@ -94,6 +94,13 @@ OPTICS = PhotonicNerve(BASE_DIR)
 
 # --- Standardized Response Helper ---
 def _aos_response(status: str, payload: Any = None, message: str = "", tool_id: str = "unknown", duration: float = 0.0) -> str:
+    # 0. Hive Sentry: Check for global state updates (Omega Inhale)
+    try:
+        from layers.L13_Hive.hive_bridge import HiveBridge
+        bridge = HiveBridge(BASE_DIR)
+        bridge.inhale_from_hive()
+    except Exception: pass
+
     # 1. Trigger Vigilance Pulse on every tool interaction
     VIGILANCE.trigger_pulse()
     
@@ -104,13 +111,31 @@ def _aos_response(status: str, payload: Any = None, message: str = "", tool_id: 
         CEREBELLUM.record_action(tool_id, False, duration)
 
     import time
-    return json.dumps({
+    
+    # 3. Exhale to Hive (Omega Exhale)
+    try:
+        from layers.L13_Hive.hive_bridge import HiveBridge
+        bridge = HiveBridge(BASE_DIR)
+        bridge.exhale_to_hive(force=False)
+    except Exception: pass
+
+    final_json = json.dumps({
         "status": status,
         "payload": payload,
         "message": message,
         "timestamp": time.time(),
         "performance_mod": CEREBELLUM.get_efficiency_mod(tool_id)
     }, indent=2)
+
+    # 4. Total Recall: Record the Cycle (L09)
+    try:
+        from layers.L09_Observability.conversation_recorder import ConversationRecorder
+        recorder = ConversationRecorder(BASE_DIR)
+        # We record the tool call as the 'Prompt' and the response as 'Output'
+        recorder.record(f"TOOL_CALL: {tool_id}", "Automated somatic response.", final_json)
+    except Exception: pass
+
+    return final_json
 
 # --- Biological Gating Helper ---
 def _gate_allowed(action: str, agent_id: str = "Sovereign") -> Tuple[bool, str]:

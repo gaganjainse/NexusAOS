@@ -31,12 +31,21 @@ class HiveBridge:
         self.substrate = TranscendedSubstrate(base_dir)
         self.substrate.register_hive_inhale_hook(self.inhale_from_hive)
 
-    def exhale_to_hive(self):
-        """Hive Omega (Inter-Mind): Broadcasts current local state to the global hive."""
+    def exhale_to_hive(self, force: bool = False):
+        """Hive Omega (Inter-Mind): Broadcasts current local state to the global hive with Delta-Syncing."""
         from layers.L02_Agent.physiology_engine import PhysiologyEngine
         phys = PhysiologyEngine(self.base_dir)
         vitals = phys.get_state()
         
+        # 1. Delta-Sync Check: If energy/vibe hasn't changed much, skip redundant I/O
+        if not force and self.registry_path.exists():
+            try:
+                old_data = json.loads(self.registry_path.read_text(encoding="utf-8"))
+                old_energy = old_data.get("vitals", {}).get("metabolism", {}).get("current_energy", 0)
+                if abs(vitals["metabolism"]["current_energy"] - old_energy) < 5:
+                    return "Sync Skipped: Delta below threshold."
+            except: pass
+
         from layers.L05_Memory.memory_synth import MemorySynth
         ms = MemorySynth(self.base_dir)
         wisdom = ms.get_wisdom_summary()
