@@ -1,14 +1,14 @@
 {
-    "last_sync": 1784751134.4633527,
+    "last_sync": 1784755138.6488185,
     "vitals": {
         "metabolism": {
             "max_energy": 1000,
-            "current_energy": 520,
-            "status": "Healthy",
+            "current_energy": 330,
+            "status": "Conserving",
             "last_reset": "2026-07-22T02:12:16.404702"
         },
         "endocrine": {
-            "vibe": "Excited",
+            "vibe": "Tired",
             "hormones": {
                 "dopamine": 68.53530596105709,
                 "serotonin": 60.0,
@@ -25,16 +25,16 @@
             "state": "nrem",
             "last_activity": 1784666536.4048722,
             "sleep_cycles": 2,
-            "total_sleep_time": 20.0,
+            "total_sleep_time": 5.0,
             "cortisol_before_sleep": 2.929388077885811
         },
-        "last_sync": 1784749450.174677
+        "last_sync": 1784751134.4524229
     },
     "wisdom_summary": {
         "total_memories": 4,
         "last_consolidation": "consolidation_20260723_000614.md"
     },
     "resource_status": {},
-    "nexus_version": "NEURAL 13.0",
+    "nexus_version": "NEURAL 13.8",
     "active_model_drift": false
 }
