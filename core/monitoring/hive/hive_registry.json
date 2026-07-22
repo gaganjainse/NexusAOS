@@ -1,5 +1,5 @@
 {
-    "last_sync": 1784739661.929289,
+    "last_sync": 1784743348.0520744,
     "vitals": {
         "metabolism": {
             "max_energy": 1000,
@@ -28,12 +28,13 @@
             "total_sleep_time": 5.0,
             "cortisol_before_sleep": 2.929388077885811
         },
-        "last_sync": 1784738866.7264671
+        "last_sync": 1784741760.492486
     },
     "wisdom_summary": {
-        "total_memories": 2,
-        "last_consolidation": "consolidation_20260722_025906.md"
+        "total_memories": 3,
+        "last_consolidation": "consolidation_20260722_223808.md"
     },
+    "resource_status": {},
     "nexus_version": "NEURAL 13.0",
     "active_model_drift": false
 }

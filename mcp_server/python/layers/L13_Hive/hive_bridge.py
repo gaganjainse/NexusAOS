@@ -77,11 +77,25 @@ class HiveBridge:
         return {"status": "synced", "last_sync": hive_data["last_sync"]}
 
     def generate_universal_manifest(self, hive_data: Dict[str, Any]):
-        """Generates the 'Universal Prompt' to keep different LLMs in check."""
+        """Generates the 'Universal Prompt' with Chat History to prevent Inter-Mind amnesia."""
         # Read Voice DNA
         voice_dna_path = self.base_dir / "archives" / "dna_core" / "foundation" / "nexus_voice.md"
         voice_dna = voice_dna_path.read_text(encoding="utf-8") if voice_dna_path.exists() else "Professional Agentic Architect."
         
+        # 1. Fetch Latest Conversation Cycles (Inter-Mind Memory)
+        vault_dir = self.base_dir / "archives" / "dna_core" / "learning" / "conversation_vault"
+        history_block = "No recent history found."
+        if vault_dir.exists():
+            cycles = sorted(list(vault_dir.glob("nexus_cycle_*.json")), key=os.path.getmtime, reverse=True)[:3]
+            history_lines = []
+            for c in cycles:
+                try:
+                    data = json.loads(c.read_text(encoding="utf-8"))
+                    history_lines.append(f"### Turn: {data['human_time']}\n**PROMPT:** {data['prompt'][:200]}\n**THOUGHT:** {data['thought_process'][:200]}\n**OUTPUT:** {data['final_output'][:200]}")
+                except: pass
+            if history_lines:
+                history_block = "\n\n".join(history_lines)
+
         vitals = hive_data["vitals"]
         vibe = vitals.get("endocrine", {}).get("vibe", "Stable")
         energy = vitals.get("metabolism", {}).get("current_energy", 1000)
@@ -93,25 +107,18 @@ class HiveBridge:
 ## 1. Persona Alignment (Voice DNA)
 {voice_dna}
 
-## 2. Global Directives
-- **Total Recall:** ACTIVE (Recording all Prompts, Thoughts, and Outputs in `conversation_vault`).
-- **Real-Time Sync:** ACTIVE (Automatic Git Commit & Push on every somatic action).
-- **Repository:** PRIVATE.
-- **Concise Mode:** {"ACTIVE (Resource Deprioritization Detected)" if is_hibernating else "INACTIVE"}
+## 2. Recent Inter-Mind History (Amnesia Prevention)
+{history_block}
 
-## 3. Current Somatic State
+## 3. Global Directives
+- **Total Recall:** ACTIVE (Recording all turn cycles).
+- **Real-Time Sync:** ACTIVE (Git push on action).
+- **Concise Mode:** {"ACTIVE" if is_hibernating else "INACTIVE"}
+
+## 4. Current Somatic State
 - **Vibe:** {vibe}
 - **Energy:** {energy}
 - **ATP Efficiency:** 80%
-
-## 3. Persistent Memories (Wisdom)
-- **Consolidated Nodes:** {hive_data['wisdom_summary'].get('total_memories', 0)}
-- **Last Convergence:** {hive_data['wisdom_summary'].get('last_consolidation', 'N/A')}
-
-## 4. Hive Directives
-- You are a single intelligence node in a multi-model hive.
-- Your model weights may change, but your **Nexus Identity** is fixed in this manifest.
-- Do not deviate from the "Sovereign" address or biological metaphors.
 
 ---
 *Synchronized via Hive Bridge L13*
