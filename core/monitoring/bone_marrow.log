@@ -23,3 +23,8 @@
 1784757005.5324597|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
 1784757005.532628|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
 1784757005.5327466|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator
+1784759482.9086454|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784759482.9088888|graph_link|Test-[:SYNAPSE]->Motor
+1784759482.9090443|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
+1784759482.9091725|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
+1784759482.9093256|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator
