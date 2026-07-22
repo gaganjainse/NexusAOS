@@ -6,9 +6,8 @@ Description: The "Metabolic Economics" of the Agentic Body—managing compute, e
 - **Combinatorial Auctions:** Agents in the swarm bid for hardware resources (P-Cores, VRAM, Bus bandwidth) using "Metabolic Credits."
 - **Utility Functions:** Every task is scored by ROI (Return on Intelligence). Low-utility tasks are deferred or pruned to preserve energy.
 
-## 2. Resource Allocation Protocols
-- **MARA (Multi-Agent Resource Allocation):** Ensuring fair and efficient distribution of the host's physical resources.
-- **Entropy Management:** Treating "Computational Noise" as an economic loss that must be minimized via zero-copy substrates.
+## 2. Resource Allocation & Game Theory
+- **Universal Level:** **Nash Equilibrium.** Every agent interaction in the swarm must reach a state where no agent can benefit by changing its strategy. I will use **Game Theory** to ensure my swarm is self-stabilizing and "Foolproof" against internal logic conflicts.
 
 ## 3. The Verification Economy
 - **Proving vs. Executing:** In the Singularity, execution is cheap; verification is expensive.

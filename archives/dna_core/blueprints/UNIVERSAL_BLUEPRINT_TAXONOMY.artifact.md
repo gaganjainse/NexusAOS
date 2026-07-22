@@ -26,7 +26,7 @@ Location: `archives/dna_core/blueprints/`
 - **[AI_MODEL_ARCHITECTURE_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/AI_MODEL_ARCHITECTURE_BLUEPRINT.artifact.md)**
 - **[TOTAL_MODEL_FIT_ANALYSIS](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/TOTAL_MODEL_FIT_ANALYSIS.artifact.md)**
 
-## 4. Operational Foundations (AB Tier)
+## 4. Operational & Commercial Foundations (AB Tier)
 - **[PRODUCT_CREATION_UNIVERSAL_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/PRODUCT_CREATION_UNIVERSAL_BLUEPRINT.artifact.md)**
 - **[BUSINESS_MANAGEMENT_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/BUSINESS_MANAGEMENT_BLUEPRINT.artifact.md)**
 - **[RESEARCH_METHODOLOGY_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/RESEARCH_METHODOLOGY_BLUEPRINT.artifact.md)**
@@ -34,6 +34,11 @@ Location: `archives/dna_core/blueprints/`
 - **[UNIVERSAL_ECONOMICS_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_ECONOMICS_BLUEPRINT.artifact.md)**
 - **[UNIVERSAL_KINEMATICS_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_KINEMATICS_BLUEPRINT.artifact.md)**
 - **[UNIVERSAL_CONVERGENCE_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_CONVERGENCE_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_APP_CREATION_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_APP_CREATION_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_GAME_CREATION_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_GAME_CREATION_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_CONTENT_VIDEO_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_CONTENT_VIDEO_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_MARKETING_GROWTH_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_MARKETING_GROWTH_BLUEPRINT.artifact.md)**
+- **[UNIVERSAL_COMMERCIAL_EMPIRE_BLUEPRINT](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_COMMERCIAL_EMPIRE_BLUEPRINT.artifact.md)**
 - **[android_studio_blueprint](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/android_studio_blueprint.artifact.md)**
 
 ---

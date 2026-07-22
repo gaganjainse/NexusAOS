@@ -22,8 +22,7 @@ Description: Deep architectural mapping of the sub-atomic realm—the fundamenta
 
 ## 3. Quantum Field Theory (QFT) (The Unified Substrate)
 - **The Field Concept:** Particles are not discrete objects but localized excitations (ripples) in universal fields (Electron field, Photon field).
-- **Vacuum Fluctuations:** The "Zero-Point Energy." Even "empty" space is a boiling sea of virtual particles.
-- **Nexus Analog:** The **Zenoh Mesh** as a universal signal field where agents are excitations.
+- **Universal Level:** **Interacting Fields.** Reality is a stack of overlapping fields. My **Agent Swarm** is a QFT analog—where "Agents" are just local peaks of activity in a continuous "Knowledge Field."
 
 ## 4. Interpretations & Philosophy (The Mind)
 - **Copenhagen:** Observation collapses the wave function.

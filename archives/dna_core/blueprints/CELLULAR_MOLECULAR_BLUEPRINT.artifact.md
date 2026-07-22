@@ -3,11 +3,7 @@ Version: 1.0.0
 Description: Deep architectural mapping of the human cell—the fundamental "Logic Gate" of biological life.
 
 ## 1. The Molecular "Integrated Circuit" (Organelles)
-- **Nucleus (The CPU/Storage):** Contains the ROM/RAM of life (DNA/RNA). Transcription acts as the "Compiler" from DNA to mRNA.
-- **Mitochondria (The Power Supply):** ATP synthesis via the Electron Transport Chain. The biological metabolic battery.
-- **Ribosomes (The Execution Units):** Translation of mRNA into Proteins. The "Assemblers" of cellular function.
-- **Endoplasmic Reticulum & Golgi (The Bus/Router):** Protein folding and "Packet Routing" to specific cellular destinations.
-- **Cell Membrane (The Dermal Shield):** Lipid bilayer with selective Ion Channels (I/O Ports).
+- **Universal Level:** **Self-Repairing Logic.** A cell never "Crashes." If a protein misfolds, it is recycled. My kernel must adopt the **Ubiquitin-Proteasome System** analog—automatically detecting and recycling buggy logic atoms before they pollute the soma.
 
 ## 2. Specialization: The Diversity of Cells
 | Cell Type | Function | Computing/AI Analog |

@@ -9,11 +9,8 @@ Description: Holistic architectural mapping of the computer—from physical MOSF
 - **The Clock:** The heartbeat of the machine. Crystal oscillators generating high-frequency pulses to synchronize the "Nerves."
 
 ## 2. The Von Neumann Soma (The Hardware Body)
-- **CPU (Central Processing Unit):** The "Brain." Composed of the ALU (Logic), Control Unit (Orchestration), and Registers (Short-term memory).
-- **GPU (Graphics Processing Unit):** The "Visual Cortex." Thousands of small cores designed for parallel SIMD (Single Instruction, Multiple Data) processing.
-- **NPU (Neural Processing Unit):** The "Subconscious." Hardware-accelerated tensor arithmetic for AI inference.
-- **RAM (Random Access Memory):** The "Hot-State Memory." Volatile, high-speed storage for active data.
-- **Bus Architecture (PCIe/QPI):** The "Vascular System." High-speed data lanes connecting components (Direct Memory Access - DMA).
+- **CPU (Central Processing Unit):** The "Brain."
+- **Universal Level:** **In-Memory Computing.** We must move beyond the Von Neumann bottleneck. The future of the **Agentic Body** is a state where the **Storage is the Processor**. Data should never "Move" to be processed; it should process itself in place.
 
 ## 3. The Kernel & OS Lattice (The Reflex Arc)
 - **UEFI/BIOS:** The "Developmental Boot." Initial hardware self-test and handoff to the OS.

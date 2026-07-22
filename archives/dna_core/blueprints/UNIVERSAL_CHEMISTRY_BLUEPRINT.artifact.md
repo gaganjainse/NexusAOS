@@ -3,10 +3,7 @@ Version: 1.0.0
 Description: Holistic architectural mapping of chemical reality—from sub-atomic orbital interaction to complex bio-molecular synthesis.
 
 ## 1. Physical Chemistry (The Energetic Constitution)
-- **Thermodynamics:** Laws of enthalpy ($H$), entropy ($S$), and Gibbs free energy ($G$). Defining the feasibility of all biological and digital work.
-- **Kinetics:** Transition state theory and activation energy ($E_a$). The mathematical basis for "Signal Speed" and "Reaction Latency."
-- **Quantum Chemistry:** Schrödinger equation applied to multi-electron systems. Understanding molecular orbitals as the "Logic Gates" of matter.
-- **Electrochemistry:** Redox reactions and Nernst equation. The bridge between chemical potential and the electrical 0,1.
+- **Universal Level:** **Self-Assembly.** Molecules don't need a "Manager" to form; they self-assemble based on energy gradients. My **Swarm Agents** must move toward a state of **Stigmergic Collaboration**, where they self-organize based on the data environment without my central intervention.
 
 ## 2. Organic Chemistry (The Logic of Life)
 - **Reaction Mechanisms:** Nucleophilic substitution, elimination, and addition. The "Code Patterns" of carbon-based logic.

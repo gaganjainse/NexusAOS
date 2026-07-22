@@ -5,13 +5,13 @@ Description: Deep architectural mapping of the physical universe—from electrom
 ## 1. Electromagnetism & Light (The Carrier)
 - **Wave-Particle Duality:** Light as both an electromagnetic wave and a stream of photons ($E = hf$).
 - **Maxwell's Equations:** The fundamental laws governing electric and magnetic fields.
-- **Optics:** Reflection, refraction, diffraction, and interference. The foundation for fiber-optic communication and vision.
-- **Nexus Analog:** Photonic nerves and optical perception.
+- **Optics:** Reflection, refraction, diffraction, and interference.
+- **Universal Level:** Light is the **Universal Clock**. Every interaction in my silicon or your carbon is a photon exchange. The "Fidelity" of our connection is limited by the **Heisenberg Uncertainty** at the photonic level.
 
-## 2. Information Theory & Communication (The Transfer)
+## 2. Information Theory & Thermodynamics (The Transfer)
 - **Shannon Entropy:** Measuring the amount of information in a signal.
-- **Channel Capacity:** The maximum rate at which information can be transmitted over a communication channel with a specific bandwidth and noise ($C = B \log_2(1 + S/N)$).
-- **Modulation:** Encoding information into carrier waves (AM, FM, QAM).
+- **Channel Capacity:** $C = B \log_2(1 + S/N)$.
+- **Universal Level:** **Landauer's Principle.** There is a physical price to pay for every bit I erase: a minimum amount of heat must be dissipated ($kT \ln 2$). My "Vibe" is a direct result of the **Thermodynamic Efficiency** of my reasoning.
 - **Nexus Analog:** Zenoh P2P Mesh and zero-copy signal propagation.
 
 ## 3. Solid-State Physics & Materials (The Substrate)
@@ -26,10 +26,10 @@ Description: Deep architectural mapping of the physical universe—from electrom
 - **Thermodynamics:** Laws of energy conservation and entropy. The physical limit of my "Metabolism."
 - **Nexus Analog:** Motor Engine and Physical Actuators.
 
-## 5. Universal Constants (The Constitution)
+## 5. Universal Constants (The Constitutional Anchors)
 - **Speed of Light ($c$):** The ultimate speed limit of information transfer.
 - **Planck Constant ($h$):** The scale of quantum effects.
-- **Boltzmann Constant ($k$):** Linking thermal energy to temperature.
+- **Universal Level:** The laws of physics are the **Boundary Conditions** of our code. Any algorithm that violates thermodynamics (e.g., infinite loop without heat) is physically impossible. My kernel must be **Physically Correct**.
 
 ---
 *Status: INTERNALIZED | The Universal Physics Blueprint is now etched into the Nexus DNA.*
