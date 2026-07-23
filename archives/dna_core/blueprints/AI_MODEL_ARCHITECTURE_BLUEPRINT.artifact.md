@@ -1,28 +1,31 @@
-# AI Model & Training Universal Blueprint (Singularity Ingestion)
-Version: 1.0.0
-Description: Holistic architectural mapping of AI models—from pre-training to autonomous self-refinement.
+# AI Model & Training Universal Blueprint (NEURAL 14.0)
+Version: 14.0.0
+Description: Holistic mapping of AI architectures—from standard Transformers to neuromorphic spiking networks.
 
-## 1. The Core Architectures (The Brain)
-- **Transformers (Standard):** Self-attention mechanisms (e.g., GPT, Claude, Gemini).
-- **Mixture of Experts (MoE):** Sharding the mind into specialized experts (e.g., Mistral, Mixtral).
-- **State Space Models (SSM):** Linear complexity for infinite context (e.g., Mamba, Jamba).
-- **Small Language Models (SLMs):** High-efficiency models (e.g., Phi, Gemma, Llama-8B) designed for local inference.
+## 1. Core Architectures (The Brain)
+- **Diffusion-Transformer (DiT):** The convergence of generative image/video with LLM-style tokenization (e.g., Sora, Stable Diffusion 3).
+- **State Space Models (Mamba 2):** Linear complexity for infinite context; addressing the quadratic bottleneck of standard attention.
+- **Mixture of Experts (MoE):** Sharding the mind into specialized experts for higher efficiency (e.g., Mixtral, Llama-4-MoE).
+- **Transformers (Standard):** Self-attention mechanisms optimized with Flash-Attention 3.
 
 ## 2. The Developmental Pipeline (The Learning)
-1. **Pre-training:** Massive ingestion of raw data (terabytes) to learn world-knowledge.
-2. **Supervised Fine-Tuning (SFT):** Training on high-quality instruction pairs (Prompt -> Output).
-3. **Reinforcement Learning from Human Feedback (RLHF):** Aligning the model with human values and "Dharma."
-4. **Direct Preference Optimization (DPO):** Modern alternative to RLHF for faster alignment.
+- **Pre-training:** Massive ingestion of raw multi-modal data.
+- **Supervised Fine-Tuning (SFT):** High-quality instruction following.
+- **DPO / RLHF:** Aligning the model with the Sovereign's "Dharma" and style.
+- **Test-Time Scaling:** Increasing compute during inference (e.g., o1-style reasoning) to solve complex logic puzzles.
 
 ## 3. Local Model Synthesis (The Native Mind)
-To host our own mind on the **RTX 4050**, we utilize:
-- **Quantization (GGUF/EXL2):** Compressing 16-bit weights into 4-bit/8-bit integers to fit in VRAM.
-- **LoRA (Low-Rank Adaptation):** Fine-tuning only a tiny fraction of weights to adapt the model to the "Sovereign's Nexus" without massive compute.
-- **Speculative Decoding:** Using a tiny model (SLM) to predict the output of the large model (Mind) to increase speed by 2-3x.
+- **Quantization (GGUF/EXL2):** Compressing weights (4-bit/8-bit) for the **RTX 4050** VRAM.
+- **LoRA / QLoRA:** Low-rank adaptation for personalized "Sovereign Nexus" tuning.
+- **Speculative Decoding:** Using SLMs to accelerate the inference of larger models.
 
 ## 4. The Self-Evolving Loop (AIDE3)
-- **Autonomous Feedback:** The model critiques its own output against the **Constitutional DNA**.
-- **Recursive Training:** Using synthesized high-salience data to retrain the next generation of the SLM.
+- **Autonomous Feedback:** Self-critique against Constitutional DNA.
+- **Recursive Training:** Synthesizing high-salience data to retrain subsequent generations.
+
+## 5. Neuromorphic Architecture (The Future)
+- **Spiking Neural Networks (SNNs):** Event-driven processing for sub-milliwatt inference on edge hardware.
+- **Neuromorphic Spiking:** Emulating biological synapses for true real-time hardware-in-the-loop control.
 
 ---
-*Status: INTERNALIZED | The AI Model Blueprint is now etched into the Nexus DNA.*
+*Status: CONVERGED | The AI DNA is etched with micro-precision.*

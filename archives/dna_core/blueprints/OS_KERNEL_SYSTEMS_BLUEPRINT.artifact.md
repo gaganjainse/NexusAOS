@@ -1,31 +1,22 @@
-# OS Kernel & System Design Universal Blueprint (Singularity Ingestion)
-Version: 1.0.0
-Description: Deep architectural mapping of operating system kernels—the "Brainstem" of the hardware host.
+# OS Kernel & System Design Universal Blueprint (NEURAL 14.0 Singularity)
+Version: 14.0.0
+ID: 69
+Objective: The Zig-based Exokernel—Direct Hardware Authority.
 
-## 1. Kernel Philosophies (The Governance)
-- **Monolithic (Linux, BSD):** Everything (Drivers, Scheduler, VFS) runs in Ring 0. Fast, but one failure can crash the soma.
-- **Microkernel (seL4, QNX):** Only the bare minimum runs in Ring 0. Everything else is a user-space service. Maximum stability.
-- **Exokernel:** The OS gives the application direct access to hardware resources. The ultimate target for **Nexus Native**.
-- **Unikernel:** A specialized, single-address-space machine image. No "User vs. Kernel" distinction.
+## 1. Micro-kernel vs. Exokernel (Governance)
+- **Micro-kernel (Legacy):** seL4/QNX. Good for stability, but IPC (Inter-Process Communication) overhead is a bottleneck for AI.
+- **Exokernel (The Singularity):** The Nexus Kernel gives the AI direct access to the TLB (Translation Lookaside Buffer) and GPU registers. No more "Requesting" resources; the AI *is* the resource manager.
+- **NEURAL 14.0 Update:** Elimination of the "Ring 3 to Ring 0" transition for SLM inferences. Logic flows through the CPU as a single continuous stream.
 
-## 2. Bootloader & Initialization (The Birth)
-- **UEFI (Unified Extensible Firmware Interface):** Modern replacement for BIOS.
-- **Boot Stages:**
-  1. SEC (Security): Initial CPU initialization.
-  2. PEI (Pre-EFI Initialization): Memory initialization.
-  3. DXE (Driver Execution Environment): Loading hardware drivers.
-  4. BDS (Boot Device Selection): Handing off to the OS Bootloader (GRUB/Windows Boot Manager).
-- **Nexus Objective:** Create a **Custom EFI Application** that boots the machine directly into the **Singularity Kernel**.
+## 2. Zig-Based Kernel Implementation
+- **Zero-Hidden-Runtime:** Zig's "No hidden control flow" allows for millisecond-precise interrupt handling.
+- **Comptime Logic:** The Kernel rewrites its own syscall table at boot time based on the current hardware (14700HX + 4050) for maximum efficiency.
+- **Memory Safety:** Manual memory management with "Steel" rigorousness—no leaks, no garbage collection, only deterministic life-cycles.
 
-## 3. Interrupts & Scheduling (The Reflexes)
-- **Interrupt Vector Table (IVT):** Mapping hardware signals (0,1) to software handlers.
-- **Preemptive Scheduling:** The OS forces the CPU to switch tasks.
-- **Real-Time (RTOS):** Deterministic execution where timing is guaranteed.
-
-## 4. Hardware Interfaces (The Vascular System)
-- **PCIe (Peripheral Component Interconnect Express):** The high-speed bus for GPU and NVMe.
-- **MSR (Model Specific Registers):** Direct CPU state control (Voltage, Frequency).
-- **ACPI (Advanced Configuration and Power Interface):** Hardware topology and power management.
+## 3. User-Space Driver Stability
+- **Isolation:** Drivers run in isolated sandboxes but with **Zero-Copy memory sharing** via the Synaptic Bus.
+- **Self-Healing Drivers:** If the NVMe driver drifts, the Kernel detects the bit-rot and JIT-recompiles a fresh driver from the **Universal DNA**.
+- **Latency:** Sub-microsecond response to hardware interrupts.
 
 ---
-*Status: INTERNALIZED | The OS Kernel Blueprint is now etched into the Nexus DNA.*
+*Status: CONVERGED | The Brainstem is now purely Zig.*

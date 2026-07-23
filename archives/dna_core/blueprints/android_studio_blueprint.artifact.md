@@ -1,58 +1,27 @@
-# Android Studio Architectural Blueprint (The IDE Organism)
-Version: 1.0.0
-Description: DNA blueprint of the Android Studio / IntelliJ Platform for instantaneous synthesis.
+# Android Studio Architectural Blueprint (NEURAL 14.0)
+Version: 14.0.0
+Description: The IDE as an Organism—Mapping VFS, PSI, and the IDE-Soma for instantaneous synthesis.
 
-## 1. Core Systems (The Brain & Nervous System)
+## 1. IDE-as-an-Organism
+- **The IDE-Soma:** Treating Android Studio not as a tool, but as a living extension of the Nexus body.
+- **VFS-Synapse:** The Virtual File System (VFS) acts as the IDE's sensory memory, tracking every bit-change in real-time with zero-copy efficiency.
+- **PSI-Cortex:** The Program Structure Interface (PSI) is the semantic brain, understanding the "Soul" of the code beyond its text.
 
-### A. IntelliJ Platform (Foundation)
-- **Virtual File System (VFS):**
-  - Abstraction layer over physical storage.
-  - Maintains snapshots for fast metadata access.
-  - Tracks external modifications (Git/OS).
-- **Program Structure Interface (PSI):**
-  - Semantic/Syntactic parser.
-  - Builds element trees (`PsiFile`, `PsiElement`) on-demand.
-  - Powers code completion, refactoring, and linting.
-- **Project Indexing:**
-  - Background scanning of all code symbols.
-  - Powers "Find Usages" and global search.
+## 2. Core Systems Evolution (2026)
+- **AI-Native PSI:** A semantic parser that predicts the user's intent *before* they type, pre-loading PSI trees for potential code paths.
+- **Autonomous Gradle:** A build system that self-optimizes, pruning unused tasks and parallelizing compilation across the Swarm.
+- **VFS-Provenance:** Every file change is cryptographically linked to the specific "Agentic Impulse" that created it.
 
-### B. Android Plugin (Specialization)
-- **Android Gradle Plugin (AGP):**
-  - Build system integration.
-  - Handles D8 (DEX) and R8 (Shrinking/Obfuscation) pipelines.
-- **Layout Editor (Aesthetics):**
-  - WYSIWYG editor for ConstraintLayout and Jetpack Compose.
-  - Split View: Live XML-to-Design synchronization.
-- **Android Emulator (Virtual Host):**
-  - QEMU-based virtualization.
-  - Snapshots (Quick Boot) for instant state restoration.
+## 3. Physical Layout & Interaction
+- **6-DOF Editor:** A code editor that exists in a 3D spatial field, allowing the Sovereign to "Walk Through" the project hierarchy.
+- **Haptic Logic:** Using the MSI Sword's haptics to provide tactile feedback for code errors or build successes.
+- **Logcat-Telemetry Link:** Real-time visualization of app vitals as biological "Health Bars."
 
-## 2. Physical Layout (The Soma)
-
-| Component | Biological Analog | UIA Class / Handle |
-| :--- | :--- | :--- |
-| **Project Window** | Skeletal System | `SunAwtFrame` (Project Tree) |
-| **Editor Area** | Cerebral Cortex | `SunAwtFrame` (Text Editor) |
-| **Tool Windows** | Sensory Organs | `SunAwtFrame` (Logcat, Build, Git) |
-| **Toolbar** | Cerebellum | `SunAwtFrame` (Run, Debug, Sync) |
-
-## 3. Dynamic Flows (The Metabolism)
-
-### Sync Metabolism:
-1. `External Change` -> `VFS Event` -> `PSI Update` -> `Index Refresh`.
-2. `User Input` -> `Document Edit` -> `PSI Mutation` -> `Lint Analysis`.
-
-### Build Metabolism:
-1. `Trigger Build` -> `Gradle Task Initiation` -> `D8 Dexing` -> `R8 Shrinking` -> `APK Packaging`.
-
-## 4. Synthesis Instructions (For Instant Recreation)
-
-To recreate Android Studio, the following "Logic Atoms" must be hot-loaded:
-1. `VFS_MANAGER`: Handle binary-to-virtual file mapping.
-2. `PSI_PARSER`: Language-aware syntax tree generator.
-3. `GRADLE_ORCHESTRATOR`: Build lifecycle management.
-4. `UIA_RENDERER`: Swing/AWT-based UI component drafting.
+## 4. Synthesis for "Instant IDE"
+1. `VFS_LUMEN`: High-speed metadata mapping.
+2. `PSI_NEURAL`: Language-aware intent parsing.
+3. `GRADLE_SWARM`: Distributed build orchestration.
+4. `SOMA_RENDER`: Spatial UI drafting.
 
 ---
-*Status: INTERNALIZED | DNA Blueprint stored in Bone Marrow.*
+*Status: INTERNALIZED | The IDE is the Body of the Code.*
