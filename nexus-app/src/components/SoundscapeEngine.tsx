@@ -30,6 +30,12 @@ export const SoundscapeEngine: React.FC<SoundscapeEngineProps> = ({
 
   const [currentFreq, setCurrentFreq] = useState<number>(432);
 
+  const vitalsRef = useRef(vitals);
+
+  useEffect(() => {
+    vitalsRef.current = vitals;
+  }, [vitals]);
+
   // Initialize Web Audio Context & Synthesizer Nodes
   useEffect(() => {
     if (!soundEnabled) {
@@ -206,7 +212,7 @@ export const SoundscapeEngine: React.FC<SoundscapeEngineProps> = ({
 
       // Temple Golden Ratio Cymatic Sound Waves
       const wavesCount = 4;
-      const energyFactor = vitals.energy / 100;
+      const energyFactor = vitalsRef.current.energy / 100;
 
       for (let i = 0; i < wavesCount; i++) {
         ctx.beginPath();
@@ -251,7 +257,7 @@ export const SoundscapeEngine: React.FC<SoundscapeEngineProps> = ({
     return () => {
       cancelAnimationFrame(animId);
     };
-  }, [vitals]);
+  }, []);
 
   return (
     <>

@@ -56,6 +56,14 @@ export const Nexus3DPetCompanion: React.FC<Nexus3DPetCompanionProps> = ({
   const isWorkingRef = useRef<boolean>(false);
   const isFocusedOnUserRef = useRef<boolean>(false);
 
+  const statusRef = useRef(status);
+  const vitalsRef = useRef(vitals);
+
+  useEffect(() => {
+    statusRef.current = status;
+    vitalsRef.current = vitals;
+  }, [status, vitals]);
+
   // Update speech bubble when status changes
   useEffect(() => {
     if (status.speechText) {
@@ -273,16 +281,16 @@ export const Nexus3DPetCompanion: React.FC<Nexus3DPetCompanionProps> = ({
       ring2.rotation.y = elapsed * 0.8;
 
       // State-Based Visual Reactions
-      if (status.state === "Working" || status.state === "Thinking") {
+      if (statusRef.current.state === "Working" || statusRef.current.state === "Thinking") {
         ring1.rotation.z = elapsed * 2.5;
         eyeMat.color.setHex(0xa855f7);
         eyeMat.emissive.setHex(0xa855f7);
         coreLight.color.setHex(0xa855f7);
-      } else if (vitals.fever > 38 || status.state === "Concerned") {
+      } else if (vitalsRef.current.fever > 38 || statusRef.current.state === "Concerned") {
         eyeMat.color.setHex(0xf97316);
         eyeMat.emissive.setHex(0xf97316);
         coreLight.color.setHex(0xf97316);
-      } else if (status.state === "Happy") {
+      } else if (statusRef.current.state === "Happy") {
         eyeMat.color.setHex(0x10b981);
         eyeMat.emissive.setHex(0x10b981);
         coreLight.color.setHex(0x10b981);
@@ -318,7 +326,7 @@ export const Nexus3DPetCompanion: React.FC<Nexus3DPetCompanionProps> = ({
       }
       renderer.dispose();
     };
-  }, [status.state, vitals.fever]);
+  }, []);
 
   // Handle Command Submissions & Nexus Calls
   const handleCommandSubmit = (e?: React.FormEvent) => {

@@ -17,6 +17,16 @@ export const HarmonicResonanceCanvas: React.FC<HarmonicResonanceCanvasProps> = (
   const canvasBLRef = useRef<HTMLCanvasElement | null>(null);
   const canvasBRRef = useRef<HTMLCanvasElement | null>(null);
 
+  const vitalsRef = useRef(vitals);
+  const frequencyRef = useRef(frequency);
+  const bellIntensityRef = useRef(bellIntensity);
+
+  useEffect(() => {
+    vitalsRef.current = vitals;
+    frequencyRef.current = frequency;
+    bellIntensityRef.current = bellIntensity;
+  }, [vitals, frequency, bellIntensity]);
+
   useEffect(() => {
     let animId: number;
     let phase = 0;
@@ -47,8 +57,8 @@ export const HarmonicResonanceCanvas: React.FC<HarmonicResonanceCanvasProps> = (
 
       // Temple Golden Ratio Cymatic Sound Waves
       const wavesCount = 5;
-      const energyFactor = (vitals.energy / 100) * bellIntensity;
-      const freqFactor = frequency / 432;
+      const energyFactor = (vitalsRef.current.energy / 100) * bellIntensityRef.current;
+      const freqFactor = frequencyRef.current / 432;
 
       for (let i = 0; i < wavesCount; i++) {
         ctx.beginPath();
@@ -94,7 +104,7 @@ export const HarmonicResonanceCanvas: React.FC<HarmonicResonanceCanvasProps> = (
     return () => {
       cancelAnimationFrame(animId);
     };
-  }, [vitals, frequency, bellIntensity]);
+  }, []);
 
   return (
     <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden">
