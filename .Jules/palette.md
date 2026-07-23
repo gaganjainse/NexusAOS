@@ -1,0 +1,3 @@
+## 2024-07-23 - Added Custom Dropdown ARIA Roles for Theme Switcher
+**Learning:** Custom interactive dropdowns in this application (like the `ThemeSwitcher`) use absolutely positioned `div` elements for menus and `button` elements for options. These frequently lack explicit ARIA listbox/option roles and `focus-visible` styling, making them hard to use for screen readers and keyboard users.
+**Action:** When working on custom dropdown menus or selectors, ensure `aria-haspopup="listbox"`, `aria-expanded` are set on the trigger, `role="listbox"` on the menu, `role="option"` and `aria-selected` on items, and always add `focus-visible` outline classes to interactive components.
