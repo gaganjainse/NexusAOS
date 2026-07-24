@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Systems Officer (CSO)
 
 ## Purpose
-To move **NexusAOS** from a reactive state to a proactive, continuous-flow state. This protocol governs the "Heartbeat" of the OS and the propagation of signals between branches.
+To move **SeshaAOS** from a reactive state to a proactive, continuous-flow state. This protocol governs the "Heartbeat" of the OS and the propagation of signals between branches.
 
 ## The Heartbeat
 - **Frequency:** 60 seconds (Standard).

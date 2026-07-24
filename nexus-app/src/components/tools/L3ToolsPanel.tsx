@@ -4,7 +4,7 @@ import {
   DBTable,
   GitCommit,
   ChatMessage,
-} from "../../types/nexus";
+} from "../../types/Sesha";
 import {
   Wrench,
   Globe,
@@ -73,14 +73,14 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
 
   // API Playground state
   const [apiMethod, setApiMethod] = useState<"GET" | "POST" | "PUT" | "DELETE">("POST");
-  const [apiUrl, setApiUrl] = useState("/api/nexus/vitals");
+  const [apiUrl, setApiUrl] = useState("/api/Sesha/vitals");
   const [apiHeaders, setApiHeaders] = useState('{\n  "Content-Type": "application/json"\n}');
   const [apiBody, setApiBody] = useState('{\n  "action": "conservation"\n}');
   const [apiResponse, setApiResponse] = useState<string | null>(null);
 
   // DB Browser state
   const [selectedTable, setSelectedTable] = useState<DBTable>(dbTables[0]);
-  const [sqlQuery, setSqlQuery] = useState(`SELECT * FROM ${dbTables[0]?.name || "nexus_directives"} LIMIT 10;`);
+  const [sqlQuery, setSqlQuery] = useState(`SELECT * FROM ${dbTables[0]?.name || "Sesha_directives"} LIMIT 10;`);
   const [queryResult, setQueryResult] = useState<any[] | null>(null);
 
   // Inbuilt Browser State for Top Rightbar
@@ -165,7 +165,7 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
           {activeTab === "chat" && (
             <>
               <MessageSquare className="w-3.5 h-3.5 text-purple-400" />
-              <span>NEXUS AI CO-PILOT CHAT</span>
+              <span>Sesha AI CO-PILOT CHAT</span>
             </>
           )}
           {activeTab === "diff" && (
@@ -314,26 +314,26 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
                 <iframe
                   src={browserUrl.startsWith("http") ? browserUrl : window.location.origin}
                   className="w-full flex-1 border-0 bg-white rounded-md"
-                  title="Nexus Inbuilt Dev Browser Workspace"
+                  title="Sesha Inbuilt Dev Browser Workspace"
                   sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 />
               </div>
 
               <div className="absolute bottom-2 right-3 text-[9px] font-mono text-zinc-500 bg-zinc-900/90 px-2 py-0.5 rounded border border-zinc-800 pointer-events-none">
-                Nexus Web Kernel v13.0 • HMR Live
+                Sesha Web Kernel v13.0 • HMR Live
               </div>
             </div>
           </div>
         )}
 
-        {/* TOP RIGHTBAR 2: NEXUS AI CHAT */}
+        {/* TOP RIGHTBAR 2: Sesha AI CHAT */}
         {activeTab === "chat" && (
           <div className="flex flex-col h-full gap-3">
             <div className="flex-1 overflow-y-auto space-y-3 pr-1">
               {chatMessages.length === 0 ? (
                 <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-xl text-center text-zinc-400">
                   <Bot className="w-8 h-8 text-purple-400 mx-auto mb-2 animate-bounce" />
-                  <p className="font-bold text-zinc-200">Nexus Sovereign Co-Pilot</p>
+                  <p className="font-bold text-zinc-200">Sesha Sovereign Co-Pilot</p>
                   <p className="text-[11px] mt-1 text-zinc-500">Ask any code question or issue multi-file directives.</p>
                 </div>
               ) : (
@@ -347,7 +347,7 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
                     }`}
                   >
                     <div className="font-bold text-[10px] text-zinc-400 mb-1 flex justify-between">
-                      <span>{msg.sender === "user" ? "You" : "Nexus Assistant"}</span>
+                      <span>{msg.sender === "user" ? "You" : "Sesha Assistant"}</span>
                       <span>{msg.timestamp}</span>
                     </div>
                     <div>{msg.text}</div>
@@ -361,7 +361,7 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
                 type="text"
                 value={chatInput}
                 onChange={(e) => setChatInput(e.target.value)}
-                placeholder="Ask Nexus Assistant..."
+                placeholder="Ask Sesha Assistant..."
                 className="flex-1 bg-zinc-900 border border-zinc-800 focus:border-purple-500 rounded-lg px-3 py-2 text-xs text-zinc-200 focus:outline-none"
               />
               <button
@@ -400,7 +400,7 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
             {/* Agent Directive Title */}
             <div className="px-1 pt-1">
               <h2 className="font-semibold text-zinc-100 text-sm tracking-tight">
-                User sends an initial greeting to Nexus.
+                User sends an initial greeting to Sesha.
               </h2>
             </div>
 
@@ -466,7 +466,7 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
               {/* Step 7: File not found */}
               <div className="p-2 bg-zinc-900/90 border border-zinc-800 rounded-lg flex items-center gap-2 text-zinc-400">
                 <AlertCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>File not found <strong className="text-zinc-300 font-mono">nexus_runtime.py</strong></span>
+                <span>File not found <strong className="text-zinc-300 font-mono">Sesha_runtime.py</strong></span>
               </div>
             </div>
 
@@ -521,8 +521,8 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
         {/* TOP RIGHTBAR 4: DOCUMENTATION */}
         {activeTab === "docs" && (
           <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-xl space-y-3 text-zinc-300 leading-relaxed text-xs">
-            <h3 className="text-sm font-bold text-cyan-300 border-b border-zinc-800 pb-2">Nexus Sovereign Architecture</h3>
-            <p>Nexus AOI combines multi-agent directive execution, 3D Pet companion monitoring, and full-stack local file workspace management.</p>
+            <h3 className="text-sm font-bold text-cyan-300 border-b border-zinc-800 pb-2">Sesha Sovereign Architecture</h3>
+            <p>Sesha AOI combines multi-agent directive execution, 3D Pet companion monitoring, and full-stack local file workspace management.</p>
             <ul className="list-disc pl-4 space-y-1 text-zinc-400">
               <li><strong className="text-cyan-400">L1 Panel:</strong> File Tree & Directives</li>
               <li><strong className="text-cyan-400">L2 Panel:</strong> Universal Code & File Inspector</li>
@@ -804,7 +804,7 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
             <div className="p-3 bg-[#18110b] border border-amber-800/60 rounded-xl flex flex-col gap-2 text-stone-300 shadow-md">
               <h4 className="text-amber-300 font-bold flex items-center gap-1.5 text-xs">
                 <FileText className="w-3.5 h-3.5 text-amber-400" />
-                <span>NEXUS-SANCTUM OS V4.2 SPEC</span>
+                <span>Sesha-SANCTUM OS V4.2 SPEC</span>
               </h4>
               <p className="text-[11px] leading-relaxed text-stone-400">
                 The Sanctum Kernel is modeled after Indian temple architecture (Mahaprakara, Garbhagriha, Gopuram), integrating 1.618 Phi golden ratio spatial snapping and generative cymatic soundwaves.
@@ -815,7 +815,7 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
                   <span>Interactive IDE Layer</span>
                 </div>
                 <div className="flex justify-between text-cyan-400 font-semibold">
-                  <span>Nexus Core Mode</span>
+                  <span>Sesha Core Mode</span>
                   <span>Autonomous Kernel Layer</span>
                 </div>
                 <div className="flex justify-between text-emerald-400 font-semibold">
@@ -832,3 +832,4 @@ export const L3ToolsPanel: React.FC<L3ToolsPanelProps> = React.memo(({
 });
 
 L3ToolsPanel.displayName = "L3ToolsPanel";
+

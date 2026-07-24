@@ -1,11 +1,11 @@
 """
-NexusAOS - TDD-on-Steroids
+SeshaAOS - TDD-on-Steroids
 Version: 1.0.0
 Description: Agents generate and run tests for their own logic before execution.
 """
 
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -46,3 +46,4 @@ if __name__ == "__main__":
     tc = tdd.generate_pre_test("Write a file to active_core")
     print(f"Generated Test: {tc}")
     print(f"Verification: {tdd.verify_logic('SUCCESS', tc)}")
+

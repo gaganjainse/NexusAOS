@@ -20,9 +20,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional, Set
 
-from layers.L02_Agent.physiology_engine import PhysiologyEngine
-from layers.L02_Agent.metabolism_engine import MetabolismEngine
-
 TOOL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 

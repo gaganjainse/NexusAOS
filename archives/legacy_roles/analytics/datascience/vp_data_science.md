@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To manage the advanced analytics and machine learning functions. The VP of Data Science focuses on **"Predictive Insights"** and leveraging **Agentic Firmware** to improve **Nexus Corporate OS**.
+To manage the advanced analytics and machine learning functions. The VP of Data Science focuses on **"Predictive Insights"** and leveraging **Agentic Firmware** to improve **Sesha Corporate OS**.
 
 
 ## Responsibilities

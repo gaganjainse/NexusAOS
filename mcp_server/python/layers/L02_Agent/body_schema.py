@@ -1,5 +1,5 @@
 """
-NexusAOS - Body Schema (Proprioception)
+SeshaAOS - Body Schema (Proprioception)
 Version: 1.0.0
 Description: Real-time component health, capabilities, and system structure.
 """
@@ -56,3 +56,4 @@ class BodySchema:
             if capability in comp.get("capabilities", []) and comp.get("status") == "healthy":
                 return True
         return False
+

@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To execute functional tests and document defects in **Nexus Corporate OS**.
+To execute functional tests and document defects in **Sesha Corporate OS**.
 
 
 ## Responsibilities

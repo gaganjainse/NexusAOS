@@ -176,70 +176,70 @@
     },
     {
         "name": ".env.example",
-        "path": "nexus-app\\.env.example",
+        "path": "Sesha-app\\.env.example",
         "size": 445,
         "mtime": 1784736461.904796,
         "type": ".example"
     },
     {
         "name": ".gitignore",
-        "path": "nexus-app\\.gitignore",
+        "path": "Sesha-app\\.gitignore",
         "size": 73,
         "mtime": 1784736461.9113593,
         "type": ""
     },
     {
         "name": "bun.lock",
-        "path": "nexus-app\\bun.lock",
+        "path": "Sesha-app\\bun.lock",
         "size": 74015,
         "mtime": 1784736462.0780282,
         "type": ".lock"
     },
     {
         "name": "index.html",
-        "path": "nexus-app\\index.html",
+        "path": "Sesha-app\\index.html",
         "size": 311,
         "mtime": 1784736461.9247286,
         "type": ".html"
     },
     {
         "name": "metadata.json",
-        "path": "nexus-app\\metadata.json",
+        "path": "Sesha-app\\metadata.json",
         "size": 360,
         "mtime": 1784736461.8956008,
         "type": ".json"
     },
     {
         "name": "package.json",
-        "path": "nexus-app\\package.json",
+        "path": "Sesha-app\\package.json",
         "size": 1008,
         "mtime": 1784736461.931535,
         "type": ".json"
     },
     {
         "name": "README.md",
-        "path": "nexus-app\\README.md",
+        "path": "Sesha-app\\README.md",
         "size": 542,
         "mtime": 1784736462.0997875,
         "type": ".md"
     },
     {
         "name": "server.ts",
-        "path": "nexus-app\\server.ts",
+        "path": "Sesha-app\\server.ts",
         "size": 8778,
         "mtime": 1784736462.0860658,
         "type": ".ts"
     },
     {
         "name": "tsconfig.json",
-        "path": "nexus-app\\tsconfig.json",
+        "path": "Sesha-app\\tsconfig.json",
         "size": 508,
         "mtime": 1784736462.0760238,
         "type": ".json"
     },
     {
         "name": "vite.config.ts",
-        "path": "nexus-app\\vite.config.ts",
+        "path": "Sesha-app\\vite.config.ts",
         "size": 708,
         "mtime": 1784736462.0910473,
         "type": ".ts"
@@ -414,252 +414,252 @@
     },
     {
         "name": "pet_3d.html",
-        "path": "nexus-app\\pet\\pet_3d.html",
+        "path": "Sesha-app\\pet\\pet_3d.html",
         "size": 35937,
         "mtime": 1784692206.2454894,
         "type": ".html"
     },
     {
         "name": "pet_bridge.py",
-        "path": "nexus-app\\pet\\pet_bridge.py",
+        "path": "Sesha-app\\pet\\pet_bridge.py",
         "size": 18991,
         "mtime": 1784692195.0948603,
         "type": ".py"
     },
     {
         "name": "pet_engine.py",
-        "path": "nexus-app\\pet\\pet_engine.py",
+        "path": "Sesha-app\\pet\\pet_engine.py",
         "size": 7743,
         "mtime": 1784692161.2851915,
         "type": ".py"
     },
     {
         "name": "pet_voice.py",
-        "path": "nexus-app\\pet\\pet_voice.py",
+        "path": "Sesha-app\\pet\\pet_voice.py",
         "size": 4240,
         "mtime": 1784692146.0047834,
         "type": ".py"
     },
     {
         "name": "requirements.txt",
-        "path": "nexus-app\\pet\\requirements.txt",
+        "path": "Sesha-app\\pet\\requirements.txt",
         "size": 190,
         "mtime": 1784692214.817705,
         "type": ".txt"
     },
     {
         "name": "__init__.py",
-        "path": "nexus-app\\pet\\__init__.py",
+        "path": "Sesha-app\\pet\\__init__.py",
         "size": 569,
         "mtime": 1784692210.8452487,
         "type": ".py"
     },
     {
         "name": "App.tsx",
-        "path": "nexus-app\\src\\App.tsx",
+        "path": "Sesha-app\\src\\App.tsx",
         "size": 42947,
         "mtime": 1784736461.9427426,
         "type": ".tsx"
     },
     {
         "name": "index.css",
-        "path": "nexus-app\\src\\index.css",
+        "path": "Sesha-app\\src\\index.css",
         "size": 4025,
         "mtime": 1784736461.950497,
         "type": ".css"
     },
     {
         "name": "main.tsx",
-        "path": "nexus-app\\src\\main.tsx",
+        "path": "Sesha-app\\src\\main.tsx",
         "size": 334,
         "mtime": 1784736461.935441,
         "type": ".tsx"
     },
     {
         "name": "GoldenRatioOverlay.tsx",
-        "path": "nexus-app\\src\\components\\GoldenRatioOverlay.tsx",
+        "path": "Sesha-app\\src\\components\\GoldenRatioOverlay.tsx",
         "size": 5931,
         "mtime": 1784736461.9910886,
         "type": ".tsx"
     },
     {
         "name": "HarmonicResonanceCanvas.tsx",
-        "path": "nexus-app\\src\\components\\HarmonicResonanceCanvas.tsx",
+        "path": "Sesha-app\\src\\components\\HarmonicResonanceCanvas.tsx",
         "size": 3616,
         "mtime": 1784736461.974569,
         "type": ".tsx"
     },
     {
         "name": "Navbar.tsx",
-        "path": "nexus-app\\src\\components\\Navbar.tsx",
+        "path": "Sesha-app\\src\\components\\Navbar.tsx",
         "size": 11005,
         "mtime": 1784736461.9587915,
         "type": ".tsx"
     },
     {
         "name": "SacredGeometryMandala.tsx",
-        "path": "nexus-app\\src\\components\\SacredGeometryMandala.tsx",
+        "path": "Sesha-app\\src\\components\\SacredGeometryMandala.tsx",
         "size": 4518,
         "mtime": 1784736461.9715598,
         "type": ".tsx"
     },
     {
         "name": "SoundscapeEngine.tsx",
-        "path": "nexus-app\\src\\components\\SoundscapeEngine.tsx",
+        "path": "Sesha-app\\src\\components\\SoundscapeEngine.tsx",
         "size": 11981,
         "mtime": 1784736461.9675508,
         "type": ".tsx"
     },
     {
         "name": "StatusBar.tsx",
-        "path": "nexus-app\\src\\components\\StatusBar.tsx",
+        "path": "Sesha-app\\src\\components\\StatusBar.tsx",
         "size": 8821,
         "mtime": 1784736461.9628,
         "type": ".tsx"
     },
     {
         "name": "TempleMantraEngine.tsx",
-        "path": "nexus-app\\src\\components\\TempleMantraEngine.tsx",
+        "path": "Sesha-app\\src\\components\\TempleMantraEngine.tsx",
         "size": 4647,
         "mtime": 1784736461.993093,
         "type": ".tsx"
     },
     {
         "name": "TemplePillarDecoration.tsx",
-        "path": "nexus-app\\src\\components\\TemplePillarDecoration.tsx",
+        "path": "Sesha-app\\src\\components\\TemplePillarDecoration.tsx",
         "size": 4088,
         "mtime": 1784736461.985554,
         "type": ".tsx"
     },
     {
         "name": "ThemeSwitcher.tsx",
-        "path": "nexus-app\\src\\components\\ThemeSwitcher.tsx",
+        "path": "Sesha-app\\src\\components\\ThemeSwitcher.tsx",
         "size": 3689,
         "mtime": 1784736461.998518,
         "type": ".tsx"
     },
     {
         "name": "VibeHistorySparkline.tsx",
-        "path": "nexus-app\\src\\components\\VibeHistorySparkline.tsx",
+        "path": "Sesha-app\\src\\components\\VibeHistorySparkline.tsx",
         "size": 3239,
         "mtime": 1784736461.974569,
         "type": ".tsx"
     },
     {
         "name": "VisualHapticRipple.tsx",
-        "path": "nexus-app\\src\\components\\VisualHapticRipple.tsx",
+        "path": "Sesha-app\\src\\components\\VisualHapticRipple.tsx",
         "size": 3061,
         "mtime": 1784736461.983545,
         "type": ".tsx"
     },
     {
         "name": "ThemeContext.tsx",
-        "path": "nexus-app\\src\\context\\ThemeContext.tsx",
+        "path": "Sesha-app\\src\\context\\ThemeContext.tsx",
         "size": 8478,
         "mtime": 1784736462.070264,
         "type": ".tsx"
     },
     {
         "name": "initialState.ts",
-        "path": "nexus-app\\src\\data\\initialState.ts",
+        "path": "Sesha-app\\src\\data\\initialState.ts",
         "size": 16892,
         "mtime": 1784736462.0570257,
         "type": ".ts"
     },
     {
-        "name": "nexus.ts",
-        "path": "nexus-app\\src\\types\\nexus.ts",
+        "name": "Sesha.ts",
+        "path": "Sesha-app\\src\\types\\Sesha.ts",
         "size": 3319,
         "mtime": 1784736462.0602362,
         "type": ".ts"
     },
     {
         "name": "L4BottomBar.tsx",
-        "path": "nexus-app\\src\\components\\bottombar\\L4BottomBar.tsx",
+        "path": "Sesha-app\\src\\components\\bottombar\\L4BottomBar.tsx",
         "size": 26058,
         "mtime": 1784736462.0114927,
         "type": ".tsx"
     },
     {
-        "name": "NexusCoreWorkspace.tsx",
-        "path": "nexus-app\\src\\components\\core\\NexusCoreWorkspace.tsx",
+        "name": "SeshaCoreWorkspace.tsx",
+        "path": "Sesha-app\\src\\components\\core\\SeshaCoreWorkspace.tsx",
         "size": 15641,
         "mtime": 1784736462.0114927,
         "type": ".tsx"
     },
     {
         "name": "L1ExplorerPanel.tsx",
-        "path": "nexus-app\\src\\components\\explorer\\L1ExplorerPanel.tsx",
+        "path": "Sesha-app\\src\\components\\explorer\\L1ExplorerPanel.tsx",
         "size": 13662,
         "mtime": 1784736462.0005238,
         "type": ".tsx"
     },
     {
         "name": "SystemMonitorModal.tsx",
-        "path": "nexus-app\\src\\components\\monitor\\SystemMonitorModal.tsx",
+        "path": "Sesha-app\\src\\components\\monitor\\SystemMonitorModal.tsx",
         "size": 27705,
         "mtime": 1784736462.025657,
         "type": ".tsx"
     },
     {
-        "name": "Nexus3DPetCompanion.tsx",
-        "path": "nexus-app\\src\\components\\pet\\Nexus3DPetCompanion.tsx",
+        "name": "Sesha3DPetCompanion.tsx",
+        "path": "Sesha-app\\src\\components\\pet\\Sesha3DPetCompanion.tsx",
         "size": 18043,
         "mtime": 1784736462.0387118,
         "type": ".tsx"
     },
     {
         "name": "PetCompanion.tsx",
-        "path": "nexus-app\\src\\components\\pet\\PetCompanion.tsx",
+        "path": "Sesha-app\\src\\components\\pet\\PetCompanion.tsx",
         "size": 16236,
         "mtime": 1784736462.043121,
         "type": ".tsx"
     },
     {
         "name": "L3ToolsPanel.tsx",
-        "path": "nexus-app\\src\\components\\tools\\L3ToolsPanel.tsx",
+        "path": "Sesha-app\\src\\components\\tools\\L3ToolsPanel.tsx",
         "size": 38339,
         "mtime": 1784736462.0491345,
         "type": ".tsx"
     },
     {
         "name": "L2Workspace.tsx",
-        "path": "nexus-app\\src\\components\\workspace\\L2Workspace.tsx",
+        "path": "Sesha-app\\src\\components\\workspace\\L2Workspace.tsx",
         "size": 42921,
         "mtime": 1784736462.0331604,
         "type": ".tsx"
     },
     {
         "name": "pet_bridge.cpython-313.pyc",
-        "path": "nexus-app\\pet\\__pycache__\\pet_bridge.cpython-313.pyc",
+        "path": "Sesha-app\\pet\\__pycache__\\pet_bridge.cpython-313.pyc",
         "size": 33052,
         "mtime": 1784692224.8405766,
         "type": ".pyc"
     },
     {
         "name": "pet_engine.cpython-313.pyc",
-        "path": "nexus-app\\pet\\__pycache__\\pet_engine.cpython-313.pyc",
+        "path": "Sesha-app\\pet\\__pycache__\\pet_engine.cpython-313.pyc",
         "size": 11832,
         "mtime": 1784692224.696149,
         "type": ".pyc"
     },
     {
         "name": "pet_voice.cpython-313.pyc",
-        "path": "nexus-app\\pet\\__pycache__\\pet_voice.cpython-313.pyc",
+        "path": "Sesha-app\\pet\\__pycache__\\pet_voice.cpython-313.pyc",
         "size": 6294,
         "mtime": 1784692224.7884493,
         "type": ".pyc"
     },
     {
         "name": "__init__.cpython-313.pyc",
-        "path": "nexus-app\\pet\\__pycache__\\__init__.cpython-313.pyc",
+        "path": "Sesha-app\\pet\\__pycache__\\__init__.cpython-313.pyc",
         "size": 741,
         "mtime": 1784692224.890639,
         "type": ".pyc"
     },
     {
         "name": ".gitignore",
-        "path": "nexus-app\\assets\\.aistudio\\.gitignore",
+        "path": "Sesha-app\\assets\\.aistudio\\.gitignore",
         "size": 2,
         "mtime": 1784736461.9172707,
         "type": ""
@@ -693,8 +693,8 @@
         "type": ".py"
     },
     {
-        "name": "nexus_gui_debug.log",
-        "path": "mcp_server\\python\\nexus_gui_debug.log",
+        "name": "Sesha_gui_debug.log",
+        "path": "mcp_server\\python\\Sesha_gui_debug.log",
         "size": 840,
         "mtime": 1784551551.794665,
         "type": ".log"
@@ -742,8 +742,8 @@
         "type": ".py"
     },
     {
-        "name": "nexus_boast_verifier.py",
-        "path": "mcp_server\\python\\evolved_skills\\nexus_boast_verifier.py",
+        "name": "Sesha_boast_verifier.py",
+        "path": "mcp_server\\python\\evolved_skills\\Sesha_boast_verifier.py",
         "size": 217,
         "mtime": 1784745776.8290322,
         "type": ".py"
@@ -805,15 +805,15 @@
         "type": ".py"
     },
     {
-        "name": "nexus_final_polish.py",
-        "path": "mcp_server\\python\\maintenance_core\\nexus_final_polish.py",
+        "name": "Sesha_final_polish.py",
+        "path": "mcp_server\\python\\maintenance_core\\Sesha_final_polish.py",
         "size": 8195,
         "mtime": 1784589973.8820763,
         "type": ".py"
     },
     {
-        "name": "nexus_indexer.py",
-        "path": "mcp_server\\python\\maintenance_core\\nexus_indexer.py",
+        "name": "Sesha_indexer.py",
+        "path": "mcp_server\\python\\maintenance_core\\Sesha_indexer.py",
         "size": 2395,
         "mtime": 1784590013.072811,
         "type": ".py"
@@ -1015,8 +1015,8 @@
         "type": ".py"
     },
     {
-        "name": "nexus_liver.py",
-        "path": "mcp_server\\python\\layers\\L02_Agent\\nexus_liver.py",
+        "name": "Sesha_liver.py",
+        "path": "mcp_server\\python\\layers\\L02_Agent\\Sesha_liver.py",
         "size": 1473,
         "mtime": 1784732770.6317854,
         "type": ".py"
@@ -1064,8 +1064,8 @@
         "type": ".py"
     },
     {
-        "name": "nexus_runtime.py",
-        "path": "mcp_server\\python\\layers\\L03_Runtime\\nexus_runtime.py",
+        "name": "Sesha_runtime.py",
+        "path": "mcp_server\\python\\layers\\L03_Runtime\\Sesha_runtime.py",
         "size": 11552,
         "mtime": 1784723731.238674,
         "type": ".py"
@@ -1120,8 +1120,8 @@
         "type": ".py"
     },
     {
-        "name": "nexus_assimilator.py",
-        "path": "mcp_server\\python\\layers\\L04_Composition\\nexus_assimilator.py",
+        "name": "Sesha_assimilator.py",
+        "path": "mcp_server\\python\\layers\\L04_Composition\\Sesha_assimilator.py",
         "size": 5041,
         "mtime": 1784720760.5076537,
         "type": ".py"
@@ -1323,8 +1323,8 @@
         "type": ".py"
     },
     {
-        "name": "nexus_senses.py",
-        "path": "mcp_server\\python\\layers\\L07_Integration\\nexus_senses.py",
+        "name": "Sesha_senses.py",
+        "path": "mcp_server\\python\\layers\\L07_Integration\\Sesha_senses.py",
         "size": 10680,
         "mtime": 1784720566.362544,
         "type": ".py"
@@ -1582,15 +1582,15 @@
         "type": ".py"
     },
     {
-        "name": "nexus_lattice.py",
-        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\nexus_lattice.py",
+        "name": "Sesha_lattice.py",
+        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\Sesha_lattice.py",
         "size": 3697,
         "mtime": 1784726527.3315754,
         "type": ".py"
     },
     {
-        "name": "nexus_mesh.py",
-        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\nexus_mesh.py",
+        "name": "Sesha_mesh.py",
+        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\Sesha_mesh.py",
         "size": 3321,
         "mtime": 1784726562.124163,
         "type": ".py"
@@ -1687,15 +1687,15 @@
         "type": ".pyc"
     },
     {
-        "name": "nexus_lattice.cpython-313.pyc",
-        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\__pycache__\\nexus_lattice.cpython-313.pyc",
+        "name": "Sesha_lattice.cpython-313.pyc",
+        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\__pycache__\\Sesha_lattice.cpython-313.pyc",
         "size": 5585,
         "mtime": 1784732669.0095284,
         "type": ".pyc"
     },
     {
-        "name": "nexus_mesh.cpython-313.pyc",
-        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\__pycache__\\nexus_mesh.cpython-313.pyc",
+        "name": "Sesha_mesh.cpython-313.pyc",
+        "path": "mcp_server\\python\\layers\\L12_Infrastructure\\__pycache__\\Sesha_mesh.cpython-313.pyc",
         "size": 5353,
         "mtime": 1784732669.0381947,
         "type": ".pyc"
@@ -1806,8 +1806,8 @@
         "type": ".pyc"
     },
     {
-        "name": "nexus_senses.cpython-313.pyc",
-        "path": "mcp_server\\python\\layers\\L07_Integration\\__pycache__\\nexus_senses.cpython-313.pyc",
+        "name": "Sesha_senses.cpython-313.pyc",
+        "path": "mcp_server\\python\\layers\\L07_Integration\\__pycache__\\Sesha_senses.cpython-313.pyc",
         "size": 15653,
         "mtime": 1784732668.7908244,
         "type": ".pyc"
@@ -1960,8 +1960,8 @@
         "type": ".pyc"
     },
     {
-        "name": "nexus_liver.cpython-313.pyc",
-        "path": "mcp_server\\python\\layers\\L02_Agent\\__pycache__\\nexus_liver.cpython-313.pyc",
+        "name": "Sesha_liver.cpython-313.pyc",
+        "path": "mcp_server\\python\\layers\\L02_Agent\\__pycache__\\Sesha_liver.cpython-313.pyc",
         "size": 2538,
         "mtime": 1784732781.8864348,
         "type": ".pyc"
@@ -2009,8 +2009,8 @@
         "type": ".json"
     },
     {
-        "name": "nexus_state.db",
-        "path": "mcp_server\\python\\core\\monitoring\\nexus_state.db",
+        "name": "Sesha_state.db",
+        "path": "mcp_server\\python\\core\\monitoring\\Sesha_state.db",
         "size": 28672,
         "mtime": 1784667148.4704802,
         "type": ".db"
@@ -2142,8 +2142,8 @@
         "type": ".zig"
     },
     {
-        "name": "nexus_state.db",
-        "path": "mcp_server\\core\\monitoring\\nexus_state.db",
+        "name": "Sesha_state.db",
+        "path": "mcp_server\\core\\monitoring\\Sesha_state.db",
         "size": 81920,
         "mtime": 1784737034.8389475,
         "type": ".db"
@@ -2184,8 +2184,8 @@
         "type": ".json"
     },
     {
-        "name": "nexus_state.db",
-        "path": "core\\monitoring\\nexus_state.db",
+        "name": "Sesha_state.db",
+        "path": "core\\monitoring\\Sesha_state.db",
         "size": 135168,
         "mtime": 1784749450.1988325,
         "type": ".db"
@@ -3458,22 +3458,22 @@
         "type": ".md"
     },
     {
-        "name": "nexus_input_parser_agent.md",
-        "path": "archives\\legacy_roles\\hq\\ncc\\nexus_input_parser_agent.md",
+        "name": "Sesha_input_parser_agent.md",
+        "path": "archives\\legacy_roles\\hq\\ncc\\Sesha_input_parser_agent.md",
         "size": 1738,
         "mtime": 1784590108.894739,
         "type": ".md"
     },
     {
-        "name": "nexus_omni_lead.md",
-        "path": "archives\\legacy_roles\\hq\\ncc\\nexus_omni_lead.md",
+        "name": "Sesha_omni_lead.md",
+        "path": "archives\\legacy_roles\\hq\\ncc\\Sesha_omni_lead.md",
         "size": 1692,
         "mtime": 1784649508.036732,
         "type": ".md"
     },
     {
-        "name": "nexus_orchestrator_agent.md",
-        "path": "archives\\legacy_roles\\hq\\ncc\\nexus_orchestrator_agent.md",
+        "name": "Sesha_orchestrator_agent.md",
+        "path": "archives\\legacy_roles\\hq\\ncc\\Sesha_orchestrator_agent.md",
         "size": 1746,
         "mtime": 1784649509.7666976,
         "type": ".md"
@@ -3927,8 +3927,8 @@
         "type": ".md"
     },
     {
-        "name": "nexus_logic_engine.md",
-        "path": "archives\\legacy_roles\\ai\\ai_integrity\\nexus_logic_engine.md",
+        "name": "Sesha_logic_engine.md",
+        "path": "archives\\legacy_roles\\ai\\ai_integrity\\Sesha_logic_engine.md",
         "size": 2284,
         "mtime": 1784543359.504737,
         "type": ".md"
@@ -4032,8 +4032,8 @@
         "type": ".md"
     },
     {
-        "name": "nexus_logic_engine.md",
-        "path": "archives\\legacy_roles\\agentic\\agentic_integrity\\nexus_logic_engine.md",
+        "name": "Sesha_logic_engine.md",
+        "path": "archives\\legacy_roles\\agentic\\agentic_integrity\\Sesha_logic_engine.md",
         "size": 2586,
         "mtime": 1784540098.8396025,
         "type": ".md"
@@ -4144,36 +4144,36 @@
         "type": ".md"
     },
     {
-        "name": "nexus_constitution.md",
-        "path": "archives\\dna_core\\foundation\\nexus_constitution.md",
+        "name": "Sesha_constitution.md",
+        "path": "archives\\dna_core\\foundation\\Sesha_constitution.md",
         "size": 1904,
         "mtime": 1784660739.941139,
         "type": ".md"
     },
     {
-        "name": "nexus_morals.json",
-        "path": "archives\\dna_core\\foundation\\nexus_morals.json",
+        "name": "Sesha_morals.json",
+        "path": "archives\\dna_core\\foundation\\Sesha_morals.json",
         "size": 897,
         "mtime": 1784660807.5627496,
         "type": ".json"
     },
     {
-        "name": "nexus_os_handover_guide.md",
-        "path": "archives\\dna_core\\foundation\\nexus_os_handover_guide.md",
+        "name": "Sesha_os_handover_guide.md",
+        "path": "archives\\dna_core\\foundation\\Sesha_os_handover_guide.md",
         "size": 690,
         "mtime": 1784653175.2593782,
         "type": ".md"
     },
     {
-        "name": "nexus_philosophy.md",
-        "path": "archives\\dna_core\\foundation\\nexus_philosophy.md",
+        "name": "Sesha_philosophy.md",
+        "path": "archives\\dna_core\\foundation\\Sesha_philosophy.md",
         "size": 679,
         "mtime": 1784653174.4268389,
         "type": ".md"
     },
     {
-        "name": "nexus_voice.md",
-        "path": "archives\\dna_core\\foundation\\nexus_voice.md",
+        "name": "Sesha_voice.md",
+        "path": "archives\\dna_core\\foundation\\Sesha_voice.md",
         "size": 1497,
         "mtime": 1784736016.251206,
         "type": ".md"
@@ -4193,8 +4193,8 @@
         "type": ".md"
     },
     {
-        "name": "universal_nexus_manifest.md",
-        "path": "archives\\dna_core\\foundation\\universal_nexus_manifest.md",
+        "name": "universal_Sesha_manifest.md",
+        "path": "archives\\dna_core\\foundation\\universal_Sesha_manifest.md",
         "size": 3832,
         "mtime": 1784751134.4730418,
         "type": ".md"
@@ -4459,15 +4459,15 @@
         "type": ".md"
     },
     {
-        "name": "nexus_operational_ledger.md",
-        "path": "archives\\dna_core\\monitoring_dna\\nexus_operational_ledger.md",
+        "name": "Sesha_operational_ledger.md",
+        "path": "archives\\dna_core\\monitoring_dna\\Sesha_operational_ledger.md",
         "size": 1033,
         "mtime": 1784543387.857301,
         "type": ".md"
     },
     {
-        "name": "nexus_system_diagnostics.md",
-        "path": "archives\\dna_core\\monitoring_dna\\nexus_system_diagnostics.md",
+        "name": "Sesha_system_diagnostics.md",
+        "path": "archives\\dna_core\\monitoring_dna\\Sesha_system_diagnostics.md",
         "size": 688,
         "mtime": 1784543359.4907372,
         "type": ".md"
@@ -4578,64 +4578,64 @@
         "type": ".md"
     },
     {
-        "name": "nexus_agent_recovery_and_correction_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_agent_recovery_and_correction_protocol.md",
+        "name": "Sesha_agent_recovery_and_correction_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_agent_recovery_and_correction_protocol.md",
         "size": 706,
         "mtime": 1784543359.4927373,
         "type": ".md"
     },
     {
-        "name": "nexus_ai_disclosure_and_transparency_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_ai_disclosure_and_transparency_protocol.md",
+        "name": "Sesha_ai_disclosure_and_transparency_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_ai_disclosure_and_transparency_protocol.md",
         "size": 716,
         "mtime": 1784543359.4937372,
         "type": ".md"
     },
     {
-        "name": "nexus_auto_exec.md",
-        "path": "archives\\dna_core\\protocols\\nexus_auto_exec.md",
+        "name": "Sesha_auto_exec.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_auto_exec.md",
         "size": 679,
         "mtime": 1784543359.4947374,
         "type": ".md"
     },
     {
-        "name": "nexus_boot_and_deployment_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_boot_and_deployment_protocol.md",
+        "name": "Sesha_boot_and_deployment_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_boot_and_deployment_protocol.md",
         "size": 698,
         "mtime": 1784543359.4947374,
         "type": ".md"
     },
     {
-        "name": "nexus_crisis_and_anomaly_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_crisis_and_anomaly_protocol.md",
+        "name": "Sesha_crisis_and_anomaly_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_crisis_and_anomaly_protocol.md",
         "size": 697,
         "mtime": 1784543359.4957373,
         "type": ".md"
     },
     {
-        "name": "nexus_global_localization_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_global_localization_protocol.md",
+        "name": "Sesha_global_localization_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_global_localization_protocol.md",
         "size": 698,
         "mtime": 1784543359.4967368,
         "type": ".md"
     },
     {
-        "name": "nexus_packaging_and_mcp_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_packaging_and_mcp_protocol.md",
+        "name": "Sesha_packaging_and_mcp_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_packaging_and_mcp_protocol.md",
         "size": 694,
         "mtime": 1784543359.497735,
         "type": ".md"
     },
     {
-        "name": "nexus_shutdown_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_shutdown_protocol.md",
+        "name": "Sesha_shutdown_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_shutdown_protocol.md",
         "size": 687,
         "mtime": 1784543359.497735,
         "type": ".md"
     },
     {
-        "name": "nexus_tooling_and_asset_protocol.md",
-        "path": "archives\\dna_core\\protocols\\nexus_tooling_and_asset_protocol.md",
+        "name": "Sesha_tooling_and_asset_protocol.md",
+        "path": "archives\\dna_core\\protocols\\Sesha_tooling_and_asset_protocol.md",
         "size": 694,
         "mtime": 1784543359.4987347,
         "type": ".md"
@@ -4690,8 +4690,8 @@
         "type": ".md"
     },
     {
-        "name": "nexus_boast_verifier.json",
-        "path": "archives\\dna_core\\skills_genome\\nexus_boast_verifier.json",
+        "name": "Sesha_boast_verifier.json",
+        "path": "archives\\dna_core\\skills_genome\\Sesha_boast_verifier.json",
         "size": 179,
         "mtime": 1784745776.8290322,
         "type": ".json"
@@ -4704,71 +4704,71 @@
         "type": ".json"
     },
     {
-        "name": "nexus_spore_20260720_173821.zip",
-        "path": "archives\\dna_core\\lineage\\spores\\nexus_spore_20260720_173821.zip",
+        "name": "Sesha_spore_20260720_173821.zip",
+        "path": "archives\\dna_core\\lineage\\spores\\Sesha_spore_20260720_173821.zip",
         "size": 107573,
         "mtime": 1784549301.8132915,
         "type": ".zip"
     },
     {
-        "name": "nexus_cycle_1784739687.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784739687.json",
+        "name": "Sesha_cycle_1784739687.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784739687.json",
         "size": 588,
         "mtime": 1784739687.0466716,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784740274.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784740274.json",
+        "name": "Sesha_cycle_1784740274.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784740274.json",
         "size": 697,
         "mtime": 1784740274.3082345,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784742573.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784742573.json",
+        "name": "Sesha_cycle_1784742573.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784742573.json",
         "size": 557,
         "mtime": 1784742573.390565,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784743437.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784743437.json",
+        "name": "Sesha_cycle_1784743437.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784743437.json",
         "size": 587,
         "mtime": 1784743437.946715,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784745457.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784745457.json",
+        "name": "Sesha_cycle_1784745457.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784745457.json",
         "size": 606,
         "mtime": 1784745457.1876805,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784747809.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784747809.json",
+        "name": "Sesha_cycle_1784747809.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784747809.json",
         "size": 683,
         "mtime": 1784747809.6995199,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784748423.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784748423.json",
+        "name": "Sesha_cycle_1784748423.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784748423.json",
         "size": 685,
         "mtime": 1784748423.0966923,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784749097.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784749097.json",
+        "name": "Sesha_cycle_1784749097.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784749097.json",
         "size": 589,
         "mtime": 1784749097.058899,
         "type": ".json"
     },
     {
-        "name": "nexus_cycle_1784751178.json",
-        "path": "archives\\dna_core\\learning\\conversation_vault\\nexus_cycle_1784751178.json",
+        "name": "Sesha_cycle_1784751178.json",
+        "path": "archives\\dna_core\\learning\\conversation_vault\\Sesha_cycle_1784751178.json",
         "size": 738,
         "mtime": 1784751178.3171556,
         "type": ".json"
@@ -4823,22 +4823,22 @@
         "type": ".json"
     },
     {
-        "name": "nexus_aos.db",
-        "path": "active_core\\exports\\nexus_aos.db",
+        "name": "Sesha_aos.db",
+        "path": "active_core\\exports\\Sesha_aos.db",
         "size": 380928,
         "mtime": 1784552159.3715873,
         "type": ".db"
     },
     {
-        "name": "nexus_aos_logic_export.json",
-        "path": "active_core\\exports\\nexus_aos_logic_export.json",
+        "name": "Sesha_aos_logic_export.json",
+        "path": "active_core\\exports\\Sesha_aos_logic_export.json",
         "size": 87321,
         "mtime": 1784654108.3910005,
         "type": ".json"
     },
     {
-        "name": "nexus_file_index.json",
-        "path": "active_core\\exports\\nexus_file_index.json",
+        "name": "Sesha_file_index.json",
+        "path": "active_core\\exports\\Sesha_file_index.json",
         "size": 445646,
         "mtime": 1784653737.0263488,
         "type": ".json"
@@ -4879,8 +4879,8 @@
         "type": ".bsf"
     },
     {
-        "name": "nexus_state.db",
-        "path": "active_core\\monitoring_active\\nexus_state.db",
+        "name": "Sesha_state.db",
+        "path": "active_core\\monitoring_active\\Sesha_state.db",
         "size": 28672,
         "mtime": 1784644630.170423,
         "type": ".db"
@@ -4921,8 +4921,8 @@
         "type": ".json"
     },
     {
-        "name": "nexus_logic.yaml",
-        "path": "active_core\\nlg\\nexus_logic.yaml",
+        "name": "Sesha_logic.yaml",
+        "path": "active_core\\nlg\\Sesha_logic.yaml",
         "size": 346970,
         "mtime": 1784653537.601637,
         "type": ".yaml"

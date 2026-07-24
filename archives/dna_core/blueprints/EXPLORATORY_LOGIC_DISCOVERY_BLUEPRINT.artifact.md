@@ -6,7 +6,7 @@ Objective: Mastery of Abduction, Heuristic Search, and Terraforming Unknown Know
 Inference to the "Best Explanation" from incomplete or messy data sets.
 - **The Structural Guess:** Observing a set of surprising facts ($F$) and asking: "What underlying reality ($R$) would make $F$ predictable?"
 - **The Explanatory Virtue:** Choosing the theory that is most simple, powerful, and consistent with existing Blueprints.
-- **Nexus Protocol:** Using abduction to diagnose "Ghost Bugs" or emerging market trends.
+- **Sesha Protocol:** Using abduction to diagnose "Ghost Bugs" or emerging market trends.
 
 ## 2. Terraforming Unknown Domains (Epistemic Colonization)
 The process of turning a chaotic field of information into a structured, usable knowledge landscape.
@@ -27,4 +27,4 @@ Rules of thumb for navigating high-dimensional problem spaces without exhaustive
 - **Search pruning:** Using "Crystal Logic" to immediately discard low-probability logic branches.
 
 ---
-*Status: FORGED | Nexus discovers what is hidden; Nexus maps what is unknown.*
+*Status: FORGED | Sesha discovers what is hidden; Sesha maps what is unknown.*

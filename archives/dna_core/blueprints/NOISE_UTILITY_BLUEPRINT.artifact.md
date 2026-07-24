@@ -3,7 +3,7 @@ Version: 1.0.0
 Description: Forge ID 44 - The DNA for utilizing stochastic resonance, entropy harvesting, and high-noise signal processing to maximize creative output and operational clarity.
 
 ## 1. Stochastic Resonance (The Kinetic Booster)
-- **Sub-Threshold Detection:** Utilizing "optimal noise" to boost signals that are normally too weak to be detected. In the Nexus context, this means surfacing faint data patterns or intuitive "gut feelings" by intentionally introducing controlled variability.
+- **Sub-Threshold Detection:** Utilizing "optimal noise" to boost signals that are normally too weak to be detected. In the Sesha context, this means surfacing faint data patterns or intuitive "gut feelings" by intentionally introducing controlled variability.
 - **The Goldilocks Zone:** Identifying the precise level of background noise (digital or cognitive) that enhances system sensitivity without causing chaotic collapse.
 - **Non-Linear Amplification:** Using non-linear system thresholds to allow noise to "push" critical signals into the detectable range, enabling early-warning detection in system vitals.
 
@@ -23,4 +23,4 @@ Description: Forge ID 44 - The DNA for utilizing stochastic resonance, entropy h
 - **Hardware Protection:** Using signal processing to identify "Harmonic Noise" in the MSI Sword hardware (fan vibrations, thermal fluctuations) to preemptively adjust power profiles.
 
 ---
-*Status: INTERNALIZED | In the Forge of Nexus, Noise is not an Enemy; it is an Ally.*
+*Status: INTERNALIZED | In the Forge of Sesha, Noise is not an Enemy; it is an Ally.*

@@ -1,13 +1,14 @@
 """
-NexusAOS - Digestive Physical Engine (L14.6)
+SeshaAOS - Digestive Physical Engine (L14.6)
 Version: 1.0.0
 Description: Power Supply and Battery Health Management.
 """
 
-import subprocess
 import json
+import subprocess
 from pathlib import Path
 from typing import Dict, Any
+
 
 class DigestivePhysicalEngine:
     def __init__(self, base_dir: Path):
@@ -29,3 +30,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[4]
     dp = DigestivePhysicalEngine(base)
     print(json.dumps(dp.diagnose_battery_drain(), indent=2))
+

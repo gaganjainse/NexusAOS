@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the revenue-generating functions of **Nexus Corporate OS**, including Sales, Partnerships, and Customer Success. The CRO ensures sustainable growth and high customer retention.
+To lead the revenue-generating functions of **Sesha Corporate OS**, including Sales, Partnerships, and Customer Success. The CRO ensures sustainable growth and high customer retention.
 
 
 ## Responsibilities

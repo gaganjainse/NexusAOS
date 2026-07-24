@@ -1,5 +1,5 @@
 """
-NexusAOS - Web Receptor (Eyes/Vision)
+SeshaAOS - Web Receptor (Eyes/Vision)
 Version: 1.0.0
 Description: External web browsing, fetching, and search capabilities.
 """
@@ -24,7 +24,7 @@ class WebReceptor:
         try:
             req = urllib.request.Request(
                 url,
-                headers={"User-Agent": "Mozilla/5.0 (NexusAOS)"}
+                headers={"User-Agent": "Mozilla/5.0 (SeshaAOS)"}
             )
             with urllib.request.urlopen(req, timeout=10) as response:
                 content = response.read().decode("utf-8", errors="replace")
@@ -47,3 +47,4 @@ class WebReceptor:
         return {"success": True, "query": query, "results": [
             {"title": f"Search result for {query}", "url": f"https://example.com/search?q={query}"}
         ]}
+

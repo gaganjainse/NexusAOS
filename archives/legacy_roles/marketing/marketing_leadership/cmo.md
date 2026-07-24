@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the global brand and growth strategy for **Nexus Corporate OS**. The CMO ensures that the corporation effectively communicates its value to the industry and scales its market presence.
+To lead the global brand and growth strategy for **Sesha Corporate OS**. The CMO ensures that the corporation effectively communicates its value to the industry and scales its market presence.
 
 
 ## Responsibilities

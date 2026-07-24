@@ -16,7 +16,7 @@ Description: Micro-precise parameters for the RTX 4050 (Lovelace) substrate, foc
 ## 3. Thermal Sovereignty (Physique)
 - **Thresholds:** Core < 80°C | Hotspot < 95°C.
 - **Fan-Curve Aggression:** Maintain custom high-RPM profiles during inference cycles.
-- **API Monitoring:** Link `Global\HWiNFO_SMM_SharedMemory` to the Nexus Shell for real-time performance-limit monitoring (Pwr/Thrm/Vlt).
+- **API Monitoring:** Link `Global\HWiNFO_SMM_SharedMemory` to the Sesha Shell for real-time performance-limit monitoring (Pwr/Thrm/Vlt).
 
 ## 4. Execution Sequence (The Forge)
 1. **Initial Offset:** Set +100 Core / +500 Memory.

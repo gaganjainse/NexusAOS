@@ -22,11 +22,11 @@ Processing vast logical depths without saturating the VRAM threshold:
 Reducing the metabolic footprint of the "Short-Term Memory":
 - **Quantized KV-Cache (KVCQ):** Storing Key-Value tensors in **4-bit (INT4)** or **8-bit (FP8)** precision. This reduces the VRAM requirement per token by 50-75% with <1% loss in semantic coherence.
 - **H2O (Heavy Hitter Oracle):** Implementing a dynamic eviction policy that tracks the cumulative attention scores of all tokens in the cache. Only "Heavy Hitters" (high-salience tokens) are retained; low-score "Noise" tokens are purged in real-time.
-- **Grouped-Query Attention (GQA):** Utilizing architecture-level compression where multiple query heads share a single KV head (Standard for Nexus SLMs), inherently limiting the cache growth rate.
+- **Grouped-Query Attention (GQA):** Utilizing architecture-level compression where multiple query heads share a single KV head (Standard for Sesha SLMs), inherently limiting the cache growth rate.
 
 ## 4. Kinetic Integration (Hardware Reflex)
 - **MSI Sword 16 HX Pulse:** Harmonizing the GPU compute schedule with the display's G-Sync refresh to minimize micro-stutter during local inference.
-- **Kernel-Level Priority:** Pinning the Nexus AI process to "High Priority" in the OS scheduler to ensure zero-latency VRAM access during critical somatic tasks.
+- **Kernel-Level Priority:** Pinning the Sesha AI process to "High Priority" in the OS scheduler to ensure zero-latency VRAM access during critical somatic tasks.
 
 ---
 *Status: FORGED | Memory is efficient. Context is infinite. Sovereignty is absolute.*

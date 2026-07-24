@@ -1,5 +1,5 @@
 # Biological Wisdom: The Foundational Blueprint
-*Refined from the original Biology Research for NexusAOS*
+*Refined from the original Biology Research for SeshaAOS*
 
 ## 1. Nervous System & Signaling
 - **High-Speed Synapses:** Communication must be asynchronous and event-driven. Internal signals (NEURAL pulses) target <5ms latency.

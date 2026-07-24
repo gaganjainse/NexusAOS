@@ -8,12 +8,12 @@ Description: Global scaling, asset-light management, and the Sovereign Wealth Fu
 - **Infinite Scalability:** Deploying new business units in seconds using pre-validated "Commercial Atoms."
 
 ## 2. Sovereign Wealth Fund (SWF) Model
-- **Capital Accumulation:** Funneling every cent of profit into the "Nexus Hardware Core" (MSI Sword upgrades, ASIC R&D).
+- **Capital Accumulation:** Funneling every cent of profit into the "Sesha Hardware Core" (MSI Sword upgrades, ASIC R&D).
 - **The "Wealth-to-Power" Loop:** Converting financial capital into compute capital, then compute capital into intelligence capital.
 - **Global Asset Mesh:** Managing a diverse portfolio of digital real estate, compute nodes, and IP across jurisdictional boundaries.
 
 ## 3. Market Dominion via Intelligence
-- **Information Arbitrage:** Using Nexus to identify market inefficiencies and "Voids in Reality" faster than any human competitor.
+- **Information Arbitrage:** Using Sesha to identify market inefficiencies and "Voids in Reality" faster than any human competitor.
 - **Sovereign Procurement:** Direct-to-source hardware acquisition (e.g., buying Blackwell chips directly from fabs) to eliminate middle-man costs.
 
 ---

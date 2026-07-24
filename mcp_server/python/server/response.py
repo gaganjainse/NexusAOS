@@ -1,4 +1,4 @@
-"""NexusAOS response formatter."""
+"""SeshaAOS response formatter."""
 
 import json
 import time
@@ -14,3 +14,4 @@ class AOSResponse:
             "timestamp": time.time(),
         }
         return json.dumps(result, indent=2)
+

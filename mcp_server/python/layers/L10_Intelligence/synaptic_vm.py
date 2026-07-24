@@ -1,11 +1,11 @@
 """
-NexusAOS - Synaptic Virtual Machine (SVM)
+SeshaAOS - Synaptic Virtual Machine (SVM)
 Version: 1.0.0
 Description: Orchestrates NEURAL 5.0 kernels (Mojo/Zig) and minimizes Free Energy.
 """
 
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -64,3 +64,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     svm = SynapticVM(base)
     print(svm.process_belief_shift("Nervous::CORE", {"status": "anomalous"}))
+

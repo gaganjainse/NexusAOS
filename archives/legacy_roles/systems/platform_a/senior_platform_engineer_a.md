@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To drive the systems delivery of the **Nexus Corporate OS** [CORE_PLATFORM] application. The Senior [PLATFORM_A] Implementer handles the most complex challenges, including **Firmware Asset** interop and data synchronization.
+To drive the systems delivery of the **Sesha Corporate OS** [CORE_PLATFORM] application. The Senior [PLATFORM_A] Implementer handles the most complex challenges, including **Firmware Asset** interop and data synchronization.
 
 
 ## Responsibilities

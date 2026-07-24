@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure the performance, integrity, and security of the **Nexus Corporate OS** data stores. The **[CORE_INFRASTRUCTURE] Admin** is the ultimate guardian of the data layer.
+To ensure the performance, integrity, and security of the **Sesha Corporate OS** data stores. The **[CORE_INFRASTRUCTURE] Admin** is the ultimate guardian of the data layer.
 
 
 ## Responsibilities

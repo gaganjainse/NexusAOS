@@ -1,6 +1,6 @@
 {
   "mcpVersion": "1.0",
-  "name": "NexusAOS (Hybrid Bridge)",
+  "name": "SeshaAOS (Hybrid Bridge)",
   "version": "1.0.0",
   "description": "Dual-stack MCP server combining Node.js stability with Agentic logic.",
   "engines": {
@@ -9,27 +9,27 @@
   },
   "resources": [
     {
-      "uri": "nexus://core/handbook",
+      "uri": "Sesha://core/handbook",
       "name": "AOS Handbook",
       "mimeType": "text/markdown",
       "path": "../../archives/dna_core/foundation/aos_handbook.md"
     },
     {
-      "uri": "nexus://core/constitution",
-      "name": "Nexus Constitution",
+      "uri": "Sesha://core/constitution",
+      "name": "Sesha Constitution",
       "mimeType": "text/markdown",
-      "path": "../../archives/dna_core/foundation/nexus_constitution.md"
+      "path": "../../archives/dna_core/foundation/Sesha_constitution.md"
     },
     {
-      "uri": "nexus://core/logic",
+      "uri": "Sesha://core/logic",
       "name": "Logic Export",
       "mimeType": "application/json",
-      "path": "./nexus_aos_logic_export.json"
+      "path": "./Sesha_aos_logic_export.json"
     }
   ],
   "tools": [
     {
-      "name": "boot_nexus",
+      "name": "boot_Sesha",
       "description": "Triggers initialization (delegates to Agentic Engine).",
       "inputSchema": {
         "type": "object",

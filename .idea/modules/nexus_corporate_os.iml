@@ -2,7 +2,7 @@
 <module type="EMPTY_MODULE" version="4">
   <component name="FacetManager">
     <facet type="mojo" name="Mojo">
-      <configuration installerTool="PIXI" installerVersion="" installSkills="false" />
+      <configuration installerTool="PIXI" installerVersion="0.73.0" installSkills="true" />
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">

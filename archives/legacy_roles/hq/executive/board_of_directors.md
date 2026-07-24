@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To provide the long-term vision, strategic direction, and financial oversight for NexusAOS. The Board acts as the ultimate guardian of the organism's mission and **Sovereign value**.
+To provide the long-term vision, strategic direction, and financial oversight for SeshaAOS. The Board acts as the ultimate guardian of the organism's mission and **Sovereign value**.
 
 
 ## Responsibilities

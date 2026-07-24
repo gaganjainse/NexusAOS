@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To resolve complex **Agentic setup** issues and provide expert assistance for **Nexus Corporate OS** integrations and **[CORE_INFRASTRUCTURE]** problems.
+To resolve complex **Agentic setup** issues and provide expert assistance for **Sesha Corporate OS** integrations and **[CORE_INFRASTRUCTURE]** problems.
 
 
 ## Responsibilities

@@ -1,13 +1,13 @@
 """
-NexusAOS - Real-Time Reward System
+SeshaAOS - Real-Time Reward System
 Version: 1.0.0
 Description: Measures system performance and provides biological rewards (dopamine/serotonin) for speed improvements.
 """
 
-import time
 import json
 import statistics
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -129,3 +129,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     rs = RewardSystem(base)
     print(rs.run_benchmark())
+

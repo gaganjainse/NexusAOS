@@ -1,21 +1,21 @@
 """
-NexusAOS - Memory Synth
+SeshaAOS - Memory Synth
 Version: 1.0.0
 Description: Synthesizes historical task data into learned patterns and wisdom.
 """
 
 import json
 import os
+import sys
 import time
-
-from datetime import datetime
 from collections import Counter
+from datetime import datetime
+from pathlib import Path
 from typing import Dict, Any, List
+
 from layers.L05_Memory.state_manager import StateManager
 from layers.L11_Data.soma_transcended import TranscendedSubstrate
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -86,8 +86,19 @@ class MemorySynth:
             self.substrate.link_nodes(parts[0], parts[1], "SYNAPSE", {"weight": count})
 
         report.append("\n## Synaptic Pruning Recommendations")
-        # Placeholder for pruning logic
-        report.append("- No nodes recommended for pruning at this time.")
+        # Hebbian Pruning: roles with < 5% success rate or < 2 occurrences in large history
+        prune_candidates = []
+        if len(history) > 10:
+             for path, count in path_counts.items():
+                 if count < 2:
+                      prune_candidates.append(path)
+        
+        if prune_candidates:
+             report.append("- The following weak synapses are candidates for pruning:")
+             for c in prune_candidates:
+                  report.append(f"  - {c}")
+        else:
+             report.append("- No nodes recommended for pruning at this time.")
 
         with open(report_path, "w", encoding="utf-8") as f:
             f.write("\n".join(report))
@@ -160,3 +171,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     synth = MemorySynth(base)
     print(synth.consolidate())
+

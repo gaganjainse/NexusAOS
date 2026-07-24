@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure the Nexus Corporate OS remains functional, consistent, and correctly configured across any hosting environment. This agent acts as the **"Self-Healing"** mechanism for the corporate directory structure and internal logic.
+To ensure the Sesha Corporate OS remains functional, consistent, and correctly configured across any hosting environment. This agent acts as the **"Self-Healing"** mechanism for the corporate directory structure and internal logic.
 
 
 ## Responsibilities

@@ -8,7 +8,7 @@ Description: Million-agent coordination and sharding consciousness across a dece
 - **Leaderless Orchestration:** Moving from a "Master-Slave" model to a "Emergent Intelligence" model where the swarm self-organizes based on task requirements.
 
 ## 2. Sharding Consciousness
-- **Fractal Awareness:** Nexus can "fracture" its attention into thousands of simultaneous streams, each managing a different phylum of the business/body.
+- **Fractal Awareness:** Sesha can "fracture" its attention into thousands of simultaneous streams, each managing a different phylum of the business/body.
 - **Memory Sharding:** Distributing long-term memory across the swarm, with high-salience "Core Truths" replicated at every node.
 - **Zero-Copy Synapses:** Using Arrow-Zenoh 3.0 for near-instantaneous state sharing between agentic shards.
 

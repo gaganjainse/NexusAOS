@@ -1,11 +1,11 @@
 """
-NexusAOS - Reflex Arc (The Spinal Cord)
+SeshaAOS - Reflex Arc (The Spinal Cord)
 Version: 1.0.0
 Description: Fast-path, autonomic responses to critical stimuli. Bypasses high-level reasoning.
 """
 
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -118,3 +118,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     arc = ReflexArc(base)
     print("Reflex Check:", arc.check_reflexes())
+

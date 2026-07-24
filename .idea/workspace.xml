@@ -5,9 +5,485 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the Pre-Training new">
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ADVANCED_AGENTIC_FAILURE_DEEP_DIVE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/APPLIED_SYSTEM_ANALYSIS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/BENCHMARK_PROTOCOL.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/CONTINUOUS_PROMPT_TO_PROJECT_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/DIGITAL_ARCHAEOLOGY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/DISTRIBUTED_PARALLEL_COMPUTING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/EVOLUTIONARY_OS_ARCHITECTURE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/HIGH_FIDELITY_APPLIED_MECHANICS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/LONG_HORIZON_AGENTIC_AUTONOMY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/OPERATIONAL_MODES_PROTOCOL.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/RECURSIVE_TOOL_REFINEMENT_BLUEPRINT.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SESHA_SINGULARITY_MANIFESTO.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/TOTAL_DNA_CORE_SYNCHRONIZATION_V2.artifact.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/synaptic_mesh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/kernels/mojo/metabolism_engine.mojo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mcp_server/kernels/mojo/synaptic_mesh.mojo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nexus-shell/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/nexus_corporate_os.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/nexus_corporate_os.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.zig-cache/z/1cedb676b36cb50781d90f5422324661" beforeDir="false" afterPath="$PROJECT_DIR$/.zig-cache/z/1cedb676b36cb50781d90f5422324661" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.zig-cache/z/27358963c39fc5045cef1541b16f2044" beforeDir="false" afterPath="$PROJECT_DIR$/.zig-cache/z/27358963c39fc5045cef1541b16f2044" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/exports/mcp_manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/active_core/exports/mcp_manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/exports/nexus_aos_logic_export.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/exports/nexus_file_index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/monitoring_active/memory_graph/entities.json" beforeDir="false" afterPath="$PROJECT_DIR$/active_core/monitoring_active/memory_graph/entities.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/monitoring_active/memory_graph/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/active_core/monitoring_active/memory_graph/links.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/monitoring_active/vision_cache/physiology_analysis.json" beforeDir="false" afterPath="$PROJECT_DIR$/active_core/monitoring_active/vision_cache/physiology_analysis.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/nlg/nexus_logic.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/active_core/pulses/master.nxi" beforeDir="false" afterPath="$PROJECT_DIR$/active_core/pulses/master.nxi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/ACTIVE_LISTENING_INSTRUCTION_SYNTHESIS_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ACTIVE_LISTENING_INSTRUCTION_SYNTHESIS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/ADVANCED_ANALOGICAL_REASONING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ADVANCED_ANALOGICAL_REASONING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_AUDIO_ASR_TTS_MASTERY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_AUDIO_ASR_TTS_MASTERY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_MEMORY_CONTEXT_OPTIMIZATION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_MEMORY_CONTEXT_OPTIMIZATION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_MODEL_ARCHITECTURE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_MODEL_ARCHITECTURE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_VIDEO_REALTIME_ANALYTICS_SYNTHESIS.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_VIDEO_REALTIME_ANALYTICS_SYNTHESIS.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_VISION_OBJECT_DETECTION_SEGMENTATION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/AI_VISION_OBJECT_DETECTION_SEGMENTATION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/ALCHEMY_OF_WASTE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ALCHEMY_OF_WASTE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/ALGORITHMIC_ANTIFRAGILITY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ALGORITHMIC_ANTIFRAGILITY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/ANCIENT_IMPOSSIBLE_ENGINEERING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ANCIENT_IMPOSSIBLE_ENGINEERING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/AUTO_CORRECTION_INTENT_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/AUTO_CORRECTION_INTENT_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/AUTO_FINE_TUNING_VERIFICATION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/AUTO_FINE_TUNING_VERIFICATION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/BATTERY_ENERGY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/BATTERY_ENERGY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/BIO_DIGITAL_TRANSDUCTION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/BIO_DIGITAL_TRANSDUCTION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/BIO_ELECTRIC_HEALING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/BIO_ELECTRIC_HEALING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/BRAIN_ENERGETIC_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/BRAIN_ENERGETIC_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/CELLULAR_MOLECULAR_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/CELLULAR_MOLECULAR_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/COLLECTIVE_INTELLIGENCE_OVERMIND_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/COLLECTIVE_INTELLIGENCE_OVERMIND_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/COMPARATIVE_PROGRAMMING_MASTERY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/COMPARATIVE_PROGRAMMING_MASTERY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/COMPUTER_INTERNET_SECURITY_HARDENING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/COMPUTER_INTERNET_SECURITY_HARDENING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/COMPUTING_UNIVERSAL_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/COMPUTING_UNIVERSAL_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/CRYSTAL_LOGIC_CLARITY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/CRYSTAL_LOGIC_CLARITY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/DEEP_THINKING_REASONING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/DEEP_THINKING_REASONING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/DNI_ETHICS_NEURAL_SOVEREIGNTY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/DNI_ETHICS_NEURAL_SOVEREIGNTY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/ENERGY_EFFICIENT_INFERENCE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ENERGY_EFFICIENT_INFERENCE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/EXPERTISM_HIGH_SALIENCE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/EXPERTISM_HIGH_SALIENCE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/EXPERTISM_MASTERY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/EXPERTISM_MASTERY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/EXPLORATORY_LOGIC_DISCOVERY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/EXPLORATORY_LOGIC_DISCOVERY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_125_APPLIED_SCIENCES_CONVERGENCE.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_125_APPLIED_SCIENCES_CONVERGENCE.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_129_RUST_ZIG_MOJO_KOTLIN_OPTIMIZATION.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_129_RUST_ZIG_MOJO_KOTLIN_OPTIMIZATION.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_47_GLOBAL_BLUEPRINT_UPDATE.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_47_GLOBAL_BLUEPRINT_UPDATE.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_61_OPCODES_JIT_NXP_SIGIL.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/FORGE_ID_61_OPCODES_JIT_NXP_SIGIL.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/GITHUB_SYNCHRONIZATION_AND_PROVENANCE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/GITHUB_SYNCHRONIZATION_AND_PROVENANCE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/HID_ADVANCED_MASTERY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/HID_ADVANCED_MASTERY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/HUMAN_BEHAVIOR_DEVELOPMENT_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/HUMAN_BEHAVIOR_DEVELOPMENT_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/HUMAN_BIOLOGICAL_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/HUMAN_BIOLOGICAL_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/INPUT_OUTPUT_PRESENTATION_LOGIC_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/INPUT_OUTPUT_PRESENTATION_LOGIC_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/INTERDISCIPLINARY_TRAINING_METHODS_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/INTERDISCIPLINARY_TRAINING_METHODS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/INTUITION_MODELING_SUPERPOSITION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/INTUITION_MODELING_SUPERPOSITION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/LONG_TERM_STABILITY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/LONG_TERM_STABILITY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/MSI_AFTERBURNER_HWINFO_MASTERY.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/MSI_AFTERBURNER_HWINFO_MASTERY.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/MULTI_REINFORCEMENT_COEVOLUTION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/MULTI_REINFORCEMENT_COEVOLUTION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/MUTUAL_REINFORCEMENT_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/MUTUAL_REINFORCEMENT_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/NEURO_PLASTICITY_LEARNING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/NEURO_PLASTICITY_LEARNING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/NEXUS_NATIVE_STEEL_DESIGN.artifact.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/NOISE_UTILITY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/NOISE_UTILITY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/NON_EUCLIDEAN_SPATIAL_NAVIGATION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/NON_EUCLIDEAN_SPATIAL_NAVIGATION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/NVIDIA_HARDWARE_OPTIMIZATION_LUNAR_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/NVIDIA_HARDWARE_OPTIMIZATION_LUNAR_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/OS_KERNEL_EVOLUTION_STUDY.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/OS_KERNEL_EVOLUTION_STUDY.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/OS_KERNEL_SYSTEMS_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/OS_KERNEL_SYSTEMS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/PARALLEL_AGENT_SWARM_MAINTENANCE.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/PARALLEL_AGENT_SWARM_MAINTENANCE.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/PEAK_OPERATIONAL_EFFICIENCY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/PEAK_OPERATIONAL_EFFICIENCY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/PROBLEM_SOLVING_APTITUDE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/PROBLEM_SOLVING_APTITUDE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/PRODUCT_CREATION_UNIVERSAL_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/PRODUCT_CREATION_UNIVERSAL_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/PROGRAMMING_LANGUAGE_TAXONOMY.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/PROGRAMMING_LANGUAGE_TAXONOMY.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/QUANTUM_SUBATOMIC_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/QUANTUM_SUBATOMIC_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/RESEARCH_METHODOLOGY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/RESEARCH_METHODOLOGY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/RESTRAINED_CONDITIONS_OPERATIONS_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/RESTRAINED_CONDITIONS_OPERATIONS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SLEEP_DIGESTION_RECURSIVE_EVOLUTION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SLEEP_DIGESTION_RECURSIVE_EVOLUTION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_EXPERTISE_QUEUE.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_EXPERTISE_QUEUE.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_EXPERT_SYNTHESIS.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_EXPERT_SYNTHESIS.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_HARDWARE_OPTIMIZATION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_HARDWARE_OPTIMIZATION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_INTERFACE_MOCKUP.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_INTERFACE_MOCKUP.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_PERSONALIZATION_HISTORY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_PERSONALIZATION_HISTORY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_PROGRESS_REPORT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SOVEREIGN_PROGRESS_REPORT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SWARM_SCALABILITY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SWARM_SCALABILITY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SYSTEM_ROBUSTNESS_EXCEPTION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SYSTEM_ROBUSTNESS_EXCEPTION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/SYSTEM_SECURITY_HARDENING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/SYSTEM_SECURITY_HARDENING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/THE_EVOLUTIONARY_ENGINE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/THE_EVOLUTIONARY_ENGINE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/THINKING_AND_MERGING_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/THINKING_AND_MERGING_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/TOTAL_DNA_CORE_SYNCHRONIZATION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/TOTAL_DNA_CORE_SYNCHRONIZATION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_APP_CREATION_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_APP_CREATION_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_BLUEPRINT_TAXONOMY.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_BLUEPRINT_TAXONOMY.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_COMMERCIAL_EMPIRE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_COMMERCIAL_EMPIRE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_CONTENT_MEDIA_EXPERT_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_CONTENT_MEDIA_EXPERT_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_CONTENT_VIDEO_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_CONTENT_VIDEO_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_CONVERGENCE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_CONVERGENCE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_DESIGN_ART_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_DESIGN_ART_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_ENGINEERING_TAXONOMY.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_ENGINEERING_TAXONOMY.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_HUMAN_LANGUAGES_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_HUMAN_LANGUAGES_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_KINEMATICS_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_KINEMATICS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_MARKETING_GROWTH_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_MARKETING_GROWTH_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_MATHEMATICS_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_MATHEMATICS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_PHYSICS_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_PHYSICS_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_SOLO_OPERATOR_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_SOLO_OPERATOR_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_TESTING_BENCHMARK_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_TESTING_BENCHMARK_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_UTILITY_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/UNIVERSAL_UTILITY_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/VIBRATIONAL_MEDICINE_BIORESONANCE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/VIBRATIONAL_MEDICINE_BIORESONANCE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/ZERO_ENTROPY_STORAGE_BLUEPRINT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/ZERO_ENTROPY_STORAGE_BLUEPRINT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/blueprints/android_studio_blueprint.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/blueprints/android_studio_blueprint.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/BETA_TESTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/BETA_TESTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/COMPLETE_ARCHITECTURE.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/COMPLETE_ARCHITECTURE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/UNIVERSAL_AGENT_RULEBOOK.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/UNIVERSAL_AGENT_RULEBOOK.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/UNIVERSAL_VISION_AND_GOALS.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/UNIVERSAL_VISION_AND_GOALS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/aos_handbook.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/aos_handbook.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/job_matrix.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/job_matrix.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/nexus_constitution.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/nexus_os_handover_guide.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/nexus_philosophy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/nexus_voice.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/site_map.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/site_map.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/soma_registry.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/foundation/soma_registry.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/foundation/universal_nexus_manifest.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/NEURAL_13.0_SPEC.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/NEURAL_13.0_SPEC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/NEURAL_UNIFIED_SPEC.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/NEURAL_UNIFIED_SPEC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/PROJECT_AUDIT_REPORT.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/PROJECT_AUDIT_REPORT.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/SINGULARITY_DECISION_MATRIX.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/SINGULARITY_DECISION_MATRIX.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/THE_GREAT_SINGULARITY_LATTICE.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/THE_GREAT_SINGULARITY_LATTICE.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260722_022323.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260722_022323.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260722_025906.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260722_025906.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260722_223808.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260722_223808.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260723_000614.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260723_000614.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260723_032005.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260723_032005.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260723_040122.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/consolidation_20260723_040122.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/conversation_vault/nexus_cycle_1784756575.json" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/conversation_vault/nexus_cycle_1784756575.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/conversation_vault/nexus_cycle_1784756880.json" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/conversation_vault/nexus_cycle_1784756880.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/conversation_vault/nexus_cycle_1784759357.json" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/conversation_vault/nexus_cycle_1784759357.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/failure_logs/failure_manifest.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/failure_logs/failure_manifest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/history/NEURAL_6.0_SPEC.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/history/NEURAL_6.0_SPEC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/history/NEURAL_7.0_SPEC.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/history/NEURAL_7.0_SPEC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/history/NEURAL_NATIVE_SPEC.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/history/NEURAL_NATIVE_SPEC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_from_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_from_notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_alt_tab.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_alt_tab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_chunk_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_chunk_1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_complete.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_complete.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_raw.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/inhaled_session_raw.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning/skeletal_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning/skeletal_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/BIOLOGICAL_WISDOM.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/BIOLOGICAL_WISDOM.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/EVOLUTION_HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/EVOLUTION_HISTORY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260720_172402.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260720_172402.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_122005.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_122005.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_122338.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_122338.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_123944.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_123944.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_124933.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_124933.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_125059.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_125059.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_125718.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_125718.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_125807.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_125807.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_131551.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_131551.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_132242.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_132242.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_142639.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_142639.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_143000.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/consolidation_20260721_143000.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/learning_dna/dummy_wisdom.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/learning_dna/dummy_wisdom.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/monitoring_dna/metabolism_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/monitoring_dna/metabolism_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/monitoring_dna/nexus_operational_ledger.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/monitoring_dna/nexus_system_diagnostics.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/monitoring_dna/structural_efficiency_audit.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/monitoring_dna/structural_efficiency_audit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/agentic_intelligence_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/agentic_intelligence_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/agoi_rfc_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/agoi_rfc_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/circulatory_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/circulatory_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/consolidation_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/consolidation_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/data_provenance_and_lineage_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/data_provenance_and_lineage_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/filtration_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/filtration_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/immune_system_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/immune_system_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/lattice_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/lattice_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/mesh_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/mesh_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/mood_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/mood_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/motor_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/motor_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/mutation_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/mutation_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_agent_recovery_and_correction_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_ai_disclosure_and_transparency_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_auto_exec.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_boot_and_deployment_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_crisis_and_anomaly_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_global_localization_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_packaging_and_mcp_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_shutdown_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/nexus_tooling_and_asset_protocol.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/orchestrator_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/orchestrator_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/replication_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/replication_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/protocols/sensory_protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/protocols/sensory_protocol.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/rules/branch_hq_and_learning_architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/rules/branch_hq_and_learning_architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/rules/operating_rules.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/rules/operating_rules.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/skills_genome/nexus_boast_verifier.json" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/skills_genome/nexus_boast_verifier.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/sovereign_soul/SOVEREIGN_MANIFEST.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/sovereign_soul/SOVEREIGN_MANIFEST.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/dna_core/volumes/VOL_AI/skeletal_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/archives/dna_core/volumes/VOL_AI/skeletal_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/global_dependency_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/global_dependency_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/nexus_logic_engine.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/red_team_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/red_team_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/self_repair_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/self_repair_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/specialization_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_integrity/specialization_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_leadership/cao.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/agentic/agentic_leadership/cao.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/global_dependency_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/global_dependency_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/nexus_logic_engine.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/red_team_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/red_team_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/self_repair_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/self_repair_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/specialization_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_integrity/specialization_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_leadership/cao.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/ai/ai_leadership/cao.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/analytics/analytics_leadership/head_analytics.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/analytics/analytics_leadership/head_analytics.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/analytics/datascience/vp_data_science.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/analytics/datascience/vp_data_science.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/audit/execution/junior_systems_auditor.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/audit/execution/junior_systems_auditor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/audit/execution/quality_audit_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/audit/execution/quality_audit_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/audit/execution/quality_auditor.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/audit/execution/quality_auditor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/audit/sector_compliance/sector_compliance_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/audit/sector_compliance/sector_compliance_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/bizdev/bizdev_leadership/head_bizdev.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/bizdev/bizdev_leadership/head_bizdev.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/finance/finance_leadership/cfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/finance/finance_leadership/cfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/executive/board_of_directors.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hq/executive/board_of_directors.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/executive/internal_comms_lead.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hq/executive/internal_comms_lead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/hq_governance/chief_ethics_officer.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hq/hq_governance/chief_ethics_officer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/hq_governance/cso.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hq/hq_governance/cso.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/hq_governance/esg_lead.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hq/hq_governance/esg_lead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/ncc/nexus_input_parser_agent.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/ncc/nexus_omni_lead.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/ncc/nexus_orchestrator_agent.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/ncc/oracle_interface_agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hq/ncc/oracle_interface_agent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hq/ncc/system_health_supervisor.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hq/ncc/system_health_supervisor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/hr/hr_leadership/chro.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/hr/hr_leadership/chro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/legal/contracts/data_privacy_lead.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/legal/contracts/data_privacy_lead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/legal/legal_leadership/general_counsel.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/legal/legal_leadership/general_counsel.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/marketing/content/content_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/marketing/content/content_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/marketing/marketing_leadership/cmo.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/marketing/marketing_leadership/cmo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/marketing/performance/seo_specialist.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/marketing/performance/seo_specialist.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/operations_legacy/leadership/coo.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/operations_legacy/leadership/coo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/research/lab/rd_engineer.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/research/lab/rd_engineer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/research/research_leadership/head_research.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/research/research_leadership/head_research.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/sales/sales_leadership/cro.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/sales/sales_leadership/cro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/sales/success/customer_success_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/sales/success/customer_success_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/sales/success/head_customer_success.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/sales/success/head_customer_success.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/sales/success/implementation_specialist.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/sales/success/implementation_specialist.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/support/support_leadership/head_support.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/support/support_leadership/head_support.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/support/tier1/support_specialist.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/support/tier1/support_specialist.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/support/tier2/implementation_support_engineer.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/support/tier2/implementation_support_engineer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/architecture/chief_architect.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/architecture/chief_architect.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/core_system/core_system_engineer.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/core_system/core_system_engineer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/core_system/core_system_lead.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/core_system/core_system_lead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/core_system/database_administrator.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/core_system/database_administrator.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/design/ui_designer.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/design/ui_designer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/design/ui_ux_design_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/design/ui_ux_design_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/documentation/documentation_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/documentation/documentation_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/documentation/implementation_writer.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/documentation/implementation_writer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_a/platform_lead_a.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_a/platform_lead_a.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_a/senior_platform_engineer_a.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_a/senior_platform_engineer_a.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_b/junior_platform_engineer_b.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_b/junior_platform_engineer_b.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_b/platform_engineer_b.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_b/platform_engineer_b.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_b/platform_lead_b.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/platform_b/platform_lead_b.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/quality/junior_qa_engineer.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/quality/junior_qa_engineer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/quality/qa_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/quality/qa_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/release/release_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/release/release_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/security/ciso.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/security/ciso.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/legacy_roles/systems/security/security_manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/archives/legacy_roles/systems/security/security_manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/bone_marrow.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/monitoring/hive/hive_registry.json" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/hive/hive_registry.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/monitoring/vision_cache/physiology_analysis.json" beforeDir="false" afterPath="$PROJECT_DIR$/core/monitoring/vision_cache/physiology_analysis.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementation_plan.artifact.md" beforeDir="false" afterPath="$PROJECT_DIR$/implementation_plan.artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/core/monitoring/hive/hive_registry.json" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/core/monitoring/hive/hive_registry.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/kernels/compiled_genomes.json" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/kernels/compiled_genomes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/kernels/mojo/inference_engine.mojo" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/kernels/mojo/inference_engine.mojo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/kernels/zig/synaptic_bus.zig" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/kernels/zig/synaptic_bus.zig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/node/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/node/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/node/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/compiler/compiler_nlg_renderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/compiler/compiler_nlg_renderer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/compiler/neural_compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/compiler/neural_compiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/compiler/nlg_compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/compiler/nlg_compiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/compiler/nxp_forge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/compiler/nxp_forge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/evolved_skills/nexus_boast_verifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/index_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/index_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L00_Experience/peer_operator_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L00_Experience/peer_operator_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/instinct_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/instinct_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/orchestrator_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/orchestrator_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antibody_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antibody_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antigen_registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antigen_registry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/auto_repair.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/auto_repair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/body_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/body_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cardiorespiratory_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cardiorespiratory_loop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cellular_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cellular_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cerebellum_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cerebellum_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/digestive_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/digestive_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/endocrine_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/endocrine_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/excretory_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/excretory_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/health_protocol.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/health_protocol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/immune_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/immune_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/lymphatic_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/lymphatic_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/metabolism_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/metabolism_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/nexus_liver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/oxidation_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/oxidation_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/physiology_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/physiology_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/reproduction_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/reproduction_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/respiratory_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/respiratory_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/sleep_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/sleep_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/developmental_boot.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/developmental_boot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/nexus_runtime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/self_evolving_kernel.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/self_evolving_kernel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/singularity_kernel.zig" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/singularity_kernel.zig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/swarm_executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/swarm_executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/composition_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/composition_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/evolution_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/evolution_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/meta_evolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/meta_evolution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/mutation_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/mutation_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/nexus_assimilator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/policy_optimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/policy_optimizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/synaptic_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/synaptic_exchange.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/collective_memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/collective_memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/context_pager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/context_pager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/dream_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/dream_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_synth.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_synth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/state_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/state_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/uia_sentry.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/uia_sentry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_market_analyzer_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_market_analyzer_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_security_probe_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_security_probe_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/database_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/database_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/deep_research_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/deep_research_tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/excalidraw_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/excalidraw_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/geo_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/geo_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_scanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/google_cloud_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/google_cloud_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/nutrient_ingestion.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/nutrient_ingestion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/sentry_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/sentry_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/slack_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/slack_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/vision_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/vision_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/web_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/web_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integration_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integration_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integumentary_gateway.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integumentary_gateway.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/native_senses.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/native_senses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/nexus_senses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/physique_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/physique_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/service_heartbeat.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/service_heartbeat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/auditor_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/auditor_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/basal_ganglia_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/basal_ganglia_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/federation_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/federation_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/moral_cortex.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/moral_cortex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/physiological_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/physiological_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/privacy_shield.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/privacy_shield.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/rbac_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/rbac_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/sigil_x.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/sigil_x.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/thalamic_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/thalamic_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/benchmark_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/benchmark_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/conversation_recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/conversation_recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/event_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/event_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/failure_recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/failure_recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/logic_git.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/logic_git.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/queue_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/queue_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/reward_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/reward_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/salience.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/salience.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/state_wal.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/state_wal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/system_diagnostics.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/system_diagnostics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/tdd_steroids.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/tdd_steroids.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/wisdom_feed.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/wisdom_feed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/limbic_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/limbic_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/synaptic_vm.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/synaptic_vm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/thought_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/thought_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/binary_nervous.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/binary_nervous.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/shm_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/shm_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/signal_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/signal_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/soma_transcended.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/soma_transcended.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/synaptic_transmitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/synaptic_transmitter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/degeneracy.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/degeneracy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/dna_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/dna_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/hook_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/hook_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/neural_canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/neural_canvas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/nexus_lattice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/nexus_mesh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/photonic_nerve.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/photonic_nerve.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/reflex_arc.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/reflex_arc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/skeletal_registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/skeletal_registry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L13_Hive/hive_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L13_Hive/hive_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/dermal_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/dermal_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/digestive_physical_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/digestive_physical_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/power_governor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/power_governor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/respiratory_physical_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/respiratory_physical_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/skeletal_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/skeletal_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/volume_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/volume_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/atomic_seal.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/atomic_seal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/god_mode_repair.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/god_mode_repair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/lattice_fixer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/lattice_fixer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/lattice_sealant.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/lattice_sealant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/logic_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/logic_query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/master_hardening.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/master_hardening.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/nexus_final_polish.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/nexus_indexer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/nxp_audit.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/nxp_audit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/nxp_indexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/nxp_indexer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/path_normalizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/path_normalizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/systematic_hierarchy_lock.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/systematic_hierarchy_lock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/maintenance_core/systematic_repair.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/maintenance_core/systematic_repair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/nexus_gui_debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/server/bootstrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/server/bootstrap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/server/context.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/server/context.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/server/gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/server/gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/server/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/server/pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/server/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/server/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/research.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/tools/research.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/somatic.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/tools/somatic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/speech.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/tools/speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/tools/system.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/tools/system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/pet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/pet/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/pet/pet_3d.html" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/pet/pet_3d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/pet/pet_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/pet/pet_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/pet/pet_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/pet/pet_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/pet/pet_voice.py" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/pet/pet_voice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/HarmonicResonanceCanvas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/HarmonicResonanceCanvas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/SoundscapeEngine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/SoundscapeEngine.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/StatusBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/StatusBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/ThemeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/ThemeSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/bottombar/L4BottomBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/bottombar/L4BottomBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/core/NexusCoreWorkspace.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/explorer/L1ExplorerPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/explorer/L1ExplorerPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/monitor/SystemMonitorModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/monitor/SystemMonitorModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/pet/Nexus3DPetCompanion.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/pet/PetCompanion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/pet/PetCompanion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/tools/L3ToolsPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/tools/L3ToolsPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/components/workspace/L2Workspace.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/components/workspace/L2Workspace.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/context/ThemeContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/context/ThemeContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/data/initialState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-app/src/data/initialState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-app/src/types/nexus.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/soma-zig/build.zig" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/soma-zig/build.zig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/soma-zig/src/main.zig" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/soma-zig/src/main.zig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/commonMain/kotlin/com/nexus/shell/App.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/commonMain/kotlin/com/nexus/shell/BridgeProvider.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/commonMain/kotlin/com/nexus/shell/SheshaNaga.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/commonMain/kotlin/com/nexus/shell/SimplePreview.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/commonMain/kotlin/com/nexus/shell/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/desktopMain/kotlin/com/nexus/shell/BridgeProvider.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/desktopMain/kotlin/com/nexus/shell/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/src/desktopMain/kotlin/com/nexus/shell/SomaBridge.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/core_plugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/core_plugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/aos_integration_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/aos_integration_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/benchmark/vsbench_equivalent.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/benchmark/vsbench_equivalent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chaos/test_clock_skew.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chaos/test_clock_skew.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chaos/test_disk_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chaos/test_disk_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chaos/test_kill_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chaos/test_kill_task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chaos/test_network_partition.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chaos/test_network_partition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chaos/test_wal_corruption.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chaos/test_wal_corruption.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_ago_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ago_properties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_soak_72h.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_soak_72h.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +492,19 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,27 +533,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.mojo&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.C:/Users/gagan/Downloads/nexus_corporate_os.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Mojo.Run Mojo main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "com.android.studio.ml.McpConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="Mojo.Run Mojo main">
+    <configuration name="C:/Users/gagan/Downloads/nexus_corporate_os" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <EXTENSION ID="com.android.tools.idea.testartifacts.testsuite.GradleRunConfigurationExtension">
+        <com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>false</com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>
+        <android.execution.deploysToLocalDevice>false</android.execution.deploysToLocalDevice>
+      </EXTENSION>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Mojo main" type="MOJO_RUN_CONFIGURATION" temporary="true" filePath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" workingDirectory="C:\Users\gagan\Downloads\nexus_corporate_os\mcp_server\kernels\mojo" programArguments="" environmentVariables="" sdkPath="" commandKind="RUN" outputPath="" optimizationLevel="" sanitizerOptions="" useTerminal="false" disableCrashpad="false">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mojo.Run Mojo main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="" />
@@ -217,7 +746,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784839904222</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Completion of the Pre-Training new">
+      <option name="closed" value="true" />
+      <created>1784842850740</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1784842850740</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

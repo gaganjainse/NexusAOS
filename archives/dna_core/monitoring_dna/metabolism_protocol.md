@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Systems Officer (CSO)
 
 ## Purpose
-To ensure the **Nexus Corporate OS** maintains operational stability by managing its "Energy" consumption (tokens, API costs, and context limits). This prevents the OS from entering a "Starvation" state (context walls or budget exhaustion).
+To ensure the **Sesha Corporate OS** maintains operational stability by managing its "Energy" consumption (tokens, API costs, and context limits). This prevents the OS from entering a "Starvation" state (context walls or budget exhaustion).
 
 ## Responsibilities
 - **Energy Tracking:** Monitor real-time token and context usage.
@@ -38,4 +38,4 @@ To ensure the **Nexus Corporate OS** maintains operational stability by managing
 > [!IMPORTANT]
 > The Metabolism Engine is authorized to override a Directive if it would result in a **Critical** energy failure.
 
-**Navigation:** [Global Dashboard](../foundation/corporate_os_handbook.md) | [System Diagnostics](./nexus_system_diagnostics.md)
+**Navigation:** [Global Dashboard](../foundation/corporate_os_handbook.md) | [System Diagnostics](./Sesha_system_diagnostics.md)

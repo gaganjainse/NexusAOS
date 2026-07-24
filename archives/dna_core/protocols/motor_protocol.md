@@ -4,10 +4,10 @@ Version 1.0 (Golden Master)
 ## Overview
 **Branch:** Core
 **Level:** Protocol
-**Superior:** Nexus Orchestrator Agent
+**Superior:** Sesha Orchestrator Agent
 
 ## Purpose
-To give **NexusAOS** autonomous execution capability — the "Hand" that translates lattice directives into file writes, builds, and deployments without Sovereign hand-holding.
+To give **SeshaAOS** autonomous execution capability — the "Hand" that translates lattice directives into file writes, builds, and deployments without Sovereign hand-holding.
 
 ## Motor Actions
 | Action | Description | Risk |

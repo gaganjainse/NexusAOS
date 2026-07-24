@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX, Bell, Music, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
-import { VitalsData } from "../types/nexus";
+import { VitalsData } from "../types/Sesha";
 
 interface SoundscapeEngineProps {
   vitals: VitalsData;
@@ -350,4 +350,5 @@ export function playTempleBellEcho(corner: "left" | "right" | "both" = "both") {
     console.warn("Temple Bell Audio Echo context failed:", err);
   }
 }
+
 

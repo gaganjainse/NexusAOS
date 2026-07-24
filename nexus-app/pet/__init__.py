@@ -1,7 +1,7 @@
 """
-NexusAOS - Pet Package
+SeshaAOS - Pet Package
 Version: 13.1.0
-Description: 3D realistic human avatar serving as the visual representation of Nexus.
+Description: 3D realistic human avatar serving as the visual representation of Sesha.
 Integrates with AOS via PySide6 QWebEngineView + QWebChannel bridge.
 Includes emergent consciousness engine and mood-aware voice synthesis.
 """
@@ -18,3 +18,4 @@ __all__ = [
     "PetVoiceEngine",
     "VOICE_PARAMS",
 ]
+

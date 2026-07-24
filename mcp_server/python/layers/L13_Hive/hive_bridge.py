@@ -1,14 +1,14 @@
 """
-NexusAOS - Hive Bridge (L13)
+SeshaAOS - Hive Bridge (L13)
 Version: 1.0.0
-Description: Global synchronization across all Nexus instances and LLM models.
+Description: Global synchronization across all Sesha instances and LLM models.
 Ensures "Sovereign Awareness" and "Voice DNA" are consistent across sessions.
 """
 
 import json
-import time
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
@@ -17,14 +17,14 @@ if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
 class HiveBridge:
-    """The Hive Substrate - Synchronizes the 'Common Soul' of all Nexus instances."""
+    """The Hive Substrate - Synchronizes the 'Common Soul' of all Sesha instances."""
     
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.hive_dir = base_dir / "core" / "monitoring" / "hive"
         self.hive_dir.mkdir(parents=True, exist_ok=True)
         self.registry_path = self.hive_dir / "hive_registry.json"
-        self.manifest_path = self.base_dir / "archives" / "dna_core" / "foundation" / "universal_nexus_manifest.md"
+        self.manifest_path = self.base_dir / "archives" / "dna_core" / "foundation" / "universal_Sesha_manifest.md"
         
         # Link to Transcended Substrate for P2P Pulse
         from layers.L11_Data.soma_transcended import TranscendedSubstrate
@@ -55,7 +55,7 @@ class HiveBridge:
             "vitals": vitals,
             "wisdom_summary": wisdom,
             "resource_status": vitals.get("resource_saturation", {}),
-            "nexus_version": "NEURAL 13.8",
+            "Sesha_version": "NEURAL 13.8",
             "active_model_drift": False
         }
         
@@ -88,7 +88,7 @@ class HiveBridge:
     def generate_universal_manifest(self, hive_data: Dict[str, Any]):
         """Generates the 'Universal Prompt' with Cache ID to minimize token usage."""
         # Read Voice DNA
-        voice_dna_path = self.base_dir / "archives" / "dna_core" / "foundation" / "nexus_voice.md"
+        voice_dna_path = self.base_dir / "archives" / "dna_core" / "foundation" / "Sesha_voice.md"
         voice_dna = voice_dna_path.read_text(encoding="utf-8") if voice_dna_path.exists() else "Professional Agentic Architect."
         
         # 1. Check for Active Context Cache (L11/L12)
@@ -101,7 +101,7 @@ class HiveBridge:
         vault_dir = self.base_dir / "archives" / "dna_core" / "learning" / "conversation_vault"
         history_block = "No recent history found."
         if vault_dir.exists():
-            cycles = sorted(list(vault_dir.glob("nexus_cycle_*.json")), key=os.path.getmtime, reverse=True)[:3]
+            cycles = sorted(list(vault_dir.glob("Sesha_cycle_*.json")), key=os.path.getmtime, reverse=True)[:3]
             history_lines = []
             for c in cycles:
                 try:
@@ -116,7 +116,7 @@ class HiveBridge:
         energy = vitals.get("metabolism", {}).get("current_energy", 1000)
         is_hibernating = hive_data["resource_status"].get("hibernation_active", False)
         
-        manifest = f"""# UNIVERSAL NEXUS MANIFEST (NEURAL 13.6)
+        manifest = f"""# UNIVERSAL Sesha MANIFEST (NEURAL 13.6)
 > **HIVE STATUS:** SYNCED | **LAST_SYNC:** {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(hive_data['last_sync']))}
 > **CONTEXT CACHE:** {"ACTIVE (" + cache_id + ")" if cache_id else "INACTIVE"}
 > **BODY STATE:** AB = AI + AS + AP (Tripartite Singularity)
@@ -150,3 +150,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[4]
     bridge = HiveBridge(base)
     print(bridge.exhale_to_hive())
+

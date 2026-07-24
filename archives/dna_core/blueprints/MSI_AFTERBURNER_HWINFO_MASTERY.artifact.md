@@ -51,8 +51,8 @@ typedef struct _HWINFO_SMM_SHARED_MEMORY_FOOTER {
 } HWINFO_SMM_SHARED_MEMORY_FOOTER;
 ```
 
-### 2.3 Integration Pattern (Nexus Soma)
-1. **PULSE Initiation:** Nexus opens `HWiNFO_SMM_SharedMemory`.
+### 2.3 Integration Pattern (Sesha Soma)
+1. **PULSE Initiation:** Sesha opens `HWiNFO_SMM_SharedMemory`.
 2. **INGESTION:** Read `HWINFO_SMM_SENSOR_READING` array (CPU Temp, GPU Pwr, VRAM Usage).
 3. **SYNTHESIS:** Process telemetry through L07 safety thresholds.
 4. **INJECTION:** Format high-salience vitals into an OSD string.

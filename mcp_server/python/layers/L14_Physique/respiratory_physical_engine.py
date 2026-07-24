@@ -1,13 +1,14 @@
 """
-NexusAOS - Respiratory Physical Engine (L14.5)
+SeshaAOS - Respiratory Physical Engine (L14.5)
 Version: 1.0.0
 Description: Thermal Management and CPU Dissipation.
 """
 
-import subprocess
 import json
+import subprocess
 from pathlib import Path
 from typing import Dict, Any
+
 
 class RespiratoryPhysicalEngine:
     def __init__(self, base_dir: Path):
@@ -26,3 +27,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[4]
     rp = RespiratoryPhysicalEngine(base)
     print(json.dumps(rp.check_thermal_state(), indent=2))
+

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { ThemeId } from "../types/nexus";
+import { ThemeId } from "../types/Sesha";
 
 export interface ThemeDefinition {
   id: ThemeId;
@@ -157,13 +157,13 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode; initialTheme?:
   initialTheme = "sandstone",
 }) => {
   const [theme, setThemeState] = useState<ThemeId>(() => {
-    const saved = localStorage.getItem("nexus_theme");
+    const saved = localStorage.getItem("Sesha_theme");
     return (saved && saved in THEMES) ? (saved as ThemeId) : initialTheme;
   });
 
   const setTheme = (newTheme: ThemeId) => {
     setThemeState(newTheme);
-    localStorage.setItem("nexus_theme", newTheme);
+    localStorage.setItem("Sesha_theme", newTheme);
   };
 
   const themeConfig = THEMES[theme] || THEMES.sandstone;
@@ -190,3 +190,4 @@ export const useTheme = () => {
   }
   return context;
 };
+

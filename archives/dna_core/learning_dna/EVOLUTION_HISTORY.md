@@ -1,5 +1,5 @@
 # Evolution History: The Birth of the Agentic Body
-*Consolidated History of NexusAOS AGOI v1.0 - v3.0*
+*Consolidated History of SeshaAOS AGOI v1.0 - v3.0*
 
 ## 1. Inception (Weeks 0-2)
 - **Foundation:** Separation of Brain (AI), Mind (AM), and Soma (AS).
@@ -18,7 +18,7 @@
 
 ## 4. The Golden Master (Weeks 9-12)
 - **Neural Canvas:** Transition from hierarchical subagents to a simultaneous workspace.
-- **Self-Sufficiency:** The Nexus Assimilator enabled to internalize and evolve external tools.
+- **Self-Sufficiency:** The Sesha Assimilator enabled to internalize and evolve external tools.
 - **System Hardening:** Transition to SQLite (Relational Soma) and RBAC security.
 - **NEURAL Spec:** Official adoption of the high-density signal language.
 - **Proactive Reporting:** Launch of the Wisdom Feed and Thought Agent.

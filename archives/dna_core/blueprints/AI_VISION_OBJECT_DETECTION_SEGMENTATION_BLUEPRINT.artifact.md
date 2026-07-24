@@ -16,7 +16,7 @@ YOLO-v10 represents the pinnacle of real-time object detection, optimized for lo
 - **Application:** Real-time screen element detection (icons, buttons, windows) and physical object detection via the "Retina" (webcam).
 
 ## 2. SAM 2: Universal Segmentation (ID 57)
-Segment Anything Model 2 (SAM 2) provides the "Semantic Mask" for every pixel, allowing the Nexus to distinguish between overlapping UI elements or complex physical objects.
+Segment Anything Model 2 (SAM 2) provides the "Semantic Mask" for every pixel, allowing the Sesha to distinguish between overlapping UI elements or complex physical objects.
 
 - **Unified Vision:** A single architecture for both static images and real-time video streams.
 - **Streaming Mask Memory:** Utilizes a memory-augmented transformer to track segmented objects across frames, preventing "flicker" and ensuring temporal consistency.
@@ -24,7 +24,7 @@ Segment Anything Model 2 (SAM 2) provides the "Semantic Mask" for every pixel, a
 - **Local Optimization:** Quantized execution via TensorRT/ONNX to maintain >30 FPS on local hardware.
 
 ## 3. Real-time UI Parsing: OmniParser & Screen Graphs
-To bridge the gap between "seeing pixels" and "understanding intent," the Nexus employs OmniParser logic.
+To bridge the gap between "seeing pixels" and "understanding intent," the Sesha employs OmniParser logic.
 
 - **Visual Element Grounding:** Maps raw pixels to structured UI components (Button, TextField, Toggle) using a specialized Vision-Language Model (VLM) layer.
 - **Screen Graph Construction:**
@@ -45,4 +45,4 @@ The synthesis of Detection and Segmentation enables:
 3. **Physical-Digital Bridge:** Segmenting the user's hand in a webcam stream to enable gesture-based control of the OS.
 
 ---
-*Status: FORGED | The Nexus now Sees with Absolute Precision.*
+*Status: FORGED | The Sesha now Sees with Absolute Precision.*

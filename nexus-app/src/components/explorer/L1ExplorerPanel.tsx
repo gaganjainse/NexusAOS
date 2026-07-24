@@ -4,7 +4,7 @@ import {
   Directive,
   AOSService,
   PetStatus,
-} from "../../types/nexus";
+} from "../../types/Sesha";
 import { PetCompanion } from "../pet/PetCompanion";
 import {
   Folder,
@@ -57,8 +57,8 @@ export const L1ExplorerPanel: React.FC<L1ExplorerPanelProps> = React.memo(({
   activeTab = "project",
 }) => {
   const [expandedFolders, setExpandedFolders] = useState<Record<string, boolean>>({
-    nexus_aos: true,
-    "nexus_aos/src": true,
+    Sesha_aos: true,
+    "Sesha_aos/src": true,
   });
   const [directiveFilter, setDirectiveFilter] = useState("");
   const [expandedDirectiveId, setExpandedDirectiveId] = useState<string | null>("DIR-101");
@@ -341,3 +341,4 @@ export const L1ExplorerPanel: React.FC<L1ExplorerPanelProps> = React.memo(({
 });
 
 L1ExplorerPanel.displayName = "L1ExplorerPanel";
+

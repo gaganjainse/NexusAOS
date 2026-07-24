@@ -14,7 +14,7 @@ Description: Zero-code intent-to-app pipelines using KMP 2026 and autonomous UI 
 
 ## 3. Intent-to-App Pipelines
 - **The "One-Pulse" Build:** Transforming a single natural language pulse (e.g., "Build a Sovereign Wealth Tracker") into a signed, production-ready binary in <30 seconds.
-- **Autonomous Scaffolding:** Nexus generates the DB schema, API mesh, and Frontend logic simultaneously using a multi-agent swarm.
+- **Autonomous Scaffolding:** Sesha generates the DB schema, API mesh, and Frontend logic simultaneously using a multi-agent swarm.
 - **Continuous Evolutionary CI/CD:** The app updates itself in real-time based on usage telemetry and bug-fix mutations.
 
 ---

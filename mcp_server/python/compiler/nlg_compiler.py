@@ -1,9 +1,9 @@
+import json
 import os
 import re
-import yaml
 import sqlite3
-import json
 import sys
+import yaml
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -13,8 +13,8 @@ if str(_tools_parent) not in sys.path:
 
 # Configuration
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-DB_PATH = BASE_DIR / "core/exports/nexus_aos.db"
-YAML_PATH = BASE_DIR / "core/nlg/nexus_logic.yaml"
+DB_PATH = BASE_DIR / "core/exports/Sesha_aos.db"
+YAML_PATH = BASE_DIR / "core/nlg/Sesha_logic.yaml"
 
 def parse_md_file(file_path: Path) -> Dict[str, Any]:
     """Extracts structured logic from a professional-density markdown file."""
@@ -92,7 +92,7 @@ def init_db():
 
 def compile_nlg():
     """Builds the YAML and SQLite Logic Graph."""
-    print("Compiling Nexus Logic Graph...")
+    print("Compiling Sesha Logic Graph...")
     all_logic = []
 
     db_conn = init_db()
@@ -133,3 +133,4 @@ def compile_nlg():
 
 if __name__ == "__main__":
     compile_nlg()
+

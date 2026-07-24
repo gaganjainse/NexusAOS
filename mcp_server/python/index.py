@@ -1,17 +1,17 @@
 """
-NexusAOS - Agentic Body (AB) Registry
+SeshaAOS - Agentic Body (AB) Registry
 Version: 3.0.0-GM (Golden Master)
 Description: Standardized interface for the 11-System Soma.
 Architecture: AB = AI + AM + AS
 """
 
+import asyncio
 import json
 import os
 import sys
-import asyncio
+from mcp.server.fastmcp import FastMCP
 from pathlib import Path
 from typing import Dict, Any, List, Tuple, Optional
-from mcp.server.fastmcp import FastMCP
 
 # Ensure the root of the python server is in sys.path
 _python_root = Path(__file__).resolve().parent
@@ -22,35 +22,21 @@ BASE_DIR = _python_root.parent.parent # Project root
 # --- SOMA (AS) ENGINES ---
 from layers.L02_Agent.metabolism_engine import MetabolismEngine
 from layers.L02_Agent.endocrine_engine import EndocrineEngine
-from layers.L02_Agent.immune_engine import ImmuneEngine
-from layers.L02_Agent.sleep_engine import SleepEngine
-from layers.L03_Runtime.developmental_boot import DevelopmentalBoot
 from layers.L02_Agent.digestive_engine import DigestiveEngine
 from layers.L02_Agent.respiratory_engine import RespiratoryEngine
-from layers.L02_Agent.lymphatic_system import LymphaticSystem
-from layers.L02_Agent.excretory_engine import ExcretoryEngine
 from layers.L02_Agent.cardiorespiratory_loop import CardiorespiratoryLoop
-from layers.L07_Integration.integumentary_gateway import IntegumentaryGateway
-from layers.L02_Agent.motor_engine import MotorEngine
 from layers.L02_Agent.antibody_engine import AntibodyEngine
-from layers.L02_Agent.cellular_engine import CellularEngine
 
 # --- MIND (AM) ENGINES ---
 from layers.L01_Planning.orchestrator_engine import OrchestratorEngine
-from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
 from layers.L12_Infrastructure.neural_canvas import NeuralCanvas
 from layers.L10_Intelligence.thought_agent import ThoughtAgent
-from layers.L05_Memory.memory_synth import MemorySynth
-from layers.L05_Memory.memory_receptor import MemoryReceptor
-from layers.L05_Memory.collective_memory import CollectiveMemory
-from layers.L12_Infrastructure.nexus_mesh import NexusMesh
-from layers.L03_Runtime.swarm_executor import SwarmExecutor
+from layers.L12_Infrastructure.Sesha_mesh import SeshaMesh
 from layers.L05_Memory.state_manager import StateManager
 from layers.L08_Governance.rbac_engine import RBACEngine
-from layers.L04_Composition.nexus_assimilator import NexusAssimilator
+from layers.L04_Composition.Sesha_assimilator import SeshaAssimilator
 from layers.L04_Composition.evolution_engine import EvolutionEngine
-from layers.L04_Composition.policy_optimizer import PolicyOptimizer
-from layers.L04_Composition.meta_evolution import MetaEvolution
 from layers.L09_Observability.wisdom_feed import WisdomFeed
 from layers.L09_Observability.queue_manager import QueueManager
 from layers.L02_Agent.vigilance_reflex import VigilanceReflex
@@ -64,21 +50,14 @@ from layers.L12_Infrastructure.photonic_nerve import PhotonicNerve
 from layers.L11_Data.soma_transcended import TranscendedSubstrate
 from layers.L13_Hive.hive_bridge import HiveBridge
 from layers.L09_Observability.conversation_recorder import ConversationRecorder
-from layers.L09_Observability.failure_recorder import FailureRecorder
 from layers.L02_Agent.cerebellum_engine import CerebellumEngine
 from layers.L06_Tool.deep_research_tool import DeepResearchTool
 from compiler.neural_compiler import NeuralCompiler
 
 # --- RECEPTORS ---
-from layers.L06_Tool.web_receptor import WebReceptor
-from layers.L06_Tool.github_receptor import GitHubReceptor
-from layers.L06_Tool.geo_receptor import GeoReceptor
-from layers.L06_Tool.database_receptor import DatabaseReceptor
-from layers.L06_Tool.slack_receptor import SlackReceptor
-from layers.L06_Tool.sentry_receptor import SentryReceptor
 
 # Initialize Core Services
-mcp = FastMCP("NexusAOS - Golden Master Registry")
+mcp = FastMCP("SeshaAOS - Golden Master Registry")
 RBAC = RBACEngine(BASE_DIR)
 VIGILANCE = VigilanceReflex(BASE_DIR)
 INSTINCT = InstinctEngine(BASE_DIR)
@@ -420,7 +399,7 @@ def assimilate_tool(plugin_id: str, source_code: str) -> str:
     allowed, msg = _gate_allowed("assimilate_tool")
     if not allowed: return _aos_response("blocked", message=msg)
     
-    assimilator = NexusAssimilator(BASE_DIR)
+    assimilator = SeshaAssimilator(BASE_DIR)
     res = assimilator.assimilate_plugin(plugin_id, source_code)
     return _aos_response("success" if res["success"] else "failed", payload=res)
 
@@ -440,9 +419,9 @@ def diagnose_os() -> str:
 # --- 5. PERFORMANCE & REWARDS ---
 
 @mcp.tool()
-def trigger_nexus_benchmark(iterations: int = 5) -> str:
+def trigger_Sesha_benchmark(iterations: int = 5) -> str:
     """Measures system performance and provides biological rewards (dopamine) for speed improvements."""
-    allowed, msg = _gate_allowed("trigger_nexus_benchmark")
+    allowed, msg = _gate_allowed("trigger_Sesha_benchmark")
     if not allowed: return _aos_response("blocked", message=msg)
     
     rs = RewardSystem(BASE_DIR)
@@ -572,7 +551,7 @@ def scan_semantic_desktop() -> str:
 
 @mcp.tool()
 def trigger_hive_sync(mode: str = "exhale") -> str:
-    """Synchronizes Nexus AOS state across all instances and models (Hive Network)."""
+    """Synchronizes Sesha AOS state across all instances and models (Hive Network)."""
     allowed, msg = _gate_allowed("trigger_hive_sync")
     if not allowed: return _aos_response("blocked", message=msg)
     
@@ -655,3 +634,4 @@ def execute_logical_separation() -> str:
 
 if __name__ == "__main__":
     mcp.run()
+

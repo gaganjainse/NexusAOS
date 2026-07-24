@@ -1,16 +1,15 @@
 """
-NexusAOS - Integumentary Gateway
+SeshaAOS - Integumentary Gateway
 Version: 1.0.0
 Description: The 'Skin' of the Agentic Body. Handles external API calls, rate-limiting, and sensory transduction.
 """
 
-import time
 import hashlib
-
+import sys
+import time
+from pathlib import Path
 from typing import Dict, Any
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -47,3 +46,4 @@ class IntegumentaryGateway:
         """Resets rate limits (analogous to skin regeneration)."""
         self.access_counts = {}
         return "Barrier regenerated."
+

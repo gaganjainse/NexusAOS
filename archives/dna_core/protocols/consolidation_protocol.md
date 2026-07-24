@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Knowledge Officer (CKO)
 
 ## Purpose
-To define the **"Memory Consolidation"** mechanism of the NexusAOS. This protocol enables the system to "Sleep," analyze its operational history, and integrate successful patterns into its long-term "DNA" (Archives).
+To define the **"Memory Consolidation"** mechanism of the SeshaAOS. This protocol enables the system to "Sleep," analyze its operational history, and integrate successful patterns into its long-term "DNA" (Archives).
 
 ## The Dream Cycle (Consolidation)
 The Dream Cycle is a periodic background process that runs when the system is in a "Resting" state.
@@ -28,7 +28,7 @@ The strengthening of successful operational patterns.
 | Area | Authority |
 | :--- | :--- |
 | **Pruning Decisions** | Chief Knowledge Officer (CKO) |
-| **SOP Promotion** | Sovereign Proxy (Nexus Omni-Lead) |
+| **SOP Promotion** | Sovereign Proxy (Sesha Omni-Lead) |
 
 ---
 

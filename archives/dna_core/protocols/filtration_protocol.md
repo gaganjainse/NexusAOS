@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Operating Officer (COO)
 
 ## Purpose
-To ensure the **NexusAOS** maintains a healthy operational state by filtering "Data Toxins" (redundant logs, stale reports, and orphaned nodes). This protocol prevents biological bloat and ensures the system's "Metabolism" remains efficient.
+To ensure the **SeshaAOS** maintains a healthy operational state by filtering "Data Toxins" (redundant logs, stale reports, and orphaned nodes). This protocol prevents biological bloat and ensures the system's "Metabolism" remains efficient.
 
 ## Toxic Load Definitions
 | Toxin | Threshold | Action |

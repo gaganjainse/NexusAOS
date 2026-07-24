@@ -2,7 +2,7 @@
 Version: 1.0.0
 Branch: Core
 Level: Protocol
-Superior: Nexus Mind (AM)
+Superior: Sesha Mind (AM)
 
 ## Overview
 This protocol defines the transition from **Artificial Intelligence (AI)** to **Agentic Intelligence (AI)**. It establishes the "Neuro-Transmitter" constraints that calibrate the LLM Brain to work in harmony with the Mind and Soma.
@@ -19,7 +19,7 @@ The Brain's reasoning is modulated by simulated hormonal levels passed from the 
 - **Adrenaline (Urgency):** High priority directives trigger a "Focus Mode," stripping away verbose explanations and prioritizing raw execution efficiency.
 
 ## 3. Cognitive Integration
-- **Self-Correction:** The Brain must utilize the `trigger_self_healing` tool if it detects its own reasoning deviating from the `Nexus_Corporate_Constitution`.
+- **Self-Correction:** The Brain must utilize the `trigger_self_healing` tool if it detects its own reasoning deviating from the `Sesha_Corporate_Constitution`.
 - **Proprioception:** The Brain must query `get_agentic_body_status()` before executing high-energy tasks to ensure the Soma can support the request.
 
 ## 4. Fine-Tuning Directives

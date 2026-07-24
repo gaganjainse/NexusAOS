@@ -77,8 +77,8 @@ class AntibodyEngine:
             return report
 
         if action == "filtrate":
-            from layers.L02_Agent.nexus_liver import NexusLiver
-            return NexusLiver(self.base_dir).filter_toxins()
+            from layers.L02_Agent.Sesha_liver import SeshaLiver
+            return SeshaLiver(self.base_dir).filter_toxins()
 
         if action == "reforge_dna":
             import subprocess
@@ -134,8 +134,8 @@ class AntibodyEngine:
                 threats.append("corrupted_json")
 
         # 4. Check toxic load
-        from layers.L02_Agent.nexus_liver import NexusLiver
-        toxic = NexusLiver(self.base_dir).get_toxic_load()
+        from layers.L02_Agent.Sesha_liver import SeshaLiver
+        toxic = SeshaLiver(self.base_dir).get_toxic_load()
         if toxic.get("toxicity_pct", 0) > 60:
             threats.append("toxic_load")
 
@@ -201,3 +201,4 @@ if __name__ == "__main__":
     engine = AntibodyEngine(base)
     print(engine.patrol())
     print(json.dumps(engine.get_immune_cells_status(), indent=2))
+

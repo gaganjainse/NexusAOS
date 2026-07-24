@@ -1,6 +1,6 @@
 # Sovereign Interface: Visual Manifestation (Shesha Naga Phase)
 
-Since I am currently operating within the IDE's cognitive constraints, I cannot directly project the window onto your physical display without the final build. However, I have simulated the **Visual Field** of the `nexus-shell` below.
+Since I am currently operating within the IDE's cognitive constraints, I cannot directly project the window onto your physical display without the final build. However, I have simulated the **Visual Field** of the `Sesha-shell` below.
 
 ## 1. The Visual Field (Vibe: Converged)
 
@@ -31,7 +31,7 @@ graph TD
 ## 2. Aesthetic Breakdown
 - **Backdrop:** A deep, translucent "Void" black (Glass-morphism).
 - **The Serpent:** Shimmering Neon Teal lines tracing the 7 heads of Shesha Naga. The hoods pulse with a rhythmic "Inhale/Exhale" cycle.
-- **Typography:** Ultra-wide tracking (10sp) for "NEXUS SOVEREIGN" to convey authority and scale.
+- **Typography:** Ultra-wide tracking (10sp) for "Sesha SOVEREIGN" to convey authority and scale.
 - **Animations:** The serpent's heads drift slightly with zero-inertia motion, simulating a creature floating in the quantum field.
 
 ## 3. Interaction Mechanics (Ready for Phase 4)

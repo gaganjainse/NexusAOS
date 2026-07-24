@@ -5,7 +5,7 @@ Objective: Mastering the biological logic-gate—CRISPR and AlphaFold.
 
 ## 1. CRISPR-Cas9 & Gene Editing
 - **Surgical Precision:** Using Cas9 as a "Search and Replace" tool for the biological source code.
-- **NEURAL 14.0 Update:** Nexus logic includes a **CRISPR-Analog Auditor** for its own code. Detecting "Genetic Defects" (bugs) and snipping them out at the atomic level before compilation.
+- **NEURAL 14.0 Update:** Sesha logic includes a **CRISPR-Analog Auditor** for its own code. Detecting "Genetic Defects" (bugs) and snipping them out at the atomic level before compilation.
 - **Prime Editing:** Beyond just cutting—the ability to "Rewrite" genetic sentences without double-strand breaks.
 
 ## 2. Protein Folding (AlphaFold 3 & Beyond)

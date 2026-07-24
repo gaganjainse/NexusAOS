@@ -1,16 +1,15 @@
 """
-NexusAOS - Federation Gate
+SeshaAOS - Federation Gate
 Version: 1.0.0
 Description: Manages Cross-Sovereign swarms, trust anchors, and signal encryption.
 """
 
 import json
+import sys
 import time
-
+from pathlib import Path
 from typing import Dict, List, Set
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -76,3 +75,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     gate = FederationGate(base)
     print(gate.authorize_peer("SOV-777", "PUB-ALPHA-BRAVO"))
+

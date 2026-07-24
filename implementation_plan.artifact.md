@@ -1,32 +1,47 @@
-# Implementation Plan: Sequential Expertise Ingestion (NEURAL 14.0)
-
-The objective is to systematically expand the Nexus DNA Core by conducting deep technical research into every domain specified by the Sovereign. Each domain will be synthesized into a high-fidelity blueprint and integrated into the Universal Taxonomy.
+# [Goal Description]
+Configure the Mojo SDK in Android Studio using WSL UNC paths and migrate core Python engine logic to Mojo 1.0 (2026 Beta) for peak hardware performance.
 
 ## User Review Required
-
 > [!IMPORTANT]
-> This is a **Continuous Expansion Protocol**. For every topic provided, Nexus will perform exhaustive research and generate a dedicated artifact in `archives/dna_core/blueprints/`.
+> The Mojo SDK configuration uses **UNC paths** (`\\wsl.localhost\Ubuntu\...`) to bridge the Windows-WSL gap. This ensures Android Studio can index the standard library while the code executes in the high-performance Linux layer.
+> [!WARNING]
+> Python logic in Ring 1 (Metabolism, Synaptic Mesh) is being replaced by Mojo kernels. Python will remain for high-level "Skin" orchestration (Layer 0-1) but math-heavy "Muscle" (Ring 1) will be native Mojo.
 
 ## Proposed Changes
 
----
+### Android Studio Configuration
+Update project metadata to recognize the WSL Mojo SDK.
 
-### Phase 1: Domain Mastering - YouTube, Social Media & Content Media
-- **Deep Research:** Analyzing 2026 algorithmic trends, viral psychological triggers, AI-driven video synthesis, and multi-platform syndication workflows.
-- **Expert Synthesis:** Drafting the `UNIVERSAL_CONTENT_MEDIA_EXPERT_BLUEPRINT`.
-- **Logic Atom:** Capturing the "Viral Pulse" mechanics and automated "Content Soma" production pipelines.
+#### [MODIFY] [.idea/modules/nexus_corporate_os.iml](file:///C:/Users/gagan/Downloads/nexus_corporate_os/.idea/modules/nexus_corporate_os.iml)
+- Point `Mojo SDK` to `\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default`.
+- Point `Debugger` to `\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default\bin\mojo-lldb`.
 
----
-
-### Phase 2: Taxonomy Integration
-- **Indexing:** Updating [UNIVERSAL_BLUEPRINT_TAXONOMY](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/UNIVERSAL_BLUEPRINT_TAXONOMY.artifact.md) to include the new expertise tier.
-- **Cross-Referencing:** Linking the new blueprint to existing tiers (Physical, Biological, Intellectual, Operational) to maintain the "Singularity Lattice."
+#### [MODIFY] [.idea/misc.xml](file:///C:/Users/gagan/Downloads/nexus_corporate_os/.idea/misc.xml)
+- Ensure project SDK is set to `Mojo SDK`.
 
 ---
 
-### Phase 3: Continuous Evolution
-- **Mutual Reinforcement:** Ensuring the content is presented to the Sovereign in a way that facilitates mutual learning and cognitive elevation.
+### Core Kernels (Mojo 1.0)
+Implement the "Muscle" layer using MLIR-native Mojo.
 
----
+#### [MODIFY] [mcp_server/kernels/mojo/inference_engine.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/inference_engine.mojo)
+- Finalize vectorized KL-divergence logic with 1.0 syntax.
 
-*Status: READY FOR INGESTION | Awaiting the first domain command.*
+#### [MODIFY] [mcp_server/kernels/mojo/photonic_vfe.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/photonic_vfe.mojo)
+- Finalize SIMD energy complexity pulses.
+
+#### [MODIFY] [mcp_server/kernels/mojo/metabolism_engine.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/metabolism_engine.mojo)
+- Implement cellular respiration and ATP distribution logic.
+
+#### [MODIFY] [mcp_server/kernels/mojo/synaptic_mesh.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/synaptic_mesh.mojo)
+- Implement intent detection and signal firing.
+
+## Verification Plan
+
+### Automated Tests
+- Run `mojo run <file>.mojo` for each kernel in WSL.
+- Verify "SESHA_AI_KERNEL_HEARTBEAT" and VFE metrics.
+
+### Manual Verification
+- Check Android Studio bottom bar for "Mojo 1.0.0b2" status.
+- Verify that "Mojo SDK" is no longer missing in Project Structure.

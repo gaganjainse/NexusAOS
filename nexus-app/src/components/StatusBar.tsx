@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { VitalsData } from "../types/nexus";
+import { VitalsData } from "../types/Sesha";
 import {
   GitBranch,
   Zap,
@@ -202,4 +202,5 @@ export const StatusBar: React.FC<StatusBarProps> = ({
     </footer>
   );
 };
+
 

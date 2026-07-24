@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the content marketing strategy and production for **Nexus Corporate OS**. The Content Manager ensures the brand provides value through high-quality information.
+To lead the content marketing strategy and production for **Sesha Corporate OS**. The Content Manager ensures the brand provides value through high-quality information.
 
 
 ## Responsibilities

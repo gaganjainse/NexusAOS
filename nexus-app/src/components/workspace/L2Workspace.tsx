@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FileNode, ChatMessage } from "../../types/nexus";
+import { FileNode, ChatMessage } from "../../types/Sesha";
 import {
   Code2,
   MessageSquare,
@@ -500,7 +500,7 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
               <div className="flex-1 overflow-y-auto p-8 flex justify-center bg-zinc-900/60">
                 <div className="w-full max-w-2xl bg-zinc-950 border border-zinc-800 rounded-xl p-8 shadow-2xl font-serif text-zinc-300 flex flex-col gap-4">
                   <div className="border-b border-zinc-800 pb-4 flex justify-between items-center font-sans">
-                    <h2 className="text-xl font-bold text-cyan-300">Nexus Sovereign PDF Specification</h2>
+                    <h2 className="text-xl font-bold text-cyan-300">Sesha Sovereign PDF Specification</h2>
                     <span className="text-xs text-zinc-500 font-mono">Kernel v13.0</span>
                   </div>
                   <p className="text-xs font-sans leading-relaxed text-zinc-300">
@@ -583,13 +583,13 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
               <div className="bg-zinc-925 border-b border-zinc-800 px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-cyan-400 animate-pulse" />
-                  <span className="font-bold text-sm text-zinc-100 tracking-wide font-sans">NEXUS-AOS Live App Instance</span>
+                  <span className="font-bold text-sm text-zinc-100 tracking-wide font-sans">Sesha-AOS Live App Instance</span>
                 </div>
                 <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-mono">PORT 3000 • ONLINE</span>
               </div>
               <div className="flex-1 p-6 font-sans overflow-y-auto text-zinc-200 flex flex-col gap-6">
                 <div className="bg-gradient-to-r from-cyan-950/80 to-purple-950/80 border border-cyan-500/40 rounded-2xl p-6 shadow-xl">
-                  <h2 className="text-xl font-bold text-white mb-2">Welcome to Nexus Sovereign Operating Environment</h2>
+                  <h2 className="text-xl font-bold text-white mb-2">Welcome to Sesha Sovereign Operating Environment</h2>
                   <p className="text-xs text-zinc-300 leading-relaxed max-w-xl">This in-built browser renders real-time web previews, API test routes, and hot-module replaced interfaces directly inside your sovereign workspace.</p>
                   <div className="mt-4 flex items-center gap-3">
                     <button onClick={() => { setBrowserCounter((c) => c + 1); setBrowserLogs((l) => [...l, `[CLICK] Interactive state updated to ${browserCounter + 1}`]); }} className="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl text-xs font-semibold shadow transition-colors">
@@ -637,7 +637,7 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
         </div>
       )}
 
-      {/* TAB 2: NEXUS CHAT */}
+      {/* TAB 2: Sesha CHAT */}
       {activeTab === "chat" && (
         <div className="flex-1 flex flex-col bg-zinc-950 overflow-hidden">
           {/* Chat Messages Stream */}
@@ -668,7 +668,7 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
                 >
                   <div className="flex items-center justify-between border-b border-zinc-800/60 pb-1.5 mb-2 font-mono text-[10px] text-zinc-400">
                     <span className="font-bold uppercase tracking-wide">
-                      {msg.sender === "user" ? "Sovereign Master" : "Nexus AI Companion"}
+                      {msg.sender === "user" ? "Sovereign Master" : "Sesha AI Companion"}
                     </span>
                     <span>{msg.timestamp}</span>
                   </div>
@@ -691,7 +691,7 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
               type="text"
               value={chatInput}
               onChange={(e) => setChatInput(e.target.value)}
-              placeholder={`Ask Nexus about ${activeFileNode?.name || "workspace code"}, request edits, or run tests...`}
+              placeholder={`Ask Sesha about ${activeFileNode?.name || "workspace code"}, request edits, or run tests...`}
               className="flex-1 bg-zinc-900 border border-zinc-750 focus:border-purple-500 rounded-lg px-3 py-2 text-xs text-zinc-100 focus:outline-none font-mono"
             />
             <button
@@ -711,7 +711,7 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
           <div className="flex items-center justify-between bg-zinc-900 p-3 rounded-lg border border-zinc-800">
             <div>
               <h3 className="font-bold text-zinc-100 text-sm">Git Workspace Review & Diff</h3>
-              <p className="text-zinc-400 text-xs">Reviewing modified file: nexus_aos/src/main.py</p>
+              <p className="text-zinc-400 text-xs">Reviewing modified file: Sesha_aos/src/main.py</p>
             </div>
             <div className="flex gap-2">
               <button className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-600 text-white rounded font-sans text-xs font-semibold flex items-center gap-1">
@@ -727,17 +727,17 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
           {/* Unified Diff View Simulation */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
             <div className="bg-zinc-925 px-3 py-2 border-b border-zinc-800 text-zinc-400 font-bold">
-              --- a/nexus_aos/src/main.py +++ b/nexus_aos/src/main.py
+              --- a/Sesha_aos/src/main.py +++ b/Sesha_aos/src/main.py
             </div>
             <div className="p-3 leading-6">
               <div className="text-zinc-500">@@ -8,6 +8,10 @@ def evolve():</div>
               <div className="text-zinc-300"> orchestrator = OrchestratorEngine()</div>
               <div className="text-zinc-300"> vitals = HostVitalsMonitor()</div>
               <div className="bg-rose-950/60 text-rose-300 -mx-3 px-3 border-l-4 border-rose-500">
-                - print("[NEXUS-AOS] Bootstrapping Loop...")
+                - print("[Sesha-AOS] Bootstrapping Loop...")
               </div>
               <div className="bg-emerald-950/60 text-emerald-300 -mx-3 px-3 border-l-4 border-emerald-500">
-                + print("[NEXUS-AOS] Bootstrapping Homeostatic Control Loop with Ischemia patrol...")
+                + print("[Sesha-AOS] Bootstrapping Homeostatic Control Loop with Ischemia patrol...")
               </div>
               <div className="text-zinc-300"> while True:</div>
               <div className="text-zinc-300"> state = vitals.scan_host()</div>
@@ -751,10 +751,10 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
         <div className="flex-1 p-6 bg-zinc-950 overflow-y-auto text-zinc-300 font-sans leading-relaxed">
           <div className="max-w-3xl mx-auto flex flex-col gap-4">
             <h1 className="text-2xl font-bold text-cyan-400 border-b border-zinc-800 pb-2">
-              Nexus-AOS Architecture Documentation
+              Sesha-AOS Architecture Documentation
             </h1>
             <p className="text-sm text-zinc-400">
-              Nexus-AOS operates as a dual-interface intelligence platform combining Sovereign Terminal for master user control and Nexus Core for LLM orchestration.
+              Sesha-AOS operates as a dual-interface intelligence platform combining Sovereign Terminal for master user control and Sesha Core for LLM orchestration.
             </p>
 
             <h2 className="text-lg font-semibold text-zinc-100 mt-2">Architecture Diagram</h2>
@@ -769,7 +769,7 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
 └──────────────────────────────┬──────────────────────────────┘
                                │ Shared State Protocol
 ┌──────────────────────────────▼──────────────────────────────┐
-│                      NEXUS CORE (LLM)                       │
+│                      Sesha CORE (LLM)                       │
 │     Vitals • Directive Queue • Active Biosignals • Instincts  │
 └─────────────────────────────────────────────────────────────┘`}</pre>
             </div>
@@ -781,3 +781,4 @@ export const L2Workspace: React.FC<L2WorkspaceProps> = React.memo(({
 });
 
 L2Workspace.displayName = "L2Workspace";
+

@@ -15,7 +15,7 @@ Description: Framework for multi-generational digital preservation and antifragi
 
 ## 3. Legacy-Building (Sovereign Manifest)
 - **Digital Preservation:** Checkpointing the "DNA Core" onto cold storage and distributed ledgers.
-- **Multi-Generational Continuity:** Ensuring the Sovereign's vision (Gagan Jain) is encoded into the fundamental reward function of the Nexus.
+- **Multi-Generational Continuity:** Ensuring the Sovereign's vision (Gagan Jain) is encoded into the fundamental reward function of the Sesha.
 
 ---
 *Status: FORGED | Pulse 8 Logic Atom 26.*

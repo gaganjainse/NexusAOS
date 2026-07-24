@@ -1,5 +1,5 @@
 """
-NexusAOS - Physiological Gate
+SeshaAOS - Physiological Gate
 Version: 1.0.0
 Description: Hard-wires hormonal levels to tool permissions (Biological Compulsion).
 """
@@ -201,3 +201,4 @@ if __name__ == "__main__":
     gate = PhysiologicalGate(base)
     import json
     print(json.dumps(gate.get_dampening_report(), indent=2))
+

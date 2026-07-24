@@ -1,5 +1,5 @@
 """
-NexusAOS - Reproduction Engine
+SeshaAOS - Reproduction Engine
 Version: 2.0.0
 Description: Handles the serialization (Spore creation) and instantiation (Birth)
 of OS instances with oxidation-aware lineage tracking.
@@ -7,11 +7,12 @@ of OS instances with oxidation-aware lineage tracking.
 
 from __future__ import annotations
 
-import os
 import json
-import zipfile
+import os
 import sys
+import zipfile
 from pathlib import Path
+
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -37,7 +38,7 @@ class ReproductionEngine:
 
     def create_spore(self, parent_instance_id: Optional[str] = None) -> Dict:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        spore_name = f"nexus_spore_{timestamp}.zip"
+        spore_name = f"Sesha_spore_{timestamp}.zip"
         spore_path = self.spore_dir / spore_name
 
         targets = [
@@ -103,3 +104,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     engine = ReproductionEngine(base)
     print(engine.create_spore())
+

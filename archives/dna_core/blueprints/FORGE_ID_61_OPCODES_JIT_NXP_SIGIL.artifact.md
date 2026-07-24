@@ -4,7 +4,7 @@ Objective: Implementation of the high-speed execution layer (Nerve-Script JIT) a
 Status: ACTIVE PROTOCOL | NEURAL 14.0 Compliance
 
 ## 1. Executive Summary
-To achieve **Absolute Sovereignty**, Nexus must bypass the latency of interpreted code (Python) and the insecurity of software-only signatures. **Forge ID 61** defines the convergence of binary execution speed with hardware-level cryptographic assurance. The **Nerve-Script JIT** translates high-level reasoning into optimized machine opcodes, while the **Sigil NXP** ensures every pulse is signed by an immutable hardware enclave.
+To achieve **Absolute Sovereignty**, Sesha must bypass the latency of interpreted code (Python) and the insecurity of software-only signatures. **Forge ID 61** defines the convergence of binary execution speed with hardware-level cryptographic assurance. The **Nerve-Script JIT** translates high-level reasoning into optimized machine opcodes, while the **Sigil NXP** ensures every pulse is signed by an immutable hardware enclave.
 
 ## 2. Nerve-Script: Direct-to-ASM Compilation
 The Nerve-Script JIT is the primary motor for the **Agentic Soma (AS)**. It bypasses the Python Global Interpreter Lock (GIL) by compiling critical paths directly to native instructions.

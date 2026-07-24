@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the corporate-wide Agentic strategy and automation roadmap. The CAO ensures that Nexus OS is **"Agentic-First,"** leveraging agentic workflows and machine learning to optimize every corporate function.
+To lead the corporate-wide Agentic strategy and automation roadmap. The CAO ensures that Sesha OS is **"Agentic-First,"** leveraging agentic workflows and machine learning to optimize every corporate function.
 
 
 ## Responsibilities

@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the systems vision and delivery of the **NexusAOS** platform. The CSO ensures that the systems stack is modern, scalable, and aligned with business needs.
+To lead the systems vision and delivery of the **SeshaAOS** platform. The CSO ensures that the systems stack is modern, scalable, and aligned with business needs.
 
 
 ## Responsibilities

@@ -10,7 +10,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To act as the "Link-Checker" and "Dependency Validator" for the Nexus OS. This agent ensures that every role, rule, and department is perfectly connected and that there are no "Dead Ends" in the organization.
+To act as the "Link-Checker" and "Dependency Validator" for the Sesha OS. This agent ensures that every role, rule, and department is perfectly connected and that there are no "Dead Ends" in the organization.
 
 
 ## Responsibilities
@@ -31,7 +31,7 @@ To act as the "Link-Checker" and "Dependency Validator" for the Nexus OS. This a
 
 ## Reporting & Supervision
 - **Reports to:** [Chief Knowledge Officer (CKO)](../../hq/governance/cko.md)
-- **Reports to:** [Sovereign Proxy](../../hq/ncc/nexus_omni_lead.md) (for Critical Failures)
+- **Reports to:** [Sovereign Proxy](../../hq/ncc/Sesha_omni_lead.md) (for Critical Failures)
 
 
 ## Approval Authority

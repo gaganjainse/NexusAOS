@@ -4,10 +4,10 @@ Version 1.0 (Golden Master)
 ## Overview
 **Branch:** Core
 **Level:** Protocol
-**Superior:** Sovereign Proxy (Nexus Omni-Lead)
+**Superior:** Sovereign Proxy (Sesha Omni-Lead)
 
 ## Purpose
-To enable the **NexusAOS** to autonomously rewrite its own DNA (Protocols and Rules) based on operational feedback and consolidated wisdom. This protocol governs the "Evolutionary Loop" of the organism.
+To enable the **SeshaAOS** to autonomously rewrite its own DNA (Protocols and Rules) based on operational feedback and consolidated wisdom. This protocol governs the "Evolutionary Loop" of the organism.
 
 ## The Mutation Loop
 1.  **Evidence Analysis:** Review Consolidated Learning Artifacts for recurring inefficiencies or successful anomalies.

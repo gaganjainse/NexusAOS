@@ -45,7 +45,7 @@ let vitalsData = {
 let directivesList = [
   {
     id: "DIR-101",
-    text: "Design and implement the Nexus App dual-interface specification",
+    text: "Design and implement the Sesha App dual-interface specification",
     status: "Completed",
     timestamp: "10 minutes ago",
     priority: "High",
@@ -53,10 +53,10 @@ let directivesList = [
       { text: "Architect L1-L4 Sovereign Terminal layout", done: true },
       { text: "Implement Pet companion dynamic states & animations", done: true },
       { text: "Build System Monitor dashboard with Host Vitals", done: true },
-      { text: "Integrate Nexus Core LLM workspace view", done: true },
+      { text: "Integrate Sesha Core LLM workspace view", done: true },
     ],
     agentBids: ["Orchestrator-01 (100% match)", "Immune-03 (Security check)"],
-    outcome: "Nexus App initialized successfully across Sovereign Terminal & Core.",
+    outcome: "Sesha App initialized successfully across Sovereign Terminal & Core.",
   },
   {
     id: "DIR-102",
@@ -75,10 +75,10 @@ let directivesList = [
 
 // API Routes
 app.get("/api/health", (_req, res) => {
-  res.json({ status: "ok", app: "Nexus App AOS" });
+  res.json({ status: "ok", app: "Sesha App AOS" });
 });
 
-app.get("/api/nexus/vitals", (_req, res) => {
+app.get("/api/Sesha/vitals", (_req, res) => {
   // Add minor variance to metrics to simulate a living host
   const cpuUsage = Math.floor(15 + Math.random() * 45);
   const memUsage = (8.0 + Math.random() * 0.8).toFixed(1);
@@ -94,7 +94,7 @@ app.get("/api/nexus/vitals", (_req, res) => {
   });
 });
 
-app.post("/api/nexus/action", (req, res) => {
+app.post("/api/Sesha/action", (req, res) => {
   const { action } = req.body;
   if (action === "conservation") {
     vitalsData.status = "Conservation";
@@ -111,24 +111,24 @@ app.post("/api/nexus/action", (req, res) => {
   res.json({ success: true, message: `Executed action: ${action}` });
 });
 
-app.post("/api/nexus/chat", async (req, res) => {
+app.post("/api/Sesha/chat", async (req, res) => {
   try {
     const { message, contextFile, history } = req.body;
     const ai = getGenAIClient();
 
     if (!ai) {
       // Fallback AI simulation if GEMINI_API_KEY is not provided
-      const responseText = `[Nexus Core System Response]\nI have received your query regarding "${message}".\n\nActive Context: ${contextFile || "main.py"}\n\nAll Vitals are currently Homeostatic (Energy: ${vitalsData.energy}%, Vibe: +${vitalsData.vibe}). I can assist with code editing, system diagnostics, executing directives, or managing database/git operations.`;
+      const responseText = `[Sesha Core System Response]\nI have received your query regarding "${message}".\n\nActive Context: ${contextFile || "main.py"}\n\nAll Vitals are currently Homeostatic (Energy: ${vitalsData.energy}%, Vibe: +${vitalsData.vibe}). I can assist with code editing, system diagnostics, executing directives, or managing database/git operations.`;
       return res.json({ text: responseText, status: "simulated" });
     }
 
-    const systemInstruction = `You are Nexus (Nexus-α), an advanced AI Operating System companion and core intelligence for NexusAOI.
-You operate across the Sovereign Terminal IDE and Nexus Core LLM Workspace.
+    const systemInstruction = `You are Sesha (Sesha-α), an advanced AI Operating System companion and core intelligence for SeshaAOI.
+You operate across the Sovereign Terminal IDE and Sesha Core LLM Workspace.
 Keep your answers direct, technical, sharp, and helpful. Use markdown formatting and code blocks where relevant.
 Current Host Vitals: Energy ${vitalsData.energy}%, Disk C ${vitalsData.ischemia}%, Vibe +${vitalsData.vibe}.`;
 
-    const chatMessages = (history || []).map((h: any) => `${h.role === "user" ? "User" : "Nexus"}: ${h.text}`).join("\n");
-    const fullPrompt = `${chatMessages}\nContext file: ${contextFile || "None"}\nUser: ${message}\nNexus:`;
+    const chatMessages = (history || []).map((h: any) => `${h.role === "user" ? "User" : "Sesha"}: ${h.text}`).join("\n");
+    const fullPrompt = `${chatMessages}\nContext file: ${contextFile || "None"}\nUser: ${message}\nSesha:`;
 
     const response = await ai.models.generateContent({
       model: "gemini-3.6-flash",
@@ -139,19 +139,19 @@ Current Host Vitals: Energy ${vitalsData.energy}%, Disk C ${vitalsData.ischemia}
       },
     });
 
-    res.json({ text: response.text || "Nexus generated response.", status: "live" });
+    res.json({ text: response.text || "Sesha generated response.", status: "live" });
   } catch (err: any) {
-    console.error("Error in /api/nexus/chat:", err);
+    console.error("Error in /api/Sesha/chat:", err);
     res.status(500).json({ error: err.message || "Failed to generate AI response" });
   }
 });
 
-app.post("/api/nexus/directive", async (req, res) => {
+app.post("/api/Sesha/directive", async (req, res) => {
   try {
     const { directiveText } = req.body;
     const dirId = `DIR-${103 + directivesList.length}`;
     
-    let outcome = "Directive dispatched to Nexus Core orchestrator.";
+    let outcome = "Directive dispatched to Sesha Core orchestrator.";
     let subtasks = [
       { text: "Parse directive semantics and tool constraints", done: true },
       { text: "Dispatch agent sub-tasks", done: true },
@@ -229,8 +229,9 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`[Nexus Server] Running on http://localhost:${PORT}`);
+    console.log(`[Sesha Server] Running on http://localhost:${PORT}`);
   });
 }
 
 startServer();
+

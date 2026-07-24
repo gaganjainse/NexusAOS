@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To protect **Nexus Corporate OS** from cyber threats and ensure operational data privacy. The Security Manager embeds security best practices into every stage of the **Agentic logic** development life cycle.
+To protect **Sesha Corporate OS** from cyber threats and ensure operational data privacy. The Security Manager embeds security best practices into every stage of the **Agentic logic** development life cycle.
 
 
 ## Responsibilities

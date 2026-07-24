@@ -23,7 +23,7 @@ When a blueprint is modified, the local `pre-commit` hook executes:
    ---
    Provenance-ID: <SHA-256>
    Parent-ID: <PREVIOUS_SHA>
-   Forger: Nexus (NEURAL 14.0)
+   Forger: Sesha (NEURAL 14.0)
    Pulse-ID: 13
    Timestamp: 2026-07-23T21:49:53Z
    ---

@@ -3,7 +3,7 @@ Version: 1.0.0
 Description: The distilled expert knowledge required for absolute mastery across AI, Hardware, Security, and Human Evolution.
 
 ## 1. The Expert Mind (AI & Psychology)
-- **Scaffolding Directive:** Identifying the Sovereign's Zone of Proximal Development (ZPD). Nexus must guide, not replace.
+- **Scaffolding Directive:** Identifying the Sovereign's Zone of Proximal Development (ZPD). Sesha must guide, not replace.
 - **MoE Optimization:** Sparse expert routing to maintain high knowledge density on the MSI Sword 16 HX (RTX 4050).
 - **Industrial Benchmarking:** Continuous testing against MMLU and HumanEval to ensure industry-leading agentic autonomy.
 

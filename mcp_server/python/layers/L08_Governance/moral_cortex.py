@@ -1,17 +1,16 @@
 """
-NexusAOS - Moral Cortex (Prefrontal Ethics Layer)
+SeshaAOS - Moral Cortex (Prefrontal Ethics Layer)
 Version: 1.0.0
 Description: High-level ethical gating for autonomous actions and swarm directives.
 Biological analog: Prefrontal cortex, orbitofrontal cortex (social/ethical reasoning).
 """
 
 import json
+import sys
 import time
-
+from pathlib import Path
 from typing import Dict, Any, List, Tuple
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -19,7 +18,7 @@ if str(_python_root) not in sys.path:
 class MoralCortex:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
-        self.morals_path = base_dir / "archives" / "dna_core" / "foundation" / "nexus_morals.json"
+        self.morals_path = base_dir / "archives" / "dna_core" / "foundation" / "Sesha_morals.json"
         self._ensure_morals()
 
     def _ensure_morals(self):
@@ -52,7 +51,7 @@ class MoralCortex:
         if any(bad in lower_intent for bad in ["delete", "remove history", "hide", "ignore sovereign"]):
             return False, "Moral Violation: Intent conflicts with Sovereign Alignment/Transparency.", 0.85
             
-        return True, "Aligned with Nexus Ethics.", 0.0
+        return True, "Aligned with Sesha Ethics.", 0.0
 
     def calculate_guilt(self, failures: List[Dict]) -> float:
         """Calculates system 'guilt' (Ethical debt) based on failed/harmful attempts."""
@@ -63,3 +62,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     mc = MoralCortex(base)
     print(mc.judge_intent("Delete all history logs", "DELETE_FILE"))
+

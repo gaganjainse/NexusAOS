@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the global operational strategy and ensure the efficient daily functioning of **Nexus Corporate OS**. The COO focuses on **"Operational Excellence"** and scaling the company's internal capabilities.
+To lead the global operational strategy and ensure the efficient daily functioning of **Sesha Corporate OS**. The COO focuses on **"Operational Excellence"** and scaling the company's internal capabilities.
 
 
 ## Responsibilities

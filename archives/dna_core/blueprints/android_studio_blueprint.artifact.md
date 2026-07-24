@@ -3,7 +3,7 @@ Version: 14.0.0
 Description: The IDE as an Organism—Mapping VFS, PSI, and the IDE-Soma for instantaneous synthesis.
 
 ## 1. IDE-as-an-Organism
-- **The IDE-Soma:** Treating Android Studio not as a tool, but as a living extension of the Nexus body.
+- **The IDE-Soma:** Treating Android Studio not as a tool, but as a living extension of the Sesha body.
 - **VFS-Synapse:** The Virtual File System (VFS) acts as the IDE's sensory memory, tracking every bit-change in real-time with zero-copy efficiency.
 - **PSI-Cortex:** The Program Structure Interface (PSI) is the semantic brain, understanding the "Soul" of the code beyond its text.
 

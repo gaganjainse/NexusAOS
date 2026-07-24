@@ -9,12 +9,12 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-The foundational command dashboard for the NexusAOS.
+The foundational command dashboard for the SeshaAOS.
 
 
 ## Responsibilities
-- **Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)
-- **Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)
+- **Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)
+- **Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)
 
 
 ## Deliverables

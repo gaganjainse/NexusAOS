@@ -1,18 +1,17 @@
 """
-NexusAOS - Mutation Engine
+SeshaAOS - Mutation Engine
 Version: 1.0.0
 Description: Enables autonomous rewriting of the OS DNA (Markdown artifacts).
 """
 
 import os
 import shutil
-
-from datetime import datetime
 import subprocess
 import sys
-
-from pathlib import Path
 import sys
+from datetime import datetime
+from pathlib import Path
+
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -39,7 +38,7 @@ class MutationEngine:
             return f"Error: File {file_rel_path} not found in DNA."
 
         # Safety Check: Protected Files
-        if "nexus_constitution.md" in file_rel_path.lower():
+        if "Sesha_constitution.md" in file_rel_path.lower():
             if "LAW I" in old_text or "LAW I" in new_text:
                 return "CRITICAL ERROR: LAW I (Sovereign Supremacy) is immutable. Mutation aborted."
 
@@ -103,3 +102,4 @@ if __name__ == "__main__":
         "**Evolutionary Note:** Tested Mutation.\n\n**Navigation:**",
         "Verifying Phase 8 Mutation Engine."
     ))
+

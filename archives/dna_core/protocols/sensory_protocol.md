@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Agentic Officer (CAO)
 
 ## Purpose
-To move **NexusAOS** from batch-scraping blindness to continuous, streaming perception. This protocol governs the "Sensory Nerves" that detect filesystem and environmental changes in real time and translate them into hormonal signals.
+To move **SeshaAOS** from batch-scraping blindness to continuous, streaming perception. This protocol governs the "Sensory Nerves" that detect filesystem and environmental changes in real time and translate them into hormonal signals.
 
 ## Sensory Channels
 | Channel | Watch Target | Signal Emitted | Salience |
@@ -15,7 +15,7 @@ To move **NexusAOS** from batch-scraping blindness to continuous, streaming perc
 | **DNA Nerve** | `archives/**/*.md` | `GENETIC_PLASTICITY` | High |
 | **Firmware Nerve** | `core/pulses/*.nxp` | `GROWTH` | Medium |
 | **Physiology Nerve** | `core/monitoring/*.json` | `VIBE` | Low |
-| **Pain Nerve** | Critical scripts (`nexus_gui.py`, `index.py`) | `NOCICEPTION` | Critical |
+| **Pain Nerve** | Critical scripts (`Sesha_gui.py`, `index.py`) | `NOCICEPTION` | Critical |
 
 ## Streaming Mechanics
 - **Poll Interval (Healthy):** 2 seconds.

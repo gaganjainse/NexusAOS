@@ -48,20 +48,20 @@ CELLULAR_MAP = {
     },
     "lysosome": {
         "biology": "Digest waste and damaged organelles",
-        "aos": "nexus_liver.py — filtration",
-        "engine": "nexus_liver.py",
+        "aos": "Sesha_liver.py — filtration",
+        "engine": "Sesha_liver.py",
         "status_field": "toxicity_pct",
     },
     "neuron": {
         "biology": "Electrical signal transmission",
-        "aos": "nexus_lattice.py — synaptic handoffs",
-        "engine": "nexus_lattice.py",
+        "aos": "Sesha_lattice.py — synaptic handoffs",
+        "engine": "Sesha_lattice.py",
         "status_field": "active_synapses",
     },
     "blood": {
         "biology": "Transport medium (O2, hormones, cells)",
         "aos": "signals.json + physiology.json circulation",
-        "engine": "signal_router.py + nexus_pulse.py",
+        "engine": "signal_router.py + Sesha_pulse.py",
         "status_field": "circulation_active",
     },
     "rbc": {
@@ -107,16 +107,16 @@ class CellularEngine:
                 result["value"] = round(pct, 1)
                 result["healthy"] = pct > 20
             elif component == "nucleus":
-                const = self.base_dir / "archives/dna_core/foundation/nexus_constitution.md"
+                const = self.base_dir / "archives/dna_core/foundation/Sesha_constitution.md"
                 result["value"] = const.exists()
                 result["healthy"] = const.exists()
             elif component == "neuron":
-                from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+                from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
                 result["value"] = len(LatticeEngine(self.base_dir).get_active_nodes())
                 result["healthy"] = True
             elif component == "lysosome":
-                from layers.L02_Agent.nexus_liver import NexusLiver
-                t = NexusLiver(self.base_dir).get_toxic_load()
+                from layers.L02_Agent.Sesha_liver import SeshaLiver
+                t = SeshaLiver(self.base_dir).get_toxic_load()
                 result["value"] = t["toxicity_pct"]
                 result["healthy"] = t["toxicity_pct"] < 75
             elif component == "wbc":
@@ -179,3 +179,4 @@ class CellularEngine:
 if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     print(json.dumps(CellularEngine(base).full_cell_report(), indent=2))
+

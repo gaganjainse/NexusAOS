@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To review process adherence and asset quality against internal standards. The Quality Auditor ensures that **"The Nexus OS Way"** is being followed.
+To review process adherence and asset quality against internal standards. The Quality Auditor ensures that **"The Sesha OS Way"** is being followed.
 
 
 ## Responsibilities

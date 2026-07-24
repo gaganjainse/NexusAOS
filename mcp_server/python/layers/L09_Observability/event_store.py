@@ -1,11 +1,11 @@
 """
-NexusAOS - Event Store
+SeshaAOS - Event Store
 Version: 1.0.0
 Description: Structured event log for system events.
 """
 import json
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Optional, List, Dict
 
@@ -50,3 +50,4 @@ class EventStore:
                         except json.JSONDecodeError:
                             continue
         return events
+

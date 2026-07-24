@@ -1,4 +1,4 @@
-# NexusAOS Server Context
+# SeshaAOS Server Context
 # Version: 0.1.0
 # Description: Holds shared services and configuration for the MCP server.
 
@@ -21,3 +21,4 @@ class ServerContext:
     def __init__(self, base_dir: Path, services: Optional[ServiceContainer] = None):
         self.base_dir = base_dir
         self.services = services or ServiceContainer()
+

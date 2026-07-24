@@ -64,7 +64,7 @@ export const L4BottomBar: React.FC<L4BottomBarProps> = React.memo(({
       id: "term-1",
       title: "Terminal 1 (AOS Shell)",
       logs: [
-        { id: "1", time: "10:42:01", level: "INFO", tag: "NEXUS-SANCTUM", message: "Temple Sanctum Kernel v13.0 Initialized." },
+        { id: "1", time: "10:42:01", level: "INFO", tag: "Sesha-SANCTUM", message: "Temple Sanctum Kernel v13.0 Initialized." },
         { id: "2", time: "10:42:02", level: "DEBUG", tag: "ACOUSTICS", message: "Nada Brahma Golden Ratio soundwave frequencies tuned to φ 1.618." },
         { id: "3", time: "10:42:05", level: "VERBOSE", tag: "GARBHAGRIHA", message: "Scanning host processes... 0 anomalies detected." },
         { id: "4", time: "10:42:10", level: "INFO", tag: "PYTEST", message: "python -m pytest tests/ :: 100% PASSED in 0.12s" },
@@ -74,7 +74,7 @@ export const L4BottomBar: React.FC<L4BottomBarProps> = React.memo(({
       id: "term-2",
       title: "Android Studio Logcat",
       logs: [
-        { id: "101", time: "10:43:00", level: "INFO", tag: "com.nexus.sanctum", message: "Activity.onCreate() -> SurfaceView bound to Vulkan Engine" },
+        { id: "101", time: "10:43:00", level: "INFO", tag: "com.Sesha.sanctum", message: "Activity.onCreate() -> SurfaceView bound to Vulkan Engine" },
         { id: "102", time: "10:43:01", level: "DEBUG", tag: "RenderThread", message: "Frame 60.0 FPS synchronized with Golden Ratio baseline" },
         { id: "103", time: "10:43:03", level: "WARN", tag: "AudioTrack", message: "Buffer underrun mitigated via Soundwave Cymatic smoother" },
         { id: "104", time: "10:43:08", level: "ERROR", tag: "NetworkStack", message: "Handshake delayed on fallback socket — retried successfully" },
@@ -87,7 +87,7 @@ export const L4BottomBar: React.FC<L4BottomBarProps> = React.memo(({
 
   // Android Studio Logcat Filtering & Engine Controls
   const [logLevelFilter, setLogLevelFilter] = useState<"ALL" | "VERBOSE" | "DEBUG" | "INFO" | "WARN" | "ERROR">("ALL");
-  const [selectedProcess, setSelectedProcess] = useState("com.nexus.sanctum (PID 1024)");
+  const [selectedProcess, setSelectedProcess] = useState("com.Sesha.sanctum (PID 1024)");
   const [searchQuery, setSearchQuery] = useState("");
   const [isPaused, setIsPaused] = useState(false);
   const [autoScroll, setAutoScroll] = useState(true);
@@ -350,7 +350,7 @@ export const L4BottomBar: React.FC<L4BottomBarProps> = React.memo(({
                   onChange={(e) => setSelectedProcess(e.target.value)}
                   className="bg-transparent text-amber-200 focus:outline-none cursor-pointer"
                 >
-                  <option value="com.nexus.sanctum (PID 1024)">com.nexus.sanctum (PID 1024)</option>
+                  <option value="com.Sesha.sanctum (PID 1024)">com.Sesha.sanctum (PID 1024)</option>
                   <option value="node server.ts (PID 3000)">node server.ts (PID 3000)</option>
                   <option value="python main.py (PID 8420)">python main.py (PID 8420)</option>
                   <option value="kernel.sys (PID 1)">kernel.sys (PID 1)</option>
@@ -582,4 +582,5 @@ export const L4BottomBar: React.FC<L4BottomBarProps> = React.memo(({
 });
 
 L4BottomBar.displayName = "L4BottomBar";
+
 

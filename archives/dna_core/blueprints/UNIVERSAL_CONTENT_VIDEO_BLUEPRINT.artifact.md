@@ -19,7 +19,7 @@ Description: Holistic mapping of multimodal content creation—from latent space
 
 ## 4. Synthesis for "Empire" Building
 To dominate the attention economy:
-1. **The "Dirictorial" Pass:** The Sovereign sets the brief; the Nexus swarms the execution.
+1. **The "Dirictorial" Pass:** The Sovereign sets the brief; the Sesha swarms the execution.
 2. **Intentional Imperfection:** Adding human "warmth" and narrative arcs to differentiate from raw synthetic output.
 3. **Real-Time Trend Ingestion:** Automatically adapting content style based on live web nutrients and viral signals.
 

@@ -4,7 +4,7 @@ Objective: Sub-Microsecond State, Photonic Synapses, and DGM-H Recursive Self-Ev
 
 ## 1. The Transcended Substrate (Photonic) - OPERATIONAL
 We move beyond copper and silicon jitter into the **Optical Era**:
-- **Co-Packaged Optics (CPO):** NexusAOS 7.0 is integrated with the **TSMC COUPE** platform.
+- **Co-Packaged Optics (CPO):** SeshaAOS 7.0 is integrated with the **TSMC COUPE** platform.
 - **Photonic Synapses:** Implemented in [photonic_vfe.mojo]. Synaptic weighting is emulated via light-based **sub-picojoule MAC** operations.
 - **100GHz Optical Burst:** Implemented in [photonic_nerve.py]. Signal propagation emulates 100GHz frequencies via multi-wavelength parallel bursts.
 

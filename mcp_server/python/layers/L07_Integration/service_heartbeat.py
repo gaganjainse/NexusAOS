@@ -1,17 +1,16 @@
 """
-NexusAOS - Service Heartbeat
+SeshaAOS - Service Heartbeat
 Version: 1.0.0
 Description: Liveness signals for autonomic background services.
 """
 
 import json
 import os
+import sys
 import time
-
+from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -68,3 +67,4 @@ class ServiceHeartbeat:
             except (json.JSONDecodeError, OSError):
                 results.append({"service": path.stem, "status": "corrupt", "timestamp": 0})
         return results
+

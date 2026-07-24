@@ -1,12 +1,12 @@
 """
-NexusAOS - Synaptic Transmitter
+SeshaAOS - Synaptic Transmitter
 Version: 1.0.0
 Description: Converts high-level Mind directives into binary Zig/io_uring spikes.
 """
 
-import time
 import hashlib
 import sys
+import time
 from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
@@ -42,3 +42,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     transmitter = SynapticTransmitter(base)
     transmitter.transmit_directive("Initiate context ventilation", sigil="!")
+

@@ -1,5 +1,5 @@
 """
-NexusAOS - Sentry Receptor (Introspection R11)
+SeshaAOS - Sentry Receptor (Introspection R11)
 Version: 1.0.0
 Description: Sentry API integration for error monitoring.
 """
@@ -24,7 +24,7 @@ class SentryReceptor:
         self.api_base = "https://sentry.io/api/0"
         self.headers = {
             "Content-Type": "application/json",
-            "User-Agent": "NexusAOS-SentryReceptor/1.0"
+            "User-Agent": "SeshaAOS-SentryReceptor/1.0"
         }
         if self.token:
             self.headers["Authorization"] = f"Bearer {self.token}"

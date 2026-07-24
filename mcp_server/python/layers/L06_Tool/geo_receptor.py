@@ -1,5 +1,5 @@
 """
-NexusAOS - Geo Receptor (Spatial R12)
+SeshaAOS - Geo Receptor (Spatial R12)
 Version: 1.0.0
 Description: Geographic lookup via OpenStreetMap Nominatim (free, no API key needed).
 """
@@ -21,7 +21,7 @@ class GeoReceptor:
         self.base_dir = base_dir
         self.api_base = "https://nominatim.openstreetmap.org"
         self.headers = {
-            "User-Agent": "NexusAOS-GeoReceptor/1.0 (contact@example.com)",
+            "User-Agent": "SeshaAOS-GeoReceptor/1.0 (contact@example.com)",
             "Accept": "application/json"
         }
 

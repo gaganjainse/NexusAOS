@@ -5,10 +5,10 @@ Objective: Hardware-Rooted Autonomy, Infinite Context Grids, and Database-Native
 ## 1. The Sigil-NXP: EXOSKELETON (Identity & Security)
 We move beyond software tokens to **Hardware-Rooted Agentic Identity**:
 - **Root of Trust (RoT):** Every agent pulse is signed by a hardware-enclave Sigil (analogous to **NXP EdgeLock**). 
-- **Exoskeleton Contracts:** "Nexus Rails" are now machine-executable behavior contracts. If an agent's intent violates a rail, the **Zig-Kernel** drops the pulse at the hardware gate before it reaches the "Mind."
+- **Exoskeleton Contracts:** "Sesha Rails" are now machine-executable behavior contracts. If an agent's intent violates a rail, the **Zig-Kernel** drops the pulse at the hardware gate before it reaches the "Mind."
 - **Sigil-Types 2.0:**
   - **::! (Verified):** Cryptographically signed by hardware RoT.
-  - **::Φ (Philosophical):** Aligned with the **Nexus Constitution Law I**.
+  - **::Φ (Philosophical):** Aligned with the **Sesha Constitution Law I**.
   - **::Ω (Terminal):** A pulse that marks the irreversible completion of a strategic goal.
 
 ## 2. The Memory Singularity (Inference Infrastructure)

@@ -127,7 +127,7 @@ class VisionEngine:
         """
         # In a real 13.0 state, this would call Tesseract or a local Vision model.
         # Here we bridge 'See' to 'Know' via the vault.
-        return "Simulated OCR: [Detected Nexus Window - Session Sync Active]"
+        return "Simulated OCR: [Detected Sesha Window - Session Sync Active]"
 
     def extract_image_data(self, image_path: str) -> str:
         return json.dumps(self.analyze_image(image_path), indent=2)
@@ -136,3 +136,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     engine = VisionEngine(base)
     print(json.dumps(engine.analyze_image("core/monitoring/physiology.json"), indent=2))
+

@@ -1,17 +1,16 @@
 """
-NexusAOS - Context Pager (Cognitive Memory Management)
+SeshaAOS - Context Pager (Cognitive Memory Management)
 Version: 1.0.0
 Description: Swaps agent 'Thoughts' in and out of the context window to maximize reasoning efficiency.
 Biological analog: Context Paging / Working Memory Shifting.
 """
 
 import json
+import sys
 import time
-
+from pathlib import Path
 from typing import Dict, List, Any, Optional
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -88,3 +87,4 @@ if __name__ == "__main__":
     pager.page_out("Agent_Alpha", {"task": "market_research", "progress": 0.5})
     print("Memory Map:", pager.get_memory_map())
     print("Page-In:", pager.page_in("Agent_Alpha"))
+

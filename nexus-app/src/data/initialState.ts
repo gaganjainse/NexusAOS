@@ -7,22 +7,22 @@ import {
   SystemProcess,
   ChatMessage,
   CoreWorkspaceState,
-} from "../types/nexus";
+} from "../types/Sesha";
 
 export const INITIAL_FILES: FileNode[] = [
   {
-    name: "nexus_aos",
-    path: "nexus_aos",
+    name: "Sesha_aos",
+    path: "Sesha_aos",
     type: "folder",
     children: [
       {
         name: "src",
-        path: "nexus_aos/src",
+        path: "Sesha_aos/src",
         type: "folder",
         children: [
           {
             name: "main.py",
-            path: "nexus_aos/src/main.py",
+            path: "Sesha_aos/src/main.py",
             type: "file",
             gitStatus: "M",
             language: "python",
@@ -32,11 +32,11 @@ from core.orchestrator import OrchestratorEngine
 from core.vitals import HostVitalsMonitor
 
 def evolve():
-    """Main evolutionary loop for Nexus-AOS"""
+    """Main evolutionary loop for Sesha-AOS"""
     orchestrator = OrchestratorEngine()
     vitals = HostVitalsMonitor()
     
-    print("[NEXUS-AOS] Bootstrapping Homeostatic Control Loop...")
+    print("[Sesha-AOS] Bootstrapping Homeostatic Control Loop...")
     while True:
         state = vitals.scan_host()
         if state.ischemia > 80.0:
@@ -52,7 +52,7 @@ if __name__ == "__main__":
           },
           {
             name: "sovereign_terminal.py",
-            path: "nexus_aos/src/sovereign_terminal.py",
+            path: "Sesha_aos/src/sovereign_terminal.py",
             type: "file",
             gitStatus: "A",
             language: "python",
@@ -61,7 +61,7 @@ class SovereignTerminal:
     def __init__(self, theme="android_studio_dark"):
         self.theme = theme
         self.quadrants = ["L1_Explorer", "L2_Editor", "L3_Tools", "L4_BottomBar"]
-        self.pet_companion = "Nexus-alpha"
+        self.pet_companion = "Sesha-alpha"
         
     def render_workspace(self):
         return f"Rendering {len(self.quadrants)} layout zones with companion {self.pet_companion}."
@@ -71,12 +71,12 @@ class SovereignTerminal:
       },
       {
         name: "core",
-        path: "nexus_aos/core",
+        path: "Sesha_aos/core",
         type: "folder",
         children: [
           {
             name: "orchestrator.py",
-            path: "nexus_aos/core/orchestrator.py",
+            path: "Sesha_aos/core/orchestrator.py",
             type: "file",
             gitStatus: "none",
             language: "python",
@@ -94,7 +94,7 @@ class SovereignTerminal:
           },
           {
             name: "vitals.py",
-            path: "nexus_aos/core/vitals.py",
+            path: "Sesha_aos/core/vitals.py",
             type: "file",
             gitStatus: "none",
             language: "python",
@@ -112,12 +112,12 @@ class SovereignTerminal:
       },
       {
         name: "tests",
-        path: "nexus_aos/tests",
+        path: "Sesha_aos/tests",
         type: "folder",
         children: [
           {
             name: "test_vitals.py",
-            path: "nexus_aos/tests/test_vitals.py",
+            path: "Sesha_aos/tests/test_vitals.py",
             type: "file",
             gitStatus: "none",
             language: "python",
@@ -133,12 +133,12 @@ class SovereignTerminal:
       },
       {
         name: "assets",
-        path: "nexus_aos/assets",
+        path: "Sesha_aos/assets",
         type: "folder",
         children: [
           {
-            name: "nexus_logo.svg",
-            path: "nexus_aos/assets/nexus_logo.svg",
+            name: "Sesha_logo.svg",
+            path: "Sesha_aos/assets/Sesha_logo.svg",
             type: "file",
             gitStatus: "none",
             content: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
@@ -159,12 +159,12 @@ class SovereignTerminal:
   <circle cx="120" cy="120" r="80" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
   <polygon points="120,50 175,150 65,150" fill="none" stroke="#a855f7" stroke-width="4" />
   <circle cx="120" cy="120" r="16" fill="#00f2fe" />
-  <text x="120" y="210" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold">NEXUS SOVEREIGN</text>
+  <text x="120" y="210" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold">Sesha SOVEREIGN</text>
 </svg>`,
           },
           {
             name: "neural_architecture.png",
-            path: "nexus_aos/assets/neural_architecture.png",
+            path: "Sesha_aos/assets/neural_architecture.png",
             type: "file",
             gitStatus: "none",
             content: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450' fill='%2309090b'><rect width='100%' height='100%' fill='%2309090b'/><circle cx='400' cy='225' r='120' fill='none' stroke='%2300f2fe' stroke-width='4'/><text x='400' y='230' fill='%2300f2fe' font-family='sans-serif' font-size='20' text-anchor='middle'>NEURAL MESH ARCHITECTURE</text></svg>",
@@ -173,12 +173,12 @@ class SovereignTerminal:
       },
       {
         name: "data",
-        path: "nexus_aos/data",
+        path: "Sesha_aos/data",
         type: "folder",
         children: [
           {
             name: "vitals_telemetry.csv",
-            path: "nexus_aos/data/vitals_telemetry.csv",
+            path: "Sesha_aos/data/vitals_telemetry.csv",
             type: "file",
             gitStatus: "none",
             content: `Timestamp,CPU_Usage_Pct,Mem_Usage_MB,Disk_C_Pct,Temperature_C,Status
@@ -189,8 +189,8 @@ class SovereignTerminal:
 2026-07-21 20:20:00,18.0,360,79.1,37.2,Conservation`,
           },
           {
-            name: "nexus_config.json",
-            path: "nexus_aos/data/nexus_config.json",
+            name: "Sesha_config.json",
+            path: "Sesha_aos/data/Sesha_config.json",
             type: "file",
             gitStatus: "M",
             content: `{
@@ -214,15 +214,15 @@ class SovereignTerminal:
       },
       {
         name: "docs",
-        path: "nexus_aos/docs",
+        path: "Sesha_aos/docs",
         type: "folder",
         children: [
           {
             name: "architecture_whitepaper.md",
-            path: "nexus_aos/docs/architecture_whitepaper.md",
+            path: "Sesha_aos/docs/architecture_whitepaper.md",
             type: "file",
             gitStatus: "none",
-            content: `# Nexus-AOS System Architecture
+            content: `# Sesha-AOS System Architecture
 
 > **Sovereign Operating System Kernel v13.0**
 
@@ -240,13 +240,13 @@ class SovereignTerminal:
           },
           {
             name: "system_manual.pdf",
-            path: "nexus_aos/docs/system_manual.pdf",
+            path: "Sesha_aos/docs/system_manual.pdf",
             type: "file",
             gitStatus: "none",
             content: `%PDF-1.7
 1 0 obj
-<< /Title (Nexus-AOS Sovereign User Manual)
-   /Author (Nexus Kernel)
+<< /Title (Sesha-AOS Sovereign User Manual)
+   /Author (Sesha Kernel)
    /Subject (Operating Instructions) >>
 endobj
 2 0 obj
@@ -257,19 +257,19 @@ endobj`,
       },
       {
         name: "media",
-        path: "nexus_aos/media",
+        path: "Sesha_aos/media",
         type: "folder",
         children: [
           {
             name: "startup_chime.mp3",
-            path: "nexus_aos/media/startup_chime.mp3",
+            path: "Sesha_aos/media/startup_chime.mp3",
             type: "file",
             gitStatus: "none",
             content: "https://actions.google.com/sounds/v1/science_fiction/digital_scan.ogg",
           },
           {
             name: "cyber_kernel.mp4",
-            path: "nexus_aos/media/cyber_kernel.mp4",
+            path: "Sesha_aos/media/cyber_kernel.mp4",
             type: "file",
             gitStatus: "none",
             content: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
@@ -378,11 +378,11 @@ export const INITIAL_TOOLS: MCPTool[] = [
 
 export const INITIAL_DB_TABLES: DBTable[] = [
   {
-    name: "nexus_directives",
+    name: "Sesha_directives",
     rowsCount: 2,
     columns: ["id", "text", "status", "priority", "created_at"],
     data: [
-      { id: "DIR-101", text: "Design Nexus App spec", status: "Completed", priority: "High", created_at: "2026-07-21 19:40:00" },
+      { id: "DIR-101", text: "Design Sesha App spec", status: "Completed", priority: "High", created_at: "2026-07-21 19:40:00" },
       { id: "DIR-102", text: "/patrol Run immune check", status: "Completed", priority: "Medium", created_at: "2026-07-21 19:48:00" },
     ],
   },
@@ -410,7 +410,7 @@ export const INITIAL_DB_TABLES: DBTable[] = [
 export const INITIAL_GIT_COMMITS: GitCommit[] = [
   {
     hash: "a9f2c14",
-    author: "Sovereign Master <user@nexus.aoi>",
+    author: "Sovereign Master <user@Sesha.aoi>",
     message: "feat: dual-interface specification & pet companion engine",
     date: "12 mins ago",
     branch: "main",
@@ -418,22 +418,22 @@ export const INITIAL_GIT_COMMITS: GitCommit[] = [
   },
   {
     hash: "b7e41d8",
-    author: "Nexus-alpha <ai@nexus.aoi>",
+    author: "Sesha-alpha <ai@Sesha.aoi>",
     message: "core: synchronize homeostatic vitals protocol with host disk C",
     date: "45 mins ago",
     branch: "main",
   },
   {
     hash: "c3d100e",
-    author: "Sovereign Master <user@nexus.aoi>",
-    message: "init: bootstrap Nexus-AOS kernel v13.0",
+    author: "Sovereign Master <user@Sesha.aoi>",
+    message: "init: bootstrap Sesha-AOS kernel v13.0",
     date: "2 hours ago",
     branch: "main",
   },
 ];
 
 export const MOCK_PROCESSES: SystemProcess[] = [
-  { name: "nexus_aos", pid: 12452, cpu: "12%", mem: "340M", path: "./mcp_server/python/" },
+  { name: "Sesha_aos", pid: 12452, cpu: "12%", mem: "340M", path: "./mcp_server/python/" },
   { name: "chrome", pid: 8892, cpu: "8%", mem: "1.2G", path: "C:/Program Files/Google/Chrome/" },
   { name: "python", pid: 6731, cpu: "5%", mem: "210M", path: "./layers/L5_Reasoning/" },
   { name: "node (vite)", pid: 14092, cpu: "3%", mem: "180M", path: "/usr/local/bin/node" },
@@ -443,16 +443,16 @@ export const MOCK_PROCESSES: SystemProcess[] = [
 export const INITIAL_CHAT: ChatMessage[] = [
   {
     id: "chat-1",
-    sender: "nexus",
-    text: "Greeting Sovereign Master. I am Nexus-α, online and bound to this workspace. Both Sovereign Terminal and Nexus Core are synchronized.",
+    sender: "Sesha",
+    text: "Greeting Sovereign Master. I am Sesha-α, online and bound to this workspace. Both Sovereign Terminal and Sesha Core are synchronized.",
     timestamp: "19:50",
   },
 ];
 
 export const INITIAL_CORE_STATE: CoreWorkspaceState = {
-  focusFile: "nexus_aos/src/main.py",
+  focusFile: "Sesha_aos/src/main.py",
   directiveBoard: {
-    currentDirective: "Design & Execute Nexus App Dual-Interface Specification",
+    currentDirective: "Design & Execute Sesha App Dual-Interface Specification",
     subtasks: [
       { text: "L1 Explorer with Project, Directives & System tabs", done: true },
       { text: "L2 Center Code Editor, AI Chat, Diff & Docs", done: true },
@@ -462,7 +462,7 @@ export const INITIAL_CORE_STATE: CoreWorkspaceState = {
     ],
     blockers: [],
   },
-  openFiles: ["nexus_aos/src/main.py", "nexus_aos/src/sovereign_terminal.py"],
+  openFiles: ["Sesha_aos/src/main.py", "Sesha_aos/src/sovereign_terminal.py"],
   activeSignals: [
     { signal: "⚡ Energy", level: "78%", source: "Metabolism", since: "Always", status: "Homeostatic" },
     { signal: "🩸 Ischemia", level: "79.1%", source: "Disk C", since: "14 min", status: "Conservation" },
@@ -490,3 +490,4 @@ export const INITIAL_CORE_STATE: CoreWorkspaceState = {
     { time: "19:51:02", text: "Immune: Checked Disk C status (79.1%)", category: "warn" },
   ],
 };
+

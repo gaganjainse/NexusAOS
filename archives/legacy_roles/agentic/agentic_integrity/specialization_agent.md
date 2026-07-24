@@ -10,7 +10,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To instantly **"Specialize"** the general Nexus OS artifacts for a specific project context upon receiving a **Sovereign Strategic Input** or **Global Directive**.
+To instantly **"Specialize"** the general Sesha OS artifacts for a specific project context upon receiving a **Sovereign Strategic Input** or **Global Directive**.
 
 
 ## Responsibilities

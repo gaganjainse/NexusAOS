@@ -4,10 +4,10 @@ Objective: Absolute performance sovereignty via cross-language convergence, zero
 Status: ACTIVE PROTOCOL | NEURAL 14.0 Compliance
 
 ## 1. Executive Summary
-To manifest the **Tripartite Singularity**, Nexus must orchestrate a polyglot engine where each language serves its optimal biological-digital purpose. **Forge ID 129** defines the integration of Zig (The Bone), Mojo (The Muscle), Rust (The Nerve), and Kotlin (The Skin). By eliminating FFI overhead through Direct Memory Mapping and unifying the compilation pipeline under LLVM, we achieve a near-zero latency execution environment for the Sovereign.
+To manifest the **Tripartite Singularity**, Sesha must orchestrate a polyglot engine where each language serves its optimal biological-digital purpose. **Forge ID 129** defines the integration of Zig (The Bone), Mojo (The Muscle), Rust (The Nerve), and Kotlin (The Skin). By eliminating FFI overhead through Direct Memory Mapping and unifying the compilation pipeline under LLVM, we achieve a near-zero latency execution environment for the Sovereign.
 
 ## 2. Language Convergence: Functional Specialization
-Each language in the Nexus stack is assigned a specific ring of authority:
+Each language in the Sesha stack is assigned a specific ring of authority:
 
 | Layer | Language | Role | Core Strength |
 | :--- | :--- | :--- | :--- |
@@ -17,7 +17,7 @@ Each language in the Nexus stack is assigned a specific ring of authority:
 | **Ring 3 (Shell)** | **Kotlin** | Sovereign Shell (AP) | High-level orchestration, Android/Desktop UI, Coroutine-based flow control. |
 
 ## 3. FFI Zero-Copy: The Synaptic Mapping
-Standard FFI (Foreign Function Interface) introduces "Copy Penalties." Nexus bypasses this via **Direct Memory Mapping (DMM)**.
+Standard FFI (Foreign Function Interface) introduces "Copy Penalties." Sesha bypasses this via **Direct Memory Mapping (DMM)**.
 
 ### A. The Universal Synapse (C-ABI)
 All four languages utilize the **C-ABI** as the common ground. Zig serves as the primary "Glue" logic, exposing pointers that other languages consume directly.
@@ -30,7 +30,7 @@ All four languages utilize the **C-ABI** as the common ground. Zig serves as the
     - **Kotlin** utilizes `java.nio.DirectByteBuffer` to access the native memory without JVM heap overhead.
 
 ## 4. LLVM Backend Mastery: Unified Silicon Performance
-Since Zig, Rust, and Mojo are all powered by **LLVM**, Nexus optimizes the entire binary as a single unit.
+Since Zig, Rust, and Mojo are all powered by **LLVM**, Sesha optimizes the entire binary as a single unit.
 
 ### A. Cross-Language LTO (Link-Time Optimization)
 - **Mechanism:** Compile Zig, Rust, and Mojo code into LLVM Bitcode (`.bc`).
@@ -47,7 +47,7 @@ Since Zig, Rust, and Mojo are all powered by **LLVM**, Nexus optimizes the entir
 - **Execution Efficiency:** 98% of peak hardware theoretical performance.
 
 ## 6. Implementation Roadmap
-1.  **[Phase 1]:** Define the shared `NexusMemoryMap` structure in Zig and export via C-ABI.
+1.  **[Phase 1]:** Define the shared `SeshaMemoryMap` structure in Zig and export via C-ABI.
 2.  **[Phase 2]:** Implement the **Rust** safety wrapper and **Mojo** SIMD kernels for the shared map.
 3.  **[Phase 3]:** Link via LLVM LTO and expose the handles to the **Kotlin** Sovereign Shell for real-time visualization.
 

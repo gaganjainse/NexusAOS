@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the [CORE_PLATFORM] **Deployment** of **Nexus Corporate OS**. The [PLATFORM_A] Lead ensures the app is optimized for operational environments, follows [CORE_PLATFORM] best practices, and maintains high performance.
+To lead the [CORE_PLATFORM] **Deployment** of **Sesha Corporate OS**. The [PLATFORM_A] Lead ensures the app is optimized for operational environments, follows [CORE_PLATFORM] best practices, and maintains high performance.
 
 
 ## Responsibilities

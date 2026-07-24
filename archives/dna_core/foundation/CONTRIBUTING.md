@@ -1,4 +1,4 @@
-# Contributing to NexusAOS
+# Contributing to SeshaAOS
 
 Welcome to the evolution of Agentic General Operating Intelligence (AGOI).
 

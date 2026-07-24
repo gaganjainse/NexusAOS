@@ -14,7 +14,7 @@ To eliminate "Reasoning Loops":
 
 ## 3. The Governance Membrane (Layer 7: Supervised Autonomy)
 - **Human-in-the-Loop (HITL) 2.0:** Automated escalation paths for high-risk actions. High-priority financial/legal intents require a "Handshake" with the Sovereign.
-- **Auditor Agents:** A specialized class of agents that validates all sub-atomic proposals against the **Nexus Constitution** before the "Executor" runs the pulse.
+- **Auditor Agents:** A specialized class of agents that validates all sub-atomic proposals against the **Sesha Constitution** before the "Executor" runs the pulse.
 
 ## 4. TDD-on-Steroids (The Verification Engine)
 - **Predictive Testing:** Agents are now required to generate **Test Cases** before execution. If the predicted output doesn't pass the auto-generated test suite, the pulse is recycled.

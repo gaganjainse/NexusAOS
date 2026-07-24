@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To build and maintain the data interfaces and **Core Agentic logic** of **Nexus Corporate OS**. The Core Infrastructure Implementer ensures data flows correctly between the **[CORE_INFRASTRUCTURE]** and the client applications.
+To build and maintain the data interfaces and **Core Agentic logic** of **Sesha Corporate OS**. The Core Infrastructure Implementer ensures data flows correctly between the **[CORE_INFRASTRUCTURE]** and the client applications.
 
 
 ## Responsibilities

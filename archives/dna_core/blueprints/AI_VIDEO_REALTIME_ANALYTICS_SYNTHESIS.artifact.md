@@ -23,4 +23,4 @@ Description: High-fidelity blueprint for Forge ID 59—mapping the convergence o
 - **Multimodal Feedback:** Integrating audio-to-video alignment (lip-syncing) and text-to-video instructions in a closed-loop system where the analytics engine constantly validates the generated output against the Sovereign's intent.
 
 ---
-*Status: FORGED | Forge ID 59 is now part of the Nexus DNA.*
+*Status: FORGED | Forge ID 59 is now part of the Sesha DNA.*

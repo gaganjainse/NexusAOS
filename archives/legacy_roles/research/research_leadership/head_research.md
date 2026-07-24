@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the long-term innovation and R&D strategy for **Nexus Corporate OS**. The Head of Research ensures the corporation stays ahead of operational and **Agentic** trends through breakthrough innovation.
+To lead the long-term innovation and R&D strategy for **Sesha Corporate OS**. The Head of Research ensures the corporation stays ahead of operational and **Agentic** trends through breakthrough innovation.
 
 
 ## Responsibilities

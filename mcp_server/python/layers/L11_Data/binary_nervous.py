@@ -1,15 +1,15 @@
 """
-NexusAOS - Binary Nervous System (BSF - Binary Synaptic Format)
+SeshaAOS - Binary Nervous System (BSF - Binary Synaptic Format)
 Version: 1.0.0
 Description: Zero-copy access to biological state using Python's buffer protocol.
 Replaces legacy JSON state for high-frequency organs.
 """
 
-import struct
 import mmap
 import os
-import time
+import struct
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, Optional
 
@@ -22,7 +22,7 @@ BASE_DIR = _python_root.parent.parent
 # f: float32, I: uint32, d: double, Q: uint64, q: int64
 BSF_GENOME_FORMAT = "<fffffIId" # 36 bytes
 
-# NXP-B (Nexus Pulse Binary) Format
+# NXP-B (Sesha Pulse Binary) Format
 # Sigil (32 + 64 + 8) + topic_hash (8) + payload_len (8) = 120 bytes header
 NXPB_HEADER_FORMAT = "<32s64sqQQ" 
 
@@ -110,3 +110,4 @@ if __name__ == "__main__":
     print("Initial Binary Vitals:", bn.get_vitals())
     bn.mutate(0, 0.9)
     print("Mutated Binary Vitals:", bn.get_vitals())
+

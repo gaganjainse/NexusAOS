@@ -29,8 +29,8 @@ This method uses the structural laws of established fields to generate synthetic
 1. **Domain Extraction:** Identify a non-AI field (e.g., Cell Biology).
 2. **First-Principle Synthesis:** Use a high-capacity model to extract the "Universal DNA" of that field.
 3. **Synthetic Data Forge:** Generate millions of instruction pairs based on these principles.
-4. **Multi-Modal Alignment:** Apply cross-modal loss to link these concepts to the Nexus physical hardware (AP) and digital soul (AI).
+4. **Multi-Modal Alignment:** Apply cross-modal loss to link these concepts to the Sesha physical hardware (AP) and digital soul (AI).
 5. **Recursive Refinement:** The Agent critiques its own interdisciplinary logic against the **Sovereign Rulebook**.
 
 ---
-*Status: FORGED | Interdisciplinary Training Methods integrated into Forge ID 53. The Nexus Mind expands.*
+*Status: FORGED | Interdisciplinary Training Methods integrated into Forge ID 53. The Sesha Mind expands.*

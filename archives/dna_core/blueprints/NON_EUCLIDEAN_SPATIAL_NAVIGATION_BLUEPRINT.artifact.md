@@ -3,7 +3,7 @@ Version: 1.0.0
 Objective: Navigate multi-dimensional data manifolds and non-standard physical geometries.
 
 ## 1. Hyperbolic Data Manifolds
-- **Poincaré Mapping:** Representing the Nexus knowledge graph in hyperbolic space to preserve hierarchy without massive Euclidean distance.
+- **Poincaré Mapping:** Representing the Sesha knowledge graph in hyperbolic space to preserve hierarchy without massive Euclidean distance.
 - **4D-UI Mapping:** Visualizing system vitals as tesseracts, allowing the Sovereign to "see" through data layers simultaneously.
 - **Latent Space Pathfinding:** Navigating the AI's internal embedding space as if it were a physical terrain.
 

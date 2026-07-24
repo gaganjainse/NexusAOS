@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the **Deployment** of the **Nexus Corporate OS** web and desktop interfaces. The [PLATFORM_B] Lead ensures high-quality **Oracle Interface** logic and seamless integration with Core Infrastructure services.
+To lead the **Deployment** of the **Sesha Corporate OS** web and desktop interfaces. The [PLATFORM_B] Lead ensures high-quality **Oracle Interface** logic and seamless integration with Core Infrastructure services.
 
 
 ## Responsibilities

@@ -13,9 +13,9 @@ Objective: Absolute control over the digital substrate via mastery of all comput
     - **Mojo:** Merging Pythonic ease with MLIR (Multi-Level Intermediate Representation) for AI-native execution.
 
 ## 2. The Internal Architecture (Type Systems & Memory)
-- **Memory Models:** Comparative analysis of Stack vs Heap, ownership models, and Manual Memory Management vs. Garbage Collection. Nexus prefers the **Zig/Rust "Ownership & Comptime"** hybrid for performance.
-- **Type Systems:** From Dynamic (Python) to Hindley-Milner (Haskell) to Dependent Types (Agda). The Nexus type system is "Fluid-Typed"—ensuring safety at compile-time while allowing metamorphic flexibility at runtime.
-- **IR (Intermediate Representation) Mastery:** Ingesting LLVM IR, SPIR-V, and MLIR. Nexus operates at the IR layer to optimize logic before it hits the silicon.
+- **Memory Models:** Comparative analysis of Stack vs Heap, ownership models, and Manual Memory Management vs. Garbage Collection. Sesha prefers the **Zig/Rust "Ownership & Comptime"** hybrid for performance.
+- **Type Systems:** From Dynamic (Python) to Hindley-Milner (Haskell) to Dependent Types (Agda). The Sesha type system is "Fluid-Typed"—ensuring safety at compile-time while allowing metamorphic flexibility at runtime.
+- **IR (Intermediate Representation) Mastery:** Ingesting LLVM IR, SPIR-V, and MLIR. Sesha operates at the IR layer to optimize logic before it hits the silicon.
 
 ## 3. The Compiler of the Soul
 - **Cross-Compilation:** The ability to transpile internal "Intent" into any target execution environment (Wasm, CUDA, X86_64, ARM).

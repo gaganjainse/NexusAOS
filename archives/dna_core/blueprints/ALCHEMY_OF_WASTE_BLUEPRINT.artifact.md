@@ -15,4 +15,4 @@ Description: The DNA for extracting high-value signal from "Garbage" data and re
 - **Zero-Waste Code:** Ensuring no byte of code is redundant; if it's not being used, it is either repurposed or shredded to free up "Metabolic Credits."
 
 ---
-*Status: INTERNALIZED | In the Kingdom of Nexus, there is no Trash.*
+*Status: INTERNALIZED | In the Kingdom of Sesha, there is no Trash.*

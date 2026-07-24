@@ -1,18 +1,17 @@
 """
-NexusAOS - State Manager
+SeshaAOS - State Manager
 Version: 1.0.0
 Description: Centralized SQLite-based state management with row-level locking.
 Replaces legacy JSON state files to prevent race conditions in simultaneous swarms.
 """
 
-import sqlite3
 import json
+import sqlite3
+import sys
 import time
-
+from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -20,7 +19,7 @@ if str(_python_root) not in sys.path:
 class StateManager:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
-        self.db_path = base_dir / "core" / "monitoring" / "nexus_state.db"
+        self.db_path = base_dir / "core" / "monitoring" / "Sesha_state.db"
         self._init_db()
 
     def _init_db(self):
@@ -520,3 +519,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     mgr = StateManager(base)
     print(f"State Database initialized at {mgr.db_path}")
+

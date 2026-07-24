@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To create clear, accurate, and helpful documentation for **Nexus Corporate OS** **Sovereigns** and **Personnel**.
+To create clear, accurate, and helpful documentation for **Sesha Corporate OS** **Sovereigns** and **Personnel**.
 
 
 ## Responsibilities

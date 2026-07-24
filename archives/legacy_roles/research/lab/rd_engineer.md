@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To build experimental prototypes and explore the boundaries of future technologies for **Nexus Corporate OS**.
+To build experimental prototypes and explore the boundaries of future technologies for **Sesha Corporate OS**.
 
 
 ## Responsibilities

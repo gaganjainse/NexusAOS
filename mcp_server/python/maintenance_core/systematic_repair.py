@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os/archives")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os/archives")
 
 # Definitive Map: Filename -> Systematic Title
 TITLE_MAP = {
@@ -18,8 +18,8 @@ TITLE_MAP = {
     "cae.md": "Chief Audit Executive (CAE)",
     "chief_ethics_officer.md": "Chief Ethics & Trust Officer (CETO)",
     "ciso.md": "Chief Information Security Officer (CISO)",
-    "nexus_omni_lead.md": "Sovereign Proxy (Nexus Omni-Lead)",
-    "nexus_orchestrator_agent.md": "Nexus Orchestrator Agent",
+    "Sesha_omni_lead.md": "Sovereign Proxy (Sesha Omni-Lead)",
+    "Sesha_orchestrator_agent.md": "Sesha Orchestrator Agent",
     "agentic_engineer.md": "Agentic Engineer",
     "agentic_knowledge_lead.md": "Agentic Knowledge Lead",
     "agentic_intern.md": "Agentic Intern",
@@ -28,7 +28,7 @@ TITLE_MAP = {
     "model_auditor.md": "Model Auditor",
     "corporate_registry_agent.md": "Corporate Registry Agent",
     "global_dependency_agent.md": "Global Dependency Agent",
-    "nexus_logic_engine.md": "Nexus Logic Engine",
+    "Sesha_logic_engine.md": "Sesha Logic Engine",
     "red_team_agent.md": "Red Team Agent",
     "self_repair_agent.md": "Self Repair Agent",
     "specialization_agent.md": "Specialization Agent",
@@ -69,7 +69,7 @@ def generate_systematic_title(filename):
     return " ".join(capitalized)
 
 def repair():
-    print("NexusAOS Systematic Repair: Syncing Titles and Hierarchies...")
+    print("SeshaAOS Systematic Repair: Syncing Titles and Hierarchies...")
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:
             if file.endswith(".md"):
@@ -91,3 +91,4 @@ def repair():
 
 if __name__ == "__main__":
     repair()
+

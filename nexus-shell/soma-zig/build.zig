@@ -5,7 +5,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const lib = b.addSharedLibrary(.{
-        .name = "nexus_soma",
+        .name = "Sesha_soma",
         .root_source_file = .{ .path = "src/main.zig" },
         .target = target,
         .optimize = optimize,
@@ -13,3 +13,4 @@ pub fn build(b: *std.Build) void {
 
     b.installArtifact(lib);
 }
+

@@ -13,7 +13,7 @@ To ensure that the **"Corporate Brain"** is effectively communicated to all Pers
 
 
 ## Responsibilities
-- **OS Literacy:** Manage the internal rollout and training of the **Nexus Corporate OS**.
+- **OS Literacy:** Manage the internal rollout and training of the **Sesha Corporate OS**.
 - **All-Hands Coordination:** Organize corporate-wide syncs and strategy briefings.
 - **Feedback Synthesis:** Manage the internal "Alignment Surveys" to detect branch-level friction.
 - **Crisis Communication:** Manage the internal messaging during system failures or structural shifts.

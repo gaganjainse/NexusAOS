@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To design the overarching **Agentic architecture** of **Nexus Corporate OS**. The Chief Architect ensures the system is robust, performant, and maintainable across all platforms.
+To design the overarching **Agentic architecture** of **Sesha Corporate OS**. The Chief Architect ensures the system is robust, performant, and maintainable across all platforms.
 
 
 ## Responsibilities

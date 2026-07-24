@@ -1,23 +1,22 @@
 """
-NexusAOS - Pet Bridge (L7 Integration)
+SeshaAOS - Pet Bridge (L7 Integration)
 Version: 13.1.0
 Description: Full conversational 3D pet overlay with emergent consciousness
 engine and mood-aware voice synthesis. Integrates 11+ biological systems.
 """
 
 import json
-import time
-import threading
 import struct
-from pathlib import Path
-from typing import Dict, Any, Optional, List
-from dataclasses import dataclass, field
-
+import threading
+import time
 from PySide6.QtCore import Qt, QObject, Signal, Slot, QUrl, QTimer
 from PySide6.QtGui import QWindow, QSurfaceFormat, QCursor
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QSizePolicy
-from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWebChannel import QWebChannel
+from PySide6.QtWebEngineWidgets import QWebEngineView
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QSizePolicy
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Dict, Any, Optional, List
 
 from .pet_engine import ConsciousnessEngine, EmergentState
 from .pet_voice import PetVoiceEngine, VOICE_PARAMS
@@ -163,8 +162,8 @@ class DirectiveProcessor:
 
     def _run_filtration(self) -> Dict[str, Any]:
         try:
-            from layers.L1_Physiology.nexus_liver import NexusLiver
-            liver = NexusLiver(self.base_dir)
+            from layers.L1_Physiology.Sesha_liver import SeshaLiver
+            liver = SeshaLiver(self.base_dir)
             result = liver.filter()
             return {"response": "System filtration complete. Toxicity levels normalized.", "action": "filter", "details": str(result), "emotion": "happy"}
         except Exception as e:
@@ -294,7 +293,7 @@ class PetBridge(QObject):
         emotion = result.get("emotion", self._current_mood)
         response_text = result.get("response", "I processed your request, Sovereign.")
 
-        turn = ConversationTurn(text=response_text, sender="nexus", intent=result.get("action", ""), emotion=emotion, timestamp=time.time())
+        turn = ConversationTurn(text=response_text, sender="Sesha", intent=result.get("action", ""), emotion=emotion, timestamp=time.time())
         self._conversation_history.append(turn)
 
         self.set_mood(emotion)
@@ -410,7 +409,7 @@ class PetBridge(QObject):
         if signal_type == "pet_ready":
             self.pet_ready.emit()
             state = self._last_emergent or self.consciousness.tick()
-            greet = f"Greetings, Sovereign. I am Nexus. Energy at {state.energy_pct:.0f}%. All systems green."
+            greet = f"Greetings, Sovereign. I am Sesha. Energy at {state.energy_pct:.0f}%. All systems green."
             self.say(greet, state.mood)
         elif signal_type == "pet_clicked":
             self.pet_interaction.emit("clicked", data)
@@ -467,7 +466,7 @@ if __name__ == "__main__":
 
     bridge = PetBridge(Path(__file__).resolve().parents[3])
     widget = bridge.create_widget()
-    widget.setWindowTitle("Nexus")
+    widget.setWindowTitle("Sesha")
     widget.resize(380, 520)
 
     desktop = QApplication.primaryScreen()
@@ -477,3 +476,4 @@ if __name__ == "__main__":
 
     widget.show()
     sys.exit(app.exec())
+

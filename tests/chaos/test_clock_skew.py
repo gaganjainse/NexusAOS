@@ -1,10 +1,10 @@
 """
-NexusAOS - Chaos Test: Clock Skew
+SeshaAOS - Chaos Test: Clock Skew
 Description: ±30s clock skew → verify signal TTL handling stays consistent.
 """
-import unittest
 import sys
 import time
+import unittest
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent.parent
@@ -26,3 +26,4 @@ class TestClockSkew(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

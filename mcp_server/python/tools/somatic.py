@@ -3,9 +3,8 @@
 from __future__ import annotations
 
 import json
-from typing import Any
-
 from mcp.server.fastmcp import FastMCP
+from typing import Any
 
 
 def register(mcp: FastMCP, services: dict[str, Any]) -> None:

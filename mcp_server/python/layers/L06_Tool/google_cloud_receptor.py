@@ -1,17 +1,18 @@
 """
-NexusAOS - Google Cloud Receptor (L06)
+SeshaAOS - Google Cloud Receptor (L06)
 Version: 13.0.0
 Description: High-priority interface for Google Vertex AI and Gemini APIs.
 Implements Priority Headers and Global Failover to minimize RESOURCE_EXHAUSTED errors.
 """
 
+import hashlib
 import json
-import time
 import random
 import sys
-import hashlib
+import time
 from pathlib import Path
 from typing import Dict, Any, Optional
+
 from layers.L05_Memory.state_manager import StateManager
 
 # Ensure root is in path
@@ -30,7 +31,7 @@ class GoogleCloudReceptor:
     def get_context_cache(self, content: str) -> Optional[str]:
         """Neural 13.0: Checks for an existing valid context cache on Google's servers."""
         content_hash = hashlib.sha256(content.encode()).hexdigest()
-        cache_key = "nexus_system_context"
+        cache_key = "Sesha_system_context"
         
         cache_id = self.state_mgr.get_valid_cache_id(cache_key, content_hash)
         if cache_id:
@@ -41,7 +42,7 @@ class GoogleCloudReceptor:
     def register_new_cache(self, content: str, cache_id: str, ttl_seconds: int = 3600):
         """Neural 13.0: Registers a newly created cache from Vertex AI."""
         content_hash = hashlib.sha256(content.encode()).hexdigest()
-        self.state_mgr.upsert_context_cache("nexus_system_context", cache_id, ttl_seconds, content_hash)
+        self.state_mgr.upsert_context_cache("Sesha_system_context", cache_id, ttl_seconds, content_hash)
         print(f"Context Cache Created & Registered: {cache_id}")
 
     def get_priority_headers(self) -> Dict[str, str]:
@@ -74,3 +75,4 @@ if __name__ == "__main__":
     print("Priority Headers:", gcr.get_priority_headers())
     print("Resolved Endpoint (Healthy):", gcr.resolve_endpoint())
     print("Resolved Endpoint (Congested):", gcr.resolve_endpoint(1))
+

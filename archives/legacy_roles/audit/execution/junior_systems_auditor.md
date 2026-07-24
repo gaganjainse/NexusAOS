@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To assist in the **Agentic audit** process and learn the verification standards for **Nexus Corporate OS**.
+To assist in the **Agentic audit** process and learn the verification standards for **Sesha Corporate OS**.
 
 
 ## Responsibilities

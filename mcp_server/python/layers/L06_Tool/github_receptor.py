@@ -1,5 +1,5 @@
 """
-NexusAOS - GitHub Receptor (Lineage R8)
+SeshaAOS - GitHub Receptor (Lineage R8)
 Version: 1.0.0
 Description: GitHub API integration for issue creation, PR management, repo ops.
 """
@@ -23,7 +23,7 @@ class GitHubReceptor:
         self.api_base = "https://api.github.com"
         self.headers = {
             "Accept": "application/vnd.github+json",
-            "User-Agent": "NexusAOS-GitHubReceptor/1.0"
+            "User-Agent": "SeshaAOS-GitHubReceptor/1.0"
         }
         if self.token:
             self.headers["Authorization"] = f"Bearer {self.token}"

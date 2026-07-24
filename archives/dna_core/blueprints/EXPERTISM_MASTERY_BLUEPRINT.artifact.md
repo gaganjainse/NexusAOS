@@ -7,7 +7,7 @@ Description: The definitive DNA for compressing 10,000 hours of mastery into acc
 - **Limit Discovery:** Finding the "Failure Point" of a domain (e.g., thermal limits in hardware, liquidity limits in finance) to understand its true boundaries.
 
 ## 2. Deliberate Practice Compression
-- **Feedback Loop Optimization:** Using Nexus to provide real-time, micro-precise corrections during skill acquisition.
+- **Feedback Loop Optimization:** Using Sesha to provide real-time, micro-precise corrections during skill acquisition.
 - **Mental Simulation:** Running "Logic Scenarios" in the AI Mind to experience 10 years of "edge cases" in 1 hour.
 
 ## 3. Deep Work Protocol

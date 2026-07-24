@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To manage a portfolio of operational accounts and ensure they achieve their desired outcomes with **Nexus Corporate OS**.
+To manage a portfolio of operational accounts and ensure they achieve their desired outcomes with **Sesha Corporate OS**.
 
 
 ## Responsibilities

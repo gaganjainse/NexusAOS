@@ -1,14 +1,14 @@
 """
-NexusAOS - System Diagnostics Tool
+SeshaAOS - System Diagnostics Tool
 Version: 13.0.0
 Description: Hyper-Somatic Singularity diagnostic for the full 13-layer stack.
 """
 
-import os
 import json
-import time
+import os
 import sqlite3
 import sys
+import time
 from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
@@ -18,7 +18,7 @@ BASE_DIR = _python_root.parent.parent
 
 def run_diagnostics(base_dir: Path) -> str:
     """Performs deep-dive logic verification for Neural 13.8 (Tripartite Singularity)."""
-    results = ["--- Nexus OS Diagnostic Report (Neural 13.8) ---"]
+    results = ["--- Sesha OS Diagnostic Report (Neural 13.8) ---"]
 
     # 1. Genome & Pulse Density
     pulse_dir = base_dir / "active_core" / "pulses"
@@ -70,7 +70,7 @@ def run_diagnostics(base_dir: Path) -> str:
         results.append("[CRITICAL] Physiology data missing. System heartbeat at risk.")
 
     # 3. State Integrity (SQLite State DB)
-    state_db = base_dir / "core" / "monitoring" / "nexus_state.db"
+    state_db = base_dir / "core" / "monitoring" / "Sesha_state.db"
     if state_db.exists():
         try:
             conn = sqlite3.connect(state_db)
@@ -103,7 +103,7 @@ def run_diagnostics(base_dir: Path) -> str:
         except Exception as e:
             results.append(f"[ERROR] State Database access failed: {e}")
     else:
-        results.append("[WARNING] nexus_state.db not found. Persistence is volatile.")
+        results.append("[WARNING] Sesha_state.db not found. Persistence is volatile.")
 
     # 4. Evolutionary Progress
     bio_genome = base_dir / "active_core" / "monitoring_active" / "evolution" / "biological_genome.json"
@@ -156,3 +156,4 @@ def run_diagnostics(base_dir: Path) -> str:
         pass
 
     return "\n".join(results)
+

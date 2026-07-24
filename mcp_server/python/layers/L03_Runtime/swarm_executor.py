@@ -1,5 +1,5 @@
 """
-NexusAOS - Agent Swarm Loader & Collision-Free Parallel Executor
+SeshaAOS - Agent Swarm Loader & Collision-Free Parallel Executor
 Version: 1.0.0
 Description: Loads hundreds of agents, runs them in parallel swarms with
 collision detection, namespace isolation, and resource quotas.
@@ -7,17 +7,17 @@ Biological analog: Neural populations with gap junctions, lateral inhibition,
 and resource-constrained competition.
 """
 import asyncio
+import hashlib
 import json
+import threading
 import time
 import uuid
-import hashlib
-from pathlib import Path
-from typing import Dict, List, Optional, Any, Callable, Set, Tuple
+import weakref
+from collections import defaultdict
 from dataclasses import dataclass, field, asdict
 from enum import Enum
-from collections import defaultdict
-import threading
-import weakref
+from pathlib import Path
+from typing import Dict, List, Optional, Any, Callable, Set, Tuple
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -257,7 +257,7 @@ class CollisionDetector:
         return True
 
 
-from layers.L12_Infrastructure.nexus_mesh import NexusMesh
+from layers.L12_Infrastructure.Sesha_mesh import SeshaMesh
 
 class SwarmExecutor:
     """Executes agent swarms with collision avoidance - like neural populations"""
@@ -269,7 +269,7 @@ class SwarmExecutor:
         self.specs: Dict[str, AgentSpec] = {}
         self.namespace_mgr = NamespaceManager()
         self.collision_detector = CollisionDetector(self.namespace_mgr)
-        self.mesh = NexusMesh(base_dir)
+        self.mesh = SeshaMesh(base_dir)
         self.semaphore = asyncio.Semaphore(max_parallel)
         self.running = False
         self.tick_interval = 1.0

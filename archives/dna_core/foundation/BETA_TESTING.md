@@ -1,4 +1,4 @@
-# NexusAOS Beta Testing: The Stress Test
+# SeshaAOS Beta Testing: The Stress Test
 
 ## Objectives
 1. **Convergence Stability:** Verify the Relational Soma (SQLite) handles high-velocity parallel writes.

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { VitalsData, SystemProcess } from "../../types/nexus";
+import { VitalsData, SystemProcess } from "../../types/Sesha";
 import {
   X,
   RefreshCw,
@@ -85,7 +85,7 @@ export const SystemMonitorModal: React.FC<SystemMonitorModalProps> = ({
             <div className="flex items-center gap-2">
               <Activity className="w-5 h-5 text-cyan-400" />
               <h2 className="text-base font-bold text-zinc-100 tracking-wide">
-                NEXUS SYSTEM MONITOR
+                Sesha SYSTEM MONITOR
               </h2>
             </div>
 
@@ -243,10 +243,10 @@ export const SystemMonitorModal: React.FC<SystemMonitorModalProps> = ({
             </div>
           </div>
 
-          {/* NEXUS VITALS (Mapped to Host) */}
+          {/* Sesha VITALS (Mapped to Host) */}
           <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-xl flex flex-col gap-3">
             <div className="flex items-center justify-between">
-              <h3 className="font-bold text-zinc-200 text-sm">NEXUS VITALS (Mapped to Host)</h3>
+              <h3 className="font-bold text-zinc-200 text-sm">Sesha VITALS (Mapped to Host)</h3>
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => onTriggerAction("conservation")}
@@ -531,3 +531,4 @@ export const SystemMonitorModal: React.FC<SystemMonitorModalProps> = ({
     </div>
   );
 };
+

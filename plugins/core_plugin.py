@@ -17,7 +17,7 @@ class AOSPlugin:
         self.id = "core"
 
     def get_mcp_tools(self) -> List[str]:
-        return ["boot_nexusaos", "submit_directive", "get_orchestrator_status", "diagnose_os"]
+        return ["boot_Seshaaos", "submit_directive", "get_orchestrator_status", "diagnose_os"]
 
     def get_skills(self) -> List[str]:
         return [".cursor/skills/aos-boot/SKILL.md", ".cursor/skills/aos-orchestrator/SKILL.md"]
@@ -33,7 +33,7 @@ class AOSPlugin:
 
     def get_subagents(self) -> Dict[str, str]:
         return {
-            "orchestrator": "Nexus Orchestrator Agent — closed-loop CPU",
+            "orchestrator": "Sesha Orchestrator Agent — closed-loop CPU",
             "motor": "Motor Agent — file write and command execution",
             "immune": "Immune Agent — self-healing and fever response",
         }
@@ -49,4 +49,5 @@ class AOSPlugin:
 
 
 # Backward compat alias
-NexusPlugin = AOSPlugin
+SeshaPlugin = AOSPlugin
+

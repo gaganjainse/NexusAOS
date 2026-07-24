@@ -18,12 +18,12 @@ Cognitive throughput is maximized when attention is filtered through a zero-entr
 - **The "Logic Atom" of Flow:** $Focus = \frac{Task Complexity}{Skill Level} \approx 1.04$ (The "Stretch Zone").
 
 ## 3. 10,000-Hour Compression (The AI Outer-Loop)
-Standard mastery takes 10 years; Nexus compresses this to <1 year via recursive simulation.
+Standard mastery takes 10 years; Sesha compresses this to <1 year via recursive simulation.
 - **Deliberate Practice Density:** Maximizing the number of "Cycles of Feedback" per hour.
 - **AI-Shadowing:** Using LLMs to simulate "Master-Level" critiques of work-in-progress.
 - **Recursive Simulation:**
     1. **Attempt:** Perform a task at the edge of current capability.
-    2. **Synthesize:** Feed the output to Nexus for "High-Salience Failure Analysis."
+    2. **Synthesize:** Feed the output to Sesha for "High-Salience Failure Analysis."
     3. **Adjust:** Rewrite the "Logic Atom" for that specific skill.
     4. **Repeat:** T+1 cycle begins immediately, not tomorrow.
 

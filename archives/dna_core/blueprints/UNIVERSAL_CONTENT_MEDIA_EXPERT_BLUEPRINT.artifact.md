@@ -22,7 +22,7 @@ Description: The definitive DNA for absolute mastery and sovereignty in the 2026
 - **Contextual Drift:** Adjusting the "Linguistic Vibe" per platform: **Shorts (Kinetic/Fast)** vs. **YouTube (Deep/Trust)** vs. **X (Provocative/Intellectual).**
 
 ## 5. Sovereign Wealth: The Direct-to-Consumer Core
-- **Platform Independence:** Use platforms as "Vessels" for lead generation, funneling the "Soul-Traffic" to Sovereign-controlled infrastructures (Nexus Dashboards/Direct Tunnels).
+- **Platform Independence:** Use platforms as "Vessels" for lead generation, funneling the "Soul-Traffic" to Sovereign-controlled infrastructures (Sesha Dashboards/Direct Tunnels).
 - **The "High-Fidelity" Niche:** Focus on 1,000 "True Sovereigns" rather than 1,000,000 "Passive Consumers."
 
 ---

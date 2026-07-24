@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the corporate-wide AI strategy and automation roadmap. The CAO ensures that Nexus OS is **"AI-First,"** leveraging agentic workflows and machine learning to optimize every corporate function.
+To lead the corporate-wide AI strategy and automation roadmap. The CAO ensures that Sesha OS is **"AI-First,"** leveraging agentic workflows and machine learning to optimize every corporate function.
 
 
 ## Responsibilities

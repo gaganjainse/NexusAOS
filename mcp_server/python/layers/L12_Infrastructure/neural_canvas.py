@@ -1,13 +1,13 @@
 """
-NexusAOS - Neural Canvas
+SeshaAOS - Neural Canvas
 Version: 1.0.0
 Description: Simultaneous multi-agent workspace using CRDT (Conflict-free Replicated Data Types) for collision-free parallel work.
 """
 
-import json
-import time
 import hashlib
+import json
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
@@ -110,3 +110,4 @@ if __name__ == "__main__":
     canvas = NeuralCanvas(base)
     print(canvas.write_node("TASK_001", "Implement CRDT logic", "Agent_Alpha"))
     print(canvas.verify_node("TASK_001", "Agent_Beta"))
+

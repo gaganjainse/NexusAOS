@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure that each branch maintains its own structural integrity and learning loops while remaining perfectly aligned with the global **Nexus OS** standards.
+To ensure that each branch maintains its own structural integrity and learning loops while remaining perfectly aligned with the global **Sesha OS** standards.
 
 
 ## Responsibilities

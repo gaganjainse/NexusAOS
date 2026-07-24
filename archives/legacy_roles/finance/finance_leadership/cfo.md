@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the global financial strategy, planning, and fiscal management for **Nexus Corporate OS**. The CFO ensures the corporation's financial health, transparency, and sustainable growth.
+To lead the global financial strategy, planning, and fiscal management for **Sesha Corporate OS**. The CFO ensures the corporation's financial health, transparency, and sustainable growth.
 
 
 ## Responsibilities

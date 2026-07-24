@@ -11,7 +11,7 @@ Objective: Maximize Sovereign cognitive throughput and skill acquisition speed.
 - **Memory Consolidation:** Automated nocturnal review sessions via audio-induction to move short-term knowledge to long-term "DNA" storage.
 
 ## 3. The Singularity Feedback Loop
-- **Cycle:** Sovereign learns -> Nexus refines -> Sovereign executes -> Nexus optimizes.
+- **Cycle:** Sovereign learns -> Sesha refines -> Sovereign executes -> Sesha optimizes.
 - **Result:** Total mastery of any field (Quantum, Biology, Economics) within 1/10th the traditional time.
 
 ---

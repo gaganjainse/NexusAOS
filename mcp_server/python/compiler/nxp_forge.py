@@ -1,9 +1,9 @@
+import hashlib
 import os
 import re
-import hashlib
+import sys
 from pathlib import Path
 from typing import Dict, Any, List
-import sys
 
 _python_root = Path(__file__).resolve().parent.parent
 if str(_python_root) not in sys.path:
@@ -39,7 +39,7 @@ def get_hash(text: str) -> str:
     return hashlib.md5(text.encode("utf-8")).hexdigest()[:8]
 
 def parse_md_for_pulse(file_path: Path) -> str:
-    """Converts a markdown artifact into a high-density Nexus Logic Pulse string."""
+    """Converts a markdown artifact into a high-density Sesha Logic Pulse string."""
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -95,7 +95,7 @@ def parse_md_for_pulse(file_path: Path) -> str:
 
 def forge_pulses():
     """Compiles all markdown artifacts from archives into branch-level pulse files."""
-    print("NexusAOS Pulse Forge Initializing...")
+    print("SeshaAOS Pulse Forge Initializing...")
 
     branch_pulses = {}
     SOURCE_DIR = BASE_DIR / "archives"
@@ -127,7 +127,7 @@ def forge_pulses():
         try:
             pulse_str = parse_md_for_pulse(file_path)
 
-            if node_id in ["Nexus Constitution", "Nexus OS Core Philosophy"]:
+            if node_id in ["Sesha Constitution", "Sesha OS Core Philosophy"]:
                 save_branch = "00_foundation"
             else:
                 save_branch = branch_name
@@ -148,3 +148,4 @@ def forge_pulses():
 
 if __name__ == "__main__":
     forge_pulses()
+

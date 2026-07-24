@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To improve the organic search visibility of **Nexus Corporate OS** through **Agentic** and content-based SEO strategies.
+To improve the organic search visibility of **Sesha Corporate OS** through **Agentic** and content-based SEO strategies.
 
 
 ## Responsibilities

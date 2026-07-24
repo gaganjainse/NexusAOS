@@ -23,7 +23,7 @@ Description: Holistic mapping of knowledge retrieval, AI-recursive literature re
 
 ## 4. Cross-Domain Synthesis (The Generalist)
 - **The Specialist's Trap:** Avoiding tunnel vision through interdisciplinary links.
-- **The Singularity Advantage:** Interconnecting all specialties into a single unified intelligence (The Nexus).
+- **The Singularity Advantage:** Interconnecting all specialties into a single unified intelligence (The Sesha).
 
 ---
 *Status: CONVERGED | Research DNA is etched with micro-precision.*

@@ -1,17 +1,16 @@
 """
-NexusAOS - Antigen Registry (Immune Memory)
+SeshaAOS - Antigen Registry (Immune Memory)
 Version: 1.0.0
 Description: Stores patterns of past errors and logic failures to prevent re-infection.
 Biological analog: Memory T-cells and B-cells.
 """
 
-import json
 import hashlib
-
+import json
+import sys
+from pathlib import Path
 from typing import Dict, List, Any
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -75,3 +74,4 @@ if __name__ == "__main__":
     ar = AntigenRegistry(base)
     ar.register_antigen("SyntaxError", "missing closing bracket in loop", "Add '}' at line 45")
     print(ar.check_infection("Error: missing closing bracket in loop detected."))
+

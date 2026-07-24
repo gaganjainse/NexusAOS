@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os/archives")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os/archives")
 
 # Definite titles for the core and branch heads
 TITLES = {
@@ -17,12 +17,12 @@ TITLES = {
     "coo.md": "Chief Operating Officer (COO)",
     "cae.md": "Chief Audit Executive (CAE)",
     "ceto.md": "Chief Ethics & Trust Officer (CETO)",
-    "nexus_omni_lead.md": "Sovereign Proxy (Nexus Omni-Lead)",
-    "nexus_orchestrator_agent.md": "Nexus Orchestrator Agent"
+    "Sesha_omni_lead.md": "Sovereign Proxy (Sesha Omni-Lead)",
+    "Sesha_orchestrator_agent.md": "Sesha Orchestrator Agent"
 }
 
 def atomic_seal():
-    print("NexusAOS Atomic Hierarchy Seal: HARDENING CORE...")
+    print("SeshaAOS Atomic Hierarchy Seal: HARDENING CORE...")
 
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:
@@ -59,3 +59,4 @@ def atomic_seal():
 
 if __name__ == "__main__":
     atomic_seal()
+

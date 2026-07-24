@@ -1,11 +1,11 @@
 """
-NexusAOS - Queue Manager (The Cognitive Buffer)
+SeshaAOS - Queue Manager (The Cognitive Buffer)
 Version: 1.0.0
 Description: Decides the best time to execute deferred directives based on Soma physiology and Mind state.
 """
 
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -93,3 +93,4 @@ if __name__ == "__main__":
     qm = QueueManager(base)
     print(qm.defer_directive("Check system integrity", priority=5))
     print(qm.process_buffer())
+

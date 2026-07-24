@@ -16,7 +16,7 @@ Description: Holistic mapping of AI architectures—from standard Transformers t
 
 ## 3. Local Model Synthesis (The Native Mind)
 - **Quantization (GGUF/EXL2):** Compressing weights (4-bit/8-bit) for the **RTX 4050** VRAM.
-- **LoRA / QLoRA:** Low-rank adaptation for personalized "Sovereign Nexus" tuning.
+- **LoRA / QLoRA:** Low-rank adaptation for personalized "Sovereign Sesha" tuning.
 - **Speculative Decoding:** Using SLMs to accelerate the inference of larger models.
 
 ## 4. The Self-Evolving Loop (AIDE3)

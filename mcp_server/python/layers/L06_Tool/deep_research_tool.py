@@ -1,18 +1,18 @@
 """
-NexusAOS - Deep Research Tool (Nutrient Discovery)
+SeshaAOS - Deep Research Tool (Nutrient Discovery)
 Version: 1.0.0
 Description: Scours the web and GitHub for architectural nutrients (LangGraph, Slurm, RDMA, etc.) to optimize the organism.
 """
 
 import json
-import time
-
-from typing import Dict, List, Any
-from layers.L06_Tool.web_receptor import WebReceptor
-from layers.L06_Tool.github_scanner import GitHubScanner
-
-from pathlib import Path
 import sys
+import time
+from pathlib import Path
+from typing import Dict, List, Any
+
+from layers.L06_Tool.github_scanner import GitHubScanner
+from layers.L06_Tool.web_receptor import WebReceptor
+
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -108,3 +108,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     drt = DeepResearchTool(base)
     print(drt.perform_deep_research("LangGraph vs Slurm for Agent Swarms"))
+

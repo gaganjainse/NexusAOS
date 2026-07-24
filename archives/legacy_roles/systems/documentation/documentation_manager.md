@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure that **Nexus Corporate OS** is well-documented for both internal **Personnel** and external **Sovereigns**. The Documentation Manager makes the system understandable and easy to use.
+To ensure that **Sesha Corporate OS** is well-documented for both internal **Personnel** and external **Sovereigns**. The Documentation Manager makes the system understandable and easy to use.
 
 
 ## Responsibilities

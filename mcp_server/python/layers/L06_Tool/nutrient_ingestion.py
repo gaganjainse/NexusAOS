@@ -1,11 +1,11 @@
 """
-NexusAOS - Nutrient Ingestion Pipeline
+SeshaAOS - Nutrient Ingestion Pipeline
 Version: 1.0.0
 Description: Automates the transition from research discovery to DNA integration.
 """
 
-import sys
 import json
+import sys
 import time
 from pathlib import Path
 
@@ -58,3 +58,4 @@ if __name__ == "__main__":
     
     base = Path(__file__).resolve().parent.parent.parent.parent
     NutrientIngestion(base).automate_ingestion(args.topic)
+

@@ -12,7 +12,7 @@ To maintain a single "Sovereign Truth" across millions of agents without central
 ## 2. Synaptic Mesh Optimization: Zenoh Dynamics
 Standard message buses fail at the million-agent mark. We utilize **Zenoh Mesh** with the following optimizations:
 - **Brokerless Routing:** Agents use Peer-to-Peer (P2P) routing via Zenoh-Link to minimize hop latency (<1ms).
-- **Topic Sharding & Scoping:** Signals are scoped geographically and functionally (e.g., `nexus/swarm/L03/researcher_01/pulse`). Agents only "Scout" for signals within their functional horizon.
+- **Topic Sharding & Scoping:** Signals are scoped geographically and functionally (e.g., `Sesha/swarm/L03/researcher_01/pulse`). Agents only "Scout" for signals within their functional horizon.
 - **Pulse Compression:** High-density binary signaling. A single 64-bit word (Spike) carries the sigil, priority, and sender ID, triggered via hardware-native ring buffers in Zig.
 
 ## 3. Zero-Copy State Sharing: Arrow Synapses

@@ -1,13 +1,13 @@
 """
-NexusAOS - Developmental Boot Stages
+SeshaAOS - Developmental Boot Stages
 Version: 1.0.0
 Description: 7-stage maturation from Zygote to Adult, physiologically gated.
 """
-import time
 import sys
+import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Callable
-import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -214,7 +214,7 @@ class DevelopmentalBoot:
         PhysiologyEngine(self.base_dir).reset_all()
     
     def _init_wal(self):
-        from services.nexus_runtime import WAL
+        from services.Sesha_runtime import WAL
         WAL(self.base_dir)
     
     def _init_physiology(self):
@@ -226,16 +226,16 @@ class DevelopmentalBoot:
         SignalRouter(self.base_dir)
     
     def _init_lattice(self):
-        from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+        from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
         LatticeEngine(self.base_dir)
     
     def _init_senses(self):
-        from layers.L07_Integration.nexus_senses import NexusSenses
-        NexusSenses(self.base_dir)
+        from layers.L07_Integration.Sesha_senses import SeshaSenses
+        SeshaSenses(self.base_dir)
     
     def _register_watchers(self):
-        from layers.L07_Integration.nexus_senses import NexusSenses
-        senses = NexusSenses(self.base_dir)
+        from layers.L07_Integration.Sesha_senses import SeshaSenses
+        senses = SeshaSenses(self.base_dir)
         senses.register_watcher("core/exports")
         senses.register_watcher("core/pulses")
     
@@ -244,15 +244,14 @@ class DevelopmentalBoot:
         MotorEngine(self.base_dir)
     
     def _init_liver(self):
-        from layers.L02_Agent.nexus_liver import NexusLiver
-        NexusLiver(self.base_dir)
+        from layers.L02_Agent.Sesha_liver import SeshaLiver
+        SeshaLiver(self.base_dir)
     
     def _init_memory_synth(self):
         from layers.L05_Memory.memory_synth import MemorySynth
         MemorySynth(self.base_dir)
     
     def _init_dream_engine(self):
-        from layers.L02_Agent.sleep_engine import SleepEngine
         DreamEngine(self.base_dir)
     
     def _init_orchestrator(self):

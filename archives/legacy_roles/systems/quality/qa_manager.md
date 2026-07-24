@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure the functional quality and reliability of **Nexus Corporate OS**. The QA Manager leads the verification strategy to catch bugs before they reach operational **Sovereigns**.
+To ensure the functional quality and reliability of **Sesha Corporate OS**. The QA Manager leads the verification strategy to catch bugs before they reach operational **Sovereigns**.
 
 
 ## Responsibilities

@@ -1,12 +1,12 @@
 """
-NexusAOS - Photonic Nerve (Optical Transceiver)
+SeshaAOS - Photonic Nerve (Optical Transceiver)
 Version: 1.0.0
 Description: Emulates 100GHz optical signal propagation using high-frequency bursts.
 """
 
-import time
 import asyncio
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -58,3 +58,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     nerve = PhotonicNerve(base)
     asyncio.run(nerve.emit_optical_burst("NOCICEPTION"))
+

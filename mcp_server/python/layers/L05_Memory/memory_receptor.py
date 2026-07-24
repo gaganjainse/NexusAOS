@@ -1,5 +1,5 @@
 """
-NexusAOS - Memory Receptor (Hippocampus)
+SeshaAOS - Memory Receptor (Hippocampus)
 Version: 1.0.0
 Description: Entity storage, recall, and linking (knowledge graph).
 """
@@ -71,3 +71,4 @@ class MemoryReceptor:
         })
         self._save_links(links)
         return {"success": True}
+

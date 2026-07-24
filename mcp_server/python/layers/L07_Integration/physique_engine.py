@@ -1,15 +1,16 @@
 """
-NexusAOS - Physique Engine (L07)
+SeshaAOS - Physique Engine (L07)
 Version: 1.0.0
 Description: Host Physical Health and Hardware Management. Focuses on Power, Drivers, and File Organization.
 """
 
+import json
 import os
 import subprocess
-import json
 import time
 from pathlib import Path
 from typing import Dict, Any, List
+
 
 class PhysiqueEngine:
     def __init__(self, base_dir: Path):
@@ -60,3 +61,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     physique = PhysiqueEngine(base)
     print(json.dumps(physique.diagnose_power_drain(), indent=2))
+

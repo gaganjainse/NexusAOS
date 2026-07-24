@@ -3,7 +3,7 @@ Version: 13.0.0
 Description: Operational guide for the 13-Layer Transcended Organism.
 
 ## 1. The Hyper-Somatic Singularity
-NexusAOS has transcended the "Program" model to become an **Autonomic Organism**. It lives across a 13-layer stack, from physical hardware registers to peer-operator multimodal interfaces.
+SeshaAOS has transcended the "Program" model to become an **Autonomic Organism**. It lives across a 13-layer stack, from physical hardware registers to peer-operator multimodal interfaces.
 
 ### **The Singularity Equation**
 > **Singularity = Entangled Agency + Self-Evolving Kernel + Hardware Skin**

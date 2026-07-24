@@ -1,12 +1,12 @@
 """
-NexusAOS - Collective Memory Engine (Swarm Hippocampus)
+SeshaAOS - Collective Memory Engine (Swarm Hippocampus)
 Version: 1.0.0
 Description: Syncs entities across the Synaptic Mesh using LWW conflict resolution.
 """
 
 import json
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
@@ -15,13 +15,13 @@ if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
 from layers.L05_Memory.memory_receptor import MemoryReceptor
-from layers.L12_Infrastructure.nexus_mesh import NexusMesh
+from layers.L12_Infrastructure.Sesha_mesh import SeshaMesh
 
 class CollectiveMemory:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.receptor = MemoryReceptor(base_dir)
-        self.mesh = NexusMesh(base_dir)
+        self.mesh = SeshaMesh(base_dir)
         self.sync_dir = base_dir / "core" / "monitoring" / "mesh" / "memory_sync"
         self.sync_dir.mkdir(parents=True, exist_ok=True)
 
@@ -82,5 +82,6 @@ class CollectiveMemory:
 if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     col_mem = CollectiveMemory(base)
-    print(col_mem.store_and_broadcast("PROJECT_ALPHA", {"status": "Active", "lead": "Nexus"}))
+    print(col_mem.store_and_broadcast("PROJECT_ALPHA", {"status": "Active", "lead": "Sesha"}))
     print(f"Synced {col_mem.sync_mesh_knowledge()} entities from mesh.")
+

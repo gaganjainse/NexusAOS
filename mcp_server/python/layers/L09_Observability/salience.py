@@ -1,10 +1,10 @@
 """
-NexusAOS - Salience Module
+SeshaAOS - Salience Module
 Version: 1.0.0
 Description: Agent attention heuristic - cortisol elevates survival/priority signals.
 """
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
@@ -121,3 +121,4 @@ class SalienceEngine:
             if active:
                 parts.append(f"+{mod}")
         return " | ".join(parts)
+

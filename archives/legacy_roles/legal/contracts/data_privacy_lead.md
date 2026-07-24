@@ -9,11 +9,11 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure that all corporate data handling, **Agentic training** processes, and contractual agreements adhere to global privacy regulations and the Nexus Ethical Code.
+To ensure that all corporate data handling, **Agentic training** processes, and contractual agreements adhere to global privacy regulations and the Sesha Ethical Code.
 
 
 ## Responsibilities
-- Monitor compliance with [REGULATORY_STANDARDS] and the Nexus Ethical Code.
+- Monitor compliance with [REGULATORY_STANDARDS] and the Sesha Ethical Code.
 - Review all third-party contracts for data privacy safeguards.
 - Conduct Data Protection Impact Assessments (DPIAs) for new **Agentic initiatives**.
 - Partner with the CETO to align privacy practices with ethical standards.

@@ -1,16 +1,16 @@
 """
-NexusAOS - GitHub Repository Scanner
+SeshaAOS - GitHub Repository Scanner
 Version: 1.0.0
-Description: Scans GitHub organizations/repos for patterns, extracts learnings, and feeds them into NexusAOS.
+Description: Scans GitHub organizations/repos for patterns, extracts learnings, and feeds them into SeshaAOS.
 MIT License - can copy, adapt, improve from langchain-ai and other MIT-licensed repos.
 """
 import json
-import time
-import sys
-import urllib.request
-import urllib.parse
 import os
 import re
+import sys
+import time
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
@@ -53,7 +53,7 @@ class GitHubScanner:
         self.api_base = "https://api.github.com"
         self.headers = {
             "Accept": "application/vnd.github+json",
-            "User-Agent": "NexusAOS-GitHubScanner/1.0",
+            "User-Agent": "SeshaAOS-GitHubScanner/1.0",
         }
         if self.token:
             self.headers["Authorization"] = f"Bearer {self.token}"

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { VitalsData } from "../types/nexus";
+import { VitalsData } from "../types/Sesha";
 
 interface HarmonicResonanceCanvasProps {
   vitals: VitalsData;
@@ -120,3 +120,4 @@ export const HarmonicResonanceCanvas: React.FC<HarmonicResonanceCanvasProps> = (
     </div>
   );
 };
+

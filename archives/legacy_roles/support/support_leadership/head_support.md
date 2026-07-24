@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the global customer support strategy and ensure high-quality **Agentic assistance** for **Nexus Corporate OS** **Sovereigns**. The Head of Support focuses on **Sovereign** satisfaction and product reliability.
+To lead the global customer support strategy and ensure high-quality **Agentic assistance** for **Sesha Corporate OS** **Sovereigns**. The Head of Support focuses on **Sovereign** satisfaction and product reliability.
 
 
 ## Responsibilities

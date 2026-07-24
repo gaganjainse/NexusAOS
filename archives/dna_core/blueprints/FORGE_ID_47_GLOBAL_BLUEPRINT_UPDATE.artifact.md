@@ -22,7 +22,7 @@ Every blueprint must be audited against the following five pillars:
 
 ### C. Kinetic Optimality (L02)
 - **Check:** Does the strategy prioritize interaction speed and utility?
-- **Action:** Strip "passive" language. Replace "We will" with "Nexus executes" or "The Body manifests."
+- **Action:** Strip "passive" language. Replace "We will" with "Sesha executes" or "The Body manifests."
 
 ### D. Recursive Evolution (L03/L09)
 - **Check:** Does the artifact include a self-correction or measurement mechanism?

@@ -1,23 +1,22 @@
 """
-NexusAOS - Evolution Engine
+SeshaAOS - Evolution Engine
 Version: 2.0.0
 Description: Mutation, selection, fitness-based promotion, shadow A/B testing.
 Integrates with PhysiologyEngine for energy-gated evolution.
 """
+import hashlib
 import json
+import random
 import sys
 import time
-import random
-import hashlib
+from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Dict, List, Optional, Callable
-from dataclasses import dataclass, asdict
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L02_Agent.physiology_engine import PhysiologyEngine
 from layers.L11_Data.signal_router import SignalRouter
 from layers.L12_Infrastructure.dna_manager import DNAManager
 from layers.L03_Runtime.self_evolving_kernel import SelfEvolvingKernel

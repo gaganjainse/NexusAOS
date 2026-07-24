@@ -1,15 +1,16 @@
 """
-NexusAOS - Conversation Recorder (L09)
+SeshaAOS - Conversation Recorder (L09)
 Version: 1.0.0
 Description: High-fidelity "Black Box" for recording every Prompt, Thought, and Output.
 Ensures total recall and provenance of the system's reasoning.
 """
 
 import json
-import time
 import os
+import time
 from pathlib import Path
 from typing import Dict, Any
+
 
 class ConversationRecorder:
     """The Black Box - Records the A-Z reasoning process."""
@@ -22,7 +23,7 @@ class ConversationRecorder:
     def record(self, prompt: str, thoughts: str, output: str):
         """Records a full conversation cycle."""
         timestamp = time.time()
-        file_name = f"nexus_cycle_{int(timestamp)}.json"
+        file_name = f"Sesha_cycle_{int(timestamp)}.json"
         
         entry = {
             "timestamp": timestamp,
@@ -51,3 +52,4 @@ if __name__ == "__main__":
     cr = ConversationRecorder(base)
     cr.record("Test Prompt", "Test Thought", "Test Output")
     print("Test Record Saved.")
+

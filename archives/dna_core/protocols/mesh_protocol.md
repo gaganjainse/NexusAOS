@@ -2,7 +2,7 @@
 Version: 1.0.0
 Branch: Core
 Level: Protocol
-Superior: Nexus Orchestrator
+Superior: Sesha Orchestrator
 
 ## Overview
 The **Synaptic Mesh** is the communication layer that enables multiple **Agentic Bodies (AB)** to coordinate as a single **Distributed Swarm Intelligence**. It extends the local Lattice across networked nodes.

@@ -1,11 +1,11 @@
-import sqlite3
 import json
-import sys
 import os
+import sqlite3
+import sys
 
 # Configuration
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DB_PATH = os.path.join(BASE_DIR, "core", "exports", "nexus_aos.db")
+DB_PATH = os.path.join(BASE_DIR, "core", "exports", "Sesha_aos.db")
 
 def query_db(sql: str):
     """Executes a SQL query against the Logic Graph and returns results as JSON."""
@@ -31,3 +31,4 @@ if __name__ == "__main__":
         print("Usage: python logic_query.py \"SELECT ...\"")
     else:
         query_db(sys.argv[1])
+

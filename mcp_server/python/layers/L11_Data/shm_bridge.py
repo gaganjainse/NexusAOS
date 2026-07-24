@@ -1,15 +1,15 @@
 """
-NexusAOS - Shared Memory Bridge 2.0 (Transcended)
+SeshaAOS - Shared Memory Bridge 2.0 (Transcended)
 Version: 2.0.0
 Description: Python interface for the NEURAL 6.0 Zig Synaptic Bus. 
 Supports binary routing tables and high-velocity spike emission.
 """
 
-import mmap
 import ctypes
+import mmap
 import os
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Optional, List, Dict
 
@@ -55,7 +55,7 @@ class SynapticRingBuffer(ctypes.Structure):
     ]
 
 class SHMBridge:
-    def __init__(self, shm_name: str = "nexus_synaptic_bus"):
+    def __init__(self, shm_name: str = "Sesha_synaptic_bus"):
         self.shm_name = shm_name
         self.size = ctypes.sizeof(SynapticRingBuffer)
         self.mm: Optional[mmap.mmap] = None
@@ -122,3 +122,4 @@ if __name__ == "__main__":
     bridge.connect()
     bridge.emit_spike("!", 10, "PYTHON_REFLEX", "ZIG_KERNEL")
     print("Synaptic 2.0 Bridge Operational.")
+

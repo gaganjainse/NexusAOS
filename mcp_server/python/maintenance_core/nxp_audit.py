@@ -3,13 +3,13 @@ import os
 from pathlib import Path
 
 # Configuration
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os")
 PULSE_DIR = BASE_DIR / "core/pulses"
 INDEX_PATH = PULSE_DIR / "master.nxi"
 
 def audit_lattice():
-    """Performs a comprehensive structural audit on the Nexus Pulse Lattice."""
-    print("NexusAOS Lattice Integrity Audit Initializing...")
+    """Performs a comprehensive structural audit on the Sesha Pulse Lattice."""
+    print("SeshaAOS Lattice Integrity Audit Initializing...")
 
     if not INDEX_PATH.exists():
         print("Error: Pulse Index not found. Run Forge/Indexer first.")
@@ -76,3 +76,4 @@ def audit_lattice():
 
 if __name__ == "__main__":
     audit_lattice()
+

@@ -1,22 +1,24 @@
 """
-NexusAOS - Peer-Operator Experience (L00)
+SeshaAOS - Peer-Operator Experience (L00)
 Version: 13.0.0
 Description: Multimodal UI for real-time AOS monitoring and strategic control.
 """
 
-import sys
-import json
-import time
-import threading
-from pathlib import Path
-from datetime import datetime
-
 import customtkinter as ctk
+import json
+import sys
+import threading
+import time
 from PIL import Image
+from datetime import datetime
+from pathlib import Path
 
-_python_root = Path(__file__).resolve().parent.parent.parent.parent
+_python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
+print(f"DEBUG: python_root = {_python_root}")
+print(f"DEBUG: sys.path[0] = {sys.path[0]}")
+print(f"DEBUG: layers exists? = {(_python_root / 'layers').exists()}")
 
 from layers.L02_Agent.physiology_engine import PhysiologyEngine
 from layers.L05_Memory.state_manager import StateManager
@@ -33,7 +35,7 @@ class PeerOperatorGUI(ctk.CTk):
         self.state_mgr = StateManager(base_dir)
         self.signals = SignalRouter(base_dir)
 
-        self.title("NexusAOS - Peer-Operator Dashboard")
+        self.title("SeshaAOS - Peer-Operator Dashboard")
         self.geometry("1100x700")
 
         # Layout
@@ -170,3 +172,4 @@ if __name__ == "__main__":
     app = PeerOperatorGUI(base)
     app.protocol("WM_DELETE_WINDOW", app.on_closing)
     app.mainloop()
+

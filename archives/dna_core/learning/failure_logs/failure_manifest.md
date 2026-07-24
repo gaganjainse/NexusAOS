@@ -1,4 +1,4 @@
-# Nexus AOS: Failure & Resolution Manifest (Learning DNA)
+# Sesha AOS: Failure & Resolution Manifest (Learning DNA)
 Version: 1.0.0
 Description: A persistent log of somatic and mental failures, analyzed for iterative improvement.
 

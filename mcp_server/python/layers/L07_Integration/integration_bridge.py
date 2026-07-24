@@ -1,15 +1,15 @@
 """
-NexusAOS - Integration Bridge (L7)
+SeshaAOS - Integration Bridge (L7)
 Version: 13.0.0
-Description: The Skin - Connects Nexus to Host OS vitals.
+Description: The Skin - Connects Sesha to Host OS vitals.
 """
 
+import json
 import os
 import shutil
-import time
-import json
-import sys
 import subprocess
+import sys
+import time
 from pathlib import Path
 from typing import Dict, Any
 
@@ -82,3 +82,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     bridge = IntegrationBridge(base)
     print(json.dumps(bridge.scan_host_vitals(), indent=2))
+

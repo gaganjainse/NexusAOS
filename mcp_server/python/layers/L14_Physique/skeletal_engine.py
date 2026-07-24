@@ -1,15 +1,16 @@
 """
-NexusAOS - Skeletal Engine (L14.1)
+SeshaAOS - Skeletal Engine (L14.1)
 Version: 1.0.0
 Description: Physical File and Storage Organization. Manages the host's "Skeletal Marrow."
 """
 
+import json
 import os
 import shutil
-import json
 import time
 from pathlib import Path
 from typing import Dict, List, Any, Optional
+
 
 class SkeletalEngine:
     def __init__(self, base_dir: Path):
@@ -114,3 +115,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[4]
     sk = SkeletalEngine(base)
     print(json.dumps(sk.organize_skeletal_marrow(), indent=2))
+

@@ -1,6 +1,6 @@
 # ID 111: Intuition Modeling & Superposition (NEURAL 14.0)
 Version: 1.0.0
-Objective: Formalize sub-threshold heuristic processing as a probabilistic layer within Nexus.
+Objective: Formalize sub-threshold heuristic processing as a probabilistic layer within Sesha.
 
 ## 1. Modeling "GUT Feelings"
 - **Sub-threshold Weighting:** Intuition is defined as the emergence of high-probability patterns from noise before they reach the threshold of symbolic reasoning.

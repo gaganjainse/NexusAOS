@@ -1,11 +1,11 @@
 {
     "version": "1.0.0",
-    "platform": "NexusAOS",
+    "platform": "SeshaAOS",
     "description": "Agentic Operating System with biological metaphor architecture",
     "mcps": [
         {
             "id": "aos-core",
-            "name": "NexusAOS Core MCP",
+            "name": "SeshaAOS Core MCP",
             "entry": "mcp_server/python/index.py",
             "description": "Primary FastMCP server exposing ~50 tools for biological runtime orchestration",
             "tools": [
@@ -41,7 +41,7 @@
                 "execute_motor_command",
                 "process_motor_queue",
                 "get_motor_status",
-                "boot_nexusaos",
+                "boot_Seshaaos",
                 "start_orchestrator",
                 "submit_directive",
                 "get_orchestrator_status",
@@ -119,7 +119,7 @@
     ],
     "subagents": {
         "orchestrator": {
-            "name": "Nexus Orchestrator Agent",
+            "name": "Sesha Orchestrator Agent",
             "description": "Closed-loop CPU: senses -> decision -> lattice -> motor -> memory",
             "tools": [
                 "submit_directive",

@@ -1,5 +1,5 @@
 """
-NexusAOS - Pet Emergent Consciousness Engine (L7 Integration)
+SeshaAOS - Pet Emergent Consciousness Engine (L7 Integration)
 Version: 13.1.0
 Description: Reads ALL biological system monitoring data and computes
 emergent mood, energy, voice parameters, and behavioral directives.
@@ -7,9 +7,9 @@ emergent mood, energy, voice parameters, and behavioral directives.
 
 import json
 import time
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, Any, Optional, Tuple
-from dataclasses import dataclass, field
 
 
 @dataclass
@@ -217,3 +217,4 @@ class ConsciousnessEngine:
 
     def get_history(self) -> list:
         return self._history
+

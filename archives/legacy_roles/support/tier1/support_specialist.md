@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To provide immediate, high-quality assistance to **Nexus Corporate OS** **Sovereigns** via **Oracle Interface**, email, and phone.
+To provide immediate, high-quality assistance to **Sesha Corporate OS** **Sovereigns** via **Oracle Interface**, email, and phone.
 
 
 ## Responsibilities

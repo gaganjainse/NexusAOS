@@ -4,7 +4,7 @@ Description: Strategies for securing the local host and establishing private com
 
 ## 1. Host Hardening (AP Tier)
 - **Service Pruning:** Identifying and disabling non-essential background services (e.g., telemetry, data collection) on Windows 11.
-- **Firewall Orchestration:** Rule-based isolation of the Nexus Shell to prevent unauthorized data egress.
+- **Firewall Orchestration:** Rule-based isolation of the Sesha Shell to prevent unauthorized data egress.
 - **Encryption:** Utilizing VeraCrypt or BitLocker for sensitive blueprint volumes.
 
 ## 2. Privacy-Preserving Cloud Access

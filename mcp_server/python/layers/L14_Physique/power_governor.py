@@ -1,16 +1,17 @@
 """
-NexusAOS - Power Governor (L14.6)
+SeshaAOS - Power Governor (L14.6)
 Version: 1.0.0
 Description: Advanced power management for the MSI Sword 16 HX B14VEKG.
 Optimizes PL1/PL2 limits and power profiles to solve abnormal battery drain.
 """
 
-import subprocess
 import json
 import os
+import subprocess
 import time
 from pathlib import Path
 from typing import Dict, Any, List
+
 
 class PowerGovernor:
     def __init__(self, base_dir: Path):
@@ -84,3 +85,4 @@ if __name__ == "__main__":
     gov = PowerGovernor(base)
     print(f"Current Scheme: {gov.get_active_scheme()}")
     print(f"Parasites Found: {len(gov.find_battery_parasites())}")
+

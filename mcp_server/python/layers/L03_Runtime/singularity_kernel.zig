@@ -1,4 +1,4 @@
-// NexusAOS - Singularity Kernel (L03)
+// SeshaAOS - Singularity Kernel (L03)
 // Version: 6.0.0
 // Objective: Hardware-rooted pulse gating.
 
@@ -17,3 +17,4 @@ pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
     try stdout.print("Singularity Kernel (L03): ARMED\n", .{});
 }
+

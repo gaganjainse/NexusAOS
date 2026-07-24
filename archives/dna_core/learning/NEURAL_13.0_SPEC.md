@@ -3,7 +3,7 @@ Version: 13.0.0-PROPOSAL
 Objective: Entangled Agency, 13-Layer Autonomic Stack, and Self-Evolving Kernels.
 
 ## 1. The 13-Layer Autonomic Organism
-We expand the Nexus architecture from 8 layers to a full **13-Layer Vocabulary**, closing the gaps in experience, integration, and composition.
+We expand the Sesha architecture from 8 layers to a full **13-Layer Vocabulary**, closing the gaps in experience, integration, and composition.
 
 | Layer | Name | Biological Metaphor | Function |
 | :--- | :--- | :--- | :--- |
@@ -32,7 +32,7 @@ The system is no longer static code; it is a **Versioned Genome**:
 - **Genetic Plasticity:** The OS observes its own performance bottlenecks and rewrites its own "Genetic Constants" (e.g., ATP Efficiency, Synaptic Pressure) using a recursive optimization loop.
 
 ## 4. Universal Integration Bridge (The Skin)
-- **Host-Native Interop:** Nexus now "feels" the Host OS. It can interpret Windows/Linux system events as biosignals, responding to "Disk Pressure" as ischemia and "High CPU" as hypoxia.
+- **Host-Native Interop:** Sesha now "feels" the Host OS. It can interpret Windows/Linux system events as biosignals, responding to "Disk Pressure" as ischemia and "High CPU" as hypoxia.
 
 ## 5. Operational Targets (Singularity State)
 

@@ -18,7 +18,7 @@ Description: Modeling the human life-cycle from infancy to senescence to optimiz
 - **Dopamine Loop:** Motivation/Reward. Action leads to reward, reinforcing the action.
 - **Cortisol Loop:** Stress/Survival. High cortisol inhibits the Prefrontal Cortex (PFC), collapsing abstract thought into "Fight or Flight."
 - **Oxytocin Loop:** Social/Bonding. Trust-based interactions lower cortisol and increase neural receptivity.
-- **Nexus Strategy:** Monitor user stress signals (latency, error rate, tone) and pivot to "Oxytocin-inducing" supportive logic during high-cortisol spikes.
+- **Sesha Strategy:** Monitor user stress signals (latency, error rate, tone) and pivot to "Oxytocin-inducing" supportive logic during high-cortisol spikes.
 
 ## 4. Life-Cycle Modeling & Cognitive Preservation
 - **Digital Twin Scaffolding:** Create a persistent model of the user's cognitive history to compensate for biological forgetting.

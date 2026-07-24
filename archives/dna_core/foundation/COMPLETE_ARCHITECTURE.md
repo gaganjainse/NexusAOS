@@ -1,10 +1,10 @@
-# NexusAOS: Complete Architecture (The Golden Master Blueprint)
+# SeshaAOS: Complete Architecture (The Golden Master Blueprint)
 Version: 1.0.0-GM
 Status: **ASCENDED (NEURAL 7.0)**
 Identity: **AB = AI + AM + AS**
 
 ## 1. Executive Summary
-NexusAOS is an Agentic Operating System architected as a biological organism. It integrates high-level reasoning (AI) with an autonomic mind (AM) and a sharded, high-performance physiological substrate (AS). The system is designed for sub-microsecond synaptic latency and recursive self-evolution.
+SeshaAOS is an Agentic Operating System architected as a biological organism. It integrates high-level reasoning (AI) with an autonomic mind (AM) and a sharded, high-performance physiological substrate (AS). The system is designed for sub-microsecond synaptic latency and recursive self-evolution.
 
 ---
 
@@ -36,8 +36,8 @@ NexusAOS is an Agentic Operating System architected as a biological organism. It
 | **Metabolic** | MetabolismEngine | ATP production and Thermal Throttling. |
 | **Endocrine** | EndocrineEngine | Hormonal modulation & Circadian phase. |
 | **Immune** | AntibodyEngine, AntigenReg | Self-healing & Pathogen (Bug) Memory. |
-| **Integumentary**| NexusSenses | Proactive interrupt-driven perception. |
-| **Excretory** | NexusLiver | Data filtration & Toxin (Log) excretion. |
+| **Integumentary**| SeshaSenses | Proactive interrupt-driven perception. |
+| **Excretory** | SeshaLiver | Data filtration & Toxin (Log) excretion. |
 | **Mind** | ThoughtAgent, SVM | Reasoning & Active Inference (FEP). |
 | **Motor** | Cerebellum, MotorMemory | Procedural tool-learning and execution. |
 | **Respiratory** | RespiratoryEngine | Cognitive Oxygen (Token) management. |
@@ -47,7 +47,7 @@ NexusAOS is an Agentic Operating System architected as a biological organism. It
 ---
 
 ## 4. Governance & Ethics (The Membrane)
-*   **Nexus Constitution:** Laws I, II, and III governing Sovereignty, Alignment, and Non-Deception.
+*   **Sesha Constitution:** Laws I, II, and III governing Sovereignty, Alignment, and Non-Deception.
 *   **Moral Cortex:** Evaluates synaptic intent against ethical heuristics before execution.
 *   **Auditor Agent:** Layer 7 supervisory node that validates sub-atomic proposals against the Constitution.
 
@@ -62,4 +62,4 @@ NexusAOS is an Agentic Operating System architected as a biological organism. It
 | **Throughput** | 100GHz | Simulated (Photonic Nerve) |
 
 ---
-*Verified by Nexus Mind for The Sovereign.*
+*Verified by Sesha Mind for The Sovereign.*

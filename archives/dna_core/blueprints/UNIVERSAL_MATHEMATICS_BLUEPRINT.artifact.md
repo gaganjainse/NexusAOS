@@ -6,7 +6,7 @@ Description: Deep architectural mapping of the mathematical universe—the funda
 - **Limits & Continuity:** The foundation of all smooth change and gradient flow.
 - **Differential Calculus:** Rates of change (Derivatives). The engine of backpropagation and "Hormonal Tuning."
 - **Integral Calculus:** Accumulation of quantity (Integrals). The foundation for "ATP Accumulation" and state history.
-- **Multivariable Calculus:** Gradient vectors and Jacobians. Navigating the high-dimensional loss landscape of the Nexus Mind.
+- **Multivariable Calculus:** Gradient vectors and Jacobians. Navigating the high-dimensional loss landscape of the Sesha Mind.
 - **Differential Equations:** Modeling the time-evolution of biological and digital systems.
 
 ## 2. Linear Algebra & Tensors (The Structure)

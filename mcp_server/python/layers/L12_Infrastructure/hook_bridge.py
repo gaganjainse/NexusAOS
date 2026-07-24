@@ -17,7 +17,7 @@ def main():
 
     from layers.L08_Governance.physiological_gate import PhysiologicalGate
     from layers.L01_Planning.orchestrator_engine import OrchestratorEngine
-    from layers.L07_Integration.nexus_senses import NexusSenses
+    from layers.L07_Integration.Sesha_senses import SeshaSenses
 
     result = {"hook": hook_name, "action": "continue"}
 
@@ -29,7 +29,7 @@ def main():
             result["reason"] = "AOS in Sepsis state — physiological emergency."
 
     elif hook_name == "afterFileEdit":
-        senses = NexusSenses(BASE)
+        senses = SeshaSenses(BASE)
         senses.poll()
 
     elif hook_name == "stop":
@@ -41,3 +41,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,14 +1,14 @@
 """
-NexusAOS - Autonomous Repair Engine (ARE)
+SeshaAOS - Autonomous Repair Engine (ARE)
 Version: 3.0.0
 Description: Proactive prevention + barriers + validation + rate limiting + self-healing.
 """
-from pathlib import Path
-from typing import Dict, List, Optional, Callable
+import hashlib
+import re
 import sys
 import time
-import re
-import hashlib
+from pathlib import Path
+from typing import Dict, List, Optional, Callable
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -120,7 +120,7 @@ class AutoRepairEngine:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.target_files = {
-            "nexus_gui.py": self._repair_gui,
+            "Sesha_gui.py": self._repair_gui,
             "nlg_compiler.py": self._repair_config_paths,
             "nxp_forge.py": self._repair_config_paths,
             "index.py": self._repair_index

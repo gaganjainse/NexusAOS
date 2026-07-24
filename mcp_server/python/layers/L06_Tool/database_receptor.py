@@ -1,11 +1,11 @@
 """
-NexusAOS - Database Receptor (Persistence R10)
+SeshaAOS - Database Receptor (Persistence R10)
 Version: 1.0.0
 Description: PostgreSQL/SQLite query execution.
 """
 import json
-import sqlite3
 import os
+import sqlite3
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -20,7 +20,7 @@ class DatabaseReceptor:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.pg_dsn = os.environ.get("DATABASE_URL")  # postgresql://user:pass@host/db
-        self.sqlite_path = base_dir / "core" / "exports" / "nexus_aos.db"
+        self.sqlite_path = base_dir / "core" / "exports" / "Sesha_aos.db"
 
     def _get_sqlite_conn(self):
         return sqlite3.connect(self.sqlite_path)

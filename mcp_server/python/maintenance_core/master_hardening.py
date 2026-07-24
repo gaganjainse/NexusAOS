@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os/archives")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os/archives")
 
 # Definite Branch Head Mapping
 BRANCH_HEADS = {
@@ -79,10 +79,10 @@ def get_superior(file_path):
     filename = file_path.name
 
     # 1. Level 1: Command Center
-    if filename == "nexus_omni_lead.md": return "THE SOVEREIGN"
+    if filename == "Sesha_omni_lead.md": return "THE SOVEREIGN"
     if "ncc" in parts:
-        if filename == "nexus_orchestrator_agent.md": return "Sovereign Proxy (Nexus Omni-Lead)"
-        return "Nexus Orchestrator Agent"
+        if filename == "Sesha_orchestrator_agent.md": return "Sovereign Proxy (Sesha Omni-Lead)"
+        return "Sesha Orchestrator Agent"
 
     # 2. Level 2: CEO
     if filename == "ceo.md": return "Board of Directors"
@@ -110,7 +110,7 @@ def get_superior(file_path):
     return "None"
 
 def process():
-    print("NexusAOS Master Hardening Initiated...")
+    print("SeshaAOS Master Hardening Initiated...")
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:
             if file.endswith(".md"):
@@ -134,3 +134,4 @@ def process():
 
 if __name__ == "__main__":
     process()
+

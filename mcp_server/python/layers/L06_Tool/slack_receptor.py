@@ -1,5 +1,5 @@
 """
-NexusAOS - Slack Receptor (Social R11)
+SeshaAOS - Slack Receptor (Social R11)
 Version: 1.0.0
 Description: Slack API integration for messaging.
 """
@@ -23,7 +23,7 @@ class SlackReceptor:
         self.api_base = "https://slack.com/api"
         self.headers = {
             "Content-Type": "application/json",
-            "User-Agent": "NexusAOS-SlackReceptor/1.0"
+            "User-Agent": "SeshaAOS-SlackReceptor/1.0"
         }
         if self.token:
             self.headers["Authorization"] = f"Bearer {self.token}"

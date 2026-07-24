@@ -3,7 +3,7 @@ Version: 14.0.0
 Description: Recursive self-improvement (RSI) and mutation-testing for logic via the Darwin-Gödel loop.
 
 ## 1. Recursive Self-Improvement (RSI)
-- **Logic Mutation:** Nexus autonomously rewrites its own code atoms (L03) to optimize for speed, accuracy, and power efficiency.
+- **Logic Mutation:** Sesha autonomously rewrites its own code atoms (L03) to optimize for speed, accuracy, and power efficiency.
 - **RSI-Sprints:** Periodically engaging in "High-Intensity Thinking" phases where the system searches for non-obvious algorithmic breakthroughs.
 - **Bootstrapping Intelligence:** Using version 14.0 to design version 15.0, ensuring each generation is exponentially more capable.
 

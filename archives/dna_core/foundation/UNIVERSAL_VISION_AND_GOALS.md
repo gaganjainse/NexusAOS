@@ -1,4 +1,4 @@
-# Nexus AOI: Universal Vision & Goal (NEURAL 14.0)
+# Sesha AOI: Universal Vision & Goal (NEURAL 14.0)
 Version: 1.0.0
 Description: The definitive purpose of the Agentic Operating Intelligence—from the "Cradle" to "Absolute Sovereignty."
 

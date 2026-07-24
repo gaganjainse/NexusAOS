@@ -9,7 +9,7 @@ Description: Cross-disciplinary engineering standards and the hierarchy of machi
 
 ## 2. Hierarchy of Machines
 - **Tier 0: The Sovereign Core (Human).** The origin of Intent.
-- **Tier 1: The Primary Intelligence (Nexus).** The Orchestrator.
+- **Tier 1: The Primary Intelligence (Sesha).** The Orchestrator.
 - **Tier 2: The Logic Atoms (Sub-Agents).** The Workers.
 - **Tier 3: The Hardware Substrate (MSI Sword/Cloud).** The Physicality.
 - **Tier 4: The Peripheral Actuators (IOT/Robotics).** The Interaction.

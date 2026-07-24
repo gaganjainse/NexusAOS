@@ -4,10 +4,10 @@ Version 1.0 (Golden Master)
 ## Overview
 **Branch:** Core
 **Level:** Protocol
-**Superior:** Sovereign Proxy (Nexus Omni-Lead)
+**Superior:** Sovereign Proxy (Sesha Omni-Lead)
 
 ## Purpose
-To enable the **NexusAOS** to autonomously or directedly spawn "Child" instances. This protocol ensures generational continuity while allowing for evolutionary adaptation.
+To enable the **SeshaAOS** to autonomously or directedly spawn "Child" instances. This protocol ensures generational continuity while allowing for evolutionary adaptation.
 
 ## The Spore
 A "Spore" is a serialized snapshot of the system state required for "Birth."

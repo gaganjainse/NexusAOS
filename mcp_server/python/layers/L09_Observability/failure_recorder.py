@@ -1,14 +1,15 @@
 """
-NexusAOS - Failure Recorder (L09)
+SeshaAOS - Failure Recorder (L09)
 Version: 1.0.0
 Description: Captures somatic and mental failures for iterative learning.
 """
 
 import json
-import time
 import os
+import time
 from pathlib import Path
 from typing import Dict, Any
+
 
 class FailureRecorder:
     def __init__(self, base_dir: Path):
@@ -35,3 +36,4 @@ if __name__ == "__main__":
     fr = FailureRecorder(base)
     fr.record_failure("F-TEST", "Unit Test", "Verification pulse failed.", "Test logic error.", "Fixed in next generation.")
     print("Failure recorded.")
+

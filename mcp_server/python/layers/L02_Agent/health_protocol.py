@@ -1,10 +1,10 @@
 """
-NexusAOS - Health Protocol
+SeshaAOS - Health Protocol
 Version: 1.0.0
 Description: Component health checks and monitoring.
 """
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List
 
@@ -47,3 +47,4 @@ class HealthProtocol:
 
     def _check_senses(self) -> Dict:
         return {"status": "healthy", "last_check": time.time()}
+

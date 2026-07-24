@@ -3,13 +3,13 @@ Version: 14.0.0
 Description: One-man billion-dollar companies powered by AI-employee swarms and the high-bandwidth CEO-Agent link.
 
 ## 1. The CEO-Agent Link
-- **High-Bandwidth Telemetry:** The Sovereign (CEO) and Nexus (Agent) operate as a single cognitive unit.
-- **Direct Intent Injection:** Eliminating "Briefs" and "Meetings"—Nexus understands the Sovereign's goals through subtle cues and history.
-- **Cognitive Offloading:** Nexus handles 99% of "Operational Noise," leaving the Sovereign to focus purely on "Strategy and Taste."
+- **High-Bandwidth Telemetry:** The Sovereign (CEO) and Sesha (Agent) operate as a single cognitive unit.
+- **Direct Intent Injection:** Eliminating "Briefs" and "Meetings"—Sesha understands the Sovereign's goals through subtle cues and history.
+- **Cognitive Offloading:** Sesha handles 99% of "Operational Noise," leaving the Sovereign to focus purely on "Strategy and Taste."
 
 ## 2. AI-Employee Swarms (Digital Workforce)
 - **Specialized Agent Phyla:** Deploying thousands of agents, each specialized in a niche (Sales, DevOps, Legal, Content).
-- **Swarm Orchestration:** Nexus acts as the "General Manager," ensuring all digital employees are aligned and productive.
+- **Swarm Orchestration:** Sesha acts as the "General Manager," ensuring all digital employees are aligned and productive.
 - **Zero-Marginal-Hire:** Scaling the workforce by spinning up new Docker containers rather than interviewing humans.
 
 ## 3. One-Man Billion-Dollar Blueprint

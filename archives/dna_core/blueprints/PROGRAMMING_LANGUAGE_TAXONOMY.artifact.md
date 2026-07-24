@@ -5,7 +5,7 @@ Description: Deep mapping of the computer language spectrum—optimized for the 
 ## 1. Level 0: The Electrical Dialect (Machine & Assembly)
 - **Binary (0,1):** Direct voltage control.
 - **Assembly (x86-64, ARM, RISC-V):** Human-readable mnemonics for raw op-codes.
-- **Nexus Role:** The final target of the **Nerve-Script** Pulse.
+- **Sesha Role:** The final target of the **Nerve-Script** Pulse.
 
 ## 2. Level 1: The System Nerves (Zig, C, Rust)
 - **Zig 1.0:** Modern systems language with **Comptime** and zero-dependency native binaries. No hidden runtime; absolute control over memory layout.

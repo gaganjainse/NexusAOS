@@ -1,16 +1,16 @@
 """
-NexusAOS - Degeneracy Module
+SeshaAOS - Degeneracy Module
 Version: 1.0.0
 Description: Redundant subsystems, hot standbys, dual-write, peer health checks.
 Biological degeneracy: multiple components can perform the same function.
 """
-import json
-import time
 import copy
+import json
 import sys
+import time
+from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Optional, Callable, Any
-from collections import defaultdict
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:

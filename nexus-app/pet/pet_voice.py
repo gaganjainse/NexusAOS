@@ -1,5 +1,5 @@
 """
-NexusAOS - Pet Voice Engine (L7 Integration)
+SeshaAOS - Pet Voice Engine (L7 Integration)
 Version: 13.1.0
 Description: Mood-aware TTS using Edge TTS with SSML pitch/rate/voice control.
 Falls back to pyttsx3 (SAPI5 on Windows) if edge-tts unavailable.
@@ -143,3 +143,4 @@ class PetVoiceEngine:
 
     def shutdown(self):
         self.stop()
+

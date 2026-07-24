@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Nexus — Living OS Intelligence</title>
+<title>Sesha — Living OS Intelligence</title>
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html, body {
@@ -116,12 +116,12 @@ canvas {
 <div id="container">
     <div id="loading">
         <div class="spinner"></div>
-        <div class="status">Nexus is assembling...</div>
+        <div class="status">Sesha is assembling...</div>
         <div class="model" id="model-name">Initializing neural substrate</div>
     </div>
 
     <div id="speech-bubble">
-        <div class="sender">NEXUS</div>
+        <div class="sender">Sesha</div>
         <div class="text" id="bubble-text">Initializing...</div>
         <div class="timestamp" id="bubble-time"></div>
     </div>
@@ -155,7 +155,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 
 // ============================================================
-// NEXUS PET — Full Conversational 3D Intelligence
+// Sesha PET — Full Conversational 3D Intelligence
 // ============================================================
 
 // === CONFIGURATION ===
@@ -233,10 +233,10 @@ try {
     if (typeof QWebChannel !== 'undefined') {
         new QWebChannel(qt.webChannelTransport, (channel) => {
             pyBridge = channel.objects.pet_bridge;
-            if (pyBridge) console.log('[Nexus] QWebChannel connected');
+            if (pyBridge) console.log('[Sesha] QWebChannel connected');
         });
     }
-} catch(e) { console.log('[Nexus] Standalone mode'); }
+} catch(e) { console.log('[Sesha] Standalone mode'); }
 
 function notify(type, data = {}) {
     if (!pyBridge) return;
@@ -252,10 +252,10 @@ function notify(type, data = {}) {
 // ============================================================
 // SPEECH BUBBLE
 // ============================================================
-function showBubble(text, sender = 'nexus') {
+function showBubble(text, sender = 'Sesha') {
     const el = document.querySelector('#speech-bubble .sender');
     if (sender === 'user') el.textContent = 'SOVEREIGN';
-    else el.textContent = 'NEXUS';
+    else el.textContent = 'Sesha';
     bubbleText.textContent = text;
     bubbleTime.textContent = new Date().toLocaleTimeString();
     bubble.classList.add('visible');
@@ -337,7 +337,7 @@ function initScene() {
 // PROCEDURAL AVATAR
 // ============================================================
 function createProceduralAvatar() {
-    setLoading('Sculpting Nexus form...', 'Procedural human');
+    setLoading('Sculpting Sesha form...', 'Procedural human');
     const group = new THREE.Group();
 
     const skin = new THREE.MeshPhysicalMaterial({ color:0xe8d5c3, roughness:0.5, metalness:0, clearcoat:0.05 });
@@ -492,7 +492,7 @@ async function await_import_vrm() {
 }
 
 function loadFallback() {
-    setLoading('Nexus is taking form...', 'Humanoid substrate');
+    setLoading('Sesha is taking form...', 'Humanoid substrate');
     avatarGroup = createProceduralAvatar();
     avatarGroup.position.set(0, 0, 0);
     scene.add(avatarGroup);
@@ -684,7 +684,7 @@ function updateSaccades(delta) {
 window.speak = function(text, emotion, voiceParams) {
     if (!isReady) return;
 
-    showBubble(text, 'nexus');
+    showBubble(text, 'Sesha');
     isTalking = true;
 
     // Set expression
@@ -759,13 +759,13 @@ function sendCommand(text) {
     cmdInput.value = '';
 
     // Check for wake word
-    if (text.toLowerCase().trim().startsWith('nexus')) {
+    if (text.toLowerCase().trim().startsWith('Sesha')) {
         wakeWordDetected();
         const cmd = text.substring(6).trim();
         if (cmd) {
             setTimeout(() => notify('command', { text: cmd }), 500);
         } else {
-            // Just "Nexus" — greeting response
+            // Just "Sesha" — greeting response
             setTimeout(() => {
                 notify('command', { text: 'hello' });
                 isProcessing = false;
@@ -798,14 +798,14 @@ window.setEditorRect = function(x, y, w, h) {
 window.taskStarted = function(name) {
     isProcessing = true;
     lookAtEditor();
-    showBubble(`Processing: ${name}...`, 'nexus');
+    showBubble(`Processing: ${name}...`, 'Sesha');
 };
 
 window.taskCompleted = function(name, result) {
     isProcessing = false;
     gazeMode = 'idle';
     if (result) {
-        showBubble(`${name} complete.`, 'nexus');
+        showBubble(`${name} complete.`, 'Sesha');
     }
 };
 
@@ -901,7 +901,7 @@ document.addEventListener('keydown', (e) => {
 let wakeWordTimeout = null;
 cmdInput.addEventListener('input', () => {
     const val = cmdInput.value.toLowerCase().trim();
-    if (val.startsWith('nexus') || val.startsWith('nexus,') || val.startsWith('nexus:')) {
+    if (val.startsWith('Sesha') || val.startsWith('Sesha,') || val.startsWith('Sesha:')) {
         wakeWordDetected();
         notify('wake');
     }
@@ -942,7 +942,7 @@ function animate() {
 // INIT
 // ============================================================
 async function init() {
-    setLoading('Nexus is booting...');
+    setLoading('Sesha is booting...');
 
     if ('speechSynthesis' in window) {
         speechSynthesis.getVoices();
@@ -962,3 +962,4 @@ init();
 </script>
 </body>
 </html>
+

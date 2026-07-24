@@ -1,20 +1,19 @@
 """
-NexusAOS - Self-Evolving Kernel (SE-AOS)
+SeshaAOS - Self-Evolving Kernel (SE-AOS)
 Version: 13.0.0
 Description: Synthesizes and hot-loads new logic blocks.
 """
 
+import importlib
+import json
 import os
 import sys
-import importlib
+import sys
 import time
-import json
-
+from pathlib import Path
 from typing import Dict, Any, Optional
 
-from pathlib import Path
-import sys
-_python_root = Path(__file__).resolve().parent.parent.parent.parent
+_python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
@@ -58,3 +57,4 @@ class SelfEvolvingKernel:
         else:
             importlib.import_module(skill_name)
         return sys.modules[skill_name]
+

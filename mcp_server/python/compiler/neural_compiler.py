@@ -1,13 +1,14 @@
 """
-NexusAOS - NEURAL Compiler (The Transplanter)
+SeshaAOS - NEURAL Compiler (The Transplanter)
 Version: 2.0.0
 Description: Compiles Sigil 2.0 pulses into performance-ready Genomes for the SHM Synaptic Bus.
 """
 
-import json
 import hashlib
+import json
 from pathlib import Path
 from typing import Dict, Any, List
+
 
 class NeuralCompiler:
     def __init__(self, base_dir: Path):
@@ -74,3 +75,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     compiler = NeuralCompiler(base)
     print(compiler.compile_pulse("::P Optimize Latency ::X Use io_uring", "zig"))
+

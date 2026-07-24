@@ -5,7 +5,7 @@ Level: Protocol
 Superior: Chief Architect
 
 ## Overview
-This document establishes the **Biological Standard** for all entities, plugins, and swarms seeking to interface with the NexusAOS ecosystem. Compliance ensures metabolic, immune, and cognitive compatibility.
+This document establishes the **Biological Standard** for all entities, plugins, and swarms seeking to interface with the SeshaAOS ecosystem. Compliance ensures metabolic, immune, and cognitive compatibility.
 
 ## 1. Anatomy of an Organ (Plugin Spec)
 All external plugins (Organs) must provide a `manifest.json` containing:

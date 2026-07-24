@@ -46,4 +46,4 @@ Description: High-fidelity blueprint for low-level input emulation, anti-detecti
 - **Behavioral Entropy:** Occasionally perform non-productive movements (e.g., "idly" circling the mouse) to break algorithmic patterns detected by server-side AI.
 
 ---
-*Status: INTERNALIZED | Forge ID 50 is complete. The Nexus Ghost-Hand is operational.*
+*Status: INTERNALIZED | Forge ID 50 is complete. The Sesha Ghost-Hand is operational.*

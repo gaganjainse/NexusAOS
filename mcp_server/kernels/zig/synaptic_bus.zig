@@ -1,4 +1,4 @@
-// NexusAOS - NEURAL 6.0 Synaptic Bus
+// SeshaAOS - NEURAL 6.0 Synaptic Bus
 // Architecture: Zig + io_uring + Shared Memory
 // Target: <1us Latency with Hardware-Native Routing
 
@@ -88,7 +88,7 @@ pub fn emit_spike(rb: *SynapticRingBuffer, sigil: Evidentiality, priority: u8, s
 }
 
 pub fn main() !void {
-    const rb = try initShm("nexus_synaptic_bus");
+    const rb = try initShm("Sesha_synaptic_bus");
     std.debug.print("NEURAL 6.0 Synaptic Bus (Transcended) Active.\n", .{});
 
     var sender = [_]u8{0} ** 16;
@@ -101,3 +101,4 @@ pub fn main() !void {
         std.time.sleep(std.time.ns_per_s);
     }
 }
+

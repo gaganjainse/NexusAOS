@@ -1,24 +1,24 @@
 """
-NexusAOS - OpenRouter Benchmarking Infrastructure
+SeshaAOS - OpenRouter Benchmarking Infrastructure
 Version: 1.0.0
 Description: Benchmark AGOI agents against OpenRouter models with VSC-Bench equivalent tasks.
 """
 import asyncio
-import json
-import time
-import os
-from pathlib import Path
-from typing import Dict, List, Any, Optional, Callable
-from dataclasses import dataclass, asdict, field
-from enum import Enum
-from datetime import datetime
 import hashlib
+import json
+import os
 import sys
+import time
+from dataclasses import dataclass, asdict, field
+from dataclasses import dataclass, asdict, field
+from datetime import datetime
+from datetime import datetime
+from enum import Enum
+from enum import Enum
+from pathlib import Path
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Callable
-from dataclasses import dataclass, asdict, field
-from enum import Enum
-from datetime import datetime
+from typing import Dict, List, Any, Optional, Callable
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -87,8 +87,8 @@ class OpenRouterClient:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://nexusaos.local",
-            "X-Title": "NexusAOS Benchmark"
+            "HTTP-Referer": "https://Seshaaos.local",
+            "X-Title": "SeshaAOS Benchmark"
         }
         
         payload = {
@@ -473,7 +473,7 @@ async def main():
     """Run benchmarks via OpenRouter."""
     import argparse
     
-    parser = argparse.ArgumentParser(description="NexusAOS OpenRouter Benchmark")
+    parser = argparse.ArgumentParser(description="SeshaAOS OpenRouter Benchmark")
     parser.add_argument("--models", nargs="+", default=[
         "openai/gpt-4o",
         "anthropic/claude-3.5-sonnet",

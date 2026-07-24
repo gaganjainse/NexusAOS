@@ -1,5 +1,5 @@
 """
-NexusAOS - Thought Agent (The Explainer)
+SeshaAOS - Thought Agent (The Explainer)
 Version: 1.0.0
 Description: Translates complex internal NEURAL pulses into readable thoughts for the Sovereign.
 """
@@ -70,3 +70,4 @@ class ThoughtAgent:
             
         # 5: Default Operational
         return 5
+

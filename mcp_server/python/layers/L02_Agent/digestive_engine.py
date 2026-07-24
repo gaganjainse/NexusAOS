@@ -1,12 +1,12 @@
 """
-NexusAOS - Digestive Engine (Data Metabolism)
+SeshaAOS - Digestive Engine (Data Metabolism)
 Version: 2.0.0
 Description: Converts raw external data (stimuli) into Semantic Nutrients (BSF/JSON).
 Biological analog: Stomach/Intestines (Breaking down complex matter into absorption-ready units).
 """
 
-import json
 import hashlib
+import json
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -80,3 +80,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     de = DigestiveEngine(base)
     print(de.ingest("RDMA enables zero-copy transfer between agents.", "WebSearch"))
+

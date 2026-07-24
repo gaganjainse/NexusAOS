@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the visual and interaction design of the **Nexus Corporate OS** app. The Design Manager ensures a consistent, intuitive, and accessible experience for **Sovereigns and Personnel**.
+To lead the visual and interaction design of the **Sesha Corporate OS** app. The Design Manager ensures a consistent, intuitive, and accessible experience for **Sovereigns and Personnel**.
 
 
 ## Responsibilities

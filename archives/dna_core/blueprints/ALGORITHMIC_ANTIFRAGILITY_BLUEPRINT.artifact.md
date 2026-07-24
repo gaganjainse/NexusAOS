@@ -12,7 +12,7 @@ Objective: Design systems that improve in response to chaos, noise, and failure.
 - **Decentralized Validation:** Using the Agent Swarm (ID 43) to cross-verify intent when local noise levels are too high.
 
 ## 3. Implementation
-- **L03 Rewriting:** Nexus is authorized to rewrite its own "brittle" logic atoms when it detects repeated exception patterns.
+- **L03 Rewriting:** Sesha is authorized to rewrite its own "brittle" logic atoms when it detects repeated exception patterns.
 
 ---
 *Status: HARDENED | Chaos is the fuel of evolution.*

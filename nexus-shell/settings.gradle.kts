@@ -1,4 +1,4 @@
-rootProject.name = "nexus-shell"
+rootProject.name = "Sesha-shell"
 
 pluginManagement {
     repositories {
@@ -14,3 +14,4 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+

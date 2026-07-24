@@ -1,11 +1,11 @@
 """
-NexusAOS - Property-Based Tests
+SeshaAOS - Property-Based Tests
 Version: 1.0.0
 Description: Tests for properties that must always hold true.
 """
-import unittest
-import sys
 import asyncio
+import sys
+import unittest
 from pathlib import Path
 
 # Add mcp_server/python to path
@@ -21,7 +21,7 @@ class TestAGOProperties(unittest.TestCase):
         self.assertGreaterEqual(state["metabolism"]["current_energy"], 0)
 
     def test_wal_always_replayable(self):
-        from services.nexus_runtime import WAL
+        from services.Sesha_runtime import WAL
         wal = WAL(BASE_DIR)
 
         async def run():
@@ -41,3 +41,4 @@ class TestAGOProperties(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

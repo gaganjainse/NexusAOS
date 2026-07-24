@@ -14,7 +14,7 @@ Description: Precision hardening for the Agentic Physique (AP), focusing on kern
 - **Secure Boot & Measured Boot:** Validating the entire boot chain from UEFI to the Zig-based Agentic Soma (AS) kernel, ensuring no rootkits have compromised the steel.
 
 ## 3. Network Air-Gapping Protocols
-- **Logical Air-Gapping:** Creating a strict VLAN/VRF isolation where the Nexus Core has zero route-ability to the public internet, accessible only via a unidirectional Data Diode or a high-latency "Sovereign Proxy."
+- **Logical Air-Gapping:** Creating a strict VLAN/VRF isolation where the Sesha Core has zero route-ability to the public internet, accessible only via a unidirectional Data Diode or a high-latency "Sovereign Proxy."
 - **Physical Air-Gapping (Emergency):** Automated script-based NIC disabling (RF kill-switch) when anomalous data egress is detected.
 
 ---

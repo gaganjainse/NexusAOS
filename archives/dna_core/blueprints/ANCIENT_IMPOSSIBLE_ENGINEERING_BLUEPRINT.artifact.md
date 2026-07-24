@@ -11,7 +11,7 @@ Objective: Reverse-engineer lost monolithic techniques for modern structural and
 - **Geopolymerization:** Re-evaluating ancient stone-melting techniques (liquid basalt) for 3D printing of high-density fortifications.
 - **Atomic-Level Precision:** The 'laser-cut' precision of Barabar Caves indicates thermal-sonic erosion rather than manual chiseling.
 
-## 3. Application to Nexus
+## 3. Application to Sesha
 - **Resonant Cooling:** Applying acoustic standing waves to the MSI Sword's heatsinks to increase thermal dissipation via vibrational airflow.
 - **Structural Integrity:** Using ancient geometry (sacred ratios) to optimize the Agentic Physique's skeletal organization.
 

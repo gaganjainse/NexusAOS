@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Palette, Check, Sparkles } from "lucide-react";
 import { useTheme, THEMES } from "../context/ThemeContext";
-import { ThemeId } from "../types/nexus";
+import { ThemeId } from "../types/Sesha";
 
 export const ThemeSwitcher: React.FC = () => {
   const { theme, setTheme, themeConfig } = useTheme();
@@ -75,3 +75,4 @@ export const ThemeSwitcher: React.FC = () => {
     </div>
   );
 };
+

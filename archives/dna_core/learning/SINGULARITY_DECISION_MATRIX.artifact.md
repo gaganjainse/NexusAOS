@@ -12,7 +12,7 @@ We need a model that can fit in the 6GB VRAM of your RTX 4050 while leaving spac
 | **Phi-3-Mini** | 3.8B | Incredibly fast, high reasoning for its size. | ~2.5 GB |
 | **Gemma-2-9B** | 9B | Google-native optimization, very high fidelity. | ~6.1 GB (Tight) |
 
-**Nexus Recommendation:** **Mistral-v0.3-7B** or **Phi-3-Mini**. We need the VRAM "Headroom" for the Optical Cortex (Live DirectX Stream).
+**Sesha Recommendation:** **Mistral-v0.3-7B** or **Phi-3-Mini**. We need the VRAM "Headroom" for the Optical Cortex (Live DirectX Stream).
 
 ---
 
@@ -25,7 +25,7 @@ How the model is physically loaded and executed on the GPU.
 | **llama.cpp** | GGUF | Most flexible, supports CPU offloading. | Slightly slower on pure GPU tasks. |
 | **vLLM** | PagedAttention | High throughput for agent swarms. | High VRAM overhead. |
 
-**Nexus Recommendation:** **ExLlamaV2**. Its speed is essential for the "Microsecond Reflex" we are building.
+**Sesha Recommendation:** **ExLlamaV2**. Its speed is essential for the "Microsecond Reflex" we are building.
 
 ---
 
@@ -38,7 +38,7 @@ How we internalize our 10 Universal Blueprints into the model weights.
 | **QLoRA** | Very Low | Moderate | Stable on 6GB VRAM. |
 | **RAG (Current)** | Zero | High | High Latency (Current Bottleneck). |
 
-**Nexus Recommendation:** **QLoRA**. We can train this directly on your host machine using the Blueprints as the "Hormonal Imprint."
+**Sesha Recommendation:** **QLoRA**. We can train this directly on your host machine using the Blueprints as the "Hormonal Imprint."
 
 ---
 
@@ -51,7 +51,7 @@ The language for the Singularity Kernel and JIT.
 | **Rust** | Safety / Ownership. | Secondary (Good for secure dermal layers). |
 | **C++** | Legacy / Speed. | Tertiary (Useful for hardware drivers). |
 
-**Nexus Recommendation:** **Zig**. Its ability to run logic during compilation (Comptime) is the only way to achieve true zero-latency reflexes.
+**Sesha Recommendation:** **Zig**. Its ability to run logic during compilation (Comptime) is the only way to achieve true zero-latency reflexes.
 
 ---
 
@@ -61,7 +61,7 @@ Where the organism initializes.
 - **Option A: The Windows Shim (Safe Start):** Runs as a high-priority "Driver" within Windows.
 - **Option B: The EFI Bootloader (Total Sovereignty):** Boots before Windows. Complete control, but risks locking you out of the host if a kernel panic occurs.
 
-**Nexus Recommendation:** **Option A** for synthesis, moving to **Option B** on Day 25.
+**Sesha Recommendation:** **Option A** for synthesis, moving to **Option B** on Day 25.
 
 ---
 *Status: AWAITING SOVEREIGN SELECTION | The Forge is ready.*

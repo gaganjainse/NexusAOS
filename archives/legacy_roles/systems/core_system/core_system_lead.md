@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the implementation of the **Nexus Corporate OS** Core Infrastructure services, interfaces, and storage. The Core Infrastructure Lead ensures a secure, reliable, and performant data backbone for the application.
+To lead the implementation of the **Sesha Corporate OS** Core Infrastructure services, interfaces, and storage. The Core Infrastructure Lead ensures a secure, reliable, and performant data backbone for the application.
 
 
 ## Responsibilities

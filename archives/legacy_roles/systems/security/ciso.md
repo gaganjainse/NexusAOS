@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To define and enforce the global security posture of the **Nexus Corporate OS**. The CISO ensures that data integrity, cybersecurity, and regulatory **Agentic controls** are uncompromised across all 14 branches.
+To define and enforce the global security posture of the **Sesha Corporate OS**. The CISO ensures that data integrity, cybersecurity, and regulatory **Agentic controls** are uncompromised across all 14 branches.
 
 
 ## Responsibilities

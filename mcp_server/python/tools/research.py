@@ -7,14 +7,12 @@ medicinal fix lookup, and architectural nutrient ingestion.
 from __future__ import annotations
 
 import json
+from mcp.server.fastmcp import FastMCP
+from mcp_server.python.hive_sync import HiveSync
 from typing import Any
 
-from mcp.server.fastmcp import FastMCP
-
-from mcp_server.python.hive_sync import HiveSync
-
 hive_sync = HiveSync()
-mcp = FastMCP("NexusAOS research tools")
+mcp = FastMCP("SeshaAOS research tools")
 
 
 def _response(status: str, payload: Any = None, message: str = "", tool_id: str = "unknown", duration: float = 0.0) -> str:
@@ -42,7 +40,7 @@ def _gate(action: str):
 def _services(base_dir):
     from layers.L06_Tool.web_receptor import WebReceptor
     from layers.L06_Tool.deep_research_tool import DeepResearchTool
-    from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+    from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
     return {
         "web_receptor": WebReceptor(base_dir),
         "deep_research": DeepResearchTool(base_dir),
@@ -82,3 +80,4 @@ def ingest_architectural_nutrients(topic: str) -> str:
     res = services["deep_research"].perform_deep_research(topic)
     duration = __import__("time").perf_counter() - start
     return _response("success", payload=res, message=f"Research on {topic} ingested.", tool_id="ingest_architectural_nutrients", duration=duration)
+

@@ -1,13 +1,13 @@
 """
-NexusAOS - Cerebellum Engine (Motor Learning)
+SeshaAOS - Cerebellum Engine (Motor Learning)
 Version: 1.0.0
 Description: Fine-tunes tool execution parameters based on repetition and performance.
 Biological analog: Cerebellum (Procedural memory, timing, motor coordination).
 """
 
 import json
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -38,3 +38,4 @@ if __name__ == "__main__":
     cb = CerebellumEngine(base)
     cb.record_action("web_search", True, 1.2)
     print("Efficiency Mod:", cb.get_efficiency_mod("web_search"))
+

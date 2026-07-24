@@ -16,7 +16,7 @@ const BASE_DIR = path.resolve(__dirname, "../../");
 
 const server = new Server(
   {
-    name: "NexusAOS",
+    name: "SeshaAOS",
     version: "1.0.0",
   },
   {
@@ -29,12 +29,12 @@ const server = new Server(
 
 // --- Resources ---
 const RESOURCES = {
-  "nexus://core/handbook": "archives/core/foundation/corporate_os_handbook.md",
-  "nexus://core/constitution": "archives/core/foundation/nexus_corporate_constitution.md",
-  "nexus://core/rules": "archives/core/rules/operating_rules.md",
-  "nexus://core/matrix": "archives/core/foundation/job_matrix.md",
-  "nexus://core/logic": "core/exports/nexus_logic_export.json",
-  "nexus://core/index": "core/exports/nexus_file_index.json",
+  "Sesha://core/handbook": "archives/core/foundation/corporate_os_handbook.md",
+  "Sesha://core/constitution": "archives/core/foundation/Sesha_corporate_constitution.md",
+  "Sesha://core/rules": "archives/core/rules/operating_rules.md",
+  "Sesha://core/matrix": "archives/core/foundation/job_matrix.md",
+  "Sesha://core/logic": "core/exports/Sesha_logic_export.json",
+  "Sesha://core/index": "core/exports/Sesha_file_index.json",
 };
 
 server.setRequestHandler(ListResourcesRequestSchema, async () => ({
@@ -65,7 +65,7 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [
     {
-      name: "boot_nexus",
+      name: "boot_Sesha",
       description: "Initialize and specialize the OS (Bridges to Python Engine).",
       inputSchema: {
         type: "object",
@@ -77,8 +77,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
       },
     },
     {
-      name: "search_nexus",
-      description: "Performs a global search across all NexusAOS files using the index.",
+      name: "search_Sesha",
+      description: "Performs a global search across all SeshaAOS files using the index.",
       inputSchema: {
         type: "object",
         properties: {
@@ -120,12 +120,12 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: "reforge_pulses",
-      description: "Triggers a full rebuild of the Nexus Logic Pulse (.nxp) library.",
+      description: "Triggers a full rebuild of the Sesha Logic Pulse (.nxp) library.",
       inputSchema: { type: "object", properties: {} },
     },
     {
       name: "query_logic_graph",
-      description: "Performs a SQL query against the Nexus Logic Graph (nexus_aos.db).",
+      description: "Performs a SQL query against the Sesha Logic Graph (Sesha_aos.db).",
       inputSchema: {
         type: "object",
         properties: {
@@ -187,7 +187,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
   if (name === "create_checkpoint") {
     const { status, next_step } = args as { status: string; next_step: string };
-    const ledgerPath = path.join(BASE_DIR, "core/monitoring/nexus_operational_ledger.md");
+    const ledgerPath = path.join(BASE_DIR, "core/monitoring/Sesha_operational_ledger.md");
     const timestamp = new Date().toISOString();
     const checkpointEntry = `\n- **[CHECKPOINT: ${timestamp}]:** ${status}\n- **[PENDING: NEXT_STEP]:** ${next_step}\n`;
 
@@ -198,9 +198,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     };
   }
 
-  if (name === "search_nexus") {
+  if (name === "search_Sesha") {
     const { query } = args as { query: string };
-    const indexPath = path.join(BASE_DIR, "core/exports/nexus_file_index.json");
+    const indexPath = path.join(BASE_DIR, "core/exports/Sesha_file_index.json");
     const index = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
     const results = index.filter((f: any) =>
       f.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -246,14 +246,14 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const indexScript = path.join(BASE_DIR, "mcp_server/python/nxp_indexer.py");
       execSync(`python "${forgeScript}"`);
       execSync(`python "${indexScript}"`);
-      return { content: [{ type: "text", text: "Nexus Logic Pulse (.nxp) library and index rebuilt successfully." }] };
+      return { content: [{ type: "text", text: "Sesha Logic Pulse (.nxp) library and index rebuilt successfully." }] };
     } catch (error: any) {
       return { content: [{ type: "text", text: error.message }], isError: true };
     }
   }
 
   if (name === "refresh_index") {
-    const pythonScript = path.join(BASE_DIR, "mcp_server", "python", "nexus_indexer.py");
+    const pythonScript = path.join(BASE_DIR, "mcp_server", "python", "Sesha_indexer.py");
     try {
       const output = execSync(`python "${pythonScript}"`, { encoding: "utf-8" });
       return { content: [{ type: "text", text: output }] };
@@ -321,3 +321,4 @@ async function main() {
 }
 
 main().catch(console.error);
+

@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To build and maintain the **Sovereign-facing** features of **Nexus Corporate OS**. The [PLATFORM_B] Implementer translates designs into functional, high-quality **Agentic logic**.
+To build and maintain the **Sovereign-facing** features of **Sesha Corporate OS**. The [PLATFORM_B] Implementer translates designs into functional, high-quality **Agentic logic**.
 
 
 ## Responsibilities

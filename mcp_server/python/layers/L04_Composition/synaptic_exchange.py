@@ -1,13 +1,13 @@
 """
-NexusAOS - Synaptic Exchange (Marketplace)
+SeshaAOS - Synaptic Exchange (Marketplace)
 Version: 1.0.0
 Description: Handles the discovery, metabolic validation, and immune-safe installation of new Organs (Plugins).
 """
 
 import json
-import time
 import shutil
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -88,3 +88,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     exchange = SynapticExchange(base)
     print(exchange.search_exchange("Synapse"))
+

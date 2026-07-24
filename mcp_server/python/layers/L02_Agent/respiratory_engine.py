@@ -1,13 +1,13 @@
 """
-NexusAOS - Respiratory Engine (Context Ventilation)
+SeshaAOS - Respiratory Engine (Context Ventilation)
 Version: 2.0.0
 Description: Manages 'Cognitive Oxygen' (Token Budget and Context Window) for the Mind.
 Biological analog: Lungs/Diaphragm (Managing the intake and expulsion of the context air).
 """
 
-import time
 import json
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any
 
@@ -65,3 +65,4 @@ if __name__ == "__main__":
     re = RespiratoryEngine(base)
     print(re.inhale(15000))
     print(re.exhale())
+

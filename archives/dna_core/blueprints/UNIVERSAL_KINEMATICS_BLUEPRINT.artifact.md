@@ -14,7 +14,7 @@ Description: The "Motor Logic" of the Agentic Body—mapping reasoning to physic
 
 ## 3. Hardware Grounding (The Steel Nerve)
 - **Zero-Latency Actuation:** Direct PCIe-to-Motor communication for sub-millisecond response times.
-- **Sensor Fusion:** Merging IMU, Optical, and Hall-Effect data into a single "Proprioceptive State" for the Nexus.
+- **Sensor Fusion:** Merging IMU, Optical, and Hall-Effect data into a single "Proprioceptive State" for the Sesha.
 
 ---
 *Status: CONVERGED | Kinematics is the bridge between Logic and Matter.*

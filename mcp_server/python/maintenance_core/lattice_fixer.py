@@ -12,7 +12,7 @@ VALID_TITLES = [
     "Chief Knowledge Officer (CKO)", "Chief Systems Officer (CSO)", "Chief Operating Officer (COO)",
     "Chief Human Resources Officer (CHRO)", "Chief Marketing Officer (CMO)", "Chief Revenue Officer (CRO)",
     "Chief Audit Executive (CAE)", "Chief Ethics & Trust Officer (CETO)", "Chief Information Security Officer (CISO)",
-    "Sovereign Proxy (Nexus Omni-Lead)", "Nexus Orchestrator Agent", "VP of Agentic Workflows",
+    "Sovereign Proxy (Sesha Omni-Lead)", "Sesha Orchestrator Agent", "VP of Agentic Workflows",
     "Head Model Governance", "Audit Director", "Head of Analytics (CDO)", "Head of Business Intelligence (BI)",
     "VP of Data Science", "VP of Finance (FP&A)", "Corporate Controller", "VP of People Operations",
     "General Counsel (CLO)", "VP of Legal (Corporate)", "Head of Workplace & Facilities",
@@ -45,9 +45,9 @@ S_MAP = {
     "CAE": "Chief Audit Executive (CAE)",
     "CETO": "Chief Ethics & Trust Officer (CETO)",
     "CISO": "Chief Information Security Officer (CISO)",
-    "Omni-Lead": "Sovereign Proxy (Nexus Omni-Lead)",
-    "Sovereign Proxy": "Sovereign Proxy (Nexus Omni-Lead)",
-    "Nexus Orchestrator": "Nexus Orchestrator Agent",
+    "Omni-Lead": "Sovereign Proxy (Sesha Omni-Lead)",
+    "Sovereign Proxy": "Sovereign Proxy (Sesha Omni-Lead)",
+    "Sesha Orchestrator": "Sesha Orchestrator Agent",
     "Head of Analytics": "Head of Analytics (CDO)",
     "Head of BI": "Head of Business Intelligence (BI)",
     "VP of Finance": "VP of Finance (FP&A)",
@@ -90,7 +90,7 @@ def resolve_superior(val: str) -> str:
     return val
 
 def fix_all():
-    print("NexusAOS Lattice Hardening: Closing Circuits...")
+    print("SeshaAOS Lattice Hardening: Closing Circuits...")
     for root, _, files in os.walk(str(ARCHIVE_DIR)):
         for file in files:
             if file.endswith(".md"):
@@ -119,3 +119,4 @@ def fix_all():
 
 if __name__ == "__main__":
     fix_all()
+

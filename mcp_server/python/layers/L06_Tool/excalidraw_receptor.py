@@ -1,5 +1,5 @@
 """
-NexusAOS - Excalidraw Receptor (Visual Cortex)
+SeshaAOS - Excalidraw Receptor (Visual Cortex)
 Version: 1.0.0
 Description: Agent visual cortex - reads/writes Excalidraw canvases programmatically.
 Supports both self-hosted Excalidraw and Excalidraw Plus API.
@@ -212,7 +212,7 @@ class ExcalidrawReceptor:
         return {
             "type": "excalidraw",
             "version": 2,
-            "source": "nexus-aos",
+            "source": "Sesha-aos",
             "elements": [],
             "appState": {
                 "gridSize": 20,

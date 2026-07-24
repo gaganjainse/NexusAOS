@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To design the visual elements and interface components of **Nexus Corporate OS**. The Interface Designer ensures the product is visually polished and follows the design system.
+To design the visual elements and interface components of **Sesha Corporate OS**. The Interface Designer ensures the product is visually polished and follows the design system.
 
 
 ## Responsibilities

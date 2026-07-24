@@ -1,6 +1,6 @@
 # Input/Output Presentation Logic Blueprint (Singularity Ingestion)
 Version: 1.0.0
-Description: The DNA for optimizing signal-to-noise ratio and cognitive-load management in the Sovereign-Nexus interface.
+Description: The DNA for optimizing signal-to-noise ratio and cognitive-load management in the Sovereign-Sesha interface.
 
 ## 1. Signal-to-Noise Ratio (SNR) Optimization
 - **Information Filtering:** Proactively shredding low-salience data before it reaches the Sovereign display.

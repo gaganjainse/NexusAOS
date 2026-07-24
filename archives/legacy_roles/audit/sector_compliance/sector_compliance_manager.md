@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure that **Nexus Corporate OS** complies with all relevant industry laws and regulations. The Sector Compliance Manager interprets legal requirements into **Agentic** and operational controls.
+To ensure that **Sesha Corporate OS** complies with all relevant industry laws and regulations. The Sector Compliance Manager interprets legal requirements into **Agentic** and operational controls.
 
 
 ## Responsibilities

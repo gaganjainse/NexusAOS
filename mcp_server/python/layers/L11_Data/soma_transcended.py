@@ -1,14 +1,14 @@
 """
-NexusAOS - SOMA TRANSCENDED Substrate
+SeshaAOS - SOMA TRANSCENDED Substrate
 Version: 1.0.0
 Description: Master interface for Zenoh P2P, Kùzu Graph, Redis Hot-State, and RocksDB Audit.
 Architecture: Brokerless Mesh + Graph-Native Cognitive Topology.
 """
 
-import time
 import json
-import threading
 import sys
+import threading
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Callable
 
@@ -162,3 +162,4 @@ if __name__ == "__main__":
     print("Transcended Substrate Initialized.")
     substrate.subscribe("adrenaline", lambda p: print(f"RECEIVE PULSE: {p}"))
     substrate.publish("adrenaline", {"level": "HIGH"})
+

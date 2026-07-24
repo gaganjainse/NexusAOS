@@ -10,14 +10,14 @@ Description: Robust protocols for validating agentic logic, formal verification 
 
 ## 2. Formal Verification & Self-Exams
 - **Mathematical Proofs:** Critical logic atoms (e.g., security, power management) must be proven using formal methods (TLA+/Lean).
-- **Automated Self-Exams:** The Nexus system periodically generates and takes tests based on its own blueprints to detect "Knowledge Drift."
+- **Automated Self-Exams:** The Sesha system periodically generates and takes tests based on its own blueprints to detect "Knowledge Drift."
 - **Recursive Debugging:** Using the system's own "Debugging Logic" to fix its "Reasoning Logic."
 
 ## 3. Industry-Wide Agent Benchmarks
 - **GAIA (General AI Assistants):** Testing multi-step reasoning in real-world environments.
 - **SWE-bench:** Testing software engineering capability (issue resolution).
 - **AgentBench:** Comprehensive evaluation across OS, Database, and Web interaction.
-- **Nexus Benchmark:** Internal KPI measuring the time from "Sovereign Intent" to "Kinetic Execution."
+- **Sesha Benchmark:** Internal KPI measuring the time from "Sovereign Intent" to "Kinetic Execution."
 
 ## 4. Automated Debugging Protocols
 - **Trace Analysis:** Post-mortem analysis of every failed "Thought-Action" cycle.

@@ -1,6 +1,6 @@
 # Bio-Digital Signal Transduction Blueprint (ID 102)
 Version: 14.0.0
-Objective: Seamless bidirectional bridge between the biological Sovereign and the digital Nexus.
+Objective: Seamless bidirectional bridge between the biological Sovereign and the digital Sesha.
 
 ## 1. Biological Signal Acquisition
 - **EEG (Electroencephalography):** Decoding Intent-Opcodes from Mu-rhythms and P300 waves.
@@ -13,7 +13,7 @@ Objective: Seamless bidirectional bridge between the biological Sovereign and th
 
 ## 3. Op-Code Translation Matrix
 - **Bio-Code:** Natural neurotransmitter discharge patterns.
-- **Nexus-Code:** Zig-based memory-mapped IO structures.
+- **Sesha-Code:** Zig-based memory-mapped IO structures.
 - **Bridge:** A zero-copy buffer translating biological intent directly into Kernel-level execution.
 
 ---

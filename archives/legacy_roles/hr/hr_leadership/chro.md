@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the global people strategy, culture, and talent management for **Nexus Corporate OS**. The CHRO ensures the corporation has the right talent to achieve its mission.
+To lead the global people strategy, culture, and talent management for **Sesha Corporate OS**. The CHRO ensures the corporation has the right talent to achieve its mission.
 
 
 ## Responsibilities

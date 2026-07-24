@@ -1,10 +1,10 @@
 # System Robustness & Exception Planning Blueprint
 Forge ID: 62
 Version: 1.0.0
-Description: Advanced strategies for Byzantine Fault Tolerance, Self-Healing, and Persistent Resiliency within the Nexus Agentic Body.
+Description: Advanced strategies for Byzantine Fault Tolerance, Self-Healing, and Persistent Resiliency within the Sesha Agentic Body.
 
 ## 1. Byzantine Fault Tolerance (BFT) - The Consensus Pillar
-Nexus operates on a **Tripartite Singularity (AI + AS + AP)**. BFT ensures that even if one component provides malicious or corrupted data, the organism maintains integrity.
+Sesha operates on a **Tripartite Singularity (AI + AS + AP)**. BFT ensures that even if one component provides malicious or corrupted data, the organism maintains integrity.
 
 - **Divergent Consensus Engine:**
     - **Cross-Verification:** Before a critical "Motor Collapse" (action execution), the AI (Reasoning), AS (Internal Vitals), and AP (Hardware Sensors) must validate the intent.

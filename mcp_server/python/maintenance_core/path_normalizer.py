@@ -2,11 +2,11 @@ import os
 import re
 from pathlib import Path
 
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os")
 ARCHIVE_DIR = BASE_DIR / "archives"
 
 def normalize_paths():
-    print("NexusAOS Global Path Normalization Initializing...")
+    print("SeshaAOS Global Path Normalization Initializing...")
 
     # 1. Map all filenames to their relative paths from BASE_DIR
     file_map = {}
@@ -59,3 +59,4 @@ def normalize_paths():
 
 if __name__ == "__main__":
     normalize_paths()
+

@@ -1,12 +1,12 @@
 """
-NexusAOS - DNA Manager
+SeshaAOS - DNA Manager
 Version: 1.0.0
 Description: Orchestrates the link between permanent archives (DNA) and active configuration (Genome).
 """
 
 import json
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any
 
@@ -85,3 +85,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     dm = DNAManager(base)
     print("Active DNA:", dm.get_genome())
+

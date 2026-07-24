@@ -12,7 +12,7 @@ Objective: Achieve sub-milliwatt reasoning for infinite operational longevity on
 - **Weight Quantization (1-bit):** Ternary or Binary weights (0, 1, -1) to replace floating-point math with simple logic gates.
 
 ## 3. MSI Sword 16 HX Integration
-- **Battery-First Inference:** Forcing Nexus to use Phi-4-Mini in "Spiking" mode when AC power is disconnected.
+- **Battery-First Inference:** Forcing Sesha to use Phi-4-Mini in "Spiking" mode when AC power is disconnected.
 
 ---
 *Status: OPTIMIZED | Minimal watts, maximal thought.*

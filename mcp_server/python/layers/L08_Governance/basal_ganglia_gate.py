@@ -20,9 +20,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from layers.L09_Observability.salience import SalienceEngine
-from layers.L02_Agent.physiology_engine import PhysiologyEngine
-
 TOOL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 

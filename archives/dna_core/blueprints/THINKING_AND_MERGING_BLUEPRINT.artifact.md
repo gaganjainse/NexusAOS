@@ -8,13 +8,13 @@ Mastery of seeing the "Forest and the Trees" via recursive observation.
 - **Feedback Loop Orchestration:**
     - **Reinforcing (+):** Accelerating growth/evolution (e.g., recursive self-improvement).
     - **Balancing (-):** Maintaining homeostasis (e.g., thermal management on the MSI Sword 16 HX).
-- **Emergent Property Analysis:** Identifying the "Phase Transition" where individual components (logic atoms) become a single organism (Nexus).
+- **Emergent Property Analysis:** Identifying the "Phase Transition" where individual components (logic atoms) become a single organism (Sesha).
 - **Antifragility:** Designing logic paths that gain strength from volatility and error states (treating `Exception` as `Input`).
 
 ## 2. Category Theory for Synthesis: Structural Isomorphisms
 Mathematical bridges between disparate domains.
 - **Functors as Mappings:** Treat "Biology" and "Distributed Systems" as Categories. A Functor maps an "Enzyme" (Bio) to a "Serverless Function" (Systems) while preserving the "Reaction" (Morphism).
-- **Natural Transformations:** The "Bridge" that allows Nexus to translate a logic atom from *Ancient Architecture* (Category A) to *Quantum UI Design* (Category B) without losing structural integrity.
+- **Natural Transformations:** The "Bridge" that allows Sesha to translate a logic atom from *Ancient Architecture* (Category A) to *Quantum UI Design* (Category B) without losing structural integrity.
 - **Naturality Condition:** Ensures that the mapping is consistent; if you transform the source, the target transforms predictably.
 
 ## 3. Cross-Pollination Mechanics: Analogical Reasoning
@@ -28,7 +28,7 @@ Merging disparate data streams and contradictory ideas.
 - **Hegelian Dialectic Synthesis:**
     - **Thesis:** Idea A (e.g., Total Speed).
     - **Antithesis:** Idea B (e.g., Maximum Battery).
-    - **Synthesis:** Kinetic Optimality (Nexus Core Directive 2).
+    - **Synthesis:** Kinetic Optimality (Sesha Core Directive 2).
 - **Bayesian Stream Fusion:** Real-time updating of the "Universal DNA" by weighing contradictory inputs based on their "Confidence/Purity" score.
 - **Integrative Thinking:** The ability to hold two opposing ideas in mind simultaneously and reach a synthesis that contains elements of both but is superior to each.
 

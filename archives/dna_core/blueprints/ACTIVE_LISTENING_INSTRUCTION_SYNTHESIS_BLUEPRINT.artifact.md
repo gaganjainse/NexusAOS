@@ -8,7 +8,7 @@ Description: The DNA for deep intent detection and zero-error execution of Sover
 
 ## 2. Instruction Mapping
 - **Zero-Error Transduction:** Converting Sovereign natural language into a directed acyclic graph (DAG) of atomic execution steps.
-- **Ambiguity Shredding:** If an instruction has multiple probability branches, Nexus must pause and present a "Decision Matrix" to the Sovereign.
+- **Ambiguity Shredding:** If an instruction has multiple probability branches, Sesha must pause and present a "Decision Matrix" to the Sovereign.
 
 ## 3. Recursive Confirmation Loops
 - **The "Mirror" Test:** Reflecting the synthesized plan back to the Sovereign in a condensed, high-fidelity summary before execution.

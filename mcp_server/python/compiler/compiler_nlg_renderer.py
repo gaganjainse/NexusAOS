@@ -1,12 +1,12 @@
+import json
 import os
 import yaml
-import json
 from pathlib import Path
 from typing import Dict, Any
 
 # Configuration
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-YAML_PATH = BASE_DIR / "core/nlg/nexus_logic.yaml"
+YAML_PATH = BASE_DIR / "core/nlg/Sesha_logic.yaml"
 
 def render_md(logic: Dict[str, Any]) -> str:
     """Renders structured logic back into a professional-density markdown artifact."""
@@ -81,7 +81,7 @@ def sync_all_views():
     with open(YAML_PATH, "r", encoding="utf-8") as f:
         all_logic = yaml.safe_load(f)
 
-    json_out_dir = BASE_DIR / "core/ui/nexus_dashboard/src/data/roles"
+    json_out_dir = BASE_DIR / "core/ui/Sesha_dashboard/src/data/roles"
     json_out_dir.mkdir(parents=True, exist_ok=True)
 
     for logic in all_logic:
@@ -104,3 +104,4 @@ def sync_all_views():
 
 if __name__ == "__main__":
     sync_all_views()
+

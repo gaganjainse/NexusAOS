@@ -1,5 +1,5 @@
 """
-NexusAOS - Dream Engine (REM Sleep)
+SeshaAOS - Dream Engine (REM Sleep)
 Version: 1.0.0
 Description: Counterfactual simulation and memory consolidation during sleep.
 """
@@ -37,3 +37,4 @@ class DreamEngine:
         with open(dream_file, "w") as f:
             json.dump(dream, f, indent=2)
         return dream
+

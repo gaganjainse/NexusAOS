@@ -1,6 +1,6 @@
 {
-    "NexusAOS Constitution": {
-        "id": "NexusAOS Constitution",
+    "SeshaAOS Constitution": {
+        "id": "SeshaAOS Constitution",
         "file": "00_foundation.nxp",
         "branch": "Core",
         "superior": "None",
@@ -59,8 +59,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Logic Engine": {
-        "id": "Nexus Logic Engine",
+    "Sesha Logic Engine": {
+        "id": "Sesha Logic Engine",
         "file": "agentic.nxp",
         "branch": "Agentic & Automation Branch",
         "superior": "Chief Agentic Officer (CAO)",
@@ -139,7 +139,7 @@
         "hooks": [],
         "downstream": [
             "Head Model Governance",
-            "Nexus Logic Engine",
+            "Sesha Logic Engine",
             "Specialization Agent",
             "Agentic Knowledge Lead",
             "VP of Agentic Workflows",
@@ -639,8 +639,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Os Handover Guide": {
-        "id": "Nexus Os Handover Guide",
+    "Sesha Os Handover Guide": {
+        "id": "Sesha Os Handover Guide",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -649,8 +649,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Philosophy": {
-        "id": "Nexus Philosophy",
+    "Sesha Philosophy": {
+        "id": "Sesha Philosophy",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -669,8 +669,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Operational Ledger": {
-        "id": "Nexus Operational Ledger",
+    "Sesha Operational Ledger": {
+        "id": "Sesha Operational Ledger",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -679,8 +679,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus System Diagnostics": {
-        "id": "Nexus System Diagnostics",
+    "Sesha System Diagnostics": {
+        "id": "Sesha System Diagnostics",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -709,8 +709,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Agent Recovery And Correction Protocol": {
-        "id": "Nexus Agent Recovery And Correction Protocol",
+    "Sesha Agent Recovery And Correction Protocol": {
+        "id": "Sesha Agent Recovery And Correction Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -719,8 +719,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Ai Disclosure And Transparency Protocol": {
-        "id": "Nexus Ai Disclosure And Transparency Protocol",
+    "Sesha Ai Disclosure And Transparency Protocol": {
+        "id": "Sesha Ai Disclosure And Transparency Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -729,8 +729,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Auto Exec": {
-        "id": "Nexus Auto Exec",
+    "Sesha Auto Exec": {
+        "id": "Sesha Auto Exec",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -739,8 +739,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Boot And Deployment Protocol": {
-        "id": "Nexus Boot And Deployment Protocol",
+    "Sesha Boot And Deployment Protocol": {
+        "id": "Sesha Boot And Deployment Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -749,8 +749,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Crisis And Anomaly Protocol": {
-        "id": "Nexus Crisis And Anomaly Protocol",
+    "Sesha Crisis And Anomaly Protocol": {
+        "id": "Sesha Crisis And Anomaly Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -759,8 +759,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Global Localization Protocol": {
-        "id": "Nexus Global Localization Protocol",
+    "Sesha Global Localization Protocol": {
+        "id": "Sesha Global Localization Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -769,8 +769,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Packaging And Mcp Protocol": {
-        "id": "Nexus Packaging And Mcp Protocol",
+    "Sesha Packaging And Mcp Protocol": {
+        "id": "Sesha Packaging And Mcp Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -779,8 +779,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Shutdown Protocol": {
-        "id": "Nexus Shutdown Protocol",
+    "Sesha Shutdown Protocol": {
+        "id": "Sesha Shutdown Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -789,8 +789,8 @@
         "hooks": [],
         "downstream": []
     },
-    "Nexus Tooling And Asset Protocol": {
-        "id": "Nexus Tooling And Asset Protocol",
+    "Sesha Tooling And Asset Protocol": {
+        "id": "Sesha Tooling And Asset Protocol",
         "file": "core.nxp",
         "branch": "Core",
         "superior": "None",
@@ -1307,24 +1307,24 @@
         "id": "Learning Synthesis Agent",
         "file": "hq.nxp",
         "branch": "Headquarters (HQ)",
-        "superior": "Sovereign Proxy (Nexus Omni-Lead)",
+        "superior": "Sovereign Proxy (Sesha Omni-Lead)",
         "weight": 3,
         "hash": "b2692e42",
         "hooks": [],
         "downstream": []
     },
-    "Nexus Input Parser Agent": {
-        "id": "Nexus Input Parser Agent",
+    "Sesha Input Parser Agent": {
+        "id": "Sesha Input Parser Agent",
         "file": "hq.nxp",
         "branch": "Headquarters (HQ)",
-        "superior": "Nexus Orchestrator Agent",
+        "superior": "Sesha Orchestrator Agent",
         "weight": 3,
         "hash": "fae0c6a2",
         "hooks": [],
         "downstream": []
     },
-    "Sovereign Proxy (Nexus Omni-Lead)": {
-        "id": "Sovereign Proxy (Nexus Omni-Lead)",
+    "Sovereign Proxy (Sesha Omni-Lead)": {
+        "id": "Sovereign Proxy (Sesha Omni-Lead)",
         "file": "hq.nxp",
         "branch": "Headquarters (HQ)",
         "superior": "THE SOVEREIGN",
@@ -1333,20 +1333,20 @@
         "hooks": [],
         "downstream": [
             "Learning Synthesis Agent",
-            "Nexus Orchestrator Agent",
+            "Sesha Orchestrator Agent",
             "System Health Supervisor"
         ]
     },
-    "Nexus Orchestrator Agent": {
-        "id": "Nexus Orchestrator Agent",
+    "Sesha Orchestrator Agent": {
+        "id": "Sesha Orchestrator Agent",
         "file": "hq.nxp",
         "branch": "Headquarters (HQ)",
-        "superior": "Sovereign Proxy (Nexus Omni-Lead)",
+        "superior": "Sovereign Proxy (Sesha Omni-Lead)",
         "weight": 3,
         "hash": "cd4bebc8",
         "hooks": [],
         "downstream": [
-            "Nexus Input Parser Agent",
+            "Sesha Input Parser Agent",
             "Oracle Interface Agent (OIA)"
         ]
     },
@@ -1354,7 +1354,7 @@
         "id": "Oracle Interface Agent (OIA)",
         "file": "hq.nxp",
         "branch": "Headquarters (HQ)",
-        "superior": "Nexus Orchestrator Agent",
+        "superior": "Sesha Orchestrator Agent",
         "weight": 3,
         "hash": "ffe79c5d",
         "hooks": [],
@@ -1364,7 +1364,7 @@
         "id": "System Health Supervisor",
         "file": "hq.nxp",
         "branch": "Headquarters (HQ)",
-        "superior": "Sovereign Proxy (Nexus Omni-Lead)",
+        "superior": "Sovereign Proxy (Sesha Omni-Lead)",
         "weight": 3,
         "hash": "dc0e74c0",
         "hooks": [],

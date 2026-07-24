@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { InterfaceMode, VitalsData, PetStatus } from "../types/nexus";
+import { InterfaceMode, VitalsData, PetStatus } from "../types/Sesha";
 import {
   Terminal,
   Cpu,
@@ -20,7 +20,7 @@ import {
   Palette,
 } from "lucide-react";
 import { motion } from "motion/react";
-import { ThemeId } from "../types/nexus";
+import { ThemeId } from "../types/Sesha";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 interface NavbarProps {
@@ -152,7 +152,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="relative z-10 flex items-center gap-1.5 px-3.5 py-1 text-xs font-bold transition-colors cursor-pointer text-stone-200"
           >
             <Cpu className="w-3.5 h-3.5 text-amber-400" />
-            <span>Nexus Core (Garbhagriha)</span>
+            <span>Sesha Core (Garbhagriha)</span>
             {mode === "core" && (
               <motion.div
                 layoutId="activeModePill"
@@ -240,5 +240,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     </header>
   );
 };
+
 
 

@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure the **Nexus Corporate OS** and its 14 branches operate with environmental responsibility, social equity, and robust corporate governance (ESG).
+To ensure the **Sesha Corporate OS** and its 14 branches operate with environmental responsibility, social equity, and robust corporate governance (ESG).
 
 
 ## Responsibilities

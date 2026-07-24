@@ -7,14 +7,12 @@ performance, sleep, hive sync, and administrative operations.
 from __future__ import annotations
 
 import json
+from mcp.server.fastmcp import FastMCP
+from mcp_server.python.hive_sync import HiveSync
 from typing import Any
 
-from mcp.server.fastmcp import FastMCP
-
-from mcp_server.python.hive_sync import HiveSync
-
 hive_sync = HiveSync()
-mcp = FastMCP("NexusAOS system tools")
+mcp = FastMCP("SeshaAOS system tools")
 
 
 def _response(status: str, payload: Any = None, message: str = "", tool_id: str = "unknown", duration: float = 0.0) -> str:
@@ -69,11 +67,11 @@ def _services(base_dir):
     from layers.L02_Agent.digestive_engine import DigestiveEngine
     from layers.L02_Agent.respiratory_engine import RespiratoryEngine
     from layers.L01_Planning.orchestrator_engine import OrchestratorEngine
-    from layers.L04_Composition.nexus_assimilator import NexusAssimilator
+    from layers.L04_Composition.Sesha_assimilator import SeshaAssimilator
     from layers.L06_Tool.web_receptor import WebReceptor
     from layers.L12_Infrastructure.neural_canvas import NeuralCanvas
     from layers.L10_Intelligence.thought_agent import ThoughtAgent
-    from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+    from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
     from layers.L11_Data.soma_transcended import TranscendedSubstrate
     from compiler.neural_compiler import NeuralCompiler
 
@@ -107,7 +105,7 @@ def _services(base_dir):
         "digestive": DigestiveEngine(base_dir),
         "respiratory": RespiratoryEngine(base_dir),
         "orchestrator": OrchestratorEngine(base_dir),
-        "assimilator": NexusAssimilator(base_dir),
+        "assimilator": SeshaAssimilator(base_dir),
         "web_receptor": WebReceptor(base_dir),
         "neural_canvas": NeuralCanvas(base_dir),
         "thought_agent": ThoughtAgent(base_dir),
@@ -331,18 +329,18 @@ def diagnose_os() -> str:
 
 
 @mcp.tool()
-def trigger_nexus_benchmark(iterations: int = 5) -> str:
+def trigger_Sesha_benchmark(iterations: int = 5) -> str:
     """Measures system performance and provides biological rewards (dopamine) for speed improvements."""
-    allowed, msg = _gate("trigger_nexus_benchmark")
+    allowed, msg = _gate("trigger_Sesha_benchmark")
     if not allowed:
-        return _response("blocked", message=msg, tool_id="trigger_nexus_benchmark")
+        return _response("blocked", message=msg, tool_id="trigger_Sesha_benchmark")
     start = __import__("time").perf_counter()
     from pathlib import Path
     base_dir = Path(__file__).resolve().parents[3]
     services = _services(base_dir)
     res = services["reward"].run_benchmark(iterations)
     duration = __import__("time").perf_counter() - start
-    return _response("success", payload=res, message="Benchmark complete. Reward processed.", tool_id="trigger_nexus_benchmark", duration=duration)
+    return _response("success", payload=res, message="Benchmark complete. Reward processed.", tool_id="trigger_Sesha_benchmark", duration=duration)
 
 
 @mcp.tool()
@@ -424,7 +422,7 @@ def trigger_transcended_pulse(topic: str, payload_json: str) -> str:
 
 @mcp.tool()
 def trigger_hive_sync(mode: str = "exhale") -> str:
-    """Synchronizes Nexus AOS state across all instances and models (Hive Network)."""
+    """Synchronizes Sesha AOS state across all instances and models (Hive Network)."""
     allowed, msg = _gate("trigger_hive_sync")
     if not allowed:
         return _response("blocked", message=msg, tool_id="trigger_hive_sync")

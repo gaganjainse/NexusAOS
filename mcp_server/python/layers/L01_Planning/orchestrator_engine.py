@@ -1,24 +1,24 @@
-"""NexusAOS - Orchestrator Engine (The CPU)
+"""SeshaAOS - Orchestrator Engine (The CPU)
 Version: 1.0.0
 Description: Autonomous closed-loop: senses -> decision -> lattice -> motor -> memory.
 """
-import json, subprocess, sys, time, uuid, os
+import json
+import os
+import subprocess
+import sys
+import time
+import uuid
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple
+
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent # Project root
-from layers.L02_Agent.physiology_engine import PhysiologyEngine
-from layers.L08_Governance.physiological_gate import PhysiologicalGate
-from layers.L11_Data.signal_router import SignalRouter
-from layers.L07_Integration.nexus_senses import NexusSenses
-from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+from layers.L07_Integration.Sesha_senses import SeshaSenses
+from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
 from layers.L05_Memory.state_manager import StateManager
-from layers.L02_Agent.motor_engine import MotorEngine
-from layers.L05_Memory.memory_synth import MemorySynth
-from layers.L02_Agent.nexus_liver import NexusLiver
-from layers.L02_Agent.auto_repair import AutoRepairEngine
+from layers.L02_Agent.Sesha_liver import SeshaLiver
 from layers.L11_Data.soma_transcended import TranscendedSubstrate
 
 DEFAULT_ROUTING = {
@@ -39,11 +39,11 @@ class OrchestratorEngine:
         from layers.L02_Agent.physiology_engine import PhysiologyEngine
         from layers.L08_Governance.physiological_gate import PhysiologicalGate
         from layers.L11_Data.signal_router import SignalRouter
-        from layers.L07_Integration.nexus_senses import NexusSenses
-        from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+        from layers.L07_Integration.Sesha_senses import SeshaSenses
+        from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
         from layers.L02_Agent.motor_engine import MotorEngine
         from layers.L05_Memory.memory_synth import MemorySynth
-        from layers.L02_Agent.nexus_liver import NexusLiver
+        from layers.L02_Agent.Sesha_liver import SeshaLiver
         from layers.L02_Agent.auto_repair import AutoRepairEngine
         from layers.L11_Data.synaptic_transmitter import SynapticTransmitter
         from layers.L09_Observability.logic_git import LogicGit
@@ -55,11 +55,11 @@ class OrchestratorEngine:
         self.physiology = PhysiologyEngine(base_dir)
         self.gate = PhysiologicalGate(base_dir)
         self.signals = SignalRouter(base_dir)
-        self.senses = NexusSenses(base_dir)
+        self.senses = SeshaSenses(base_dir)
         self.lattice = LatticeEngine(base_dir)
         self.motor = MotorEngine(base_dir)
         self.memory = MemorySynth(base_dir)
-        self.liver = NexusLiver(base_dir)
+        self.liver = SeshaLiver(base_dir)
         self.repair = AutoRepairEngine(base_dir)
         self.transmitter = SynapticTransmitter(base_dir)
         self.logic_git = LogicGit(base_dir)
@@ -109,9 +109,9 @@ class OrchestratorEngine:
             return f"REFLEX FAST-PATH: {reflex_result}"
 
         # 0. Hive Omega: Acquire Planning Lock (L13 Collision Prevention)
-        node_id = f"nexus_{os.getpid()}"
+        node_id = f"Sesha_{os.getpid()}"
         if not self.state_mgr.acquire_hive_lock("planning_intent", node_id):
-            return "COLLISION: Another Nexus instance is currently planning. Proposing Synaptic Merge."
+            return "COLLISION: Another Sesha instance is currently planning. Proposing Synaptic Merge."
 
         # 1. Transmit high-speed spike
         self.transmitter.transmit_directive(text, sigil="!" if priority >= 8 else "◊", priority=priority)
@@ -143,7 +143,7 @@ class OrchestratorEngine:
         to_role = route["to"]
         action = route["action"]
         event = payload.get("event", signal_type)
-        synapse = self.lattice.fire_synapse("Nexus Orchestrator", to_role, f"AUTO:{action}:{event}")
+        synapse = self.lattice.fire_synapse("Sesha Orchestrator", to_role, f"AUTO:{action}:{event}")
         outcome = self._execute_action(action, payload)
         success = "SKIPPED" not in outcome and "ERROR" not in outcome.upper()
         self._bump_routing_weight(signal_type, success)
@@ -224,7 +224,7 @@ class OrchestratorEngine:
                     self.lattice.fire_synapse(winner, "Motor", atom)
                     outcome = "\n".join(self.motor.process_lattice_queue()) or f"Motor directive won by {winner}."
                 else:
-                    self.lattice.fire_synapse("Nexus Orchestrator", winner, f"ATOM:{atom[:120]}")
+                    self.lattice.fire_synapse("Sesha Orchestrator", winner, f"ATOM:{atom[:120]}")
                     outcome = self._execute_action(action, {"directive": atom, "agent": winner})
                 
                 if isinstance(outcome, dict):
@@ -384,3 +384,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     orch = OrchestratorEngine(base)
     print(json.dumps(orch.tick(), indent=2))
+

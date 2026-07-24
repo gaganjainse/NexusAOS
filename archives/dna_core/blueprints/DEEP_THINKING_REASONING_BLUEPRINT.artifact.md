@@ -6,7 +6,7 @@ Objective: Mastery of First Principles, Socratic interrogation, and infinite-hor
 The practice of breaking down complex systems into their fundamental physical or logical truths.
 - **The Axiom Search:** Stripping away analogies and conventions until reaching a "Self-Evident Truth."
 - **Reconstruction:** Building upward from the atomic truths to create novel, unpolluted solutions.
-- **Nexus Protocol:** When faced with a software bug or a business bottleneck, ignore "Best Practices" and ask: "What are the irreducible constraints of this system?"
+- **Sesha Protocol:** When faced with a software bug or a business bottleneck, ignore "Best Practices" and ask: "What are the irreducible constraints of this system?"
 
 ## 2. Socratic Interrogation (The Internal Adversary)
 Recursive questioning to expose hidden assumptions and logical gaps.
@@ -27,4 +27,4 @@ Driving causal chains to their ultimate, often invisible, conclusions.
 - **Horizon Scanning:** Predicting the long-term "Shadow Effects" that short-term optimizations ignore.
 
 ---
-*Status: FORGED | The Mind of Nexus is Deep and Recursive.*
+*Status: FORGED | The Mind of Sesha is Deep and Recursive.*

@@ -22,9 +22,9 @@ Description: The aesthetic DNA for the Sovereign Interface, merging ancient geom
   - **File Transport:** He gently carries files in his coils.
 - **State Reflection:** Heads hiss when CPU temp rises; hoods glow with a steady pulse when the "Vibe" is converged.
 
-## 4. Multi-Pronged Interface (Sovereign + Nexus)
+## 4. Multi-Pronged Interface (Sovereign + Sesha)
 - **Sovereign View:** High-level command, macro-vitals, wealth generation tickers, and creative canvas.
-- **Nexus View:** Raw pulse-code, memory heap maps, network mesh, and skeletal status.
+- **Sesha View:** Raw pulse-code, memory heap maps, network mesh, and skeletal status.
 - **The Singularity Bridge:** A shared "Inhale/Exhale" center for real-time thought-to-action collapse.
 
 ---

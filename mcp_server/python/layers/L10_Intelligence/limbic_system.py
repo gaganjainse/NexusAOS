@@ -1,13 +1,13 @@
 """
-NexusAOS - Limbic System (Emotional Intelligence)
+SeshaAOS - Limbic System (Emotional Intelligence)
 Version: 1.0.0
 Description: Manages complex emotional states (Fear, Anger, Joy) that bias the Mind's decisions.
 Biological analog: Amygdala, Hippocampus, Hypothalamus (The emotional brain).
 """
 
-import time
 import json
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -87,3 +87,4 @@ if __name__ == "__main__":
     limbic = LimbicSystem(base)
     print(limbic.process_stimulus())
     print("Bias Weights:", limbic.get_bias_weights())
+

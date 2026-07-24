@@ -1,13 +1,13 @@
 """
-NexusAOS - Logic Git
+SeshaAOS - Logic Git
 Version: 1.0.0
 Description: Fractal decomposition and versioning of sub-atomic reasoning nodes.
 """
 
 import hashlib
-import time
 import json
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
@@ -53,3 +53,4 @@ if __name__ == "__main__":
     lg = LogicGit(base)
     h = lg.commit_node("test_task", "Sub-atomic logic unit", "SUCCESS")
     print(f"Logic Committed: {h}")
+

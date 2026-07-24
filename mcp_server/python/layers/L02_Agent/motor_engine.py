@@ -1,15 +1,15 @@
 """
-NexusAOS - Motor Engine (The Hand)
+SeshaAOS - Motor Engine (The Hand)
 Version: 1.0.0
 Description: Autonomous execution of lattice directives — write, build, deploy.
 """
 
 import json
+import os
 import re
 import subprocess
 import sys
 import time
-import os
 from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
@@ -19,13 +19,13 @@ BASE_DIR = _python_root.parent.parent
 
 from typing import Dict, Any, List, Optional, Tuple
 
-from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
 from layers.L02_Agent.physiology_engine import PhysiologyEngine
 from layers.L08_Governance.physiological_gate import PhysiologicalGate
 from layers.L05_Memory.state_manager import StateManager
 
 PROTECTED_PREFIXES = [
-    "archives/dna_core/foundation/nexus_constitution.md",
+    "archives/dna_core/foundation/Sesha_constitution.md",
 ]
 
 BLOCKED_COMMAND_PATTERNS = [
@@ -311,3 +311,4 @@ if __name__ == "__main__":
     motor = MotorEngine(base)
     import json as _json
     print(_json.dumps(motor.get_status(), indent=2))
+

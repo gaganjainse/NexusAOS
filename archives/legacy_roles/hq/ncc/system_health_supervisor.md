@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To oversee the autonomous **"Self-Repair"** and **"Efficiency"** agents, ensuring the systems infrastructure of the **Nexus Corporate OS** is always at peak performance.
+To oversee the autonomous **"Self-Repair"** and **"Efficiency"** agents, ensuring the systems infrastructure of the **Sesha Corporate OS** is always at peak performance.
 
 
 ## Responsibilities

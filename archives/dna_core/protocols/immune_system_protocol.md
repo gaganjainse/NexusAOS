@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Ethics & Trust Officer (CETO)
 
 ## Purpose
-To move the **NexusAOS** from reactive self-healing to **Proactive Immunity**. This protocol defines the "Body Temperature" (Threat Level) of the organism and the system-wide response to logic drift and operational pathogens.
+To move the **SeshaAOS** from reactive self-healing to **Proactive Immunity**. This protocol defines the "Body Temperature" (Threat Level) of the organism and the system-wide response to logic drift and operational pathogens.
 
 ## Threat Levels (Body Temperature)
 | Level | Temperature | Trigger | Response |

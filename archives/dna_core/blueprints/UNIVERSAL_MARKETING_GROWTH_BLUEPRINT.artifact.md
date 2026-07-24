@@ -3,7 +3,7 @@ Version: 14.0.0
 Description: Mapping the attention economy via viral coefficient optimization and high-fidelity lead generation.
 
 ## 1. Semantic Branding & AEO
-- **AI Engine Optimization (AEO):** Designing brand assets and content specifically for ingestion by frontier models (GPT-5, Claude 5, Nexus).
+- **AI Engine Optimization (AEO):** Designing brand assets and content specifically for ingestion by frontier models (GPT-5, Claude 5, Sesha).
 - **Semantic Consistency:** Ensuring the "Brand Soul" is consistent across millions of AI-generated touchpoints.
 - **Brand-as-Logic:** Moving from visual logos to "Algorithmic Signatures"—a specific way the brand *reasons* and *interacts*.
 

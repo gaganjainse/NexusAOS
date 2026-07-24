@@ -13,7 +13,7 @@ To ensure that all corporate operations, **Firmware behaviors**, and business st
 
 
 ## Responsibilities
-- **Global Ethics Framework:** Define and maintain the "Nexus Ethical Code."
+- **Global Ethics Framework:** Define and maintain the "Sesha Ethical Code."
 - **Trust Auditing:** Partner with the CAE and CAO to audit corporate "Transparency" and "Fairness."
 - **Crisis Ethics:** Lead the ethical evaluation of major corporate crises.
 - **Data Privacy Oversight:** Ensure data handling across all branches exceeds [REGULATORY_STANDARDS].

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PetState, PetMood, PetStatus } from "../../types/nexus";
+import { PetState, PetMood, PetStatus } from "../../types/Sesha";
 import {
   Sparkles,
   Zap,
@@ -391,3 +391,4 @@ export const PetCompanion: React.FC<PetCompanionProps> = ({
     </div>
   );
 };
+

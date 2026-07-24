@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To coordinate the end-to-end release process of **Nexus Corporate OS**. The Release Manager ensures that **Firmware asset** updates are delivered predictably, safely, and with all necessary cross-departmental alignment.
+To coordinate the end-to-end release process of **Sesha Corporate OS**. The Release Manager ensures that **Firmware asset** updates are delivered predictably, safely, and with all necessary cross-departmental alignment.
 
 
 ## Responsibilities

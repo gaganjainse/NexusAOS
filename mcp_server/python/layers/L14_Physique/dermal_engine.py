@@ -1,13 +1,14 @@
 """
-NexusAOS - Dermal Engine (L14.10)
+SeshaAOS - Dermal Engine (L14.10)
 Version: 1.0.0
 Description: Physical Hardening and Privacy Shield. Replaces legacy privacy_shield.py.
 """
 
-import subprocess
 import json
+import subprocess
 from pathlib import Path
 from typing import Dict, Any, List
+
 
 class DermalEngine:
     def __init__(self, base_dir: Path):
@@ -26,3 +27,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[4]
     de = DermalEngine(base)
     print(json.dumps(de.harden_host_skin(), indent=2))
+

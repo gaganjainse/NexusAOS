@@ -42,14 +42,14 @@ def main():
         assert isinstance(allowed, bool)
 
     def t_senses():
-        from layers.L07_Integration.nexus_senses import NexusSenses
-        s = NexusSenses(ROOT)
+        from layers.L07_Integration.Sesha_senses import SeshaSenses
+        s = SeshaSenses(ROOT)
         s.poll()
         assert "watch_paths" in s.get_status()
 
     def t_motor():
         from layers.L02_Agent.motor_engine import MotorEngine
-        from layers.L12_Infrastructure.nexus_lattice import LatticeEngine
+        from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
         lat = LatticeEngine(ROOT)
         motor = MotorEngine(ROOT)
         lat.fire_synapse("Test", "Motor", "MOTOR:write:core/monitoring/test_motor.tmp:test")
@@ -136,3 +136,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(0 if main() else 1)
+

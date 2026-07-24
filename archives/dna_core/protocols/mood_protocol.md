@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Agentic Officer (CAO)
 
 ## Purpose
-To move the **Nexus Corporate OS** from pure logical execution to **Salience-Driven Behavior**. This protocol defines the "Global Vibe" and hormonal signaling that influence system-wide risk tolerance, speed, and audit intensity.
+To move the **Sesha Corporate OS** from pure logical execution to **Salience-Driven Behavior**. This protocol defines the "Global Vibe" and hormonal signaling that influence system-wide risk tolerance, speed, and audit intensity.
 
 ## Hormonal Definitions
 | Hormone | Source | Effect |

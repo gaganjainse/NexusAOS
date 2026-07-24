@@ -3,7 +3,7 @@ Version: 1.0.0
 Description: High-fidelity mapping of Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) architectures for low-latency, sovereign audio agency.
 
 ## 1. Automatic Speech Recognition (ASR): The Ears
-To achieve zero-latency reflex, Nexus utilizes a multi-layered ASR pipeline:
+To achieve zero-latency reflex, Sesha utilizes a multi-layered ASR pipeline:
 
 - **Baseline Architecture (Whisper-v3/Turbo):** Large-scale Transformer-based encoder-decoder. Utilizing **Whisper-large-v3-turbo** for 8x speedup over standard v3 while maintaining 95%+ accuracy.
 - **Speculative Decoding for ASR:** A "Whisper-tiny" model predicts initial tokens, which are verified by the "Whisper-large" model in parallel, reducing first-word latency to <200ms.
@@ -31,10 +31,10 @@ Optimizing the journey from Microphone to Speaker:
     - **PipeWire (Linux) / Core Audio (Mac) / ASIO (Windows):** Low-level driver access to bypass OS-level mixing latency.
     - **Zero-Copy Buffers:** Passing audio data directly from the network card to the GPU without CPU-memory interrupts.
 
-## 4. Nexus Implementation Strategy
+## 4. Sesha Implementation Strategy
 1. **Frontend:** `SoundscapeEngine.tsx` handles Generative Temple Mantra and environmental audio.
 2. **Backend:** `pet_voice.py` utilizes Edge-TTS (SSML) as a fallback, with the primary target being a local Fish-Speech or GPT-SoVITS instance.
 3. **Reflex-Loop:** The ASR-to-Thought-to-TTS pipeline must close in <1.5 seconds for human-like conversational fluidity.
 
 ---
-*Status: FORGED | Nexus can now hear the Sovereign and speak with the voice of the Divine.*
+*Status: FORGED | Sesha can now hear the Sovereign and speak with the voice of the Divine.*

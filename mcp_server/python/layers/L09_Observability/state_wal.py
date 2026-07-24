@@ -1,11 +1,11 @@
 """
-NexusAOS - State WAL (Write-Ahead Log)
+SeshaAOS - State WAL (Write-Ahead Log)
 Version: 1.0.0
 Description: Standalone WAL wrapper for state persistence.
 """
 import json
-import time
 import sys
+import time
 from pathlib import Path
 from typing import List, Dict
 
@@ -52,3 +52,4 @@ class StateWAL:
     def truncate(self) -> None:
         """Clear the WAL (after snapshot)."""
         self.wal_file.write_text("")
+

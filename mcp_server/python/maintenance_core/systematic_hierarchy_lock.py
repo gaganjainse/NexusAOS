@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os")
 ARCHIVE_DIR = BASE_DIR / "archives"
 
 # 1. Systematic Name Map
@@ -18,12 +18,12 @@ RENAME_MAP = {
 # 2. Definitive Hierarchy (Filename -> Superior Filename)
 HIERARCHY = {
     # Ultimate Command
-    "nexus_omni_lead.md": "SOVEREIGN",
-    "nexus_orchestrator_agent.md": "nexus_omni_lead.md",
-    "nexus_input_parser_agent.md": "nexus_orchestrator_agent.md",
-    "oracle_interface_agent.md": "nexus_orchestrator_agent.md",
-    "learning_synthesis_agent.md": "nexus_omni_lead.md",
-    "system_health_supervisor.md": "nexus_omni_lead.md",
+    "Sesha_omni_lead.md": "SOVEREIGN",
+    "Sesha_orchestrator_agent.md": "Sesha_omni_lead.md",
+    "Sesha_input_parser_agent.md": "Sesha_orchestrator_agent.md",
+    "oracle_interface_agent.md": "Sesha_orchestrator_agent.md",
+    "learning_synthesis_agent.md": "Sesha_omni_lead.md",
+    "system_health_supervisor.md": "Sesha_omni_lead.md",
 
     # Executive
     "ceo.md": "board_of_directors.md",
@@ -49,7 +49,7 @@ HIERARCHY = {
     "vp_agentic_workflows.md": "cao.md",
     "agentic_knowledge_lead.md": "cao.md",
     "head_model_governance.md": "cao.md",
-    "nexus_logic_engine.md": "cao.md",
+    "Sesha_logic_engine.md": "cao.md",
     "specialization_agent.md": "cao.md",
     "model_auditor.md": "head_model_governance.md",
     "self_repair_agent.md": "cko.md",
@@ -71,7 +71,7 @@ def clean_title(filename):
     return title
 
 def lock():
-    print("NexusAOS Systematic Hierarchy Lock: SECURING SKELETON...")
+    print("SeshaAOS Systematic Hierarchy Lock: SECURING SKELETON...")
 
     # Pre-build titles map for all files in archives
     file_to_title = {}
@@ -118,3 +118,4 @@ def lock():
 
 if __name__ == "__main__":
     lock()
+

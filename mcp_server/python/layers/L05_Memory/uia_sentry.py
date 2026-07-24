@@ -1,12 +1,12 @@
 """
-NexusAOS - UIA Sentry (L05)
+SeshaAOS - UIA Sentry (L05)
 Version: 13.5.0
 Description: Microsoft UI Automation interface for semantic desktop mapping.
 """
 
 import json
-import time
 import sys
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
@@ -57,3 +57,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     sentry = UIASentry(base)
     print("UI Map:", json.dumps(sentry.scan_ui_elements()[:3], indent=2))
+

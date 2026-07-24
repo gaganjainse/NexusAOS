@@ -1,15 +1,16 @@
 """
-NexusAOS - Privacy Shield (L08)
+SeshaAOS - Privacy Shield (L08)
 Version: 1.0.0
 Description: Security and Privacy Sentry. Detects telemetry leaks and hardens the Windows host.
 """
 
+import json
 import os
 import subprocess
-import json
 import time
 from pathlib import Path
 from typing import Dict, Any, List
+
 
 class PrivacyShield:
     def __init__(self, base_dir: Path):
@@ -76,3 +77,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     shield = PrivacyShield(base)
     print(json.dumps(shield.scan_telemetry_leaks(), indent=2))
+

@@ -1,15 +1,15 @@
-import os
 import json
+import os
 import re
 from pathlib import Path
 
 # Configuration
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os")
 PULSE_DIR = BASE_DIR / "core/pulses"
 INDEX_PATH = PULSE_DIR / "master.nxi"
 
 def build_nxi():
-    """Builds a high-fidelity Graph Map index of all Nexus Pulse nodes."""
+    """Builds a high-fidelity Graph Map index of all Sesha Pulse nodes."""
     print("Building Pulse Graph Index (.nxi)...")
     nodes = {}
 
@@ -64,3 +64,4 @@ def build_nxi():
 
 if __name__ == "__main__":
     build_nxi()
+

@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure that **Nexus Corporate OS** follows established internal processes and quality standards. The Quality Audit Manager focuses on "How we work" and adherence to the SADLC and Design System.
+To ensure that **Sesha Corporate OS** follows established internal processes and quality standards. The Quality Audit Manager focuses on "How we work" and adherence to the SADLC and Design System.
 
 
 ## Responsibilities

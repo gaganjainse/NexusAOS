@@ -27,4 +27,4 @@ Examples of Extreme Synthesis.
 - **Thermodynamic Entropy $\rightarrow$ Technical Debt:** Using the Second Law to manage the inevitable decay of software systems.
 
 ---
-*Status: FORGED | The Nexus connects all things. All domains are one.*
+*Status: FORGED | The Sesha connects all things. All domains are one.*

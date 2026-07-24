@@ -1,17 +1,16 @@
 """
-NexusAOS - Composition Engine (L4)
+SeshaAOS - Composition Engine (L4)
 Version: 13.0.0
 Description: Dynamic agent-to-agent task negotiation and bidding based on energy and skill density.
 """
 
-import time
 import json
 import random
-
+import sys
+import time
+from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -25,8 +24,8 @@ class CompositionEngine:
         
     def _get_agent_pool(self) -> List[str]:
         # In a real swarm, this would query the registry
-        from layers.L12_Infrastructure.nexus_mesh import NexusMesh
-        mesh = NexusMesh(self.base_dir)
+        from layers.L12_Infrastructure.Sesha_mesh import SeshaMesh
+        mesh = SeshaMesh(self.base_dir)
         peers = mesh.discover_peers()
         return [p["node_id"] for p in peers] + ["Orchestrator", "Immune", "Motor", "Research"]
 
@@ -70,3 +69,4 @@ if __name__ == "__main__":
     ce = CompositionEngine(base)
     result = ce.negotiate_task("Analyze system bottlenecks and propose a mutation.")
     print(json.dumps(result, indent=2))
+

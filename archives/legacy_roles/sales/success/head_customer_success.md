@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To ensure long-term customer satisfaction, high product adoption, and high renewal rates for **Nexus Corporate OS**.
+To ensure long-term customer satisfaction, high product adoption, and high renewal rates for **Sesha Corporate OS**.
 
 
 ## Responsibilities

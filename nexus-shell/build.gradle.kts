@@ -8,7 +8,7 @@ kotlin {
     jvm("desktop")
 
     sourceSets {
-        val commonMain by getting {
+        val commonMain = getByName("commonMain") {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
@@ -20,7 +20,7 @@ kotlin {
             }
         }
 
-        val desktopMain by getting {
+        val desktopMain = getByName("desktopMain") {
             dependencies {
                 implementation(compose.desktop.currentOs)
                 implementation("net.java.dev.jna:jna:5.14.0")
@@ -31,12 +31,13 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "com.nexus.shell.MainKt"
+        mainClass = "com.Sesha.shell.MainKt"
 
         nativeDistributions {
             targetFormats(org.jetbrains.compose.desktop.application.dsl.TargetFormat.Exe)
-            packageName = "NexusSovereignShell"
+            packageName = "SeshaSovereignShell"
             packageVersion = "1.0.0"
         }
     }
 }
+

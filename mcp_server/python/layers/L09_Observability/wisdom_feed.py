@@ -1,13 +1,13 @@
 """
-NexusAOS - Wisdom Feed (Proactive Reporting)
+SeshaAOS - Wisdom Feed (Proactive Reporting)
 Version: 1.0.0
 Description: Maintains a persistent Intelligence Briefing for the Sovereign.
 Push channel for high-salience swarm findings and physiological alerts.
 """
 
-import time
 import json
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -28,7 +28,7 @@ class WisdomFeed:
         if not self.feed_path.exists():
             header = (
                 "# 🧠 Sovereign Wisdom Feed\n"
-                "*Real-time Proactive Intelligence from the NexusAOS Swarm*\n\n"
+                "*Real-time Proactive Intelligence from the SeshaAOS Swarm*\n\n"
                 "--- \n\n"
             )
             self.feed_path.write_text(header, encoding="utf-8")
@@ -68,3 +68,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     feed = WisdomFeed(base)
     print(feed.push_briefing("Neural Link Established", "The Wisdom Feed is now online and synchronized with your workspace."))
+

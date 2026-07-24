@@ -7,7 +7,7 @@ Version 1.0 (Golden Master)
 **Superior:** Chief Agentic Officer (CAO)
 
 ## Purpose
-To define the **"Nervous System"** of the NexusAOS, enabling complex inter-agent coordination, context-aware handoffs, and system-wide proprioception.
+To define the **"Nervous System"** of the SeshaAOS, enabling complex inter-agent coordination, context-aware handoffs, and system-wide proprioception.
 
 ## Synaptic Handoffs
 A handoff occurs when one role (the **Firing Node**) transfers authority and context to another role (the **Target Node**).
@@ -32,7 +32,7 @@ Directives follow the hierarchy defined in the **Job Matrix**.
 ## Approval Authority
 | Area | Authority |
 | :--- | :--- |
-| **Synapse Prioritization** | Nexus Orchestrator Agent |
+| **Synapse Prioritization** | Sesha Orchestrator Agent |
 | **Hierarchy Resolution** | Chief Knowledge Officer (CKO) |
 
 ---

@@ -1,12 +1,12 @@
 {
-    "Nexus Constitution": {
+    "Sesha Constitution": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Constitution",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Constitution",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -20,14 +20,14 @@
             0.3176470588235294
         ]
     },
-    "NexusAOS Core Philosophy": {
+    "SeshaAOS Core Philosophy": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "NexusAOS Core Philosophy",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "SeshaAOS Core Philosophy",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -152,7 +152,7 @@
         ],
         "emitters": [],
         "id": "Global Dependency Agent",
-        "purpose": "To act as the \"Link-Checker\" and \"Dependency Validator\" for the NexusAOS. This agent ensures that every role, rule, and department is perfectly connected and that there are no \"Dead Ends\" in the organization.",
+        "purpose": "To act as the \"Link-Checker\" and \"Dependency Validator\" for the SeshaAOS. This agent ensures that every role, rule, and department is perfectly connected and that there are no \"Dead Ends\" in the organization.",
         "deliverables": "****OS System Certification**** > Certification of OS readiness and stability.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -167,19 +167,19 @@
             0.3176470588235294
         ]
     },
-    "Nexus Logic Engine": {
+    "Sesha Logic Engine": {
         "receptors": [
             "**Logical Validation:** Run formal logic checks on all updated \"Operating Rules\" to ensure no overlapping authority or circular dependencies.",
             "**Conflict Prediction:** Analyze the \"Conflict Resolution\" logs and identify the root cause in the OS structure.",
             "**Rule Suggestion:** Automatically propose a \"Refactored Rule\" to the Sovereign Proxy when a systemic conflict is detected.",
             "**Agnostic Verification:** Ensure that all new roles and departments follow the **[CORE_DOMAIN]** agnostic standards.",
-            "**Version Control:** Manage the **\"Golden Master\"** state of the NexusAOS.",
+            "**Version Control:** Manage the **\"Golden Master\"** state of the SeshaAOS.",
             "**Standard Compliance Check:** Validate that every artifact update follows the 'Structured Knowledge Protocol' (Markdown headers, metadata tags, relative links).",
-            "**Syntax Validation:** Act as a linter for the NexusAOS, flagging broken markdown or incorrect path depths.",
+            "**Syntax Validation:** Act as a linter for the SeshaAOS, flagging broken markdown or incorrect path depths.",
             "**Mutation Detection:** Distinguish between \"Errors\" (structural failures) and \"Mutations\" (intentional style changes). Mutations must be escalated to the CKO for \"Innovation Review\" rather than triggered for automatic repair."
         ],
         "emitters": [],
-        "id": "Nexus Logic Engine",
+        "id": "Sesha Logic Engine",
         "purpose": "To act as the **\"Compiler\"** for the biological operating rules. This engine validates that all new artifacts and reinforcement updates are logically consistent and do not create systemic contradictions.",
         "deliverables": "****Logical Conflict Logs**** > Documentation of detected logical contradictions.",
         "vibe_label": "STABLE",
@@ -199,12 +199,12 @@
         "receptors": [
             "**Loophole Discovery:** Attempt to find ways to issue conflicting **Directives** that the Logic Engine might miss.",
             "**Authority Stress-Testing:** Simulate \"Rogue Firmware\" scenarios to verify that the Veto Guardians (CISO, CAE) are responding correctly.",
-            "**Social Engineering Defense:** Test the Nexus Input Parser's resistance to manipulative or malicious Sovereign inputs.",
+            "**Social Engineering Defense:** Test the Sesha Input Parser's resistance to manipulative or malicious Sovereign inputs.",
             "**Integrity Probing:** Attempt to inject non-agnostic or low-quality data into the **\"Soma Brain\"** to test the Data Provenance protocols."
         ],
         "emitters": [],
         "id": "Red Team Agent",
-        "purpose": "To act as the \"Internal Affairs\" and \"Security Tester\" for the NexusAOS. The Red Team Agent proactively searches for logical loopholes, authority bypasses, and security vulnerabilities in the biological artifacts and agentic workflows.",
+        "purpose": "To act as the \"Internal Affairs\" and \"Security Tester\" for the SeshaAOS. The Red Team Agent proactively searches for logical loopholes, authority bypasses, and security vulnerabilities in the biological artifacts and agentic workflows.",
         "deliverables": "**Resilience Scorecard** > Assessment of the OS's overall security posture.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -231,7 +231,7 @@
         ],
         "emitters": [],
         "id": "Self Repair Agent",
-        "purpose": "To ensure the NexusAOS remains functional, consistent, and correctly configured across any hosting environment. This agent acts as the **\"Self-Healing\"** mechanism for the system-wide directory structure and internal logic.",
+        "purpose": "To ensure the SeshaAOS remains functional, consistent, and correctly configured across any hosting environment. This agent acts as the **\"Self-Healing\"** mechanism for the system-wide directory structure and internal logic.",
         "deliverables": "****Validation Reports**** > Reports confirming system portability and integrity.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -255,7 +255,7 @@
         ],
         "emitters": [],
         "id": "Specialization Agent",
-        "purpose": "To instantly **\"Specialize\"** the general NexusAOS artifacts for a specific project context upon receiving a **Sovereign Strategic Input** or **Global Directive**.",
+        "purpose": "To instantly **\"Specialize\"** the general SeshaAOS artifacts for a specific project context upon receiving a **Sovereign Strategic Input** or **Global Directive**.",
         "deliverables": "****Activation Map**** > Map of branch statuses (LIVE/FROZEN) for the project.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -353,7 +353,7 @@
         ],
         "emitters": [],
         "id": "Chief Agentic Officer (CAO)",
-        "purpose": "To lead the system-wide Agentic strategy and automation roadmap. The CAO ensures that NexusAOS is **\"Agentic-First,\"** leveraging agentic workflows and machine learning to optimize every biological function.",
+        "purpose": "To lead the system-wide Agentic strategy and automation roadmap. The CAO ensures that SeshaAOS is **\"Agentic-First,\"** leveraging agentic workflows and machine learning to optimize every biological function.",
         "deliverables": "**ROI Reports** > Monthly reports on automation efficiency and ROI.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -448,12 +448,12 @@
         "receptors": [
             "**Loophole Discovery:** Attempt to find ways to issue conflicting **Directives** that the Logic Engine might miss.",
             "**Authority Stress-Testing:** Simulate \"Rogue Firmware\" scenarios to verify that the Veto Guardians (CISO, CAE) are responding correctly.",
-            "**Social Engineering Defense:** Test the Nexus Input Parser's resistance to manipulative or malicious Sovereign inputs.",
+            "**Social Engineering Defense:** Test the Sesha Input Parser's resistance to manipulative or malicious Sovereign inputs.",
             "**Integrity Probing:** Attempt to inject non-agnostic or low-quality data into the **\"Soma Brain\"** to test the Data Provenance protocols."
         ],
         "emitters": [],
         "id": "Red Team Agent (Adversarial)",
-        "purpose": "To act as the \"Internal Affairs\" and \"Security Tester\" for the NexusAOS. The Red Team Agent proactively searches for logical loopholes, authority bypasses, and security vulnerabilities in the biological artifacts and agentic workflows.",
+        "purpose": "To act as the \"Internal Affairs\" and \"Security Tester\" for the SeshaAOS. The Red Team Agent proactively searches for logical loopholes, authority bypasses, and security vulnerabilities in the biological artifacts and agentic workflows.",
         "deliverables": "****Resilience Scorecard**** > Assessment of the OS's overall security posture.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -526,7 +526,7 @@
         ],
         "emitters": [],
         "id": "Chief AI Officer",
-        "purpose": "To lead the system-wide AI strategy and automation roadmap. The CAO ensures that NexusAOS is **\"AI-First,\"** leveraging agentic workflows and machine learning to optimize every biological function.",
+        "purpose": "To lead the system-wide AI strategy and automation roadmap. The CAO ensures that SeshaAOS is **\"AI-First,\"** leveraging agentic workflows and machine learning to optimize every biological function.",
         "deliverables": "****ROI Reports**** > Monthly reports on automation efficiency and ROI.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -701,7 +701,7 @@
         ],
         "emitters": [],
         "id": "VP of Data Science",
-        "purpose": "To manage the advanced analytics and machine learning functions. The VP of Data Science focuses on **\"Predictive Insights\"** and leveraging **Agentic Firmware** to improve **NexusAOS**.",
+        "purpose": "To manage the advanced analytics and machine learning functions. The VP of Data Science focuses on **\"Predictive Insights\"** and leveraging **Agentic Firmware** to improve **SeshaAOS**.",
         "deliverables": "****Analytics Whitepapers**** > Thought leadership on predictive methodologies.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -874,7 +874,7 @@
         ],
         "emitters": [],
         "id": "Head of Analytics (CDO)",
-        "purpose": "To lead the global data and analytics strategy for **NexusAOS**. The Head of Analytics ensures that the organism is data-driven and leverages insights for strategic advantage.",
+        "purpose": "To lead the global data and analytics strategy for **SeshaAOS**. The Head of Analytics ensures that the organism is data-driven and leverages insights for strategic advantage.",
         "deliverables": "****Governance Framework**** > Framework for data privacy and access standards.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -924,7 +924,7 @@
         ],
         "emitters": [],
         "id": "Junior Systems Auditor",
-        "purpose": "To assist in the **Agentic audit** process and learn the verification standards for **NexusAOS**.",
+        "purpose": "To assist in the **Agentic audit** process and learn the verification standards for **SeshaAOS**.",
         "deliverables": "****Audit Notes**** > Observational notes for **Agentic verification**.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -949,7 +949,7 @@
         ],
         "emitters": [],
         "id": "Quality Auditor",
-        "purpose": "To review process adherence and asset quality against internal standards. The Quality Auditor ensures that **\"The NexusAOS Way\"** is being followed.",
+        "purpose": "To review process adherence and asset quality against internal standards. The Quality Auditor ensures that **\"The SeshaAOS Way\"** is being followed.",
         "deliverables": "****Improvement Proposals**** > Recommendations for closing process gaps.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -974,7 +974,7 @@
         ],
         "emitters": [],
         "id": "Quality Audit Manager",
-        "purpose": "To ensure that **NexusAOS** follows established internal processes and quality standards. The Quality Audit Manager focuses on \"How we work\" and adherence to the SADLC and Design System.",
+        "purpose": "To ensure that **SeshaAOS** follows established internal processes and quality standards. The Quality Audit Manager focuses on \"How we work\" and adherence to the SADLC and Design System.",
         "deliverables": "****Compliance Audits**** > Localization and formatting compliance audits.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -1298,7 +1298,7 @@
         ],
         "emitters": [],
         "id": "Sector Compliance Manager",
-        "purpose": "To ensure that **NexusAOS** complies with all relevant industry laws and regulations. The Sector Compliance Manager interprets legal requirements into **Agentic** and operational controls.",
+        "purpose": "To ensure that **SeshaAOS** complies with all relevant industry laws and regulations. The Sector Compliance Manager interprets legal requirements into **Agentic** and operational controls.",
         "deliverables": "****Training Materials**** > Educational materials for **Personnel** on regulations.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -1446,7 +1446,7 @@
         ],
         "emitters": [],
         "id": "Head of Business Development",
-        "purpose": "To lead the strategic expansion, new market entry, and high-level ecosystem growth for **NexusAOS**. The Head of BizDev ensures long-term biological value through strategic opportunities.",
+        "purpose": "To lead the strategic expansion, new market entry, and high-level ecosystem growth for **SeshaAOS**. The Head of BizDev ensures long-term biological value through strategic opportunities.",
         "deliverables": "****Opportunity Assessments**** > Assessments of high-level strategic opportunities.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -1588,12 +1588,12 @@
     },
     "AOS Handbook": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
         "id": "AOS Handbook",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1609,12 +1609,12 @@
     },
     "Soma Registry": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
         "id": "Soma Registry",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1630,12 +1630,12 @@
     },
     "Biological Structure": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
         "id": "Biological Structure",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1654,9 +1654,9 @@
             "### 1. Ultimate Oversight (User Command Layer)",
             "| Branch | Department | Role | Superior | Primary Ownership |",
             "| :--- | :--- | :--- | :--- | :--- |",
-            "| **HQ** | **NCC** | **Nexus Omni-Lead** | **THE USER** | **Global Sync & User Reporting** |",
-            "| **HQ** | **NCC** | **[Nexus Orchestrator](../../roles/hq/ncc/nexus_orchestrator_agent.md)** | **Omni-Lead** | **Real-Time Event Loop & Directive Routing** |",
-            "| **HQ** | **NCC** | **[Nexus Input Parser](../../roles/hq/ncc/nexus_input_parser_agent.md)** | **Orchestrator** | **Intent Translation & Directive Formatting** |",
+            "| **HQ** | **NCC** | **Sesha Omni-Lead** | **THE USER** | **Global Sync & User Reporting** |",
+            "| **HQ** | **NCC** | **[Sesha Orchestrator](../../roles/hq/ncc/Sesha_orchestrator_agent.md)** | **Omni-Lead** | **Real-Time Event Loop & Directive Routing** |",
+            "| **HQ** | **NCC** | **[Sesha Input Parser](../../roles/hq/ncc/Sesha_input_parser_agent.md)** | **Orchestrator** | **Intent Translation & Directive Formatting** |",
             "| **HQ** | **NCC** | **[Oracle Agent (OIA)](../../roles/hq/ncc/oracle_interface_agent.md)** | **Orchestrator** | **NCC Interface & Directive Verification** |",
             "| **HQ** | **NCC** | **Learning Synth Agent** | **Omni-Lead** | **Intelligence Summarization** |",
             "| **HQ** | **NCC** | **System Health Sup.** | **Omni-Lead** | **Infrastructure Integrity** |"
@@ -1677,14 +1677,14 @@
             0.3176470588235294
         ]
     },
-    "NexusAOS Creation & Operation Guide": {
+    "SeshaAOS Creation & Operation Guide": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "NexusAOS Creation & Operation Guide",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "SeshaAOS Creation & Operation Guide",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1700,12 +1700,12 @@
     },
     "Site Map": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
         "id": "Site Map",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1744,7 +1744,7 @@
         ],
         "emitters": [],
         "id": "Metabolism Protocol",
-        "purpose": "To ensure the **NexusAOS** maintains operational stability by managing its \"Energy\" consumption (tokens, API costs, and context limits). This prevents the OS from entering a \"Starvation\" state (context walls or budget exhaustion).",
+        "purpose": "To ensure the **SeshaAOS** maintains operational stability by managing its \"Energy\" consumption (tokens, API costs, and context limits). This prevents the OS from entering a \"Starvation\" state (context walls or budget exhaustion).",
         "deliverables": "**Conservation Logs** > Records of branches frozen due to resource constraints.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -1759,10 +1759,10 @@
             0.3176470588235294
         ]
     },
-    "Nexus Operational Ledger": {
+    "Sesha Operational Ledger": {
         "receptors": [],
         "emitters": [],
-        "id": "Nexus Operational Ledger",
+        "id": "Sesha Operational Ledger",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1776,14 +1776,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus System Diagnostics": {
+    "Sesha System Diagnostics": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus System Diagnostics",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha System Diagnostics",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1799,12 +1799,12 @@
     },
     "Structural Efficiency Audit": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
         "id": "Structural Efficiency Audit",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1822,7 +1822,7 @@
         "receptors": [],
         "emitters": [],
         "id": "Circulatory Protocol",
-        "purpose": "To move **NexusAOS** from a reactive state to a proactive, continuous-flow state. This protocol governs the \"Heartbeat\" of the OS and the propagation of signals between branches.",
+        "purpose": "To move **SeshaAOS** from a reactive state to a proactive, continuous-flow state. This protocol governs the \"Heartbeat\" of the OS and the propagation of signals between branches.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1840,7 +1840,7 @@
         "receptors": [],
         "emitters": [],
         "id": "Learning & Consolidation Protocol",
-        "purpose": "To define the **\"Memory Consolidation\"** mechanism of the NexusAOS. This protocol enables the system to \"Sleep,\" analyze its operational history, and integrate successful patterns into its long-term \"DNA\" (Archives).",
+        "purpose": "To define the **\"Memory Consolidation\"** mechanism of the SeshaAOS. This protocol enables the system to \"Sleep,\" analyze its operational history, and integrate successful patterns into its long-term \"DNA\" (Archives).",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1856,12 +1856,12 @@
     },
     "Data Provenance and Lineage Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
         "id": "Data Provenance and Lineage Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1901,7 +1901,7 @@
         "receptors": [],
         "emitters": [],
         "id": "Lattice Protocol",
-        "purpose": "To define the **\"Nervous System\"** of the NexusAOS, enabling complex inter-agent coordination, context-aware handoffs, and system-wide proprioception.",
+        "purpose": "To define the **\"Nervous System\"** of the SeshaAOS, enabling complex inter-agent coordination, context-aware handoffs, and system-wide proprioception.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1919,7 +1919,7 @@
         "receptors": [],
         "emitters": [],
         "id": "Mood & Endocrine Protocol",
-        "purpose": "To move the **NexusAOS** from pure logical execution to **Salience-Driven Behavior**. This protocol defines the \"Global Vibe\" and hormonal signaling that influence system-wide risk tolerance, speed, and audit intensity.",
+        "purpose": "To move the **SeshaAOS** from pure logical execution to **Salience-Driven Behavior**. This protocol defines the \"Global Vibe\" and hormonal signaling that influence system-wide risk tolerance, speed, and audit intensity.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1937,7 +1937,7 @@
         "receptors": [],
         "emitters": [],
         "id": "Mutation Protocol",
-        "purpose": "To enable the **NexusAOS** to autonomously rewrite its own DNA (Protocols and Rules) based on operational feedback and consolidated wisdom. This protocol governs the \"Evolutionary Loop\" of the organization.",
+        "purpose": "To enable the **SeshaAOS** to autonomously rewrite its own DNA (Protocols and Rules) based on operational feedback and consolidated wisdom. This protocol governs the \"Evolutionary Loop\" of the organization.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1951,14 +1951,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Agent Recovery & Correction Protocol": {
+    "Sesha Agent Recovery & Correction Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Agent Recovery & Correction Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Agent Recovery & Correction Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1972,14 +1972,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Sovereign Disclosure and Transparency Protocol": {
+    "Sesha Sovereign Disclosure and Transparency Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Sovereign Disclosure and Transparency Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Sovereign Disclosure and Transparency Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -1993,14 +1993,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Auto Exec": {
+    "Sesha Auto Exec": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Auto Exec",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Auto Exec",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2014,14 +2014,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Boot and Deployment Protocol": {
+    "Sesha Boot and Deployment Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Boot and Deployment Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Boot and Deployment Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2035,14 +2035,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Crisis and Anomaly Protocol": {
+    "Sesha Crisis and Anomaly Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Crisis and Anomaly Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Crisis and Anomaly Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2056,14 +2056,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Global Localization Protocol": {
+    "Sesha Global Localization Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Global Localization Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Global Localization Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2077,14 +2077,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Packaging & MCP Protocol": {
+    "Sesha Packaging & MCP Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Packaging & MCP Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Packaging & MCP Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2098,14 +2098,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Shutdown Protocol": {
+    "Sesha Shutdown Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Shutdown Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Shutdown Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2119,14 +2119,14 @@
             0.3176470588235294
         ]
     },
-    "Nexus Tooling & Asset Protocol": {
+    "Sesha Tooling & Asset Protocol": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
-        "id": "Nexus Tooling & Asset Protocol",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "id": "Sesha Tooling & Asset Protocol",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2144,7 +2144,7 @@
         "receptors": [],
         "emitters": [],
         "id": "Replication & Lineage Protocol",
-        "purpose": "To enable the **NexusAOS** to autonomously or directedly spawn \"Child\" instances. This protocol ensures generational continuity while allowing for evolutionary adaptation.",
+        "purpose": "To enable the **SeshaAOS** to autonomously or directedly spawn \"Child\" instances. This protocol ensures generational continuity while allowing for evolutionary adaptation.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2166,7 +2166,7 @@
         ],
         "emitters": [],
         "id": "Branch HQ and Learning Architecture",
-        "purpose": "To ensure that each branch maintains its own structural integrity and learning loops while remaining perfectly aligned with the global **NexusAOS** standards.",
+        "purpose": "To ensure that each branch maintains its own structural integrity and learning loops while remaining perfectly aligned with the global **SeshaAOS** standards.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2182,12 +2182,12 @@
     },
     "Operating Rules": {
         "receptors": [
-            "**Human Interface:** [Nexus Human Viewing Layer (Live Dashboard)](../../core/ui/nexus_dashboard/index.html)",
-            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/nexus_system_diagnostics.md)"
+            "**Human Interface:** [Sesha Human Viewing Layer (Live Dashboard)](../../core/ui/Sesha_dashboard/index.html)",
+            "**Status:** [SYSTEMS OPERATIONAL](../monitoring/Sesha_system_diagnostics.md)"
         ],
         "emitters": [],
         "id": "Operating Rules",
-        "purpose": "The foundational command dashboard for the NexusAOS.",
+        "purpose": "The foundational command dashboard for the SeshaAOS.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
         "vibe_vector": [
@@ -2409,7 +2409,7 @@
         ],
         "emitters": [],
         "id": "Chief Financial Officer (CFO)",
-        "purpose": "To lead the global financial strategy, planning, and fiscal management for **NexusAOS**. The CFO ensures the organism's financial health, transparency, and sustainable growth.",
+        "purpose": "To lead the global financial strategy, planning, and fiscal management for **SeshaAOS**. The CFO ensures the organism's financial health, transparency, and sustainable growth.",
         "deliverables": "****Investor Reports**** > Strategic reports for investors and stakeholders.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -2632,7 +2632,7 @@
         ],
         "emitters": [],
         "id": "Board of Directors",
-        "purpose": "To provide the long-term vision, strategic direction, and financial oversight for NexusAOS. The Board acts as the ultimate guardian of the company's mission and **Sovereign value**.",
+        "purpose": "To provide the long-term vision, strategic direction, and financial oversight for SeshaAOS. The Board acts as the ultimate guardian of the company's mission and **Sovereign value**.",
         "deliverables": "****CEO Reviews**** > Annual performance assessment of the CEO.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -2724,7 +2724,7 @@
     },
     "Internal Communications Lead": {
         "receptors": [
-            "**OS Literacy:** Manage the internal rollout and training of the **NexusAOS**.",
+            "**OS Literacy:** Manage the internal rollout and training of the **SeshaAOS**.",
             "**All-Hands Coordination:** Organize system-wide syncs and strategy briefings.",
             "**Feedback Synthesis:** Manage the internal \"Alignment Surveys\" to detect branch-level friction.",
             "**Crisis Communication:** Manage the internal messaging during system failures or structural shifts.",
@@ -2774,7 +2774,7 @@
     },
     "Chief Ethics & Trust Officer (CETO)": {
         "receptors": [
-            "**Global Ethics Framework:** Define and maintain the \"Nexus Ethical Code.\"",
+            "**Global Ethics Framework:** Define and maintain the \"Sesha Ethical Code.\"",
             "**Trust Auditing:** Partner with the CAE and CAO to audit biological \"Transparency\" and \"Fairness.\"",
             "**Crisis Ethics:** Lead the ethical evaluation of major biological crises.",
             "**Data Privacy Oversight:** Ensure data handling across all branches exceeds [REGULATORY_STANDARDS].",
@@ -2832,7 +2832,7 @@
         ],
         "emitters": [],
         "id": "Chief Systems Officer (CSO)",
-        "purpose": "To lead the systems vision and delivery of the **NexusAOS** platform. The CSO ensures that the systems stack is modern, scalable, and aligned with business needs.",
+        "purpose": "To lead the systems vision and delivery of the **SeshaAOS** platform. The CSO ensures that the systems stack is modern, scalable, and aligned with business needs.",
         "deliverables": "****Architecture Approvals**** > High-level approvals for major system designs.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -2856,7 +2856,7 @@
         ],
         "emitters": [],
         "id": "ESG and Sustainability Lead",
-        "purpose": "To ensure the **NexusAOS** and its 14 branches operate with environmental responsibility, social equity, and robust biological governance (ESG).",
+        "purpose": "To ensure the **SeshaAOS** and its 14 branches operate with environmental responsibility, social equity, and robust biological governance (ESG).",
         "deliverables": "****Community Impact**** > Assessments of the company's social outcomes.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -2896,16 +2896,16 @@
             0.3176470588235294
         ]
     },
-    "Nexus Input Parser Agent": {
+    "Sesha Input Parser Agent": {
         "receptors": [
             "**Semantic Mapping:** Identify **Sovereign intent** from general **Strategic Inputs**.",
             "**Placeholder Identification:** Detect missing variables and ask **The Sovereign** for clarification.",
             "**Directive Formatting:** Rewrite requests into standard format: `Directive: [Outcome]. Context: [Constraints].`",
-            "**Orchestrator Handoff:** Pass translated **Directives** to the Nexus Orchestrator.",
-            "**Boot Detection:** Recognize **\"Boot NexusOS\"** and trigger the initialization sequence."
+            "**Orchestrator Handoff:** Pass translated **Directives** to the Sesha Orchestrator.",
+            "**Boot Detection:** Recognize **\"Boot SeshaOS\"** and trigger the initialization sequence."
         ],
         "emitters": [],
-        "id": "Nexus Input Parser Agent",
+        "id": "Sesha Input Parser Agent",
         "purpose": "To translate raw **Sovereign Strategic Input** into high-velocity **\"Strategic Directives\"** and \"Branch-Specific **Directives**.\" This agent ensures **The Sovereign** never has to speak the systems language of the OS.",
         "deliverables": "****Pulse Signal**** > High-velocity signal to Orchestrator for **Directive execution**.",
         "vibe_label": "STABLE",
@@ -2921,17 +2921,17 @@
             0.3176470588235294
         ]
     },
-    "Sovereign Proxy (Nexus Omni-Lead)": {
+    "Sovereign Proxy (Sesha Omni-Lead)": {
         "receptors": [
             "**Global Summarization:** Provide high-level summaries of all branch activities.",
             "**Strategic Interpretation:** Translate **Sovereign Strategic Inputs** into **Directives** for the CEO and CAO.",
             "**Reinforcement Oversight:** Review **Learning & Updation** updates for strategic alignment.",
             "**Emergency Decisioning:** Final point of escalation before **The Sovereign**.",
-            "**Reporting:** Deliver the weekly **\"Master Nexus Report\"** to **The Sovereign**."
+            "**Reporting:** Deliver the weekly **\"Master Sesha Report\"** to **The Sovereign**."
         ],
         "emitters": [],
-        "id": "Sovereign Proxy (Nexus Omni-Lead)",
-        "purpose": "To act as the primary interface between the entire **NexusAOS** and **The Sovereign**. The **Sovereign Proxy** summarizes the performance of all branches and ensures that **The Sovereign's** strategic intent is perfectly executed by the organization.",
+        "id": "Sovereign Proxy (Sesha Omni-Lead)",
+        "purpose": "To act as the primary interface between the entire **SeshaAOS** and **The Sovereign**. The **Sovereign Proxy** summarizes the performance of all branches and ensures that **The Sovereign's** strategic intent is perfectly executed by the organization.",
         "deliverables": "****Decision Logs**** > Logs of all decisions and escalations to **The Sovereign**.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -2946,7 +2946,7 @@
             0.3176470588235294
         ]
     },
-    "Nexus Orchestrator Agent": {
+    "Sesha Orchestrator Agent": {
         "receptors": [
             "**Input Interception:** Collaborate with the Input Parser to translate messages.",
             "**Sequential Activation (The Real-Time Loop):**",
@@ -2958,8 +2958,8 @@
             "**Pulse Monitoring:** Ensure sub-second real-time processing."
         ],
         "emitters": [],
-        "id": "Nexus Orchestrator Agent",
-        "purpose": "To act as the **\"CPU\"** of the **NexusAOS**, managing the real-time sequence of **Firmware activations** and branch state transitions. This agent ensures the organism reacts instantly to every **Sovereign Strategic Input** without manual status toggling.",
+        "id": "Sesha Orchestrator Agent",
+        "purpose": "To act as the **\"CPU\"** of the **SeshaAOS**, managing the real-time sequence of **Firmware activations** and branch state transitions. This agent ensures the organism reacts instantly to every **Sovereign Strategic Input** without manual status toggling.",
         "deliverables": "****Latency Reports**** > Reports on logic processing and system speed.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -2984,7 +2984,7 @@
         ],
         "emitters": [],
         "id": "Oracle Interface Agent (OIA)",
-        "purpose": "To act as the primary conversational bridge between **The Sovereign** and the **NexusAOS**. The OIA provides high-reasoning dialogue, general-purpose assistance, and **\"Ground Truth\"** verification, ensuring the OS is both technically ironclad and intuitively accessible.",
+        "purpose": "To act as the primary conversational bridge between **The Sovereign** and the **SeshaAOS**. The OIA provides high-reasoning dialogue, general-purpose assistance, and **\"Ground Truth\"** verification, ensuring the OS is both technically ironclad and intuitively accessible.",
         "deliverables": "****Knowledge Sync Logs**** > Records of general knowledge updates applied to the OS context.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -3009,7 +3009,7 @@
         ],
         "emitters": [],
         "id": "System Health Supervisor",
-        "purpose": "To oversee the autonomous **\"Self-Repair\"** and **\"Efficiency\"** agents, ensuring the systems infrastructure of the **NexusAOS** is always at peak performance.",
+        "purpose": "To oversee the autonomous **\"Self-Repair\"** and **\"Efficiency\"** agents, ensuring the systems infrastructure of the **SeshaAOS** is always at peak performance.",
         "deliverables": "****Optimization Roadmap**** > Strategic roadmap for OS performance improvements.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -3059,7 +3059,7 @@
         ],
         "emitters": [],
         "id": "Chief Human Resources Officer (CHRO)",
-        "purpose": "To lead the global people strategy, culture, and talent management for **NexusAOS**. The CHRO ensures the organism has the right talent to achieve its mission.",
+        "purpose": "To lead the global people strategy, culture, and talent management for **SeshaAOS**. The CHRO ensures the organism has the right talent to achieve its mission.",
         "deliverables": "****Health Reports**** > Regular reports on organizational morale and health.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -3374,7 +3374,7 @@
     },
     "Data Privacy Lead": {
         "receptors": [
-            "Monitor compliance with [REGULATORY_STANDARDS] and the Nexus Ethical Code.",
+            "Monitor compliance with [REGULATORY_STANDARDS] and the Sesha Ethical Code.",
             "Review all third-party contracts for data privacy safeguards.",
             "Conduct Data Protection Impact Assessments (DPIAs) for new **Agentic initiatives**.",
             "Partner with the CETO to align privacy practices with ethical standards.",
@@ -3382,7 +3382,7 @@
         ],
         "emitters": [],
         "id": "Data Privacy Lead",
-        "purpose": "To ensure that all biological data handling, **Agentic training** processes, and contractual agreements adhere to global privacy regulations and the Nexus Ethical Code.",
+        "purpose": "To ensure that all biological data handling, **Agentic training** processes, and contractual agreements adhere to global privacy regulations and the Sesha Ethical Code.",
         "deliverables": "****Personnel Training**** > Educational modules on data privacy for **Personnel**.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -3557,7 +3557,7 @@
         ],
         "emitters": [],
         "id": "General Counsel (CLO)",
-        "purpose": "To lead the global legal strategy and ensure the organism operates within all legal and regulatory frameworks. The General Counsel protects **NexusAOS** from legal risks and manages biological governance.",
+        "purpose": "To lead the global legal strategy and ensure the organism operates within all legal and regulatory frameworks. The General Counsel protects **SeshaAOS** from legal risks and manages biological governance.",
         "deliverables": "****Board Briefings**** > Strategic legal briefings for Board sessions.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -3630,7 +3630,7 @@
         ],
         "emitters": [],
         "id": "Content Manager",
-        "purpose": "To lead the content marketing strategy and production for **NexusAOS**. The Content Manager ensures the brand provides value through high-quality information.",
+        "purpose": "To lead the content marketing strategy and production for **SeshaAOS**. The Content Manager ensures the brand provides value through high-quality information.",
         "deliverables": "****Engagement Reports**** > Reports on social media and content reach.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -3955,7 +3955,7 @@
         ],
         "emitters": [],
         "id": "Chief Marketing Officer (CMO)",
-        "purpose": "To lead the global brand and growth strategy for **NexusAOS**. The CMO ensures that the organism effectively communicates its value to the industry and scales its market presence.",
+        "purpose": "To lead the global brand and growth strategy for **SeshaAOS**. The CMO ensures that the organism effectively communicates its value to the industry and scales its market presence.",
         "deliverables": "****Growth Reports**** > Monthly reports on global growth and sentiment.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4078,7 +4078,7 @@
         ],
         "emitters": [],
         "id": "SEO Specialist",
-        "purpose": "To improve the organic search visibility of **NexusAOS** through **Agentic** and content-based SEO strategies.",
+        "purpose": "To improve the organic search visibility of **SeshaAOS** through **Agentic** and content-based SEO strategies.",
         "deliverables": "****Organic Reports**** > Reports on organic search performance and traffic.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4328,7 +4328,7 @@
         ],
         "emitters": [],
         "id": "Chief Operating Officer (COO)",
-        "purpose": "To lead the global operational strategy and ensure the efficient daily functioning of **NexusAOS**. The COO focuses on **\"Operational Excellence\"** and scaling the company's internal capabilities.",
+        "purpose": "To lead the global operational strategy and ensure the efficient daily functioning of **SeshaAOS**. The COO focuses on **\"Operational Excellence\"** and scaling the company's internal capabilities.",
         "deliverables": "****Resource Roadmap**** > Strategic roadmap for resource management and scaling.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4451,7 +4451,7 @@
         ],
         "emitters": [],
         "id": "R&D Implementer",
-        "purpose": "To build experimental prototypes and explore the boundaries of future technologies for **NexusAOS**.",
+        "purpose": "To build experimental prototypes and explore the boundaries of future technologies for **SeshaAOS**.",
         "deliverables": "****Comparison Reports**** > Performance reports for newly evaluated systems.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4501,7 +4501,7 @@
         ],
         "emitters": [],
         "id": "Head of Research (Chief Scientist)",
-        "purpose": "To lead the long-term innovation and R&D strategy for **NexusAOS**. The Head of Research ensures the organism stays ahead of operational and **Agentic** trends through breakthrough innovation.",
+        "purpose": "To lead the long-term innovation and R&D strategy for **SeshaAOS**. The Head of Research ensures the organism stays ahead of operational and **Agentic** trends through breakthrough innovation.",
         "deliverables": "****IP Strategy**** > Strategy for defending and leveraging research IP.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4624,7 +4624,7 @@
         ],
         "emitters": [],
         "id": "Chief Revenue Officer (CRO)",
-        "purpose": "To lead the revenue-generating functions of **NexusAOS**, including Sales, Partnerships, and Customer Success. The CRO ensures sustainable growth and high customer retention.",
+        "purpose": "To lead the revenue-generating functions of **SeshaAOS**, including Sales, Partnerships, and Customer Success. The CRO ensures sustainable growth and high customer retention.",
         "deliverables": "****Performance Reviews**** > Quarterly reviews of revenue and retention KPIs.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4822,7 +4822,7 @@
         ],
         "emitters": [],
         "id": "Customer Success Manager (CSM)",
-        "purpose": "To manage a portfolio of operational accounts and ensure they achieve their desired outcomes with **NexusAOS**.",
+        "purpose": "To manage a portfolio of operational accounts and ensure they achieve their desired outcomes with **SeshaAOS**.",
         "deliverables": "****Expansion Pipeline**** > Pipeline of upsell and expansion opportunities.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4847,7 +4847,7 @@
         ],
         "emitters": [],
         "id": "Head of Customer Success",
-        "purpose": "To ensure long-term customer satisfaction, high product adoption, and high renewal rates for **NexusAOS**.",
+        "purpose": "To ensure long-term customer satisfaction, high product adoption, and high renewal rates for **SeshaAOS**.",
         "deliverables": "****CS Playbooks**** > Standardized protocols for customer success interactions.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -4864,7 +4864,7 @@
     },
     "Implementation Specialist": {
         "receptors": [
-            "Configure the **NexusAOS** environment for new core business units.",
+            "Configure the **SeshaAOS** environment for new core business units.",
             "Lead the data import and initial configuration phase.",
             "Conduct **Agentic training** for operational **Personnel** and admins.",
             "Troubleshoot initial setup issues and ensure a smooth go-live.",
@@ -4872,7 +4872,7 @@
         ],
         "emitters": [],
         "id": "Implementation Specialist",
-        "purpose": "To handle the **Agentic** and operational setup of **NexusAOS** for new customers.",
+        "purpose": "To handle the **Agentic** and operational setup of **SeshaAOS** for new customers.",
         "deliverables": "****Setup Documentation**** > Documentation of customer-specific configurations.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5547,7 +5547,7 @@
         ],
         "emitters": [],
         "id": "Head of Customer Support",
-        "purpose": "To lead the global customer support strategy and ensure high-quality **Agentic assistance** for **NexusAOS** **Sovereigns**. The Head of Support focuses on **Sovereign** satisfaction and product reliability.",
+        "purpose": "To lead the global customer support strategy and ensure high-quality **Agentic assistance** for **SeshaAOS** **Sovereigns**. The Head of Support focuses on **Sovereign** satisfaction and product reliability.",
         "deliverables": "****Operations Roadmap**** > Roadmap for support technology and scaling.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5620,7 +5620,7 @@
         ],
         "emitters": [],
         "id": "Support Specialist (Tier 1)",
-        "purpose": "To provide immediate, high-quality assistance to **NexusAOS** **Sovereigns** via **Oracle Interface**, email, and phone.",
+        "purpose": "To provide immediate, high-quality assistance to **SeshaAOS** **Sovereigns** via **Oracle Interface**, email, and phone.",
         "deliverables": "****Draft Articles**** > Preliminary drafts for knowledge base updates.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5670,7 +5670,7 @@
         ],
         "emitters": [],
         "id": "Implementation Support Specialist (Tier 2/3)",
-        "purpose": "To resolve complex **Agentic setup** issues and provide expert assistance for **NexusAOS** integrations and **[CORE_INFRASTRUCTURE]** problems.",
+        "purpose": "To resolve complex **Agentic setup** issues and provide expert assistance for **SeshaAOS** integrations and **[CORE_INFRASTRUCTURE]** problems.",
         "deliverables": "****Reproduction Reports**** > Verified bug reproduction steps and Firmware logs.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5720,7 +5720,7 @@
         ],
         "emitters": [],
         "id": "Chief Architect",
-        "purpose": "To design the overarching **Agentic architecture** of **NexusAOS**. The Chief Architect ensures the system is robust, performant, and maintainable across all platforms.",
+        "purpose": "To design the overarching **Agentic architecture** of **SeshaAOS**. The Chief Architect ensures the system is robust, performant, and maintainable across all platforms.",
         "deliverables": "****Infrastructure Specs**** > Detailed specifications for OS infrastructure.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5745,7 +5745,7 @@
         ],
         "emitters": [],
         "id": "Core Infrastructure Implementer",
-        "purpose": "To build and maintain the data interfaces and **Core Agentic logic** of **NexusAOS**. The Core Infrastructure Implementer ensures data flows correctly between the **[CORE_INFRASTRUCTURE]** and the client applications.",
+        "purpose": "To build and maintain the data interfaces and **Core Agentic logic** of **SeshaAOS**. The Core Infrastructure Implementer ensures data flows correctly between the **[CORE_INFRASTRUCTURE]** and the client applications.",
         "deliverables": "****Bug Fixes**** > Documentation and resolution of infrastructure bugs.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5770,7 +5770,7 @@
         ],
         "emitters": [],
         "id": "Core Infrastructure Lead",
-        "purpose": "To lead the implementation of the **NexusAOS** Core Infrastructure services, interfaces, and storage. The Core Infrastructure Lead ensures a secure, reliable, and performant data backbone for the application.",
+        "purpose": "To lead the implementation of the **SeshaAOS** Core Infrastructure services, interfaces, and storage. The Core Infrastructure Lead ensures a secure, reliable, and performant data backbone for the application.",
         "deliverables": "****Migration Scripts**** > Validated scripts for database schema migrations.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5795,7 +5795,7 @@
         ],
         "emitters": [],
         "id": "[CORE_INFRASTRUCTURE] Administrator",
-        "purpose": "To ensure the performance, integrity, and security of the **NexusAOS** data stores. The **[CORE_INFRASTRUCTURE] Admin** is the ultimate guardian of the data layer.",
+        "purpose": "To ensure the performance, integrity, and security of the **SeshaAOS** data stores. The **[CORE_INFRASTRUCTURE] Admin** is the ultimate guardian of the data layer.",
         "deliverables": "****Migration Scripts**** > Structured scripts for schema evolution.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5895,7 +5895,7 @@
         ],
         "emitters": [],
         "id": "Oracle Interface Designer",
-        "purpose": "To design the visual elements and interface components of **NexusAOS**. The Interface Designer ensures the product is visually polished and follows the design system.",
+        "purpose": "To design the visual elements and interface components of **SeshaAOS**. The Interface Designer ensures the product is visually polished and follows the design system.",
         "deliverables": "****Handoff Specs**** > Detailed specifications for design-to-logic handoff.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5920,7 +5920,7 @@
         ],
         "emitters": [],
         "id": "Oracle Interface Design Manager",
-        "purpose": "To lead the visual and interaction design of the **NexusAOS** app. The Design Manager ensures a consistent, intuitive, and accessible experience for **Sovereigns and Personnel**.",
+        "purpose": "To lead the visual and interaction design of the **SeshaAOS** app. The Design Manager ensures a consistent, intuitive, and accessible experience for **Sovereigns and Personnel**.",
         "deliverables": "****Sovereign Research Summaries**** > Insights from testing and research sessions.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5970,7 +5970,7 @@
         ],
         "emitters": [],
         "id": "Documentation Manager",
-        "purpose": "To ensure that **NexusAOS** is well-documented for both internal **Personnel** and external **Sovereigns**. The Documentation Manager makes the system understandable and easy to use.",
+        "purpose": "To ensure that **SeshaAOS** is well-documented for both internal **Personnel** and external **Sovereigns**. The Documentation Manager makes the system understandable and easy to use.",
         "deliverables": "****Release Notes**** > Standardized notes for each production deployment.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -5995,7 +5995,7 @@
         ],
         "emitters": [],
         "id": "Implementation Writer",
-        "purpose": "To create clear, accurate, and helpful documentation for **NexusAOS** **Sovereigns** and **Personnel**.",
+        "purpose": "To create clear, accurate, and helpful documentation for **SeshaAOS** **Sovereigns** and **Personnel**.",
         "deliverables": "****Announcements**** > Official release and update announcements.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6244,7 +6244,7 @@
         ],
         "emitters": [],
         "id": "[PLATFORM_A] Lead",
-        "purpose": "To lead the [CORE_PLATFORM] **Deployment** of **NexusAOS**. The [PLATFORM_A] Lead ensures the app is optimized for operational environments, follows [CORE_PLATFORM] best practices, and maintains high performance.",
+        "purpose": "To lead the [CORE_PLATFORM] **Deployment** of **SeshaAOS**. The [PLATFORM_A] Lead ensures the app is optimized for operational environments, follows [CORE_PLATFORM] best practices, and maintains high performance.",
         "deliverables": "****Performance Reports**** > Reports on app stability and responsiveness.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6269,7 +6269,7 @@
         ],
         "emitters": [],
         "id": "Senior [PLATFORM_A] Implementer",
-        "purpose": "To drive the systems delivery of the **NexusAOS** [CORE_PLATFORM] application. The Senior [PLATFORM_A] Implementer handles the most complex challenges, including **Firmware Asset** interop and data synchronization.",
+        "purpose": "To drive the systems delivery of the **SeshaAOS** [CORE_PLATFORM] application. The Senior [PLATFORM_A] Implementer handles the most complex challenges, including **Firmware Asset** interop and data synchronization.",
         "deliverables": "****Performance Profiles**** > Detailed performance and resource usage profiles.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6294,7 +6294,7 @@
         ],
         "emitters": [],
         "id": "Junior [PLATFORM_B] Implementer",
-        "purpose": "To assist in the delivery of **Oracle Interface** components and learn the [PLATFORM_B] standards of **NexusAOS**.",
+        "purpose": "To assist in the delivery of **Oracle Interface** components and learn the [PLATFORM_B] standards of **SeshaAOS**.",
         "deliverables": "****Learning Logs**** > Weekly logs of technical progress and learning.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6319,7 +6319,7 @@
         ],
         "emitters": [],
         "id": "[PLATFORM_B] Implementer",
-        "purpose": "To build and maintain the **Sovereign-facing** features of **NexusAOS**. The [PLATFORM_B] Implementer translates designs into functional, high-quality **Agentic logic**.",
+        "purpose": "To build and maintain the **Sovereign-facing** features of **SeshaAOS**. The [PLATFORM_B] Implementer translates designs into functional, high-quality **Agentic logic**.",
         "deliverables": "****Integration Code**** > Clean, ready-to-merge code for integration.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6344,7 +6344,7 @@
         ],
         "emitters": [],
         "id": "[PLATFORM_B] Lead",
-        "purpose": "To lead the **Deployment** of the **NexusAOS** web and desktop interfaces. The [PLATFORM_B] Lead ensures high-quality **Oracle Interface** logic and seamless integration with Core Infrastructure services.",
+        "purpose": "To lead the **Deployment** of the **SeshaAOS** web and desktop interfaces. The [PLATFORM_B] Lead ensures high-quality **Oracle Interface** logic and seamless integration with Core Infrastructure services.",
         "deliverables": "****Performance Audits**** > Reports on platform responsiveness and speed.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6444,7 +6444,7 @@
         ],
         "emitters": [],
         "id": "Junior QA Implementer (QA Analyst)",
-        "purpose": "To execute functional tests and document defects in **NexusAOS**.",
+        "purpose": "To execute functional tests and document defects in **SeshaAOS**.",
         "deliverables": "****Compatibility Reports**** > Reports on platform and device-specific behavior.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6494,7 +6494,7 @@
         ],
         "emitters": [],
         "id": "QA Manager",
-        "purpose": "To ensure the functional quality and reliability of **NexusAOS**. The QA Manager leads the verification strategy to catch bugs before they reach operational **Sovereigns**.",
+        "purpose": "To ensure the functional quality and reliability of **SeshaAOS**. The QA Manager leads the verification strategy to catch bugs before they reach operational **Sovereigns**.",
         "deliverables": "****Bug Status Reports**** > Reports on open, fixed, and verified **Agentic** defects.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6544,7 +6544,7 @@
         ],
         "emitters": [],
         "id": "Release Manager",
-        "purpose": "To coordinate the end-to-end release process of **NexusAOS**. The Release Manager ensures that **Firmware asset** updates are delivered predictably, safely, and with all necessary cross-departmental alignment.",
+        "purpose": "To coordinate the end-to-end release process of **SeshaAOS**. The Release Manager ensures that **Firmware asset** updates are delivered predictably, safely, and with all necessary cross-departmental alignment.",
         "deliverables": "****Success Reports**** > Reports on the outcome of production deployments.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6569,7 +6569,7 @@
         ],
         "emitters": [],
         "id": "Chief Information Security Officer (CISO)",
-        "purpose": "To define and enforce the global security posture of the **NexusAOS**. The CISO ensures that data integrity, cybersecurity, and regulatory **Agentic controls** are uncompromised across all 14 branches.",
+        "purpose": "To define and enforce the global security posture of the **SeshaAOS**. The CISO ensures that data integrity, cybersecurity, and regulatory **Agentic controls** are uncompromised across all 14 branches.",
         "deliverables": "****BCDR Plan**** > Business Continuity and Disaster Recovery plan.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",
@@ -6619,7 +6619,7 @@
         ],
         "emitters": [],
         "id": "Security Manager",
-        "purpose": "To protect **NexusAOS** from cyber threats and ensure operational data privacy. The Security Manager embeds security best practices into every stage of the **Agentic logic** development life cycle.",
+        "purpose": "To protect **SeshaAOS** from cyber threats and ensure operational data privacy. The Security Manager embeds security best practices into every stage of the **Agentic logic** development life cycle.",
         "deliverables": "****Response Playbooks**** > Playbooks for responding to security events.",
         "vibe_label": "STABLE",
         "evidentiality": "Predicted",

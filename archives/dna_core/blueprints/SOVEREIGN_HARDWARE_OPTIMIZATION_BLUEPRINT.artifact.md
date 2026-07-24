@@ -19,7 +19,7 @@ Description: Technical parameters and optimization strategies for the MSI Sword 
 - **Thermal Thresholds:**
   - CPU: < 95°C (Tjunction is 100°C).
   - GPU: < 85°C.
-- **Telemetry Hooks:** Integration with HWInfo64 shared memory and **Direct-to-Kernel SOMA hooks** (see [SOMA_TELEMETRY_HARDWARE_LINKING](file:///C:/Users/gagan/Downloads/nexus_corporate_os/archives/dna_core/blueprints/SOMA_TELEMETRY_HARDWARE_LINKING.artifact.md)) for real-time vitals and actuator control.
+- **Telemetry Hooks:** Integration with HWInfo64 shared memory and **Direct-to-Kernel SOMA hooks** (see [SOMA_TELEMETRY_HARDWARE_LINKING](file:///C:/Users/gagan/Downloads/Sesha_corporate_os/archives/dna_core/blueprints/SOMA_TELEMETRY_HARDWARE_LINKING.artifact.md)) for real-time vitals and actuator control.
 
 ---
 *Status: ARCHITECTED | Stability is the foundation of Power.*

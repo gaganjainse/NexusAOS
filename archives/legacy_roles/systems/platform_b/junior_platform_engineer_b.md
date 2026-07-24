@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To assist in the delivery of **Oracle Interface** components and learn the [PLATFORM_B] standards of **Nexus Corporate OS**.
+To assist in the delivery of **Oracle Interface** components and learn the [PLATFORM_B] standards of **Sesha Corporate OS**.
 
 
 ## Responsibilities

@@ -7,15 +7,13 @@ including neural thought translation, sovereign briefing, and Neural Canvas writ
 from __future__ import annotations
 
 import json
-from typing import Any
-
 from mcp.server.fastmcp import FastMCP
-
 from mcp_server.python.hive_sync import HiveSync
+from typing import Any
 
 hive_sync = HiveSync()
 
-mcp = FastMCP("NexusAOS speech tools")
+mcp = FastMCP("SeshaAOS speech tools")
 
 def _response(status: str, payload: Any = None, message: str = "", tool_id: str = "unknown", duration: float = 0.0) -> str:
     result = json.dumps({
@@ -80,3 +78,4 @@ def write_canvas_node(node_id: str, content: str, agent_id: str, zone: str = "Ne
     res = canvas.write_node(node_id, content, agent_id, organ_zone=zone)
     duration = __import__("time").perf_counter() - start
     return _response("success" if res["success"] else "collision", payload=res, tool_id="write_canvas_node", duration=duration)
+

@@ -1,4 +1,4 @@
-# NexusAOS Unified Specification (The Golden Master Blueprint)
+# SeshaAOS Unified Specification (The Golden Master Blueprint)
 Version: 1.8.0-GM
 Objective: Achieving a Self-Correction Singularity through Sub-Atomic Fission and Photonic Synapses.
 

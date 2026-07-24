@@ -8,7 +8,7 @@ Description: The DNA for treating hardware and software as a somatic extension a
 
 ## 2. Utility Extraction (Spirit in the Machine)
 - **Obsolete Asset Harvesting:** Finding utility in "Dead" software and legacy hardware. Repurposing old libraries or outdated drivers for high-performance niche tasks.
-- **AI-Assisted Tool Creation:** Nexus automatically forging its own tools (CLI wrappers, Zig hooks) to bypass existing software limitations.
+- **AI-Assisted Tool Creation:** Sesha automatically forging its own tools (CLI wrappers, Zig hooks) to bypass existing software limitations.
 
 ## 3. Spirit of Jugaad (Minimalist Mastery)
 - **Zero-Waste Sourcing:** Squeezing maximum utility from free-tier APIs and open-source models before allocating Sovereign capital.

@@ -31,9 +31,9 @@ Senses (poll) -> Signals (TTL) -> Orchestrator (decide) -> Lattice (handoff) -> 
 - Success/failure counts per signal type inform future routing confidence.
 
 ## Service Supervision
-- **Supervisor:** `nexus_supervisor.py` boots and restarts: Pulse, Guardian, Senses, Orchestrator.
+- **Supervisor:** `Sesha_supervisor.py` boots and restarts: Pulse, Guardian, Senses, Orchestrator.
 - **Heartbeats:** `core/monitoring/heartbeats/*.json`
-- **Boot command:** MCP `boot_nexus_aos()`
+- **Boot command:** MCP `boot_Sesha_aos()`
 
 ## Approval Authority
 | Area | Authority |
@@ -44,6 +44,6 @@ Senses (poll) -> Signals (TTL) -> Orchestrator (decide) -> Lattice (handoff) -> 
 ---
 
 > [!IMPORTANT]
-> Without the Orchestrator running, NexusAOS reverts to passive documentation. The Supervisor must be running for true AGOI runtime.
+> Without the Orchestrator running, SeshaAOS reverts to passive documentation. The Supervisor must be running for true AGOI runtime.
 
 **Navigation:** [Global Dashboard](../foundation/corporate_os_handbook.md) | [Sensory Protocol](./sensory_protocol.md)

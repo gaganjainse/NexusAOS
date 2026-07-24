@@ -1,21 +1,21 @@
 """
-NexusAOS - Physiology Engine (Unified)
+SeshaAOS - Physiology Engine (Unified)
 Version: 4.0.0
 Description: Unified manager for Metabolism, Endocrine, Immune, and Sleep systems.
 Consolidates state into physiology.json for optimized performance.
 """
 
 import json
-import time
 import sys
-from pathlib import Path
+import time
 from datetime import datetime
+from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-_python_root = Path(__file__).resolve().parent.parent.parent.parent
+_python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
-BASE_DIR = _python_root.parent.parent
+BASE_DIR = _python_root.parent.parent # Project root
 
 SLEEP_STAGES = ["awake", "nrem", "deep_nrem", "rem"]
 STAGE_DURATIONS = {
@@ -306,3 +306,4 @@ if __name__ == "__main__":
     engine = PhysiologyEngine(base)
     print("Vibe:", engine.synthesize_vibe())
     print("Energy Status:", engine.consume_energy(0))
+

@@ -9,11 +9,11 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To handle the **Agentic** and operational setup of **Nexus Corporate OS** for new customers.
+To handle the **Agentic** and operational setup of **Sesha Corporate OS** for new customers.
 
 
 ## Responsibilities
-- Configure the **Nexus Corporate OS** environment for new core business units.
+- Configure the **Sesha Corporate OS** environment for new core business units.
 - Lead the data import and initial configuration phase.
 - Conduct **Agentic training** for operational **Personnel** and admins.
 - Troubleshoot initial setup issues and ensure a smooth go-live.

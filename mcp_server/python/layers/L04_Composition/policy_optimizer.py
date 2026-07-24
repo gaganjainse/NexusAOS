@@ -1,17 +1,17 @@
 """
-NexusAOS - Policy Optimizer
+SeshaAOS - Policy Optimizer
 Version: 1.0.0
 Description: Optimizes Orchestrator routing weights using the EvolutionEngine.
 """
 
 import json
+import sys
 import time
-
+from pathlib import Path
 from typing import Dict, List
+
 from layers.L04_Composition.evolution_engine import EvolutionEngine, Genome
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -104,3 +104,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     optimizer = PolicyOptimizer(base)
     print(optimizer.optimize_routing())
+

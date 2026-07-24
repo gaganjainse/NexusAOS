@@ -1,30 +1,30 @@
-1784669346.7809136|graph_link|Nexus Orchestrator-[:SYNAPSE]->Sovereign Proxy
-1784669346.7812254|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784669346.7809136|graph_link|Sesha Orchestrator-[:SYNAPSE]->Sovereign Proxy
+1784669346.7812254|graph_link|Sesha Orchestrator-[:SYNAPSE]->NCC
 1784735811.128814|task_negotiation|Agent Immune won 'diagnose system...' (Score: 0.28)
 1784738838.298299|task_negotiation|Agent Research won 'Test Hive Lock...' (Score: 0.39)
 1784738866.7111957|task_negotiation|Agent Orchestrator won 'Test Hive Lock...' (Score: 0.41)
-1784740088.4999804|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784740088.4999804|graph_link|Sesha Orchestrator-[:SYNAPSE]->NCC
 1784740088.5002396|graph_link|Test-[:SYNAPSE]->Motor
-1784740088.5003848|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
-1784740088.500631|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
-1784740088.5008066|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator
-1784745374.3170235|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784740088.5003848|graph_link|Sesha Orchestrator-[:SYNAPSE]->Immune
+1784740088.500631|graph_link|Sesha Orchestrator-[:SYNAPSE]->Research
+1784740088.5008066|graph_link|Sesha Orchestrator-[:SYNAPSE]->Orchestrator
+1784745374.3170235|graph_link|Sesha Orchestrator-[:SYNAPSE]->NCC
 1784745374.3172448|graph_link|Test-[:SYNAPSE]->Motor
-1784745374.3173814|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
-1784745374.3174994|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
-1784745374.3176067|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator
+1784745374.3173814|graph_link|Sesha Orchestrator-[:SYNAPSE]->Immune
+1784745374.3174994|graph_link|Sesha Orchestrator-[:SYNAPSE]->Research
+1784745374.3176067|graph_link|Sesha Orchestrator-[:SYNAPSE]->Orchestrator
 1784745796.0795991|task_negotiation|Agent Immune won 'Perform Final Integration Audit...' (Score: 0.61)
 1784746906.9485686|optical_capture|Retina capture saved to retina_capture_1784746906.png
 1784748693.1264179|optical_capture|Retina capture saved to retina_capture_1784748693.png
 1784749052.3516695|optical_capture|Retina capture saved to retina_capture_1784749052.png
 1784749348.9966547|optical_capture|Retina capture saved to retina_capture_1784749348.png
-1784757005.5319097|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784757005.5319097|graph_link|Sesha Orchestrator-[:SYNAPSE]->NCC
 1784757005.532277|graph_link|Test-[:SYNAPSE]->Motor
-1784757005.5324597|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
-1784757005.532628|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
-1784757005.5327466|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator
-1784759482.9086454|graph_link|Nexus Orchestrator-[:SYNAPSE]->NCC
+1784757005.5324597|graph_link|Sesha Orchestrator-[:SYNAPSE]->Immune
+1784757005.532628|graph_link|Sesha Orchestrator-[:SYNAPSE]->Research
+1784757005.5327466|graph_link|Sesha Orchestrator-[:SYNAPSE]->Orchestrator
+1784759482.9086454|graph_link|Sesha Orchestrator-[:SYNAPSE]->NCC
 1784759482.9088888|graph_link|Test-[:SYNAPSE]->Motor
-1784759482.9090443|graph_link|Nexus Orchestrator-[:SYNAPSE]->Immune
-1784759482.9091725|graph_link|Nexus Orchestrator-[:SYNAPSE]->Research
-1784759482.9093256|graph_link|Nexus Orchestrator-[:SYNAPSE]->Orchestrator
+1784759482.9090443|graph_link|Sesha Orchestrator-[:SYNAPSE]->Immune
+1784759482.9091725|graph_link|Sesha Orchestrator-[:SYNAPSE]->Research
+1784759482.9093256|graph_link|Sesha Orchestrator-[:SYNAPSE]->Orchestrator

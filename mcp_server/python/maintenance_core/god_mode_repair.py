@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 
-BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/nexus_corporate_os/archives")
+BASE_DIR = Path(r"C:/Users/gagan/Downloads/ClinicLedger-main/Sesha_corporate_os/archives")
 
 # Definitive Map
 MAP = {
@@ -19,9 +19,9 @@ MAP = {
     "ceto.md": "Chief Ethics & Trust Officer (CETO)",
     "chief_ethics_officer.md": "Chief Ethics & Trust Officer (CETO)",
     "ciso.md": "Chief Information Security Officer (CISO)",
-    "nexus_omni_lead.md": "Sovereign Proxy (Nexus Omni-Lead)",
-    "nexus_orchestrator_agent.md": "Nexus Orchestrator Agent",
-    "nexus_input_parser_agent.md": "Nexus Input Parser Agent",
+    "Sesha_omni_lead.md": "Sovereign Proxy (Sesha Omni-Lead)",
+    "Sesha_orchestrator_agent.md": "Sesha Orchestrator Agent",
+    "Sesha_input_parser_agent.md": "Sesha Input Parser Agent",
     "oracle_interface_agent.md": "Oracle Interface Agent (OIA)",
     "learning_synthesis_agent.md": "Learning Synthesis Agent",
     "system_health_supervisor.md": "System Health Supervisor",
@@ -59,7 +59,7 @@ def clean_title(filename):
     return " ".join(capitalized)
 
 def repair():
-    print("NexusAOS God-Mode Repair: Total Synchronization...")
+    print("SeshaAOS God-Mode Repair: Total Synchronization...")
     for root, _, files in os.walk(str(BASE_DIR)):
         for file in files:
             if file.endswith(".md"):
@@ -92,3 +92,4 @@ def repair():
 
 if __name__ == "__main__":
     repair()
+

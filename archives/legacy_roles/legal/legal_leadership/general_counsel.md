@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the global legal strategy and ensure the corporation operates within all legal and regulatory frameworks. The General Counsel protects **Nexus Corporate OS** from legal risks and manages corporate governance.
+To lead the global legal strategy and ensure the corporation operates within all legal and regulatory frameworks. The General Counsel protects **Sesha Corporate OS** from legal risks and manages corporate governance.
 
 
 ## Responsibilities

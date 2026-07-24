@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the global data and analytics strategy for **Nexus Corporate OS**. The Head of Analytics ensures that the corporation is data-driven and leverages insights for strategic advantage.
+To lead the global data and analytics strategy for **Sesha Corporate OS**. The Head of Analytics ensures that the corporation is data-driven and leverages insights for strategic advantage.
 
 
 ## Responsibilities

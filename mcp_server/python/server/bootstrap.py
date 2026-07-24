@@ -1,4 +1,4 @@
-"""NexusAOS server bootstrap helpers."""
+"""SeshaAOS server bootstrap helpers."""
 
 import os
 import sys
@@ -56,3 +56,4 @@ def ensure_core_packages(root, candidates=None, allow_missing=False):
             raise RuntimeError(f"Missing package: {package_dir}")
         if not init_file.exists():
             init_file.write_text("", encoding="utf-8")
+

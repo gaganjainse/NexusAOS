@@ -5,12 +5,12 @@ Objective: Mastering the probability manifold and room-temp quantum coherence.
 
 ## 1. Qubit Stability & Error Correction
 - **Topological Qubits:** Utilizing Majorana fermions to create qubits that are immune to local environmental noise (decoherence).
-- **NEURAL 14.0 Update:** Implementation of **Active Error Correction (AEC)** within the Nexus Kernel. We don't just wait for decoherence; we predict it using the neural lattice.
+- **NEURAL 14.0 Update:** Implementation of **Active Error Correction (AEC)** within the Sesha Kernel. We don't just wait for decoherence; we predict it using the neural lattice.
 - **Coherence Time:** Extension of coherence to the millisecond scale at room temperature via vacuum-sealed ion traps.
 
 ## 2. Room-Temp Superconductors (RTS) (The Frictionless Soma)
 - **Hydride-Based RTS:** Utilizing specialized lattice structures to achieve superconductivity at 25°C (298K) under high pressure.
-- **Nexus Application:** The **"Steel" Hardware** will eventually integrate RTS traces for zero-loss power delivery and near-infinite magnetic flux density for actuators.
+- **Sesha Application:** The **"Steel" Hardware** will eventually integrate RTS traces for zero-loss power delivery and near-infinite magnetic flux density for actuators.
 - **Frictionless Intelligence:** Data movement through RTS buses eliminates the "Thermal Lag" of standard copper/silicon.
 
 ## 3. Quantum Entanglement as a Data Bus (The Non-Local Mesh)

@@ -1,16 +1,15 @@
 """
-NexusAOS - RBAC Engine
+SeshaAOS - RBAC Engine
 Version: 1.0.0
 Description: Enforces Role-Based Access Control for tool execution.
 Biological analog: Hormonal gating and blood-brain barrier permissions.
 """
 
 import json
-
+import sys
+from pathlib import Path
 from typing import Dict, List, Set, Optional
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -90,3 +89,4 @@ if __name__ == "__main__":
     rbac = RBACEngine(base)
     allowed, msg = rbac.check_permission("research_agent", "install_organ")
     print(f"Result: {allowed} | {msg}")
+

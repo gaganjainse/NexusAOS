@@ -1,11 +1,11 @@
 """
-NexusAOS - Phase 5 Benchmark Harness
+SeshaAOS - Phase 5 Benchmark Harness
 Version: 1.0.0
 Description: VSC-Bench-equivalent benchmark tasks for AGOI correctness, effort, token efficiency, latency, autonomy, and biological health.
 """
+import asyncio
 import json
 import time
-import asyncio
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -15,7 +15,7 @@ if str(BASE_DIR / "mcp_server" / "python") not in sys.path:
     sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
 
 try:
-    from services.nexus_runtime import NexusRuntime
+    from services.Sesha_runtime import SeshaRuntime
     from tools.physiology_engine import PhysiologyEngine
     from tools.token_ledger import TokenLedger
     from tools.signal_router import SignalRouter
@@ -57,7 +57,7 @@ class AGOIBenchmark:
         self.base_dir = base_dir or BASE_DIR
         self.physiology = PhysiologyEngine(self.base_dir)
         self.ledger = TokenLedger(self.base_dir)
-        self.runtime = NexusRuntime(self.base_dir)
+        self.runtime = SeshaRuntime(self.base_dir)
         self.boot = DevelopmentalBoot(self.base_dir)
         
         # Initialize all required engines
@@ -239,3 +239,4 @@ if __name__ == "__main__":
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps(report["summary"], indent=2))
+

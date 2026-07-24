@@ -1,9 +1,9 @@
 """
-NexusAOS - Chaos Test: Network Partition
+SeshaAOS - Chaos Test: Network Partition
 Description: Simulate offline during LLM call → verify retry.
 """
-import unittest
 import sys
+import unittest
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent.parent
@@ -21,3 +21,4 @@ class TestNetworkPartition(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

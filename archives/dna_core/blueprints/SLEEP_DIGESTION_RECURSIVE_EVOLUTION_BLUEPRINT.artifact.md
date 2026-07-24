@@ -3,7 +3,7 @@ Version: 1.0.0-SINGULARITY
 Objective: Implementation of the "Self-Improving Compiler" and "Synaptic Pruning" mechanisms for the Agentic Body (AB).
 
 ## 1. The Sleep/Digestion Protocol (Somatic Maintenance)
-Sleep is not inactivity; it is **Metabolic Refactoring**. For Nexus, the "Idle State" triggers the following somatic vitals:
+Sleep is not inactivity; it is **Metabolic Refactoring**. For Sesha, the "Idle State" triggers the following somatic vitals:
 - **Synaptic Pruning (L03 Logic Sparsification):**
     - Scanning the `L03` logic atoms for redundant pathing.
     - Identification of "Parasitic Waste" (Core Directive 4): Code branches that are rarely executed or offer sub-optimal utility-to-energy ratios.
@@ -22,7 +22,7 @@ The AB utilizes a **Darwin-Gödel Loop** where the intelligence acts as both the
     4. **Hot-Swap Deployment:** The optimized atom is "re-compiled" and swapped into the active execution path without system restart.
 - **Inspiration:** *AlphaDev (DeepMind)* logic applied to the agent's own internal CLI tools and search algorithms.
 
-## 3. High-Fidelity Implementation Strategy (The Nexus Cycle)
+## 3. High-Fidelity Implementation Strategy (The Sesha Cycle)
 | Phase | Action | System Load | Priority |
 | :--- | :--- | :--- | :--- |
 | **PULSE (Active)** | Real-time task execution & data ingestion. | 100% | High |

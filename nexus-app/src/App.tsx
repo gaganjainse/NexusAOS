@@ -13,7 +13,7 @@ import {
   SystemProcess,
   ChatMessage,
   CoreWorkspaceState,
-} from "./types/nexus";
+} from "./types/Sesha";
 
 import { useTheme } from "./context/ThemeContext";
 
@@ -35,8 +35,8 @@ import { L2Workspace } from "./components/workspace/L2Workspace";
 import { L3ToolsPanel } from "./components/tools/L3ToolsPanel";
 import { L4BottomBar } from "./components/bottombar/L4BottomBar";
 import { SystemMonitorModal } from "./components/monitor/SystemMonitorModal";
-import { NexusCoreWorkspace } from "./components/core/NexusCoreWorkspace";
-import { Nexus3DPetCompanion } from "./components/pet/Nexus3DPetCompanion";
+import { SeshaCoreWorkspace } from "./components/core/SeshaCoreWorkspace";
+import { Sesha3DPetCompanion } from "./components/pet/Sesha3DPetCompanion";
 import { SoundscapeEngine, playTempleBellEcho } from "./components/SoundscapeEngine";
 import { TempleMantraEngine } from "./components/TempleMantraEngine";
 import { SacredGeometryMandala } from "./components/SacredGeometryMandala";
@@ -94,7 +94,7 @@ export default function App() {
 
   // Pet Companion State
   const [petStatus, setPetStatus] = useState<PetStatus>({
-    name: "Nexus-3D",
+    name: "Sesha-3D",
     state: "Idle",
     mood: "calm",
     energy: 85,
@@ -106,7 +106,7 @@ export default function App() {
   const [directives, setDirectives] = useState<Directive[]>([
     {
       id: "DIR-101",
-      text: "Design and implement the Nexus App dual-interface specification",
+      text: "Design and implement the Sesha App dual-interface specification",
       status: "Completed",
       timestamp: "10 mins ago",
       priority: "High",
@@ -114,18 +114,18 @@ export default function App() {
         { text: "Architect L1-L4 Sovereign Terminal layout", done: true },
         { text: "Implement 3D Pet companion with Three.js eye tracking", done: true },
         { text: "Build Android-Studio resizable panels & side strips", done: true },
-        { text: "Integrate Nexus Core LLM workspace view", done: true },
+        { text: "Integrate Sesha Core LLM workspace view", done: true },
       ],
       agentBids: ["Orchestrator-01", "Guardian-AOS"],
-      outcome: "Nexus App initialized successfully across Sovereign Terminal & Core.",
+      outcome: "Sesha App initialized successfully across Sovereign Terminal & Core.",
     },
   ]);
 
   // Files & Editor State
   const [files, setFiles] = useState<FileNode[]>(INITIAL_FILES);
   const [openFiles, setOpenFiles] = useState<string[]>([
-    "nexus_aos/src/main.py",
-    "nexus_aos/src/sovereign_terminal.py",
+    "Sesha_aos/src/main.py",
+    "Sesha_aos/src/sovereign_terminal.py",
   ]);
   const [activeFileNode, setActiveFileNode] = useState<FileNode | null>(
     INITIAL_FILES[0].children?.[0].children?.[0] || null
@@ -206,7 +206,7 @@ export default function App() {
 
   const [rightTopItems, setRightTopItems] = useState([
     { id: "browser", label: "Inbuilt Dev Browser", icon: Globe },
-    { id: "chat", label: "Nexus AI Chat", icon: MessageSquare },
+    { id: "chat", label: "Sesha AI Chat", icon: MessageSquare },
     { id: "diff", label: "Diff / Review", icon: GitCompare },
     { id: "docs", label: "Whitepaper & Docs", icon: BookOpen },
   ]);
@@ -276,12 +276,12 @@ export default function App() {
   };
 
   const handleNewFile = () => {
-    const newPath = `nexus_aos/src/scratch_${openFiles.length + 1}.ts`;
+    const newPath = `Sesha_aos/src/scratch_${openFiles.length + 1}.ts`;
     const newFile: FileNode = {
       name: `scratch_${openFiles.length + 1}.ts`,
       path: newPath,
       type: "file",
-      content: `// Sovereign Scratch Module\n// Created: ${new Date().toLocaleTimeString()}\n\nexport function runMatrixTask() {\n  console.log("Nexus matrix function initialized.");\n}\n`,
+      content: `// Sovereign Scratch Module\n// Created: ${new Date().toLocaleTimeString()}\n\nexport function runMatrixTask() {\n  console.log("Sesha matrix function initialized.");\n}\n`,
       gitStatus: "A",
     };
 
@@ -469,7 +469,7 @@ export default function App() {
   useEffect(() => {
     const fetchVitals = async () => {
       try {
-        const res = await fetch("/api/nexus/vitals");
+        const res = await fetch("/api/Sesha/vitals");
         if (res.ok) {
           const data = await res.json();
           setVitals((prev) => ({ ...prev, ...data }));
@@ -537,7 +537,7 @@ export default function App() {
     }));
 
     try {
-      const res = await fetch("/api/nexus/directive", {
+      const res = await fetch("/api/Sesha/directive", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ directiveText: text }),
@@ -596,7 +596,7 @@ export default function App() {
     }));
 
     try {
-      const res = await fetch("/api/nexus/chat", {
+      const res = await fetch("/api/Sesha/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -608,21 +608,21 @@ export default function App() {
 
       if (res.ok) {
         const data = await res.json();
-        const nexusMsg: ChatMessage = {
+        const SeshaMsg: ChatMessage = {
           id: `msg-${Date.now() + 1}`,
-          sender: "nexus",
+          sender: "Sesha",
           text: data.text,
           timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         };
-        setChatMessages((prev) => [...prev, nexusMsg]);
+        setChatMessages((prev) => [...prev, SeshaMsg]);
       } else {
         throw new Error("Chat failed");
       }
     } catch (err) {
       const fallbackMsg: ChatMessage = {
         id: `msg-${Date.now() + 1}`,
-        sender: "nexus",
-        text: `[Nexus Core] Query received: "${msgText}". Context file: ${activeFileNode?.name || "main.py"}. All host vitals Homeostatic.`,
+        sender: "Sesha",
+        text: `[Sesha Core] Query received: "${msgText}". Context file: ${activeFileNode?.name || "main.py"}. All host vitals Homeostatic.`,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       };
       setChatMessages((prev) => [...prev, fallbackMsg]);
@@ -637,7 +637,7 @@ export default function App() {
 
   const handleTriggerAction = async (actionName: string) => {
     try {
-      const res = await fetch("/api/nexus/action", {
+      const res = await fetch("/api/Sesha/action", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ action: actionName }),
@@ -1032,7 +1032,7 @@ export default function App() {
               </aside>
           </motion.div>
         ) : (
-          /* Nexus Core (LLM Workspace) with Circular Mask Transition */
+          /* Sesha Core (LLM Workspace) with Circular Mask Transition */
           <motion.div
             key="core"
             initial={{ clipPath: "circle(0% at 50% 50%)", opacity: 0.8 }}
@@ -1041,7 +1041,7 @@ export default function App() {
             transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
             className="flex-1 flex flex-col min-h-0 min-w-0 w-full overflow-hidden relative z-10"
           >
-            <NexusCoreWorkspace
+            <SeshaCoreWorkspace
               coreState={coreState}
               vitals={vitals}
               tools={tools}
@@ -1063,7 +1063,7 @@ export default function App() {
 
       {/* 3D Interactive Pet Companion overlay (Bottom Right) */}
       {showPet3D && (
-        <Nexus3DPetCompanion
+        <Sesha3DPetCompanion
           status={petStatus}
           vitals={vitals}
           directives={directives}
@@ -1090,4 +1090,5 @@ export default function App() {
     </div>
   );
 }
+
 

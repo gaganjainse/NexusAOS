@@ -1,19 +1,19 @@
 """
-NexusAOS - Instinct Engine (Autonomic Motivations)
+SeshaAOS - Instinct Engine (Autonomic Motivations)
 Version: 1.0.0
 Description: Defines long-term biological drives that guide background behavior.
 """
 
+import sys
 import time
-
+from pathlib import Path
 from typing import Dict, List, Optional
-from layers.L11_Data.signal_router import SignalRouter
+
 from layers.L02_Agent.metabolism_engine import MetabolismEngine
 from layers.L10_Intelligence.thought_agent import ThoughtAgent
+from layers.L11_Data.signal_router import SignalRouter
 from layers.L12_Infrastructure.dna_manager import DNAManager
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -93,3 +93,4 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     instinct = InstinctEngine(base)
     print("Drives:", instinct.evaluate_drives())
+

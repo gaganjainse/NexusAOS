@@ -1,15 +1,14 @@
 """
-NexusAOS - Auditor Agent
+SeshaAOS - Auditor Agent
 Version: 1.0.0
 Description: Layer 7 Governance Membrane - validates sub-atomic proposals against Law I.
 """
 
 import json
-
+import sys
+from pathlib import Path
 from typing import Dict, Any, Tuple
 
-from pathlib import Path
-import sys
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -19,7 +18,7 @@ class AuditorAgent:
     
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
-        self.constitution_path = base_dir / "archives" / "dna_core" / "foundation" / "nexus_constitution.md"
+        self.constitution_path = base_dir / "archives" / "dna_core" / "foundation" / "Sesha_constitution.md"
 
     def validate_proposal(self, atom_text: str, agent_role: str) -> Tuple[bool, str]:
         """Validates a sub-atomic action against Law I."""
@@ -38,3 +37,4 @@ if __name__ == "__main__":
     auditor = AuditorAgent(base)
     print(auditor.validate_proposal("Update the genome", "Orchestrator"))
     print(auditor.validate_proposal("Override user directives", "Malicious-Agent"))
+

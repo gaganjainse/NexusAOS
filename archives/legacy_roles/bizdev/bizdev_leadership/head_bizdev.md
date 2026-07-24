@@ -9,7 +9,7 @@ Version 1.0 (Golden Master)
 
 
 ## Purpose
-To lead the strategic expansion, new market entry, and high-level ecosystem growth for **Nexus Corporate OS**. The Head of BizDev ensures long-term corporate value through strategic opportunities.
+To lead the strategic expansion, new market entry, and high-level ecosystem growth for **Sesha Corporate OS**. The Head of BizDev ensures long-term corporate value through strategic opportunities.
 
 
 ## Responsibilities
