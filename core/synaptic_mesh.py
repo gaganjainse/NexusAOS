@@ -53,10 +53,11 @@ class SynapticMesh:
         }
         
         msg_bytes = json.dumps(signal).encode('utf-8')
+        # Write to Shared Memory with zeroing of previous content to prevent stale bytes
         if len(msg_bytes) > self._shm_size:
             raise MemoryError("Signal payload exceeds Synaptic Mesh buffer size.")
-            
-        # Write to Shared Memory
+        # Zero entire buffer first for clean write
+        self._shm.buf[:self._shm_size] = b'\x00' * self._shm_size
         self._shm.buf[:len(msg_bytes)] = msg_bytes
         
         # In a real AT, receivers would be polling this or waiting on a semaphore/Zenoh
@@ -65,6 +66,10 @@ class SynapticMesh:
 
     def __del__(self):
         if self._shm:
-            self._shm.close()
+            try:
+                self._shm.close()
+                self._shm.unlink()
+            except Exception:
+                pass
 
 mesh = SynapticMesh()

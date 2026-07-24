@@ -84,6 +84,9 @@ app.get("/api/Sesha/vitals", (_req, res) => {
   const memUsage = (8.0 + Math.random() * 0.8).toFixed(1);
   res.json({
     ...vitalsData,
+    simulated: true,
+    source: "simulated_fallback",  // Replace with "agent_registry" or "hardware_monitor" when integrated
+    sovereign_override_applied: false,
     cpuUsage,
     memUsage: `${memUsage}/16 GB`,
     diskC: vitalsData.ischemia,
@@ -99,14 +102,14 @@ app.post("/api/Sesha/action", (req, res) => {
   if (action === "conservation") {
     vitalsData.status = "Conservation";
     vitalsData.energy = Math.min(100, vitalsData.energy + 10);
-    return res.json({ success: true, message: "Triggered Conservation Mode. Energy conserving.", vitals: vitalsData });
+    return res.json({ success: true, message: "Triggered Conservation Mode. Energy conserving.", vitals: vitalsData, simulated: true, source: "simulated_fallback", sovereign_override_applied: false });
   } else if (action === "immune") {
     vitalsData.fever = 36.6;
     vitalsData.hypoxia = 0;
-    return res.json({ success: true, message: "Immune Patrol completed. All systems cleared.", vitals: vitalsData });
+    return res.json({ success: true, message: "Immune Patrol completed. All systems cleared.", vitals: vitalsData, simulated: true, source: "simulated_fallback", sovereign_override_applied: false });
   } else if (action === "evolve") {
     vitalsData.vibe = Number((vitalsData.vibe + 0.15).toFixed(2));
-    return res.json({ success: true, message: "Evolving skills... Hot-loaded optimization kernel v2.1.", vitals: vitalsData });
+    return res.json({ success: true, message: "Evolving skills... Hot-loaded optimization kernel v2.1.", vitals: vitalsData, simulated: true, source: "simulated_fallback", sovereign_override_applied: false });
   }
   res.json({ success: true, message: `Executed action: ${action}` });
 });

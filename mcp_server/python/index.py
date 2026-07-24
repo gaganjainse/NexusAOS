@@ -54,7 +54,27 @@ from layers.L02_Agent.cerebellum_engine import CerebellumEngine
 from layers.L06_Tool.deep_research_tool import DeepResearchTool
 from compiler.neural_compiler import NeuralCompiler
 
-# --- RECEPTORS ---
+# Adapter routing framework for specialized agentic totality
+ADAPTER_MAP = {
+    "metabolism": "metabolism",
+    "immune": "immune",
+    "endocrine": "endocrine",
+    "nervous": "nervous",
+    "motor": "motor",
+    "respiratory": "respiratory",
+    "digestive": "digestive",
+    "excretory": "excretory",
+    "integumentary": "integumentary",
+    "structural": "structural",
+    "reproductive": "reproductive",
+}
+
+def get_adapter_for_action(action: str) -> str:
+    action_lower = action.lower()
+    for key in ADAPTER_MAP:
+        if key in action_lower:
+            return ADAPTER_MAP[key]
+    return "ab_ap_balance"
 
 # Initialize Core Services
 mcp = FastMCP("SeshaAOS - Golden Master Registry")
@@ -408,6 +428,8 @@ def assimilate_tool(plugin_id: str, source_code: str) -> str:
 @mcp.tool()
 def submit_directive(text: str, priority: int = 5) -> str:
     """Submits a high-level intent to the Orchestrator."""
+    allowed, msg = _gate_allowed("submit_directive")
+    if not allowed: return _aos_response("blocked", message=msg)
     return _aos_response("success", payload=OrchestratorEngine(BASE_DIR).submit_directive(text, priority))
 
 @mcp.tool()
@@ -484,8 +506,10 @@ def trigger_transcended_pulse(topic: str, payload_json: str) -> str:
     substrate = TranscendedSubstrate(BASE_DIR)
     try:
         payload = json.loads(payload_json)
-    except:
-        payload = {"data": payload_json}
+        if not isinstance(payload, dict):
+            payload = {"data": payload_json, "type": "string"}
+    except Exception:
+        payload = {"data": payload_json, "type": "string"}
         
     substrate.publish(topic, payload)
     return _aos_response("success", message=f"Pulse fired into topic: {topic}")
@@ -555,6 +579,8 @@ def trigger_hive_sync(mode: str = "exhale") -> str:
     allowed, msg = _gate_allowed("trigger_hive_sync")
     if not allowed: return _aos_response("blocked", message=msg)
     
+    if mode not in ("exhale", "inhale"):
+        return _aos_response("blocked", message=f"Invalid hive sync mode: {mode}. Allowed: exhale, inhale.")
     bridge = HiveBridge(BASE_DIR)
     if mode == "exhale":
         res = bridge.exhale_to_hive()

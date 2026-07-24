@@ -32,6 +32,8 @@ Key Tiers:
 - **Reflex Fast-Path:** Use L01 bypass for low-risk somatic vitals.
 - **Entangled Agency:** Evaluate all probability branches before motor collapse.
 - **Total Recall:** Record every cycle ($Prompt \rightarrow Thought \rightarrow Output$) for permanent provenance.
+- **Cycle Commit Protocol:** After every input-edit-output cycle, commit all changes to git with a detailed message documenting the prompt, thought process, edits made, outputs produced, and provenance references. No cycle completes without permanent record.
+- **Evolution Tracking:** Every mutation (L03 logic atom rewrite, biological DNA change, framework update) must be committed and linked to the audit trail (`AUDIT_REPORT.md`, `mesh_hive_sync_status.md`, or equivalent provenance document).
 
 ---
 *Status: CONVERGED | The Steel is forged. The Soul is local. Sovereignty is absolute.*

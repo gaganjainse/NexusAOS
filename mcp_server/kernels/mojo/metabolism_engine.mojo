@@ -53,8 +53,8 @@ struct MetabolismEngine:
         var o2_cost = self.oxygen_consumption * (elapsed / 60.0)
         self.state.oxygen = max(0.0, self.state.oxygen - o2_cost)
 
-        # Glucose replenishment
-        self.state.glucose = min(100.0, self.state.glucose + 0.1 * delta_seconds / 60.0)
+        # Glucose replenishment (use elapsed for consistency with decay)
+        self.state.glucose = min(100.0, self.state.glucose + 0.1 * elapsed / 60.0)
 
         # Glucose -> ATP conversion
         if self.state.glucose >= 10:
@@ -62,16 +62,17 @@ struct MetabolismEngine:
             self.state.atp = min(100.0, self.state.atp + conversion)
             self.state.glucose -= conversion
 
-        # Thermal regulation
-        var heat_dissipation = 0.02 * delta_seconds / 60.0
-        self.state.heat = max(0.0, self.state.heat - heat_dissipation)
+        # Thermal regulation (consistency with decay time-base)
+        var heat_dissipation = 0.02 * elapsed / 60.0
+        var safe_heat_cap = 50.0
+        self.state.heat = max(0.0, min(safe_heat_cap, self.state.heat - heat_dissipation))
 
-        # Lipid Storage
+        # Lipid Storage (fixed double-scaling: apply efficiency once)
         if self.state.atp > 90:
             var excess = self.state.atp - 90
-            var conversion = excess * 0.1
-            self.state.lipids = min(self.max_lipids, self.state.lipids + conversion * self.lipid_conversion_efficiency)
-            self.state.atp -= conversion
+            var conversion = excess * 0.1 * self.lipid_conversion_efficiency
+            self.state.lipids = min(self.max_lipids, self.state.lipids + conversion)
+            self.state.atp -= excess * 0.1
 
         # Lipid Mobilization
         if self.state.atp < 30 and self.state.lipids > 0:
