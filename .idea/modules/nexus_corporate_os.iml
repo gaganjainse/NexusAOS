@@ -2,7 +2,7 @@
 <module type="EMPTY_MODULE" version="4">
   <component name="FacetManager">
     <facet type="mojo" name="Mojo">
-      <configuration installerTool="PIXI" installerVersion="0.73.0" installSkills="true" />
+      <configuration installerTool="PIXI" installerVersion="0.73.0" installSkills="true" mojoSdkPath="\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default" debuggerExecutable="\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default\bin\mojo-lldb" lldbPlugin="\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default\bin\mojo-lldb-dap" />
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
