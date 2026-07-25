@@ -1,27 +1,31 @@
 # NexusAOS v2
 
-A recovery-oriented rewrite of the Nexus project into a simple, explicit, genome-driven cognitive shell.
+NexusAOS v2 is being rebuilt as a lean desktop shell:
 
-## What this repo is now
+- Rust for the core runtime, governance, registry, and persistence
+- Tauri for the desktop wrapper
+- Vanilla TypeScript for the UI layer
 
-- A structured genome model that defines the agent configuration
-- A visible runtime loop with observe / plan / act style stages
-- A hard governance layer that fails closed
-- A mutation path for offline evolution only
-- A lightweight React dashboard for inspecting the system
+## Current shape
+
+- structured genome model
+- explicit runtime loop
+- fail-closed governance
+- offline mutation path for evolution
+- plain TypeScript dashboard
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev
+npm run tauri dev
 ```
 
 ## Build
 
 ```bash
 npm run build
-npm run preview
+npm run tauri build
 ```
 
 ## Development rules
@@ -30,3 +34,4 @@ npm run preview
 - Keep governance minimal and explicit
 - Keep the genome structured, not free-form
 - Keep runtime logic out of documentation
+- Keep the desktop shell small unless the core architecture is changing
