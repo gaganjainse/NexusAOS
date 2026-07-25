@@ -222,7 +222,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="Run Mojo main" type="MOJO_RUN_CONFIGURATION" temporary="true" filePath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" workingDirectory="C:\Users\gagan\Downloads\nexus_corporate_os\mcp_server\kernels\mojo" programArguments="" environmentVariables="" sdkPath="C:\Users\gagan\.local\bin" commandKind="RUN" outputPath="" optimizationLevel="" sanitizerOptions="" useTerminal="false" disableCrashpad="false">
+    <configuration name="Run Mojo main" type="MOJO_RUN_CONFIGURATION" temporary="true" filePath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" workingDirectory="C:\Users\gagan\Downloads\nexus_corporate_os\mcp_server\kernels\mojo" programArguments="" environmentVariables="" sdkPath="\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default" commandKind="RUN" outputPath="" optimizationLevel="" sanitizerOptions="" useTerminal="false" disableCrashpad="false">
       <method v="2" />
     </configuration>
     <recent_temporary>
