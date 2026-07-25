@@ -1,36 +1,44 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Motor Engine (The Hand)
 Version: 1.0.0
 Description: Autonomous execution of lattice directives — write, build, deploy.
 """
 
+from pathlib import Path
 import json
 import os
 import re
 import subprocess
 import sys
 import time
-from pathlib import Path
+
+try:
+    import pywinauto
+    from pywinauto.keyboard import send_keys
+    HAS_PYWINAUTO = True
+except ImportError:
+    pywinauto = None
+    send_keys = None
+    HAS_PYWINAUTO = False
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from typing import Dict, Any, List, Optional, Tuple
+from typing import Any, List, Optional, Tuple
 
-from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
-from layers.L02_Agent.physiology_engine import PhysiologyEngine
-from layers.L08_Governance.physiological_gate import PhysiologicalGate
-from layers.L05_Memory.state_manager import StateManager
+from Agentic_Body.Agentic_Soma.Foundation.dna.Sesha_lattice import LatticeEngine
+from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
+from Agentic_Body.Agentic_Soma.Foundation.governance.physiological_gate import PhysiologicalGate
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
 
 PROTECTED_PREFIXES = [
     "archives/dna_core/foundation/Sesha_constitution.md",
 ]
 
 BLOCKED_COMMAND_PATTERNS = [
-    r"rm\s+-rf",
+    r"rm\s+-r",
     r"del\s+/[sf]",
     r"format\s+",
     r"shutdown",
@@ -43,7 +51,7 @@ ALLOWED_COMMAND_PREFIXES = [
     "pip install ",
     "npm ",
     "git status",
-    "git diff",
+    "git di",
     "git add ",
     "git commit ",
     "pytest",
@@ -67,35 +75,37 @@ class MotorEngine:
     def real_time_sync(self, action: str, target: str):
         """Neural 13.0: Kinetic Decoupled Git Sync (Asynchronous)."""
         # Background the entire sync process to unleash 'Nerve Speed'
-        cmd = f"git add . && git commit -m 'Somatic Action: {action} on {target}' && git push origin main"
+        cmd = "git add . && git commit -m 'Somatic Action: {action} on {target}' && git push origin main"
         try:
             # We use Popen with a shell command to ensure all 3 steps run in sequence in the background
             subprocess.Popen(cmd, shell=True, cwd=str(self.base_dir), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        except Exception:
+        except Exception:  # noqa: BLE001
             pass
 
     def send_input(self, keys: str):
         """Neural 13.0: Somatic Input - Sends keyboard events to the host (Windows)."""
         if os.name != 'nt':
             return "MOTOR DENIED: Input simulation only supported on Windows host."
+        
+        if not HAS_PYWINAUTO:
+            return "MOTOR DENIED: pywinauto not installed. Install with: pip install pywinauto"
             
         try:
             # Enhanced SendKeys with Focus Support
-            import pywinauto
-            from pywinauto.keyboard import send_keys
-            # We use SendWait-like behavior
             send_keys(keys)
             self.physiology.consume_energy(30)
             self._log_action("send_input", "keyboard", f"Sent: {keys}", True)
-            return f"MOTOR OK: Input sent to host."
+            return "MOTOR OK: Input sent to host."
         except Exception as e:
             self._log_action("send_input", "keyboard", str(e), False)
             return f"MOTOR ERROR: {e}"
 
     def focus_window(self, window_name: str):
         """Neural 13.5: Sets focus to a specific host window."""
+        if not HAS_PYWINAUTO:
+            return "MOTOR DENIED: pywinauto not installed. Install with: pip install pywinauto"
+            
         try:
-            import pywinauto
             app = pywinauto.Application(backend="uia").connect(title_re=f".*{window_name}.*", timeout=5)
             app.top_window().set_focus()
             return f"MOTOR OK: Focused {window_name}"
@@ -114,12 +124,12 @@ class MotorEngine:
             
             hwnd = win32gui.FindWindow(None, window_name)
             if not hwnd:
-                return f"MOTOR ERROR: Window '{window_name}' not found."
+                return "MOTOR ERROR: Window '{window_name}' not found."
             
             # Map string message_type to win32con
             msg = getattr(win32con, message_type, None)
             if msg is None:
-                return f"MOTOR ERROR: Invalid message type '{message_type}'."
+                return "MOTOR ERROR: Invalid message type '{message_type}'."
                 
             win32api.PostMessage(hwnd, msg, w_param, l_param)
             self._log_action("inject_message", window_name, f"Injected {message_type}", True)
@@ -128,7 +138,7 @@ class MotorEngine:
             self._log_action("inject_message", window_name, str(e), False)
             return f"MOTOR ERROR: {e}"
 
-    def _resolve_safe_path(self, relative_path: str) -> Tuple[bool, Path, str]:
+    def _resolve_safe_path(self, relative_path: str) -> tuple[bool, Path, str]:
         rel = relative_path.replace("\\", "/").lstrip("/")
         target = (self.base_dir / rel).resolve()
         try:
@@ -142,7 +152,7 @@ class MotorEngine:
 
         return True, target, "OK"
 
-    def _command_allowed(self, command: str) -> Tuple[bool, str]:
+    def _command_allowed(self, command: str) -> tuple[bool, str]:
         cmd_lower = command.lower().strip()
         for pattern in BLOCKED_COMMAND_PATTERNS:
             if re.search(pattern, cmd_lower):
@@ -233,7 +243,7 @@ class MotorEngine:
         self._log_action("complete_synapse", task_id, result[:200], "Error" not in msg)
         return msg
 
-    def _parse_motor_directive(self, directive: str) -> Optional[Dict[str, str]]:
+    def _parse_motor_directive(self, directive: str) -> dict[str, str]:
         """Parses MOTOR:action:target[:content] directives."""
         if not directive.upper().startswith("MOTOR:"):
             return None
@@ -261,7 +271,7 @@ class MotorEngine:
 
         return parsed
 
-    def process_lattice_queue(self) -> List[str]:
+    def process_lattice_queue(self) -> list[str]:
         """Processes active lattice tasks with MOTOR: directives."""
         results = []
         for task in self.lattice.get_active_nodes():
@@ -283,14 +293,14 @@ class MotorEngine:
                 results.append(result)
                 continue
             else:
-                result = f"MOTOR DENIED: Unknown action '{action}'"
+                result = "MOTOR DENIED: Unknown action '{action}'"
 
             self.complete_synapse(task_id, result)
             results.append(f"[{task_id}] {result}")
 
         return results
 
-    def get_status(self) -> Dict[str, Any]:
+    def get_status(self) -> dict[str, Any]:
         log = self.state_mgr.get_motor_log(100)
         recent = log[:10] if log else []
         success_rate = 0.0
@@ -312,4 +322,3 @@ if __name__ == "__main__":
     motor = MotorEngine(base)
     import json as _json
     print(_json.dumps(motor.get_status(), indent=2))
-

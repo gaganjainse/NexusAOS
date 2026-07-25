@@ -1,25 +1,24 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Evolution Engine
 Version: 2.0.0
 Description: Mutation, selection, fitness-based promotion, shadow A/B testing.
 Integrates with PhysiologyEngine for energy-gated evolution.
 """
+from dataclasses import dataclass, asdict
+from pathlib import Path
+from typing import Callable, Dict, Optional, Self
 import hashlib
 import json
 import random
 import sys
 import time
-from dataclasses import dataclass, asdict
-from pathlib import Path
-from typing import Dict, List, Optional, Callable
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L11_Data.signal_router import SignalRouter
-from layers.L12_Infrastructure.dna_manager import DNAManager
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
+from Agentic_Body.Agentic_Soma.Foundation.dna.dna_manager import DNAManager
 from layers.L03_Runtime.self_evolving_kernel import SelfEvolvingKernel
 
 @dataclass
@@ -27,13 +26,13 @@ class Genome:
     """Represents a mutable configuration genome."""
     id: str
     generation: int
-    parent_id: Optional[str]
+    parent_id: str
     config: Dict
     fitness: float = 0.0
-    fitness_components: Dict = None
+    fitness_components: Dict | None = None
     created_at: float = 0.0
     promoted: bool = False
-    shadow_test_results: Dict = None
+    shadow_test_results: Dict | None = None
     
     def __post_init__(self):
         if self.fitness_components is None:
@@ -69,9 +68,9 @@ class EvolutionEngine:
         self.shadow_dir = self.evo_dir / "shadow_tests"
         self.shadow_dir.mkdir(parents=True, exist_ok=True)
         
-        self.population: List[Genome] = self._load_population()
-        self.lineage: List[Dict] = self._load_lineage()
-        self.fitness_evaluators: List[Callable[[Genome], Dict]] = []
+        self.population: list[Genome] = self._load_population()
+        self.lineage: list[Dict] = self._load_lineage()
+        self.fitness_evaluators: list[Callable[[Genome], Dict]] = []
         self._register_default_mutators()
 
     def mutate_biological_dna(self) -> str:
@@ -199,7 +198,7 @@ class EvolutionEngine:
     
     # --- Population Management ---
     
-    def _load_population(self) -> List[Genome]:
+    def _load_population(self) -> list[Genome]:
         if self.population_file.exists():
             with open(self.population_file, "r") as f:
                 data = json.load(f)
@@ -214,7 +213,7 @@ class EvolutionEngine:
             created_at=time.time()
         )]
     
-    def _load_lineage(self) -> List[Dict]:
+    def _load_lineage(self) -> list[Dict]:
         if self.lineage_file.exists():
             with open(self.lineage_file, "r") as f:
                 return json.load(f)
@@ -416,7 +415,7 @@ class EvolutionEngine:
         
         return f"Cognitive Mutation successful: Hot-loaded {skill_name}"
 
-    def evaluate_13_layer_alignment(self) -> Dict[str, float]:
+    def evaluate_13_layer_alignment(self) -> dict[str, float]:
         """Neural 13.0: Evaluates alignment across the full somatic stack."""
         layers = [
             "Experience", "Intent", "Planning", "Agent", "Runtime", 
@@ -445,7 +444,6 @@ class EvolutionEngine:
         
         # Emit promotion signal
         if self.physiology:
-            from layers.L11_Data.signal_router import SignalRouter
             SignalRouter(self.base_dir).emit_signal(
                 "EVOLUTION_PROMOTION", 
                 {"genome_id": best.id, "fitness": best.fitness, "generation": best.generation},
@@ -471,7 +469,7 @@ class EvolutionEngine:
         
         # 2. Demand-Paging Optimization (Pichay Principle)
         # We prune 90% of redundant context from our UDG
-        from layers.L05_Memory.context_pager import ContextPager
+        from Agentic_Body.Agentic_Intelligence.memory.context_pager import ContextPager
         pager = ContextPager(self.base_dir)
         # (Simulation: Context compression gain)
         
@@ -495,7 +493,7 @@ class EvolutionEngine:
         print("AIDE2: Initiating Dual-Loop Recursive Training...")
         
         # 1. Inner Loop: Synaptic Repair (Antigen Neutralization)
-        from layers.L02_Agent.antigen_registry import AntigenRegistry
+        from Agentic_Body.Agentic_Physique.antigen_registry import AntigenRegistry
         ar = AntigenRegistry(self.base_dir)
         
         # Scan for high-frequency antigens (persistent bugs)
@@ -520,7 +518,7 @@ class EvolutionEngine:
         
         # 3. Synaptic Plasticity (Weight Update)
         # We increase the 'Synaptic Pressure' in the Body Schema if evolution is successful
-        from layers.L02_Agent.body_schema import BodySchema
+        from Agentic_Body.Agentic_Physique.body_schema import BodySchema
         bs = BodySchema(self.base_dir)
         schema = bs.get_body_schema()
         if "synaptic_pressure" in schema:
@@ -558,7 +556,7 @@ class EvolutionEngine:
 
 if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
-    from layers.L02_Agent.physiology_engine import PhysiologyEngine
+    from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
     phys = PhysiologyEngine(base)
     engine = EvolutionEngine(base, phys)
     

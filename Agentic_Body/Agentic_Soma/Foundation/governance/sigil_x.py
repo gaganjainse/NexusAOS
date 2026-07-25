@@ -1,15 +1,14 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Sigil-X (X-Type Signaling)
 Version: 6.0.0
 Description: Hardware-rooted, Quantum-Resistant signatures and Sesha Rails 2.0.
 """
 
+from pathlib import Path
+from typing import Any, Optional, Type
 import hashlib
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -23,7 +22,7 @@ class SigilX:
         # Root of Trust (Simulated)
         self._secret = "Sesha_singularity_kernel_2026_01"
 
-    def sign_pulse(self, topic: str, payload: Any) -> Dict[str, Any]:
+    def sign_pulse(self, topic: str, payload: Any) -> dict[str, Any]:
         """Signs a pulse using the hardware-rooted Sigil."""
         timestamp = int(time.time() * 1000)
         message = f"{self.hardware_id}:{topic}:{json.dumps(payload)}:{timestamp}"
@@ -42,7 +41,7 @@ class SigilX:
             "data": payload
         }
 
-    def verify_rail(self, pulse: Dict[str, Any], rail_spec: str) -> bool:
+    def verify_rail(self, pulse: dict[str, Any], rail_spec: str) -> bool:
         """Enforces Sesha Rails 2.0 behavior contracts."""
         # Example: Rail spec "no_motor_write"
         if rail_spec == "no_motor_write" and "MOTOR:write" in str(pulse.get("data", "")):
@@ -50,4 +49,3 @@ class SigilX:
         return True
 
 import json
-

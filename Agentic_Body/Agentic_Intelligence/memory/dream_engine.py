@@ -1,13 +1,13 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Dream Engine (REM Sleep)
 Version: 1.0.0
 Description: Counterfactual simulation and memory consolidation during sleep.
 """
-import json
-import time
 from pathlib import Path
-from typing import Dict, Any
+from typing import Any
+import json
+import sys
+import time
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -20,14 +20,14 @@ class DreamEngine:
         self.dreams_dir = base_dir / "core" / "monitoring" / "dreams"
         self.dreams_dir.mkdir(exist_ok=True, parents=True)
 
-    def generate_dream(self, context: Dict[str, Any]) -> Dict[str, Any]:
+    def generate_dream(self, context: dict[str, Any]) -> dict[str, Any]:
         """Generates a dream based on recent memories and creates counterfactuals."""
         dream = {
             "timestamp": time.time(),
             "context": context,
             "counterfactuals": [
-                f"What if we tried approach A instead of B?",
-                f"What if we had more data on X?"
+                "What if we tried approach A instead of B?",
+                "What if we had more data on X?"
             ],
             "insights": [
                 "Consider reviewing Y more often",
@@ -38,4 +38,3 @@ class DreamEngine:
         with open(dream_file, "w") as f:
             json.dump(dream, f, indent=2)
         return dream
-

@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Respiratory Engine (Context Ventilation)
 Version: 2.0.0
@@ -6,11 +5,11 @@ Description: Manages 'Cognitive Oxygen' (Token Budget and Context Window) for th
 Biological analog: Lungs/Diaphragm (Managing the intake and expulsion of the context air).
 """
 
+from pathlib import Path
+from typing import Any, Dict
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -66,4 +65,3 @@ if __name__ == "__main__":
     re = RespiratoryEngine(base)
     print(re.inhale(15000))
     print(re.exhale())
-

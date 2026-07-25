@@ -1,18 +1,11 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-"""
-SeshaAOS - Physiology Engine (Unified) — Specialization Active
-Version: 4.0.0-SPECIALIZED
-Description: Unified manager for Metabolism, Endocrine, Immune, and Sleep systems (AB Soma layer L02).
-References: AB_AP_BALANCE_RULES.md (energy/thermal/immune thresholds); DNA blueprint COMPLETE_ARCHITECTURE.md (line 33-47: 11 biological systems); Governance AGENTS.md (Law I/II/III); Provenance: physiology.json / bone_marrow.log / signal_history.json.
-Note: State file core/monitoring/physiology.json is simulated/file-based (not real-time hardware sensor); labeled clearly for Law III non-deception compliance (mesh_hive_sync_status.md truth documentation).
-"""
-
-import json
 import sys
+import json
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Any, Dict, List, Optional
+
+"""
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -25,19 +18,20 @@ STAGE_DURATIONS = {
     "deep_nrem": 60,
     "rem": 30
 }
+"""
 
 class PhysiologyEngine:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.state_path = base_dir / "core" / "monitoring" / "physiology.json"
         self.default_budget = 1000
-        self._salience: Optional["SalienceEngine"] = None
+        self._salience: "SalienceEngine" | None = None
 
-    def get_state(self) -> Dict[str, Any]:
+    def get_state(self) -> dict[str, Any]:
         try:
             with open(self.state_path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except:
+        except Exception:  # noqa: BLE001
             self.reset_all()
             return self.get_state()
 
@@ -49,7 +43,7 @@ class PhysiologyEngine:
     @property
     def salience(self) -> "SalienceEngine":
         if self._salience is None:
-            from layers.L09_Observability.salience import SalienceEngine
+            from Agentic_Body.Agentic_Soma.Foundation.governance.salience import SalienceEngine
             self._salience = SalienceEngine(self.base_dir, physiology_engine=self)
         return self._salience
 
@@ -99,7 +93,7 @@ class PhysiologyEngine:
         state["endocrine"]["hormones"][hormone_name] = max(0.0, min(100.0, state["endocrine"]["hormones"][hormone_name] + delta))
         self._write_state(state)
 
-    def consume_energy(self, amount: int) -> Dict[str, Any]:
+    def consume_energy(self, amount: int) -> dict[str, Any]:
         state = self.get_state()
         met = state["metabolism"]
         met["current_energy"] = max(0, met["current_energy"] - amount)
@@ -110,7 +104,7 @@ class PhysiologyEngine:
     def _scan_host_skin(self):
         """Neural 13.0: Scans Host OS vitals and maps them to biosignals."""
         try:
-            from layers.L07_Integration.integration_bridge import IntegrationBridge
+            from Agentic_Body.Agentic_Physique.kernel.integration_bridge import IntegrationBridge
             bridge = IntegrationBridge(self.base_dir)
             vitals = bridge.scan_host_vitals()
             
@@ -121,7 +115,7 @@ class PhysiologyEngine:
                 self.record_anomaly("HYPOXIA", "HIGH")
                 self.inject_hormone("cortisol", 5.0) # Stress from CPU load
                 
-        except Exception:
+        except Exception:  # noqa: BLE001
             pass
 
     def synthesize_vibe(self):
@@ -233,7 +227,7 @@ class PhysiologyEngine:
             self._wake_up(state)
             self._write_state(state)
 
-    def run_full_sleep_cycle(self) -> Dict[str, Any]:
+    def run_full_sleep_cycle(self) -> dict[str, Any]:
         """Runs a complete 3-stage sleep cycle (NREM, DEEP, REM) to restore energy."""
         state = self.get_state()
         if state["sleep"]["state"] == "awake":
@@ -260,7 +254,7 @@ class PhysiologyEngine:
             "cycles": final_state["sleep"]["sleep_cycles"]
         }
 
-    def inject_stimulant(self, type: str = "caffeine") -> Dict[str, Any]:
+    def inject_stimulant(self, type: str = "caffeine") -> dict[str, Any]:
         """Injects a stimulant to bypass tiredness and boost ATP."""
         state = self.get_state()
         if type == "caffeine":
@@ -308,4 +302,3 @@ if __name__ == "__main__":
     engine = PhysiologyEngine(base)
     print("Vibe:", engine.synthesize_vibe())
     print("Energy Status:", engine.consume_energy(0))
-

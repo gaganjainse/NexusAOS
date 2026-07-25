@@ -1,20 +1,17 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
 SeshaAOS - Web Receptor (Eyes/Vision)
 Version: 1.0.0
 Description: External web browsing, fetching, and search capabilities.
 """
+from pathlib import Path
 import json
 import sys
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 import urllib.request
-from pathlib import Path
-from typing import Optional
+from typing import Optional, Type
 
 
 class WebReceptor:
@@ -49,4 +46,3 @@ class WebReceptor:
         return {"success": True, "query": query, "results": [
             {"title": f"Search result for {query}", "url": f"https://example.com/search?q={query}"}
         ]}
-

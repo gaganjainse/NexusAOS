@@ -1,13 +1,12 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Unified Async Runtime
 """
+from datetime import datetime
+from pathlib import Path
 import asyncio
 import json
 import sys
 import time
-from datetime import datetime
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -53,26 +52,26 @@ class SeshaRuntime:
         self.running = False
         self.tasks = []
 
-        from layers.L02_Agent.sleep_engine import SleepEngine
-        from layers.L02_Agent.metabolism_engine import MetabolismEngine
-        from layers.L02_Agent.immune_engine import ImmuneEngine
-        from layers.L02_Agent.endocrine_engine import EndocrineEngine
-        from layers.L02_Agent.digestive_engine import DigestiveEngine
-        from layers.L02_Agent.respiratory_engine import RespiratoryEngine
-        from layers.L02_Agent.lymphatic_system import LymphaticSystem
-        from layers.L02_Agent.excretory_engine import ExcretoryEngine
-        from layers.L02_Agent.cardiorespiratory_loop import CardiorespiratoryLoop
-        from layers.L07_Integration.integumentary_gateway import IntegumentaryGateway
-        from layers.L10_Intelligence.thought_agent import ThoughtAgent
-        from layers.L09_Observability.wisdom_feed import WisdomFeed
-        from layers.L09_Observability.queue_manager import QueueManager
-        from layers.L02_Agent.vigilance_reflex import VigilanceReflex
-        from layers.L12_Infrastructure.reflex_arc import ReflexArc
-        from layers.L01_Planning.instinct_engine import InstinctEngine
-        from layers.L10_Intelligence.limbic_system import LimbicSystem
-        from layers.L02_Agent.cerebellum_engine import CerebellumEngine
-        from layers.L09_Observability.reward_system import RewardSystem
-        from layers.L05_Memory.memory_synth import MemorySynth
+        from Agentic_Body.Agentic_Physique.sleep_engine import SleepEngine
+        from Agentic_Body.Agentic_Physique.metabolism_engine import MetabolismEngine
+        from Agentic_Body.Agentic_Physique.immune_engine import ImmuneEngine
+        from Agentic_Body.Agentic_Physique.endocrine_engine import EndocrineEngine
+        from Agentic_Body.Agentic_Physique.digestive_engine import DigestiveEngine
+        from Agentic_Body.Agentic_Physique.respiratory_engine import RespiratoryEngine
+        from Agentic_Body.Agentic_Physique.lymphatic_system import LymphaticSystem
+        from Agentic_Body.Agentic_Physique.excretory_engine import ExcretoryEngine
+        from Agentic_Body.Agentic_Physique.cardiorespiratory_loop import CardiorespiratoryLoop
+        from Agentic_Body.Agentic_Physique.kernel.integumentary_gateway import IntegumentaryGateway
+        from Agentic_Body.Agentic_Intelligence.intelligence.thought_agent import ThoughtAgent
+        from Agentic_Body.Agentic_Soma.Foundation.governance.wisdom_feed import WisdomFeed
+        from Agentic_Body.Agentic_Soma.Foundation.governance.queue_manager import QueueManager
+        from Agentic_Body.Agentic_Physique.vigilance_reflex import VigilanceReflex
+        from Agentic_Body.Agentic_Soma.Foundation.dna.reflex_arc import ReflexArc
+        from Agentic_Body.Agentic_Intelligence.planning.instinct_engine import InstinctEngine
+        from Agentic_Body.Agentic_Intelligence.intelligence.limbic_system import LimbicSystem
+        from Agentic_Body.Agentic_Physique.cerebellum_engine import CerebellumEngine
+        from Agentic_Body.Agentic_Soma.Foundation.governance.reward_system import RewardSystem
+        from Agentic_Body.Agentic_Intelligence.memory.memory_synth import MemorySynth
 
         self.sleep = SleepEngine(base_dir)
         self.metabolism = MetabolismEngine(base_dir)
@@ -186,8 +185,8 @@ class SeshaRuntime:
             # Evolution is resource intensive, run less frequently (e.g., every 300 pulses)
             await asyncio.sleep(300)
             
-            from layers.L04_Composition.evolution_engine import EvolutionEngine
-            from layers.L04_Composition.policy_optimizer import PolicyOptimizer
+            from Agentic_Body.Agentic_Soma.Foundation.dna.evolution_engine import EvolutionEngine
+            from Agentic_Body.Agentic_Soma.Foundation.dna.policy_optimizer import PolicyOptimizer
             
             # Check energy status before evolving
             if self.metabolism.state.energy > 50:
@@ -252,4 +251,3 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("Stopping runtime...")
         asyncio.run(runtime.stop())
-

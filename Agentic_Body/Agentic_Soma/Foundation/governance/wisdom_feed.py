@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Wisdom Feed (Proactive Reporting)
 Version: 1.0.0
@@ -6,11 +5,11 @@ Description: Maintains a persistent Intelligence Briefing for the Sovereign.
 Push channel for high-salience swarm findings and physiological alerts.
 """
 
+from pathlib import Path
+from typing import Optional
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -69,4 +68,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     feed = WisdomFeed(base)
     print(feed.push_briefing("Neural Link Established", "The Wisdom Feed is now online and synchronized with your workspace."))
-

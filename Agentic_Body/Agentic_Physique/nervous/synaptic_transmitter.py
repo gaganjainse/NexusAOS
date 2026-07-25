@@ -1,21 +1,20 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Synaptic Transmitter
 Version: 1.0.0
 Description: Converts high-level Mind directives into binary Zig/io_uring spikes.
 """
 
+from pathlib import Path
 import hashlib
 import sys
 import time
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L11_Data.shm_bridge import SHMBridge
+from Agentic_Body.Agentic_Physique.nervous.shm_bridge import SHMBridge
 
 class SynapticTransmitter:
     def __init__(self, base_dir: Path):
@@ -43,4 +42,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     transmitter = SynapticTransmitter(base)
     transmitter.transmit_directive("Initiate context ventilation", sigil="!")
-

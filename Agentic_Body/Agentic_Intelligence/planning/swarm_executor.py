@@ -1,13 +1,22 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 # Provenance tracking: links audit/provenance trail (AUDIT_REPORT.md line 1-149 audit trail; mesh_hive_sync_status.md sync status; COMMIT_MESSAGE.md commit 40203ec NEURAL 15.0 specialization cycle; dataset/11_SYSTEM_MAPPING.md 11-system mapping + provenance framework; saved logs: bone_marrow.log / physiology.json / signal_history.json). Reference special framework (AGENTS.md line 36-39: specialization mandate + provenance tracking + evolution tracking). Provenance applies to swarm execution / agent collision / namespace isolation cycle.
-"""
-SeshaAOS - Agent Swarm Loader & Collision-Free Parallel Executor
-Version: 1.0.0
-Description: Loads hundreds of agents, runs them in parallel swarms with
-collision detection, namespace isolation, and resource quotas.
-Biological analog: Neural populations with gap junctions, lateral inhibition,
-and resource-constrained competition.
+import sys
+import asyncio
+import hashlib
+import json
+import threading
+import time
+import uuid
+import weakref
+from collections import defaultdict
+from dataclasses import dataclass, field, asdict
+from enum import Enum
+from pathlib import Path
+from typing import Optional, Any, Callable, Set, Tuple
+
+_python_root = Path(__file__).resolve().parent.parent.parent.parent
+if str(_python_root) not in sys.path:
+    sys.path.insert(0, str(_python_root))
+
 """
 import asyncio
 import hashlib
@@ -20,11 +29,12 @@ from collections import defaultdict
 from dataclasses import dataclass, field, asdict
 from enum import Enum
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Callable, Set, Tuple
+from typing import Optional, Any, Callable, Set, Tuple
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
+"""""
 
 
 class AgentState(Enum):
@@ -49,22 +59,21 @@ class AgentSpec:
     """Agent specification - the 'genome'"""
     agent_id: str
     role: str
-    genome: Dict[str, Any]  # Configuration, tools, receptors, energy budget
-    parents: List[str] = field(default_factory=list)
+    genome: dict[str, Any]  # Configuration, tools, receptors, energy budget
+    parents: list[str] = field(default_factory=list)
     generation: int = 0
     fitness: float = 0.0
-    metadata: Dict[str, Any] = field(default_factory=dict)
+    metadata: dict[str, Any] = field(default_factory=dict)
 
 
-import hashlib
 
 @dataclass
 class AgentInstance:
     """Running agent instance - the 'phenotype'"""
     spec: AgentSpec
     state: AgentState = AgentState.DORMANT
-    pid: Optional[int] = None
-    task: Optional[asyncio.Task] = None
+    pid: int | None = None
+    task: asyncio.Task | None = None
     energy: float = 1000.0
     namespace: str = ""
     # Cryptographic Identity
@@ -75,21 +84,21 @@ class AgentInstance:
         self.public_key = hashlib.sha256(self.private_key.encode()).hexdigest()
 
     def sign_action(self, action_data: str) -> str:
-        """Signs an action with the agent's private key (Simulation)."""
+        """Signs an action with the agent private key (simulation)."""
         payload = f"{self.spec.agent_id}:{action_data}:{self.private_key}"
         return hashlib.sha256(payload.encode()).hexdigest()
-    signal_receptors: Set[str] = field(default_factory=set)
-    signal_emitters: Set[str] = field(default_factory=set)
-    resource_quota: Dict[str, float] = field(default_factory=lambda: {
+    signal_receptors: set[str] = field(default_factory=set)
+    signal_emitters: set[str] = field(default_factory=set)
+    resource_quota: dict[str, float] = field(default_factory=lambda: {
         "energy": 1000.0,
         "memory_mb": 100.0,
         "api_calls_per_min": 60,
         "file_handles": 50,
         "max_tasks": 20
     })
-    resource_usage: Dict[str, float] = field(default_factory=dict)
+    resource_usage: dict[str, float] = field(default_factory=dict)
     signal_queue: asyncio.Queue = field(default_factory=asyncio.Queue)
-    locks: Set[str] = field(default_factory=set)
+    locks: set[str] = field(default_factory=set)
     created_at: float = field(default_factory=time.time)
     last_active: float = field(default_factory=time.time)
     collision_count: int = 0
@@ -114,10 +123,10 @@ class NamespaceManager:
     """Manages agent namespaces to prevent collisions - like cortical columns"""
     
     def __init__(self):
-        self.allocated: Dict[str, Set[str]] = defaultdict(set)  # resource_type -> {agent_ids}
+        self.allocated: dict[str, set[str]] = defaultdict(set)  # resource_type -> {agent_ids}
         self.lock = threading.RLock()
     
-    def allocate(self, agent_id: str, resources: Dict[str, Any]) -> Tuple[bool, List[str]]:
+    def allocate(self, agent_id: str, resources: dict[str, Any]) -> tuple[bool, list[str]]:
         """Try to allocate resources for agent. Returns (success, conflicts)."""
         with self.lock:
             conflicts = []
@@ -133,7 +142,7 @@ class NamespaceManager:
             if ns: self.allocated["namespace"].add(ns)
             return True, []
     
-    def release(self, agent_id: str, resources: Dict[str, Any]):
+    def release(self, agent_id: str, resources: dict[str, Any]):
         """Release resources held by agent."""
         with self.lock:
             ns = resources.get("namespace")
@@ -141,7 +150,7 @@ class NamespaceManager:
     
     def check_namespace_collision(self, agent_a: str, agent_b: str, 
                                    namespace_a: str, namespace_b: str) -> bool:
-        """Check if two agents' namespaces overlap."""
+        """Check if two agents namespaces overlap."""
         # Same file paths, signal names, or tool names
         return not set(namespace_a.split("/")).isdisjoint(set(namespace_b.split("/")))
 
@@ -151,9 +160,9 @@ class CollisionDetector:
     
     def __init__(self, namespace_mgr: NamespaceManager):
         self.namespace_mgr = namespace_mgr
-        self.collisions: List[CollisionEvent] = []
+        self.collisions: list[CollisionEvent] = []
         self.lock = threading.RLock()
-        self.resolution_strategies: Dict[CollisionType, Callable] = {}
+        self.resolution_strategies: dict[CollisionType, Callable] = {}
         self._register_default_strategies()
     
     def _register_default_strategies(self):
@@ -163,7 +172,7 @@ class CollisionDetector:
         self.resolution_strategies[CollisionType.STATE] = self._resolve_state
         self.resolution_strategies[CollisionType.DEPENDENCY] = self._resolve_dependency
     
-    def detect(self, agents: List[AgentInstance]) -> List[CollisionEvent]:
+    def detect(self, agents: list[AgentInstance]) -> list[CollisionEvent]:
         """Detect all collisions among active agents."""
         collisions = []
         active = [a for a in agents if a.state == AgentState.ACTIVE]
@@ -215,7 +224,7 @@ class CollisionDetector:
         
         return collisions
     
-    def resolve(self, collision: CollisionEvent, agents: Dict[str, AgentInstance]) -> bool:
+    def resolve(self, collision: CollisionEvent, agents: dict[str, AgentInstance]) -> bool:
         """Attempt to resolve a collision."""
         strategy = self.resolution_strategies.get(collision.collision_type)
         if not strategy:
@@ -260,7 +269,7 @@ class CollisionDetector:
         return True
 
 
-from layers.L12_Infrastructure.Sesha_mesh import SeshaMesh
+from Agentic_Body.Agentic_Soma.Foundation.dna.Sesha_mesh import SeshaMesh
 
 class SwarmExecutor:
     """Executes agent swarms with collision avoidance - like neural populations"""
@@ -268,8 +277,8 @@ class SwarmExecutor:
     def __init__(self, base_dir: Path, max_parallel: int = 100):
         self.base_dir = base_dir
         self.max_parallel = max_parallel
-        self.agents: Dict[str, AgentInstance] = {}
-        self.specs: Dict[str, AgentSpec] = {}
+        self.agents: dict[str, AgentInstance] = {}
+        self.specs: dict[str, AgentSpec] = {}
         self.namespace_mgr = NamespaceManager()
         self.collision_detector = CollisionDetector(self.namespace_mgr)
         self.mesh = SeshaMesh(base_dir)
@@ -277,18 +286,18 @@ class SwarmExecutor:
         self.running = False
         self.tick_interval = 1.0
         self.collision_check_interval = 5.0
-        self._tick_task: Optional[asyncio.Task] = None
-        self._collision_task: Optional[asyncio.Task] = None
+        self._tick_task: asyncio.Task | None = None
+        self._collision_task: asyncio.Task | None = None
         
         # NEURAL 5.0 Compiled Genomes
         self.compiled_genomes_path = base_dir / "mcp_server" / "kernels" / "compiled_genomes.json"
         
         # Swarm coordination (gap junctions)
-        self.shared_memory: Dict[str, Any] = {}
-        self.swarm_barriers: Dict[str, asyncio.Barrier] = {}
-        self.collective_decisions: Dict[str, asyncio.Event] = {}
+        self.shared_memory: dict[str, Any] = {}
+        self.swarm_barriers: dict[str, asyncio.Barrier] = {}
+        self.collective_decisions: dict[str, asyncio.Event] = {}
 
-    def differentiate_from_compiled(self, agent_role: str) -> Optional[AgentInstance]:
+    def differentiate_from_compiled(self, agent_role: str) -> AgentInstance:
         """Differentiates an agent from the NEURAL 5.0 compiled library."""
         if not self.compiled_genomes_path.exists():
             return None
@@ -337,7 +346,7 @@ class SwarmExecutor:
         self.specs[spec.agent_id] = spec
         return instance
     
-    def load_swarm(self, specs: List[AgentSpec]) -> List[AgentInstance]:
+    def load_swarm(self, specs: list[AgentSpec]) -> list[AgentInstance]:
         """Load multiple agents as a swarm."""
         instances = []
         for spec in specs:
@@ -348,8 +357,8 @@ class SwarmExecutor:
                 print(f"Failed to load {spec.agent_id}: {e}")
         return instances
     
-    def spawn_from_genome(self, genome: Dict[str, Any], parent_ids: List[str] = None,
-                         count: int = 1) -> List[AgentInstance]:
+    def spawn_from_genome(self, genome: dict[str, Any], parent_ids: list[str | None] = None,
+                         count: int = 1) -> list[AgentInstance]:
         """Spawn multiple agents from a genome (like cell division)."""
         specs = []
         for i in range(count):
@@ -365,7 +374,7 @@ class SwarmExecutor:
         return self.load_swarm(specs)
     
     async def start_agent(self, agent_id: str, entry_point: Callable):
-        """Start an agent's main loop."""
+        """Start an agent main loop."""
         agent = self.agents.get(agent_id)
         if not agent or agent.state != AgentState.DORMANT:
             return False
@@ -376,7 +385,7 @@ class SwarmExecutor:
             agent.task = asyncio.create_task(self._run_agent(agent, entry_point))
         return True
     
-    async def hibernate_non_critical(self, keep_roles: List[str] = None):
+    async def hibernate_non_critical(self, keep_roles: list[str | None] = None):
         """Puts non-essential agents into a low-power SLEEPING state."""
         if keep_roles is None:
             keep_roles = ["immune", "nervous", "integumentary", "omni-lead"]
@@ -416,7 +425,7 @@ class SwarmExecutor:
                 "energy": agent.energy
             })
     
-    async def start_swarm(self, entry_point: Callable, agent_ids: List[str] = None):
+    async def start_swarm(self, entry_point: Callable, agent_ids: list[str | None] = None):
         """Start multiple agents as a coordinated swarm."""
         targets = agent_ids or list(self.agents.keys())
         tasks = [self.start_agent(aid, entry_point) for aid in targets]
@@ -489,9 +498,9 @@ class SwarmExecutor:
             complexity += 0.5
         return complexity
 
-    def atomic_fission(self, heavy_directive: str) -> List[str]:
+    def atomic_fission(self, heavy_directive: str) -> list[str]:
         """Fractures a heavy task into Atomic Primitives (Sub-directives)."""
-        print(f"Fission: Fracturing node density for '{heavy_directive[:20]}...'")
+        print("Fission: Fracturing node density for '{heavy_directive[:20]}...'")
         # Logic to split by conjunctions or newlines
         atoms = [a.strip() for a in heavy_directive.replace(" and ", ",").split(",")]
         return atoms
@@ -504,7 +513,7 @@ class SwarmExecutor:
             atoms = self.atomic_fission(directive)
             for atom in atoms:
                 # Spawn high-speed 'Atom' agents for each primitive
-                print(f"Sub-Atomic: Spawning atom for '{atom}'")
+                print("Sub-Atomic: Spawning atom for '{atom}'")
                 self.spawn_from_genome({"role": "atom_node", "task": atom}, count=1)
         else:
             # Execute as a standard synaptic pulse
@@ -584,7 +593,7 @@ class SwarmExecutor:
 
         return (votes / total_nodes) > threshold
 
-    def get_swarm_status(self) -> Dict[str, Any]:
+    def get_swarm_status(self) -> dict[str, Any]:
         """Get comprehensive swarm status."""
         active = sum(1 for a in self.agents.values() if a.state == AgentState.ACTIVE)
         sleeping = sum(1 for a in self.agents.values() if a.state == AgentState.SLEEPING)

@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Context Pager (Cognitive Memory Management)
 Version: 1.0.0
@@ -6,11 +5,11 @@ Description: Swaps agent 'Thoughts' in and out of the context window to maximize
 Biological analog: Context Paging / Working Memory Shifting.
 """
 
+from pathlib import Path
+from typing import Any, Dict, Optional
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Any, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -21,7 +20,7 @@ class ContextPager:
         self.base_dir = base_dir
         self.page_dir = base_dir / "active_core" / "monitoring_active" / "context_pages"
         self.page_dir.mkdir(parents=True, exist_ok=True)
-        self.active_pages: Dict[str, Dict] = {}
+        self.active_pages: dict[str, Dict] = {}
         self.max_resident_pages = 5
         self.token_limit_baseline = 100000 # 100k fallback
 
@@ -32,7 +31,7 @@ class ContextPager:
         
         if estimated_tokens > (limit * 0.75):
             # 75% saturation - Trigger Synaptic Compression
-            from layers.L05_Memory.memory_synth import MemorySynth
+            from Agentic_Body.Agentic_Intelligence.memory.memory_synth import MemorySynth
             ms = MemorySynth(self.base_dir)
             wisdom_node = ms.summarize_long_context()
             
@@ -57,7 +56,7 @@ class ContextPager:
             
         return f"Page-Out: Agent {agent_id} context swapped to persistent storage."
 
-    def page_in(self, agent_id: str) -> Optional[Any]:
+    def page_in(self, agent_id: str) -> Any:
         """Swaps an agent's context back into 'Active Memory'."""
         page_path = self.page_dir / f"{agent_id}.page"
         if not page_path.exists():
@@ -75,17 +74,15 @@ class ContextPager:
         }
         return content["data"]
 
-    def get_memory_map(self) -> Dict[str, str]:
+    def get_memory_map(self) -> dict[str, str]:
         return {
             "resident": list(self.active_pages.keys()),
             "paged": [p.stem for p in self.page_dir.glob("*.page")]
         }
 
 if __name__ == "__main__":
-    from pathlib import Path
     base = Path(__file__).resolve().parent.parent.parent
     pager = ContextPager(base)
     pager.page_out("Agent_Alpha", {"task": "market_research", "progress": 0.5})
     print("Memory Map:", pager.get_memory_map())
     print("Page-In:", pager.page_in("Agent_Alpha"))
-

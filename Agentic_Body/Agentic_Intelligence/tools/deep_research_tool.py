@@ -1,19 +1,17 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
 SeshaAOS - Deep Research Tool (Nutrient Discovery)
 Version: 1.0.0
 Description: Scours the web and GitHub for architectural nutrients (LangGraph, Slurm, RDMA, etc.) to optimize the organism.
 """
 
+from pathlib import Path
+from typing import Any, Dict
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Any
 
-from layers.L06_Tool.github_scanner import GitHubScanner
-from layers.L06_Tool.web_receptor import WebReceptor
+from Agentic_Body.Agentic_Intelligence.tools.github_scanner import GitHubScanner
+from Agentic_Body.Agentic_Intelligence.tools.web_receptor import WebReceptor
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -26,7 +24,7 @@ class DeepResearchTool:
         self.github = GitHubScanner(base_dir)
         self.research_path = base_dir / "archives" / "dna_core" / "learning" / "research_notes.json"
 
-    def perform_deep_research(self, topic: str) -> Dict[str, Any]:
+    def perform_deep_research(self, topic: str) -> dict[str, Any]:
         """Performs a multi-layered scan of the web and source code for a specific architectural nutrient."""
         # 0. Check Semantic Nutrient Cache (Bone Marrow)
         if self.research_path.exists():
@@ -38,7 +36,8 @@ class DeepResearchTool:
                         if time.time() - entry.get("timestamp", 0) < 86400: # 24h cache
                             print(f"Nutrient Cache Hit: {topic}. Returning from Bone Marrow.")
                             return entry
-            except: pass
+            except Exception:  # noqa: BLE001
+                pass
 
         print(f"Deep Researching: {topic}...")
         
@@ -101,8 +100,9 @@ class DeepResearchTool:
         if self.research_path.exists():
             try:
                 history = json.loads(self.research_path.read_text(encoding="utf-8"))
-            except: pass
-            
+            except Exception:  # noqa: BLE001
+                pass
+
         history.append(entry)
         self.research_path.write_text(json.dumps(history, indent=4), encoding="utf-8")
 
@@ -110,4 +110,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     drt = DeepResearchTool(base)
     print(drt.perform_deep_research("LangGraph vs Slurm for Agent Swarms"))
-

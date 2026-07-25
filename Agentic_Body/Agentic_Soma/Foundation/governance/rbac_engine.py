@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - RBAC Engine
 Version: 1.0.0
@@ -6,10 +5,10 @@ Description: Enforces Role-Based Access Control for tool execution.
 Biological analog: Hormonal gating and blood-brain barrier permissions.
 """
 
+from pathlib import Path
+from typing import Optional
 import json
 import sys
-from pathlib import Path
-from typing import Dict, List, Set, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -81,13 +80,12 @@ class RBACEngine:
         # 3. Match
         for role in agent_roles:
             if role in required_roles:
-                return True, f"Success: Role '{role}' authorized for '{tool_id}'."
+                return True, "Success: Role '{role}' authorized for '{tool_id}'."
         
-        return False, f"Permission Denied: Agent '{agent_id}' lacks required roles for '{tool_id}' (Requires: {required_roles})."
+        return False, "Permission Denied: Agent '{agent_id}' lacks required roles for '{tool_id}' (Requires: {required_roles})."
 
 if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     rbac = RBACEngine(base)
     allowed, msg = rbac.check_permission("research_agent", "install_organ")
     print(f"Result: {allowed} | {msg}")
-

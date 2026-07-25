@@ -1,22 +1,20 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
 SeshaAOS - Nutrient Ingestion Pipeline
 Version: 1.0.0
 Description: Automates the transition from research discovery to DNA integration.
 """
 
+from pathlib import Path
 import json
 import sys
 import time
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L06_Tool.deep_research_tool import DeepResearchTool
-from layers.L11_Data.signal_router import SignalRouter
+from Agentic_Body.Agentic_Intelligence.tools.deep_research_tool import DeepResearchTool
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
 
 class NutrientIngestion:
     def __init__(self, base_dir: Path):
@@ -60,4 +58,3 @@ if __name__ == "__main__":
     
     base = Path(__file__).resolve().parent.parent.parent.parent
     NutrientIngestion(base).automate_ingestion(args.topic)
-

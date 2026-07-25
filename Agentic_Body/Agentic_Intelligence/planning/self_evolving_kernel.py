@@ -1,19 +1,16 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
 SeshaAOS - Self-Evolving Kernel (SE-AOS)
 Version: 13.0.0
 Description: Synthesizes and hot-loads new logic blocks.
 """
 
+from pathlib import Path
+from typing import Any, Optional, Self
 import importlib
 import json
 import os
 import sys
-import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -37,7 +34,7 @@ class SelfEvolvingKernel:
         
         # 2. Compile to file
         file_path = self.evolved_skills_dir / f"{skill_name}.py"
-        template = f'"""\nEvolved Skill: {skill_name}\nDescription: {description}\nSynthesized: {time.ctime()}\n"""\n\ndef execute(context):\n    {code_logic}\n    return "Executed {skill_name}"'
+        template = '"""\nEvolved Skill: {skill_name}\nDescription: {description}\nSynthesized: {time.ctime()}\n"""\n\ndef execute(context):\n    {code_logic}\n    return "Executed {skill_name}"'
         file_path.write_text(template, encoding="utf-8")
         
         # 3. Archive Genome
@@ -59,4 +56,3 @@ class SelfEvolvingKernel:
         else:
             importlib.import_module(skill_name)
         return sys.modules[skill_name]
-

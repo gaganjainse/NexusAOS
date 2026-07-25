@@ -3,11 +3,11 @@ SeshaAOS - Phase 5 Benchmark Harness
 Version: 1.0.0
 Description: VSC-Bench-equivalent benchmark tasks for AGOI correctness, effort, token efficiency, latency, autonomy, and biological health.
 """
+from pathlib import Path
+from typing import Any, Dict, List
 import asyncio
 import json
 import time
-from pathlib import Path
-from typing import Any, Dict, List
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 import sys
@@ -15,7 +15,7 @@ if str(BASE_DIR / "mcp_server" / "python") not in sys.path:
     sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
 
 try:
-    from services.Sesha_runtime import SeshaRuntime
+    from Agentic_Body.Agentic_Intelligence.planning.sesha_runtime import SeshaRuntime
     from tools.physiology_engine import PhysiologyEngine
     from tools.token_ledger import TokenLedger
     from tools.signal_router import SignalRouter
@@ -35,9 +35,9 @@ class BenchmarkResult:
         self.tokens_used = 0
         self.biological_health_ok = False
         self.error = None
-        self.metrics: Dict[str, Any] = {}
+        self.metrics: dict[str, Any] = {}
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "task_id": self.task_id,
             "category": self.category,
@@ -77,7 +77,7 @@ class AGOIBenchmark:
         self.orchestrator_engine = OrchestratorEngine(self.base_dir)
         self.database_receptor = DatabaseReceptor(self.base_dir)
         
-        self.results: List[BenchmarkResult] = []
+        self.results: list[BenchmarkResult] = []
 
     def _start_energy_snapshot(self):
         return self.physiology.get_state()["metabolism"]["current_energy"]
@@ -205,7 +205,7 @@ class AGOIBenchmark:
         self._assert_biological_health(result)
         return result
 
-    def run_suite(self) -> Dict[str, Any]:
+    def run_suite(self) -> dict[str, Any]:
         runners = [
             self.run_heal_system,
             self.run_cleanup_logs,
@@ -239,4 +239,3 @@ if __name__ == "__main__":
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps(report["summary"], indent=2))
-

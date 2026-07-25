@@ -1,10 +1,10 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - GitHub Repository Scanner
 Version: 1.0.0
 Description: Scans GitHub organizations/repos for patterns, extracts learnings, and feeds them into SeshaAOS.
 MIT License - can copy, adapt, improve from langchain-ai and other MIT-licensed repos.
 """
+from pathlib import Path
 import json
 import os
 import re
@@ -12,14 +12,13 @@ import sys
 import time
 import urllib.parse
 import urllib.request
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
-from typing import Dict, List, Optional, Any
+from typing import Optional, Any
 from dataclasses import dataclass, asdict
-from typing import Callable
+from typing import Any, Callable, Dict, Optional, Protocol
 
 
 @dataclass
@@ -31,14 +30,14 @@ class RepoInfo:
     language: str
     stars: int
     forks: int
-    topics: List[str]
-    license: Optional[str]
+    topics: list[str]
+    license: str
     url: str
     default_branch: str
     created_at: str
     updated_at: str
     size_kb: int
-    patterns: Dict[str, Any] = None
+    patterns: dict[str, Any] | None = None
     
     def __post_init__(self):
         if self.patterns is None:
@@ -48,7 +47,7 @@ class RepoInfo:
 class GitHubScanner:
     """Scans GitHub organizations and repositories for patterns and learnings."""
     
-    def __init__(self, base_dir: Path, token: Optional[str] = None):
+    def __init__(self, base_dir: Path, token: str | None = None):
         self.base_dir = base_dir
         self.token = token or os.environ.get("GITHUB_TOKEN")
         self.api_base = "https://api.github.com"
@@ -63,7 +62,7 @@ class GitHubScanner:
         self.scan_dir.mkdir(parents=True, exist_ok=True)
         
         # Pattern extractors
-        self.extractors: List[Callable[[Dict], Dict]] = [
+        self.extractors: list[Callable[[Dict], Dict]] = [
             self._extract_architecture_patterns,
             self._extract_testing_patterns,
             self._extract_ci_cd_patterns,
@@ -73,7 +72,7 @@ class GitHubScanner:
             self._extract_streaming_patterns,
         ]
     
-    def _request(self, url: str, params: Optional[Dict] = None) -> Optional[Dict]:
+    def _request(self, url: str, params: Dict | None = None) -> Dict:
         """Make authenticated GitHub API request."""
         if params:
             url = f"{url}?{urllib.parse.urlencode(params)}"
@@ -98,7 +97,7 @@ class GitHubScanner:
             print(f"Request error: {e}")
             return None
     
-    def scan_org(self, org: str, max_repos: int = 100) -> List[RepoInfo]:
+    def scan_org(self, org: str, max_repos: int = 100) -> list[RepoInfo]:
         """Scan all repositories in an organization."""
         repos = []
         page = 1
@@ -128,7 +127,7 @@ class GitHubScanner:
         
         return repos
 
-    def search_repos(self, query: str, sort: str = "stars", order: str = "desc", max_results: int = 10) -> List[RepoInfo]:
+    def search_repos(self, query: str, sort: str = "stars", order: str = "desc", max_results: int = 10) -> list[RepoInfo]:
         """Search for repositories on GitHub."""
         url = f"{self.api_base}/search/repositories"
         params = {
@@ -183,7 +182,7 @@ class GitHubScanner:
         
         return repo
     
-    def _get_repo_tree(self, repo: RepoInfo) -> Optional[List[Dict]]:
+    def _get_repo_tree(self, repo: RepoInfo) -> list[Dict]:
         """Get recursive tree of repository."""
         url = f"{self.api_base}/repos/{repo.full_name}/git/trees/{repo.default_branch}"
         params = {"recursive": "1"}
@@ -192,7 +191,7 @@ class GitHubScanner:
             return data["tree"]
         return None
     
-    def _identify_key_files(self, tree: List[Dict]) -> List[str]:
+    def _identify_key_files(self, tree: list[Dict]) -> list[str]:
         """Identify key files for pattern extraction."""
         key_patterns = [
             r".*\.py$", r".*\.ts$", r".*\.tsx$", r".*\.js$", r".*\.jsx$",
@@ -216,7 +215,7 @@ class GitHubScanner:
         # Limit to avoid too many API calls
         return key_files[:50]
     
-    def _get_file_content(self, repo: RepoInfo, file_path: str) -> Optional[str]:
+    def _get_file_content(self, repo: RepoInfo, file_path: str) -> str:
         """Get file content from repo."""
         url = f"{self.api_base}/repos/{repo.full_name}/contents/{file_path}"
         params = {"ref": repo.default_branch}
@@ -225,7 +224,7 @@ class GitHubScanner:
             import base64
             try:
                 return base64.b64decode(data["content"]).decode("utf-8", errors="ignore")
-            except:
+            except Exception:  # noqa: BLE001
                 return None
         return None
     
@@ -410,7 +409,7 @@ class GitHubScanner:
         content = file_info["content"]
         patterns = {}
         
-        if "async def" in content:
+        if "async de" in content:
             patterns["async_functions"] = True
         if "await " in content:
             patterns["await_usage"] = True
@@ -437,7 +436,7 @@ class GitHubScanner:
         with open(scan_file, "w", encoding="utf-8") as f:
             json.dump(scan_data, f, indent=2, default=str)
     
-    def generate_report(self, repos: List[RepoInfo]) -> Dict:
+    def generate_report(self, repos: list[RepoInfo]) -> Dict:
         """Generate aggregate report from all scanned repos."""
         total_stars = sum(r.stars for r in repos)
         total_forks = sum(r.forks for r in repos)

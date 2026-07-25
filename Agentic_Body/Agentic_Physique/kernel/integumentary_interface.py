@@ -1,16 +1,11 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-"""IntegumentaryInterface — Integumentary / Boundary System
-Biological analog: Skin, barrier protection, sensory interface, temperature regulation
-
-Responsibilities (1:1 biology mapping):
-- API gateway / boundary defense
-- Input/output sensory interface
-- Thermal regulation (system cooling/heating)
-- Barrier integrity checks
-- Wound detection and sealing
-"""
-
 from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+"""
+Integumentary Interface — System boundary, skin/barrier layer.
+"""
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -19,7 +14,6 @@ if str(_python_root) not in sys.path:
 import re
 import time
 from dataclasses import dataclass, field
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 TOOL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -30,20 +24,20 @@ class SkinLayer:
     name: str
     integrity: float = 100.0
     permeability: float = 0.0
-    last_compromised: Optional[float] = None
+    last_compromised: float | None = None
 
 
 @dataclass
 class IntegumentaryState:
-    layers: Dict[str, SkinLayer] = field(default_factory=dict)
+    layers: dict[str, SkinLayer] = field(default_factory=dict)
     temperature: float = 37.0
-    wounds: List[Dict] = field(default_factory=list)
+    wounds: list[Dict] = field(default_factory=list)
     barrier_breaches: int = 0
     last_check: float = field(default_factory=time.time)
 
 
 class IntegumentaryInterface:
-    """System boundary — skin/barrier layer."""
+    """System boundary - skin/barrier layer."""
 
     def __init__(self, base_dir: Path = TOOL_BASE_DIR):
         self.base_dir = base_dir
@@ -57,8 +51,8 @@ class IntegumentaryInterface:
             "hypodermis": SkinLayer(name="hypodermis", integrity=100.0, permeability=0.02),
         }
 
-    def inspect_boundary(self, request: Dict[str, Any]) -> Dict:
-        """Inspect incoming request — boundary defense."""
+    def inspect_boundary(self, request: dict[str, Any]) -> Dict:
+        """Inspect incoming request - boundary defense."""
         threats = self._detect_threats(request)
 
         if threats:
@@ -125,8 +119,8 @@ class IntegumentaryInterface:
             "status": self._health_status(avg_integrity),
         }
 
-    def _detect_threats(self, request: Dict[str, Any]) -> List[str]:
-        threats: List[str] = []
+    def _detect_threats(self, request: dict[str, Any]) -> list[str]:
+        threats: list[str] = []
         text = str(request).lower()
 
         threat_patterns = [
@@ -142,7 +136,7 @@ class IntegumentaryInterface:
 
         return threats
 
-    def _sanitize(self, request: Dict[str, Any]) -> Dict[str, Any]:
+    def _sanitize(self, request: dict[str, Any]) -> dict[str, Any]:
         sanitized = dict(request)
         sanitized.pop("__proto__", None)
         sanitized.pop("constructor", None)
@@ -159,7 +153,7 @@ class IntegumentaryInterface:
 
     def _assess_danger(self, input_data: Any) -> float:
         text = str(input_data).lower()
-        danger_keywords = ["delete", "drop", "rm -rf", "sudo", "password", "secret"]
+        danger_keywords = ["delete", "drop", "rm -r", "sudo", "password", "secret"]
         matches = sum(1 for kw in danger_keywords if kw in text)
         return min(1.0, matches * 0.25)
 

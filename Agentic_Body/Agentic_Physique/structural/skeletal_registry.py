@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SkeletalRegistry — Skeletal / Structural System
 Biological analog: Bones, cartilage, structural support, mineral storage
@@ -13,8 +12,8 @@ Responsibilities (1:1 biology mapping):
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -34,18 +33,18 @@ class Bone:
     id: str
     name: str
     schema_version: str
-    structure: Dict[str, Any]
+    structure: dict[str, Any]
     density: float = 80.0
-    last_migration: Optional[str] = None
+    last_migration: str | None = None
     created_at: float = field(default_factory=time.time)
 
 
 @dataclass
 class SkeletalState:
-    bones: Dict[str, Bone] = field(default_factory=dict)
-    marrow: Dict[str, Any] = field(default_factory=dict)  # config defaults
+    bones: dict[str, Bone] = field(default_factory=dict)
+    marrow: dict[str, Any] = field(default_factory=dict)  # config defaults
     calcium_reserves: float = 100.0
-    growth_plates: List[str] = field(default_factory=list)
+    growth_plates: list[str] = field(default_factory=list)
 
 
 class SkeletalRegistry:
@@ -55,7 +54,7 @@ class SkeletalRegistry:
         self.base_dir = base_dir
         self.state = SkeletalState()
 
-    def register_schema(self, name: str, schema: Dict[str, Any], version: str = "1.0.0") -> Dict:
+    def register_schema(self, name: str, schema: dict[str, Any], version: str = "1.0.0") -> Dict:
         """Register a new schema (bone)."""
         bone_id = str(uuid.uuid4())
         self.state.bones[bone_id] = Bone(
@@ -72,7 +71,7 @@ class SkeletalRegistry:
             "version": version,
         }
 
-    def migrate_schema(self, bone_id: str, new_version: str, migrations: Dict[str, Any]) -> Dict:
+    def migrate_schema(self, bone_id: str, new_version: str, migrations: dict[str, Any]) -> Dict:
         """Migrate schema to new version."""
         if bone_id not in self.state.bones:
             return {"migrated": False, "reason": "bone_not_found", "bone_id": bone_id}
@@ -88,7 +87,7 @@ class SkeletalRegistry:
             "new_version": new_version,
         }
 
-    def validate_structure(self, bone_id: str, data: Dict[str, Any]) -> Dict:
+    def validate_structure(self, bone_id: str, data: dict[str, Any]) -> Dict:
         """Validate data against registered schema."""
         if bone_id not in self.state.bones:
             return {"valid": False, "reason": "bone_not_found"}
@@ -114,7 +113,7 @@ class SkeletalRegistry:
         """Store config/defaults in marrow."""
         self.state.marrow[key] = value
 
-    def get_marrow(self, key: str, default: Any = None) -> Any:
+    def get_marrow(self, key: str, default: Any | None = None) -> Any:
         """Retrieve config/default from marrow."""
         return self.state.marrow.get(key, default)
 
@@ -144,7 +143,7 @@ class SkeletalRegistry:
             for bone_id, bone in self.state.bones.items()
         }
 
-    def _apply_migrations(self, structure: Dict[str, Any], migrations: Dict[str, Any]) -> Dict[str, Any]:
+    def _apply_migrations(self, structure: dict[str, Any], migrations: dict[str, Any]) -> dict[str, Any]:
         updated = dict(structure)
         for key, value in migrations.items():
             updated[key] = value

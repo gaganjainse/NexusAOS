@@ -1,20 +1,13 @@
 #!/usr/bin/env python3
-"""
-Rate-Limit Probe — Trial-and-Error LLM Provider Discovery
-References workspace design: .zcode/plans/plan-sess_... (LLM specialization / AB-AP balance)
-References: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md
-References AI client init: nexus-app/server.ts (GoogleGenAI / gemini-3.6-flash)
-Environment/config: nexus-app/.env.example (GEMINI_API_KEY only — no rate-limit config)
-Workspace keyword scan: rate_limit / max_requests / throttle / quota / api_limit = 0 hits.
-"""
-
+import sys
 import asyncio
 import os
-import sys
 import time
 import threading
 from pathlib import Path
-from typing import List, Dict, Optional, Tuple
+from typing import Dict, Final, Optional, Tuple
+
+"""
 
 # Workspace root anchor
 BASE_DIR = Path(__file__).resolve().parents[1]
@@ -35,23 +28,27 @@ sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
 # Model: "gemini-3.6-flash" (line 137); fallback simulated (line 121-125).
 
 # ------------------------------------------------------------------
+"""
 
+# Workspace root anchor
+BASE_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
 # Probe settings (gradual trial-and-error):
 PROBE_START_CONCURRENT = 1
 PROBE_MAX_CONCURRENT = 50
 PROBE_STEP = 5
 TIMEOUT_PER_REQUEST = 15.0  # seconds
-ERROR_PATTERNS: List[str] = [
+ERROR_PATTERNS: list[str] = [
     "rate limit", "quota exceeded", "too many requests", "429",
     "throttled", "resource_exhausted", "rate_limit_exceeded",
     "usage limit", "token quota", "api quota", "request quota",
 ]
 
 # Sustainable count tracking
-SUSTAINABLE_COUNT: Optional[int] = None
+SUSTAINABLE_COUNT: int | None = None
 RATE_LIMIT_ERROR_COUNT: int = 0
 TIMEOUT_ERROR_COUNT: int = 0
-REQUEST_LOG: List[Dict] = []
+REQUEST_LOG: list[Dict] = []
 
 
 def reference_specialization_framework() -> str:
@@ -81,14 +78,14 @@ class RateLimitProbe:
 
         self.api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
         self.rate_limit_config_found = False
-        self.config_notes: List[str] = []
+        self.config_notes: list[str] = []
 
         # Gather config state
         if self.env_path_example.exists():
             content = self.env_path_example.read_text(encoding="utf-8")
             if "rate" in content.lower() or "quota" in content.lower() or "throttle" in content.lower():
                 self.rate_limit_config_found = True
-                self.config_notes.append(f".env.example contains rate/quota keywords (line scan)")
+                self.config_notes.append(".env.example contains rate/quota keywords (line scan)")
             else:
                 self.config_notes.append(f".env.example exists ({self.env_path_example}) — only GEMINI_API_KEY and APP_URL; NO rate_limit/max_requests/throttle/quota settings.")
         if not self.env_path_local.exists():
@@ -109,7 +106,7 @@ class RateLimitProbe:
             "notes": self.config_notes,
         }
 
-    async def simulate_request(self, concurrent_id: int) -> Tuple[bool, Optional[str], float]:
+    async def simulate_request(self, concurrent_id: int) -> tuple[bool, str, float]:
         """Simulate a concurrent LLM call to the provider (referencing server.ts model)."""
         start = time.time()
         # In a real deployment this would call ai.models.generateContent()
@@ -158,9 +155,9 @@ class RateLimitProbe:
             "timeout_hits": sum(1 for msg in error_messages if "timeout" in msg.lower()),
         }
 
-    async def probe(self) -> List[Dict]:
+    async def probe(self) -> list[Dict]:
         global SUSTAINABLE_COUNT, RATE_LIMIT_ERROR_COUNT, TIMEOUT_ERROR_COUNT
-        log: List[Dict] = []
+        log: list[Dict] = []
         # Reference framework citation
         framework_note = reference_specialization_framework()
         log.append({"phase": "framework_reference", "citation": framework_note})
@@ -214,7 +211,7 @@ def main():
 
     print("\n[4] WORKSPACE KEYWORD SEARCH RESULTS")
     for kw in ["rate_limit", "max_requests", "throttle", "quota", "api_limit"]:
-        print(f"  - '{kw}': 0 matches")
+        print("  - '{kw}': 0 matches")
 
     print("\n[5] SPECIALIZATION FRAMEWORK REFERENCE (AB_AP_BALANCE_RULES.md)")
     framework_text = reference_specialization_framework()

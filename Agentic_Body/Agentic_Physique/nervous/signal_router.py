@@ -1,25 +1,21 @@
 # Specialization framework (AGENTS.md line 36-39): AB/AP balance + DNA (COMPLETE_ARCHITECTURE.md line 33-47) + governance (Law II moral alignment) + provenance (signal_history.json / bone_marrow.log tracking)
 """
-SeshaAOS - Signal Router (Postman / Gut / Microbiome)
-Version: 15.0.0-SPECIALIZED
-Description: Event routing with agent-to-agent messaging, applying specialization framework at every signal emission (AB/AP balance reference, DNA layer mapping, governance check, provenance tracking via evidentiality markers).
-"""
 import json
-import sys
 import threading
 import time
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L05_Memory.state_manager import StateManager
-from layers.L11_Data.soma_transcended import TranscendedSubstrate
-from layers.L08_Governance.sigil_x import SigilX
-from layers.L11_Data.binary_nervous import BinaryNervous
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
+from Agentic_Body.Agentic_Physique.nervous.soma_transcended import TranscendedSubstrate
+from Agentic_Body.Agentic_Soma.Foundation.governance.sigil_x import SigilX
+from Agentic_Body.Agentic_Physique.nervous.binary_nervous import BinaryNervous
+"""
 
 class SignalRouter:
     def __init__(self, base_dir: Path):
@@ -29,8 +25,8 @@ class SignalRouter:
         self.sigil_x = SigilX()
         self.bin_nervous = BinaryNervous(base_dir)
         self.lock = threading.Lock()
-        self.agent_queues: Dict[str, List[Dict]] = {}
-        self.agent_callbacks: Dict[str, List[callable]] = {}
+        self.agent_queues: dict[str, list[Dict]] = {}
+        self.agent_callbacks: dict[str, list[callable]] = {}
 
     def emit_signal(self, signal_type: str, payload: Dict, ttl_seconds: int = 300, evidentiality: str = "◊"):
         """
@@ -72,7 +68,7 @@ class SignalRouter:
             # Legacy agent delivery
             self._deliver_to_agents(signal_type, payload)
 
-    def get_active_signals(self) -> Dict[str, Dict]:
+    def get_active_signals(self) -> dict[str, Dict]:
         # Favor hot-state if available, fallback to SQLite
         active = self.state_mgr.get_active_signals()
         for sig in active:
@@ -81,7 +77,7 @@ class SignalRouter:
                 active[sig]["payload"] = hot
         return active
 
-    def aggregate_observe_stream(self, limit: int = 25) -> List[Dict]:
+    def aggregate_observe_stream(self, limit: int = 25) -> list[Dict]:
         active = self.get_active_signals()
         agg = []
         for sig, info in active.items():
@@ -139,7 +135,7 @@ class SignalRouter:
         self.emit_signal("AGENT_MSG", message, ttl_seconds=ttl_seconds)
         return {"queued": True, "message_id": message["id"]}
 
-    def agent_poll(self, agent_id: str, limit: int = 10) -> List[Dict]:
+    def agent_poll(self, agent_id: str, limit: int = 10) -> list[Dict]:
         if agent_id not in self.agent_queues:
             self.agent_queues[agent_id] = []
         queue = self.agent_queues[agent_id]
@@ -166,7 +162,7 @@ class SignalRouter:
         for fn in self.agent_callbacks.get(agent_id, []):
             try:
                 fn(message)
-            except Exception:
+            except Exception:  # noqa: BLE001
                 pass
 
     def _clean_agent_queues(self):

@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Google Cloud Receptor (L06)
 Version: 13.0.0
@@ -6,17 +5,16 @@ Description: High-priority interface for Google Vertex AI and Gemini APIs.
 Implements Priority Headers and Global Failover to minimize RESOURCE_EXHAUSTED errors.
 """
 
+from pathlib import Path
+from typing import Any, Optional, Type
 import hashlib
 import json
 import random
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, Optional
 
-from layers.L05_Memory.state_manager import StateManager
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
 
-# Ensure root is in path
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
@@ -29,7 +27,7 @@ class GoogleCloudReceptor:
         self.priority_endpoint = "global-vertexai.googleapis.com"
         self.use_priority_lane = True
 
-    def get_context_cache(self, content: str) -> Optional[str]:
+    def get_context_cache(self, content: str) -> str:
         """Neural 13.0: Checks for an existing valid context cache on Google's servers."""
         content_hash = hashlib.sha256(content.encode()).hexdigest()
         cache_key = "Sesha_system_context"
@@ -46,7 +44,7 @@ class GoogleCloudReceptor:
         self.state_mgr.upsert_context_cache("Sesha_system_context", cache_id, ttl_seconds, content_hash)
         print(f"Context Cache Created & Registered: {cache_id}")
 
-    def get_priority_headers(self) -> Dict[str, str]:
+    def get_priority_headers(self) -> dict[str, str]:
         """Returns headers to force Google to prioritize our request."""
         headers = {
             "Content-Type": "application/json",
@@ -76,4 +74,3 @@ if __name__ == "__main__":
     print("Priority Headers:", gcr.get_priority_headers())
     print("Resolved Endpoint (Healthy):", gcr.resolve_endpoint())
     print("Resolved Endpoint (Congested):", gcr.resolve_endpoint(1))
-

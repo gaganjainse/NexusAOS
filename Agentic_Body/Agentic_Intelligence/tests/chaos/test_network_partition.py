@@ -2,9 +2,10 @@
 SeshaAOS - Chaos Test: Network Partition
 Description: Simulate offline during LLM call → verify retry.
 """
-import sys
-import unittest
 from pathlib import Path
+import sys
+
+import unittest
 
 BASE_DIR = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
@@ -21,4 +22,3 @@ class TestNetworkPartition(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

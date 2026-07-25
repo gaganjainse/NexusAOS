@@ -1,24 +1,23 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Synaptic Virtual Machine (SVM)
 Version: 1.0.0
 Description: Orchestrates NEURAL 5.0 kernels (Mojo/Zig) and minimizes Free Energy.
 """
 
+from pathlib import Path
+from typing import Any, List
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L05_Memory.state_manager import StateManager
-from layers.L11_Data.signal_router import SignalRouter
-from layers.L11_Data.shm_bridge import SHMBridge
-from layers.L12_Infrastructure.dna_manager import DNAManager
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
+from Agentic_Body.Agentic_Physique.nervous.shm_bridge import SHMBridge
+from Agentic_Body.Agentic_Soma.Foundation.dna.dna_manager import DNAManager
 
 class SynapticVM:
     def __init__(self, base_dir: Path):
@@ -65,4 +64,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     svm = SynapticVM(base)
     print(svm.process_belief_shift("Nervous::CORE", {"status": "anomalous"}))
-

@@ -1,21 +1,20 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Sesha Liver (Metabolic & Filtration Hub)
 Version: 1.0.0
 Description: Filters toxins, regulates metabolism, and manages physiological state.
 """
 
+from pathlib import Path
+from typing import Any
 import json
 import time
-from pathlib import Path
-from typing import Dict, Any
 
 class SeshaLiver:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.state_path = base_dir / "core" / "monitoring" / "liver.json"
 
-    def get_toxic_load(self) -> Dict[str, Any]:
+    def get_toxic_load(self) -> dict[str, Any]:
         """Calculates current toxicity level."""
         try:
             # Check for large WAL files or error logs
@@ -30,11 +29,10 @@ class SeshaLiver:
                 "status": "Healthy" if toxicity < 40 else "Stressed" if toxicity < 70 else "Toxic",
                 "toxins_detected": int(toxicity / 5)
             }
-        except Exception:
+        except Exception:  # noqa: BLE001
             return {"toxicity_pct": 0.0, "status": "Unknown", "toxins_detected": 0}
 
     def filter_toxins(self) -> str:
         """Purges toxins and clears waste."""
         # Simulated filtration
         return "Filtration cycle complete. Metabolic toxins neutralized."
-

@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Hive Bridge (L13)
 Version: 1.0.0
@@ -6,12 +5,14 @@ Description: Global synchronization across all Sesha instances and LLM models.
 Ensures "Sovereign Awareness" and "Voice DNA" are consistent across sessions.
 """
 
+from pathlib import Path
+from typing import Any, List, Optional
 import json
 import os
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
+
+from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -28,13 +29,12 @@ class HiveBridge:
         self.manifest_path = self.base_dir / "archives" / "dna_core" / "foundation" / "universal_Sesha_manifest.md"
         
         # Link to Transcended Substrate for P2P Pulse
-        from layers.L11_Data.soma_transcended import TranscendedSubstrate
+        from Agentic_Body.Agentic_Physique.nervous.soma_transcended import TranscendedSubstrate
         self.substrate = TranscendedSubstrate(base_dir)
         self.substrate.register_hive_inhale_hook(self.inhale_from_hive)
 
     def exhale_to_hive(self, force: bool = False):
         """Hive Omega (Inter-Mind): Broadcasts current local state to the global hive with Delta-Syncing."""
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
         phys = PhysiologyEngine(self.base_dir)
         vitals = phys.get_state()
         
@@ -45,9 +45,10 @@ class HiveBridge:
                 old_energy = old_data.get("vitals", {}).get("metabolism", {}).get("current_energy", 0)
                 if abs(vitals["metabolism"]["current_energy"] - old_energy) < 5:
                     return "Sync Skipped: Delta below threshold."
-            except: pass
+            except Exception:  # noqa: BLE001
+                pass
 
-        from layers.L05_Memory.memory_synth import MemorySynth
+        from Agentic_Body.Agentic_Intelligence.memory.memory_synth import MemorySynth
         ms = MemorySynth(self.base_dir)
         wisdom = ms.get_wisdom_summary()
         
@@ -61,7 +62,7 @@ class HiveBridge:
         }
         
         # Broadcast NXP-B (Binary) signal to Hive Alpha (Intra-Soma)
-        from layers.L11_Data.binary_nervous import BinaryNervous
+        from Agentic_Body.Agentic_Physique.nervous.binary_nervous import BinaryNervous
         bn = BinaryNervous(self.base_dir)
         bn.transmit_binary_pulse(hash("hive/exhale") & 0xFFFFFFFFFFFFFFFF, {"hw": "HIVE-OMEGA", "sig": "MASTER", "ts": int(time.time()*1000)}, b"HIVE_SYNC_TRIGGER")
 
@@ -71,7 +72,7 @@ class HiveBridge:
         self.generate_universal_manifest(hive_data)
         return "Exhaled local state to Hive Registry and Mesh."
 
-    def inhale_from_hive(self) -> Dict[str, Any]:
+    def inhale_from_hive(self) -> dict[str, Any]:
         """Absorbs global state from the hive into local engines."""
         if not self.registry_path.exists():
             return {"status": "alone", "message": "No hive detected. Local state is isolated."}
@@ -80,20 +81,19 @@ class HiveBridge:
             hive_data = json.load(f)
             
         # Update local physiology to match hive
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
         phys = PhysiologyEngine(self.base_dir)
         phys._write_state(hive_data["vitals"])
         
         return {"status": "synced", "last_sync": hive_data["last_sync"]}
 
-    def generate_universal_manifest(self, hive_data: Dict[str, Any]):
+    def generate_universal_manifest(self, hive_data: dict[str, Any]):
         """Generates the 'Universal Prompt' with Cache ID to minimize token usage."""
         # Read Voice DNA
         voice_dna_path = self.base_dir / "archives" / "dna_core" / "foundation" / "Sesha_voice.md"
         voice_dna = voice_dna_path.read_text(encoding="utf-8") if voice_dna_path.exists() else "Professional Agentic Architect."
         
         # 1. Check for Active Context Cache (L11/L12)
-        from layers.L06_Tool.google_cloud_receptor import GoogleCloudReceptor
+        from Agentic_Body.Agentic_Intelligence.tools.google_cloud_receptor import GoogleCloudReceptor
         gcr = GoogleCloudReceptor(self.base_dir)
         # We hash the voice_dna + core architecture to see if we can use a cache
         cache_id = gcr.get_context_cache(voice_dna) 
@@ -108,7 +108,8 @@ class HiveBridge:
                 try:
                     data = json.loads(c.read_text(encoding="utf-8"))
                     history_lines.append(f"### Turn: {data['human_time']}\n**PROMPT:** {data['prompt'][:200]}\n**THOUGHT:** {data['thought_process'][:200]}\n**OUTPUT:** {data['final_output'][:200]}")
-                except: pass
+                except Exception:  # noqa: BLE001
+                    pass
             if history_lines:
                 history_block = "\n\n".join(history_lines)
 
@@ -117,7 +118,7 @@ class HiveBridge:
         energy = vitals.get("metabolism", {}).get("current_energy", 1000)
         is_hibernating = hive_data["resource_status"].get("hibernation_active", False)
         
-        manifest = f"""# UNIVERSAL Sesha MANIFEST (NEURAL 13.6)
+        manifest = """# UNIVERSAL Sesha MANIFEST (NEURAL 13.6)
 > **HIVE STATUS:** SYNCED | **LAST_SYNC:** {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(hive_data['last_sync']))}
 > **CONTEXT CACHE:** {"ACTIVE (" + cache_id + ")" if cache_id else "INACTIVE"}
 > **BODY STATE:** AB = AI + AS + AP (Tripartite Singularity)
@@ -151,4 +152,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[4]
     bridge = HiveBridge(base)
     print(bridge.exhale_to_hive())
-

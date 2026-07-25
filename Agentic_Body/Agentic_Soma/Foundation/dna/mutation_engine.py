@@ -1,17 +1,16 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Mutation Engine
 Version: 1.0.0
 Description: Enables autonomous rewriting of the OS DNA (Markdown artifacts).
 """
 
+from datetime import datetime
+from pathlib import Path
+import json
 import os
 import shutil
 import subprocess
 import sys
-import sys
-from datetime import datetime
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -28,7 +27,6 @@ class MutationEngine:
         if not self.mutation_log_path.parent.exists():
             self.mutation_log_path.parent.mkdir(parents=True, exist_ok=True)
         if not self.mutation_log_path.exists():
-            import json
             with open(self.mutation_log_path, "w", encoding="utf-8") as f:
                 json.dump([], f)
 
@@ -72,7 +70,6 @@ class MutationEngine:
             return f"Mutation failed: {str(e)}"
 
     def _log_mutation(self, file_path: str, reason: str):
-        import json
         with open(self.mutation_log_path, "r", encoding="utf-8") as f:
             history = json.load(f)
 
@@ -103,4 +100,3 @@ if __name__ == "__main__":
         "**Evolutionary Note:** Tested Mutation.\n\n**Navigation:**",
         "Verifying Phase 8 Mutation Engine."
     ))
-

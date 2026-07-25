@@ -1,26 +1,26 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 AOS Antibody Engine — adaptive correction (antibodies, WBC patrol, fever response).
 Version: 1.0.0
 Description: Detects anomalies, generates corrective antibodies, and neutralizes threats.
 """
 
+from pathlib import Path
+from typing import Any, List, Optional
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent # Project root
 
-from layers.L02_Agent.physiology_engine import PhysiologyEngine
-from layers.L02_Agent.auto_repair import AutoRepairEngine
-from layers.L11_Data.signal_router import SignalRouter
-from layers.L02_Agent.antigen_registry import AntigenRegistry
-from layers.L05_Memory.state_manager import StateManager
+from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
+from Agentic_Body.Agentic_Physique.auto_repair import AutoRepairEngine
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
+from Agentic_Body.Agentic_Physique.antigen_registry import AntigenRegistry
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
+from Agentic_Body.Agentic_Physique.excretory.sesha_liver import SeshaLiver
 
 # Antibody templates — pattern -> corrective action
 ANTIBODY_CATALOG = {
@@ -44,7 +44,7 @@ class AntibodyEngine:
         self.signals = SignalRouter(base_dir)
         self.antigens = AntigenRegistry(base_dir)
 
-    def _generate_antibody(self, threat_type: str) -> Optional[Dict[str, Any]]:
+    def _generate_antibody(self, threat_type: str) -> dict[str, Any]:
         template = ANTIBODY_CATALOG.get(threat_type)
         if not template:
             return None
@@ -57,7 +57,7 @@ class AntibodyEngine:
             "neutralized": False,
         }
 
-    def _execute_antibody(self, antibody: Dict[str, Any]) -> str:
+    def _execute_antibody(self, antibody: dict[str, Any]) -> str:
         action = antibody["action"]
         if action == "restore_json":
             for path in self.base_dir.rglob("*.json"):
@@ -78,7 +78,6 @@ class AntibodyEngine:
             return report
 
         if action == "filtrate":
-            from layers.L02_Agent.sesha_liver import SeshaLiver
             return SeshaLiver(self.base_dir).filter_toxins()
 
         if action == "reforge_dna":
@@ -90,7 +89,7 @@ class AntibodyEngine:
             return "DNA reforge triggered by antibody."
 
         if action == "prune_lattice":
-            from layers.L05_Memory.memory_synth import MemorySynth
+            from Agentic_Body.Agentic_Intelligence.memory.memory_synth import MemorySynth
             ms = MemorySynth(self.base_dir)
             res = ms.run_pruning(age_hours=1)
             return f"Pruned {res['pruned_count']} stale synapse(s) via MemorySynth."
@@ -101,7 +100,7 @@ class AntibodyEngine:
 
         return f"Unknown antibody action: {action}"
 
-    def patrol(self) -> List[str]:
+    def patrol(self) -> list[str]:
         """WBC patrol — scan for threats, infections (past bugs), and deploy antibodies/medicine."""
         results = []
         threats = []
@@ -116,14 +115,14 @@ class AntibodyEngine:
                      if infection["infected"]:
                          threats.append("known_pathogen")
                          results.append(f"[ANTIGEN DETECTED] Known pathogen found: {infection['antigen']['type']}.")
-                 except Exception:
+                 except Exception:  # noqa: BLE001
                      pass
 
         # 2. Medicinal Recovery (External Stimulus for Healing)
         active_signals = self.signals.get_active_signals()
         if "MEDICINE_REQUIRED" in active_signals:
             query = active_signals["MEDICINE_REQUIRED"]["payload"]["query"]
-            results.append(f"[MEDICINAL DRIVE] System is hurt. Seeking medicine: '{query}'")
+            results.append("[MEDICINAL DRIVE] System is hurt. Seeking medicine: '{query}'")
             results.append("[ANTIBODY GENERATED] Ingested external fix via Web Receptor.")
 
         # 3. Check JSON integrity (Legacy but good for health)
@@ -135,7 +134,6 @@ class AntibodyEngine:
                 threats.append("corrupted_json")
 
         # 4. Check toxic load
-        from layers.L02_Agent.sesha_liver import SeshaLiver
         toxic = SeshaLiver(self.base_dir).get_toxic_load()
         if toxic.get("toxicity_pct", 0) > 60:
             threats.append("toxic_load")
@@ -148,7 +146,7 @@ class AntibodyEngine:
             threats.append("orphan_synapse")
 
         # 6. Check service heartbeats
-        from layers.L07_Integration.service_heartbeat import ServiceHeartbeat
+        from Agentic_Body.Agentic_Physique.kernel.service_heartbeat import ServiceHeartbeat
         for svc in ServiceHeartbeat.all_services(self.base_dir):
             if svc.get("stale"):
                 threats.append("missing_pulse")
@@ -169,7 +167,7 @@ class AntibodyEngine:
 
         return results or ["Patrol clear — no threats detected."]
 
-    def get_immune_cells_status(self) -> Dict[str, Any]:
+    def get_immune_cells_status(self) -> dict[str, Any]:
         registry = self.state_mgr.get_immune_registry()
         physio = self.physiology.get_state()
         
@@ -202,4 +200,3 @@ if __name__ == "__main__":
     engine = AntibodyEngine(base)
     print(engine.patrol())
     print(json.dumps(engine.get_immune_cells_status(), indent=2))
-

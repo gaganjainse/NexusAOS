@@ -1,27 +1,21 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 # Provenance tracking: links audit/provenance trail (AUDIT_REPORT.md line 1-149 audit trail; mesh_hive_sync_status.md sync status; COMMIT_MESSAGE.md commit 40203ec NEURAL 15.0 specialization cycle; dataset/11_SYSTEM_MAPPING.md 11-system mapping + provenance framework; saved logs: bone_marrow.log / physiology.json / signal_history.json). Reference special framework (AGENTS.md line 36-39: specialization mandate + provenance tracking + evolution tracking). Provenance applies to benchmark execution / model comparison framework.
+import sys
+
 """
-SeshaAOS - OpenRouter Benchmarking Infrastructure
-Version: 1.0.0
-Description: Benchmark AGOI agents against OpenRouter models with VSC-Bench equivalent tasks.
+Benchmark runner for OpenRouter model comparison.
 """
+
+from collections import defaultdict
 import asyncio
 import hashlib
 import json
 import os
-import sys
 import time
 from dataclasses import dataclass, asdict, field
-from dataclasses import dataclass, asdict, field
-from datetime import datetime
 from datetime import datetime
 from enum import Enum
-from enum import Enum
 from pathlib import Path
-from pathlib import Path
-from typing import Dict, List, Any, Optional, Callable
-from typing import Dict, List, Any, Optional, Callable
+from typing import Any, Callable, Dict, Optional, Self, Type
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -45,8 +39,8 @@ class BenchmarkTask:
     category: BenchmarkCategory
     description: str
     prompt_template: str
-    expected_tools: List[str]
-    success_criteria: Dict[str, Any]
+    expected_tools: list[str]
+    success_criteria: dict[str, Any]
     timeout_sec: int = 300
     energy_budget: int = 1000
     max_tool_calls: int = 20
@@ -63,16 +57,16 @@ class BenchmarkResult:
     tokens_used: int
     energy_consumed: int
     tokens_per_sec: float
-    biological_health: Dict[str, Any]
-    error: Optional[str] = None
-    metrics: Dict[str, Any] = field(default_factory=dict)
+    biological_health: dict[str, Any]
+    error: str | None = None
+    metrics: dict[str, Any] = field(default_factory=dict)
     timestamp: str = field(default_factory=lambda: datetime.now().isoformat())
 
 
 class OpenRouterClient:
     """OpenRouter API client for model access."""
     
-    def __init__(self, api_key: Optional[str] = None, base_url: str = "https://openrouter.ai/api/v1"):
+    def __init__(self, api_key: str | None = None, base_url: str = "https://openrouter.ai/api/v1"):
         self.api_key = api_key or os.environ.get("OPENROUTER_API_KEY")
         self.base_url = base_url
         if not self.api_key:
@@ -80,8 +74,8 @@ class OpenRouterClient:
     
     async def chat_completion(self, 
                               model: str, 
-                              messages: List[Dict], 
-                              tools: Optional[List[Dict]] = None,
+                              messages: list[Dict], 
+                              tools: list[Dict] | None = None,
                               temperature: float = 0.7,
                               max_tokens: int = 4000) -> Dict:
         """Call OpenRouter chat completion endpoint."""
@@ -125,9 +119,9 @@ class BenchmarkRunner:
         self.results_dir = base_dir / "core" / "monitoring" / "benchmarks"
         self.results_dir.mkdir(parents=True, exist_ok=True)
         self.tasks = self._load_default_tasks()
-        self.results: List[BenchmarkResult] = []
+        self.results: list[BenchmarkResult] = []
     
-    def _load_default_tasks(self) -> List[BenchmarkTask]:
+    def _load_default_tasks(self) -> list[BenchmarkTask]:
         """Load VSC-Bench equivalent benchmark tasks for AGOI."""
         return [
             # Correctness Tasks
@@ -289,7 +283,7 @@ class BenchmarkRunner:
         start_time = time.time()
         
         # Initialize agent physiology
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
+        from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
         physiology = PhysiologyEngine(self.base_dir)
         physiology.consume_energy(0)  # Initialize
         
@@ -359,7 +353,7 @@ class BenchmarkRunner:
                 error=str(e)
             )
     
-    def _get_tool_schemas(self, tool_names: List[str]) -> List[Dict]:
+    def _get_tool_schemas(self, tool_names: list[str]) -> list[Dict]:
         """Get OpenRouter tool schemas for expected tools."""
         # Simplified - would map to actual MCP tool schemas
         tool_map = {
@@ -396,7 +390,7 @@ class BenchmarkRunner:
         
         return [{"type": "function", "function": tool_map.get(name, {"name": name, "description": f"Tool: {name}"})} for name in tool_names]
     
-    async def run_suite(self, models: List[str], agent_id: str = "benchmark-agent") -> Dict:
+    async def run_suite(self, models: list[str], agent_id: str = "benchmark-agent") -> Dict:
         """Run full benchmark suite across models."""
         all_results = []
         
@@ -429,7 +423,7 @@ class BenchmarkRunner:
         
         return summary
     
-    def _generate_summary(self, results: List[BenchmarkResult]) -> Dict:
+    def _generate_summary(self, results: list[BenchmarkResult]) -> Dict:
         """Generate benchmark summary report."""
         by_model = defaultdict(list)
         by_category = defaultdict(list)
@@ -475,7 +469,7 @@ class BenchmarkRunner:
 async def main():
     """Run benchmarks via OpenRouter."""
     import argparse
-    
+
     parser = argparse.ArgumentParser(description="SeshaAOS OpenRouter Benchmark")
     parser.add_argument("--models", nargs="+", default=[
         "openai/gpt-4o",

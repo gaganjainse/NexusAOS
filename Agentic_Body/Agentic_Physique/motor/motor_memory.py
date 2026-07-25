@@ -1,7 +1,7 @@
 
-import sys
-import json
 from pathlib import Path
+import json
+import sys
 
 class MotorMemory:
     def __init__(self, base_dir: Path):

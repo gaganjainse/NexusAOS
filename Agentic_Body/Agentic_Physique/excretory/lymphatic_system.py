@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 LymphaticSystem — Lymphatic / Waste Collection System
 Biological analog: Lymphatic vessels, lymph nodes, fluid balance, immune surveillance
@@ -13,8 +12,8 @@ Responsibilities (1:1 biology mapping):
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -41,8 +40,8 @@ class LymphNode:
 @dataclass
 class LymphaticState:
     fluid_volume: float = 100.0
-    lymph_nodes: Dict[str, LymphNode] = field(default_factory=dict)
-    debris: List[Dict[str, Any]] = field(default_factory=list)
+    lymph_nodes: dict[str, LymphNode] = field(default_factory=dict)
+    debris: list[dict[str, Any]] = field(default_factory=list)
     total_drained: float = 0.0
 
 
@@ -59,7 +58,7 @@ class LymphaticSystem:
         for region in regions:
             self.state.lymph_nodes[region] = LymphNode(id=str(uuid.uuid4()), region=region)
 
-    def collect_debris(self, source_system: str, debris_item: Dict[str, Any]) -> Dict:
+    def collect_debris(self, source_system: str, debris_item: dict[str, Any]) -> Dict:
         """Collect waste/debris from a system."""
         debris_entry = {
             "id": str(uuid.uuid4()),
@@ -75,7 +74,7 @@ class LymphaticSystem:
 
         return {"collected": True, "debris_id": debris_entry["id"], "region": region}
 
-    def drain(self, region: Optional[str] = None) -> Dict:
+    def drain(self, region: str | None = None) -> Dict:
         """Drain lymph nodes and clear debris."""
         drained_total = 0
         drained_regions = []

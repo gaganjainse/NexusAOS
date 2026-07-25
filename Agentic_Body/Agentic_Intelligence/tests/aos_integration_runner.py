@@ -3,9 +3,9 @@ AOS Integration Test Suite
 Run: python tests/test_aos_integration.py
 """
 
+from pathlib import Path
 import json
 import sys
-from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PYTHON_DIR = ROOT / "mcp_server" / "python"
@@ -30,26 +30,26 @@ def main():
     print("=== AOS Integration Tests ===\n")
 
     def t_physiology():
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
+        from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
         e = PhysiologyEngine(ROOT)
         s = e.get_state()
         assert "metabolism" in s and "endocrine" in s and "immune" in s
 
     def t_gate():
-        from layers.L08_Governance.physiological_gate import PhysiologicalGate
+        from Agentic_Body.Agentic_Soma.Foundation.governance.physiological_gate import PhysiologicalGate
         g = PhysiologicalGate(ROOT)
         allowed, _ = g.check("propose_dna_mutation")
         assert isinstance(allowed, bool)
 
     def t_senses():
-        from layers.L07_Integration.Sesha_senses import SeshaSenses
+        from Agentic_Body.Agentic_Physique.kernel.Sesha_senses import SeshaSenses
         s = SeshaSenses(ROOT)
         s.poll()
         assert "watch_paths" in s.get_status()
 
     def t_motor():
-        from layers.L02_Agent.motor_engine import MotorEngine
-        from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
+        from Agentic_Body.Agentic_Physique.motor_engine import MotorEngine
+        from Agentic_Body.Agentic_Soma.Foundation.dna.Sesha_lattice import LatticeEngine
         lat = LatticeEngine(ROOT)
         motor = MotorEngine(ROOT)
         lat.fire_synapse("Test", "Motor", "MOTOR:write:core/monitoring/test_motor.tmp:test")
@@ -59,7 +59,7 @@ def main():
 
     def t_orchestrator():
         import time
-        from layers.L01_Planning.orchestrator_engine import OrchestratorEngine
+        from Agentic_Body.Agentic_Intelligence.planning.orchestrator_engine import OrchestratorEngine
         o = OrchestratorEngine(ROOT)
         o.state_mgr.queue_directive({
             "id": f"test-{int(time.time())}",
@@ -71,26 +71,26 @@ def main():
         assert "directives" in tick
 
     def t_antibody():
-        from layers.L02_Agent.antibody_engine import AntibodyEngine
+        from Agentic_Body.Agentic_Physique.antibody_engine import AntibodyEngine
         a = AntibodyEngine(ROOT)
         a.patrol()
         status = a.get_immune_cells_status()
         assert "wbc_count" in status
 
     def t_cellular():
-        from layers.L02_Agent.cellular_engine import CellularEngine
+        from Agentic_Body.Agentic_Physique.cellular_engine import CellularEngine
         r = CellularEngine(ROOT).full_cell_report()
         assert r["total_components"] >= 10
 
     def t_fission_fusion():
-        from layers.L02_Agent.fission_fusion_engine import FissionFusionEngine
+        from Agentic_Body.Agentic_Physique.fission_fusion_engine import FissionFusionEngine
         ff = FissionFusionEngine(ROOT)
         result = ff.fusion("hq", "core", "test_fusion_tmp")
         assert result.get("allowed") is not None
         (ROOT / "core/pulses/test_fusion_tmp.nxp").unlink(missing_ok=True)
 
     def t_vision():
-        from layers.L06_Tool.vision_engine import VisionEngine
+        from Agentic_Body.Agentic_Intelligence.tools.vision_engine import VisionEngine
         v = VisionEngine(ROOT)
         r = v.analyze_image("core/monitoring/physiology.json")
         assert "error" in r or "size_bytes" in r
@@ -108,7 +108,7 @@ def main():
         assert (ROOT / ".cursor/rules/aos-constitution.mdc").exists()
 
     def t_heartbeats():
-        from layers.L07_Integration.service_heartbeat import ServiceHeartbeat
+        from Agentic_Body.Agentic_Physique.kernel.service_heartbeat import ServiceHeartbeat
         services = ServiceHeartbeat.all_services(ROOT)
         assert isinstance(services, list)
 
@@ -136,4 +136,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(0 if main() else 1)
-

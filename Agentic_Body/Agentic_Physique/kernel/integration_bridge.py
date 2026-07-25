@@ -1,35 +1,33 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Integration Bridge (L7)
 Version: 13.0.0
 Description: The Skin - Connects Sesha to Host OS vitals.
 """
 
+from pathlib import Path
+from typing import Any
 import json
 import os
 import shutil
 import subprocess
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any
 
-# Ensure root is in path
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L11_Data.signal_router import SignalRouter
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
 
 class IntegrationBridge:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.signals = SignalRouter(base_dir)
         
-        from layers.L06_Tool.google_cloud_receptor import GoogleCloudReceptor
+        from Agentic_Body.Agentic_Intelligence.tools.google_cloud_receptor import GoogleCloudReceptor
         self.cloud = GoogleCloudReceptor(base_dir)
 
-    def scan_host_vitals(self) -> Dict[str, Any]:
+    def scan_host_vitals(self) -> dict[str, Any]:
         """Scans the host (Windows/Linux) and emits biosignals."""
         vitals = {}
         
@@ -41,8 +39,9 @@ class IntegrationBridge:
             
             if disk_pct > 90:
                 self.signals.emit_signal("ISCHEMIA", {"source": "disk", "level": disk_pct}, ttl_seconds=600)
-        except: pass
-            
+        except Exception:  # noqa: BLE001
+            pass
+        
         # 2. CPU Pressure (Hypoxia Analog)
         try:
             res = subprocess.check_output("wmic cpu get loadpercentage", shell=True).decode()
@@ -51,8 +50,11 @@ class IntegrationBridge:
             
             if load > 85:
                 self.signals.emit_signal("HYPOXIA", {"source": "cpu", "level": load}, ttl_seconds=300)
-        except: pass
-            
+        except Exception:  # noqa: BLE001
+            pass
+        except Exception:  # noqa: BLE001
+            pass
+        
         return vitals
 
     def execute_with_backoff(self, func: callable, *args, **kwargs) -> Any:
@@ -67,7 +69,7 @@ class IntegrationBridge:
                 err_msg = str(e).upper()
                 if "RESOURCE_EXHAUSTED" in err_msg or "429" in err_msg:
                     # Trigger Somatic Hibernation
-                    from layers.L02_Agent.physiology_engine import PhysiologyEngine
+                    from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
                     phys = PhysiologyEngine(self.base_dir)
                     phys.trigger_hibernation(429)
                     
@@ -83,4 +85,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     bridge = IntegrationBridge(base)
     print(json.dumps(bridge.scan_host_vitals(), indent=2))
-

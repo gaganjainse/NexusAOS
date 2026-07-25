@@ -1,15 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Native Senses (Watchdog-Based File Watching)
 Version: 15.0.0
 Description: Real-time filesystem monitoring for sensory events using watchdog.
 """
-import sys
-import time
 from pathlib import Path
 from typing import Optional
-from watchdog.observers import Observer
+import sys
+import time
+
 from watchdog.events import FileSystemEventHandler
+from watchdog.observers import Observer
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:

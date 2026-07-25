@@ -1,16 +1,10 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-"""
-ThalamicGate — Thalamic gating layer
-Biological analog: Thalamus as sensory relay and consciousness filter
-
-Responsibilities (1:1 biology mapping):
-- Sensory relay gating
-- Consciousness/awareness filter
-- Attention routing pre-filter
-- Cortical broadcast gating
-"""
-
 from __future__ import annotations
+
+"""
+Thalamic Gate - Consciousness/awareness filter.
+"""
+
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -19,7 +13,7 @@ if str(_python_root) not in sys.path:
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Set
+from typing import Dict, Optional, Set
 
 TOOL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -32,16 +26,16 @@ class ThalamicState:
 
 
 class ThalamicGate:
-    """Thalamic gating — consciousness/awareness filter."""
+    """Thalamic gating - consciousness/awareness filter."""
 
     def __init__(self, base_dir: Path = TOOL_BASE_DIR):
         self.base_dir = base_dir
         self.state = ThalamicState()
-        self.allowed_signal_types: Set[str] = {"SENSE", "DIRECTIVE", "INTERNAL"}
-        self.blocked_signal_types: Set[str] = set()
+        self.allowed_signal_types: set[str] = {"SENSE", "DIRECTIVE", "INTERNAL"}
+        self.blocked_signal_types: set[str] = set()
 
     def check(self, tool_name: str) -> Dict:
-        """Thalamic gating — consciousness filter."""
+        """Thalamic gating - consciousness filter."""
         blocked = tool_name in self.blocked_signal_types
         if blocked:
             self.state.gated_signals += 1

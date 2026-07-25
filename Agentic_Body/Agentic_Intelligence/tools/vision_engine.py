@@ -1,15 +1,13 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
 AOS Vision Engine — image analysis, metadata extraction, and structured understanding.
 Version: 1.0.0
 """
 
+from pathlib import Path
+from typing import Any, Optional, Tuple
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, Optional, Tuple
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -28,7 +26,7 @@ class VisionEngine:
             p = self.base_dir / image_path
         return p.resolve()
 
-    def analyze_image(self, image_path: str) -> Dict[str, Any]:
+    def analyze_image(self, image_path: str) -> dict[str, Any]:
         """Extracts image metadata and performs basic visual analysis."""
         path = self._resolve_path(image_path)
         if not path.exists():
@@ -53,7 +51,7 @@ class VisionEngine:
                 for x, y in [(0, 0), (img.width - 1, 0), (0, img.height - 1), (img.width // 2, img.height // 2)]:
                     try:
                         pixels.append(img.getpixel((min(x, img.width - 1), min(y, img.height - 1))))
-                    except Exception:
+                    except Exception:  # noqa: BLE001
                         pass
                 if pixels and isinstance(pixels[0], tuple):
                     avg = tuple(int(sum(c[i] for c in pixels) / len(pixels)) for i in range(len(pixels[0])))
@@ -91,7 +89,7 @@ class VisionEngine:
 
         return result
 
-    def capture_screen(self, region: Optional[Tuple[int, int, int, int]] = None) -> str:
+    def capture_screen(self, region: tuple[int, int, int, int] | None = None) -> str:
         """Neural 13.0: Optical Perception - Captures the host screen using Pillow."""
         try:
             from PIL import ImageGrab
@@ -102,7 +100,7 @@ class VisionEngine:
             screenshot.save(path)
             
             # Record in Bone Marrow
-            from layers.L11_Data.soma_transcended import TranscendedSubstrate
+            from Agentic_Body.Agentic_Physique.nervous.soma_transcended import TranscendedSubstrate
             substrate = TranscendedSubstrate(self.base_dir)
             substrate.log_audit("optical_capture", f"Retina capture saved to {path.name}")
             
@@ -138,4 +136,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     engine = VisionEngine(base)
     print(json.dumps(engine.analyze_image("core/monitoring/physiology.json"), indent=2))
-

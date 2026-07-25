@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - State Manager
 Version: 1.0.0
@@ -6,12 +5,12 @@ Description: Centralized SQLite-based state management with row-level locking.
 Replaces legacy JSON state files to prevent race conditions in simultaneous swarms.
 """
 
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 import json
 import sqlite3
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -182,14 +181,16 @@ class StateManager:
         # Migrations
         try:
             cursor.execute("ALTER TABLE directive_queue ADD COLUMN outcome TEXT")
-        except Exception: pass
+        except Exception:  # noqa: BLE001
+            pass
         try:
             cursor.execute("ALTER TABLE directive_queue ADD COLUMN completed_at REAL")
-        except Exception: pass
+        except Exception:  # noqa: BLE001
+            pass
         conn.commit()
         conn.close()
 
-    def detect_native_reflex(self, event_data: str) -> Optional[str]:
+    def detect_native_reflex(self, event_data: str) -> str:
         """Neural 6.0: Simulated DB-native reasoning trigger."""
         conn = self._get_connection()
         cursor = conn.cursor()
@@ -270,7 +271,7 @@ class StateManager:
         conn.commit()
         conn.close()
 
-    def get_active_tasks(self) -> List[Dict]:
+    def get_active_tasks(self) -> list[Dict]:
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -300,7 +301,7 @@ class StateManager:
         conn.commit()
         conn.close()
 
-    def get_queued_directives(self, status: str = "pending") -> List[Dict]:
+    def get_queued_directives(self, status: str = "pending") -> list[Dict]:
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -309,7 +310,7 @@ class StateManager:
         conn.close()
         return rows
 
-    def update_directive_status(self, directive_id: str, status: str, outcome: str = "", completed_at: Optional[float] = None):
+    def update_directive_status(self, directive_id: str, status: str, outcome: str = "", completed_at: float | None = None):
         conn = self._get_connection()
         cursor = conn.cursor()
         cursor.execute("""
@@ -330,7 +331,7 @@ class StateManager:
         conn.commit()
         conn.close()
 
-    def get_active_signals(self) -> Dict[str, Dict]:
+    def get_active_signals(self) -> dict[str, Dict]:
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -380,7 +381,7 @@ class StateManager:
         conn.commit()
         conn.close()
 
-    def get_motor_log(self, limit: int = 100) -> List[Dict]:
+    def get_motor_log(self, limit: int = 100) -> list[Dict]:
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -391,7 +392,7 @@ class StateManager:
 
     # --- Routing Weights Operations ---
 
-    def get_routing_weights(self) -> Dict[str, Dict]:
+    def get_routing_weights(self) -> dict[str, Dict]:
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -440,7 +441,7 @@ class StateManager:
         conn.commit()
         conn.close()
 
-    def get_immune_registry(self) -> List[Dict]:
+    def get_immune_registry(self) -> list[Dict]:
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -491,7 +492,7 @@ class StateManager:
         conn.commit()
         conn.close()
 
-    def get_valid_cache_id(self, cache_key: str, current_hash: str) -> Optional[str]:
+    def get_valid_cache_id(self, cache_key: str, current_hash: str) -> str:
         conn = self._get_connection()
         cursor = conn.cursor()
         now = time.time()
@@ -503,7 +504,7 @@ class StateManager:
         conn.close()
         return row[0] if row else None
 
-    def prune_lattice_tasks(self, task_ids: List[str]) -> int:
+    def prune_lattice_tasks(self, task_ids: list[str]) -> int:
         """Permanently removes specific tasks from the lattice (Synaptic Pruning)."""
         if not task_ids:
             return 0
@@ -520,4 +521,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     mgr = StateManager(base)
     print(f"State Database initialized at {mgr.db_path}")
-

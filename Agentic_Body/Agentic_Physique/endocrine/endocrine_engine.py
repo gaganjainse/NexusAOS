@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 EndocrineEngine — Endocrine / Hormonal System
 Biological analog: Pituitary, thyroid, adrenals, pancreas, gonads
@@ -13,8 +12,8 @@ Responsibilities (1:1 biology mapping):
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -25,7 +24,7 @@ import math
 import time
 import json
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Optional, Tuple
 
 TOOL_BASE_DIR = BASE_DIR
 
@@ -37,7 +36,7 @@ class Hormone:
     half_life_seconds: float = 1800.0  # 30 min default
     baseline: float = 10.0
     max_level: float = 100.0
-    receptors: List[str] = field(default_factory=list)
+    receptors: list[str] = field(default_factory=list)
     last_update: float = field(default_factory=time.time)
 
     def decay(self, now: float) -> float:
@@ -59,8 +58,8 @@ class EndocrineEngine:
 
     def __init__(self, base_dir: Path = TOOL_BASE_DIR):
         self.base_dir = base_dir
-        self.hormones: Dict[str, Hormone] = {}
-        self.feedback_loops: List[Dict] = []
+        self.hormones: dict[str, Hormone] = {}
+        self.feedback_loops: list[Dict] = []
         self.circadian_phase: float = 0.0  # 0-24h cycle
         self.genome_path = base_dir / "core" / "monitoring" / "evolution" / "hormone_genome.json"
         self._init_default_hormones()

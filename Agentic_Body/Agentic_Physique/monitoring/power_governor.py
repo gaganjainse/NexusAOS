@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Power Governor (L14.6)
 Version: 1.0.0
@@ -6,13 +5,12 @@ Description: Advanced power management for the MSI Sword 16 HX B14VEKG.
 Optimizes PL1/PL2 limits and power profiles to solve abnormal battery drain.
 """
 
+from pathlib import Path
+from typing import Any, List
 import json
 import os
 import subprocess
 import time
-from pathlib import Path
-from typing import Dict, Any, List
-
 
 class PowerGovernor:
     def __init__(self, base_dir: Path):
@@ -31,7 +29,7 @@ class PowerGovernor:
                 if guid in output:
                     return name
             return "unknown"
-        except:
+        except Exception:  # noqa: BLE001
             return "error"
 
     def set_power_saver(self) -> str:
@@ -50,7 +48,7 @@ class PowerGovernor:
         except Exception as e:
             return f"ERROR: Failed to switch power state: {e}"
 
-    def find_battery_parasites(self) -> List[Dict[str, Any]]:
+    def find_battery_parasites(self) -> list[dict[str, Any]]:
         """Neural 13.8: Uses ETW-like process analysis to find battery parasites."""
         # Note: Real-time ETW requires admin and persistent listeners.
         # This is a high-level somatic check using WMI as a proxy.
@@ -78,7 +76,8 @@ class PowerGovernor:
                         "severity": "HIGH" if cpu_time > 100000000000 else "MEDIUM",
                         "impact": f"CPU:{cpu_time}ns | IO:{io_total}"
                     })
-        except: pass
+        except Exception:  # noqa: BLE001
+            pass
         return parasites
 
 if __name__ == "__main__":
@@ -86,4 +85,3 @@ if __name__ == "__main__":
     gov = PowerGovernor(base)
     print(f"Current Scheme: {gov.get_active_scheme()}")
     print(f"Parasites Found: {len(gov.find_battery_parasites())}")
-

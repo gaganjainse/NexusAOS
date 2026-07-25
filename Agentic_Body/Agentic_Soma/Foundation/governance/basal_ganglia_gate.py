@@ -1,16 +1,10 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-"""
-BasalGangliaGate — Basal ganglia gating layer
-Biological analog: Basal ganglia action selection, habit formation, inhibition
-
-Responsibilities (1:1 biology mapping):
-- Action selection / response gating
-- Habit/procedural routing
-- Inhibitory control over competing actions
-- Direct/indirect pathway simulation
-"""
-
 from __future__ import annotations
+
+import sys
+
+"""
+Basal Ganglia Gate - Action selection gate.
+"""
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -19,7 +13,7 @@ if str(_python_root) not in sys.path:
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 TOOL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -28,22 +22,22 @@ TOOL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 class BasalState:
     direct_pathway_activity: float = 50.0
     indirect_pathway_activity: float = 50.0
-    selected_action: Optional[str] = None
-    inhibited_actions: List[str] = field(default_factory=list)
+    selected_action: str | None = None
+    inhibited_actions: list[str] = field(default_factory=list)
     last_update: float = field(default_factory=time.time)
 
 
 class BasalGangliaGate:
-    """Action selection gate — basal ganglia."""
+    """Action selection gate - basal ganglia."""
 
     def __init__(self, base_dir: Path = TOOL_BASE_DIR):
         self.base_dir = base_dir
         self.state = BasalState()
-        self.action_history: List[Dict] = []
+        self.action_history: list[Dict] = []
         self.inhibition_threshold: float = 60.0
 
-    def check(self, tool_name: str, salience: float, competing_actions: Optional[List[str]] = None) -> Dict:
-        """Basal ganglia gating — action selection."""
+    def check(self, tool_name: str, salience: float, competing_actions: list[str] | None = None) -> Dict:
+        """Basal ganglia gating - action selection."""
         competing_actions = competing_actions or []
 
         # Direct pathway favors selected action

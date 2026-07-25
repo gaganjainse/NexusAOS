@@ -1,17 +1,16 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Cardiorespiratory Loop
 Version: 15.0.0
 Description: Manages Context Ventilation (Respiratory) and ATP Distribution (Circulatory) with Metabolism feedback.
 """
 
-import sys
-import time
 from pathlib import Path
 from typing import Dict
+import sys
+import time
 
 try:
-    from layers.L02_Agent.metabolism_engine import MetabolismEngine
+    from Agentic_Body.Agentic_Physique.metabolism_engine import MetabolismEngine
 except ImportError:
     # Fallback for testing/standalone
     class MetabolismEngine:

@@ -5,22 +5,21 @@ Description: Full conversational 3D pet overlay with emergent consciousness
 engine and mood-aware voice synthesis. Integrates 11+ biological systems.
 """
 
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 import json
-import struct
 import threading
 import time
+
+from .pet_engine import ConsciousnessEngine, EmergentState
+from .pet_voice import PetVoiceEngine, VOICE_PARAMS
 from PySide6.QtCore import Qt, QObject, Signal, Slot, QUrl, QTimer
 from PySide6.QtGui import QWindow, QSurfaceFormat, QCursor
 from PySide6.QtWebChannel import QWebChannel
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QSizePolicy
-from dataclasses import dataclass, field
-from pathlib import Path
-from typing import Dict, Any, Optional, List
-
-from .pet_engine import ConsciousnessEngine, EmergentState
-from .pet_voice import PetVoiceEngine, VOICE_PARAMS
-
+import struct
 
 @dataclass
 class ConversationTurn:
@@ -45,7 +44,7 @@ class DirectiveProcessor:
         except ImportError:
             pass
 
-    def process(self, text: str) -> Dict[str, Any]:
+    def process(self, text: str) -> dict[str, Any]:
         cmd = text.lower().strip()
 
         if any(cmd.startswith(w) for w in ["hello", "hi", "hey", "what's up"]):
@@ -75,15 +74,15 @@ class DirectiveProcessor:
 
         if self._orchestrator:
             result = self._orchestrator.submit_directive(cmd, priority=5)
-            return {"response": f"Directive queued.", "action": "queued", "details": str(result)}
+            return {"response": "Directive queued.", "action": "queued", "details": str(result)}
 
         return {
-            "response": f"I hear you, Sovereign. Command received: '{text}'",
+            "response": "I hear you, Sovereign. Command received: '{text}'",
             "action": "acknowledged",
             "details": text,
         }
 
-    def _greeting(self, cmd: str) -> Dict[str, Any]:
+    def _greeting(self, cmd: str) -> dict[str, Any]:
         data = self._read_vitals()
         energy = data.get("energy", 100)
         if energy > 70:
@@ -100,7 +99,7 @@ class DirectiveProcessor:
             "emotion": "calm",
         }
 
-    def _format_report(self, data: dict) -> Dict[str, Any]:
+    def _format_report(self, data: dict) -> dict[str, Any]:
         lines = []
         lines.append(f"  Energy: {data.get('energy', 'N/A')}%")
         lines.append(f"  Vibe: {data.get('vibe', 'N/A')}")
@@ -113,7 +112,7 @@ class DirectiveProcessor:
         response = "System Report:\n" + "\n".join(lines)
         return {"response": response, "action": "report", "details": data, "emotion": "focused"}
 
-    def _get_energy(self) -> Dict[str, Any]:
+    def _get_energy(self) -> dict[str, Any]:
         data = self._read_vitals()
         energy = data.get("energy", 100)
         if energy > 70:
@@ -123,7 +122,7 @@ class DirectiveProcessor:
         else:
             return {"response": f"Energy at {energy}%. I recommend conservation mode soon.", "action": "energy", "details": str(energy), "emotion": "concerned"}
 
-    def _run_immune_patrol(self) -> Dict[str, Any]:
+    def _run_immune_patrol(self) -> dict[str, Any]:
         try:
             from layers.L1_Physiology.antibody_engine import AntibodyEngine
             engine = AntibodyEngine(self.base_dir)
@@ -131,45 +130,45 @@ class DirectiveProcessor:
             resp = f"Immune patrol complete. {len(results)} antibodies active." if results else "Immune patrol complete. No anomalies detected. System is healthy."
             return {"response": resp, "action": "immune_patrol", "details": results}
         except Exception as e:
-            return {"response": f"Immune system check failed.", "action": "error", "details": str(e), "emotion": "concerned"}
+            return {"response": "Immune system check failed.", "action": "error", "details": str(e), "emotion": "concerned"}
 
-    def _evolve(self) -> Dict[str, Any]:
+    def _evolve(self) -> dict[str, Any]:
         try:
             from layers.L5_Reasoning.evolution_engine import EvolutionEngine
             engine = EvolutionEngine(self.base_dir)
             result = engine.tick()
             return {"response": f"Evolution cycle complete. Alignment: {result.get('alignment', 'N/A')}", "action": "evolve", "details": result, "emotion": "happy"}
         except Exception as e:
-            return {"response": f"Evolution unavailable.", "action": "error", "details": str(e)}
+            return {"response": "Evolution unavailable.", "action": "error", "details": str(e)}
 
-    def _sleep(self) -> Dict[str, Any]:
+    def _sleep(self) -> dict[str, Any]:
         try:
             from layers.L1_Physiology.sleep_engine import SleepEngine
             engine = SleepEngine(self.base_dir)
             result = engine.enter_sleep()
             return {"response": "Entering sleep cycle. I will dream and consolidate. Wake me when you need me.", "action": "sleep", "details": str(result), "emotion": "asleep"}
         except Exception as e:
-            return {"response": f"Sleep unavailable.", "action": "error", "details": str(e)}
+            return {"response": "Sleep unavailable.", "action": "error", "details": str(e)}
 
-    def _consolidate_memory(self) -> Dict[str, Any]:
+    def _consolidate_memory(self) -> dict[str, Any]:
         try:
             from layers.L3_MindState.memory_synth import MemorySynth
             synth = MemorySynth(self.base_dir)
             result = synth.consolidate()
-            return {"response": f"Memory consolidated.", "action": "consolidate", "details": result, "emotion": "calm"}
+            return {"response": "Memory consolidated.", "action": "consolidate", "details": result, "emotion": "calm"}
         except Exception as e:
-            return {"response": f"Memory consolidation failed.", "action": "error", "details": str(e)}
+            return {"response": "Memory consolidation failed.", "action": "error", "details": str(e)}
 
-    def _run_filtration(self) -> Dict[str, Any]:
+    def _run_filtration(self) -> dict[str, Any]:
         try:
             from layers.L1_Physiology.Sesha_liver import SeshaLiver
             liver = SeshaLiver(self.base_dir)
             result = liver.filter()
             return {"response": "System filtration complete. Toxicity levels normalized.", "action": "filter", "details": str(result), "emotion": "happy"}
         except Exception as e:
-            return {"response": f"Filtration failed.", "action": "error", "details": str(e)}
+            return {"response": "Filtration failed.", "action": "error", "details": str(e)}
 
-    def _read_vitals(self) -> Dict[str, Any]:
+    def _read_vitals(self) -> dict[str, Any]:
         data = {}
         try:
             pf = self.monitoring_dir / "physiology.json"
@@ -189,7 +188,7 @@ class DirectiveProcessor:
                 data["threat_level"] = imm.get("threat_level", "Negligible")
                 slp = raw.get("sleep", {})
                 data["sleep_state"] = slp.get("state", "Awake")
-        except Exception:
+        except Exception:  # noqa: BLE001
             pass
         data["signals"] = self._get_active_signals()
         return data
@@ -202,7 +201,7 @@ class DirectiveProcessor:
                 if isinstance(signals, list) and signals:
                     return ", ".join(s.get("type", "?") for s in signals[:3])
             return "none"
-        except Exception:
+        except Exception:  # noqa: BLE001
             return "unknown"
 
 
@@ -211,7 +210,7 @@ class PetBridge(QObject):
     pet_interaction = Signal(str, dict)
     pet_response = Signal(str)
 
-    def __init__(self, base_dir: Path, parent: Optional[QWidget] = None):
+    def __init__(self, base_dir: Path, parent: QWidget | None = None):
         super().__init__(parent)
         self.base_dir = base_dir
         self.monitoring_dir = base_dir / "core" / "monitoring"
@@ -221,21 +220,21 @@ class PetBridge(QObject):
         self.consciousness = ConsciousnessEngine(self.monitoring_dir)
         self.voice_engine = PetVoiceEngine()
 
-        self._webview: Optional[QWebEngineView] = None
-        self._channel: Optional[QWebChannel] = None
-        self._js_bridge: Optional[PetJSSide] = None
-        self._state_poll_timer: Optional[QTimer] = None
-        self._cursor_timer: Optional[QTimer] = None
-        self._speech_queue: List[Dict] = []
+        self._webview: QWebEngineView | None = None
+        self._channel: QWebChannel | None = None
+        self._js_bridge: PetJSSide | None = None
+        self._state_poll_timer: QTimer | None = None
+        self._cursor_timer: QTimer | None = None
+        self._speech_queue: list[Dict] = []
         self._current_mood: str = "calm"
         self._current_energy: float = 100.0
         self._current_task: str = ""
         self._is_processing: bool = False
         self._cursor_x: float = 0.5
         self._cursor_y: float = 0.5
-        self._conversation_history: List[ConversationTurn] = []
+        self._conversation_history: list[ConversationTurn] = []
         self._editor_rect = None
-        self._last_emergent: Optional[EmergentState] = None
+        self._last_emergent: EmergentState | None = None
 
     def create_widget(self) -> QWidget:
         container = QWidget()
@@ -281,7 +280,7 @@ class PetBridge(QObject):
         self._editor_rect = (x, y, w, h)
         self._call_js(f"setEditorRect({x},{y},{w},{h})")
 
-    def process_command(self, text: str) -> Dict[str, Any]:
+    def process_command(self, text: str) -> dict[str, Any]:
         self._is_processing = True
         self._call_js("setProcessing(true)")
 
@@ -305,7 +304,7 @@ class PetBridge(QObject):
 
         return result
 
-    def say(self, text: str, emotion: Optional[str] = None):
+    def say(self, text: str, emotion: str | None = None):
         mood = emotion or self._current_mood
         self._speech_queue.append({"text": text, "emotion": mood})
         if len(self._speech_queue) == 1:
@@ -333,7 +332,7 @@ class PetBridge(QObject):
 
     def set_mood(self, mood: str):
         self._current_mood = mood
-        self._call_js(f"setMood('{mood}')")
+        self._call_js("setMood('{mood}')")
 
     def set_energy(self, pct: float):
         self._current_energy = pct
@@ -344,11 +343,11 @@ class PetBridge(QObject):
 
     def task_started(self, task_name: str):
         self._current_task = task_name
-        self._call_js(f"taskStarted('{task_name}')")
+        self._call_js("taskStarted('{task_name}')")
 
     def task_completed(self, task_name: str, result: str = ""):
         self._current_task = ""
-        self._call_js(f"taskCompleted('{task_name}', '{result}')")
+        self._call_js("taskCompleted('{task_name}', '{result}')")
 
     def _call_js(self, code: str):
         if self._webview:
@@ -382,7 +381,7 @@ class PetBridge(QObject):
             self._call_js(f"setImmuneTemp({state.immune_temp})")
 
             if state.mood == "anomaly":
-                self._call_js(f"setThreat('{state.threat_level}', {state.immune_temp})")
+                self._call_js("setThreat('{state.threat_level}', {state.immune_temp})")
             elif state.mood == "asleep":
                 pass
             elif state.sleep_state == "asleep" and self._current_mood != "asleep":
@@ -399,10 +398,10 @@ class PetBridge(QObject):
                         self.task_started(str(name))
                     elif not tasks and self._current_task:
                         self.task_completed(self._current_task)
-                except Exception:
+                except Exception:  # noqa: BLE001
                     pass
 
-        except Exception:
+        except Exception:  # noqa: BLE001
             pass
 
     def _on_pet_signal(self, signal_type: str, data: dict):
@@ -426,7 +425,7 @@ class PetBridge(QObject):
 class PetJSSide(QObject):
     signal_to_python = Signal(str, dict)
 
-    def __init__(self, parent: Optional[QObject] = None):
+    def __init__(self, parent: QObject | None = None):
         super().__init__(parent)
 
     @Slot(str, str)
@@ -476,4 +475,3 @@ if __name__ == "__main__":
 
     widget.show()
     sys.exit(app.exec())
-

@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Composition Engine (L4)
 Version: 13.0.0
 Description: Dynamic agent-to-agent task negotiation and bidding based on energy and skill density.
 """
 
+from pathlib import Path
+from typing import Any, List, Optional
 import json
 import random
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -23,14 +22,14 @@ class CompositionEngine:
         self.base_dir = base_dir
         self.agents_path = base_dir / "active_roles"
         
-    def _get_agent_pool(self) -> List[str]:
+    def _get_agent_pool(self) -> list[str]:
         # In a real swarm, this would query the registry
-        from layers.L12_Infrastructure.Sesha_mesh import SeshaMesh
+        from Agentic_Body.Agentic_Soma.Foundation.dna.Sesha_mesh import SeshaMesh
         mesh = SeshaMesh(self.base_dir)
         peers = mesh.discover_peers()
         return [p["node_id"] for p in peers] + ["Orchestrator", "Immune", "Motor", "Research"]
 
-    def negotiate_task(self, atom_text: str) -> Dict[str, Any]:
+    def negotiate_task(self, atom_text: str) -> dict[str, Any]:
         """Runs a multi-agent negotiation for a sub-atomic task."""
         pool = self._get_agent_pool()
         bids = []
@@ -55,7 +54,7 @@ class CompositionEngine:
         winner = max(bids, key=lambda x: x["score"])
         
         # 3. Log Negotiation to Bone Marrow
-        from layers.L11_Data.soma_transcended import TranscendedSubstrate
+        from Agentic_Body.Agentic_Physique.nervous.soma_transcended import TranscendedSubstrate
         substrate = TranscendedSubstrate(self.base_dir)
         substrate.log_audit("task_negotiation", f"Agent {winner['agent']} won '{atom_text[:50]}...' (Score: {winner['score']:.2f})")
         
@@ -70,4 +69,3 @@ if __name__ == "__main__":
     ce = CompositionEngine(base)
     result = ce.negotiate_task("Analyze system bottlenecks and propose a mutation.")
     print(json.dumps(result, indent=2))
-

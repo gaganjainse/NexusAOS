@@ -1,22 +1,21 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Collective Memory Engine (Swarm Hippocampus)
 Version: 1.0.0
 Description: Syncs entities across the Synaptic Mesh using LWW conflict resolution.
 """
 
+from pathlib import Path
+from typing import Any, Dict, Optional
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Optional, Any
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L05_Memory.memory_receptor import MemoryReceptor
-from layers.L12_Infrastructure.Sesha_mesh import SeshaMesh
+from Agentic_Body.Agentic_Intelligence.memory.memory_receptor import MemoryReceptor
+from Agentic_Body.Agentic_Soma.Foundation.dna.Sesha_mesh import SeshaMesh
 
 class CollectiveMemory:
     def __init__(self, base_dir: Path):
@@ -61,7 +60,7 @@ class CollectiveMemory:
                 if eid not in local_entities or remote_props.get("_timestamp", 0) > local_entities[eid].get("_timestamp", 0):
                     local_entities[eid] = remote_props
                     synced_count += 1
-            except Exception:
+            except Exception:  # noqa: BLE001
                 continue
 
         if synced_count > 0:
@@ -85,4 +84,3 @@ if __name__ == "__main__":
     col_mem = CollectiveMemory(base)
     print(col_mem.store_and_broadcast("PROJECT_ALPHA", {"status": "Active", "lead": "Sesha"}))
     print(f"Synced {col_mem.sync_mesh_knowledge()} entities from mesh.")
-

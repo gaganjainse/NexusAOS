@@ -1,7 +1,7 @@
 
+from pathlib import Path
 import sys
 import time
-from pathlib import Path
 
 class VigilanceReflex:
     def __init__(self, base_dir: Path):

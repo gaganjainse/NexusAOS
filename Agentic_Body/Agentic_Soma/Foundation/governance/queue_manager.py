@@ -1,24 +1,23 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Queue Manager (The Cognitive Buffer)
 Version: 1.0.0
 Description: Decides the best time to execute deferred directives based on Soma physiology and Mind state.
 """
 
+from pathlib import Path
+from typing import Optional
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L05_Memory.state_manager import StateManager
-from layers.L02_Agent.metabolism_engine import MetabolismEngine
-from layers.L02_Agent.endocrine_engine import EndocrineEngine
-from layers.L10_Intelligence.thought_agent import ThoughtAgent
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
+from Agentic_Body.Agentic_Physique.metabolism_engine import MetabolismEngine
+from Agentic_Body.Agentic_Physique.endocrine_engine import EndocrineEngine
+from Agentic_Body.Agentic_Intelligence.intelligence.thought_agent import ThoughtAgent
 
 class QueueManager:
     def __init__(self, base_dir: Path):
@@ -28,7 +27,7 @@ class QueueManager:
         self.endocrine = EndocrineEngine(base_dir)
         self.thought = ThoughtAgent(base_dir)
 
-    def defer_directive(self, text: str, priority: Optional[int] = None) -> str:
+    def defer_directive(self, text: str, priority: int | None = None) -> str:
         """Buffers a directive into the Deferred queue with automated prioritization."""
         
         # Automatically decide optimal priority if not provided
@@ -49,7 +48,7 @@ class QueueManager:
         self.state_mgr.queue_directive(data)
         return f"Directive [{directive_id}] buffered in Cognitive Buffer.{assigned_msg}"
 
-    def process_buffer(self) -> List[str]:
+    def process_buffer(self) -> list[str]:
         """
         Analyzes the deferred queue and promotes directives to 'Pending' (Orchestrator pick-up)
         if biological and mental conditions are optimal.
@@ -94,4 +93,3 @@ if __name__ == "__main__":
     qm = QueueManager(base)
     print(qm.defer_directive("Check system integrity", priority=5))
     print(qm.process_buffer())
-

@@ -1,24 +1,23 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Reflex Arc (The Spinal Cord)
 Version: 1.0.0
 Description: Fast-path, autonomic responses to critical stimuli. Bypasses high-level reasoning.
 """
 
+from pathlib import Path
+from typing import Optional
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L11_Data.signal_router import SignalRouter
-from layers.L02_Agent.metabolism_engine import MetabolismEngine
-from layers.L12_Infrastructure.dna_manager import DNAManager
-from layers.L11_Data.shm_bridge import SHMBridge
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
+from Agentic_Body.Agentic_Physique.metabolism_engine import MetabolismEngine
+from Agentic_Body.Agentic_Soma.Foundation.dna.dna_manager import DNAManager
+from Agentic_Body.Agentic_Physique.nervous.shm_bridge import SHMBridge
 
 class ReflexArc:
     def __init__(self, base_dir: Path):
@@ -34,7 +33,7 @@ class ReflexArc:
         genome = self.dna.get_genome()
         return genome.get(category, {}).get(key, default)
 
-    def check_reflexes(self) -> List[str]:
+    def check_reflexes(self) -> list[str]:
         """Runs the 'Fast Path' checks for all hard-wired instincts."""
         actions_taken = []
         
@@ -56,7 +55,7 @@ class ReflexArc:
             
         return actions_taken
 
-    def _check_nociception(self) -> Optional[str]:
+    def _check_nociception(self) -> str:
         """Detects 'Pain' (High Error Rates or Security Breach)."""
         active_signals = self.signals.get_active_signals()
         if "NOCICEPTION" in active_signals:
@@ -73,7 +72,7 @@ class ReflexArc:
             return "Nociceptive Reflex: High-speed SHM spike emitted. Quarantine applied."
         return None
 
-    def _check_ventilation(self) -> Optional[str]:
+    def _check_ventilation(self) -> str:
         """Detects 'Hypoxia' (Context Window Saturation)."""
         vitals = self.metabolism._report()
         threshold = self._get_param("reflex_parameters", "hypoxia_threshold", 20.0)
@@ -87,7 +86,7 @@ class ReflexArc:
             return "Respiratory Reflex: Hypoxia detected. Triggering ventilation."
         return None
 
-    def _check_metabolic_satiety(self) -> Optional[str]:
+    def _check_metabolic_satiety(self) -> str:
         """Detects 'Energy Depletion' (ATP below threshold)."""
         vitals = self.metabolism._report()
         threshold = self._get_param("reflex_parameters", "ischemia_threshold", 15.0)
@@ -101,7 +100,7 @@ class ReflexArc:
             return "Metabolic Reflex: Energy critical. Throttling non-vital synapses."
         return None
 
-    def _check_thermal_inflammation(self) -> Optional[str]:
+    def _check_thermal_inflammation(self) -> str:
         """Detects 'Fever' (Thermal load above threshold)."""
         vitals = self.metabolism._report()
         threshold = self._get_param("reflex_parameters", "fever_threshold", 85.0)
@@ -119,4 +118,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     arc = ReflexArc(base)
     print("Reflex Check:", arc.check_reflexes())
-

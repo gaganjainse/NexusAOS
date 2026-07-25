@@ -1,16 +1,14 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Failure Recorder (L09)
 Version: 1.0.0
 Description: Captures somatic and mental failures for iterative learning.
 """
 
+from pathlib import Path
+from typing import Any, Type
 import json
 import os
 import time
-from pathlib import Path
-from typing import Dict, Any
-
 
 class FailureRecorder:
     def __init__(self, base_dir: Path):
@@ -20,7 +18,7 @@ class FailureRecorder:
     def record_failure(self, log_id: str, type: str, description: str, root_cause: str, resolution: str):
         """Appends a failure entry to the manifest."""
         timestamp = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
-        entry = f"""
+        entry = """
 ### Log ID: {log_id}
 - **Timestamp:** {timestamp}
 - **Type:** {type}
@@ -37,4 +35,3 @@ if __name__ == "__main__":
     fr = FailureRecorder(base)
     fr.record_failure("F-TEST", "Unit Test", "Verification pulse failed.", "Test logic error.", "Fixed in next generation.")
     print("Failure recorded.")
-

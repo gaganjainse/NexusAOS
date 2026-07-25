@@ -1,20 +1,19 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Physiological Gate
 Version: 1.0.0
 Description: Hard-wires hormonal levels to tool permissions (Biological Compulsion).
 """
 
-import sys
 from pathlib import Path
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from typing import Dict, Any, Tuple
+from typing import Any, Self, Tuple
 
-from layers.L02_Agent.physiology_engine import PhysiologyEngine
+from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
 
 
 class PhysiologicalGate:
@@ -135,14 +134,14 @@ class PhysiologicalGate:
     def __init__(self, base_dir: Path):
         self.engine = PhysiologyEngine(base_dir)
 
-    def _energy_pct(self, state: Dict[str, Any]) -> float:
+    def _energy_pct(self, state: dict[str, Any]) -> float:
         met = state["metabolism"]
         return (met["current_energy"] / met["max_energy"]) * 100
 
     def _threat_exceeds(self, current: str, max_allowed: str) -> bool:
         return self.THREAT_RANK.get(current, 0) > self.THREAT_RANK.get(max_allowed, 0)
 
-    def check(self, tool_name: str) -> Tuple[bool, str]:
+    def check(self, tool_name: str) -> tuple[bool, str]:
         """
         Returns (allowed, message).
         If allowed is False, the tool must not execute.
@@ -176,7 +175,7 @@ class PhysiologicalGate:
 
         return True, "Physiological clearance granted."
 
-    def get_dampening_report(self) -> Dict[str, Any]:
+    def get_dampening_report(self) -> dict[str, Any]:
         """Returns current dampening state for all gated tools."""
         state = self.engine.get_state()
         hormones = state["endocrine"]["hormones"]
@@ -202,4 +201,3 @@ if __name__ == "__main__":
     gate = PhysiologicalGate(base)
     import json
     print(json.dumps(gate.get_dampening_report(), indent=2))
-

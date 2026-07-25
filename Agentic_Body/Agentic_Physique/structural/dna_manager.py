@@ -1,22 +1,21 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - DNA Manager
 Version: 1.0.0
 Description: Orchestrates the link between permanent archives (DNA) and active configuration (Genome).
 """
 
+from pathlib import Path
+from typing import Any
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L11_Data.binary_nervous import BinaryNervous
+from Agentic_Body.Agentic_Physique.nervous.binary_nervous import BinaryNervous
 
 class DNAManager:
     def __init__(self, base_dir: Path):
@@ -25,7 +24,7 @@ class DNAManager:
         self.dna_archive_path = base_dir / "archives" / "dna_core" / "foundation"
         self.binary = BinaryNervous(base_dir)
         
-    def get_genome(self) -> Dict[str, Any]:
+    def get_genome(self) -> dict[str, Any]:
         """Reads the active biological genome (BSF-first)."""
         # We now prioritize the Binary Nervous System for high-speed thresholds
         bin_vitals = self.binary.get_vitals()
@@ -47,16 +46,16 @@ class DNAManager:
             genome["generation"] = bin_vitals["generation"]
             genome["last_mutation"] = bin_vitals["last_mutation"]
             return genome
-        except Exception:
+        except Exception:  # noqa: BLE001
             return self._initialize_default_genome()
 
-    def update_genome(self, new_genome: Dict[str, Any]):
+    def update_genome(self, new_genome: dict[str, Any]):
         """Updates the active genome and increments the generation."""
         new_genome["last_mutation"] = time.time()
         self.genome_path.parent.mkdir(parents=True, exist_ok=True)
         self.genome_path.write_text(json.dumps(new_genome, indent=4), encoding="utf-8")
         
-    def _initialize_default_genome(self) -> Dict[str, Any]:
+    def _initialize_default_genome(self) -> dict[str, Any]:
         default = {
             "reflex_parameters": {
                 "nociception_sensitivity": 0.8,
@@ -86,4 +85,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     dm = DNAManager(base)
     print("Active DNA:", dm.get_genome())
-

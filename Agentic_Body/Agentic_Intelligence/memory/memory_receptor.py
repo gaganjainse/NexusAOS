@@ -1,11 +1,11 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Memory Receptor (Hippocampus)
 Version: 1.0.0
 Description: Entity storage, recall, and linking (knowledge graph).
 """
-import json
 from pathlib import Path
+import json
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -33,7 +33,7 @@ class MemoryReceptor:
         try:
             with open(self.entities_file, "r") as f:
                 return json.load(f)
-        except Exception:
+        except Exception:  # noqa: BLE001
             return {}
 
     def _save_entities(self, entities: dict):
@@ -44,7 +44,7 @@ class MemoryReceptor:
         try:
             with open(self.links_file, "r") as f:
                 return json.load(f)
-        except Exception:
+        except Exception:  # noqa: BLE001
             return []
 
     def _save_links(self, links: list):
@@ -72,4 +72,3 @@ class MemoryReceptor:
         })
         self._save_links(links)
         return {"success": True}
-

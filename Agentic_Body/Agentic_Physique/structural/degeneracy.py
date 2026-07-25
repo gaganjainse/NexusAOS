@@ -1,17 +1,16 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Degeneracy Module
 Version: 1.0.0
 Description: Redundant subsystems, hot standbys, dual-write, peer health checks.
 Biological degeneracy: multiple components can perform the same function.
 """
+from collections import defaultdict
+from pathlib import Path
+from typing import Any, Callable, Dict, Optional
 import copy
 import json
 import sys
 import time
-from collections import defaultdict
-from pathlib import Path
-from typing import Dict, List, Optional, Callable, Any
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -109,11 +108,11 @@ class PeerHealthChecker:
     
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
-        self.peers: Dict[str, Dict] = {}
+        self.peers: dict[str, Dict] = {}
         self.health_dir = base_dir / "core" / "monitoring" / "peer_health"
         self.health_dir.mkdir(parents=True, exist_ok=True)
     
-    def register_peer(self, peer_id: str, health_check: Callable, metadata: Dict = None):
+    def register_peer(self, peer_id: str, health_check: Callable, metadata: Dict | None = None):
         """Register a peer with a health check function."""
         self.peers[peer_id] = {
             "health_check": health_check,
@@ -146,14 +145,14 @@ class PeerHealthChecker:
                 "consecutive_failures": peer["consecutive_failures"]
             }
     
-    def check_all_peers(self) -> Dict[str, Dict]:
+    def check_all_peers(self) -> dict[str, Dict]:
         """Check health of all registered peers."""
         results = {}
         for peer_id in self.peers:
             results[peer_id] = self.check_peer(peer_id)
         return results
     
-    def get_unhealthy_peers(self) -> List[str]:
+    def get_unhealthy_peers(self) -> list[str]:
         """Get list of unhealthy peer IDs."""
         return [pid for pid, p in self.peers.items() 
                 if p["status"] == "unhealthy" and p["consecutive_failures"] >= 3]
@@ -175,8 +174,8 @@ class DegeneracyManager:
     
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
-        self.standbys: Dict[str, HotStandby] = {}
-        self.dual_writers: Dict[str, DualWriter] = {}
+        self.standbys: dict[str, HotStandby] = {}
+        self.dual_writers: dict[str, DualWriter] = {}
         self.peer_checker = PeerHealthChecker(base_dir)
         self.deg_dir = base_dir / "core" / "monitoring" / "degeneracy"
         self.deg_dir.mkdir(parents=True, exist_ok=True)

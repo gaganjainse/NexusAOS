@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Limbic System (Emotional Intelligence)
 Version: 1.0.0
@@ -6,19 +5,19 @@ Description: Manages complex emotional states (Fear, Anger, Joy) that bias the M
 Biological analog: Amygdala, Hippocampus, Hypothalamus (The emotional brain).
 """
 
+from pathlib import Path
+from typing import Any, List
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L12_Infrastructure.dna_manager import DNAManager
-from layers.L11_Data.signal_router import SignalRouter
+from Agentic_Body.Agentic_Soma.Foundation.dna.dna_manager import DNAManager
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
 
 class LimbicSystem:
     def __init__(self, base_dir: Path):
@@ -74,7 +73,7 @@ class LimbicSystem:
         
         return f"Limbic Shift: Dominant emotion is {dominant.upper()}."
 
-    def get_bias_weights(self) -> Dict[str, float]:
+    def get_bias_weights(self) -> dict[str, float]:
         """Returns weights to bias the Moral Cortex and Orchestrator."""
         state = json.loads(self.state_path.read_text(encoding="utf-8"))
         return {
@@ -88,4 +87,3 @@ if __name__ == "__main__":
     limbic = LimbicSystem(base)
     print(limbic.process_stimulus())
     print("Bias Weights:", limbic.get_bias_weights())
-

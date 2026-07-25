@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - SOMA TRANSCENDED Substrate
 Version: 1.0.0
@@ -6,12 +5,12 @@ Description: Master interface for Zenoh P2P, Kùzu Graph, Redis Hot-State, and R
 Architecture: Brokerless Mesh + Graph-Native Cognitive Topology.
 """
 
+from pathlib import Path
+from typing import Any, Callable, Dict, List, Optional
 import json
 import sys
 import threading
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional, Callable
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -26,20 +25,20 @@ class TranscendedSubstrate:
         self._lock = threading.Lock()
         
         # 1. Neural Pulse Mesh (Zenoh Abstraction)
-        self._subscribers: Dict[str, List[Callable]] = {}
+        self._subscribers: dict[str, list[Callable]] = {}
         self.mesh_dir = base_dir / "core" / "monitoring" / "mesh"
         self.mesh_dir.mkdir(parents=True, exist_ok=True)
         
         # 2. Hive Discovery (L13)
         self.hive_registry_path = base_dir / "core" / "monitoring" / "hive" / "hive_registry.json"
-        self._hive_callbacks: List[Callable] = []
+        self._hive_callbacks: list[Callable] = []
         self._last_hive_mtime = 0.0
         
         # 3. Cerebral Cortex (Kùzu Abstraction)
         self.graph_path = base_dir / "core" / "monitoring" / "cerebral_cortex.graph"
         
         # 4. Hippocampus (Redis Abstraction)
-        self._hot_state: Dict[str, Any] = {}
+        self._hot_state: dict[str, Any] = {}
         
         # 5. Bone Marrow (RocksDB Abstraction)
         self.audit_path = base_dir / "core" / "monitoring" / "bone_marrow.log"
@@ -67,7 +66,8 @@ class TranscendedSubstrate:
                         self._last_hive_mtime = mtime
                         for cb in self._hive_callbacks:
                             try: cb()
-                            except: pass
+                            except Exception:  # noqa: BLE001
+                                pass
                 time.sleep(1.0)
         
         t = threading.Thread(target=watch, daemon=True)
@@ -80,7 +80,7 @@ class TranscendedSubstrate:
 
     # --- Augmented Memory Grid (AMG) ---
 
-    def page_context_in(self, agent_id: str) -> Optional[str]:
+    def page_context_in(self, agent_id: str) -> str:
         """Pages reasoning context from NVMe (simulated)."""
         p = self.amg_path / f"{agent_id}.context"
         if p.exists():
@@ -137,7 +137,7 @@ class TranscendedSubstrate:
 
     # --- Cerebral Cortex (Kùzu Graph) ---
 
-    def link_nodes(self, source_id: str, target_id: str, relation: str, properties: Dict = None):
+    def link_nodes(self, source_id: str, target_id: str, relation: str, properties: Dict | None = None):
         """Creates a relationship in the knowledge graph."""
         # Simulated Graph Write
         entry = {
@@ -163,4 +163,3 @@ if __name__ == "__main__":
     print("Transcended Substrate Initialized.")
     substrate.subscribe("adrenaline", lambda p: print(f"RECEIVE PULSE: {p}"))
     substrate.publish("adrenaline", {"level": "HIGH"})
-

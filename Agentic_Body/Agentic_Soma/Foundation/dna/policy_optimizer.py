@@ -1,17 +1,16 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Policy Optimizer
 Version: 1.0.0
 Description: Optimizes Orchestrator routing weights using the EvolutionEngine.
 """
 
+from pathlib import Path
+from typing import Dict, List
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List
 
-from layers.L04_Composition.evolution_engine import EvolutionEngine, Genome
+from Agentic_Body.Agentic_Soma.Foundation.dna.evolution_engine import EvolutionEngine, Genome
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -35,7 +34,7 @@ class PolicyOptimizer:
         try:
             with open(self.routing_path, "r", encoding="utf-8") as f:
                 current_stats = json.load(f)
-        except Exception:
+        except Exception:  # noqa: BLE001
             return {"score": 0.5, "components": {}}
             
         success_counts = current_stats.get("success_counts", {})
@@ -71,7 +70,7 @@ class PolicyOptimizer:
         try:
             with open(self.routing_path, "r", encoding="utf-8") as f:
                 current_routing = json.load(f).get("routes", {})
-        except Exception:
+        except Exception:  # noqa: BLE001
             current_routing = {}
 
         # 2. Evolve
@@ -105,4 +104,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     optimizer = PolicyOptimizer(base)
     print(optimizer.optimize_routing())
-

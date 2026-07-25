@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Logic Git
 Version: 1.0.0
 Description: Fractal decomposition and versioning of sub-atomic reasoning nodes.
 """
 
+from pathlib import Path
+from typing import Any, List, Optional
 import hashlib
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -42,7 +41,7 @@ class LogicGit:
             
         return node_hash
 
-    def get_node(self, node_hash: str) -> Optional[Dict[str, Any]]:
+    def get_node(self, node_hash: str) -> dict[str, Any]:
         path = self.logic_dir / f"{node_hash}.json"
         if path.exists():
             with open(path, "r", encoding="utf-8") as f:
@@ -54,4 +53,3 @@ if __name__ == "__main__":
     lg = LogicGit(base)
     h = lg.commit_node("test_task", "Sub-atomic logic unit", "SUCCESS")
     print(f"Logic Committed: {h}")
-

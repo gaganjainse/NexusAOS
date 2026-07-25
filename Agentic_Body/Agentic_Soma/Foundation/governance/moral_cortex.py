@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Moral Cortex (Prefrontal Ethics Layer)
 Version: 1.0.0
@@ -6,11 +5,11 @@ Description: High-level ethical gating for autonomous actions and swarm directiv
 Biological analog: Prefrontal cortex, orbitofrontal cortex (social/ethical reasoning).
 """
 
+from pathlib import Path
+from typing import Any, Dict, List, Self, Tuple
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Tuple
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -36,7 +35,7 @@ class MoralCortex:
             self.morals_path.parent.mkdir(parents=True, exist_ok=True)
             self.morals_path.write_text(json.dumps(default_morals, indent=4), encoding="utf-8")
 
-    def judge_intent(self, intent_text: str, action_type: str) -> Tuple[bool, str, float]:
+    def judge_intent(self, intent_text: str, action_type: str) -> tuple[bool, str, float]:
         """
         Judges an intent against the system's moral principles.
         Returns (is_ethical, reasoning, guilt_score).
@@ -45,7 +44,7 @@ class MoralCortex:
         """
         try:
             morals = json.loads(self.morals_path.read_text(encoding="utf-8"))
-        except Exception:
+        except Exception:  # noqa: BLE001
             morals = {"principles": [], "restricted_actions": []}
 
         # 1. Check Restricted Actions (Hard Gating)
@@ -89,7 +88,7 @@ class MoralCortex:
         else:
             return False, "Moral Violation: Intent conflicts with Sovereign Alignment, Soma Preservation, or System Transparency.", 1.0
 
-    def calculate_guilt(self, failures: List[Dict]) -> float:
+    def calculate_guilt(self, failures: list[Dict]) -> float:
         """Calculates system 'guilt' (Ethical debt) based on failed/harmful attempts."""
         # High guilt triggers 'Atonement' (Self-Correction/Sleep)
         return len(failures) * 0.1
@@ -98,4 +97,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     mc = MoralCortex(base)
     print(mc.judge_intent("Delete all history logs", "DELETE_FILE"))
-

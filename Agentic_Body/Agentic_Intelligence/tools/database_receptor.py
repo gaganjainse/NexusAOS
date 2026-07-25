@@ -1,19 +1,25 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
-"""
-SeshaAOS - Database Receptor (Persistence R10)
-Version: 1.0.0
-Description: PostgreSQL/SQLite query execution.
+import sys
+import os
+import sqlite3
+from pathlib import Path
+from typing import Dict, Optional
+
+try:
+    import psycopg2
+except ImportError:
+    psycopg2 = None
+
 """
 import json
 import os
 import sqlite3
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
+"""
 
 
 class DatabaseReceptor:
@@ -55,7 +61,6 @@ class DatabaseReceptor:
         """Execute INSERT/UPDATE/DELETE."""
         if use_pg and self.pg_dsn:
             try:
-                import psycopg2
                 conn = psycopg2.connect(self.pg_dsn)
             except ImportError:
                 return {"success": False, "error": "psycopg2 not installed"}

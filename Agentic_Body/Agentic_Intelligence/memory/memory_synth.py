@@ -1,21 +1,21 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Memory Synth
 Version: 1.0.0
 Description: Synthesizes historical task data into learned patterns and wisdom.
 """
 
-import json
-import os
-import sys
-import time
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Any, List, Never
+import json
+import os
+import sqlite3
+import sys
+import time
 
-from layers.L05_Memory.state_manager import StateManager
-from layers.L11_Data.soma_transcended import TranscendedSubstrate
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
+from Agentic_Body.Agentic_Physique.nervous.soma_transcended import TranscendedSubstrate
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -48,7 +48,7 @@ class MemorySynth:
             return "History is empty. No memories to consolidate."
 
         # 1. Capture current Vibe/Energy for persona continuity
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
+        from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
         phys = PhysiologyEngine(self.base_dir)
         vitals = phys.get_state()
         vibe = vitals.get("endocrine", {}).get("vibe", "Stable")
@@ -67,10 +67,10 @@ class MemorySynth:
 
         report = [
             f"# Learning Consolidation Report: {timestamp}",
-            f"\n## Soma State",
+            "\n## Soma State",
             f"- **Persona Vibe:** {vibe}",
             f"- **Energy Level:** {energy}",
-            f"\n## Efficiency Metrics",
+            "\n## Efficiency Metrics",
             f"- **Consolidated Tasks:** {len(history)}",
             f"- **Success Rate:** {(len(successes)/len(history))*100:.1f}%",
             "\n## Observed Synaptic Patterns",
@@ -114,10 +114,9 @@ class MemorySynth:
             "last_consolidation": reports[-1].name if reports else "Never"
         }
 
-    def run_pruning(self, age_hours: int = 48) -> Dict[str, Any]:
+    def run_pruning(self, age_hours: int = 48) -> dict[str, Any]:
         """Identifies and prunes weak synaptic patterns."""
         conn = self.state_mgr._get_connection()
-        import sqlite3
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
         
@@ -160,11 +159,11 @@ class MemorySynth:
             summary.append(f"- Directive: {h[0][:50]}... | Result: {h[1][:50]}...")
             
         # 2. Capture Genetic Vitals
-        from layers.L12_Infrastructure.dna_manager import DNAManager
+        from Agentic_Body.Agentic_Soma.Foundation.dna.dna_manager import DNAManager
         dna = DNAManager(self.base_dir).get_genome()
-        summary.append(f"\n## Genetic State")
+        summary.append("\n## Genetic State")
         summary.append(f"- Generation: {dna.get('generation')}")
-        summary.append(f"- Synaptic Pressure: 1.1")
+        summary.append("- Synaptic Pressure: 1.1")
         
         return "\n".join(summary)
 
@@ -172,4 +171,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     synth = MemorySynth(base)
     print(synth.consolidate())
-

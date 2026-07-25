@@ -1,25 +1,25 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Sesha Assimilator
 Version: 1.0.0
 Description: Extracts tools from MCP Marketplaces, internalizes their logic, evolves them, and discards the original source.
 """
 
-import ast
+from pathlib import Path
+from typing import Any, Dict
 import inspect
 import json
 import os
 import shutil
 import sys
-from pathlib import Path
-from typing import Dict, List, Any
+
+import ast
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L04_Composition.evolution_engine import EvolutionEngine
-from layers.L02_Agent.auto_repair import AutoRepairEngine
+from Agentic_Body.Agentic_Soma.Foundation.dna.evolution_engine import EvolutionEngine
+from Agentic_Body.Agentic_Physique.auto_repair import AutoRepairEngine
 
 class SeshaAssimilator:
     def __init__(self, base_dir: Path):
@@ -44,7 +44,7 @@ class SeshaAssimilator:
             quarantine_path.parent.mkdir(parents=True, exist_ok=True)
             
             with open(quarantine_path, "w", encoding="utf-8") as f:
-                f.write(f'"""\nAssimilated Organ: {plugin_id}\nInternalized: {__import__("time").time()}\n"""\n\n')
+                f.write('"""\nAssimilated Organ: {plugin_id}\nInternalized: {__import__("time").time()}\n"""\n\n')
 
                 f.write(f"class {plugin_id.capitalize()}Receptor:\n")
                 f.write("    def __init__(self, base_dir: Path):\n")
@@ -53,12 +53,11 @@ class SeshaAssimilator:
                 for func in functions:
                     f.write(f"    def {func.name}(self, *args, **kwargs):\n")
                     f.write(f"        # Assimilated Logic for {func.name}\n")
-                    f.write(f"        return 'Success: Logic internalized for {func.name}'\n\n")
+                    f.write("        return 'Success: Logic internalized for {func.name}'\n\n")
 
             # 3. Immune Validation (Sanity Check)
             # Simulate running a syntax and lint check in a subprocess
             import subprocess
-            import sys
             try:
                 # Basic syntax check
                 subprocess.run([sys.executable, "-m", "py_compile", str(quarantine_path)], check=True, capture_output=True)
@@ -84,7 +83,7 @@ class SeshaAssimilator:
             return {
                 "success": True,
                 "internal_name": native_receptor_name,
-                "message": f"Tool '{plugin_id}' successfully assimilated and internalized. Original source discarded.",
+                "message": "Tool '{plugin_id}' successfully assimilated and internalized. Original source discarded.",
                 "evolution_ready": True
             }
 
@@ -113,4 +112,3 @@ if __name__ == "__main__":
     # Simulate an external tool source
     dummy_code = "def fetch_crypto_price(coin): return 50000"
     print(assimilator.assimilate_plugin("crypto_api", dummy_code))
-

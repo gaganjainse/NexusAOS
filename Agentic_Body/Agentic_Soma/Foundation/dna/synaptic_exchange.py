@@ -1,23 +1,22 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Synaptic Exchange (Marketplace)
 Version: 1.0.0
 Description: Handles the discovery, metabolic validation, and immune-safe installation of new Organs (Plugins).
 """
 
+from pathlib import Path
+from typing import Dict, Optional
 import json
 import shutil
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L02_Agent.auto_repair import AutoRepairEngine
-from layers.L02_Agent.metabolism_engine import MetabolismEngine
+from Agentic_Body.Agentic_Physique.auto_repair import AutoRepairEngine
+from Agentic_Body.Agentic_Physique.metabolism_engine import MetabolismEngine
 
 class SynapticExchange:
     def __init__(self, base_dir: Path):
@@ -28,7 +27,7 @@ class SynapticExchange:
         self.repair_engine = AutoRepairEngine(base_dir)
         self.metabolism = MetabolismEngine(base_dir)
 
-    def search_exchange(self, query: str) -> List[Dict]:
+    def search_exchange(self, query: str) -> list[Dict]:
         """Simulates searching a remote registry for available organs."""
         # Simulated registry
         registry = [
@@ -89,4 +88,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     exchange = SynapticExchange(base)
     print(exchange.search_exchange("Synapse"))
-

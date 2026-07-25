@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Neural Canvas
 Version: 1.0.0
 Description: Simultaneous multi-agent workspace using CRDT (Conflict-free Replicated Data Types) for collision-free parallel work.
 """
 
+from pathlib import Path
+from typing import Any, Dict, Optional
 import hashlib
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Any, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -25,14 +24,14 @@ class CanvasNode:
         self.author_id = author_id
         self.timestamp = time.time()
         self.signature = self._sign()
-        self.verified_by: List[str] = []
+        self.verified_by: list[str] = []
 
     def _sign(self) -> str:
         """Simulates a cryptographic signature of the node content."""
         payload = f"{self.node_id}:{self.content}:{self.timestamp}:{self.author_id}"
         return hashlib.sha256(payload.encode()).hexdigest()
 
-from layers.L05_Memory.state_manager import StateManager
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
 
 class NeuralCanvas:
     def __init__(self, base_dir: Path):
@@ -111,4 +110,3 @@ if __name__ == "__main__":
     canvas = NeuralCanvas(base)
     print(canvas.write_node("TASK_001", "Implement CRDT logic", "Agent_Alpha"))
     print(canvas.verify_node("TASK_001", "Agent_Beta"))
-

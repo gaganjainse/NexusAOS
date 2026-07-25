@@ -1,13 +1,12 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Salience Module
 Version: 1.0.0
 Description: Agent attention heuristic - cortisol elevates survival/priority signals.
 """
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -26,16 +25,16 @@ class SalienceEngine:
     def __init__(self, base_dir: Path, physiology_engine=None):
         self.base_dir = base_dir
         self.physiology = physiology_engine
-        self.history: List[Dict] = []
+        self.history: list[Dict] = []
         self.max_history = 200
     
     def _get_physiology(self):
         if self.physiology is None:
-            from layers.L02_Agent.physiology_engine import PhysiologyEngine
+            from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
             self.physiology = PhysiologyEngine(self.base_dir)
         return self.physiology
     
-    def compute_signal_priority(self, signal_type: str, base_priority: int = 5, payload: Dict = None) -> Dict:
+    def compute_signal_priority(self, signal_type: str, base_priority: int = 5, payload: Dict | None = None) -> Dict:
         """Compute effective priority for a signal based on current state."""
         state = self._get_physiology().get_state()
         hormones = state["endocrine"]["hormones"]
@@ -105,7 +104,7 @@ class SalienceEngine:
         computed = self.compute_signal_priority(signal_type, base_priority)
         return computed["effective_priority"] >= 3
     
-    def get_top_signals(self, limit: int = 10) -> List[Dict]:
+    def get_top_signals(self, limit: int = 10) -> list[Dict]:
         """Get top priority signals from history."""
         return sorted(self.history, key=lambda x: -x["effective_priority"])[:limit]
     
@@ -122,4 +121,3 @@ class SalienceEngine:
             if active:
                 parts.append(f"+{mod}")
         return " | ".join(parts)
-

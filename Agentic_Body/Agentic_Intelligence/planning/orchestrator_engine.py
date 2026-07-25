@@ -1,26 +1,25 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """SeshaAOS - Orchestrator Engine (The CPU)
 Version: 1.0.0
 Description: Autonomous closed-loop: senses -> decision -> lattice -> motor -> memory.
 """
+from pathlib import Path
+from typing import Any, List, Optional, Tuple
 import json
 import os
 import subprocess
 import sys
 import time
 import uuid
-from pathlib import Path
-from typing import Dict, Any, List, Optional, Tuple
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent # Project root
-from layers.L07_Integration.sesha_senses import SeshaSenses
-from layers.L12_Infrastructure.sesha_lattice import LatticeEngine
-from layers.L05_Memory.state_manager import StateManager
-from layers.L02_Agent.sesha_liver import SeshaLiver
-from layers.L11_Data.soma_transcended import TranscendedSubstrate
+from Agentic_Body.Agentic_Physique.kernel.sesha_senses import SeshaSenses
+from Agentic_Body.Agentic_Soma.Foundation.dna.sesha_lattice import LatticeEngine
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
+from Agentic_Body.Agentic_Physique.sesha_liver import SeshaLiver
+from Agentic_Body.Agentic_Physique.nervous.soma_transcended import TranscendedSubstrate
 
 DEFAULT_ROUTING = {
     "NOCICEPTION": {"to": "Systems Security", "priority": 10, "action": "heal"},
@@ -37,21 +36,18 @@ class OrchestratorEngine:
         self.state_mgr = StateManager(base_dir)
         self.substrate = TranscendedSubstrate(base_dir)
         
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
-        from layers.L08_Governance.physiological_gate import PhysiologicalGate
-        from layers.L11_Data.signal_router import SignalRouter
-        from layers.L07_Integration.sesha_senses import SeshaSenses
-        from layers.L12_Infrastructure.sesha_lattice import LatticeEngine
-        from layers.L02_Agent.motor_engine import MotorEngine
-        from layers.L05_Memory.memory_synth import MemorySynth
-        from layers.L02_Agent.sesha_liver import SeshaLiver
-        from layers.L02_Agent.auto_repair import AutoRepairEngine
-        from layers.L11_Data.synaptic_transmitter import SynapticTransmitter
-        from layers.L09_Observability.logic_git import LogicGit
-        from layers.L08_Governance.auditor_agent import AuditorAgent
-        from layers.L09_Observability.tdd_steroids import TDDOnSteroids
-        from layers.L04_Composition.composition_engine import CompositionEngine
-        from layers.L13_Hive.hive_bridge import HiveBridge
+        from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
+        from Agentic_Body.Agentic_Soma.Foundation.governance.physiological_gate import PhysiologicalGate
+        from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
+        from Agentic_Body.Agentic_Physique.motor_engine import MotorEngine
+        from Agentic_Body.Agentic_Intelligence.memory.memory_synth import MemorySynth
+        from Agentic_Body.Agentic_Physique.auto_repair import AutoRepairEngine
+        from Agentic_Body.Agentic_Physique.nervous.synaptic_transmitter import SynapticTransmitter
+        from Agentic_Body.Agentic_Soma.Foundation.governance.logic_git import LogicGit
+        from Agentic_Body.Agentic_Soma.Foundation.governance.auditor_agent import AuditorAgent
+        from Agentic_Body.Agentic_Soma.Foundation.governance.tdd_steroids import TDDOnSteroids
+        from Agentic_Body.Agentic_Soma.Foundation.dna.composition_engine import CompositionEngine
+        from Agentic_Body.Agentic_Soma.Foundation.governance.hive_bridge import HiveBridge
 
         self.physiology = PhysiologyEngine(base_dir)
         self.gate = PhysiologicalGate(base_dir)
@@ -78,7 +74,7 @@ class OrchestratorEngine:
             self.substrate.subscribe(f"signal/{signal_type}", 
                 lambda p, s=signal_type: self._route_signal(s, p["payload"]))
 
-    def _check_reflex_fast_path(self, text: str) -> Tuple[bool, str]:
+    def _check_reflex_fast_path(self, text: str) -> tuple[bool, str]:
         """Neural 13.0: Identifies and executes low-risk somatic reflexes instantly."""
         lower = text.lower().strip()
         
@@ -128,7 +124,7 @@ class OrchestratorEngine:
         
         return f"Directive [{directive_id}] transmitted via high-speed bus and queued."
 
-    def _route_signal(self, signal_type: str, payload: Dict[str, Any]) -> Optional[str]:
+    def _route_signal(self, signal_type: str, payload: dict[str, Any]) -> str:
         routing = self.state_mgr.get_routing_weights()
         route = routing.get(signal_type)
         if not route:
@@ -151,10 +147,10 @@ class OrchestratorEngine:
         self._log_decision(f"signal:{signal_type}->{to_role}", outcome, success)
         return f"{synapse} | {outcome}"
 
-    def _process_sensory_events(self) -> List[str]:
+    def _process_sensory_events(self) -> list[str]:
         return []
 
-    def _process_active_signals(self) -> List[str]:
+    def _process_active_signals(self) -> list[str]:
         results = []
         for signal_type, data in self.signals.get_active_signals().items():
             if signal_type in ("VIBE", "DECISION"):
@@ -164,7 +160,7 @@ class OrchestratorEngine:
                 results.append(routed)
         return results
 
-    def _fracture_task(self, task_text: str) -> List[str]:
+    def _fracture_task(self, task_text: str) -> list[str]:
         """Neural 7.0: Adaptive Atomic Fission."""
         # Detect complex intent by counting conjunctions and newlines
         sub_atoms = []
@@ -187,7 +183,7 @@ class OrchestratorEngine:
                 
         return sub_atoms
 
-    def _process_directive_inbox(self) -> List[str]:
+    def _process_directive_inbox(self) -> list[str]:
         pending = self.state_mgr.get_queued_directives("pending")
         pending.sort(key=lambda d: -d.get("priority", 5))
         results = []
@@ -211,7 +207,7 @@ class OrchestratorEngine:
                 # 3. TDD-on-Steroids (Pre-verification)
                 test_case = self.tdd.generate_pre_test(atom)
                 if not self.tdd.verify_logic(predicted_action, test_case):
-                    directive_results.append(f"REJECTED: Pre-execution verification failed for '{atom}'")
+                    directive_results.append("REJECTED: Pre-execution verification failed for '{atom}'")
                     continue
                 
                 # 4. Layer 4: Composition Bidding (Dynamic Negotiation)
@@ -242,7 +238,7 @@ class OrchestratorEngine:
             
         return results
 
-    def _evaluate_superposition(self, atom: str) -> Dict[str, Any]:
+    def _evaluate_superposition(self, atom: str) -> dict[str, Any]:
         """Neural 13.0: Evaluates multiple action paths and collapses to the optimal one."""
         # Candidates: [Action, Energy Cost, Risk/Cortisol]
         candidates = [
@@ -288,7 +284,7 @@ class OrchestratorEngine:
             return "motor_direct"
         return "observe"
 
-    def _autonomic_maintenance(self) -> List[str]:
+    def _autonomic_maintenance(self) -> list[str]:
         results = []
         state = self.physiology.get_state()
         toxic = self.liver.get_toxic_load()
@@ -317,7 +313,7 @@ class OrchestratorEngine:
             results.append(f"Motor drain: {r}")
         return results
 
-    def tick(self) -> Dict[str, Any]:
+    def tick(self) -> dict[str, Any]:
         physio = self.physiology.get_state()
         if physio["metabolism"]["status"] == "Critical":
             return {"status": "suspended", "reason": "Energy critical"}
@@ -340,7 +336,7 @@ class OrchestratorEngine:
         # Neural 13.0: Token Sentry - Monitoring context saturation
         # We estimate context size based on recent results and directives
         context_snapshot = json.dumps(results)
-        from layers.L05_Memory.context_pager import ContextPager
+        from Agentic_Body.Agentic_Intelligence.memory.context_pager import ContextPager
         pager = ContextPager(self.base_dir)
         paged, msg = pager.trigger_autonomic_paging(len(context_snapshot) * 10) # Weighted estimate
         if paged:
@@ -348,7 +344,7 @@ class OrchestratorEngine:
         
         return results
 
-    def _execute_action(self, action: str, context: Dict[str, Any]) -> str:
+    def _execute_action(self, action: str, context: dict[str, Any]) -> str:
         """Executes a specific biological action by delegating to the appropriate engine."""
         if action == "heal":
             return "\n".join(self.repair.scan_and_fix())
@@ -363,7 +359,7 @@ class OrchestratorEngine:
             return "Memory consolidation complete (Dream cycle)."
         if action == "motor_priority":
             return "Motor priority pulse executed."
-        return f"Action '{action}' deferred to fallback handler."
+        return "Action '{action}' deferred to fallback handler."
 
     def _log_decision(self, decision: str, outcome: str, success: bool):
         self.signals.emit_signal("DECISION", {"decision": decision, "outcome": outcome[:200], "success": success}, ttl_seconds=3600)
@@ -371,7 +367,7 @@ class OrchestratorEngine:
     def _bump_routing_weight(self, signal_type: str, success: bool):
         self.state_mgr.update_routing_stats(signal_type, success)
 
-    def get_status(self) -> Dict[str, Any]:
+    def get_status(self) -> dict[str, Any]:
         pending = len(self.state_mgr.get_queued_directives("pending"))
         routing = self.state_mgr.get_routing_weights()
         return {
@@ -385,4 +381,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     orch = OrchestratorEngine(base)
     print(json.dumps(orch.tick(), indent=2))
-

@@ -1,26 +1,34 @@
-# Sesha Agentic Body: Skills Lattice
-Version: 1.0.0
-
-## 1. Skill Architecture
-Skills are the actionable manifestations of the 136+ Logic Atoms. They are categorized by the Pillar they primary inhabit.
-
-### A. Intelligence Skills (AI)
-- **Neural Reasoning:** Advanced prompt parsing and deductive logic.
-- **Context Paging:** High-fidelity management of long-term and short-term memory.
-- **Sovereign Interface:** Management of Web, Shell, and Plugin gateways.
-- **Recursive Self-Improvement:** Execution of ignition cycles and model adaptation.
-
-### B. Soma Skills (AS)
-- **Moral Evaluation:** Intent judging via the Moral Cortex.
-- **Governance Auditing:** Constitutional compliance checks (Laws I, II, III).
-- **Identity Synthesis:** Maintaining the persistent Soul of the Sovereign.
-- **Protocol Enforcement:** Management of Biological Operating Procedures.
-
-### C. Physique Skills (AP)
-- **Hardware Telemetry:** Direct Win32/Mojo/Zig hardware monitoring.
-- **11-System Metabolism:** Management of energy, heat, and resource flow.
-- **Motor Execution:** Direct OS input and UIA structure scanning.
-- **Digital Immunity:** Pathogen detection and quarantine.
+# Sesha Skills Registry
+Version 2.0 — Skills mapped to DNA blueprints and biological systems.
+Every skill links to a genome (`skills_genome/`) and a code module (`evolved_skills/`).
 
 ---
-*Status: ENCODED | Skills are the hands of intent.*
+
+## Active Skills
+
+### Core Intelligence Skills
+- `thought_agent` — Translates neural pulses to natural language
+- `synaptic_vm` — Active inference and free energy minimization
+- `limbic_system` — Emotional state management
+- `memory_synth` — Wisdom consolidation and learning artifacts
+- `context_pager` — Working memory management
+
+### Planning & Evolution Skills
+- `developmental_boot` — 7-stage maturation (Zygote → Adult)
+- `instinct_engine` — Biological drives (Curiosity, Consolidation, Growth)
+- `self_evolving_kernel` — Hot-loadable logic synthesis
+- `swarm_executor` — Multi-agent swarm coordination
+- `orchestrator_engine` — Central directive processing
+
+### Physique Skills
+- `metabolism_engine` — Cellular respiration and thermal regulation
+- `immune_engine` — Adaptive and innate immunity
+- `endocrine_engine` — Hormone regulation and circadian rhythms
+- `synaptic_mesh` — Zero-copy shared memory bus
+- `signal_router` — Spinal cord signal processing
+- `motor_control` — Real desktop mouse/keyboard/window control (ctypes/win32gui)
+- `physique_engine` — Hardware monitoring and power audit
+
+---
+
+*All skills verified against Constitution v2.0. No false capability claims per Law III.*

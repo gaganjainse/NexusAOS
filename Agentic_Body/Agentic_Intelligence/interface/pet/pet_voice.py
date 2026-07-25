@@ -5,11 +5,10 @@ Description: Mood-aware TTS using Edge TTS with SSML pitch/rate/voice control.
 Falls back to pyttsx3 (SAPI5 on Windows) if edge-tts unavailable.
 """
 
+from typing import Optional
 import asyncio
 import threading
 import time
-from typing import Optional
-
 
 VOICE_PARAMS = {
     "calm": {
@@ -67,8 +66,8 @@ VOICE_PARAMS = {
 class PetVoiceEngine:
     def __init__(self):
         self._edge_available = False
-        self._loop: Optional[asyncio.AbstractEventLoop] = None
-        self._thread: Optional[threading.Thread] = None
+        self._loop: asyncio.AbstractEventLoop | None = None
+        self._thread: threading.Thread | None = None
         self._lock = threading.Lock()
         self._current_speak_future = None
         self._init_engine()
@@ -76,6 +75,7 @@ class PetVoiceEngine:
     def _init_engine(self):
         try:
             import edge_tts
+            self._edge_tts = edge_tts
             self._edge_available = True
             self._loop = asyncio.new_event_loop()
             self._thread = threading.Thread(target=self._run_loop, daemon=True)
@@ -87,7 +87,7 @@ class PetVoiceEngine:
         asyncio.set_event_loop(self._loop)
         self._loop.run_forever()
 
-    def speak(self, text: str, mood: str = "calm", on_done: Optional[callable] = None) -> bool:
+    def speak(self, text: str, mood: str = "calm", on_done: callable | None = None) -> bool:
         if not self._edge_available:
             if on_done:
                 on_done()
@@ -98,10 +98,9 @@ class PetVoiceEngine:
 
         async def _speak():
             try:
-                import edge_tts
-                communicate = edge_tts.Communicate(ssml, params["voice"])
+                communicate = self._edge_tts.Communicate(ssml, params["voice"])
                 await communicate.save("NUL")
-            except Exception:
+            except Exception:  # noqa: BLE001
                 pass
             finally:
                 if on_done:
@@ -119,16 +118,16 @@ class PetVoiceEngine:
         volume = params["volume"]
         style = params.get("style", "general")
         return (
-            f'<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" '
-            f'xmlns:mstts="http://www.w3.org/2001/mstts">'
-            f'<voice name="{params["voice"]}">'
-            f'<mstts:express-as style="{style}" styledegree="1.0">'
-            f'<prosody rate="{rate}" pitch="{pitch}" volume="{volume}">'
+            '<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" '
+            'xmlns:mstts="http://www.w3.org/2001/mstts">'
+            '<voice name="{params["voice"]}">'
+            '<mstts:express-as style="{style}" styledegree="1.0">'
+            '<prosody rate="{rate}" pitch="{pitch}" volume="{volume}">'
             f'{self._escape_xml(text)}'
-            f'</prosody>'
-            f'</mstts:express-as>'
-            f'</voice>'
-            f'</speak>'
+            '</prosody>'
+            '</mstts:express-as>'
+            '</voice>'
+            '</speak>'
         )
 
     def _escape_xml(self, text: str) -> str:
@@ -143,4 +142,3 @@ class PetVoiceEngine:
 
     def shutdown(self):
         self.stop()
-

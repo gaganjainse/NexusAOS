@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Synaptic Mesh Engine
 Version: 1.0.0
 Description: Manages inter-node communication and discovery (Gossip Simulation).
 """
 
+from pathlib import Path
+from typing import Dict, Optional
 import json
 import os
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -43,7 +42,7 @@ class SeshaMesh:
         with open(self.heartbeat_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
 
-    def discover_peers(self) -> List[Dict]:
+    def discover_peers(self) -> list[Dict]:
         """Finds other nodes in the mesh."""
         peers = []
         for p in self.mesh_dir.glob("node_*.json"):
@@ -57,7 +56,7 @@ class SeshaMesh:
                         peers.append(data)
                     else:
                         p.unlink() # Cleanup orphaned node
-            except Exception:
+            except Exception:  # noqa: BLE001
                 continue
         return peers
 
@@ -72,10 +71,10 @@ class SeshaMesh:
             current.append({**synapse_data, "sender": self.node_id, "timestamp": time.time()})
             inbox.write_text(json.dumps(current, indent=4), encoding="utf-8")
             return True
-        except Exception:
+        except Exception:  # noqa: BLE001
             return False
 
-    def _get_local_roles(self) -> List[str]:
+    def _get_local_roles(self) -> list[str]:
         """Queries the active_roles directory for available roles."""
         roles_dir = self.base_dir / "active_roles"
         if roles_dir.exists():
@@ -88,4 +87,3 @@ if __name__ == "__main__":
     mesh.broadcast_heartbeat("Healthy", 99.0)
     print(f"Node {mesh.node_id} online.")
     print("Peers:", mesh.discover_peers())
-

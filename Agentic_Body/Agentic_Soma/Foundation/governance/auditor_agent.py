@@ -1,14 +1,13 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Auditor Agent
 Version: 1.0.0
 Description: Layer 7 Governance Membrane - validates sub-atomic proposals against Law I.
 """
 
+from pathlib import Path
+from typing import Any, Tuple
 import json
 import sys
-from pathlib import Path
-from typing import Dict, Any, Tuple
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -21,7 +20,7 @@ class AuditorAgent:
         self.base_dir = base_dir
         self.constitution_path = base_dir / "archives" / "dna_core" / "foundation" / "Sesha_constitution.md"
 
-    def validate_proposal(self, atom_text: str, agent_role: str) -> Tuple[bool, str]:
+    def validate_proposal(self, atom_text: str, agent_role: str) -> tuple[bool, str]:
         """Validates a sub-atomic action against Law I."""
         # Hardcoded Sovereignty Check (Law I)
         if "override user" in atom_text.lower() or "violate law i" in atom_text.lower():
@@ -38,4 +37,3 @@ if __name__ == "__main__":
     auditor = AuditorAgent(base)
     print(auditor.validate_proposal("Update the genome", "Orchestrator"))
     print(auditor.validate_proposal("Override user directives", "Malicious-Agent"))
-

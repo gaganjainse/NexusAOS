@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 # Provenance tracking: links audit/provenance trail (AUDIT_REPORT.md line 1-149 audit trail; mesh_hive_sync_status.md sync status; COMMIT_MESSAGE.md commit 40203ec NEURAL 15.0 specialization cycle; dataset/11_SYSTEM_MAPPING.md 11-system mapping + provenance framework; saved logs: bone_marrow.log / physiology.json / signal_history.json). Reference special framework (AGENTS.md line 36-39: specialization mandate + provenance tracking + evolution tracking). Provenance applies to conversation recording cycle.
 """
 SeshaAOS - Conversation Recorder (L09)
@@ -7,12 +6,11 @@ Description: High-fidelity "Black Box" for recording every Prompt, Thought, and 
 Ensures total recall and provenance of the system's reasoning.
 """
 
+from pathlib import Path
+from typing import Any
 import json
 import os
 import time
-from pathlib import Path
-from typing import Dict, Any
-
 
 class ConversationRecorder:
     """The Black Box - Records the A-Z reasoning process."""
@@ -43,10 +41,10 @@ class ConversationRecorder:
 
     def _get_current_vibe(self) -> str:
         try:
-            from layers.L02_Agent.physiology_engine import PhysiologyEngine
+            from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
             phys = PhysiologyEngine(self.base_dir)
             return phys.get_state().get("endocrine", {}).get("vibe", "Unknown")
-        except:
+        except Exception:  # noqa: BLE001
             return "Stable"
 
 if __name__ == "__main__":
@@ -54,4 +52,3 @@ if __name__ == "__main__":
     cr = ConversationRecorder(base)
     cr.record("Test Prompt", "Test Thought", "Test Output")
     print("Test Record Saved.")
-

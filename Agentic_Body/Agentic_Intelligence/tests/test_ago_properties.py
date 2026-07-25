@@ -3,12 +3,12 @@ SeshaAOS - Property-Based Tests
 Version: 1.0.0
 Description: Tests for properties that must always hold true.
 """
+from pathlib import Path
 import asyncio
 import sys
-import unittest
-from pathlib import Path
 
-# Add mcp_server/python to path
+import unittest
+
 BASE_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
 
@@ -21,7 +21,7 @@ class TestAGOProperties(unittest.TestCase):
         self.assertGreaterEqual(state["metabolism"]["current_energy"], 0)
 
     def test_wal_always_replayable(self):
-        from services.Sesha_runtime import WAL
+        from Agentic_Body.Agentic_Intelligence.planning.sesha_runtime import WAL
         wal = WAL(BASE_DIR)
 
         async def run():
@@ -41,4 +41,3 @@ class TestAGOProperties(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

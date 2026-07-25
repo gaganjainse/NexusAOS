@@ -2,11 +2,12 @@
 SeshaAOS - Long-Run Soak Test (72h)
 Description: Continuous runtime stress test with explicit pass criteria.
 """
+from pathlib import Path
 import json
 import sys
 import time
+
 import unittest
-from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
@@ -14,7 +15,7 @@ sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
 
 class TestSoak72h(unittest.TestCase):
     def setUp(self):
-        from services.Sesha_runtime import SeshaRuntime
+        from Agentic_Body.Agentic_Intelligence.planning.sesha_runtime import SeshaRuntime
         self.runtime = SeshaRuntime(BASE_DIR)
         self.metrics_path = BASE_DIR / "core" / "monitoring" / "soak_metrics.json"
         self.metrics_path.parent.mkdir(parents=True, exist_ok=True)
@@ -36,7 +37,7 @@ class TestSoak72h(unittest.TestCase):
 
     def test_short_soak_placeholder(self):
         """Placeholder for 72h soak: verifies runtime instantiation and metrics persistence."""
-        from services.Sesha_runtime import WAL
+        from Agentic_Body.Agentic_Intelligence.planning.sesha_runtime import WAL
         wal = WAL(BASE_DIR)
         self.assertIsNotNone(wal)
         self.assertIsNotNone(self.runtime)
@@ -60,4 +61,3 @@ class TestSoak72h(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

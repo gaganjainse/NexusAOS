@@ -1,14 +1,17 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Developmental Boot Stages
 Version: 1.0.0
 Description: 7-stage maturation from Zygote to Adult, physiologically gated.
 """
 # Specialization mandate applied (AGENTS.md line 36-39): AB/AP balance + DNA (COMPLETE_ARCHITECTURE.md line 14-30: 7-stage maturation) + governance (Law I/II/III: physiological gates) + provenance (audit trail via boot_path + stage_history tracking) + Voice DNA (biological metaphors: zygote/embryo/fetus/adult stages)
+from pathlib import Path
+from typing import Any, Callable, Dict, Final, List, Self
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Callable
+
+# Local imports for engines used in boot stages
+from Agentic_Body.Agentic_Intelligence.memory.dream_engine import DreamEngine
+from Agentic_Body.Agentic_Physique.physiology_engine import PhysiologyEngine
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -81,7 +84,7 @@ class DevelopmentalBoot:
         self.boot_path = base_dir / "core" / "monitoring" / "developmental_boot.json"
         self.boot_path.parent.mkdir(parents=True, exist_ok=True)
         self.current_stage = 0
-        self.stage_history: List[Dict] = []
+        self.stage_history: list[Dict] = []
         self._load()
     
     def _load(self):
@@ -171,7 +174,7 @@ class DevelopmentalBoot:
             "stage": next_stage
         }
     
-    def _execute_actions(self, actions: List[str]):
+    def _execute_actions(self, actions: list[str]):
         """Execute stage initialization actions."""
         for action in actions:
             if action == "create_state_files":
@@ -211,75 +214,73 @@ class DevelopmentalBoot:
     
     # --- Action implementations ---
     def _create_state_files(self):
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
         PhysiologyEngine(self.base_dir).reset_all()
     
     def _init_wal(self):
-        from services.Sesha_runtime import WAL
+        from Agentic_Body.Agentic_Intelligence.planning.sesha_runtime import WAL
         WAL(self.base_dir)
     
     def _init_physiology(self):
-        from layers.L02_Agent.physiology_engine import PhysiologyEngine
         PhysiologyEngine(self.base_dir).synthesize_vibe()
     
     def _init_signal_router(self):
-        from layers.L11_Data.signal_router import SignalRouter
+        from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
         SignalRouter(self.base_dir)
     
     def _init_lattice(self):
-        from layers.L12_Infrastructure.Sesha_lattice import LatticeEngine
+        from Agentic_Body.Agentic_Soma.Foundation.dna.Sesha_lattice import LatticeEngine
         LatticeEngine(self.base_dir)
     
     def _init_senses(self):
-        from layers.L07_Integration.sesha_senses import SeshaSenses  # Fixed case (was Sesha_senses in original)
+        from Agentic_Body.Agentic_Physique.kernel.sesha_senses import SeshaSenses  # Fixed case (was Sesha_senses in original)
         SeshaSenses(self.base_dir)
     
     def _register_watchers(self):
-        from layers.L07_Integration.Sesha_senses import SeshaSenses
+        from Agentic_Body.Agentic_Physique.kernel.Sesha_senses import SeshaSenses
         senses = SeshaSenses(self.base_dir)
         senses.register_watcher("core/exports")
         senses.register_watcher("core/pulses")
     
     def _init_motor(self):
-        from layers.L02_Agent.motor_engine import MotorEngine
+        from Agentic_Body.Agentic_Physique.motor_engine import MotorEngine
         MotorEngine(self.base_dir)
     
     def _init_liver(self):
-        from layers.L02_Agent.sesha_liver import SeshaLiver  # Fixed case (was Sesha_liver)
+        from Agentic_Body.Agentic_Physique.sesha_liver import SeshaLiver  # Fixed case (was Sesha_liver)
         SeshaLiver(self.base_dir)
     
     def _init_memory_synth(self):
-        from layers.L05_Memory.memory_synth import MemorySynth
+        from Agentic_Body.Agentic_Intelligence.memory.memory_synth import MemorySynth
         MemorySynth(self.base_dir)
     
     def _init_dream_engine(self):
         DreamEngine(self.base_dir)
     
     def _init_orchestrator(self):
-        from layers.L01_Planning.orchestrator_engine import OrchestratorEngine
+        from Agentic_Body.Agentic_Intelligence.planning.orchestrator_engine import OrchestratorEngine
         OrchestratorEngine(self.base_dir)
     
     def _init_antibody_engine(self):
-        from layers.L02_Agent.antibody_engine import AntibodyEngine
+        from Agentic_Body.Agentic_Physique.antibody_engine import AntibodyEngine
         AntibodyEngine(self.base_dir)
     
     def _init_reproduction(self):
-        from layers.L02_Agent.reproduction_engine import ReproductionEngine
+        from Agentic_Body.Agentic_Physique.reproduction_engine import ReproductionEngine
         ReproductionEngine(self.base_dir)
     
     def _init_evolution(self):
-        from layers.L04_Composition.evolution_engine import EvolutionEngine
+        from Agentic_Body.Agentic_Soma.Foundation.dna.evolution_engine import EvolutionEngine
         EvolutionEngine(self.base_dir)
     
     def _init_body_schema(self):
-        from layers.L02_Agent.body_schema import BodySchema
+        from Agentic_Body.Agentic_Physique.body_schema import BodySchema
         BodySchema(self.base_dir)
     
     def _enable_reproduction(self):
         """Final stage - reproduction fully enabled."""
         pass
 
-    def get_stage_actions(self, stage_index: int) -> List[str]:
+    def get_stage_actions(self, stage_index: int) -> list[str]:
         """Get actions for a specific stage."""
         if 0 <= stage_index < len(self.STAGES):
             return self.STAGES[stage_index]["actions"]

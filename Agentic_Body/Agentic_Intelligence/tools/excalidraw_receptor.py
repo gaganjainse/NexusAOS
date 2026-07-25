@@ -1,26 +1,26 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
-SeshaAOS - Excalidraw Receptor (Visual Cortex)
-Version: 1.0.0
-Description: Agent visual cortex - reads/writes Excalidraw canvases programmatically.
-Supports both self-hosted Excalidraw and Excalidraw Plus API.
+SeshaAOS - Excalidraw Receptor
+Agent's visual cortex - reads/writes Excalidraw canvases programmatically.
+Supports self-hosted Excalidraw and Excalidraw Plus API.
 """
+
+import sys
 import json
 import time
 import uuid
+import os
+import urllib.request
+import urllib.parse
+
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Set, Type, Union
+from dataclasses import dataclass, asdict, field
+from enum import Enum
+import base64
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
-import urllib.request
-import urllib.parse
-import os
-from pathlib import Path
-from typing import Dict, List, Optional, Any, Union
-from dataclasses import dataclass, asdict, field
-from enum import Enum
-import base64
 
 
 class ElementType(Enum):
@@ -53,16 +53,16 @@ class ExcalidrawElement:
     strokeStyle: str = "solid"
     roughness: float = 1
     opacity: int = 100
-    groupIds: List[str] = field(default_factory=list)
-    frameId: Optional[str] = None
-    roundness: Optional[float] = None
+    groupIds: list[str] = field(default_factory=list)
+    frameId: str | None = None
+    roundness: float | None = None
     seed: int = field(default_factory=lambda: int(time.time() * 1000) % 1000000)
     version: int = 1
     versionNonce: int = field(default_factory=lambda: int(time.time() * 1000000) % 1000000)
     isDeleted: bool = False
-    boundElements: Optional[List[Dict]] = None
+    boundElements: list[Dict] | None = None
     updated: int = field(default_factory=lambda: int(time.time() * 1000))
-    link: Optional[str] = None
+    link: str | None = None
     locked: bool = False
     
     # Text-specific
@@ -71,31 +71,31 @@ class ExcalidrawElement:
     fontFamily: int = 1
     textAlign: str = "center"
     verticalAlign: str = "middle"
-    containerId: Optional[str] = None
+    containerId: str | None = None
     originalText: str = ""
     lineHeight: float = 1.25
     
     # Arrow/Line specific
-    startBinding: Optional[Dict] = None
-    endBinding: Optional[Dict] = None
-    startArrowhead: Optional[str] = None
+    startBinding: Dict | None = None
+    endBinding: Dict | None = None
+    startArrowhead: str | None = None
     endArrowhead: str = "arrow"
     
     # FreeDraw specific
-    points: Optional[List[List[float]]] = None
-    pressures: Optional[List[float]] = None
+    points: list[list[float]] | None = None
+    pressures: list[float] | None = None
     simulatePressure: bool = False
     
     # Image specific
-    fileId: Optional[str] = None
-    scale: Optional[List[float]] = None
-    crop: Optional[Dict] = None
+    fileId: str | None = None
+    scale: list[float] | None = None
+    crop: Dict | None = None
     
     # Frame specific
-    name: Optional[str] = None
+    name: str | None = None
     
     # Custom agent data
-    customData: Dict[str, Any] = field(default_factory=dict)
+    customData: dict[str, Any] = field(default_factory=dict)
     
     def to_dict(self) -> Dict:
         """Convert to Excalidraw JSON format."""
@@ -174,11 +174,11 @@ class ExcalidrawReceptor:
         self.canvases_dir.mkdir(parents=True, exist_ok=True)
         
         # Scene cache
-        self._scene_cache: Dict[str, Dict] = {}
+        self._scene_cache: dict[str, Dict] = {}
     
     # === Cloud API Methods ===
     
-    def _cloud_request(self, method: str, endpoint: str, data: Dict = None) -> Dict:
+    def _cloud_request(self, method: str, endpoint: str, data: Dict | None = None) -> Dict:
         """Make authenticated request to Excalidraw Plus API."""
         if not self.is_cloud:
             raise RuntimeError("Cloud API not configured. Set EXCALIDRAW_API_KEY.")
@@ -218,7 +218,7 @@ class ExcalidrawReceptor:
             "elements": [],
             "appState": {
                 "gridSize": 20,
-                "viewBackgroundColor": "#ffffff",
+                "viewBackgroundColor": "#",
                 "currentItemStrokeColor": "#1e1e1e",
                 "currentItemBackgroundColor": "transparent",
                 "currentItemFillStyle": "solid",
@@ -271,7 +271,7 @@ class ExcalidrawReceptor:
         else:
             return self._load_local_scene(canvas_id)
     
-    def list_canvases(self) -> List[Dict]:
+    def list_canvases(self) -> list[Dict]:
         """List all canvases."""
         if self.is_cloud:
             return self._cloud_request("GET", "/scenes")
@@ -288,7 +288,7 @@ class ExcalidrawReceptor:
                     })
             return canvases
     
-    def perceive_canvas(self, canvas_id: str, agent_id: str) -> List[Dict]:
+    def perceive_canvas(self, canvas_id: str, agent_id: str) -> list[Dict]:
         """
         Read canvas as structured data for agent reasoning.
         Returns interpreted elements with agent-relevant metadata.
@@ -381,7 +381,7 @@ class ExcalidrawReceptor:
             self._save_local_scene(canvas_id, scene)
             return element.id
     
-    def search_canvas(self, canvas_id: str, query: str) -> List[Dict]:
+    def search_canvas(self, canvas_id: str, query: str) -> list[Dict]:
         """Semantic search on canvas content."""
         scene = self.get_canvas(canvas_id)
         elements = scene.get("elements", [])
@@ -406,19 +406,19 @@ class ExcalidrawReceptor:
         
         return results
     
-    def export_canvas(self, canvas_id: str, format: str = "json") -> Union[str, bytes]:
+    def export_canvas(self, canvas_id: str, fmt: str = "json") -> str | bytes:
         """Export canvas in various formats."""
         scene = self.get_canvas(canvas_id)
         
-        if format == "json":
+        if fmt == "json":
             return json.dumps(scene, indent=2)
-        elif format == "markdown":
+        elif fmt == "markdown":
             return self._scene_to_markdown(scene)
-        elif format == "png":
+        elif fmt == "png":
             # Would require headless browser - placeholder
             return b"PNG export requires headless browser"
         else:
-            raise ValueError(f"Unsupported format: {format}")
+            raise ValueError(f"Unsupported format: {fmt}")
     
     def _scene_to_markdown(self, scene: Dict) -> str:
         """Convert canvas to structured markdown for documentation."""

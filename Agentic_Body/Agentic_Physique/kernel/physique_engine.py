@@ -1,23 +1,21 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Physique Engine (L07)
 Version: 1.0.0
 Description: Host Physical Health and Hardware Management. Focuses on Power, Drivers, and File Organization.
 """
 
+from pathlib import Path
+from typing import Any, List
 import json
 import os
 import subprocess
 import time
-from pathlib import Path
-from typing import Dict, Any, List
-
 
 class PhysiqueEngine:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
 
-    def diagnose_power_drain(self) -> Dict[str, Any]:
+    def diagnose_power_drain(self) -> dict[str, Any]:
         """Analyzes processes for high energy consumption."""
         results = {"high_energy_processes": []}
         try:
@@ -37,7 +35,7 @@ class PhysiqueEngine:
             results["error"] = str(e)
         return results
 
-    def audit_drivers(self) -> List[str]:
+    def audit_drivers(self) -> list[str]:
         """Scans for problematic or misconfigured drivers."""
         issues = []
         try:
@@ -47,11 +45,11 @@ class PhysiqueEngine:
                 issues.append(f"Problematic Hardware Detected: {output.strip()}")
             else:
                 issues.append("All drivers reporting nominal status (WMI).")
-        except:
+        except Exception:  # noqa: BLE001
             issues.append("Unable to query driver status.")
         return issues
 
-    def optimize_organization_proposal(self) -> Dict[str, List[str]]:
+    def optimize_organization_proposal(self) -> dict[str, list[str]]:
         """Proposes a clean skeletal structure for the host project folder."""
         return {
             "root_cleanup": ["Move all loose .md files to /docs or /archives", "Archive old logs to /core/monitoring/archive"],
@@ -62,4 +60,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     physique = PhysiqueEngine(base)
     print(json.dumps(physique.diagnose_power_drain(), indent=2))
-

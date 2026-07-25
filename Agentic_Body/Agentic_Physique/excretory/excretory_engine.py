@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 ExcretoryEngine — Excretory / Waste Removal System
 Biological analog: Kidneys, bladder, toxin filtration, water balance
@@ -13,13 +12,13 @@ Responsibilities (1:1 biology mapping):
 
 from __future__ import annotations
 
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 import os
 import sys
 import time
 import uuid
-from dataclasses import dataclass, field
-from pathlib import Path
-from typing import Any, Dict, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -31,7 +30,7 @@ class Toxin:
     id: str
     type: str  # "json", "signal", "state", "log"
     severity: float = 0.5
-    payload: Dict[str, Any] = field(default_factory=dict)
+    payload: dict[str, Any] = field(default_factory=dict)
     detected_at: float = field(default_factory=time.time)
     neutralized: bool = False
 
@@ -39,17 +38,17 @@ class Toxin:
 @dataclass
 class ExcretoryState:
     blood_volume: float = 100.0
-    toxins: Dict[str, Toxin] = field(default_factory=dict)
+    toxins: dict[str, Toxin] = field(default_factory=dict)
     urine_output: float = 0.0
     filtration_rate: float = 1.0
-    bladder: List[Dict[str, Any]] = field(default_factory=list)
+    bladder: list[dict[str, Any]] = field(default_factory=list)
     last_void: float = field(default_factory=time.time)
 
 
 class ExcretoryEngine:
     """Toxin filtration and waste removal."""
 
-    def __init__(self, base_dir: Path = TOOL_BASE_DIR):
+    def __init__(self, base_dir: Path = BASE_DIR):
         self.base_dir = base_dir
         self.state = ExcretoryState()
         self.toxins_removed: int = 0
@@ -75,7 +74,7 @@ class ExcretoryEngine:
             "total_removed": self.toxins_removed,
         }
 
-    def ingest_toxin(self, toxin_type: str, payload: Dict[str, Any], severity: float = 0.5) -> Dict:
+    def ingest_toxin(self, toxin_type: str, payload: dict[str, Any], severity: float = 0.5) -> Dict:
         """Detect and ingest toxin."""
         toxin_id = str(uuid.uuid4())
         self.state.toxins[toxin_id] = Toxin(
@@ -142,7 +141,7 @@ class ExcretoryEngine:
                     import json
                     json.loads(line)
                     valid.append(line)
-                except Exception:
+                except Exception:  # noqa: BLE001
                     corrupted += 1
 
             if corrupted:

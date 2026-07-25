@@ -17,4 +17,3 @@ pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
     try stdout.print("Singularity Kernel (L03): ARMED\n", .{});
 }
-

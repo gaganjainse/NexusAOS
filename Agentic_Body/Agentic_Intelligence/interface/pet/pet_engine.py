@@ -5,12 +5,11 @@ Description: Reads ALL biological system monitoring data and computes
 emergent mood, energy, voice parameters, and behavioral directives.
 """
 
-import json
-import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, Any, Optional, Tuple
-
+from typing import Any, Optional, Tuple
+import json
+import time
 
 @dataclass
 class EmergentState:
@@ -53,7 +52,7 @@ MOOD_VOICE_MAP = {
 class ConsciousnessEngine:
     def __init__(self, monitoring_dir: Path):
         self.monitoring_dir = monitoring_dir
-        self._last_state: Optional[EmergentState] = None
+        self._last_state: EmergentState | None = None
         self._history: list = []
 
     def tick(self) -> EmergentState:
@@ -65,53 +64,53 @@ class ConsciousnessEngine:
             self._history = self._history[-500:]
         return state
 
-    def _read_all(self) -> Dict[str, Any]:
+    def _read_all(self) -> dict[str, Any]:
         raw = {}
         try:
             pf = self.monitoring_dir / "physiology.json"
             if pf.exists():
                 raw["physiology"] = json.loads(pf.read_text())
-        except Exception:
+        except Exception:  # noqa: BLE001
             raw["physiology"] = {}
 
         try:
             sf = self.monitoring_dir / "sensory_feed.json"
             if sf.exists():
                 raw["sensory"] = json.loads(sf.read_text())
-        except Exception:
+        except Exception:  # noqa: BLE001
             raw["sensory"] = {}
 
         try:
             rf = self.monitoring_dir / "repair_log.json"
             if rf.exists():
                 raw["repair"] = json.loads(rf.read_text())
-        except Exception:
+        except Exception:  # noqa: BLE001
             raw["repair"] = []
 
         try:
             pl = self.monitoring_dir / "performance_ledger.json"
             if pl.exists():
                 raw["performance"] = json.loads(pl.read_text())
-        except Exception:
+        except Exception:  # noqa: BLE001
             raw["performance"] = []
 
         try:
             pb = self.monitoring_dir / "performance_baseline.json"
             if pb.exists():
                 raw["baseline"] = json.loads(pb.read_text())
-        except Exception:
+        except Exception:  # noqa: BLE001
             raw["baseline"] = {}
 
         try:
             bs = self.monitoring_dir / "body_schema.json"
             if bs.exists():
                 raw["body_schema"] = json.loads(bs.read_text())
-        except Exception:
+        except Exception:  # noqa: BLE001
             raw["body_schema"] = {}
 
         return raw
 
-    def _compute(self, raw: Dict[str, Any]) -> EmergentState:
+    def _compute(self, raw: dict[str, Any]) -> EmergentState:
         state = EmergentState()
         phys = raw.get("physiology", {})
 
@@ -212,9 +211,8 @@ class ConsciousnessEngine:
             parts.append(f"Synaptic pressure: {s.synaptic_pressure:.1f}")
         return " | ".join(parts)
 
-    def get_last_state(self) -> Optional[EmergentState]:
+    def get_last_state(self) -> EmergentState:
         return self._last_state
 
     def get_history(self) -> list:
         return self._history
-

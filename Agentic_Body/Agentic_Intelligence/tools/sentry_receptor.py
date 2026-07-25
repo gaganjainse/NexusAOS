@@ -1,19 +1,19 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
 SeshaAOS - Sentry Receptor (Introspection R11)
 Version: 1.0.0
 Description: Sentry API integration for error monitoring.
 """
+
+import sys
 import json
+import urllib.request
+import os
+from pathlib import Path
+from typing import Dict, List, Optional, Type
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
-import urllib.request
-import os
-from pathlib import Path
-from typing import Dict, Optional
 
 
 class SentryReceptor:
@@ -31,7 +31,7 @@ class SentryReceptor:
         if self.token:
             self.headers["Authorization"] = f"Bearer {self.token}"
 
-    def _request(self, method: str, endpoint: str, params: Optional[Dict] = None) -> Dict:
+    def _request(self, method: str, endpoint: str, params: Dict | None = None) -> Dict:
         """Make authenticated Sentry API request."""
         url = f"{self.api_base}{endpoint}"
         if params:

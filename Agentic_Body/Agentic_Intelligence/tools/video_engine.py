@@ -1,20 +1,18 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-# TRANSPARENCY: simulated/file-based — Specialization framework referenced (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA.
 """
 AOS Video Engine — video metadata extraction and frame analysis.
 Version: 1.0.0
 """
 
+from pathlib import Path
+from typing import Any, List
 import json
 import sys
-from pathlib import Path
-from typing import Dict, Any, List
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from layers.L06_Tool.vision_engine import VisionEngine
+from Agentic_Body.Agentic_Intelligence.tools.vision_engine import VisionEngine
 
 
 class VideoEngine:
@@ -30,7 +28,7 @@ class VideoEngine:
             p = self.base_dir / video_path
         return p.resolve()
 
-    def analyze_video(self, video_path: str, max_frames: int = 5) -> Dict[str, Any]:
+    def analyze_video(self, video_path: str, max_frames: int = 5) -> dict[str, Any]:
         """Extracts video metadata and analyzes sample frames."""
         path = self._resolve_path(video_path)
         if not path.exists():

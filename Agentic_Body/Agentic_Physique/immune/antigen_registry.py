@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Antigen Registry (Immune Memory)
 Version: 1.0.0
@@ -6,11 +5,11 @@ Description: Stores patterns of past errors and logic failures to prevent re-inf
 Biological analog: Memory T-cells and B-cells.
 """
 
+from pathlib import Path
+from typing import Any
 import hashlib
 import json
 import sys
-from pathlib import Path
-from typing import Dict, List, Any
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -49,7 +48,7 @@ class AntigenRegistry:
             json.dump(data, f, indent=4)
             f.truncate()
 
-    def check_infection(self, context: str) -> Dict[str, Any]:
+    def check_infection(self, context: str) -> dict[str, Any]:
         """Scans context for known pathogens (Past Bugs) and persists detection count."""
         with open(self.registry_path, "r+", encoding="utf-8") as f:
             data = json.load(f)
@@ -75,4 +74,3 @@ if __name__ == "__main__":
     ar = AntigenRegistry(base)
     ar.register_antigen("SyntaxError", "missing closing bracket in loop", "Add '}' at line 45")
     print(ar.check_infection("Error: missing closing bracket in loop detected."))
-

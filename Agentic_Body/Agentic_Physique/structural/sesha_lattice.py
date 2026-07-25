@@ -1,25 +1,24 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Lattice Engine
 Version: 1.0.0
 Description: Manages inter-agent synaptic handoffs and task state tracking.
 """
 
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 import json
 import sqlite3
 import sys
 import time
 import uuid
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L12_Infrastructure.sesha_mesh import SeshaMesh
-from layers.L05_Memory.state_manager import StateManager
+from Agentic_Body.Agentic_Soma.Foundation.dna.sesha_mesh import SeshaMesh
+from Agentic_Body.Agentic_Intelligence.memory.state_manager import StateManager
 
 class LatticeEngine:
     def __init__(self, base_dir: Path):
@@ -27,7 +26,7 @@ class LatticeEngine:
         self.state_mgr = StateManager(base_dir)
         self.mesh = SeshaMesh(base_dir)
 
-    def fire_synapse(self, from_role: str, to_role: str, directive: str, context: Optional[Dict] = None) -> str:
+    def fire_synapse(self, from_role: str, to_role: str, directive: str, context: Dict | None = None) -> str:
         """Initiates a task handoff from one role to another."""
         task_id = str(uuid.uuid4())[:8]
 
@@ -83,7 +82,7 @@ class LatticeEngine:
             return f"Task [{task_id}] consolidated to memory."
         return f"Error: Task [{task_id}] not found in active lattice."
 
-    def get_active_nodes(self) -> List[Dict]:
+    def get_active_nodes(self) -> list[Dict]:
         """Returns a list of all roles currently 'Firing' from the DB."""
         return self.state_mgr.get_active_tasks()
 
@@ -102,4 +101,3 @@ if __name__ == "__main__":
     lattice = LatticeEngine(base)
     print(lattice.fire_synapse("Orchestrator", "Research Lead", "Analyze Market Trends"))
     print("Active Nodes:", lattice.get_active_nodes())
-

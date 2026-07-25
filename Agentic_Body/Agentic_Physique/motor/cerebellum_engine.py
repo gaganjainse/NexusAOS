@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Cerebellum Engine (Motor Learning)
 Version: 1.0.0
@@ -6,18 +5,18 @@ Description: Fine-tunes tool execution parameters based on repetition and perfor
 Biological analog: Cerebellum (Procedural memory, timing, motor coordination).
 """
 
+from pathlib import Path
+from typing import Any, List
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L02_Agent.motor_memory import MotorMemory
+from Agentic_Body.Agentic_Physique.motor_memory import MotorMemory
 
 class CerebellumEngine:
     def __init__(self, base_dir: Path):
@@ -39,4 +38,3 @@ if __name__ == "__main__":
     cb = CerebellumEngine(base)
     cb.record_action("web_search", True, 1.2)
     print("Efficiency Mod:", cb.get_efficiency_mod("web_search"))
-

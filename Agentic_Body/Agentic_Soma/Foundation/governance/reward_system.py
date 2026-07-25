@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Real-Time Reward System
 Version: 1.0.0
 Description: Measures system performance and provides biological rewards (dopamine/serotonin) for speed improvements.
 """
 
+from pathlib import Path
+from typing import Any, List
 import json
 import statistics
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -24,9 +23,9 @@ class RewardSystem:
         self.ledger_path = base_dir / "core" / "monitoring" / "performance_ledger.json"
         
         # Late imports to avoid circular dependencies
-        from layers.L02_Agent.endocrine_engine import EndocrineEngine
-        from layers.L01_Planning.orchestrator_engine import OrchestratorEngine
-        from layers.L08_Governance.moral_cortex import MoralCortex
+        from Agentic_Body.Agentic_Physique.endocrine_engine import EndocrineEngine
+        from Agentic_Body.Agentic_Intelligence.planning.orchestrator_engine import OrchestratorEngine
+        from Agentic_Body.Agentic_Soma.Foundation.governance.moral_cortex import MoralCortex
         
         self.endocrine = EndocrineEngine(base_dir)
         self.orchestrator = OrchestratorEngine(base_dir)
@@ -50,14 +49,14 @@ class RewardSystem:
         try:
             with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except:
+        except Exception:  # noqa: BLE001
             return {}
 
     def _write_json(self, path: Path, data: Any):
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
 
-    def run_benchmark(self, iterations: int = 5) -> Dict[str, Any]:
+    def run_benchmark(self, iterations: int = 5) -> dict[str, Any]:
         """Runs a performance benchmark and calculates the reward."""
         latencies = []
         
@@ -122,7 +121,7 @@ class RewardSystem:
 
         return entry
 
-    def get_ledger(self) -> List[Dict[str, Any]]:
+    def get_ledger(self) -> list[dict[str, Any]]:
         return self._read_json(self.ledger_path)
 
 if __name__ == "__main__":
@@ -130,4 +129,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parents[3]
     rs = RewardSystem(base)
     print(rs.run_benchmark())
-

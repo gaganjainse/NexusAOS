@@ -1,19 +1,18 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Instinct Engine (Autonomic Motivations)
 Version: 1.0.0
 Description: Defines long-term biological drives that guide background behavior.
 """
 
+from pathlib import Path
+from typing import Optional
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Optional
 
-from layers.L02_Agent.metabolism_engine import MetabolismEngine
-from layers.L10_Intelligence.thought_agent import ThoughtAgent
-from layers.L11_Data.signal_router import SignalRouter
-from layers.L12_Infrastructure.dna_manager import DNAManager
+from Agentic_Body.Agentic_Intelligence.intelligence.thought_agent import ThoughtAgent
+from Agentic_Body.Agentic_Physique.metabolism_engine import MetabolismEngine
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
+from Agentic_Body.Agentic_Soma.Foundation.dna.dna_manager import DNAManager
 
 _python_root = Path(__file__).resolve().parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -34,7 +33,7 @@ class InstinctEngine:
         genome = self.dna.get_genome()
         return genome.get(category, {}).get(key, default)
 
-    def evaluate_drives(self) -> List[str]:
+    def evaluate_drives(self) -> list[str]:
         """Evaluates long-term biological needs and emits motivational signals."""
         vitals = self.metabolism._report()
         energy = vitals.get("energy", 100)
@@ -94,4 +93,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent
     instinct = InstinctEngine(base)
     print("Drives:", instinct.evaluate_drives())
-

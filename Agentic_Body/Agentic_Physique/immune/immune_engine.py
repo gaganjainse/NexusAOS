@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 ImmuneEngine — Immune System
 Biological analog: Innate immunity + adaptive immunity + lymphatic system
@@ -14,8 +13,8 @@ Responsibilities (1:1 biology mapping):
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -25,7 +24,7 @@ BASE_DIR = _python_root.parent.parent
 import time
 import uuid
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 TOOL_BASE_DIR = BASE_DIR
 
@@ -35,7 +34,7 @@ class Pathogen:
     id: str
     type: str
     virulence: float = 0.5
-    resistance: Dict[str, float] = field(default_factory=dict)
+    resistance: dict[str, float] = field(default_factory=dict)
     detected_at: float = field(default_factory=time.time)
     neutralized: bool = False
 
@@ -57,7 +56,7 @@ class ImmuneState:
     neutrophils: float = 30.0
     inflammation: float = 0.0
     fever: float = 0.0
-    antibody_memory: Dict[str, Antibody] = field(default_factory=dict)
+    antibody_memory: dict[str, Antibody] = field(default_factory=dict)
 
 
 class ImmuneEngine:
@@ -66,8 +65,8 @@ class ImmuneEngine:
     def __init__(self, base_dir: Path = TOOL_BASE_DIR):
         self.base_dir = base_dir
         self.state = ImmuneState()
-        self.pathogens: Dict[str, Pathogen] = {}
-        self.active_antibodies: Dict[str, Antibody] = {}
+        self.pathogens: dict[str, Pathogen] = {}
+        self.active_antibodies: dict[str, Antibody] = {}
         self.patrol_interval: float = 300.0  # 5 minutes
         self.last_patrol: float = time.time()
 
@@ -99,8 +98,8 @@ class ImmuneEngine:
 
     def patrol(self) -> Dict:
         """Innate immunity patrol — scan for pathogens."""
-        detected: List[Pathogen] = []
-        neutralized: List[str] = []
+        detected: list[Pathogen] = []
+        neutralized: list[str] = []
 
         # Scan existing pathogens
         for pathogen_id, pathogen in list(self.pathogens.items()):

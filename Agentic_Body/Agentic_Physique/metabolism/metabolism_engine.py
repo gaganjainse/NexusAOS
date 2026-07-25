@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 MetabolismEngine — Circulatory / Metabolic System
 Biological analog: Bloodstream, cellular respiration, ATP production
@@ -13,8 +12,8 @@ Responsibilities (1:1 biology mapping):
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -24,10 +23,10 @@ BASE_DIR = _python_root.parent.parent
 import math
 import time
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 try:
-    from layers.L02_Agent.physiology_engine import HormoneLevel
+    from Agentic_Body.Agentic_Physique.physiology_engine import HormoneLevel
 except ImportError:
     @dataclass
     class HormoneLevel:

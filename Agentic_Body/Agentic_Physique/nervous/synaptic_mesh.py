@@ -4,12 +4,12 @@ Version: 15.0.0-SESHA
 Description: Zero-copy message bus using Shared Memory for ultra-low latency.
 """
 
+from multiprocessing import shared_memory
+from pathlib import Path
 import json
+import mmap
 import os
 import time
-from pathlib import Path
-from multiprocessing import shared_memory
-import mmap
 
 class SynapticMesh:
     def __init__(self):
@@ -69,7 +69,7 @@ class SynapticMesh:
             try:
                 self._shm.close()
                 self._shm.unlink()
-            except Exception:
+            except Exception:  # noqa: BLE001
                 pass
 
 mesh = SynapticMesh()

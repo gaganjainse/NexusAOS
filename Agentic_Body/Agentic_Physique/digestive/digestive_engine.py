@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Digestive Engine (Data Metabolism)
 Version: 2.0.0
@@ -6,18 +5,18 @@ Description: Converts raw external data (stimuli) into Semantic Nutrients (BSF/J
 Biological analog: Stomach/Intestines (Breaking down complex matter into absorption-ready units).
 """
 
+from pathlib import Path
+from typing import Any, Dict, List
 import hashlib
 import json
 import sys
-from pathlib import Path
-from typing import Dict, Any, List
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 BASE_DIR = _python_root.parent.parent
 
-from layers.L11_Data.signal_router import SignalRouter
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
 
 class DigestiveEngine:
     def __init__(self, base_dir: Path):
@@ -32,7 +31,7 @@ class DigestiveEngine:
         if not self.nutrient_path.exists():
             self.nutrient_path.write_text(json.dumps({"nutrients": []}), encoding="utf-8")
 
-    def ingest(self, raw_data: str, source: str) -> Dict[str, Any]:
+    def ingest(self, raw_data: str, source: str) -> dict[str, Any]:
         """Digests raw text into structured 'Nutrients' (Facts/Signals)."""
         print(f"Digestive: Ingesting data from {source}...")
         
@@ -82,4 +81,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     de = DigestiveEngine(base)
     print(de.ingest("RDMA enables zero-copy transfer between agents.", "WebSearch"))
-

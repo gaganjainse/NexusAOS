@@ -1,15 +1,14 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Federation Gate
 Version: 1.0.0
 Description: Manages Cross-Sovereign swarms, trust anchors, and signal encryption.
 """
 
+from pathlib import Path
+from typing import Dict, Set
 import json
 import sys
 import time
-from pathlib import Path
-from typing import Dict, List, Set
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -76,4 +75,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     gate = FederationGate(base)
     print(gate.authorize_peer("SOV-777", "PUB-ALPHA-BRAVO"))
-

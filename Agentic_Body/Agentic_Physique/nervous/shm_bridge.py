@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Shared Memory Bridge 2.0 (Transcended)
 Version: 2.0.0
@@ -6,13 +5,14 @@ Description: Python interface for the NEURAL 6.0 Zig Synaptic Bus.
 Supports binary routing tables and high-velocity spike emission.
 """
 
-import ctypes
+from pathlib import Path
+from typing import Optional, List, Dict
 import mmap
 import os
 import sys
 import time
-from pathlib import Path
-from typing import Optional, List, Dict
+
+import ctypes
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -59,8 +59,8 @@ class SHMBridge:
     def __init__(self, shm_name: str = "Sesha_synaptic_bus"):
         self.shm_name = shm_name
         self.size = ctypes.sizeof(SynapticRingBuffer)
-        self.mm: Optional[mmap.mmap] = None
-        self.buffer: Optional[SynapticRingBuffer] = None
+        self.mm: mmap.mmap | None = None
+        self.buffer: SynapticRingBuffer | None = None
 
     def connect(self):
         try:
@@ -91,7 +91,7 @@ class SHMBridge:
         
         self.buffer.write_idx += 1
 
-    def read_latest_spike(self) -> Optional[dict]:
+    def read_latest_spike(self) -> dict:
         """Reads the latest spike from the ring buffer."""
         if not self.buffer: return None
         
@@ -123,4 +123,3 @@ if __name__ == "__main__":
     bridge.connect()
     bridge.emit_spike("!", 10, "PYTHON_REFLEX", "ZIG_KERNEL")
     print("Synaptic 2.0 Bridge Operational.")
-

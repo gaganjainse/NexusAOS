@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Binary Nervous System (BSF - Binary Synaptic Format)
 Version: 1.0.0
@@ -6,13 +5,14 @@ Description: Zero-copy access to biological state using Python's buffer protocol
 Replaces legacy JSON state for high-frequency organs.
 """
 
+from pathlib import Path
+from typing import Any, Dict, Optional
 import mmap
 import os
-import struct
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, Optional
+
+import struct
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -30,10 +30,10 @@ NXPB_HEADER_FORMAT = "<32s64sqQQ"
 class BinaryNervous:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
-        self.bin_dna_path = base_dir / "active_core" / "monitoring_active" / "evolution" / "dna.bsf"
+        self.bin_dna_path = base_dir / "active_core" / "monitoring_active" / "evolution" / "dna.bs"
         self.pulse_mesh_path = base_dir / "core" / "monitoring" / "pulse_mesh.nxpb"
         self.size = struct.calcsize(BSF_GENOME_FORMAT)
-        self.mm: Optional[mmap.mmap] = None
+        self.mm: mmap.mmap | None = None
         self._ensure_dna()
         self._ensure_mesh()
 
@@ -76,7 +76,7 @@ class BinaryNervous:
         self.mm = mmap.mmap(fd, self.size)
         return self.mm
 
-    def get_vitals(self) -> Dict[str, Any]:
+    def get_vitals(self) -> dict[str, Any]:
         """Reads DNA vitals with direct slice."""
         if not self.mm: self.connect()
         
@@ -111,4 +111,3 @@ if __name__ == "__main__":
     print("Initial Binary Vitals:", bn.get_vitals())
     bn.mutate(0, 0.9)
     print("Mutated Binary Vitals:", bn.get_vitals())
-

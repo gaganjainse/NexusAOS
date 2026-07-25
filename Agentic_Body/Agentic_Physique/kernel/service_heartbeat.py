@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Service Heartbeat
 Version: 1.0.0
 Description: Liveness signals for autonomic background services.
 """
 
+from pathlib import Path
+from typing import Any, List, Optional
 import json
 import os
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -29,7 +28,7 @@ class ServiceHeartbeat:
         if not self.heartbeat_dir.exists():
             self.heartbeat_dir.mkdir(parents=True, exist_ok=True)
 
-    def beat(self, status: str = "alive", metadata: Optional[Dict[str, Any]] = None):
+    def beat(self, status: str = "alive", metadata: dict[str, Any] | None = None):
         payload = {
             "service": self.service_name,
             "status": status,
@@ -40,7 +39,7 @@ class ServiceHeartbeat:
         with open(self.heartbeat_path, "w", encoding="utf-8") as f:
             json.dump(payload, f, indent=4)
 
-    def read(self) -> Optional[Dict[str, Any]]:
+    def read(self) -> dict[str, Any]:
         if not self.heartbeat_path.exists():
             return None
         try:
@@ -56,7 +55,7 @@ class ServiceHeartbeat:
         return (time.time() - data.get("timestamp", 0)) > max_age_seconds
 
     @staticmethod
-    def all_services(base_dir: Path) -> List[Dict[str, Any]]:
+    def all_services(base_dir: Path) -> list[dict[str, Any]]:
         hb_dir = base_dir / "core" / "monitoring" / "heartbeats"
         if not hb_dir.exists():
             return []
@@ -68,4 +67,3 @@ class ServiceHeartbeat:
             except (json.JSONDecodeError, OSError):
                 results.append({"service": path.stem, "status": "corrupt", "timestamp": 0})
         return results
-

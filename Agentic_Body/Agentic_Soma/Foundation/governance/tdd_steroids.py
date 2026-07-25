@@ -1,14 +1,13 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - TDD-on-Steroids
 Version: 1.0.0
 Description: Agents generate and run tests for their own logic before execution.
 """
 
+from pathlib import Path
+from typing import Any, List
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any, List
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -21,7 +20,7 @@ class TDDOnSteroids:
     def __init__(self):
         pass
 
-    def generate_pre_test(self, atom_text: str) -> Dict[str, Any]:
+    def generate_pre_test(self, atom_text: str) -> dict[str, Any]:
         """Generates a test case for the sub-atomic logic."""
         # Simulated test generation
         return {
@@ -30,7 +29,7 @@ class TDDOnSteroids:
             "required_output": "PASS"
         }
 
-    def verify_logic(self, predicted_action: str, test_case: Dict[str, Any]) -> bool:
+    def verify_logic(self, predicted_action: str, test_case: dict[str, Any]) -> bool:
         """Verifies if the predicted action aligns with the atom intent."""
         # Predictive check: Does the action match a set of known safe outcomes?
         if predicted_action == "unknown":
@@ -47,4 +46,3 @@ if __name__ == "__main__":
     tc = tdd.generate_pre_test("Write a file to active_core")
     print(f"Generated Test: {tc}")
     print(f"Verification: {tdd.verify_logic('SUCCESS', tc)}")
-

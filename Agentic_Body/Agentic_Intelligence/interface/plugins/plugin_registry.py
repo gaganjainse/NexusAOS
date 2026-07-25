@@ -3,11 +3,11 @@ AOS Plugin Registry — native integration of Plugins, MCPs, Skills, Subagents, 
 Version: 1.0.0
 """
 
+from pathlib import Path
+from typing import Any, List, Optional
 import importlib
 import json
 import sys
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 
 BASE = Path(__file__).resolve().parent.parent  # project root
 
@@ -17,18 +17,18 @@ class PluginRegistry:
 
     LAYER_TYPES = ("plugins", "mcps", "skills", "subagents", "rules", "commands", "hooks")
 
-    def __init__(self, base_dir: Optional[Path] = None):
+    def __init__(self, base_dir: Path | None = None):
         self.base_dir = base_dir or BASE
         self.manifest_path = self.base_dir / "plugins" / "manifest.json"
         self.cursor_dir = self.base_dir / ".cursor"
 
-    def _read_manifest(self) -> Dict[str, Any]:
+    def _read_manifest(self) -> dict[str, Any]:
         if not self.manifest_path.exists():
             return {"plugins": [], "version": "1.0.0"}
         with open(self.manifest_path, "r", encoding="utf-8") as f:
             return json.load(f)
 
-    def list_layers(self) -> Dict[str, List[str]]:
+    def list_layers(self) -> dict[str, list[str]]:
         manifest = self._read_manifest()
         result = {layer: [] for layer in self.LAYER_TYPES}
         for plugin in manifest.get("plugins", []):
@@ -63,7 +63,7 @@ class PluginRegistry:
                     for key in ("skills", "rules", "commands", "hooks", "subagents"):
                         if key in cursor_data:
                             result[key].extend(cursor_data[key])
-                except Exception:
+                except Exception:  # noqa: BLE001
                     pass
         return result
 
@@ -78,7 +78,7 @@ class PluginRegistry:
         mod = importlib.import_module(module_path.replace("/", ".").removesuffix(".py"))
         return mod
 
-    def get_status(self) -> Dict[str, Any]:
+    def get_status(self) -> dict[str, Any]:
         layers = self.list_layers()
         return {
             "manifest": str(self.manifest_path),

@@ -1,15 +1,14 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Integumentary Gateway
 Version: 1.0.0
 Description: The 'Skin' of the Agentic Body. Handles external API calls, rate-limiting, and sensory transduction.
 """
 
+from pathlib import Path
+from typing import Any, Dict
 import hashlib
 import sys
 import time
-from pathlib import Path
-from typing import Dict, Any
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -47,4 +46,3 @@ class IntegumentaryGateway:
         """Resets rate limits (analogous to skin regeneration)."""
         self.access_counts = {}
         return "Barrier regenerated."
-

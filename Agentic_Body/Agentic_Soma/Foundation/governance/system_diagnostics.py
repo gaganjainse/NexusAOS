@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - System Diagnostics Tool
 Version: 13.0.0
 Description: Hyper-Somatic Singularity diagnostic for the full 13-layer stack.
 """
 
+from pathlib import Path
 import json
 import os
 import sqlite3
 import sys
 import time
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -117,7 +116,7 @@ def run_diagnostics(base_dir: Path) -> str:
             # Meta-metrics
             consts = genome.get("metabolic_constants", {})
             results.append(f"[OK] ATP Efficiency: {consts.get('atp_conversion_efficiency', 0.8)*100:.0f}%")
-        except:
+        except Exception:  # noqa: BLE001
             results.append("[WARNING] Biological genome corrupted.")
     
     # 5. Body Schema & Synaptic Pressure
@@ -127,34 +126,33 @@ def run_diagnostics(base_dir: Path) -> str:
             with open(schema_path, "r", encoding="utf-8") as f:
                 schema = json.load(f)
             results.append(f"[OK] Synaptic Pressure: {schema.get('synaptic_pressure', 1.0)}")
-        except:
+        except Exception:  # noqa: BLE001
             pass
 
     # 6. NEURAL 13.0 Stack Integrity
     try:
-        from layers.L04_Composition.composition_engine import CompositionEngine
-        from layers.L07_Integration.integration_bridge import IntegrationBridge
+        from Agentic_Body.Agentic_Soma.Foundation.dna.composition_engine import CompositionEngine
+        from Agentic_Body.Agentic_Physique.kernel.integration_bridge import IntegrationBridge
         
         ce = CompositionEngine(base_dir)
         bridge = IntegrationBridge(base_dir)
         vitals = bridge.scan_host_vitals()
         
         results.append("\n--- NEURAL 13.0 Organism Status ---")
-        results.append(f"[OK] L4 Composition: Dynamic bidding active.")
+        results.append("[OK] L4 Composition: Dynamic bidding active.")
         results.append(f"[OK] L7 Integration: Host Skin active ({vitals.get('disk_pressure', 0):.1f}% Disk).")
-        results.append(f"[OK] L12-L0 Alignment: Converged (Singularity State).")
+        results.append("[OK] L12-L0 Alignment: Converged (Singularity State).")
     except Exception as e:
         results.append(f"[WARNING] Neural 13.0 layers incomplete: {e}")
 
     # 7. Service Heartbeats
     try:
-        from layers.L07_Integration.service_heartbeat import ServiceHeartbeat
+        from Agentic_Body.Agentic_Physique.kernel.service_heartbeat import ServiceHeartbeat
         services = ServiceHeartbeat.all_services(base_dir)
         if services:
             alive = [s["service"] for s in services if (time.time() - s.get("timestamp", 0)) < 60]
             results.append(f"[OK] Live Services: {', '.join(alive) or 'none'}")
-    except:
+    except Exception:  # noqa: BLE001
         pass
 
     return "\n".join(results)
-

@@ -1,14 +1,13 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - State WAL (Write-Ahead Log)
 Version: 1.0.0
 Description: Standalone WAL wrapper for state persistence.
 """
+from pathlib import Path
+from typing import Dict
 import json
 import sys
 import time
-from pathlib import Path
-from typing import List, Dict
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -35,7 +34,7 @@ class StateWAL:
         with open(self.wal_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(event) + "\n")
 
-    def read_all(self) -> List[Dict]:
+    def read_all(self) -> list[Dict]:
         """Read all events from the WAL."""
         events = []
         if not self.wal_file.exists():
@@ -53,4 +52,3 @@ class StateWAL:
     def truncate(self) -> None:
         """Clear the WAL (after snapshot)."""
         self.wal_file.write_text("")
-

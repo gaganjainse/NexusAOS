@@ -1,18 +1,19 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - GitHub Receptor (Lineage R8)
 Version: 1.0.0
 Description: GitHub API integration for issue creation, PR management, repo ops.
 """
-import json
 
-_python_root = Path(__file__).resolve().parent.parent.parent.parent
-if str(_python_root) not in sys.path:
-    sys.path.insert(0, str(_python_root))
+import sys
+import json
 import urllib.request
 import os
 from pathlib import Path
 from typing import Dict, Optional
+
+_python_root = Path(__file__).resolve().parent.parent.parent.parent
+if str(_python_root) not in sys.path:
+    sys.path.insert(0, str(_python_root))
 
 
 class GitHubReceptor:
@@ -29,7 +30,7 @@ class GitHubReceptor:
         if self.token:
             self.headers["Authorization"] = f"Bearer {self.token}"
 
-    def _request(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Dict:
+    def _request(self, method: str, endpoint: str, data: Dict | None = None) -> Dict:
         """Make authenticated GitHub API request."""
         url = f"{self.api_base}{endpoint}"
         body = json.dumps(data).encode() if data else None

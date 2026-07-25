@@ -2,10 +2,11 @@
 SeshaAOS - Chaos Test: Clock Skew
 Description: ±30s clock skew → verify signal TTL handling stays consistent.
 """
+from pathlib import Path
 import sys
 import time
+
 import unittest
-from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(BASE_DIR / "mcp_server" / "python"))
@@ -26,4 +27,3 @@ class TestClockSkew(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

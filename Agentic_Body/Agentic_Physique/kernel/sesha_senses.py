@@ -1,22 +1,21 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Sensory Engine (Streaming Nerves)
 Version: 1.0.0
 Description: Continuous filesystem perception with real-time signal emission.
 """
 
+from pathlib import Path
 import json
 import sys
 import time
-from pathlib import Path
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
     sys.path.insert(0, str(_python_root))
 
-from typing import Dict, Any, List, Optional
+from typing import Any, List, Optional
 
-from layers.L11_Data.signal_router import SignalRouter
+from Agentic_Body.Agentic_Physique.nervous.signal_router import SignalRouter
 
 try:
     from watchdog.observers import Observer
@@ -66,7 +65,7 @@ if WATCHDOG_AVAILABLE:
                 classification = self.senses._classify_event(rel_path, event_type)
                 self.senses._record_event(rel_path, event_type, classification)
                 print(f"Sensory Interrupt: {event_type} on {rel_path} -> {classification['signal']}")
-            except Exception:
+            except Exception:  # noqa: BLE001
                 pass
 
 
@@ -75,7 +74,7 @@ class SeshaSenses:
         self.base_dir = base_dir
         self.state_path = base_dir / "core" / "monitoring" / "sensory_feed.json"
         self.signals = SignalRouter(base_dir)
-        self._snapshot: Dict[str, float] = {}
+        self._snapshot: dict[str, float] = {}
         self.observer = None
         self._ensure_state()
 
@@ -119,7 +118,7 @@ class SeshaSenses:
                 "events": [],
             })
 
-    def _read_state(self) -> Dict[str, Any]:
+    def _read_state(self) -> dict[str, Any]:
         try:
             with open(self.state_path, "r", encoding="utf-8") as f:
                 return json.load(f)
@@ -127,7 +126,7 @@ class SeshaSenses:
             self._ensure_state()
             return self._read_state()
 
-    def _write_state(self, state: Dict[str, Any]):
+    def _write_state(self, state: dict[str, Any]):
         with open(self.state_path, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=4)
 
@@ -143,7 +142,7 @@ class SeshaSenses:
             return f"Watcher registered: {relative_path}"
         return f"Watcher already active: {relative_path}"
 
-    def _build_snapshot(self, watch_paths: List[str]) -> Dict[str, float]:
+    def _build_snapshot(self, watch_paths: list[str]) -> dict[str, float]:
         snapshot = {}
         for rel in watch_paths:
             target = self.base_dir / rel
@@ -164,7 +163,7 @@ class SeshaSenses:
                 snapshot[rel] = path.stat().st_mtime
         return snapshot
 
-    def _classify_event(self, rel_path: str, event_type: str) -> Dict[str, Any]:
+    def _classify_event(self, rel_path: str, event_type: str) -> dict[str, Any]:
         """Maps a filesystem event to salience and hormonal signal."""
         path_lower = rel_path.replace("\\", "/").lower()
 
@@ -185,7 +184,7 @@ class SeshaSenses:
 
         return {"salience": "low", "signal": None, "ttl": 0}
 
-    def _record_event(self, rel_path: str, event_type: str, classification: Dict[str, Any]) -> Dict[str, Any]:
+    def _record_event(self, rel_path: str, event_type: str, classification: dict[str, Any]) -> dict[str, Any]:
         event = {
             "timestamp": time.time(),
             "event_type": event_type,
@@ -213,7 +212,7 @@ class SeshaSenses:
         self._write_state(state)
         return event
 
-    def poll(self) -> List[Dict[str, Any]]:
+    def poll(self) -> list[dict[str, Any]]:
         """Scans watched paths and returns newly detected events."""
         state = self._read_state()
         watch_paths = state.get("watch_paths", DEFAULT_WATCH_PATHS)
@@ -247,13 +246,13 @@ class SeshaSenses:
         self._snapshot = current
         return detected
 
-    def get_feed(self, limit: int = 50) -> List[Dict[str, Any]]:
+    def get_feed(self, limit: int = 50) -> list[dict[str, Any]]:
         """Returns recent sensory events, newest first."""
         state = self._read_state()
         events = state.get("events", [])
         return list(reversed(events[-limit:]))
 
-    def get_status(self) -> Dict[str, Any]:
+    def get_status(self) -> dict[str, Any]:
         """Returns sensory system health metrics."""
         state = self._read_state()
         now = time.time()
@@ -280,4 +279,3 @@ if __name__ == "__main__":
     print("Status:", senses.get_status())
     print("Poll:", senses.poll())
     print("Feed:", senses.get_feed(5))
-

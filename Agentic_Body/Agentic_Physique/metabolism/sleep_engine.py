@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SleepEngine — Sleep / Circadian System
 Biological analog: Suprachiasmatic nucleus, pineal gland, sleep stages
@@ -14,8 +13,8 @@ Responsibilities (1:1 biology mapping):
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -25,7 +24,7 @@ BASE_DIR = _python_root.parent.parent
 import time
 import math
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 TOOL_BASE_DIR = BASE_DIR
 
@@ -34,7 +33,7 @@ TOOL_BASE_DIR = BASE_DIR
 class SleepState:
     awake: bool = True
     sleep_stage: str = "awake"  # awake, N1, N2, N3, REM
-    sleep_start: Optional[float] = None
+    sleep_start: float | None = None
     stage_start: float = field(default_factory=time.time)
     total_sleep_time: float = 0.0
     deep_sleep_cycles: int = 0

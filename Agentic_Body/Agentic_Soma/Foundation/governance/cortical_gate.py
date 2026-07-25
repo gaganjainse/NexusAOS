@@ -1,16 +1,10 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
-"""CorticalGate — Cortical gating layer
-Biological analog: Prefrontal cortex, executive function, rule-based control
+from __future__ import annotations
 
-Responsibilities (1:1 biology mapping):
-- Executive control / rule-based gating
-- Working memory gating
-- Developmental rule enforcement
-- Task set gating
-- Safety/ethics gating
+"""
+Cortical Gate - Frontal cortex executive control.
 """
 
-from __future__ import annotations
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -20,7 +14,7 @@ import json
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Set
+from typing import Dict, Optional, Set
 
 TOOL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -34,19 +28,20 @@ DevelopmentalBoot = _DevelopmentStandIn()
 
 @dataclass
 class CorticalState:
-    active_rules: List[str] = field(default_factory=list)
-    blocked_tools: Set[str] = field(default_factory=set)
+    active_rules: list[str] = field(default_factory=list)
+    blocked_tools: set[str] = field(default_factory=set)
     executive_enabled: bool = True
     last_update: float = field(default_factory=time.time)
 
 
+@dataclass
 class CorticalGate:
     """Frontal cortex executive control gate."""
 
     def __init__(self, base_dir: Path = TOOL_BASE_DIR):
         self.base_dir = base_dir
         self.state = CorticalState()
-        self.rules: List[Dict] = []
+        self.rules: list[Dict] = []
         self._init_default_rules()
 
     def _init_default_rules(self):
@@ -57,7 +52,7 @@ class CorticalGate:
         ]
 
     def check(self, tool_name: str, args: Dict) -> Dict:
-        """Cortical gating — executive control."""
+        """Cortical gating - executive control."""
         if not self.state.executive_enabled:
             return {
                 "allowed": True,

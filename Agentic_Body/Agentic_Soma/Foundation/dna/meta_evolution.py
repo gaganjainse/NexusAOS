@@ -1,16 +1,15 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Meta-Evolution Module
 Version: 1.0.0
 Description: Evolving the evolution engine itself.
 """
 
+from pathlib import Path
 import json
 import sys
 import time
-from pathlib import Path
 
-from layers.L04_Composition.evolution_engine import EvolutionEngine
+from Agentic_Body.Agentic_Soma.Foundation.dna.evolution_engine import EvolutionEngine
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -49,4 +48,3 @@ if __name__ == "__main__":
     base = Path(__file__).resolve().parent.parent.parent.parent
     meta = MetaEvolution(base)
     print(meta.regulate_parameters())
-

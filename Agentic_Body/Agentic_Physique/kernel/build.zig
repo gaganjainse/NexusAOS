@@ -13,4 +13,3 @@ pub fn build(b: *std.Build) void {
 
     b.installArtifact(lib);
 }
-

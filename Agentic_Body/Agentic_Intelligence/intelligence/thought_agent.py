@@ -1,4 +1,3 @@
-# Specialization framework applied (AGENTS.md line 36-39): AB/AP balance + DNA blueprint + governance + provenance + Voice DNA. Source: dataset/ab_ap_balance/AB_AP_BALANCE_RULES.md + archives/dna_core/blueprints/COMPLETE_ARCHITECTURE.md.
 """
 SeshaAOS - Thought Agent (The Explainer)
 Version: 1.0.0
@@ -6,9 +5,9 @@ Description: Translates complex internal NEURAL pulses into readable thoughts fo
 """
 
 
-import sys
 from pathlib import Path
 from typing import Dict, List
+import sys
 
 _python_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(_python_root) not in sys.path:
@@ -47,7 +46,7 @@ class ThoughtAgent:
 
         return " | ".join(explanation)
 
-    def summarize_swarm(self, active_nodes: List[Dict]) -> str:
+    def summarize_swarm(self, active_nodes: list[Dict]) -> str:
         """Provides a high-level summary of what the 200+ agents are doing."""
         return f"Swarm is currently coordinating {len(active_nodes)} simultaneous synaptic tasks across the 11 biological systems."
 
@@ -71,4 +70,3 @@ class ThoughtAgent:
             
         # 5: Default Operational
         return 5
-
