@@ -1,0 +1,78 @@
+[
+    {
+        "topic": "IntelliJ Platform Architecture PSI VFS",
+        "timestamp": 1784748250.8421,
+        "web_summary": [
+            {
+                "title": "Search result for IntelliJ Platform Architecture PSI VFS architecture best practices research papers",
+                "url": "https://example.com/search?q=IntelliJ Platform Architecture PSI VFS architecture best practices research papers"
+            }
+        ],
+        "github_patterns": [],
+        "learning_dna": {
+            "origin": "IntelliJ Platform Architecture PSI VFS",
+            "protocols": [
+                "ADOPT:Search result for IntelliJ Platform Architecture PSI VFS architecture best practices research papers"
+            ],
+            "skills": []
+        },
+        "status": "INGESTED"
+    },
+    {
+        "topic": "Android Studio Gradle Integration and Layout Editor Architecture",
+        "timestamp": 1784748251.3773377,
+        "web_summary": [
+            {
+                "title": "Search result for Android Studio Gradle Integration and Layout Editor Architecture architecture best practices research papers",
+                "url": "https://example.com/search?q=Android Studio Gradle Integration and Layout Editor Architecture architecture best practices research papers"
+            }
+        ],
+        "github_patterns": [],
+        "learning_dna": {
+            "origin": "Android Studio Gradle Integration and Layout Editor Architecture",
+            "protocols": [
+                "ADOPT:Search result for Android Studio Gradle Integration and Layout Editor Architecture architecture best practices research papers"
+            ],
+            "skills": []
+        },
+        "status": "INGESTED"
+    },
+    {
+        "topic": "Windows Developer File Organization and Automated Archiving Protocols",
+        "timestamp": 1784752148.318483,
+        "web_summary": [
+            {
+                "title": "Search result for Windows Developer File Organization and Automated Archiving Protocols architecture best practices research papers",
+                "url": "https://example.com/search?q=Windows Developer File Organization and Automated Archiving Protocols architecture best practices research papers"
+            }
+        ],
+        "github_patterns": [],
+        "learning_dna": {
+            "origin": "Windows Developer File Organization and Automated Archiving Protocols",
+            "protocols": [
+                "ADOPT:Search result for Windows Developer File Organization and Automated Archiving Protocols architecture best practices research papers"
+            ],
+            "skills": []
+        },
+        "status": "INGESTED"
+    },
+    {
+        "topic": "Neuron OS and AIOS Kernel Hardware Abstraction Layers 0-1 control",
+        "timestamp": 1784752759.1329596,
+        "web_summary": [
+            {
+                "title": "Search result for Neuron OS and AIOS Kernel Hardware Abstraction Layers 0-1 control architecture best practices research papers",
+                "url": "https://example.com/search?q=Neuron OS and AIOS Kernel Hardware Abstraction Layers 0-1 control architecture best practices research papers"
+            }
+        ],
+        "github_patterns": [],
+        "learning_dna": {
+            "origin": "Neuron OS and AIOS Kernel Hardware Abstraction Layers 0-1 control",
+            "protocols": [
+                "ADOPT:Search result for Neuron OS and AIOS Kernel Hardware Abstraction Layers 0-1 control architecture best practices research papers"
+            ],
+            "skills": []
+        },
+        "status": "INGESTED"
+    }
+]

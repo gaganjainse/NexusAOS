@@ -1,0 +1,65 @@
+[
+  {
+    "timestamp": 1784637842.4059691,
+    "parent": "v0.0.1",
+    "offspring": "vecb013fd",
+    "mutation": "param_scale",
+    "generation": 1
+  },
+  {
+    "timestamp": 1784637842.4059837,
+    "parent": "v0.0.1",
+    "offspring": "vc411acc0",
+    "mutation": "param_tweak",
+    "generation": 1
+  },
+  {
+    "timestamp": 1784637842.4059892,
+    "parent": "v0.0.1",
+    "offspring": "vf0b2ed91",
+    "mutation": "clone",
+    "generation": 0
+  },
+  {
+    "timestamp": 1784637842.4059935,
+    "parent": "v0.0.1",
+    "offspring": "v64c60999",
+    "mutation": "clone",
+    "generation": 0
+  },
+  {
+    "timestamp": 1784637842.4059968,
+    "parent": "v0.0.1",
+    "offspring": "v581ace0f",
+    "mutation": "clone",
+    "generation": 0
+  },
+  {
+    "timestamp": 1784637842.4059997,
+    "parent": "v0.0.1",
+    "offspring": "v8b464885",
+    "mutation": "clone",
+    "generation": 0
+  },
+  {
+    "timestamp": 1784637842.4060056,
+    "parent": "v0.0.1",
+    "offspring": "v9a386cc9",
+    "mutation": "param_tweak",
+    "generation": 1
+  },
+  {
+    "timestamp": 1784637842.4060102,
+    "parent": "v0.0.1",
+    "offspring": "v4c7c66d4",
+    "mutation": "param_scale",
+    "generation": 1
+  },
+  {
+    "timestamp": 1784637842.4060144,
+    "parent": "v0.0.1",
+    "offspring": "vdadb04a7",
+    "mutation": "param_tweak",
+    "generation": 1
+  }
+]

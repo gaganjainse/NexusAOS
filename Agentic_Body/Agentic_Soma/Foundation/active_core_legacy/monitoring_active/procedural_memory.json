@@ -1,0 +1,9 @@
+{
+    "tool_sequences": {
+        "test_tool": {
+            "success_count": 2,
+            "fail_count": 0,
+            "avg_duration": 0.5
+        }
+    }
+}

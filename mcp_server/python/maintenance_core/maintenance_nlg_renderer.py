@@ -1,1 +1,0 @@
-# MOVED TO compiler/nlg_renderer.py — import from compiler.nlg_renderer instead

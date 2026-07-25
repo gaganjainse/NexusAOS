@@ -12,11 +12,11 @@ Configure the Mojo SDK in Android Studio using WSL UNC paths and migrate core Py
 ### Android Studio Configuration
 Update project metadata to recognize the WSL Mojo SDK.
 
-#### [MODIFY] [.idea/modules/nexus_corporate_os.iml](file:///C:/Users/gagan/Downloads/nexus_corporate_os/.idea/modules/nexus_corporate_os.iml)
+#### [MODIFY] [.idea/modules/sesha_agentic_body.iml](file:///C:/Users/gagan/Downloads/sesha_agentic_body/.idea/modules/sesha_agentic_body.iml)
 - Point `Mojo SDK` to `\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default`.
 - Point `Debugger` to `\\wsl.localhost\Ubuntu\home\gaganjainse\mojo_core\.pixi\envs\default\bin\mojo-lldb`.
 
-#### [MODIFY] [.idea/misc.xml](file:///C:/Users/gagan/Downloads/nexus_corporate_os/.idea/misc.xml)
+#### [MODIFY] [.idea/misc.xml](file:///C:/Users/gagan/Downloads/sesha_agentic_body/.idea/misc.xml)
 - Ensure project SDK is set to `Mojo SDK`.
 
 ---
@@ -24,16 +24,16 @@ Update project metadata to recognize the WSL Mojo SDK.
 ### Core Kernels (Mojo 1.0)
 Implement the "Muscle" layer using MLIR-native Mojo.
 
-#### [MODIFY] [mcp_server/kernels/mojo/inference_engine.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/inference_engine.mojo)
+#### [MODIFY] [mcp_server/kernels/mojo/inference_engine.mojo](file:///C:/Users/gagan/Downloads/sesha_agentic_body/mcp_server/kernels/mojo/inference_engine.mojo)
 - Finalize vectorized KL-divergence logic with 1.0 syntax.
 
-#### [MODIFY] [mcp_server/kernels/mojo/photonic_vfe.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/photonic_vfe.mojo)
+#### [MODIFY] [mcp_server/kernels/mojo/photonic_vfe.mojo](file:///C:/Users/gagan/Downloads/sesha_agentic_body/mcp_server/kernels/mojo/photonic_vfe.mojo)
 - Finalize SIMD energy complexity pulses.
 
-#### [MODIFY] [mcp_server/kernels/mojo/metabolism_engine.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/metabolism_engine.mojo)
+#### [MODIFY] [mcp_server/kernels/mojo/metabolism_engine.mojo](file:///C:/Users/gagan/Downloads/sesha_agentic_body/mcp_server/kernels/mojo/metabolism_engine.mojo)
 - Implement cellular respiration and ATP distribution logic.
 
-#### [MODIFY] [mcp_server/kernels/mojo/synaptic_mesh.mojo](file:///C:/Users/gagan/Downloads/nexus_corporate_os/mcp_server/kernels/mojo/synaptic_mesh.mojo)
+#### [MODIFY] [mcp_server/kernels/mojo/synaptic_mesh.mojo](file:///C:/Users/gagan/Downloads/sesha_agentic_body/mcp_server/kernels/mojo/synaptic_mesh.mojo)
 - Implement intent detection and signal firing.
 
 ## Verification Plan

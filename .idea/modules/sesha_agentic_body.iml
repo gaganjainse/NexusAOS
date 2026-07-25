@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="EMPTY_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="mojo" name="Mojo">
+      <configuration installerTool="PIXI" installerVersion="0.73.0" installSkills="true" />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../mcp_server/python" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.pixi" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/../../venv" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,12 @@
+{
+    "node_id": "local_4856",
+    "status": "Healthy",
+    "energy": 99.0,
+    "last_seen": 1784635105.0466619,
+    "roles": [
+        "Orchestrator",
+        "Research",
+        "Motor",
+        "Immune"
+    ]
+}

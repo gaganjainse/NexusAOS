@@ -1,0 +1,38 @@
+{
+    "reflex_parameters": {
+        "nociception_sensitivity": 0.0,
+        "hypoxia_threshold": 0.0,
+        "ischemia_threshold": 0.0,
+        "fever_threshold": 0.0,
+        "free_energy_threshold": 0
+    },
+    "instinct_drives": {
+        "curiosity_threshold": 74.98,
+        "curiosity_frequency": 3600,
+        "consolidation_threshold": 35.44,
+        "consolidation_frequency": 7454.66,
+        "evolution_threshold": 90.0
+    },
+    "metabolic_constants": {
+        "basal_metabolic_rate": 0.5,
+        "atp_conversion_efficiency": 0.8,
+        "heat_per_op": 4.24
+    },
+    "hormonal_weights": {
+        "cortisol_stress_mod": 1.16,
+        "dopamine_reward_mod": 1.63,
+        "serotonin_stability_mod": 0.9
+    },
+    "limbic_sensitivity": {
+        "fear_gain": 0.2,
+        "joy_gain": 0.3,
+        "anger_gain": 0.15,
+        "emotional_decay": 0.95
+    },
+    "cellular_thresholds": {
+        "apoptosis_error_limit": 5,
+        "mitosis_load_limit": 0.8
+    },
+    "generation": 0,
+    "last_mutation": 1784669497.5295486
+}

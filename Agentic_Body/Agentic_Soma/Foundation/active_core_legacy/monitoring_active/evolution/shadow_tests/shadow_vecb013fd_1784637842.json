@@ -1,0 +1,17 @@
+{
+  "test_id": "shadow_vecb013fd_1784637842",
+  "genome_id": "vecb013fd",
+  "started_at": 1784637842.9091377,
+  "duration_sec": 60,
+  "runs": 5,
+  "mean_fitness": 0.97,
+  "std_fitness": 0.0,
+  "individual_results": [
+    0.97,
+    0.97,
+    0.97,
+    0.97,
+    0.97
+  ],
+  "passed": false
+}

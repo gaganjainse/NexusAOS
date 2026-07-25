@@ -1,0 +1,11 @@
+{
+    "antigens": [
+        {
+            "hash": "b1b3da30e04a",
+            "type": "LogicalPathogen",
+            "context": "Recursive depth exceeded",
+            "solution": "Increase recursion limit",
+            "detected_count": 3
+        }
+    ]
+}
