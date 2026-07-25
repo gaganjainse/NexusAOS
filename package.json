@@ -7,18 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "tauri": "tauri",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "lucide-react": "^0.546.0",
-    "react": "^19.0.1",
-    "react-dom": "^19.0.1"
+    "@tauri-apps/api": "^2.0.0"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
     "@types/node": "^22.14.0",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.5",
-    "@vitejs/plugin-react": "^5.0.4",
     "typescript": "~5.8.2",
     "vite": "^6.2.3"
   }
