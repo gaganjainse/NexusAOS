@@ -5,9 +5,122 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ef9bad-144c-46a9-a7d2-98c964ff7d44" name="Changes" comment="Completion of the Pre-Training new">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zcode/plans/plan-sess_2f496267-f725-4665-a8fb-627039fd9564.md" beforeDir="false" afterPath="$PROJECT_DIR$/.zcode/plans/plan-sess_2f496267-f725-4665-a8fb-627039fd9564.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.zig-cache/z/1cedb676b36cb50781d90f5422324661" beforeDir="false" afterPath="$PROJECT_DIR$/.zig-cache/z/1cedb676b36cb50781d90f5422324661" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.zig-cache/z/27358963c39fc5045cef1541b16f2044" beforeDir="false" afterPath="$PROJECT_DIR$/.zig-cache/z/27358963c39fc5045cef1541b16f2044" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/instinct_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/instinct_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/orchestrator_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L01_Planning/orchestrator_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antibody_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antibody_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antigen_registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/antigen_registry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/auto_repair.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/auto_repair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/body_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/body_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cardiorespiratory_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cardiorespiratory_loop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cellular_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cellular_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cerebellum_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/cerebellum_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/digestive_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/digestive_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/endocrine_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/endocrine_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/excretory_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/excretory_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/fission_fusion_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/fission_fusion_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/health_protocol.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/health_protocol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/immune_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/immune_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/lymphatic_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/lymphatic_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/metabolism_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/metabolism_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/motor_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/oxidation_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/oxidation_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/physiology_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/physiology_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/reproduction_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/reproduction_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/respiratory_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/respiratory_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/sesha_liver.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/sesha_liver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/sleep_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L02_Agent/sleep_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/developmental_boot.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/developmental_boot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/self_evolving_kernel.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/self_evolving_kernel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/sesha_runtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/sesha_runtime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/swarm_executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L03_Runtime/swarm_executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/composition_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/composition_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/evolution_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/evolution_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/meta_evolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/meta_evolution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/mutation_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/mutation_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/policy_optimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/policy_optimizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/sesha_assimilator.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/sesha_assimilator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/synaptic_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L04_Composition/synaptic_exchange.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/collective_memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/collective_memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/context_pager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/context_pager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/dream_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/dream_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_synth.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/memory_synth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/state_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/state_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/uia_sentry.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L05_Memory/uia_sentry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_market_analyzer_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_market_analyzer_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_security_probe_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/assimilated_security_probe_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/database_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/database_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/deep_research_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/deep_research_tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/excalidraw_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/excalidraw_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/geo_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/geo_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/github_scanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/google_cloud_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/google_cloud_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/nutrient_ingestion.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/nutrient_ingestion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/sentry_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/sentry_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/slack_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/slack_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/video_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/video_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/vision_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/vision_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/web_receptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L06_Tool/web_receptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integration_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integration_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integumentary_gateway.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integumentary_gateway.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integumentary_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/integumentary_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/native_senses.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/native_senses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/physique_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/physique_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/service_heartbeat.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/service_heartbeat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/sesha_senses.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L07_Integration/sesha_senses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/auditor_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/auditor_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/basal_ganglia_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/basal_ganglia_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/cortical_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/cortical_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/federation_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/federation_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/moral_cortex.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/moral_cortex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/physiological_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/physiological_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/privacy_shield.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/privacy_shield.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/rbac_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/rbac_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/sigil_x.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/sigil_x.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/thalamic_gate.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L08_Governance/thalamic_gate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/benchmark_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/benchmark_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/conversation_recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/conversation_recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/event_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/event_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/failure_recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/failure_recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/logic_git.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/logic_git.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/queue_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/queue_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/reward_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/reward_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/salience.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/salience.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/state_wal.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/state_wal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/system_diagnostics.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/system_diagnostics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/tdd_steroids.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/tdd_steroids.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/wisdom_feed.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L09_Observability/wisdom_feed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/limbic_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/limbic_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/synaptic_vm.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/synaptic_vm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/thought_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L10_Intelligence/thought_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/binary_nervous.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/binary_nervous.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/shm_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/shm_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/signal_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/signal_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/soma_transcended.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/soma_transcended.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/synaptic_transmitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L11_Data/synaptic_transmitter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/degeneracy.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/degeneracy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/dna_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/dna_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/hook_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/hook_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/neural_canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/neural_canvas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/photonic_nerve.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/photonic_nerve.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/reflex_arc.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/reflex_arc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/sesha_lattice.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/sesha_lattice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/sesha_mesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/sesha_mesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/skeletal_registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L12_Infrastructure/skeletal_registry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L13_Hive/hive_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L13_Hive/hive_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/dermal_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/dermal_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/digestive_physical_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/digestive_physical_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/power_governor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/power_governor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/respiratory_physical_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/respiratory_physical_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/skeletal_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/skeletal_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/volume_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mcp_server/python/layers/L14_Physique/volume_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nexus-shell/.gradle/9.6.1/fileHashes/fileHashes.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +191,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.android.studio.ml.McpConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Mojo.Run Mojo main">
@@ -109,7 +222,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="Run Mojo main" type="MOJO_RUN_CONFIGURATION" temporary="true" filePath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" workingDirectory="C:\Users\gagan\Downloads\nexus_corporate_os\mcp_server\kernels\mojo" programArguments="" environmentVariables="" sdkPath="" commandKind="RUN" outputPath="" optimizationLevel="" sanitizerOptions="" useTerminal="false" disableCrashpad="false">
+    <configuration name="Run Mojo main" type="MOJO_RUN_CONFIGURATION" temporary="true" filePath="$PROJECT_DIR$/mcp_server/kernels/mojo/photonic_vfe.mojo" workingDirectory="C:\Users\gagan\Downloads\nexus_corporate_os\mcp_server\kernels\mojo" programArguments="" environmentVariables="" sdkPath="C:\Users\gagan\.local\bin" commandKind="RUN" outputPath="" optimizationLevel="" sanitizerOptions="" useTerminal="false" disableCrashpad="false">
       <method v="2" />
     </configuration>
     <recent_temporary>
