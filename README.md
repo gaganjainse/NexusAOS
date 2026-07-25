@@ -18,14 +18,14 @@ NexusAOS v2 is being rebuilt as a lean desktop shell:
 
 ```bash
 npm install
-npm run tauri dev
+npm run tauri:dev
 ```
 
 ## Build
 
 ```bash
 npm run build
-npm run tauri build
+npm run tauri:build
 ```
 
 ## Development rules
