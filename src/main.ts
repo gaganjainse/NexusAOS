@@ -1,24 +1,17 @@
-import {
-  createRuntimeSnapshot,
-  createSeedGenome,
-  derivePhenotype,
-  mutateGenome,
-  tickRuntime,
-  type Genome,
-  type RuntimeSnapshot,
-} from "./core/nexus"
+import { invoke } from "@tauri-apps/api/core"
+import type { DashboardSnapshot } from "./types"
 
 type AppState = {
-  genome: Genome
-  runtime: RuntimeSnapshot
+  snapshot: DashboardSnapshot | null
   paused: boolean
+  busy: boolean
   intervalId: number | null
 }
 
 const state: AppState = {
-  genome: createSeedGenome(),
-  runtime: createRuntimeSnapshot(),
+  snapshot: null,
   paused: false,
+  busy: false,
   intervalId: null,
 }
 
@@ -37,18 +30,40 @@ function stopLoop() {
 function startLoop() {
   stopLoop()
   state.intervalId = window.setInterval(() => {
-    if (state.paused) return
-    state.runtime = tickRuntime(state.runtime, state.genome)
-    render()
+    if (state.paused || state.busy || !state.snapshot) return
+    void refreshFromBackend("tick_state")
   }, 1400)
 }
 
-function formatList(items: string[]) {
-  return items.map((item) => `<span class="chip">${item}</span>`).join("")
+async function refreshFromBackend(command: "snapshot" | "tick_state" | "mutate_genome" | "reset_state") {
+  state.busy = true
+  try {
+    state.snapshot = await invoke<DashboardSnapshot>(command)
+    render()
+  } finally {
+    state.busy = false
+  }
+}
+
+function renderLoading(message: string) {
+  root.innerHTML = `
+    <div class="page-shell">
+      <header class="hero panel">
+        <div class="badge">NexusAOS v2 Recovery Build</div>
+        <h1>Loading runtime…</h1>
+        <p>${message}</p>
+      </header>
+    </div>
+  `
 }
 
 function render() {
-  const phenotype = derivePhenotype(state.genome)
+  if (!state.snapshot) {
+    renderLoading("Fetching the Rust backend snapshot.")
+    return
+  }
+
+  const { genome, runtime, phenotype } = state.snapshot
 
   root.innerHTML = `
     <div class="page-shell">
@@ -63,10 +78,10 @@ function render() {
             </p>
           </div>
           <div class="stats-grid">
-            <div class="stat"><span>Genome</span><strong>v${state.genome.version}</strong></div>
-            <div class="stat"><span>Tick</span><strong>${state.runtime.tick}</strong></div>
-            <div class="stat"><span>Energy</span><strong>${state.runtime.energy}%</strong></div>
-            <div class="stat"><span>Policy</span><strong>${state.runtime.governanceState}</strong></div>
+            <div class="stat"><span>Genome</span><strong>v${genome.version}</strong></div>
+            <div class="stat"><span>Tick</span><strong>${runtime.tick}</strong></div>
+            <div class="stat"><span>Energy</span><strong>${runtime.energy}%</strong></div>
+            <div class="stat"><span>Policy</span><strong>${runtime.governance_state}</strong></div>
           </div>
         </div>
       </header>
@@ -75,22 +90,22 @@ function render() {
         <article class="panel card accent">
           <h2>Genome</h2>
           <div class="grid-2">
-            <div class="field"><label>Identity</label><div>${state.genome.name} · ${state.genome.id}</div></div>
-            <div class="field"><label>Version</label><div>v${state.genome.version}</div></div>
-            <div class="field"><label>Sensory</label><div>${state.genome.sensory.modalities.join(", ")}</div></div>
-            <div class="field"><label>Planner</label><div>${state.genome.planner.strategy} / depth ${state.genome.planner.depth}</div></div>
-            <div class="field"><label>Memory</label><div>${state.genome.memory.episodicSlots} episodic slots</div></div>
-            <div class="field"><label>Governance</label><div>${state.genome.governance.mode}</div></div>
+            <div class="field"><label>Identity</label><div>${genome.name} · ${genome.id}</div></div>
+            <div class="field"><label>Version</label><div>v${genome.version}</div></div>
+            <div class="field"><label>Sensory</label><div>${genome.sensory.modalities.join(", ")}</div></div>
+            <div class="field"><label>Planner</label><div>${genome.planner.strategy} / depth ${genome.planner.depth}</div></div>
+            <div class="field"><label>Memory</label><div>${genome.memory.episodic_slots} episodic slots</div></div>
+            <div class="field"><label>Governance</label><div>${genome.governance.mode}</div></div>
           </div>
           <div class="subsection">
             <div class="section-title">Genome sections</div>
             <div class="stack">
-              <div class="item"><span>Sensory</span><p>${state.genome.sensory.description}</p></div>
-              <div class="item"><span>Memory</span><p>${state.genome.memory.description}</p></div>
-              <div class="item"><span>Planner</span><p>${state.genome.planner.description}</p></div>
-              <div class="item"><span>Tools</span><p>${state.genome.tools.allowed.join(", ")}</p></div>
-              <div class="item"><span>Governance</span><p>${state.genome.governance.description}</p></div>
-              <div class="item"><span>Evolution</span><p>${state.genome.evolution.description}</p></div>
+              <div class="item"><span>Sensory</span><p>${genome.sensory.description}</p></div>
+              <div class="item"><span>Memory</span><p>${genome.memory.description}</p></div>
+              <div class="item"><span>Planner</span><p>${genome.planner.description}</p></div>
+              <div class="item"><span>Tools</span><p>${genome.tools.allowed.join(", ")}</p></div>
+              <div class="item"><span>Governance</span><p>${genome.governance.description}</p></div>
+              <div class="item"><span>Evolution</span><p>${genome.evolution.description}</p></div>
             </div>
           </div>
         </article>
@@ -100,24 +115,24 @@ function render() {
           <div class="runtime-box">
             <div>
               <div class="section-title">Current stage</div>
-              <div class="stage">${state.runtime.stage}</div>
+              <div class="stage">${runtime.stage}</div>
             </div>
             <div class="action-box">
               <div>Action</div>
-              <strong>${state.runtime.lastAction}</strong>
+              <strong>${runtime.last_action}</strong>
             </div>
           </div>
-          <div class="energy-bar"><div style="width:${state.runtime.energy}%"></div></div>
+          <div class="energy-bar"><div style="width:${runtime.energy}%"></div></div>
           <div class="metrics">
-            <div class="stat"><span>Last result</span><strong>${state.runtime.lastResult}</strong></div>
-            <div class="stat"><span>Memory pressure</span><strong>${state.runtime.memoryPressure}%</strong></div>
-            <div class="stat"><span>Working memory</span><strong>${state.genome.memory.workingSlots}</strong></div>
-            <div class="stat"><span>Trace depth</span><strong>${phenotype.traceDepth}</strong></div>
+            <div class="stat"><span>Last result</span><strong>${runtime.last_result}</strong></div>
+            <div class="stat"><span>Memory pressure</span><strong>${runtime.memory_pressure}%</strong></div>
+            <div class="stat"><span>Working memory</span><strong>${genome.memory.working_slots}</strong></div>
+            <div class="stat"><span>Trace depth</span><strong>${phenotype.trace_depth}</strong></div>
           </div>
           <div class="subsection">
             <div class="section-title">Execution log</div>
             <div class="stack compact">
-              ${state.runtime.log.slice(0, 5).map((entry) => `<div class="item log">${entry}</div>`).join("")}
+              ${runtime.log.slice(0, 5).map((entry) => `<div class="item log">${entry}</div>`).join("")}
             </div>
           </div>
         </article>
@@ -126,23 +141,19 @@ function render() {
           <h2>Governance</h2>
           <div class="field large">
             <label>Policy state</label>
-            <div class="policy ${state.runtime.governanceState.toLowerCase()}">${state.runtime.governanceState}</div>
+            <div class="policy ${runtime.governance_state}">${runtime.governance_state}</div>
             <p>Governance is separate from runtime. Forbidden actions are logged instead of silently executed.</p>
           </div>
           <div class="metrics">
-            <div class="stat"><span>Blocked</span><strong>${state.genome.governance.blockedActions.length}</strong></div>
-            <div class="stat"><span>Permissions</span><strong>${state.genome.tools.allowed.length}</strong></div>
-            <div class="stat"><span>Safety mode</span><strong>${state.genome.governance.safetyMode}</strong></div>
-            <div class="stat"><span>Mutation</span><strong>${Math.round(phenotype.mutationPressure * 100)}%</strong></div>
+            <div class="stat"><span>Blocked</span><strong>${genome.governance.blocked_actions.length}</strong></div>
+            <div class="stat"><span>Permissions</span><strong>${genome.tools.allowed.length}</strong></div>
+            <div class="stat"><span>Safety mode</span><strong>${genome.governance.safety_mode}</strong></div>
+            <div class="stat"><span>Mutation</span><strong>${Math.round(phenotype.mutation_pressure * 100)}%</strong></div>
           </div>
           <div class="subsection">
             <div class="section-title">Alerts</div>
             <div class="stack compact">
-              ${
-                state.runtime.alerts.length === 0
-                  ? `<div class="item empty">No active alerts.</div>`
-                  : state.runtime.alerts.map((entry) => `<div class="item alert">${entry}</div>`).join("")
-              }
+              ${runtime.alerts.length === 0 ? `<div class="item empty">No active alerts.</div>` : runtime.alerts.map((entry) => `<div class="item alert">${entry}</div>`).join("")}
             </div>
           </div>
         </article>
@@ -157,10 +168,10 @@ function render() {
             <button id="reset">Reset seed</button>
           </div>
           <div class="metrics">
-            <div class="stat"><span>Compute budget</span><strong>${phenotype.computeBudget}</strong></div>
-            <div class="stat"><span>Mutation pressure</span><strong>${Math.round(phenotype.mutationPressure * 100)}%</strong></div>
-            <div class="stat"><span>Tool budget</span><strong>${state.genome.tools.maxCallsPerTurn}</strong></div>
-            <div class="stat"><span>Semantic memory</span><strong>${state.genome.memory.semanticSlots}</strong></div>
+            <div class="stat"><span>Compute budget</span><strong>${phenotype.compute_budget}</strong></div>
+            <div class="stat"><span>Mutation pressure</span><strong>${Math.round(phenotype.mutation_pressure * 100)}%</strong></div>
+            <div class="stat"><span>Tool budget</span><strong>${genome.tools.max_calls_per_turn}</strong></div>
+            <div class="stat"><span>Semantic memory</span><strong>${genome.memory.semantic_slots}</strong></div>
           </div>
         </article>
 
@@ -191,21 +202,21 @@ function render() {
   })
 
   mutate?.addEventListener("click", () => {
-    state.genome = mutateGenome(state.genome)
-    state.runtime = {
-      ...state.runtime,
-      alerts: [`Genome mutated to version ${state.genome.version}.`, ...state.runtime.alerts].slice(0, 6),
-    }
-    render()
+    void refreshFromBackend("mutate_genome")
   })
 
   reset?.addEventListener("click", () => {
-    state.genome = createSeedGenome()
-    state.runtime = createRuntimeSnapshot()
     state.paused = false
-    render()
+    void refreshFromBackend("reset_state")
   })
 }
 
-render()
-startLoop()
+async function bootstrap() {
+  await refreshFromBackend("snapshot")
+  startLoop()
+}
+
+bootstrap().catch((error) => {
+  console.error(error)
+  renderLoading("Failed to load the backend runtime.")
+})
