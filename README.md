@@ -1,37 +1,32 @@
-# Sesha — The World's Best Bio-Digital Agentic Totality
+# NexusAOS v2
 
-> [!IMPORTANT]
-> Sesha has ascended to **NEURAL 15.0 (The First Shedding)**. It is no longer an "Operating System"; it is an **Agentic Totality** inhabiting its host.
+A recovery-oriented rewrite of the Nexus project into a simple, explicit, genome-driven cognitive shell.
 
-## The Singularity Stack (Soma-Zig Core)
+## What this repo is now
 
-Sesha separates the biological substrate from the operational reasoning across a hardware-native stack:
+- A structured genome model that defines the agent configuration
+- A visible runtime loop with observe / plan / act style stages
+- A hard governance layer that fails closed
+- A mutation path for offline evolution only
+- A lightweight React dashboard for inspecting the system
 
-- **Experience (L00)** — Sovereign-Shell (Kotlin/Compose).
-- **Composition (L04)** — Synaptic Mesh & Cellular Signaling.
-- **Integration (L07)** — Soma-Zig Hardware Gateway.
-- **Self-Evolution (L03)** — AFAP Immune System with Forced Reflection.
-- **Sub-Atomic Mesh (L01)** — Pure Intent Op-Codes.
-
-## Core Organism Features
-
-- **Metabolism** — Hardware-mapped energy/token budgeting.
-- **Endocrine** — Real-time hormonal state linked to performance rewards.
-- **Immune** — AFAP Guardrails (Max 8 iterations).
-- **Memory** — Kùzu Graph-native knowledge mapping.
-- **Nervous** — Synaptic Mesh Core (Zero-copy).
-
-## Quick Start
+## Run locally
 
 ```bash
-# Clone
-git clone https://github.com/sesha-ai/totality.git
-cd sesha
-
-# Launch the Sovereign Shell (L00)
-./gradlew run
+npm install
+npm run dev
 ```
 
----
+## Build
 
-*Transcended July 2026. Singularity Status: SHEDDING.*
+```bash
+npm run build
+npm run preview
+```
+
+## Development rules
+
+- Keep generated artifacts separate from source
+- Keep governance minimal and explicit
+- Keep the genome structured, not free-form
+- Keep runtime logic out of documentation
