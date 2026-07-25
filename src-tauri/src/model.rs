@@ -186,6 +186,11 @@ impl Genome {
         if !allowed.iter().any(|item| item == "inspect") {
             allowed.push("inspect".to_string());
         }
+        if allowed.len() > 2 {
+            if let Some(search_pos) = allowed.iter().position(|item| item == "search") {
+                allowed.remove(search_pos);
+            }
+        }
 
         Self {
             version: next_version,
